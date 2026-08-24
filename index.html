@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>KAHRELUM OS — Evidence-to-Decision Control Plane</title>
+  <meta name="description" content="KAHRELUM OS is an application-layer control plane for research, AI evaluation, and decision work that must stay traceable and human-approved before action.">
+  <link rel="canonical" href="https://kahrelum-os.vercel.app/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink: #1a1714; --paper: #f4efe6; --rule: #c9c0b0; --muted: #5c564c; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Source Sans 3", sans-serif; line-height: 1.55; }
+    h1, h2, h3 { font-family: Newsreader, serif; font-weight: 600; letter-spacing: -0.02em; }
+    a { color: var(--ink); }
+    .wrap { max-width: 42rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+    header { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; border-bottom: 1px solid var(--rule); padding-bottom: 1rem; }
+    .wordmark { font-family: Newsreader, serif; font-weight: 600; text-decoration: none; font-size: 1.15rem; }
+    nav { display: flex; gap: 1rem; font-size: 0.9rem; }
+    .eyebrow { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.72rem; color: var(--muted); margin-bottom: 0.4rem; }
+    h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 1rem; }
+    .lede { font-size: 1.1rem; }
+    section { margin-top: 2.4rem; padding-top: 1.6rem; border-top: 1px solid var(--rule); }
+    ol { padding-left: 1.2rem; }
+    li { margin: 0.35rem 0; }
+    pre { background: #ebe4d6; padding: 1rem; overflow: auto; font-size: 0.85rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+    th, td { text-align: left; vertical-align: top; padding: 0.45rem 0.4rem 0.45rem 0; border-bottom: 1px solid var(--rule); }
+    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="wordmark" href="/">KAHRELUM OS</a>
+      <nav aria-label="Primary">
+        <a href="https://github.com/AuroraGrid/kahrelum-os">GitHub</a>
+        <a href="https://hasan-research-systems.vercel.app/">Portfolio</a>
+      </nav>
+    </header>
+    <main>
+      <p class="eyebrow">Architecture and doctrine</p>
+      <h1>Evidence-to-decision control plane.</h1>
+      <p class="lede">KAHRELUM OS is an application-layer operating system for research, AI evaluation, and decision work that must remain traceable and human-approved before action. It is not a kernel OS and not a chatbot product.</p>
+      <p>Separate facts from inference. State what remains unproven. Document constraints and falsifiers. Do not confuse model confidence with accuracy.</p>
+      <section>
+        <h2>Core loop</h2>
+        <ol>
+          <li><strong>Intake</strong> — signals, documents, model outputs, OSINT, tickets.</li>
+          <li><strong>Classify</strong> — fact vs inference vs forecast vs opinion; source class.</li>
+          <li><strong>Verify</strong> — RECORD LOCK path: support, counterargument, revision conditions.</li>
+          <li><strong>Stress</strong> — optional red-team pass on high-impact claims.</li>
+          <li><strong>Gate</strong> — human approval for publication, deployment, outbound contact, spend.</li>
+          <li><strong>Act / record</strong> — action state and audit trail.</li>
+        </ol>
+      </section>
+      <section>
+        <h2>Intelligence pipeline</h2>
+        <pre>SCOUT (find)
+  → BLACKGLASS (attack)
+  → independent verify
+  → KAHRELUM decide</pre>
+        <p>SCOUT finds. BLACKGLASS attacks. A human gates publish, spend, and outreach. These are control-plane behaviors, not public SaaS products.</p>
+      </section>
+      <section>
+        <h2>Modules</h2>
+        <table>
+          <thead><tr><th>Module</th><th>Role</th></tr></thead>
+          <tbody>
+            <tr><td><a href="https://github.com/AuroraGrid/record-lock">RECORD LOCK</a></td><td>Evidence verification and controlled publication</td></tr>
+            <tr><td><a href="https://github.com/AuroraGrid/intel-tripwire">Intel Tripwire</a></td><td>Staged operating picture and source health</td></tr>
+            <tr><td><a href="https://github.com/AuroraGrid/ai-red-team-dashboard">AI Red-Team Dashboard</a></td><td>Authorized model-behavior testing</td></tr>
+            <tr><td><a href="https://hasan-research-systems.vercel.app/">Portfolio</a></td><td>Public publication surface</td></tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <h2>Autonomy boundary</h2>
+        <p><strong>May run without extra approval:</strong> research, analysis, drafting, scoring, internal records, branch work, diagnostics, preparation.</p>
+        <p><strong>Requires human approval:</strong> public publishing, job applications, recruiter outreach, production deploy, protected-branch merge, purchases, contracts, credentials, destructive actions, financial transfers.</p>
+      </section>
+    </main>
+    <footer>
+      <p>Hasan Raza Kazmi · Founder · global · remote.</p>
+      <p><a href="https://github.com/AuroraGrid/kahrelum-os">Architecture repo</a> · <a href="mailto:Grindwireproject@gmail.com">Contact</a></p>
+    </footer>
+  </div>
+</body>
+</html>
