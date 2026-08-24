@@ -10,7 +10,7 @@ KAHRELUM OS is an **application-layer operating system** for research, AI evalua
 
 Separate facts from inference. State what remains unproven. Document constraints and falsifiers. Do not confuse model confidence with accuracy.
 
-## Pipeline
+## Evidence pipeline
 
 ```
 Signal intake
@@ -20,6 +20,16 @@ Signal intake
   → Human approval gate
   → Auditable action state
 ```
+
+## Commercial intelligence pipeline
+
+```
+SCOUT (find) → BLACKGLASS (attack) → independent verify → KAHRELUM decide
+```
+
+Details: [INTELLIGENCE-PIPELINE.md](./INTELLIGENCE-PIPELINE.md)
+
+Operator skills (not public SaaS): `kahrelum-scout`, `kahrelum-blackglass`.
 
 ## Modules
 
@@ -39,6 +49,7 @@ Signal intake
 | Verification | Claims, sources, falsifiers, publication state |
 | Operating picture | Live signals and source-health |
 | Evaluation | Model behavior under structured test |
+| Commercial intel | SCOUT find / BLACKGLASS attack / verify / decide |
 | Publication | External surfaces that only show reviewed claims |
 | Local runtime | Private inference and tooling (operator-side) |
 
