@@ -65,7 +65,8 @@ Architecture and doctrine only. No private media ops, no credentials, no career 
 
 ## Links
 
-- Portfolio (current): https://hasan-research-systems.vercel.app/
+- Architecture site: https://kahrelum-os.vercel.app/
+- Portfolio (live): https://hasan-research-systems.vercel.app/
 - Profile README: https://github.com/AuroraGrid/AuroraGrid
 
 ## License
