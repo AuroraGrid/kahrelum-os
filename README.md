@@ -29,7 +29,7 @@ ROUTER
 
 AAIK governs the cycle as an evidence / instability / exposure governor. The Luna / Terra / Sol cognitive control plane provides hypothesis expansion, verification, and synthesis.
 
-Details: [ARCHITECTURE.md](./ARCHITECTURE.md) and [INTELLIGENCE-PIPELINE.md](./INTELLIGENCE-PIPELINE.md).
+Details: [ARCHITECTURE.md](./ARCHITECTURE.md), [INTELLIGENCE-PIPELINE.md](./INTELLIGENCE-PIPELINE.md), and [BENCHMARKS.md](./BENCHMARKS.md).
 
 ## v2.3.3 FINAL: Mission Contract Release Interlock
 
@@ -74,6 +74,8 @@ Promotion benchmark:
 
 This benchmark demonstrates the release cleared its frozen promotion gates. It is **not** a claim of institution-scale empirical superiority. Long-run calibration, larger resolved forecast histories, and repeated independent testing remain necessary.
 
+Full methodology, artifact identities, clean-room record, preserved defects, and validation limits: **[BENCHMARKS.md](./BENCHMARKS.md)**.
+
 ## Release identity
 
 - Release: **KAHRELUM OS v2.3.3 FINAL**
@@ -85,6 +87,8 @@ This benchmark demonstrates the release cleared its frozen promotion gates. It i
 - Candidate archive SHA-256: `d1eb86aff6a0a8c296ca00bab5f22e34b096af28c3b9810274590e58e7bca769`
 
 The frozen release artifact must remain immutable. Public documentation and operating doctrine may evolve around it without pretending those changes alter v2.3.3 FINAL.
+
+Public promotion record: **[RELEASE_v2.3.3_FINAL.md](./RELEASE_v2.3.3_FINAL.md)**.
 
 ## Claim taxonomy
 

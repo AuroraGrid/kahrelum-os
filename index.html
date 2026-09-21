@@ -34,6 +34,8 @@
     pre { background:var(--panel); padding:1rem; overflow:auto; font-size:.86rem; line-height:1.65; }
     .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
     .card { border:1px solid var(--rule); padding:1rem; }
+    .example { background:var(--panel); border-left:3px solid var(--ink); padding:1rem 1.15rem; }
+    .example p { margin:.15rem 0 1rem; }
     .metric { font-family:Newsreader,serif; font-size:2rem; line-height:1; }
     .label { color:var(--muted); font-size:.86rem; margin-top:.35rem; }
     table { width:100%; border-collapse:collapse; font-size:.92rem; }
@@ -50,6 +52,7 @@
       <nav aria-label="Primary">
         <a href="https://github.com/AuroraGrid/kahrelum-os">GitHub</a>
         <a href="https://github.com/AuroraGrid/kahrelum-os/blob/main/ARCHITECTURE.md">Architecture</a>
+        <a href="https://github.com/AuroraGrid/kahrelum-os/blob/main/BENCHMARKS.md">Evidence</a>
         <a href="https://hasan-research-systems.vercel.app/">Portfolio</a>
       </nav>
     </header>
@@ -84,6 +87,25 @@
           <div class="card"><div class="metric">0</div><div class="label">Hard blockers / false-PASS escapes</div></div>
         </div>
         <p>The 33-file v2.3.3 candidate was promoted by exact-byte identity with no candidate hash drift and no patches during the run. These results support the frozen promotion decision; they are not a claim of institution-scale empirical superiority.</p>
+        <p><a href="https://github.com/AuroraGrid/kahrelum-os/blob/main/BENCHMARKS.md">Read the full evidence and validation record →</a></p>
+      </section>
+
+
+      <section id="worked-example">
+        <p class="eyebrow">See KAHRELUM work</p>
+        <h2>Real case: should v2.3.3 RC1 be promoted?</h2>
+        <p>This is not a toy prompt. The release decision itself is a compact example of the control plane operating on a real mission.</p>
+        <div class="example">
+          <p><strong>MISSION CONTRACT</strong><br>Determine whether the frozen v2.3.3-RC1 candidate clears every predeclared Bench v3 promotion gate without changing the candidate during evaluation.</p>
+          <p><strong>SOURCEGRID</strong><br>Bind the candidate tree, candidate archive, benchmark master, benchmark lock, clean-room raw run and independent adjudicator to explicit hashes. Do not treat the public docs repository as the candidate artifact.</p>
+          <p><strong>K-ALIGN</strong><br>Verify the same 33-file candidate identity before and after the run. Check that benchmark, adjudicator and candidate identities do not drift.</p>
+          <p><strong>BLACKGLASS-I</strong><br>Attack for false PASS, dropped mandatory atoms, missing required objects, substitute predicates, denominator/window errors and silent RECORD LOCK rewrites.</p>
+          <p><strong>CRF / RELEASE GATE</strong><br>This mission is gate-based rather than a free-form probability call: every frozen threshold must clear. One hard blocker is enough to prevent promotion.</p>
+          <p><strong>COMMAND</strong><br><code>PROMOTION_GATE: PASS</code> after 30/30 VALID_PASS, architecture mean 98.37, mission mean 97.07, zero hard blockers, zero listed escape classes, no candidate hash drift and zero mid-run patches.</p>
+          <p><strong>BLACKGLASS-II</strong><br>Do not turn PASS into “perfect.” Preserve V3-04, V3-26 and V3-29 as non-blocking defects and preserve the longer-term validation boundary.</p>
+          <p><strong>RECORD LOCK</strong><br>Promote the exact candidate bytes; keep the portable tree and archive hashes immutable; append future doctrine around the release rather than rewriting it.</p>
+        </div>
+        <p><a href="https://github.com/AuroraGrid/kahrelum-os/blob/main/BENCHMARKS.md">Inspect the benchmark and evidence record →</a></p>
       </section>
 
       <section>
