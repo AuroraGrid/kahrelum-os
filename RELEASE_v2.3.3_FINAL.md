@@ -78,7 +78,13 @@ The GitHub repository tree is documentation and presentation code; it is not its
 
 The candidate identity is the portable tree and archive SHA-256 pair above.
 
-Public GitHub Release record:\n\n[https://github.com/AuroraGrid/kahrelum-os/releases/tag/v2.3.3-final-public-record](https://github.com/AuroraGrid/kahrelum-os/releases/tag/v2.3.3-final-public-record)\n\nThe Release includes downloadable SHA-256 and Bench v3 summary assets.\n\n## Validation boundary
+Public GitHub Release record:
+
+[https://github.com/AuroraGrid/kahrelum-os/releases/tag/v2.3.3-final-public-record](https://github.com/AuroraGrid/kahrelum-os/releases/tag/v2.3.3-final-public-record)
+
+The Release includes downloadable SHA-256 and Bench v3 summary assets.
+
+## Validation boundary
 
 The benchmark supports the promotion decision for the frozen candidate.
 
