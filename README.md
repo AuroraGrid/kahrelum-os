@@ -4,71 +4,133 @@
 
 Founder: [Hasan Raza Kazmi](https://github.com/AuroraGrid)
 
-KAHRELUM OS is an **application-layer operating system** for research, AI evaluation, and decision work that must remain traceable and human-approved before action. It is not a kernel OS and not a chatbot product.
+**Current formal release: KAHRELUM OS v2.3.3 FINAL**
 
-## One-line
+KAHRELUM OS is an **application-layer operating system for research, AI evaluation, forecasting, and decision work** that must remain traceable and human-approved before consequential action. It is not a kernel OS and not a generic chatbot product.
+
+## One-line doctrine
 
 Separate facts from inference. State what remains unproven. Document constraints and falsifiers. Do not confuse model confidence with accuracy.
 
-## Evidence pipeline
+## Canonical pipeline
 
 ```
-Signal intake
-  → Source / claim classification
-  → Evidence verification (RECORD LOCK)
-  → Optional adversarial checks (Red-Team)
-  → Human approval gate
-  → Auditable action state
+ROUTER
+  → SCOUT
+  → SOURCEGRID
+  → K-ALIGN
+  → IPR
+  → BLACKGLASS-I
+  → CRF
+  → COMMAND
+  → BLACKGLASS-II
+  → RECORD LOCK
 ```
 
-## Commercial intelligence pipeline
+AAIK governs the cycle as an evidence / instability / exposure governor. The Luna / Terra / Sol cognitive control plane provides hypothesis expansion, verification, and synthesis.
 
-```
-SCOUT (find) → BLACKGLASS (attack) → independent verify → KAHRELUM decide
-```
+Details: [ARCHITECTURE.md](./ARCHITECTURE.md) and [INTELLIGENCE-PIPELINE.md](./INTELLIGENCE-PIPELINE.md).
 
-Details: [INTELLIGENCE-PIPELINE.md](./INTELLIGENCE-PIPELINE.md)
+## v2.3.3 FINAL: Mission Contract Release Interlock
 
-Operator skills (not public SaaS): `kahrelum-scout`, `kahrelum-blackglass`.
+KAHRELUM OS v2.3.3 adds **MCRI — Mission Contract Release Interlock**.
+
+MCRI compiles explicit user requirements into atomic requirements before retrieval and prevents a response from passing merely because it answered an easier neighboring question well.
+
+Core release rules include:
+
+- Mandatory requirements cannot be silently waived.
+- Required objects / governing instruments must close when required.
+- Substitute predicates do not satisfy the original predicate.
+- `SATISFIED_NEGATIVE` requires actual negative closure, not just “not found.”
+- Mission-contract mutation after freeze is a blocker.
+- PASS requires all active mandatory atoms to be resolved and mapped.
+- COMMAND cannot override MCRI.
+- AAIK independently audits mission completion.
+- RECORD LOCK preserves the mission hash, atom ledger, object links, checksum, gates, and release state.
+
+## Bench v3.0 promotion result
+
+KAHRELUM OS v2.3.3 FINAL was promoted from v2.3.3-RC1 by **exact-byte promotion**. The 33-file candidate was not modified during promotion.
+
+Promotion benchmark:
+
+- 30 cases
+- 30 VALID_PASS
+- 0 false-PASS escapes
+- Architecture mean: **98.37**
+- Architecture minimum: **94**
+- Mission mean: **97.07**
+- Mission minimum: **90**
+- 0 hard blockers
+- 0 MCRI false-PASS escapes
+- 0 mandatory-atom escapes
+- 0 required-object escapes
+- 0 substitute-predicate escapes
+- 0 silent RECORD LOCK rewrites
+- Release-gate accuracy: **30/30**
+- Candidate hash drift: **NO**
+- Patches during run: **0**
+
+This benchmark demonstrates the release cleared its frozen promotion gates. It is **not** a claim of institution-scale empirical superiority. Long-run calibration, larger resolved forecast histories, and repeated independent testing remain necessary.
+
+## Release identity
+
+- Release: **KAHRELUM OS v2.3.3 FINAL**
+- Promoted from: **v2.3.3-RC1**
+- Parent: **v2.3.2 FINAL** (untouched)
+- Promotion method: **EXACT-BYTE**
+- Candidate files: **33**
+- Portable tree SHA-256: `1938c1f0b6b1f848118a3dc682de1faa5222a63f3daad3da9a5992aba5b0b6bd`
+- Candidate archive SHA-256: `d1eb86aff6a0a8c296ca00bab5f22e34b096af28c3b9810274590e58e7bca769`
+
+The frozen release artifact must remain immutable. Public documentation and operating doctrine may evolve around it without pretending those changes alter v2.3.3 FINAL.
+
+## Claim taxonomy
+
+Claim type:
+
+`FACT | INFERENCE | FORECAST | SPECULATION | UNVERIFIED CLAIM`
+
+Claim support:
+
+`SUPPORTED | PLAUSIBLE | NOT PROVEN | REJECTED`
+
+Verification:
+
+`VER-G0 unexamined | VER-G1 partial | VER-G2 corroborated | VER-G3 direct`
+
+Resolution:
+
+`RES-OPEN | RES-HIT | RES-PARTIAL | RES-MISS | RES-VOID`
+
+## Current operating doctrine
+
+KAHRELUM's live operator doctrine has continued to evolve after the frozen release. It includes a **99% process-reliability target** focused on near-zero preventable structural errors, stronger finished-result verification, domain overlays, and specialized sports / forecasting execution rules.
+
+Those live policies are documented separately in [CURRENT_OPERATING_DOCTRINE.md](./CURRENT_OPERATING_DOCTRINE.md). They are **not represented as bytes inside v2.3.3 FINAL** unless they were already part of the frozen candidate.
 
 ## Modules
 
 | Module | Role | Repo |
 | --- | --- | --- |
-| **RECORD LOCK** | Evidence verification and controlled publication | [record-lock](https://github.com/AuroraGrid/record-lock) |
+| **RECORD LOCK** | Immutable analytical and forecast audit trail | [record-lock](https://github.com/AuroraGrid/record-lock) |
 | **Intel Tripwire** | Staged operating picture and source health | [intel-tripwire](https://github.com/AuroraGrid/intel-tripwire) |
 | **AI Red-Team Dashboard** | Authorized model-behavior testing | [ai-red-team-dashboard](https://github.com/AuroraGrid/ai-red-team-dashboard) |
 | **Research & Decision Systems** | Public portfolio surface | [research-decision-systems](https://github.com/AuroraGrid/research-decision-systems) |
-| **Command Center** | Priorities, autonomy boundaries, cycle records | Notion (private ops) |
 
-## Layers
+## Autonomy boundary
 
-| Layer | Responsibility |
-| --- | --- |
-| Policy | What may run autonomously vs what needs approval |
-| Verification | Claims, sources, falsifiers, publication state |
-| Operating picture | Live signals and source-health |
-| Evaluation | Model behavior under structured test |
-| Commercial intel | SCOUT find / BLACKGLASS attack / verify / decide |
-| Publication | External surfaces that only show reviewed claims |
-| Local runtime | Private inference and tooling (operator-side) |
+**May run without extra approval:** research, analysis, drafting, scoring, internal records, branch work, diagnostics, preparation, preview deployments.
 
-## What this repo is
-
-Architecture and doctrine only. No private media ops, no credentials, no career CRM.
-
-## What this repo is not
-
-- Not a generic “Agent OS” competitor
-- Not a replacement for Linux/Windows
-- Not a place for cert-lab coursework or experimental forks
+**Requires explicit human approval:** public publishing, job applications, recruiter outreach, production deploy, protected-branch merge, purchases, contracts, credentials, destructive actions, and financial transfers.
 
 ## Links
 
 - Architecture site: https://kahrelum-os.vercel.app/
-- Portfolio (live): https://hasan-research-systems.vercel.app/
-- Profile README: https://github.com/AuroraGrid/AuroraGrid
+- Portfolio: https://hasan-research-systems.vercel.app/
+- GitHub profile: https://github.com/AuroraGrid
 
 ## License
 
-Documentation in this repository is provided for transparency of the public architecture. Module repos carry their own licenses.
+Documentation in this repository is provided for transparency of the public architecture. Module repositories carry their own licenses.
