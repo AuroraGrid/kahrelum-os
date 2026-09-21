@@ -88,7 +88,7 @@ Full methodology, artifact identities, clean-room record, preserved defects, and
 
 The frozen release artifact must remain immutable. Public documentation and operating doctrine may evolve around it without pretending those changes alter v2.3.3 FINAL.
 
-Public promotion record: **[RELEASE_v2.3.3_FINAL.md](./RELEASE_v2.3.3_FINAL.md)**.
+Public promotion record: **[RELEASE_v2.3.3_FINAL.md](./RELEASE_v2.3.3_FINAL.md)**.  \nGitHub Release record and downloadable verification assets: **[v2.3.3-final-public-record](https://github.com/AuroraGrid/kahrelum-os/releases/tag/v2.3.3-final-public-record)**.
 
 ## Claim taxonomy
 
