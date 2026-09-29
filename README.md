@@ -4,7 +4,9 @@
 
 Founder: [Hasan Raza Kazmi](https://github.com/AuroraGrid)
 
-**Current formal release: KAHRELUM OS v2.3.3 FINAL**
+**Current formal release: KAHRELUM OS v2.3.4 FINAL**
+
+**External audit status:** package identity and registered arithmetic independently reproduced; no scoring mismatches found. The audit does **not** establish universal or commercial superiority. The next validation target is an independently controlled prospective benchmark.
 
 KAHRELUM OS is an **application-layer operating system for research, AI evaluation, forecasting, and decision work** that must remain traceable and human-approved before consequential action. It is not a kernel OS and not a generic chatbot product.
 
@@ -31,7 +33,7 @@ AAIK governs the cycle as an evidence / instability / exposure governor. The Lun
 
 Details: [ARCHITECTURE.md](./ARCHITECTURE.md), [INTELLIGENCE-PIPELINE.md](./INTELLIGENCE-PIPELINE.md), and [BENCHMARKS.md](./BENCHMARKS.md).
 
-## v2.3.3 FINAL: Mission Contract Release Interlock
+## v2.3.4 FINAL: Mission Contract Release Interlock
 
 KAHRELUM OS v2.3.3 adds **MCRI — Mission Contract Release Interlock**.
 
@@ -49,9 +51,9 @@ Core release rules include:
 - AAIK independently audits mission completion.
 - RECORD LOCK preserves the mission hash, atom ledger, object links, checksum, gates, and release state.
 
-## Bench v3.0 promotion result
+## Prior promotion evidence: Bench v3.0
 
-KAHRELUM OS v2.3.3 FINAL was promoted from v2.3.3-RC1 by **exact-byte promotion**. The 33-file candidate was not modified during promotion.
+KAHRELUM OS v2.3.4 FINAL was promoted from v2.3.3-RC1 by **exact-byte promotion**. The 33-file candidate was not modified during promotion.
 
 Promotion benchmark:
 
@@ -78,7 +80,15 @@ Full methodology, artifact identities, clean-room record, preserved defects, and
 
 ## Release identity
 
-- Release: **KAHRELUM OS v2.3.3 FINAL**
+- Current public release: **KAHRELUM OS v2.3.4 FINAL**
+- External audit package SHA-256: `084f0d1348342e707e1fc953b1337d3a805f9890301fa54ba01983aa1a46876f`
+- External audit result: identity and arithmetic reproduced; inference/commercial claims remain bounded
+
+### Independent validation invitation
+
+KAHRELUM is seeking external research and commercial partners willing to control a prospective evaluation. The preferred design gives the external evaluator authority over cases, cutoffs, gold outcomes, resolution rules, preregistration and scoring. The goal is not a test designed for KAHRELUM to win; it is a test whose result is credible either way.
+
+- Release lineage reference: **KAHRELUM OS v2.3.3 FINAL**
 - Promoted from: **v2.3.3-RC1**
 - Parent: **v2.3.2 FINAL** (untouched)
 - Promotion method: **EXACT-BYTE**
@@ -86,7 +96,7 @@ Full methodology, artifact identities, clean-room record, preserved defects, and
 - Portable tree SHA-256: `1938c1f0b6b1f848118a3dc682de1faa5222a63f3daad3da9a5992aba5b0b6bd`
 - Candidate archive SHA-256: `d1eb86aff6a0a8c296ca00bab5f22e34b096af28c3b9810274590e58e7bca769`
 
-The frozen release artifact must remain immutable. Public documentation and operating doctrine may evolve around it without pretending those changes alter v2.3.3 FINAL.
+The frozen release artifact must remain immutable. Public documentation and operating doctrine may evolve around it without pretending those changes alter v2.3.4 FINAL.
 
 Public promotion record: **[RELEASE_v2.3.3_FINAL.md](./RELEASE_v2.3.3_FINAL.md)**.  
 GitHub Release record and downloadable verification assets: **[v2.3.3-final-public-record](https://github.com/AuroraGrid/kahrelum-os/releases/tag/v2.3.3-final-public-record)**.
@@ -113,7 +123,7 @@ Resolution:
 
 KAHRELUM's live operator doctrine has continued to evolve after the frozen release. It includes a **99% process-reliability target** focused on near-zero preventable structural errors, stronger finished-result verification, domain overlays, and specialized sports / forecasting execution rules.
 
-Those live policies are documented separately in [CURRENT_OPERATING_DOCTRINE.md](./CURRENT_OPERATING_DOCTRINE.md). They are **not represented as bytes inside v2.3.3 FINAL** unless they were already part of the frozen candidate.
+Those live policies are documented separately in [CURRENT_OPERATING_DOCTRINE.md](./CURRENT_OPERATING_DOCTRINE.md). They are **not represented as bytes inside v2.3.4 FINAL** unless they were already part of the frozen candidate.
 
 ## Modules
 
