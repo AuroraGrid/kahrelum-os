@@ -4,9 +4,17 @@
 
 Founder: [Hasan Raza Kazmi](https://github.com/AuroraGrid)
 
+**Canonical public site: https://kahrelum.com**
+
 **Current formal release: KAHRELUM OS v2.3.4 FINAL**
 
 KAHRELUM OS is an application-layer system for research, forecasting, AI evaluation and decision support. It separates fact from inference, attacks conclusions before acting, preserves uncertainty, and is designed to block rather than manufacture an answer when the evidence does not close.
+
+## Public repository scope
+
+This repository is KAHRELUM's canonical **public architecture, evidence, and release-record surface**. It is not the frozen runtime archive. Runtime releases are identified by exact SHA-256 and their public release records; the HTML/Markdown tree should not be treated as a substitute for those frozen bytes.
+
+Current release record: [KAHRELUM OS v2.3.4 FINAL](./RELEASE_v2.3.4_FINAL.md).
 
 ## Current evidence status
 
@@ -112,9 +120,10 @@ The point is not to design a test KAHRELUM is supposed to win. The point is to c
 
 ## Links
 
-- Public site: https://kahrelum-os.vercel.app/
+- Canonical public site: https://kahrelum.com
 - Evidence: [BENCHMARKS.md](./BENCHMARKS.md)
 - Architecture: [ARCHITECTURE.md](./ARCHITECTURE.md)
+- Current v2.3.4 release record: [RELEASE_v2.3.4_FINAL.md](./RELEASE_v2.3.4_FINAL.md)
 - Historical v2.3.3 release record: [RELEASE_v2.3.3_FINAL.md](./RELEASE_v2.3.3_FINAL.md)
 - Portfolio: https://hasan-research-systems.vercel.app/
 
