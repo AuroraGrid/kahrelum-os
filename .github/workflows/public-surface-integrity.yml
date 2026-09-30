@@ -1,0 +1,72 @@
+name: Public Surface Integrity
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  public-surface:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - name: Check out public repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Validate canonical public surface
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          import subprocess
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          required = (
+              "README.md", "ARCHITECTURE.md", "BENCHMARKS.md",
+              "CHANGELOG.md", "RELEASE_v2.3.4_FINAL.md",
+              "index.html", "vercel.json",
+          )
+          missing = [name for name in required if not Path(name).is_file()]
+          if missing:
+              raise SystemExit(f"Missing canonical files: {missing}")
+
+          site = "https://kahrelum.com"
+          release_hash = "c6caca3290abbee7121fb743fabb1210b59b7536aa46dd6d6874cd02962bc1e1"
+          assert site in Path("README.md").read_text(encoding="utf-8"), "README canonical site missing"
+          assert release_hash in Path("RELEASE_v2.3.4_FINAL.md").read_text(encoding="utf-8"), "Release identity missing"
+
+          class Metadata(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.canonical = []
+                  self.og_url = []
+
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+                  if tag == "link" and "canonical" in attrs.get("rel", "").split():
+                      self.canonical.append(attrs.get("href", ""))
+                  if tag == "meta" and attrs.get("property") == "og:url":
+                      self.og_url.append(attrs.get("content", ""))
+
+          metadata = Metadata()
+          metadata.feed(Path("index.html").read_text(encoding="utf-8"))
+          allowed = {site, site + "/"}
+          assert len(metadata.canonical) == 1 and metadata.canonical[0] in allowed, "Invalid canonical URL"
+          assert len(metadata.og_url) == 1 and metadata.og_url[0] in allowed, "Invalid OG URL"
+          assert isinstance(json.loads(Path("vercel.json").read_text(encoding="utf-8")), dict), "Vercel config must be a JSON object"
+
+          stale_identity = b"hr185882" + b"-creator"
+          tracked = subprocess.check_output(["git", "ls-files", "-z"]).split(b"\0")
+          stale = [
+              path.decode("utf-8") for path in tracked
+              if path and stale_identity in Path(path.decode("utf-8")).read_bytes()
+          ]
+          assert not stale, f"Stale public identity in: {stale}"
+          print("Public surface integrity passed.")
+          PY
