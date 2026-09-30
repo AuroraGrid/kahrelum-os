@@ -6,145 +6,102 @@ Founder: [Hasan Raza Kazmi](https://github.com/AuroraGrid)
 
 **Current formal release: KAHRELUM OS v2.3.4 FINAL**
 
-**External audit status:** package identity and registered arithmetic independently reproduced; no scoring mismatches found. The audit does **not** establish universal or commercial superiority. The next validation target is an independently controlled prospective benchmark.
+KAHRELUM OS is an application-layer system for research, forecasting, AI evaluation and decision support. It separates fact from inference, attacks conclusions before acting, preserves uncertainty, and is designed to block rather than manufacture an answer when the evidence does not close.
 
-KAHRELUM OS is an **application-layer operating system for research, AI evaluation, forecasting, and decision work** that must remain traceable and human-approved before consequential action. It is not a kernel OS and not a generic chatbot product.
+## Current evidence status
 
-## One-line doctrine
+External-audit package SHA-256:
 
-Separate facts from inference. State what remains unproven. Document constraints and falsifiers. Do not confuse model confidence with accuracy.
+`084f0d1348342e707e1fc953b1337d3a805f9890301fa54ba01983aa1a46876f`
+
+The external adversarial audit found:
+
+- outer package SHA-256: **VERIFIED**
+- internal manifest: **201 / 201 files verified; 0 mismatches**
+- RP100 registered arithmetic: **REPRODUCED**
+- GX50-v2 registered arithmetic: **REPRODUCED**
+- scoring mismatches: **NONE**
+- registered statistical-plan execution: **COMPLIANT**
+- critical numerical-reproduction defects: **NONE**
+
+This does **not** establish universal/commercial superiority, provider-signed model identity, operational reliability, or perfect runtime blindness.
+
+## Benchmark snapshot
+
+### RP100 — 85 resolved forecast cases
+
+| Subject | Mean Brier |
+| --- | ---: |
+| Gemini 3.1 Pro | **0.189073** |
+| KAHRELUM | 0.222593 |
+| GPT-5.6 Sol | 0.321955 |
+
+KAHRELUM vs GPT paired Brier difference: **-0.099362**, preregistered 95% CI **[-0.144114, -0.058405]**.
+
+Gemini had the lowest RP100 Brier. KAHRELUM had the highest frozen RP100 analytical score (**0.876667**) and registered 60/40 composite (**0.817111**); those analytical/composite results are rubric- and encoding-conditional.
+
+### GX50-v2 — 45 resolved forecast cases
+
+| Subject | Mean Brier |
+| --- | ---: |
+| KAHRELUM | **0.146176** |
+| Grok 4.6 | 0.203929 |
+| GPT-5.6 Sol | 0.204458 |
+
+KAHRELUM had the lowest GX50-v2 Brier point estimate. Both preregistered primary 97.5% bootstrap intervals **include zero**, so this is not presented as statistically supported superiority.
 
 ## Canonical pipeline
 
 ```
-ROUTER
-  → SCOUT
-  → SOURCEGRID
-  → K-ALIGN
-  → IPR
-  → BLACKGLASS-I
-  → CRF
-  → COMMAND
-  → BLACKGLASS-II
-  → RECORD LOCK
+ROUTER → SCOUT → SOURCEGRID → K-ALIGN → IPR
+→ BLACKGLASS-I → CRF → COMMAND → BLACKGLASS-II → RECORD LOCK
 ```
 
-AAIK governs the cycle as an evidence / instability / exposure governor. The Luna / Terra / Sol cognitive control plane provides hypothesis expansion, verification, and synthesis.
+AAIK governs evidence / instability / exposure. MCRI compiles explicit requirements into a mission contract and blocks PASS when mandatory requirements remain unresolved.
 
 Details: [ARCHITECTURE.md](./ARCHITECTURE.md), [INTELLIGENCE-PIPELINE.md](./INTELLIGENCE-PIPELINE.md), and [BENCHMARKS.md](./BENCHMARKS.md).
 
-## v2.3.4 FINAL: Mission Contract Release Interlock
+## v2.3.4 identity
 
-KAHRELUM OS v2.3.3 adds **MCRI — Mission Contract Release Interlock**.
+- release archive SHA-256: `c6caca3290abbee7121fb743fabb1210b59b7536aa46dd6d6874cd02962bc1e1`
+- external-audit package SHA-256: `084f0d1348342e707e1fc953b1337d3a805f9890301fa54ba01983aa1a46876f`
+- RP100 canonical digest: `6f389c0c85ace7e81aed599e737190c98968c5b9b04a4d993d9d7a5dbdc47254`
+- GX50-v2 canonical digest: `aa4b116c1d8536c3eee6d984951c6431b31c681b717027fdb93031275324f221`
 
-MCRI compiles explicit user requirements into atomic requirements before retrieval and prevents a response from passing merely because it answered an easier neighboring question well.
+The older v2.3.3 FINAL promotion record remains preserved as historical evidence. Its hashes are **not** reused as v2.3.4 identity.
 
-Core release rules include:
+## Known limitations
 
-- Mandatory requirements cannot be silently waived.
-- Required objects / governing instruments must close when required.
-- Substitute predicates do not satisfy the original predicate.
-- `SATISFIED_NEGATIVE` requires actual negative closure, not just “not found.”
-- Mission-contract mutation after freeze is a blocker.
-- PASS requires all active mandatory atoms to be resolved and mapped.
-- COMMAND cannot override MCRI.
-- AAIK independently audits mission completion.
-- RECORD LOCK preserves the mission hash, atom ledger, object links, checksum, gates, and release state.
+- retrospective constructor-controlled benchmarks;
+- RP100 outcome imbalance: 83 YES / 2 NO;
+- GX50 challenge-set design: 22 YES / 23 NO;
+- both GX50 primary adjusted intervals include zero;
+- recovered comparator responses without hash-bound raw source transcripts;
+- no packaged GX50-v2 Subject-A execution record;
+- no provider-signed model-identity attestations;
+- no host-level correction access log;
+- analytical rankings were not independently re-adjudicated;
+- same-day / same-operator program.
 
-## Prior promotion evidence: Bench v3.0
+## Next validation target
 
-KAHRELUM OS v2.3.4 FINAL was promoted from v2.3.3-RC1 by **exact-byte promotion**. The 33-file candidate was not modified during promotion.
+The evidence-changing next step is an **externally controlled prospective benchmark**. KAHRELUM is seeking partners willing to control case selection, cutoff dates, preregistration, resolution criteria, gold outcomes and scoring.
 
-Promotion benchmark:
+The point is not to design a test KAHRELUM is supposed to win. The point is to create a result that is credible either way.
 
-- 30 cases
-- 30 VALID_PASS
-- 0 false-PASS escapes
-- Architecture mean: **98.37**
-- Architecture minimum: **94**
-- Mission mean: **97.07**
-- Mission minimum: **90**
-- 0 hard blockers
-- 0 MCRI false-PASS escapes
-- 0 mandatory-atom escapes
-- 0 required-object escapes
-- 0 substitute-predicate escapes
-- 0 silent RECORD LOCK rewrites
-- Release-gate accuracy: **30/30**
-- Candidate hash drift: **NO**
-- Patches during run: **0**
-
-This benchmark demonstrates the release cleared its frozen promotion gates. It is **not** a claim of institution-scale empirical superiority. Long-run calibration, larger resolved forecast histories, and repeated independent testing remain necessary.
-
-Full methodology, artifact identities, clean-room record, preserved defects, and validation limits: **[BENCHMARKS.md](./BENCHMARKS.md)**.
-
-## Release identity
-
-- Current public release: **KAHRELUM OS v2.3.4 FINAL**
-- External audit package SHA-256: `084f0d1348342e707e1fc953b1337d3a805f9890301fa54ba01983aa1a46876f`
-- External audit result: identity and arithmetic reproduced; inference/commercial claims remain bounded
-
-### Independent validation invitation
-
-KAHRELUM is seeking external research and commercial partners willing to control a prospective evaluation. The preferred design gives the external evaluator authority over cases, cutoffs, gold outcomes, resolution rules, preregistration and scoring. The goal is not a test designed for KAHRELUM to win; it is a test whose result is credible either way.
-
-- Release lineage reference: **KAHRELUM OS v2.3.3 FINAL**
-- Promoted from: **v2.3.3-RC1**
-- Parent: **v2.3.2 FINAL** (untouched)
-- Promotion method: **EXACT-BYTE**
-- Candidate files: **33**
-- Portable tree SHA-256: `1938c1f0b6b1f848118a3dc682de1faa5222a63f3daad3da9a5992aba5b0b6bd`
-- Candidate archive SHA-256: `d1eb86aff6a0a8c296ca00bab5f22e34b096af28c3b9810274590e58e7bca769`
-
-The frozen release artifact must remain immutable. Public documentation and operating doctrine may evolve around it without pretending those changes alter v2.3.4 FINAL.
-
-Public promotion record: **[RELEASE_v2.3.3_FINAL.md](./RELEASE_v2.3.3_FINAL.md)**.  
-GitHub Release record and downloadable verification assets: **[v2.3.3-final-public-record](https://github.com/AuroraGrid/kahrelum-os/releases/tag/v2.3.3-final-public-record)**.
-
-## Claim taxonomy
-
-Claim type:
+## Claim discipline
 
 `FACT | INFERENCE | FORECAST | SPECULATION | UNVERIFIED CLAIM`
 
-Claim support:
-
 `SUPPORTED | PLAUSIBLE | NOT PROVEN | REJECTED`
-
-Verification:
-
-`VER-G0 unexamined | VER-G1 partial | VER-G2 corroborated | VER-G3 direct`
-
-Resolution:
-
-`RES-OPEN | RES-HIT | RES-PARTIAL | RES-MISS | RES-VOID`
-
-## Current operating doctrine
-
-KAHRELUM's live operator doctrine has continued to evolve after the frozen release. It includes a **99% process-reliability target** focused on near-zero preventable structural errors, stronger finished-result verification, domain overlays, and specialized sports / forecasting execution rules.
-
-Those live policies are documented separately in [CURRENT_OPERATING_DOCTRINE.md](./CURRENT_OPERATING_DOCTRINE.md). They are **not represented as bytes inside v2.3.4 FINAL** unless they were already part of the frozen candidate.
-
-## Modules
-
-| Module | Role | Repo |
-| --- | --- | --- |
-| **RECORD LOCK** | Immutable analytical and forecast audit trail | [record-lock](https://github.com/AuroraGrid/record-lock) |
-| **Intel Tripwire** | Staged operating picture and source health | [intel-tripwire](https://github.com/AuroraGrid/intel-tripwire) |
-| **AI Red-Team Dashboard** | Authorized model-behavior testing | [ai-red-team-dashboard](https://github.com/AuroraGrid/ai-red-team-dashboard) |
-| **Research & Decision Systems** | Public portfolio surface | [research-decision-systems](https://github.com/AuroraGrid/research-decision-systems) |
-
-## Autonomy boundary
-
-**May run without extra approval:** research, analysis, drafting, scoring, internal records, branch work, diagnostics, preparation, preview deployments.
-
-**Requires explicit human approval:** public publishing, job applications, recruiter outreach, production deploy, protected-branch merge, purchases, contracts, credentials, destructive actions, and financial transfers.
 
 ## Links
 
-- Architecture site: https://kahrelum-os.vercel.app/
+- Public site: https://kahrelum-os.vercel.app/
+- Evidence: [BENCHMARKS.md](./BENCHMARKS.md)
+- Architecture: [ARCHITECTURE.md](./ARCHITECTURE.md)
+- Historical v2.3.3 release record: [RELEASE_v2.3.3_FINAL.md](./RELEASE_v2.3.3_FINAL.md)
 - Portfolio: https://hasan-research-systems.vercel.app/
-- GitHub profile: https://github.com/AuroraGrid
 
 ## License
 
