@@ -83,6 +83,21 @@ The older v2.3.3 FINAL promotion record remains preserved as historical evidence
 - analytical rankings were not independently re-adjudicated;
 - same-day / same-operator program.
 
+## Current commercial status
+
+**Private Pilot / Prospective Validation**
+
+KAHRELUM is currently available for externally controlled pilots rather than being presented as a generally available SaaS product.
+
+Four initial pilot surfaces:
+
+- **Forecasting** — unresolved questions, probabilities, calibration and resolution.
+- **Decision intelligence** — evidence → adversarial challenge → probability → action.
+- **AI evaluation** — frozen side-by-side evaluations under a declared protocol.
+- **Research assurance** — test whether unsupported conclusions are blocked before release.
+
+[Request a pilot](./PILOT.md) · [External audit summary](./evidence/EXTERNAL_AUDIT_SUMMARY.md) · [Prospective validation protocol](./evidence/PROSPECTIVE_VALIDATION_PROTOCOL.md)
+
 ## Next validation target
 
 The evidence-changing next step is an **externally controlled prospective benchmark**. KAHRELUM is seeking partners willing to control case selection, cutoff dates, preregistration, resolution criteria, gold outcomes and scoring.
