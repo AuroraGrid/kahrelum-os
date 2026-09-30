@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Request a KAHRELUM Pilot</title>
+<meta name="description" content="Learn how an externally controlled KAHRELUM prospective-validation pilot is scoped, run, and reported.">
+<link rel="canonical" href="https://kahrelum.com/pilot">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#161411;--paper:#f4efe6;--rule:#c8bfae;--muted:#615a4e;--panel:#ebe4d6}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Source Sans 3",sans-serif;line-height:1.6}h1,h2{font-family:Newsreader,serif;letter-spacing:-.02em}a{color:var(--ink)}.wrap{max-width:56rem;margin:auto;padding:2.5rem 1.25rem 4rem}header{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;border-bottom:1px solid var(--rule);padding-bottom:1rem}.wordmark{font-family:Newsreader,serif;font-weight:600;text-decoration:none}nav{display:flex;gap:1rem;flex-wrap:wrap;font-size:.9rem}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:var(--muted);margin:2.2rem 0 .5rem}h1{font-size:clamp(2.4rem,7vw,4.8rem);line-height:.98;margin:0 0 1rem;max-width:12ch}.lede{font-size:1.15rem;max-width:48rem}section{margin-top:2.6rem;padding-top:1.7rem;border-top:1px solid var(--rule)}h2{font-size:1.8rem;margin:.1rem 0 .8rem}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.card,.boundary{border:1px solid var(--rule);padding:1rem}.boundary{background:var(--panel);border-left:3px solid var(--ink)}.cta{display:inline-block;padding:.7rem 1rem;border:1px solid var(--ink);text-decoration:none;margin:.45rem .5rem .2rem 0}.cta.primary{background:var(--ink);color:var(--paper)}footer{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--rule);color:var(--muted);font-size:.9rem}@media(max-width:700px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body><div class="wrap">
+<header><a class="wordmark" href="/">KAHRELUM OS</a><nav><a href="/pilot" aria-current="page">Pilot</a><a href="/demo">Demo</a><a href="/api/v1">API</a><a href="https://github.com/AuroraGrid/kahrelum-os">GitHub</a></nav></header>
+<main>
+<p class="eyebrow">Private Pilot / Prospective Validation</p>
+<h1>Test the decision process before trusting the answer.</h1>
+<p class="lede">KAHRELUM is seeking externally controlled evaluations for forecasting, decision intelligence, AI evaluation, and research assurance. A credible pilot freezes the questions, evidence cutoffs, scoring, and success criteria before execution—and preserves negative or inconclusive results.</p>
+
+<section><p class="eyebrow">Potential problem types</p><h2>Choose a question where the evidence can be inspected.</h2>
+<div class="grid">
+<div class="card"><strong>Forecasting</strong><p>Unresolved questions with defined horizons, resolution criteria, and proper scoring such as Brier score where appropriate.</p></div>
+<div class="card"><strong>Decision intelligence</strong><p>Evidence-to-decision cases that need alternatives, explicit falsifiers, and action gates.</p></div>
+<div class="card"><strong>AI evaluation</strong><p>Frozen side-by-side evaluation against existing systems under a declared protocol.</p></div>
+<div class="card"><strong>Research assurance</strong><p>Test whether unsupported or incomplete conclusions are blocked before release.</p></div>
+</div></section>
+
+<section><p class="eyebrow">How a pilot works</p><h2>Controls are agreed before outputs exist.</h2>
+<ol>
+<li><strong>Scope.</strong> Define the question set, intended decision use, information boundary, and evaluation owner.</li>
+<li><strong>Set controls.</strong> Preferably, the external evaluator controls case selection, cutoff dates, preregistration, resolution criteria, comparators, scoring, and preservation or publication of results.</li>
+<li><strong>Freeze the protocol.</strong> Record scoring rules, success criteria, and handling procedures before execution.</li>
+<li><strong>Execute the authorized scope.</strong> Preserve blocks, refusals, deviations, and negative findings. Any data handling must be agreed before sensitive material is shared.</li>
+<li><strong>Report the result.</strong> Interpret findings only within the tested benchmark and its conditions.</li>
+</ol>
+<p>This proposed process follows the <a href="https://github.com/AuroraGrid/kahrelum-os/blob/main/evidence/PROSPECTIVE_VALIDATION_PROTOCOL.md">published prospective-validation protocol</a>. It does not imply that a pilot has already run.</p></section>
+
+<section><p class="eyebrow">Expected deliverables</p><h2>A record that another evaluator can inspect.</h2>
+<div class="grid">
+<div class="card"><strong>Per-case record</strong><p>Frozen question and cutoff; output and probability when required; evidence and block/refusal state; resolution and score.</p></div>
+<div class="card"><strong>Aggregate report</strong><p>Preregistered score, calibration, paired comparisons and uncertainty intervals where appropriate, deviations, and failure-mode analysis. Cost or runtime appears only if measured.</p></div>
+</div></section>
+
+<section><p class="eyebrow">Limitations</p><h2>Evidence stays bounded by the test.</h2>
+<div class="boundary"><p>A prospective result is evidence about its defined benchmark and conditions. It does not establish universal or commercial superiority, third-party certification, or guaranteed decision outcomes. Negative and inconclusive results remain part of the record. No price, customer, or result is implied here.</p></div></section>
+
+<section><p class="eyebrow">Start a conversation</p><h2>Send a short, non-confidential outline.</h2>
+<p>Describe the problem type and the evaluation you have in mind. Please do not put confidential, proprietary, or personal information in a public GitHub issue, and do not email sensitive material until an appropriate handling process has been agreed.</p>
+<p><a class="cta primary" href="mailto:hasan@kahrelum.com?subject=KAHRELUM%20pilot%20inquiry">Email about a pilot</a></p>
+<p><small>This link opens an email draft to hasan@kahrelum.com; it does not submit a request automatically.</small></p></section>
+</main>
+<footer><p>Hasan Raza Kazmi · Founder · <a href="mailto:hasan@kahrelum.com">hasan@kahrelum.com</a></p><p><a href="/">Home</a> · <a href="/demo">Worked example</a> · <a href="/api/v1">Read-only API</a></p></footer>
+</div></body></html>

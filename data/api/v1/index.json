@@ -1,0 +1,27 @@
+{
+  "api": "KAHRELUM Public API",
+  "version": "1.0",
+  "base_path": "/api/v1",
+  "access": "read-only",
+  "capabilities": {
+    "discovery": true,
+    "public_release_metadata": true,
+    "labeled_prerecorded_example": true,
+    "live_analysis": false,
+    "runtime_execution": false,
+    "authentication": false,
+    "data_submission": false,
+    "state_changes": false
+  },
+  "limitations": [
+    "This API serves static public metadata and a prerecorded synthetic example.",
+    "It is not connected to the frozen KAHRELUM runtime artifact.",
+    "There is no analyze endpoint, live forecast, or request execution capability.",
+    "Responses are not advice, certification, or a guarantee of any result."
+  ],
+  "endpoints": [
+    { "path": "/api/v1", "method": "GET", "description": "Discovery and capability limitations." },
+    { "path": "/api/v1/release", "method": "GET", "description": "Public release identity and frozen artifact reference." },
+    { "path": "/api/v1/example", "method": "GET", "description": "The same labeled synthetic example displayed on /demo." }
+  ]
+}

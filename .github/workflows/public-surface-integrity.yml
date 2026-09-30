@@ -70,3 +70,5 @@ jobs:
           assert not stale, f"Stale public identity in: {stale}"
           print("Public surface integrity passed.")
           PY
+      - name: Test local routes, JSON contract, and broken links
+        run: python3 tests/test_public_routes.py
