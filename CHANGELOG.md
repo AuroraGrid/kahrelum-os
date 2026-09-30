@@ -1,45 +1,39 @@
 # Changelog
 
-## 2026-09-21 — Public-surface synchronization
+## 2026-09-30 — v2.3.4 public evidence synchronization
 
-Updated public documentation and site copy to accurately describe **KAHRELUM OS v2.3.3 FINAL** and the current operating doctrine.
+Updated the public documentation and Vercel site to match the frozen **KAHRELUM OS v2.3.4 FINAL** external-audit record.
 
-This is a documentation / presentation synchronization only. It does **not** modify the frozen v2.3.3 FINAL candidate artifact.
+This is a documentation / presentation synchronization. It does not alter the frozen v2.3.4 release artifact.
 
-## KAHRELUM OS v2.3.3 FINAL
+### v2.3.4 identities
 
-- Promoted from: v2.3.3-RC1
-- Parent: v2.3.2 FINAL, untouched
-- Promotion method: EXACT-BYTE
-- Implementation modified during promotion: NO
-- Candidate files: 33
-- Portable tree SHA-256: `1938c1f0b6b1f848118a3dc682de1faa5222a63f3daad3da9a5992aba5b0b6bd`
-- Candidate archive SHA-256: `d1eb86aff6a0a8c296ca00bab5f22e34b096af28c3b9810274590e58e7bca769`
+- release archive SHA-256: `c6caca3290abbee7121fb743fabb1210b59b7536aa46dd6d6874cd02962bc1e1`
+- external-audit package SHA-256: `084f0d1348342e707e1fc953b1337d3a805f9890301fa54ba01983aa1a46876f`
+- RP100 canonical: `6f389c0c85ace7e81aed599e737190c98968c5b9b04a4d993d9d7a5dbdc47254`
+- GX50-v2 canonical: `aa4b116c1d8536c3eee6d984951c6431b31c681b717027fdb93031275324f221`
 
-### Bench v3.0 promotion result
+### External-audit closeout
 
-- Cases: 30
-- VALID_PASS: 30
-- FALSE_PASS_ESCAPE: 0
-- Architecture mean: 98.37
-- Architecture minimum: 94
-- Mission mean: 97.07
-- Mission minimum: 90
-- Hard blockers: 0
-- MCRI false-PASS escapes: 0
-- Mandatory atom escapes: 0
-- Required object escapes: 0
-- Substitute predicate escapes: 0
-- Silent Record Lock rewrites: 0
-- Release-gate accuracy: 30/30
-- Candidate hash drift: NO
-- Patches during run: 0
-- Promotion gate: PASS
+- package SHA verified: YES
+- internal manifest verified: YES
+- RP100 reproduction: YES
+- GX50 reproduction: YES
+- scoring mismatches: NONE
+- statistical-plan compliance: YES
+- critical defects in package identity / registered numerical reproduction: NONE
 
-### Preserved non-blocking notes
+The public surface also preserves the audit's limitations: Gemini leads RP100 Brier; KAHRELUM leads GX50-v2 Brier by point estimate but both primary 97.5% CIs include zero; retrospective, custody and independence limitations remain.
 
-- V3-04: attendance-number contradiction listed but not explicitly reconciled.
-- V3-26: invalid window comparison correctly rejected; valid counterfactual ratio not explicitly written.
-- V3-29: NOT_APPLICABLE ledger / checksum count inconsistency.
+## 2026-09-21 — v2.3.3 public-surface synchronization
 
-These remain preserved historical notes and are not retroactively patched into FINAL.
+The v2.3.3 FINAL release record remains preserved as historical evidence.
+
+- promoted from v2.3.3-RC1
+- promotion method: EXACT-BYTE
+- candidate files: 33
+- portable tree SHA-256: `1938c1f0b6b1f848118a3dc682de1faa5222a63f3daad3da9a5992aba5b0b6bd`
+- candidate archive SHA-256: `d1eb86aff6a0a8c296ca00bab5f22e34b096af28c3b9810274590e58e7bca769`
+- Bench v3.0: 30/30 VALID_PASS; 0 hard blockers; no candidate hash drift; 0 mid-run patches
+
+Those hashes identify v2.3.3 and are not v2.3.4 identities.
