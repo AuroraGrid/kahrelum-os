@@ -13,7 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#161411;--paper:#f4efe6;--rule:#c8bfae;--muted:#615a4e;--panel:#ebe4d6}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Source Sans 3",sans-serif;line-height:1.55}h1,h2{font-family:Newsreader,serif;letter-spacing:-.02em}a{color:var(--ink)}.wrap{max-width:56rem;margin:auto;padding:2.5rem 1.25rem 4rem}header{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;border-bottom:1px solid var(--rule);padding-bottom:1rem}.wordmark{font-family:Newsreader,serif;font-weight:600;text-decoration:none}nav{display:flex;gap:1rem;flex-wrap:wrap;font-size:.9rem}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:var(--muted);margin:2.2rem 0 .5rem}h1{font-size:clamp(2.4rem,7vw,4.8rem);line-height:.98;margin:0 0 1rem;max-width:12ch}.lede{font-size:1.15rem;max-width:48rem}.release{display:inline-block;padding:.25rem .55rem;border:1px solid var(--rule);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}section{margin-top:2.6rem;padding-top:1.7rem;border-top:1px solid var(--rule)}h2{font-size:1.8rem;margin:.1rem 0 .8rem}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}.card{border:1px solid var(--rule);padding:1rem}.metric{font-family:Newsreader,serif;font-size:1.9rem}.label{font-size:.85rem;color:var(--muted)}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:.55rem;border-bottom:1px solid var(--rule)}pre{background:var(--panel);padding:1rem;overflow:auto}.boundary{background:var(--panel);padding:1rem 1.15rem;border-left:3px solid var(--ink)}code{word-break:break-all}footer{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--rule);color:var(--muted);font-size:.9rem}@media(max-width:700px){.grid{grid-template-columns:1fr}}
-</style></head>
+.cta{display:inline-block;padding:.7rem 1rem;border:1px solid var(--ink);text-decoration:none;margin:.45rem .5rem .2rem 0}.cta.primary{background:var(--ink);color:var(--paper)}.usegrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.example{background:var(--panel);padding:1rem 1.15rem;border-left:3px solid var(--ink)}@media(max-width:700px){.usegrid{grid-template-columns:1fr}}</style></head>
 <body><div class="wrap">
 <header><a class="wordmark" href="/">KAHRELUM OS</a><nav><a href="https://github.com/AuroraGrid/kahrelum-os">GitHub</a><a href="https://github.com/AuroraGrid/kahrelum-os/blob/main/ARCHITECTURE.md">Architecture</a><a href="https://github.com/AuroraGrid/kahrelum-os/blob/main/BENCHMARKS.md">Evidence</a><a href="#validation">Validation</a></nav></header>
 <main>
@@ -21,12 +21,14 @@
 <h1>Decision intelligence that has to earn its answer.</h1>
 <p class="lede">KAHRELUM OS is an evidence-to-decision system for forecasting, research and high-stakes analysis. It separates fact from inference, attacks its own conclusions, and is designed to block rather than manufacture certainty when the evidence does not support an answer.</p>
 <span class="release">Current formal release · v2.3.4 FINAL</span>
+<p><strong>Commercial status:</strong> Private Pilot / Prospective Validation</p>
+<p><a class="cta primary" href="https://github.com/AuroraGrid/kahrelum-os/blob/main/PILOT.md">Request a Pilot</a><a class="cta" href="https://github.com/AuroraGrid/kahrelum-os/blob/main/evidence/EXTERNAL_AUDIT_SUMMARY.md">Review the Evidence</a></p>
 
 <section><p class="eyebrow">External adversarial audit</p><h2>Identity and arithmetic hold. The limitations stay attached.</h2>
 <div class="grid"><div class="card"><div class="metric">201 / 201</div><div class="label">manifested files hash-verified</div></div><div class="card"><div class="metric">0</div><div class="label">scoring mismatches found</div></div><div class="card"><div class="metric">2 / 2</div><div class="label">RP100 + GX50 numerical reproductions</div></div></div>
 <p>The delivered audit-package SHA-256 matched exactly. Registered forecast metrics, paired differences, bootstrap intervals, analytical arithmetic and composites reproduced from the frozen inputs.</p>
 <div class="boundary"><strong>Evidence boundary.</strong> This does not establish universal or commercial superiority. Gemini has the lowest RP100 Brier. KAHRELUM has the lowest GX50-v2 Brier point estimate, but both preregistered primary 97.5% intervals include zero. Retrospective-benchmark, custody and independence limitations remain disclosed.</div>
-<p><a href="https://github.com/AuroraGrid/kahrelum-os/blob/main/BENCHMARKS.md">Inspect the full bounded evidence record →</a></p></section>
+<p><a href="https://github.com/AuroraGrid/kahrelum-os/blob/main/evidence/EXTERNAL_AUDIT_SUMMARY.md">Open the curated audit summary →</a> · <a href="https://github.com/AuroraGrid/kahrelum-os/blob/main/BENCHMARKS.md">Full benchmark record →</a></p></section>
 
 <section><p class="eyebrow">Forecast evidence</p><h2>Two benchmarks. Two different readings.</h2>
 <table><thead><tr><th>Benchmark</th><th>KAHRELUM</th><th>GPT</th><th>Comparator</th></tr></thead><tbody>
@@ -34,6 +36,25 @@
 <tr><td>GX50-v2 mean Brier</td><td><strong>0.146176</strong></td><td>0.204458</td><td>Grok 0.203929</td></tr>
 </tbody></table>
 <p>RP100 KAHRELUM−GPT paired Brier difference: <strong>-0.099362</strong>, 95% CI <strong>[-0.144114, -0.058405]</strong>. GX50-v2 KAHRELUM−GPT and KAHRELUM−Grok primary 97.5% intervals both include zero.</p></section>
+
+<section><p class="eyebrow">Where it fits</p><h2>Four ways to test KAHRELUM.</h2>
+<div class="usegrid">
+<div class="card"><strong>Forecasting</strong><p>Unresolved questions, explicit probabilities, calibration and resolution without hindsight rewriting.</p></div>
+<div class="card"><strong>Decision intelligence</strong><p>Evidence → alternatives → adversarial challenge → probability → action, with revision conditions preserved.</p></div>
+<div class="card"><strong>AI evaluation</strong><p>Frozen side-by-side evaluations under declared protocols, scoring rules and custody boundaries.</p></div>
+<div class="card"><strong>Research assurance</strong><p>Test whether incomplete or unsupported conclusions are blocked before they become decisions or published claims.</p></div>
+</div></section>
+
+<section><p class="eyebrow">What an output looks like</p><h2>Not just an answer — an inspectable decision state.</h2>
+<div class="example">
+<p><strong>QUESTION</strong><br>Will a defined event occur before the frozen horizon?</p>
+<p><strong>FACT</strong><br>Verified evidence available at the declared cutoff.</p>
+<p><strong>INFERENCE</strong><br>Mechanism connecting that evidence to the event.</p>
+<p><strong>FORECAST</strong><br>62% — example format only, not a live forecast.</p>
+<p><strong>BLACKGLASS</strong><br>Strongest countercase and evidence that would invalidate the thesis.</p>
+<p><strong>COMMAND</strong><br>MONITOR — no action until the declared gate clears.</p>
+<p><strong>BLOCK CONDITION</strong><br>If the required evidence object cannot be verified, do not manufacture closure.</p>
+</div></section>
 
 <section><h2>Canonical pipeline</h2><pre>ROUTER → SCOUT → SOURCEGRID → K-ALIGN → IPR
 → BLACKGLASS-I → CRF → COMMAND → BLACKGLASS-II → RECORD LOCK</pre>
@@ -47,7 +68,7 @@
 <section id="validation"><p class="eyebrow">Independent prospective validation</p><h2>You control the next test.</h2>
 <p>The next evidence-changing step is an externally controlled prospective benchmark. The preferred protocol gives the evaluator control over case selection, cutoff dates, preregistration, resolution criteria, gold outcomes and scoring.</p>
 <p>A negative result stays in the record. The goal is not to design a test KAHRELUM is supposed to win; it is to create a result that is credible either way.</p>
-<p><a href="https://github.com/AuroraGrid/kahrelum-os">Technical record and contact route →</a></p></section>
+<p><a class="cta primary" href="https://github.com/AuroraGrid/kahrelum-os/blob/main/PILOT.md">Request a Pilot</a><a class="cta" href="https://github.com/AuroraGrid/kahrelum-os/blob/main/evidence/PROSPECTIVE_VALIDATION_PROTOCOL.md">Read the Protocol</a></p></section>
 </main>
 <footer><p>Hasan Raza Kazmi · Founder</p><p><a href="https://github.com/AuroraGrid/kahrelum-os">GitHub</a> · <a href="https://hasan-research-systems.vercel.app/">Research & Decision Systems</a></p></footer>
 </div></body></html>
