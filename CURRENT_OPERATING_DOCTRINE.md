@@ -1,95 +1,52 @@
 # KAHRELUM — Current Operating Doctrine
 
-Updated: 2026-09-21
+Updated: 2026-09-30
 
 ## Status
 
-This document describes **live operator policy layered on top of KAHRELUM OS v2.3.3 FINAL**.
-
-It is not a claim that every rule below is encoded in the frozen 33-file v2.3.3 candidate. The exact-byte release remains immutable.
+This document describes **live operator policy around KAHRELUM OS v2.3.4 FINAL**. Operator policy is not automatically part of the frozen release bytes.
 
 ## 99% process-reliability target
 
-The current operational target is near-zero preventable structural error.
+The operational target is near-zero preventable structural error. This is **not** a 99% forecast-accuracy claim.
 
-This is **not** a 99% forecast-accuracy claim.
-
-For consequential work, the operator standard is:
+For consequential work:
 
 1. Inspect the complete relevant evidence set available to the task.
 2. Treat explicit constraints as hard constraints.
-3. Test meaningful alternative hypotheses before assigning high confidence.
+3. Test meaningful alternatives before assigning high confidence.
 4. Verify the finished result before declaring completion.
-5. Never claim a tool action, send, deployment, calculation, or file change succeeded without checking the result.
+5. Never claim a tool action, send, deployment, calculation or file change succeeded without checking it.
 6. Do not reuse stale values after a correction.
-7. Separate FACT / INFERENCE / FORECAST / OPINION where the distinction matters.
+7. Separate FACT / INFERENCE / FORECAST / OPINION where material.
 8. Preserve unresolved items instead of smoothing them away.
-9. Record corrections rather than silently rewriting the prior state.
-10. Prefer no decision over a forced decision when the evidence or price does not clear the relevant gate.
+9. Record corrections rather than silently rewriting prior state.
+10. Prefer no decision over a forced decision when evidence does not clear the gate.
 
 ## Evidence discipline
 
-Material analytical claims should be checked for:
-
-- source authority;
-- source independence;
-- freshness;
-- object identity;
-- time-window identity;
-- denominator consistency;
-- contradiction reconciliation;
-- strongest countercase;
-- falsifier / revision condition.
+Material claims should be checked for source authority, independence, freshness, object identity, time-window identity, denominator consistency, contradiction reconciliation, strongest countercase and revision condition.
 
 ## Forecasting discipline
 
-Forecasts should preserve:
+Preserve original cutoff, initial probability, evidence state, resolution definition, revision triggers, appended probability updates and final resolution without hindsight rewriting.
 
-- original cutoff;
-- initial probability;
-- evidence state;
-- resolution definition;
-- revision triggers;
-- later probability updates as appended changes;
-- final resolution without hindsight rewriting.
+## External-validation discipline
 
-## Domain overlays
+Current benchmark evidence is retrospective and bounded. Until prospective external validation closes the gap:
 
-KAHRELUM may use specialized operator profiles for sports, prediction markets, geopolitics, commercial intelligence, legal / regulatory work, and other domains.
-
-Domain overlays inherit the core architecture but may impose stricter pricing, source, timing, or action gates.
-
-### Sports / market profile
-
-Current sports betting operator policy includes:
-
-- price verification before certification;
-- thesis-to-wager alignment;
-- injury / inactive / role checks;
-- opponent and game-script analysis;
-- contradiction checks;
-- fragility penalties;
-- no forced bets;
-- closing-line and postmortem tracking.
-
-Current stake gates:
-
-- **58%+ estimated hit probability:** CERTIFIED / official — $50
-- **55.0–57.9%:** LEAN — optional $25
-- **Below 55%:** PASS unless a separate strong plus-money EV case is established
-
-Every evaluated wager should display an estimated hit probability. Passes are tracked for process quality but excluded from money and win-loss records.
-
-The sports ledger tracks certified bets and leans separately and combined, including money out, total returns including stake, net P/L, and ROI.
+- do not claim universal/commercial model superiority;
+- do not turn GX50 point-estimate leads into statistically supported superiority;
+- preserve Gemini's lowest RP100 Brier result;
+- preserve custody and independence limitations;
+- treat externally controlled prospective evaluation as the next evidence-changing test.
 
 ## Multi-agent execution
 
-Operational work may use multiple independent model / analyst roles for discovery, source harvesting, verification, adversarial review, synthesis, and mirror checks.
-
-These execution choices are orchestration policy, not evidence that those external systems are embedded in the frozen KAHRELUM release.
+Operational work may use independent model / analyst roles for discovery, source harvesting, verification, adversarial review, synthesis and mirror checks. These orchestration choices are not evidence that external systems are embedded in the frozen release.
 
 ## Release discipline
 
-Do not alter KAHRELUM OS v2.3.3 FINAL and continue calling the modified bytes v2.3.3 FINAL.
+Do not alter frozen release bytes while retaining the same release identity. Any implementation change requires a new candidate/version identity and validation appropriate to that change.
 
-Any future implementation change must receive a new candidate / version identity and fresh validation appropriate to the change.
+The older v2.3.3 FINAL record remains historical evidence and must not be conflated with v2.3.4 identity.
