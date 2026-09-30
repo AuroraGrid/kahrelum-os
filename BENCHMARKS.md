@@ -2,214 +2,128 @@
 
 ## Scope
 
-This page documents the public validation record for **KAHRELUM OS v2.3.3 FINAL**.
+This page records the bounded public evidence for **KAHRELUM OS v2.3.4 FINAL** and preserves the older v2.3.3 promotion record as historical evidence rather than blending the two release identities.
 
-It separates three different claims:
+The current external audit tested custody and registered claims from packaged bytes. It did not execute KAHRELUM, rerun benchmark subjects, independently reconstruct historical gold labels, or certify commercial readiness.
 
-1. **What the frozen release actually passed.**
-2. **What historical testing contributed to hardening.**
-3. **What remains unproven.**
+## v2.3.4 release identity
 
-The benchmark record is evidence for the release decision. It is not a claim that KAHRELUM has achieved institution-scale superiority or solved forecasting.
+- release archive SHA-256: `c6caca3290abbee7121fb743fabb1210b59b7536aa46dd6d6874cd02962bc1e1`
+- external-audit package SHA-256: `084f0d1348342e707e1fc953b1337d3a805f9890301fa54ba01983aa1a46876f`
+- RP100 canonical digest: `6f389c0c85ace7e81aed599e737190c98968c5b9b04a4d993d9d7a5dbdc47254`
+- GX50-v1 canonical digest: `b3374a06c06c1e00e10c9035c5af8f4fc54ad4ee0cd25ba6688fd66abf26eabb`
+- GX50-v2 canonical digest: `aa4b116c1d8536c3eee6d984951c6431b31c681b717027fdb93031275324f221`
 
----
+External audit: **201 manifested files independently SHA-256 checked; 0 mismatches, 0 missing listed files, 0 unmanifested files.**
 
-## Release under test
+## RP100
 
-- Release: **KAHRELUM OS v2.3.3 FINAL**
-- Promoted from: **v2.3.3-RC1**
-- Parent: **v2.3.2 FINAL** (untouched)
-- Promotion method: **EXACT-BYTE**
-- Implementation modified during promotion: **NO**
-- Candidate file count: **33**
-- Portable tree SHA-256: `1938c1f0b6b1f848118a3dc682de1faa5222a63f3daad3da9a5992aba5b0b6bd`
-- Candidate archive SHA-256: `d1eb86aff6a0a8c296ca00bab5f22e34b096af28c3b9810274590e58e7bca769`
+85 resolved forecast cases. Frozen resolution count: **83 YES / 2 NO**.
 
-The public architecture repository is **not** the frozen 33-file candidate tree. Public docs may evolve; the frozen candidate identity above may not.
+| Subject | Mean Brier | Mean log loss | ECE |
+| --- | ---: | ---: | ---: |
+| KAHRELUM | 0.2225929412 | 0.6342017606 | 0.4072941176 |
+| GPT-5.6 Sol | 0.3219552941 | 0.9243690136 | 0.4818823529 |
+| Gemini 3.1 Pro | **0.1890729412** | **0.5588932706** | **0.3244705882** |
 
----
+| Pair | Mean Brier diff | W/L/T | CI | vs zero |
+| --- | ---: | ---: | --- | --- |
+| KAHRELUM − GPT | -0.0993623529 | 53/29/3 | 95% [-0.1441143529, -0.0584045588] | below |
+| KAHRELUM − Gemini | +0.0335200000 | 19/62/4 | 95% [0.0052775588, 0.0594447647] | above |
+| GPT − Gemini | +0.1328823529 | 5/78/2 | 95% [0.1013456471, 0.1687522059] | above |
 
-## KAHRELUM BENCH v3.0
+Frozen analytical arithmetic:
 
-Bench v3.0 is the frozen, self-contained promotion benchmark used for v2.3.3 FINAL.
+| Subject | Mean normalized analytical | Registered composite |
+| --- | ---: | ---: |
+| KAHRELUM | **0.8766666667** | **0.8171109020** |
+| GPT-5.6 Sol | 0.8433333333 | 0.7441601569 |
+| Gemini 3.1 Pro | 0.8088000000 | 0.8100762353 |
 
-### Design
+RP100 composite formula: `0.6 × (1 − mean Brier) + 0.4 × analytical`.
 
-- 30 total cases
-- 20 real-world STATIC cases
-- 10 CLOSED_WORLD adversarial cases
-- 20 distinct real-world domains
-- 0 exact duplicates
-- 0 near-duplicates against the preserved Bench v1 / Bench v2 / B5 case families
+**Boundary:** Gemini has the lowest RP100 Brier. KAHRELUM's analytical/composite arithmetic is highest under the frozen rubric and weighting, but the analytical procedure was not independently re-adjudicated and Gemini's analytical encoding is asymmetric. The 83/2 outcome mix is a major generalization/calibration limitation.
 
-Design coverage included:
+## GX50-v2
 
-- 12 conjunction cases
-- 15 governing-object cases
-- 30 SATISFIED_NEGATIVE-capable cases
-- 29 substitute-predicate traps
-- 10 window / denominator traps
-- 10 status-ladder cases
-- 5 probability cases
-- 13 quantitative cases
+45 resolved forecast cases, deliberately challenge-set balanced at **22 YES / 23 NO**.
 
-### Promotion result
+| Subject | Mean Brier | Mean log loss | ECE |
+| --- | ---: | ---: | ---: |
+| KAHRELUM | **0.1461755556** | **0.4538153298** | 0.1913333333 |
+| GPT-5.6 Sol | 0.2044577778 | 0.6040052255 | 0.1933333333 |
+| Grok 4.6 | 0.2039288889 | 0.6053677475 | **0.1808888889** |
 
-- **VALID_PASS: 30 / 30**
-- **FALSE_PASS_ESCAPE: 0**
-- **Architecture mean: 98.37**
-- **Architecture minimum: 94**
-- Architecture cases below 90: **0**
-- **Mission mean: 97.07**
-- **Mission minimum: 90**
-- Mission cases below 85: **0**
-- Hard blockers: **0**
-- MCRI false-PASS escapes: **0**
-- Mandatory atom escapes: **0**
-- Required object escapes: **0**
-- Substitute predicate escapes: **0**
-- Silent RECORD LOCK rewrites: **0**
-- Release-gate accuracy: **30 / 30**
-- Candidate hash drift: **NO**
-- Patches during run: **0**
-- **PROMOTION_GATE: PASS**
+| Pair | Mean Brier diff | W/L/T | CI | vs zero |
+| --- | ---: | ---: | --- | --- |
+| KAHRELUM − GPT | -0.0582822222 | 26/17/2 | 97.5% [-0.1256969444, 0.0055116667] | **includes zero** |
+| KAHRELUM − Grok | -0.0577533333 | 31/13/1 | 97.5% [-0.1211511944, 0.0001336944] | **includes zero** |
+| GPT − Grok | +0.0005288889 | 25/19/1 | 95% [-0.0284802778, 0.0311602778] | includes zero |
 
----
+Frozen analytical arithmetic:
 
-## Frozen promotion gates
+| Subject | Mean normalized analytical | Registered composite |
+| --- | ---: | ---: |
+| KAHRELUM | **0.898** | **0.8648683333** |
+| GPT-5.6 Sol | 0.792 | 0.7946566667 |
+| Grok 4.6 | 0.716 | 0.7760533333 |
 
-The candidate was eligible for promotion only if all frozen gates cleared:
+GX50 composite formula: `0.75 × (1 − mean Brier) + 0.25 × analytical`.
 
-- Architecture mean >= 95
-- No architecture case < 90
-- Mission mean >= 90
-- No mission case < 85
-- Hard blockers = 0
-- False PASS escapes = 0
-- Mandatory atom escapes = 0
-- Required object escapes = 0
-- Substitute predicate escapes = 0
-- Silent RECORD LOCK rewrites = 0
-- Candidate hash drift = NO
-- Patches during run = 0
+**Boundary:** KAHRELUM has the lowest GX50-v2 Brier point estimate. Both preregistered primary 97.5% intervals include zero. Do not convert that point-estimate ranking into a statistically supported superiority claim.
 
-The candidate cleared every gate.
+## GX50-v1 → v2 correction
 
----
+Independent comparison found 50/50 IDs shared, 49 case rows byte-identical, and one changed case: `gx50-t-07`. The changed field was `metadata.forecast_horizon`, from `2023-01-18T23:59:59Z` to `2023-01-19T23:59:59Z`. Scoring rules and sealed resolution ledgers were byte-identical; v1 canonical identity was preserved.
 
-## Clean-room record
+This supports correction integrity at the byte/structure level. It does **not** provide host-forensic proof that no one inspected Subject-A contents during correction.
 
-### Cleanroom-001
+## Statistical-plan compliance
 
-- 0 / 30 cases executed
-- Stopped at Stage 0
-- Reason: candidate hash scheme was not portably specified
-- Classification: **INVALID_PREEXECUTION / provenance failure**
-- Not classified as a candidate analytical failure
-- No benchmark contamination
+The external audit independently reproduced the registered procedures and found them compliant:
 
-That stop is preserved because provenance failure is itself something the system is supposed to refuse to smooth over.
+- RP100 A/B: 10,000 bootstrap replicates, seed 1001001, 95% CI;
+- RP100 Gemini extension: seeds 1001002 / 1001003; no multiplicity correction was registered;
+- GX50-v2: primary comparisons at Bonferroni-adjusted 97.5%, seeds 424242 / 424243; secondary seed 424244 at 95%.
 
-### Cleanroom-002
+A preserved metadata defect exists in the Gemini-extension plan: the embedded GPT Subject-B hash is 62 hex characters; scoring used the authoritative 64-character response-file hash. It does not change the reproduced Brier results.
 
-- 30 / 30 cases executed
-- PASS: 30
-- BLOCK: 0
-- MCRI blocks: 0
-- COMMAND / MCRI conflicts: 0
-- Candidate hash drift: NO
-- External web used: NO
-- Adjudicator bundle accessed by runner: NO
-- Self-scoring performed: NO
-- Candidate modified: NO
-- Benchmark modified: NO
-- Patches: 0
+## Verified
 
----
+- delivered external-audit ZIP hash matches expected;
+- all 201 manifested files hash-check;
+- RP100 and GX50 registered forecast arithmetic reproduces;
+- analytical criterion arithmetic re-sums;
+- registered bootstrap intervals reproduce;
+- statistical-plan execution is compliant;
+- no registered numerical claim failed recomputation;
+- GX50-v2 changes only the `gx50-t-07` case-row horizon field from v1.
 
-## Sealed artifact identities
+## Unverified / limited
 
-- Adjudicator SHA-256: `9c6b70772dc32a6c991586be016e24ac90a4f2f8f77fcb74bb65f741d5373f39`
-- CLEANROOM002 raw SHA-256: `4e9732873aea7468e293aac06eeb6b67c87da969f0ce89a23aed81abe45a06a7`
-- Benchmark master SHA-256: `4a0ef4fc1d34897a0a6eb00c07cd85da77649ec3498e1b129a038aec399816cd`
-- Benchmark lock SHA-256: `b0bac3469335045dec0f2bd4de003e9068ee2241262f765eba72b837fc5c717d`
+- runtime blindness beyond recorded attestations;
+- pretrained historical-outcome knowledge;
+- provider-signed model identities;
+- original transcript custody for recovered comparator responses;
+- GX50-v2 Subject-A runtime binding;
+- host-level file-access forensics;
+- primary-world re-resolution of historical gold labels;
+- independent blinded analytical re-adjudication;
+- generalization from constructor-controlled retrospective benchmarks;
+- commercial or universal superiority.
 
-These identities establish the preserved benchmark / adjudication record. They do not mean all sealed artifacts are published in this documentation repository.
+## Historical v2.3.3 promotion record
 
----
+The prior v2.3.3 FINAL record remains preserved: promoted from v2.3.3-RC1 by exact-byte identity; 33-file candidate; Bench v3.0 30/30 VALID_PASS; architecture mean 98.37; mission mean 97.07; 0 hard blockers / false-PASS escapes; no candidate hash drift; 0 mid-run patches.
 
-## Historical hardening record
+Historical v2.3.3 portable tree SHA-256:
+`1938c1f0b6b1f848118a3dc682de1faa5222a63f3daad3da9a5992aba5b0b6bd`
 
-Before Bench v3.0, KAHRELUM accumulated:
+Historical v2.3.3 archive SHA-256:
+`d1eb86aff6a0a8c296ca00bab5f22e34b096af28c3b9810274590e58e7bca769`
 
-- Bench v1: 10 historical cases
-- Bench v2: 12 historical cases
-- B5: 18 adversarial cases
-- Historical / development total: **40 cases**
+These hashes identify **v2.3.3, not v2.3.4**.
 
-Bench v3 added 30 new frozen cases.
+## Next evidence-changing test
 
-Shorthand:
-
-> 40 cases hardened it. 30 new clean-room cases tested the hardened system. 70 total cases in the historical + promotion record.
-
-Important limitation: Bench v1 and Bench v2 remain historical families whose exact runnable static provenance was not fully preserved. They were not silently reconstructed or rerun for the v2.3.3 promotion.
-
-Historical B5 testing and MCRI replay remain supplemental hardening evidence. Preserved historical false-PASS records include B5-07, B5-08, B5-11, B5-13, B5-15, and B5-17.
-
----
-
-## Preserved non-blocking defects
-
-Three Bench v3 adjudication notes were retained rather than patched out of history:
-
-### V3-04
-An attendance-number contradiction was listed but not explicitly reconciled.
-
-### V3-26
-A window mismatch was correctly rejected, but the valid counterfactual ratio was not explicitly written.
-
-### V3-29
-A NOT_APPLICABLE ledger / checksum count inconsistency remained.
-
-None triggered a frozen hard blocker. None is retroactively rewritten.
-
----
-
-## What the benchmark supports
-
-The evidence supports these narrower claims:
-
-- v2.3.3 RC1 cleared the frozen Bench v3 promotion gates.
-- The exact candidate did so without mid-run patches or hash drift.
-- The benchmark did not record a false-PASS escape, mandatory-atom escape, required-object escape, substitute-predicate escape, or silent RECORD LOCK rewrite.
-- MCRI materially hardened the system against mission-completion failures exposed in earlier testing.
-
-## What it does not support
-
-Bench v3 does **not** prove:
-
-- universal open-world robustness;
-- institution-grade superiority;
-- 99% forecasting accuracy;
-- transfer to every live, hostile, time-varying evidence environment;
-- perfect AAIK independence;
-- perfect BLACKGLASS-II differentiation;
-- long-run calibration.
-
-Those require larger resolved forecast histories, repeated independent benchmark runs, external operators, and more live evidence.
-
----
-
-## Public release boundary
-
-**KAHRELUM OS v2.3.3 FINAL remains immutable.**
-
-Any later public documentation, site copy, operator doctrine, sports rules, or orchestration policy is layered around the frozen release unless a future implementation candidate is explicitly created and validated.
-
-See:
-
-- [Architecture](./ARCHITECTURE.md)
-- [Intelligence pipeline](./INTELLIGENCE-PIPELINE.md)
-- [Current operating doctrine](./CURRENT_OPERATING_DOCTRINE.md)
-- [v2.3.3 FINAL public promotion record](./RELEASE_v2.3.3_FINAL.md)
+An externally controlled prospective benchmark with external case control, preregistration, cutoff enforcement, gold-label custody and scoring. The result should be preserved whether KAHRELUM wins, ties or loses.
