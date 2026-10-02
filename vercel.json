@@ -1,5 +1,8 @@
 {
   "cleanUrls": true,
+  "git": {
+    "deploymentEnabled": false
+  },
   "rewrites": [
     { "source": "/api/v1", "destination": "/data/api/v1/index.json" },
     { "source": "/api/v1/release", "destination": "/data/api/v1/release.json" },

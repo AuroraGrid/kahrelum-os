@@ -5,26 +5,39 @@
 <title>KAHRELUM OS v2.3.4 FINAL — Evidence-to-Decision Control Plane</title>
 <meta name="description" content="KAHRELUM OS v2.3.4 FINAL: evidence-to-decision control plane with externally reproduced benchmark arithmetic and explicit validation boundaries.">
 <link rel="canonical" href="https://kahrelum.com/">
-<meta property="og:title" content="KAHRELUM OS v2.3.4 FINAL">
-<meta property="og:description" content="Decision intelligence that has to earn its answer. External audit arithmetic reproduced; limitations preserved.">
-<meta property="og:type" content="website"><meta property="og:url" content="https://kahrelum.com/">
-<meta property="og:image" content="https://kahrelum.com/og.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://kahrelum.com/og.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KAHRELUM">
+<meta property="og:title" content="KAHRELUM — Evidence-to-decision systems">
+<meta property="og:description" content="Evidence-to-decision systems for forecasting, AI evaluation, and research assurance.">
+<meta property="og:url" content="https://kahrelum.com/">
+<meta property="og:image" content="https://kahrelum.com/assets/social/kahrelum-og-home.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="KAHRELUM — Evidence-to-decision systems">
+<meta name="twitter:description" content="Evidence-to-decision systems for forecasting, AI evaluation, and research assurance.">
+<meta name="twitter:image" content="https://kahrelum.com/assets/social/kahrelum-og-home.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"KAHRELUM","url":"https://kahrelum.com","founder":{"@type":"Person","name":"Hasan Raza Kazmi"},"email":"mailto:hasan@kahrelum.com","description":"KAHRELUM OS is an evidence-to-decision system for forecasting, research and high-stakes analysis. It separates fact from inference, challenges conclusions, and preserves uncertainty and validation boundaries."}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#161411;--paper:#f4efe6;--rule:#c8bfae;--muted:#615a4e;--panel:#ebe4d6}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Source Sans 3",sans-serif;line-height:1.55}h1,h2{font-family:Newsreader,serif;letter-spacing:-.02em}a{color:var(--ink)}.wrap{max-width:56rem;margin:auto;padding:2.5rem 1.25rem 4rem}header{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;border-bottom:1px solid var(--rule);padding-bottom:1rem}.wordmark{font-family:Newsreader,serif;font-weight:600;text-decoration:none}nav{display:flex;gap:1rem;flex-wrap:wrap;font-size:.9rem}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:var(--muted);margin:2.2rem 0 .5rem}h1{font-size:clamp(2.4rem,7vw,4.8rem);line-height:.98;margin:0 0 1rem;max-width:12ch}.lede{font-size:1.15rem;max-width:48rem}.release{display:inline-block;padding:.25rem .55rem;border:1px solid var(--rule);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}section{margin-top:2.6rem;padding-top:1.7rem;border-top:1px solid var(--rule)}h2{font-size:1.8rem;margin:.1rem 0 .8rem}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}.card{border:1px solid var(--rule);padding:1rem}.metric{font-family:Newsreader,serif;font-size:1.9rem}.label{font-size:.85rem;color:var(--muted)}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:.55rem;border-bottom:1px solid var(--rule)}pre{background:var(--panel);padding:1rem;overflow:auto}.boundary{background:var(--panel);padding:1rem 1.15rem;border-left:3px solid var(--ink)}code{word-break:break-all}footer{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--rule);color:var(--muted);font-size:.9rem}@media(max-width:700px){.grid{grid-template-columns:1fr}}
 .cta{display:inline-block;padding:.7rem 1rem;border:1px solid var(--ink);text-decoration:none;margin:.45rem .5rem .2rem 0}.cta.primary{background:var(--ink);color:var(--paper)}.usegrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.example{background:var(--panel);padding:1rem 1.15rem;border-left:3px solid var(--ink)}@media(max-width:700px){.usegrid{grid-template-columns:1fr}}</style></head>
 <body><div class="wrap">
-<header><a class="wordmark" href="/">KAHRELUM OS</a><nav><a href="/pilot">Pilot</a><a href="/demo">Demo</a><a href="/api/v1">API</a><a href="https://github.com/AuroraGrid/kahrelum-os">GitHub</a><a href="https://github.com/AuroraGrid/kahrelum-os/blob/main/ARCHITECTURE.md">Architecture</a><a href="https://github.com/AuroraGrid/kahrelum-os/blob/main/BENCHMARKS.md">Evidence</a><a href="#validation">Validation</a></nav></header>
+<header><a class="wordmark" href="/">KAHRELUM OS</a><nav><a href="/pilot">Pilot</a><a href="/demo">Demo</a><a href="/sample">Sample</a><a href="/connect">Connect</a><a href="/api/v1">API</a><a href="https://github.com/AuroraGrid/kahrelum-os">GitHub</a><a href="https://github.com/AuroraGrid/kahrelum-os/blob/main/ARCHITECTURE.md">Architecture</a><a href="https://github.com/AuroraGrid/kahrelum-os/blob/main/BENCHMARKS.md">Evidence</a><a href="#validation">Validation</a></nav></header>
 <main>
 <p class="eyebrow">Evidence → adversarial analysis → probability → decision → audit</p>
-<h1>Decision intelligence that has to earn its answer.</h1>
-<p class="lede">KAHRELUM OS is an evidence-to-decision system for forecasting, research and high-stakes analysis. It separates fact from inference, attacks its own conclusions, and is designed to block rather than manufacture certainty when the evidence does not support an answer.</p>
-<span class="release">Current formal release · v2.3.4 FINAL</span>
-<p><strong>Commercial status:</strong> Private Pilot / Prospective Validation</p>
-<p><a class="cta primary" href="/pilot">Request a Pilot</a><a class="cta" href="/demo">Inspect a Worked Example</a><a class="cta" href="https://github.com/AuroraGrid/kahrelum-os/blob/main/evidence/EXTERNAL_AUDIT_SUMMARY.md">Review the Evidence</a></p>
+<h1>KAHRELUM</h1>
+<p class="lede">Evidence-to-decision systems for AI evaluation, forecasting, and research assurance.</p>
+<p><strong>Hasan Raza Kazmi — Founder</strong></p>
+<section class="flagship"><p class="eyebrow">Flagship offer · Private Pilot / Prospective Validation</p><h2>KAHRELUM Prospective Evaluation Pilot</h2>
+<p>An externally scoped, evidence-grounded evaluation with a protocol frozen before execution. Each pilot is adversarially reviewed, reproducible, and bounded by the tested scope.</p>
+<p><a class="cta primary" href="/pilot">Request a Pilot</a><a class="cta" href="/sample">View Synthetic Sample</a><a class="cta" href="/demo">View Demo</a></p>
+<h3>What you get</h3><ul><li>Frozen scope and question set</li><li>Evidence and inference record</li><li>Adversarial challenge and countercase</li><li>Scored or structured evaluation where applicable</li><li>Final report</li><li>Limitations and failure modes</li><li>Negative and inconclusive findings preserved</li></ul>
+</section>
 
-<section><p class="eyebrow">External adversarial audit</p><h2>Identity and arithmetic hold. The limitations stay attached.</h2>
+<section><p class="eyebrow">Technical proof · external adversarial audit</p><p><span class="release">Current formal release · v2.3.4 FINAL</span></p><h2>Identity and arithmetic hold. The limitations stay attached.</h2>
 <div class="grid"><div class="card"><div class="metric">201 / 201</div><div class="label">manifested files hash-verified</div></div><div class="card"><div class="metric">0</div><div class="label">scoring mismatches found</div></div><div class="card"><div class="metric">2 / 2</div><div class="label">RP100 + GX50 numerical reproductions</div></div></div>
 <p>The delivered audit-package SHA-256 matched exactly. Registered forecast metrics, paired differences, bootstrap intervals, analytical arithmetic and composites reproduced from the frozen inputs.</p>
 <div class="boundary"><strong>Evidence boundary.</strong> This does not establish universal or commercial superiority. Gemini has the lowest RP100 Brier. KAHRELUM has the lowest GX50-v2 Brier point estimate, but both preregistered primary 97.5% intervals include zero. Retrospective-benchmark, custody and independence limitations remain disclosed.</div>
@@ -70,5 +83,5 @@
 <p>A negative result stays in the record. The goal is not to design a test KAHRELUM is supposed to win; it is to create a result that is credible either way.</p>
 <p><a class="cta primary" href="/pilot">Request a Pilot</a><a class="cta" href="https://github.com/AuroraGrid/kahrelum-os/blob/main/evidence/PROSPECTIVE_VALIDATION_PROTOCOL.md">Read the Protocol</a></p></section>
 </main>
-<footer><p>Hasan Raza Kazmi · Founder · <a href="mailto:hasan@kahrelum.com">hasan@kahrelum.com</a></p><p><a href="https://github.com/AuroraGrid/kahrelum-os">GitHub</a> · <a href="https://hasan-research-systems.vercel.app/">Research & Decision Systems</a></p></footer>
+<footer><p>Hasan Raza Kazmi · Founder · <a href="mailto:hasan@kahrelum.com">hasan@kahrelum.com</a></p><p><a href="https://github.com/AuroraGrid/kahrelum-os">GitHub</a> · <a href="/connect">Connect</a></p></footer>
 </div></body></html>
