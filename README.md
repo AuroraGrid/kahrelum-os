@@ -16,6 +16,17 @@ This repository is KAHRELUM's canonical **public architecture, evidence, and rel
 
 Current release record: [KAHRELUM OS v2.3.4 FINAL](./RELEASE_v2.3.4_FINAL.md).
 
+## Research & investigations
+
+KAHRELUM now includes a public **AI accountability research portfolio** demonstrating documentary research, claim/evidence separation, counterevidence, uncertainty, falsifiers, and open reporting questions.
+
+- [Research & Investigations index](./research/README.md)
+- [Anthropic's compute commitments create a governance stress test](./research/anthropic-compute-governance.md)
+- [Disclosure by choice or disclosure by law?](./research/ai-incident-disclosure.md)
+- [Model-weight security: what lawmakers ask, and what frontier labs disclose](./research/model-weight-security.md)
+
+These are public-source research dossiers produced through an AI-assisted KAHRELUM workflow. They are labeled accordingly and are not represented as unaided writing samples where an employer or publication requires work created without AI assistance.
+
 ## Current evidence status
 
 External-audit package SHA-256:
@@ -123,6 +134,7 @@ The point is not to design a test KAHRELUM is supposed to win. The point is to c
 - Canonical public site: https://kahrelum.com
 - Evidence: [BENCHMARKS.md](./BENCHMARKS.md)
 - Architecture: [ARCHITECTURE.md](./ARCHITECTURE.md)
+- Research & Investigations: [research/README.md](./research/README.md)
 - Current v2.3.4 release record: [RELEASE_v2.3.4_FINAL.md](./RELEASE_v2.3.4_FINAL.md)
 - Historical v2.3.3 release record: [RELEASE_v2.3.3_FINAL.md](./RELEASE_v2.3.3_FINAL.md)
 - Portfolio: https://hasan-research-systems.vercel.app/
