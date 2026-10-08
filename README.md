@@ -6,6 +6,10 @@ Founder: [Hasan Raza Kazmi](https://github.com/AuroraGrid)
 
 **Canonical public site: https://kahrelum.com**
 
+**Commercial entry:** [Independent historical AI decision review — fixed scope and pricing](https://kahrelum.com/pilot#request). We check whether evidence and rules available *before* an agent action supported the decision, and return an inspectable case record. Public options: $750 for three historical cases / $2,500 for up to ten; operator-assisted, no production access or guaranteed performance, and existing recipient-specific quotes remain intact. [Commercial scope and handling](./PILOT.md).
+
+
+
 **Current formal release: KAHRELUM OS v2.3.4 FINAL**
 
 KAHRELUM OS is an application-layer system for research, forecasting, AI evaluation and decision support. It separates fact from inference, attacks conclusions before acting, preserves uncertainty, and is designed to block rather than manufacture an answer when the evidence does not close.
