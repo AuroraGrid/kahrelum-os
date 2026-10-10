@@ -1,0 +1,6 @@
+interface:
+  display_name: "KAHRELUM Desktop Control"
+  short_description: "Operate authorized Windows apps from Codex"
+  default_prompt: "Use KAHRELUM Desktop Control on this paired Windows host: "
+policy:
+  allow_implicit_invocation: true
