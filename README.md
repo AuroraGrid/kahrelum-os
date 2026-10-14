@@ -141,7 +141,6 @@ The point is not to design a test KAHRELUM is supposed to win. The point is to c
 - Research & Investigations: [research/README.md](./research/README.md)
 - Current v2.3.4 release record: [RELEASE_v2.3.4_FINAL.md](./RELEASE_v2.3.4_FINAL.md)
 - Historical v2.3.3 release record: [RELEASE_v2.3.3_FINAL.md](./RELEASE_v2.3.3_FINAL.md)
-- Portfolio: https://hasan-research-systems.vercel.app/
 
 ## License
 
