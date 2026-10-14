@@ -136,6 +136,7 @@ The point is not to design a test KAHRELUM is supposed to win. The point is to c
 ## Links
 
 - Canonical public site: https://kahrelum.com
+- LinkedIn: https://www.linkedin.com/in/hasan-raza-kazmi-a756b4407/
 - Evidence: [BENCHMARKS.md](./BENCHMARKS.md)
 - Architecture: [ARCHITECTURE.md](./ARCHITECTURE.md)
 - Research & Investigations: [research/README.md](./research/README.md)
