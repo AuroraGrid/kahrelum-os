@@ -1,0 +1,41 @@
+{
+  "case_id": "KAH-IL26-PROSPECTIVE-001",
+  "prepared_utc": "2026-10-26T21:56:29Z",
+  "base_commit": "9a593236585a4d7fd56443b612fe4c2f3de2537d",
+  "protected_records": [
+    {
+      "path": "research/israel-2026-election/BASELINE_LOCK_2026-10-26.md",
+      "original_commit": "05d441adad2f82a043fe8fbec1be7e35e2edf12a",
+      "blob": "b9adfe504c15def6e1804a78a8828e54ae5e93a5"
+    },
+    {
+      "path": "research/israel-2026-election/SCORING_PROTOCOL_2026-10-26.md",
+      "original_commit": "2c8708cdca70adf0e6ef66d8fba29aebede02c90",
+      "blob": "ab0692085b63c90570065f602c005c409c3b72d5"
+    }
+  ],
+  "original_vs_base_content_equal": true,
+  "files": [
+    {
+      "name": "RUN_2026-10-26T215415Z.md",
+      "sha256": "24f194b626b04ad34db3b5faa6a90803680847cd431aa6a128f45a4dde95a526",
+      "bytes": 17805
+    },
+    {
+      "name": "SOURCES_2026-10-26T215415Z.json",
+      "sha256": "2e2e7e72b884040d9fd7b157ce587f9ddcc66af87870c858f4ff034646f3be16",
+      "bytes": 7262
+    }
+  ],
+  "verification_scope": "SHA-256 covers local derived artifacts; original Git blob identities verified via connector. Upstream raw web bytes unavailable. Publication/commit verification will be recorded separately.",
+  "c0_commit_signature": "unsigned",
+  "protocol_commit_signature": "unsigned",
+  "protocol_commit_time": "2026-10-26T21:35:37Z",
+  "poll_vector_sums": [
+    120,
+    120,
+    120
+  ],
+  "lifecycle_status": "LIVE / UNRESOLVED / NOT SCORED",
+  "runtime_execution": "NOT RUN"
+}

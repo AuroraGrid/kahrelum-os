@@ -40,3 +40,10 @@ The original C0 and scoring methodology were recorded in GitHub commits **before
 **KAHRELUM contact:** hasan@kahrelum.com  
 **Canonical OS:** https://kahrelum.com  
 **Case baseline is reviewable now; the final outcome is deliberately left blank until verified.**
+
+
+## Supplemental run appended: 27 October 2026 (PKT)
+
+[Evidence-to-decision supplement](./RUN_2026-10-26T215415Z.md) · [Source/access and polling record](./SOURCES_2026-10-26T215415Z.json) · [Integrity manifest](./INTEGRITY_2026-10-26T215415Z.json).
+
+Evidence cutoff: **2026-10-26T21:54:15Z / October 27 02:54:15 PKT**. Direct final N12 and Channel 13 poll reads, separately labeled Kan corroboration, contrary polling, conditional scenario tests and source-access limitations. C0 and original protocol remain unchanged. This is an earlier supplemental audit, **not C1**. **Case remains LIVE / UNRESOLVED / NOT SCORED; C1–C7 pending.** Public-methodology analysis only; immutable runtime not executed. No first-party electoral outcome prediction.

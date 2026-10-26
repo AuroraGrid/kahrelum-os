@@ -1,0 +1,229 @@
+{
+  "case_id": "KAH-IL26-PROSPECTIVE-001",
+  "run_id": "SUPPLEMENT_2026-10-26T215415Z",
+  "evidence_cutoff_utc": "2026-10-26T21:54:15Z",
+  "custody": "Derived factual transcription and source-access log; no raw upstream page byte custody",
+  "capture_time_policy": "Individual tool calls were not separately clock-stamped; no per-source exact capture timestamps invented. All entries observed before cutoff.",
+  "sources": [
+    {
+      "id": "CEC",
+      "url": "https://www.bechirot.gov.il/home/",
+      "type": "official",
+      "access": "search-index only; direct body unavailable",
+      "source_time_literal": "27.10.2026 07:00",
+      "individual_captured_utc": null,
+      "observed_by_utc": "2026-10-26T21:54:15Z"
+    },
+    {
+      "id": "MOI",
+      "url": "https://www.gov.il/apps/moin/bocharim/en",
+      "type": "official",
+      "access": "search-index only; direct body unavailable",
+      "source_time_literal": "election 27 October 2026",
+      "individual_captured_utc": null,
+      "observed_by_utc": "2026-10-26T21:54:15Z"
+    },
+    {
+      "id": "municipality",
+      "url": "https://www.modiin.muni.il/modiinwebsite/ChannelArticleNews.aspx?PageID=2_295&id=12384",
+      "type": "official local",
+      "access": "search-index only; direct retrieval inaccessible",
+      "source_time_literal": "notice 26/10/2026; hours 07:00–22:00",
+      "individual_captured_utc": null,
+      "observed_by_utc": "2026-10-26T21:54:15Z"
+    },
+    {
+      "id": "CEC_timetable",
+      "url": "https://www.gov.il/en/pages/time--table-26",
+      "type": "official",
+      "access": "403; not reverified",
+      "source_time_literal": null,
+      "individual_captured_utc": null,
+      "observed_by_utc": "2026-10-26T21:54:15Z"
+    },
+    {
+      "id": "IDI",
+      "url": "https://en.idi.org.il/articles/66721",
+      "type": "research institute",
+      "access": "inaccessible; not reverified",
+      "source_time_literal": null,
+      "individual_captured_utc": null,
+      "observed_by_utc": "2026-10-26T21:54:15Z"
+    },
+    {
+      "id": "N12",
+      "url": "https://www.mako.co.il/news-israel-elections/2026/Article-8ea5e45ec2961a1027.htm",
+      "type": "original survey publisher",
+      "access": "readable original",
+      "source_time_literal": "published 23.10.26 21:18; updated 24.10.26 00:24; offset not printed",
+      "individual_captured_utc": null,
+      "observed_by_utc": "2026-10-26T21:54:15Z"
+    },
+    {
+      "id": "C13",
+      "url": "https://13tv.co.il/item/news/politics/politics/survey-905415900/?pid=98577",
+      "type": "original survey publisher",
+      "access": "readable original",
+      "source_time_literal": "23.10 21:10; offset not printed",
+      "individual_captured_utc": null,
+      "observed_by_utc": "2026-10-26T21:54:15Z"
+    },
+    {
+      "id": "Kan",
+      "url": "https://www.kan.org.il/content/kan-news/politic/1112122/",
+      "type": "original survey publisher",
+      "access": "no readable body; use labeled secondary corroboration",
+      "source_time_literal": null,
+      "individual_captured_utc": null,
+      "observed_by_utc": "2026-10-26T21:54:15Z"
+    },
+    {
+      "id": "ToI",
+      "url": "https://www.timesofisrael.com/final-polls-before-election-show-both-blocs-short-of-majority-small-parties-out-of-knesset/",
+      "type": "secondary survey summary",
+      "access": "readable",
+      "source_time_literal": "24 October 2026 01:08 as printed",
+      "individual_captured_utc": null,
+      "observed_by_utc": "2026-10-26T21:54:15Z"
+    },
+    {
+      "id": "archive",
+      "url": "https://israelielections.com/2026/polls/",
+      "type": "poll aggregator",
+      "access": "readable; not independent of originating polls",
+      "source_time_literal": "rows 22–23 October",
+      "individual_captured_utc": null,
+      "observed_by_utc": "2026-10-26T21:54:15Z"
+    },
+    {
+      "id": "C14_Kipa",
+      "url": "https://www.kipa.co.il/חדשות/1234449-0/",
+      "type": "secondary survey report",
+      "access": "readable",
+      "source_time_literal": "22/10/26 20:59; updated 21:00",
+      "individual_captured_utc": null,
+      "observed_by_utc": "2026-10-26T21:54:15Z"
+    },
+    {
+      "id": "IsraelVotes_polls",
+      "url": "https://www.israelielection.org/polls",
+      "type": "poll aggregator",
+      "access": "readable; overlapping inputs",
+      "source_time_literal": "average as of October 23",
+      "individual_captured_utc": null,
+      "observed_by_utc": "2026-10-26T21:54:15Z"
+    },
+    {
+      "id": "MEF",
+      "url": "https://israelvote.meforum.org/",
+      "type": "advocacy organization poll aggregator",
+      "access": "readable; stale countdown and older window",
+      "source_time_literal": "fieldwork through October 21",
+      "individual_captured_utc": null,
+      "observed_by_utc": "2026-10-26T21:54:15Z"
+    },
+    {
+      "id": "external_forecast",
+      "url": "https://www.israelielection.org/forecast",
+      "type": "external model",
+      "access": "readable; not rerun or code-audited",
+      "source_time_literal": "Oct 26 16:36 as printed; checked not provided",
+      "individual_captured_utc": null,
+      "observed_by_utc": "2026-10-26T21:54:15Z"
+    },
+    {
+      "id": "scenario2",
+      "url": "https://madad120.co.il/",
+      "type": "external working scenario",
+      "access": "search-index observation only",
+      "source_time_literal": null,
+      "individual_captured_utc": null,
+      "observed_by_utc": "2026-10-26T21:54:15Z"
+    },
+    {
+      "id": "Ynet",
+      "url": "https://www.ynet.co.il/news/elections2026/article/hj4rakt2fe",
+      "type": "secondary logistics",
+      "access": "search evidence",
+      "source_time_literal": "17:41 as printed; no UTC inferred",
+      "individual_captured_utc": null,
+      "observed_by_utc": "2026-10-26T21:54:15Z"
+    }
+  ],
+  "poll_party_order": [
+    "Likud",
+    "Yashar",
+    "Together",
+    "Democrats",
+    "Joint List",
+    "Otzma Yehudit",
+    "Shas",
+    "UTJ",
+    "Yisrael Beiteinu",
+    "Religious Zionism-Zehut",
+    "Raam",
+    "Reservists-Economic"
+  ],
+  "poll_seat_vectors": {
+    "N12": [
+      21,
+      23,
+      15,
+      10,
+      9,
+      8,
+      8,
+      7,
+      8,
+      6,
+      5,
+      0
+    ],
+    "C13": [
+      19,
+      22,
+      14,
+      10,
+      9,
+      8,
+      7,
+      8,
+      8,
+      8,
+      7,
+      0
+    ],
+    "Kan_secondary": [
+      20,
+      22,
+      14,
+      8,
+      9,
+      8,
+      7,
+      8,
+      8,
+      7,
+      5,
+      4
+    ]
+  },
+  "zero_semantics": "Explicit below-threshold means zero seats, not zero vote share; unpolled/missing never imputed.",
+  "protected_records": [
+    {
+      "path": "research/israel-2026-election/BASELINE_LOCK_2026-10-26.md",
+      "original_commit": "05d441adad2f82a043fe8fbec1be7e35e2edf12a",
+      "blob": "b9adfe504c15def6e1804a78a8828e54ae5e93a5"
+    },
+    {
+      "path": "research/israel-2026-election/SCORING_PROTOCOL_2026-10-26.md",
+      "original_commit": "2c8708cdca70adf0e6ef66d8fba29aebede02c90",
+      "blob": "ab0692085b63c90570065f602c005c409c3b72d5"
+    }
+  ],
+  "pre_write_head": "9a593236585a4d7fd56443b612fe4c2f3de2537d",
+  "first_party_forecast": null,
+  "official_gold": null,
+  "scoring_status": "NOT SCORED",
+  "c1_c7_status": "PENDING"
+}

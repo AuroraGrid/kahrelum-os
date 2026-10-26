@@ -42,3 +42,8 @@ These dossiers demonstrate a research process and evidence discipline. They shou
 **Contact:** hr185882@gmail.com  
 **LinkedIn:** https://www.linkedin.com/in/hasan-kazmi-a756b4407  
 **KAHRELUM:** https://kahrelum-public-hosting.web.app
+
+
+## Israel election audit: supplemental portfolio entry
+
+Appended evidence cutoff **2026-10-26T21:54:15Z (October 27 02:54:15 PKT)**: [full current-cutoff public-methodology run](./israel-2026-election/RUN_2026-10-26T215415Z.md). Includes direct survey-source checks, contradictions, conditional uncertainty scenarios, unchanged prospective checkpoint/scoring rules and provenance. **LIVE / UNRESOLVED / NOT SCORED.** C0 preserved; C1–C7 pending. No claim of executed frozen runtime, independent-model validation or first-party election winner forecast.
