@@ -147,3 +147,8 @@ The point is not to design a test KAHRELUM is supposed to win. The point is to c
 ## License
 
 Documentation in this repository is provided for transparency of the public architecture. Module repositories carry their own licenses.
+
+
+### Prospective Israel 2026 election case: engineering model audit
+
+- [**Technical model-core validation, October 27**](./research/israel-2026-election/MODEL_CORE_V01_2026-10-27.md) (independently implemented vote-to-seat arithmetic, 15 passing tests, source digest and limitations; no proprietary forward outcome call). See the [living case index](./research/israel-2026-election/README.md) for C0 and preregistered checkpoints.
