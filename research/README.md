@@ -47,3 +47,7 @@ These dossiers demonstrate a research process and evidence discipline. They shou
 ## Israel election audit: supplemental portfolio entry
 
 Appended evidence cutoff **2026-10-26T21:54:15Z (October 27 02:54:15 PKT)**: [full current-cutoff public-methodology run](./israel-2026-election/RUN_2026-10-26T215415Z.md). Includes direct survey-source checks, contradictions, conditional uncertainty scenarios, unchanged prospective checkpoint/scoring rules and provenance. **LIVE / UNRESOLVED / NOT SCORED.** C0 preserved; C1–C7 pending. No claim of executed frozen runtime, independent-model validation or first-party election winner forecast.
+
+## Ballot-list registry supplement | October 27, 2026 (PKT)
+
+[All 37 contesting ballot lists plus separately withdrawn Blue and White](./israel-2026-election/PARTIES_AND_LEADERS_2026-10-27T20261026T234042Z.md): neutral list names, official Hebrew symbols, first-listed candidates, alliance components, individual CEC source links, evidence grades, and an explicit entry for previously overlooked Brit Olam (זץ). Captured 2026-10-26T23:40:42Z. **B-grade direct official pages still await revalidation; C1–C7 pending.**
