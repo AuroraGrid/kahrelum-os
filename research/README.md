@@ -51,3 +51,8 @@ Appended evidence cutoff **2026-10-26T21:54:15Z (October 27 02:54:15 PKT)**: [fu
 ## Ballot-list registry supplement | October 27, 2026 (PKT)
 
 [All 37 contesting ballot lists plus separately withdrawn Blue and White](./israel-2026-election/PARTIES_AND_LEADERS_2026-10-27T20261026T234042Z.md): neutral list names, official Hebrew symbols, first-listed candidates, alliance components, individual CEC source links, evidence grades, and an explicit entry for previously overlooked Brit Olam (זץ). Captured 2026-10-26T23:40:42Z. **B-grade direct official pages still await revalidation; C1–C7 pending.**
+
+
+### Israel 2026 election: separate technical model core (October 27)
+
+- [**New proprietary-code model engineering supplement, source digest and historical arithmetic validation**](./israel-2026-election/MODEL_CORE_V01_2026-10-27.md): stdlib-only implementation reconstructs 2021 and 2022 vote-to-seat mechanics, logs nine published October 2026 survey differences, and states missing forecast-skill evidence. **Not a KAHRELUM election-winner prediction.** C0 and preregistered validation remain separately frozen.
