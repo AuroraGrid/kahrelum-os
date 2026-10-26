@@ -51,3 +51,8 @@ Evidence cutoff: **2026-10-26T21:54:15Z / October 27 02:54:15 PKT**. Direct fina
 ## All ballot lists | dated neutral registry
 
 [**37 contesting lists + withdrawn Blue and White: official ballot letters, top-ranked candidates, coalition components, individual CEC links, provenance/access grades**](./PARTIES_AND_LEADERS_2026-10-27T20261026T234042Z.md). Captured **2026-10-26T23:40:42Z** (October 27, **04:40 PKT / 01:40 Israel**). The Brit Olam / Redemption of Israel list (**זץ**) is explicitly verified; the Blue and White withdrawal is separately confirmed by its primary CEC page. The dataset supplying the other individual first-party links is dated October 22; only two individual CEC bodies were directly retrieved in this review, so do not read B-grade entries as fresh first-party revalidations. This is an **append-only supplement**; C0, its scoring protocol, runtime and forecast inputs stay immutable. The case remains **LIVE / UNRESOLVED / NOT SCORED**.
+
+
+## New independently executed engineering supplement (October 27, pre-C1)
+
+[**KAHRELUM model core v0.1: code-hash freeze, 2021/2022 vote-to-seat reconstruction, 15 passing tests and nine-survey source-disagreement analysis**](./MODEL_CORE_V01_2026-10-27.md). This is an **independently implemented analysis subsystem** (owner source package committed by SHA-256), not a run of the immutable KAHRELUM runtime. **No proprietary numerical 2026 election winner, seat outcome or probabilities were issued**; the forecast accuracy and C1–C7 stages remain unresolved. Preserve original C0 and scoring protocol unchanged.
