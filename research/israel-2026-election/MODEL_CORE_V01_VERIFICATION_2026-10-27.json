@@ -1,0 +1,47 @@
+{
+  "case_id": "KAH-IL26-PROSPECTIVE-001",
+  "artifact": "MODEL_CORE_V01_2026-10-27.md",
+  "observed_cutoff_pakistan": "2026-10-27T04:53:21+05:00",
+  "owner_only_package_name": "KAHRELUM_Israel_Model_v0_1_FROZEN.zip",
+  "owner_only_zip_sha256": "54c503887b8138451d792bea60f68cc680d96174093530d396187834a4b10481",
+  "owner_only_zip_bytes": 11891,
+  "owner_package_coverage": [
+    "kahrelum_analytic_core.py",
+    "test_kahrelum_core.py",
+    "history_2021.json",
+    "history_2022.json",
+    "polls_2026_oct22_23.json",
+    "AUDIT_OUTPUT.json",
+    "README.md",
+    "MANIFEST.sha256"
+  ],
+  "owner_package_reexecution": {
+    "historical_2021": "13 of 13 seat lists, 120 seats exactly",
+    "historical_2022": "10 of 10 seat lists, 120 seats exactly",
+    "unit_tests_passed": 15,
+    "unit_tests_failed": 0,
+    "pre_election_2026_outcome_prediction": null,
+    "forecast_skill_evaluated": false
+  },
+  "publication": {
+    "report_created_in_commit": "25a1162daee6a19111a09da04ff49a25b48bcb67",
+    "last_index_commit_pre_receipt": "4989e5db79c3e02be768459a5e0cd7ecce8bc183",
+    "pre_receipt_branch_head_verified": "4989e5db79c3e02be768459a5e0cd7ecce8bc183",
+    "report_blob_sha": "435c3ce09e9640635c3daa971396626fe601f083",
+    "portfolio_case_readme_blob_sha": "4cd595e0f44bcd123003aece09cf9c933b3c504d",
+    "research_index_blob_sha": "916178a175612085361f41a586ce469a048a56ed",
+    "root_readme_blob_sha": "abde9e66d10231173e0c478c3bc3fda7ce48dd0a",
+    "report_and_indexes_readback_verified": true,
+    "github_signatures_verified": false,
+    "github_signature_reason": "unsigned",
+    "deployed_kahrelum_website_checked": false,
+    "deployed_website_note": "Web retrieval of https://kahrelum.com/ failed, so no live-domain publication is asserted."
+  },
+  "preserved": {
+    "c0_blob_sha": "b9adfe504c15def6e1804a78a8828e54ae5e93a5",
+    "scoring_protocol_blob_sha": "ab0692085b63c90570065f602c005c409c3b72d5",
+    "original_c0_modified": false,
+    "original_protocol_modified": false
+  },
+  "limitation": "A separate owner-only code package exists; it has not been pushed to public GitHub. Exact historic mechanics are not pre-election forecasts. The case remains live, outcome unresolved, calibration not scored, source pages not byte-archived, trusted signed timestamp absent."
+}
