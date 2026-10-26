@@ -1,0 +1,54 @@
+{
+  "case_id": "KAH-IL26-PROSPECTIVE-001",
+  "verification_observed_utc": "2026-10-26T21:57:25Z",
+  "published_commit": "67ff9e6c2880e226ad942e2e1299d07f04ea72d4",
+  "base_commit": "9a593236585a4d7fd56443b612fe4c2f3de2537d",
+  "branch_readback": "67ff9e6c2880e226ad942e2e1299d07f04ea72d4",
+  "parent_verified": true,
+  "signature": {
+    "verified": false,
+    "reason": "unsigned",
+    "signature": null,
+    "payload": null,
+    "verified_at": null
+  },
+  "github_reported_commit_time": "2026-10-26T22:00:40Z",
+  "time_anomaly": "GitHub reports commit 2026-10-26T22:00:40Z, later than subsequent clock tool observation 2026-10-26T21:57:25Z. Clock disagreement unresolved. Do not claim trusted timestamp attestation. Content cutoff is separate declared observation.",
+  "changed_paths": [
+    "research/README.md",
+    "research/israel-2026-election/INTEGRITY_2026-10-26T215415Z.json",
+    "research/israel-2026-election/README.md",
+    "research/israel-2026-election/RUN_2026-10-26T215415Z.md",
+    "research/israel-2026-election/SOURCES_2026-10-26T215415Z.json"
+  ],
+  "deleted_paths": [],
+  "all_five_written_files_exact_content_readback": true,
+  "protected_blobs_unchanged": true,
+  "protected_records": [
+    {
+      "path": "research/israel-2026-election/BASELINE_LOCK_2026-10-26.md",
+      "original_commit": "05d441adad2f82a043fe8fbec1be7e35e2edf12a",
+      "blob": "b9adfe504c15def6e1804a78a8828e54ae5e93a5"
+    },
+    {
+      "path": "research/israel-2026-election/SCORING_PROTOCOL_2026-10-26.md",
+      "original_commit": "2c8708cdca70adf0e6ef66d8fba29aebede02c90",
+      "blob": "ab0692085b63c90570065f602c005c409c3b72d5"
+    }
+  ],
+  "canonical_published_artifacts": [
+    {
+      "path": "research/israel-2026-election/RUN_2026-10-26T215415Z.md",
+      "bytes": 17804,
+      "sha256": "e002b3819cb9d7f8395f523e073e68fdff3e7d49bcd028d14f3b69e52351b17a"
+    },
+    {
+      "path": "research/israel-2026-election/SOURCES_2026-10-26T215415Z.json",
+      "bytes": 7262,
+      "sha256": "2e2e7e72b884040d9fd7b157ce587f9ddcc66af87870c858f4ff034646f3be16"
+    }
+  ],
+  "local_manifest_note": "The initial integrity manifest truthfully records a 17805-byte local draft with one extra terminal newline. Published report is 17804 bytes. Local deliverable has now been aligned to the exact published text; this receipt supplies its canonical published SHA-256. Original manifest is preserved, not rewritten.",
+  "upstream_custody": "Derived facts and source-access log only; no raw upstream webpage byte seal",
+  "completion": "PRESENT-CUTOFF PUBLIC-METHODOLOGY RUN PUBLISHED AND READ-BACK VERIFIED; FULL ELECTION LIFECYCLE LIVE / UNRESOLVED / NOT SCORED; C1–C7 PENDING; FROZEN RUNTIME NOT EXECUTED"
+}
