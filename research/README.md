@@ -22,6 +22,9 @@ The purpose is not to present speculation as reporting. Each dossier separates:
 3. [Model-weight security: what lawmakers ask, and what frontier labs disclose](./model-weight-security.md)  
    A comparison of congressional security demands with the public security commitments of OpenAI and Anthropic, including the limits of what can be verified from outside the companies.
 
+4. [Israel 2026 Knesset election: prospective evidence-and-forecast audit](./israel-2026-election/README.md)  
+   A pre-opening RECORD LOCK, dated public polling and an external forecast comparator, predeclared count milestones, and a final official-result scorecard. This is an open, AI-assisted operator-run prospective case: C0 was frozen Oct 26; final outcome is pending. [Inspect the immutable baseline](https://github.com/AuroraGrid/kahrelum-os/blob/05d441adad2f82a043fe8fbec1be7e35e2edf12a/research/israel-2026-election/BASELINE_LOCK_2026-10-26.md).
+
 ## Research standard
 
 KAHRELUM uses a source hierarchy that prefers primary legal, regulatory, company, and technical records before relying on secondary reporting. Secondary reporting is used when it contains material not available in primary records, and is labeled accordingly.
