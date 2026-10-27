@@ -152,3 +152,8 @@ Documentation in this repository is provided for transparency of the public arch
 ### Prospective Israel 2026 election case: engineering model audit
 
 - [**Technical model-core validation, October 27**](./research/israel-2026-election/MODEL_CORE_V01_2026-10-27.md) (independently implemented vote-to-seat arithmetic, 15 passing tests, source digest and limitations; no proprietary forward outcome call). See the [living case index](./research/israel-2026-election/README.md) for C0 and preregistered checkpoints.
+
+
+### Israel 2015–2022: extended mechanical validation (v0.2)
+
+- [**Six-election independent seat-mechanics test and provisional archived-poll audit**](./research/israel-2026-election/HISTORICAL_VALIDATION_V02_2026-10-27.md): all 61 represented historical party lists, 720 reconstructed seats, zero mechanical seat mismatch and 33 automated tests; 18 retrospective third-party poll snapshots scored separately. **No proprietary election-outcome forecast or calibrated winner probability claimed.** [Full case and registered checkpoints](./research/israel-2026-election/README.md).
