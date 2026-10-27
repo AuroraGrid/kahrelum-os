@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="KAHRELUM election analysis lab: compare conditional coalition seat availability, inspect model uncertainty, browse verified ballot lists and audit frozen forecast sources.">
+<meta name="robots" content="index,follow">
+<title>KAHRELUM | Election Analysis Lab</title>
+<style>
+:root{color-scheme:dark;--bg:#0a1220;--panel:#121e30;--panel2:#17263a;--line:#2c4058;--text:#eef5fb;--muted:#afc0d4;--accent:#86b6ff;--cyan:#82d7d6;--green:#6de2bc;--amber:#efb76e;--red:#ee9f9a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 77% -5%,#203750 0,transparent 32rem),var(--bg);color:var(--text);font:15px/1.6 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--accent)}a:hover{text-decoration-thickness:2px}button,select,input{font:inherit}button,select{background:#23364b;color:var(--text);border:1px solid #48607c;border-radius:10px;padding:.52rem .75rem;cursor:pointer}button:hover,select:hover{border-color:var(--cyan)}button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--amber);outline-offset:3px}button.strong{background:#b5d1fb;color:#071523;border-color:#b5d1fb;font-weight:700}button.strong:hover{background:#dae9ff}
+header{position:sticky;top:0;z-index:10;background:#0e1827ef;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.topbar{display:flex;gap:1rem;align-items:center;justify-content:space-between;max-width:1250px;padding:.95rem 1.15rem;margin:auto;flex-wrap:wrap}.brand{font-weight:800;letter-spacing:.11em;color:var(--text);text-decoration:none}.tag{font-size:.7rem;letter-spacing:.08em;font-weight:700;border:1px solid #41677e;border-radius:25px;padding:.26rem .55rem;color:var(--cyan)}.nav{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}.nav a{font-size:.82rem;color:#cfe1f2;text-decoration:none}.nav a:hover{text-decoration:underline}.skip{position:absolute;left:-10000px;top:0}.skip:focus{left:1rem;top:1rem;background:var(--bg);z-index:20;padding:1rem}
+main{max-width:1250px;margin:auto;padding:1.6rem 1.1rem 4rem}.eyebrow{text-transform:uppercase;letter-spacing:.14em;color:var(--cyan);font-size:.73rem;font-weight:800}h1{font-size:clamp(2.2rem,6vw,4.5rem);line-height:1.05;margin:.5rem 0;letter-spacing:-.045em;max-width:950px}h2{font-size:clamp(1.3rem,3vw,1.85rem);line-height:1.2;margin:.15rem 0 .8rem;letter-spacing:-.02em}h3{font-size:1.08rem;line-height:1.3}p{margin:.55rem 0 1rem}.lead{color:#cbdced;font-size:1.05rem;max-width:830px}.fine{color:var(--muted);font-size:.85rem}.small{color:var(--muted);font-size:.78rem}.hero{padding:2.2rem 0 1rem}.actions{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center}.panel{border:1px solid var(--line);border-radius:16px;background:linear-gradient(155deg,var(--panel),#101b2c);padding:1.1rem;min-width:0}.section{margin-top:2rem;scroll-margin-top:5rem}.row{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem}.metric{background:#17283d;border-radius:12px;padding:.8rem}.metric b{display:block;font-size:clamp(1.3rem,3.1vw,2rem);font-variant-numeric:tabular-nums;line-height:1.1;color:var(--green)}.metric span{display:block;color:#c5d4e4;font-size:.78rem;margin-bottom:.35rem}.toolbar{display:flex;align-items:end;gap:.9rem;flex-wrap:wrap;margin:1.1rem 0}.toolbar label{font-size:.8rem;color:var(--muted);display:flex;flex-direction:column;gap:.3rem}.toolbar select{min-width:190px}.notice{padding:.85rem 1rem;margin:1rem 0;border:1px solid #4d6881;border-radius:12px;background:#163145;color:#dcf2fa;font-size:.85rem}.notice[data-kind="warning"]{border-color:#ab8447;color:#ffe3b3;background:#34291c}.notice[data-kind="error"]{border-color:#b96a67;color:#ffe0de;background:#37201f}.notice[data-kind="success"]{border-color:#478673;background:#153629;color:#cbf6e5}.status-dot{width:.55rem;height:.55rem;display:inline-block;background:var(--green);border-radius:50%;margin-right:.5rem}.callout{border-left:3px solid var(--amber);padding:.8rem 1rem;background:#342b20;color:#ffe9c8;border-radius:0 10px 10px 0;font-size:.86rem}
+table{width:100%;border-collapse:collapse;font-size:.85rem}th,td{text-align:left;border-bottom:1px solid #304157;padding:.58rem .52rem;vertical-align:middle}th{font-weight:650;color:#d5e7f8}td{font-variant-numeric:tabular-nums}tbody tr:hover{background:#1d3247}tr.selected{background:#1c3f48}table select{width:100%;min-width:116px}.tablewrap{width:100%;overflow-x:auto}table caption{text-align:left;font-weight:650;margin-bottom:.4rem}.chart{margin:.8rem 0;max-width:100%;background:#0d1a2a;border-radius:12px;padding:.5rem}.chart svg{display:block;width:100%;height:auto;min-height:130px}.legend{display:flex;gap:1rem;flex-wrap:wrap;font-size:.78rem;color:var(--muted)}.legend span::before{content:"";display:inline-block;width:9px;height:9px;border-radius:2px;background:#7194f2;margin-right:.3rem}.legend .over::before{background:#57d8aa}.legend .limit::before{background:#efb76e}
+.timeline{display:flex;gap:.7rem;overflow-x:auto;padding:.5rem 0 1rem;scroll-snap-type:x proximity}.timeline-item{border:1px solid #38526e;background:#13253a;border-radius:12px;padding:.8rem;min-width:190px;max-width:215px;scroll-snap-align:start;display:flex;flex-direction:column;gap:.4rem}.timeline-item p{margin:0}.timeline-item strong{font-size:.85rem}.timemark{color:var(--cyan);font-weight:800;font-size:.7rem;letter-spacing:.08em}.timeline-item a{font-size:.78rem;margin-top:auto}
+.audit{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.4rem 1rem;margin:0}.audit-row{padding:.7rem;border-bottom:1px solid #33465e;min-width:0}.audit-row dt{color:var(--muted);font-size:.78rem}.audit-row dd{margin:.25rem 0 0;overflow-wrap:anywhere;font-size:.86rem}.positiongrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem}.position{border:1px solid #344b62;background:#13243a;border-radius:10px;padding:.7rem}.position strong{display:block}.position a{font-size:.78rem}.position p{font-size:.83rem}.position span{display:block}
+input[type="number"],input[type="search"]{width:100%;padding:.55rem .65rem;border-radius:8px;background:#1a2d43;border:1px solid #537086;color:var(--text)}.fieldset{display:flex;align-items:end;gap:.8rem;flex-wrap:wrap;margin:.8rem 0}.fieldset label{font-size:.78rem;color:var(--muted)}.fieldset input{max-width:95px}.foot{margin-top:2.4rem;border-top:1px solid var(--line);padding:1.3rem 0;color:var(--muted);font-size:.82rem}.foot a{margin-right:1rem}
+@media(max-width:850px){.grid2,.positiongrid{grid-template-columns:1fr}.audit{grid-template-columns:1fr}.nav{gap:.65rem}.grid3{gap:.4rem}.metric{padding:.58rem}.metric span{font-size:.72rem}main{padding:.9rem .75rem 2rem}.panel{padding:.85rem}header{position:static}}
+@media print{body{background:white;color:black;font-size:11px}header,.toolbar,button,select,.fieldset,.foot,.nav{display:none!important}.panel,.chart{background:white;color:black;border:1px solid #aaa;break-inside:avoid}.metric b,h1,h2{color:black}.fine,.small{color:#333}.grid2{grid-template-columns:repeat(2,1fr)}.section{margin-top:1rem}.positiongrid{grid-template-columns:repeat(2,1fr)}}
+</style>
+<script defer src="/election-lab-app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to analysis</a>
+<header><div class="topbar">
+ <a class="brand" href="/">KAHRELUM <span class="tag">RESEARCH LAB</span></a>
+ <nav class="nav" aria-label="Sections"><a href="#coalitions">Coalitions</a><a href="#time-machine">Timeline</a><a href="#models">Models</a><a href="#parties">Parties</a><a href="#sources">Evidence</a><a href="/election-live">Original live desk</a></nav>
+</div></header>
+<main id="main">
+<section class="hero">
+<div class="eyebrow">K-PREDICT v0.6 · CASE KAH-IL26-PROSPECTIVE-001</div>
+<h1>Explore the seats.<br>Keep the evidence honest.</h1>
+<p class="lead">Compare any two coalition arrangements, examine their full simulated seat distributions, inspect the political constraints, and travel through preserved prediction checkpoints. All percentages are <strong>conditional seat-arithmetic outputs</strong>, never estimates of which government will form.</p>
+<div class="actions"><span class="tag">14-list simulation universe</span><span class="tag">36 operational ballot lists</span><span class="tag">No calibrated governing probability</span></div>
+<div class="toolbar">
+<label for="snapshot-select">Prediction snapshot<select id="snapshot-select"><option value="current_nowcast">Post-close, exit-informed nowcast</option><option value="frozen_prediction">Post-close frozen-input model run</option></select></label>
+<label for="method-select">Uncertainty model<select id="method-select"><option value="correlated_student">Correlated Student</option><option value="shrinkage_gaussian">Shrinkage Gaussian</option><option value="fixed_gaussian">Fixed Gaussian</option></select></label>
+<button id="refresh" class="strong" type="button">Refresh published data</button>
+<span id="last-updated" class="small">Verifying data feed…</span>
+</div>
+<div id="notice" class="notice" data-kind="info" aria-live="polite">Loading verified source references…</div>
+<p id="count-status" class="callout">Official counting and compatible ballot denominators require independent verification. Unknown means unknown.</p>
+</section>
+
+<section class="section" id="coalitions">
+<div class="eyebrow">01 · Coalition laboratory</div><h2>Two configurations, one shared set of draws</h2>
+<p class="fine">Pick cabinet members, outside supporters, abstainers or opponents for each list. Presets are illustrations that may conflict with stated political red lines. They do not establish willingness to govern together.</p>
+<div class="grid2">
+ <div class="panel"><label for="presetA"><strong>Scenario A</strong> · documented preset</label><div class="toolbar"><select id="presetA" aria-label="Scenario A preset"></select></div><p class="fine" id="presetA-note">Edit individual roles below.</p></div>
+ <div class="panel"><label for="presetB"><strong>Scenario B</strong> · documented preset</label><div class="toolbar"><select id="presetB" aria-label="Scenario B preset"></select></div><p class="fine" id="presetB-note">Edit individual roles below.</p></div>
+</div>
+<div class="panel" style="margin-top:1rem">
+ <div class="row"><h3>Party roles per scenario</h3><span class="small">Unassigned = opponent. Whole-party seats only.</span></div>
+ <div class="tablewrap"><table><thead><tr><th scope="col">List</th><th scope="col">Scenario A role</th><th scope="col">Scenario B role</th></tr></thead><tbody id="party-roles"><tr><td colspan="3">Loading coherent joint draws…</td></tr></tbody></table></div>
+</div>
+<p id="scenario-context" class="fine">Only modeled parties are available in the role editor.</p>
+<div class="grid2">
+ <div class="panel" id="scenario-a"><div class="eyebrow">Scenario A · model-implied probabilities</div>
+  <div class="grid3"><div class="metric"><span>Cabinet seats ≥ 61</span><b id="pct-a-cab">—</b></div><div class="metric"><span>Cabinet + support ≥ 61</span><b id="pct-a-sup">—</b></div><div class="metric"><span>Yes votes &gt; no votes</span><b id="pct-a-yes">—</b></div></div>
+  <p class="small" id="detail-a">Awaiting draws.</p><div id="chart-a" class="chart" aria-live="polite"></div>
+ </div>
+ <div class="panel" id="scenario-b"><div class="eyebrow">Scenario B · model-implied probabilities</div>
+  <div class="grid3"><div class="metric"><span>Cabinet seats ≥ 61</span><b id="pct-b-cab">—</b></div><div class="metric"><span>Cabinet + support ≥ 61</span><b id="pct-b-sup">—</b></div><div class="metric"><span>Yes votes &gt; no votes</span><b id="pct-b-yes">—</b></div></div>
+  <p class="small" id="detail-b">Awaiting draws.</p><div id="chart-b" class="chart" aria-live="polite"></div>
+ </div>
+</div>
+<p class="legend"><span>Below 61</span><span class="over">61 or more</span><span class="limit">Majority boundary</span></p>
+</section>
+
+<section class="section" id="procedure">
+<div class="eyebrow">02 · Procedure and sensitivity</div><h2>Majority arithmetic is not government formation</h2>
+<div class="panel">
+<p class="fine">Model deterministic what-if departures from full party attendance. The adjustments below are applied to simulated parliamentary votes only. They do not represent estimates of absent members, defections, legal approvals, negotiations or future conduct.</p>
+<div class="fieldset">
+<label for="absent-yes">Assumed absent yes members<br><input type="number" id="absent-yes" min="0" max="10" value="0"></label>
+<label for="absent-no">Assumed absent no members<br><input type="number" id="absent-no" min="0" max="10" value="0"></label>
+<label for="switchers">Assumed opponent → yes switches (negative reverses)<br><input type="number" id="switchers" min="-5" max="5" value="0"></label>
+</div>
+<p id="legal-caveat" class="callout">This tool distinguishes absolute majority and yes-versus-no arithmetic; it is not a legal finding.</p>
+<p class="fine">For actual procedure and vote standards consult the <a href="https://main.knesset.gov.il/EN/activity/Pages/Plenum.aspx" target="_blank" rel="noopener noreferrer">Knesset</a> and <a href="https://en.idi.org.il/articles/28919" target="_blank" rel="noopener noreferrer">Israel Democracy Institute</a>. Constructive no-confidence is distinct from a hypothetical investiture vote.</p>
+</div>
+</section>
+
+<section class="section" id="models">
+<div class="eyebrow">03 · Model sensitivity</div><h2>Do the three uncertainty methods agree?</h2>
+<p class="fine">All three rows use the same saved role choices and their method-specific original joint draws. Probabilities are not calibrated and should not be read as likelihoods of political bargaining outcomes.</p>
+<div class="panel tablewrap"><table>
+<thead><tr><th rowspan="2" scope="col">Method</th><th colspan="3" scope="colgroup">Scenario A</th><th colspan="3" scope="colgroup">Scenario B</th></tr><tr><th>Cabinet 61+</th><th>With support 61+</th><th>Yes &gt; no</th><th>Cabinet 61+</th><th>With support 61+</th><th>Yes &gt; no</th></tr></thead>
+<tbody id="model-comparison"><tr><td colspan="7">Loading…</td></tr></tbody></table></div>
+</section>
+
+<section class="section" id="party-distribution">
+<div class="eyebrow">04 · Party uncertainty</div><h2>How many seats could an individual list receive?</h2>
+<div class="panel">
+<label for="party-select">Modeled list<select id="party-select" style="margin-left:.5rem;max-width:100%"><option>Loading…</option></select></label>
+<p id="party-metrics" class="fine">Waiting for recorded joint draws.</p>
+<div id="party-chart" class="chart"></div>
+<p class="fine">P(seats &gt; 0) is a seat-space heuristic. It is not a validated forecast of crossing the statutory vote-share threshold.</p>
+</div>
+</section>
+
+<section class="section" id="time-machine">
+<div class="eyebrow">05 · Forecast time machine</div><h2>Preserve when evidence existed and when a forecast was issued</h2>
+<p class="fine">Two model-issued snapshots can be selected above. Checkpoints here are historical records, not invented time-series estimates. The original C0 has no proprietary K-PREDICT winner percentage.</p>
+<div class="timeline" id="timeline-rail"><p>Loading issue timestamps…</p></div>
+</section>
+
+<section class="section" id="parties">
+<div class="eyebrow">06 · Contesting ballot directory</div><h2>All 36 operational lists, not just the model's 14</h2>
+<p class="fine" id="roster-summary">Updating the dated 2026 list.</p>
+<div class="panel">
+<label for="roster-search" class="small">Search English or Hebrew name, ballot mark, or first-listed candidate</label>
+<input type="search" id="roster-search" placeholder="Search ballot lists…" autocomplete="off" style="margin:.5rem 0 1rem">
+<div class="tablewrap"><table>
+<thead><tr><th>Ballot</th><th>Registered list</th><th>First candidate</th><th>Statistical model coverage</th><th>Official record link</th></tr></thead>
+<tbody id="roster-rows"><tr><td colspan="5">Loading…</td></tr></tbody></table></div>
+</div>
+<p class="fine">The historical registry used candidate-list transcriptions and did not directly verify every CEC page. Blue and White and Achi are recorded as withdrawn. The modeled label “People of Israel” is not silently equated to a specific unverified ballot-list alias.</p>
+</section>
+
+<section class="section" id="sources">
+<div class="eyebrow">07 · Evidence and political constraints</div><h2>Show the source behind every forecast</h2>
+<div class="grid2">
+<div class="panel"><h3>Prediction identity and freshness</h3><dl id="source-ledger" class="audit"><div class="audit-row">Loading…</div></dl></div>
+<div class="panel"><h3>What the parties have reportedly said</h3>
+ <p class="fine">Attributed political positions may change. Reporting here does not verify any future coalition agreement.</p>
+ <div id="position-ledger" class="positiongrid" style="grid-template-columns:1fr"></div>
+</div>
+</div>
+</section>
+
+<section class="section" id="exports">
+<div class="eyebrow">08 · Record lock and export</div><h2>Keep your scenario inspectable</h2>
+<div class="panel">
+<p class="fine">Exports record scenario assignments, identical model references, exact probability fields, assumptions, archived issue time and the distinction between conditional seats and political agreement. A shared URL stores your role choices, not a frozen new forecast.</p>
+<div class="actions">
+<button class="strong" id="export-json" type="button">Export JSON</button>
+<button id="export-csv" type="button">Export CSV</button>
+<button id="copy-link" type="button">Copy scenario URL</button>
+<button id="print-card" type="button">Print comparison card</button>
+</div>
+</div>
+</section>
+
+<footer class="foot"><p>KAHRELUM K-PREDICT · Experimental post-close seat-space probabilities only. Official counting, actual votes and certified final seats are never inferred from exit polls. Historic data provenance and calibrated prospective skill remain incomplete. No government-formation probability is estimated.</p>
+<a href="/election-live#coalitions">Original live coalition explorer</a><a href="https://github.com/AuroraGrid/kahrelum-os/tree/main/research/israel-2026-election">Research evidence</a><a href="/pilot">Commercial fit check</a>
+</footer>
+</main>
+</body></html>
