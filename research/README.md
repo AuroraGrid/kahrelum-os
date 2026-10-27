@@ -87,3 +87,8 @@ Appended evidence cutoff **2026-10-26T21:54:15Z (October 27 02:54:15 PKT)**: [fu
 ## October 27, 2026 | New prospective election-integrity source observation
 
 [**Attributed election-day rhetoric, party complaint and noon turnout audit**](./israel-2026-election/ELECTION_INTEGRITY_OBSERVATION_20261027T1142Z.md) at 11:43:34 UTC. Unsubstantiated claims and a reported complaint are not a CEC finding; 31.5% turnout is not a counted-vote milestone. C0 and preregistered scoring stay locked; no outcome projection claimed. See the [case portfolio](./israel-2026-election/README.md) for the earlier observations.
+
+
+## October 27, 2026 | Prospective Israeli election candidate-security observation
+
+[**Yair Golan security/knife incident as attributed to party, and CEC 22:00 voting-queue clarification**](./israel-2026-election/ELECTION_INTEGRITY_OBSERVATION_20261027T1246Z.md) ([immutable capture](https://github.com/AuroraGrid/kahrelum-os/blob/927d632798b12c9b709270d1f6321d25928eb506/research/israel-2026-election/ELECTION_INTEGRITY_OBSERVATION_20261027T1246Z.md)). At 12:46 UTC: no independent police record establishing attempted stabbing; no election postponement, real-vote count fraction or prediction. C0 immutability and all prior observation links retained.
