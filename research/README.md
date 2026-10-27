@@ -1,4 +1,6 @@
 # KAHRELUM Research & Investigations
+**Israel election portfolio source correction (Oct 27, 2026):** [Append-only correction: **36 active lists** after Achi and Blue and White withdrew](./israel-2026-election/PARTY_REGISTRY_CORRECTION_2026-10-27T1456Z.md) ([immutable source record](https://github.com/AuroraGrid/kahrelum-os/blob/2e758eb6f39d92574d5f6e83abc90a03640d2327/research/israel-2026-election/PARTY_REGISTRY_CORRECTION_2026-10-27T1456Z.md)). The earlier 37-list snapshot was already stale when recorded, and is preserved as a documented source-refresh miss. Direct Achi CEC body unavailable (403); counted-vote checkpoints and election outcome remain pending.
+
 
 **New technical research:** [K-PREDICT v0.6: probabilistic election modeling and honest historical evaluation](./israel-2026-election/K_PREDICT_V06_2026-10-27.md). Retrospective evidence; overall PARTIAL; no established model superiority or KAHRELUM live 2026 election-outcome forecast.
 
