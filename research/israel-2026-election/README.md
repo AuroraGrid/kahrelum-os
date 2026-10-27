@@ -156,3 +156,7 @@ Evidence cutoff: **2026-10-26T21:54:15Z / October 27 02:54:15 PKT**. Direct fina
 
 
 [Live completion audit — October28](./LIVE_COMPLETION_AUDIT_2026-10-28.md): dashboard features live; official count and final scoring await verified data.
+
+## Coalition analysis lab | 28 October 2026
+
+A separate [**election analysis lab**](https://kahrelum-os.vercel.app/election-lab) extends the existing role-based coalition explorer with two coherent scenario comparisons, cabinet-seat and per-list histograms, three-method sensitivity, dated prediction chronology, a corrected 36-list ballot directory, authored political evidence ledger, historical/source audit and reproducible scenario exports. [Engineering evidence and Firebase release gate](./ELECTION_ANALYSIS_LAB_RELEASE_2026-10-28.md). This Vercel-hosted lab is a **separate preview/production surface** until its additive Firebase deployment at `https://kahrelum.com/election-lab` is verified. Historical cutoff authentication, statutory threshold validation and prospective predictive superiority remain unresolved. Original C0 and scoring protocol unchanged.
