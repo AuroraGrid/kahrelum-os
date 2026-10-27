@@ -107,3 +107,8 @@ Appended evidence cutoff **2026-10-26T21:54:15Z (October 27 02:54:15 PKT)**: [fu
 ## October 27, 2026 | Israel election: CEC turnout and police correction
 
 [**13:49 UTC contemporaneous turnout/security observation**](./israel-2026-election/ELECTION_INTEGRITY_OBSERVATION_20261027T1349Z.md) ([immutable creation commit](https://github.com/AuroraGrid/kahrelum-os/blob/6617bbe703cb2b80499f22250bb6283316276c94/research/israel-2026-election/ELECTION_INTEGRITY_OBSERVATION_20261027T1349Z.md)). CEC-attributed 44.9% 14:00 turnout is **not actual votes counted**; subsequent Israeli police statement says no attempted stabbing in the earlier Yair Golan knife incident. Separate reported assault against a Democrats activist in Holon remains an unverified party allegation. No legal postponement or count/projection checkpoint. [Full prospective case](./israel-2026-election/README.md) remains LIVE / UNRESOLVED / NOT SCORED; C0 and protocol unmodified.
+
+
+## Israel election prospective turnout observation | Oct 27, 21:24 IST
+
+[**20:00 CEC-attributed 74.3% turnout reconciled to the 2026 eligible electorate, compared with official 2022 final 70.63%**](./israel-2026-election/ELECTION_TURNOUT_20H_RECORD_20261027T192449Z.md). This is a participation observation, **not counted valid votes, a seat projection, or a certified result**; original 2026 CEC bulletin unavailable for direct read. C0/protocol unchanged; C2 onward still pending. [Complete case](./israel-2026-election/README.md).
