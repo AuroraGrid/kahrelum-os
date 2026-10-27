@@ -1,0 +1,131 @@
+{
+  "captured_utc": "2026-10-27T20:35:49.969877+00:00",
+  "url": "https://kahrelum.com/election-live",
+  "status": "LIVE / AUTOMATIC_EXIT_POLL_UPDATES / OFFICIAL_COUNT_UNAVAILABLE",
+  "scheduled_task": "KAHRELUM-Israel-Live-2026",
+  "task_verification": {
+    "LastRunTime": "/Date(1793133244000)/",
+    "LastTaskResult": 0,
+    "NextRunTime": "/Date(1793133508000)/"
+  },
+  "collector_minutes": 5,
+  "browser_seconds": 60,
+  "hosting": {
+    "observed_at": "2026-10-27T20:34:21.591Z",
+    "mode": "DEPLOY",
+    "old_version": "projects/806087933597/sites/kahrelum-public-hosting/versions/abb9ee5c48a36ecd",
+    "new_file_count": 30,
+    "changed_paths": [
+      "/election-data/latest.json",
+      "/election-live.html",
+      "/election-data/comparison-time-windows.json",
+      "/election-data/snapshots/snapshot-2026-10-27T203240325411Z.json",
+      "/election-data/snapshots/snapshot-2026-10-27T203340118477Z.json",
+      "/election-data/snapshots/snapshot-2026-10-27T203413935244Z.json"
+    ],
+    "all_existing_paths_preserved": true,
+    "unchanged_existing_paths": [
+      "/__/firebase/init.js",
+      "/__/firebase/init.json",
+      "/a7f4c9d3e2b1f8066a5d4e3c2b1a0987.txt",
+      "/assets/contact/hasan-raza-kazmi-qr.png",
+      "/assets/contact/hasan-raza-kazmi-qr.svg",
+      "/assets/contact/hasan-raza-kazmi.vcf",
+      "/assets/hasan-raza-kazmi.vcf",
+      "/assets/social/kahrelum-og-demo.png",
+      "/assets/social/kahrelum-og-home.png",
+      "/assets/social/kahrelum-og-pilot.png",
+      "/connect.html",
+      "/data/api/v1/example.json",
+      "/data/api/v1/index.json",
+      "/data/api/v1/release.json",
+      "/demo.html",
+      "/election-data/predictions/prediction-335795cb5382d85a.json",
+      "/election-data/predictions/prediction-4bd2f859ebf84ca9.json",
+      "/election-data/snapshots/snapshot-2026-10-27T202825207875Z.json",
+      "/hasan.html",
+      "/index.html",
+      "/pilot.html",
+      "/robots.txt",
+      "/sample.html",
+      "/sitemap.xml"
+    ],
+    "raw_sha256": {
+      "/election-data/comparison-time-windows.json": "67ea296d4291dcc9ae9ed837fcb39a943a5b4b61e48289ba63706ab8cce3784e",
+      "/election-live.html": "2f5f12ea6ac2525234665231cbfb72895fea3ddc5ff285c7d697e151a02e0e94",
+      "/election-data/latest.json": "14f6eab7946ba0c217c46a522f07b8968e281d143af753bc01fada12c7817580",
+      "/election-data/predictions/prediction-335795cb5382d85a.json": "cb63f1076b9286474acbfa9f4d94a9287fd6f64c019a22b17857ab95468ebad6",
+      "/election-data/predictions/prediction-4bd2f859ebf84ca9.json": "5678ce5197373821c5c7a25fa3d9250c458d1cbd5ac4dc1a149dff792a33668c",
+      "/election-data/snapshots/snapshot-2026-10-27T202825207875Z.json": "98ed8fc0b7a536dcad8639c53e1f25645dfb7ee51a30c7601974f56182935d3d",
+      "/election-data/snapshots/snapshot-2026-10-27T203240325411Z.json": "4879e8f48d9432723f62bab6c9f2e3c18555706d640befc0a70569ddaf5683b8",
+      "/election-data/snapshots/snapshot-2026-10-27T203340118477Z.json": "2e075e6044dc144afdcd8a0c5f07fcd243e2f2142086b54189a2befd257d1101",
+      "/election-data/snapshots/snapshot-2026-10-27T203413935244Z.json": "14f6eab7946ba0c217c46a522f07b8968e281d143af753bc01fada12c7817580"
+    },
+    "config_before": {
+      "headers": [
+        {
+          "headers": {
+            "Cache-Control": "no-store, max-age=0"
+          },
+          "glob": "/election-data/**"
+        }
+      ],
+      "rewrites": [
+        {
+          "glob": "/api/v1",
+          "path": "/data/api/v1/index.json"
+        },
+        {
+          "glob": "/api/v1/release",
+          "path": "/data/api/v1/release.json"
+        },
+        {
+          "glob": "/api/v1/example",
+          "path": "/data/api/v1/example.json"
+        }
+      ],
+      "cleanUrls": true
+    },
+    "config_after": {
+      "headers": [
+        {
+          "headers": {
+            "Cache-Control": "no-store, max-age=0"
+          },
+          "glob": "/election-data/**"
+        }
+      ],
+      "rewrites": [
+        {
+          "glob": "/api/v1",
+          "path": "/data/api/v1/index.json"
+        },
+        {
+          "glob": "/api/v1/release",
+          "path": "/data/api/v1/release.json"
+        },
+        {
+          "glob": "/api/v1/example",
+          "path": "/data/api/v1/example.json"
+        }
+      ],
+      "cleanUrls": true
+    },
+    "source": "Owner-hosted experimental live prediction dashboard",
+    "new_version": "projects/806087933597/sites/kahrelum-public-hosting/versions/b491ae0dffc7adb5",
+    "release": "projects/806087933597/sites/kahrelum-public-hosting/channels/live/releases/1793133489763000",
+    "release_time": "2026-10-27T20:38:09.763Z",
+    "live_version": "projects/806087933597/sites/kahrelum-public-hosting/versions/b491ae0dffc7adb5",
+    "file_map_match": true,
+    "config_match": true,
+    "release_match": true
+  },
+  "model_tests": "51/51 PASS",
+  "audited_original_identities": "34/34 SHA-256 matches",
+  "numerical_checks": "6 matrices, 12000 draws each, nonnegative integer draws summing to 120; strict-largest probabilities plus ties sum to 1",
+  "source_custody": "Raw current source response retained locally by SHA-256; public source URL and hash in snapshot",
+  "timing": "Both newly issued predictions actually generated October 27 around 20:28 UTC / 4:28 PM EDT. Requested morning 4:28 AM EDT is a retrospective input cutoff, not a contemporaneous prediction. C0 unchanged.",
+  "clock_limit": "Provider-reported Hosting release time is later than local/clock observations; retain those distinct reported times without trusted-time attestation.",
+  "runtime_limit": "Automatic collection/publishing requires this owner computer awake, connected and authenticated. Official adapter not yet validated.",
+  "snapshots_and_predictions_immutable_by_filename": true
+}

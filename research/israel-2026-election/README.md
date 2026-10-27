@@ -128,3 +128,8 @@ Evidence cutoff: **2026-10-26T21:54:15Z / October 27 02:54:15 PKT**. Direct fina
 ## October 27 2026 | 21:24 IST: CEC-attributed 20:00 turnout versus 2022 final rate
 
 [**74.3% turnout and numerator audit, explicitly NOT valid votes counted**](./ELECTION_TURNOUT_20H_RECORD_20261027T192449Z.md) ([immutable record](https://github.com/AuroraGrid/kahrelum-os/blob/6789d0b7416977fdc1b42d56f2ca9ad50ed123ef/research/israel-2026-election/ELECTION_TURNOUT_20H_RECORD_20261027T192449Z.md)). Contemporaneous 2026 CEC-attributed **5,449,277 of 7,331,981** at 20:00 Israel exceeds the certified *full-election* **70.63%** 2022 turnout; actual 2026 count fraction, list votes, projections and seat maps remain unavailable. Secondary sources at 20:57 and 21:19 IST; first-party 2026 bulletin not directly retrieved. C1 archive and C0/protocol unmodified, C2 not yet eligible at capture.
+
+
+## Live K-PREDICT dashboard, appended October 28 PKT
+
+[Open the live dashboard](https://kahrelum.com/election-live) · [Run, timing and limitations](./LIVE_DASHBOARD_2026-10-27.md) · [Frozen new prediction records](./LIVE_PREDICTIONS_2026-10-27T2028Z.json). New runs actually issued October 27 at 4:28 PM EDT; the requested 4:28 AM comparison is a retrospective input cutoff. Automatic exit-poll collection is active on the owner computer; official count and final scoring remain pending. C0 and the original scoring protocol remain unchanged.

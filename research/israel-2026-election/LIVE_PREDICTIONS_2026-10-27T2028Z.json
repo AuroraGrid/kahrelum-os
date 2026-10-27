@@ -1,0 +1,1383 @@
+{
+  "frozen_input_prediction": {
+    "id": "335795cb5382d85a",
+    "issued_at": "2026-10-27T20:28:26.273653Z",
+    "classification": "POST_CLOSE_RUN_WITH_FROZEN_PRE_ELECTION_INPUTS",
+    "model": "K-PREDICT v0.6 seat-space / 2026 adapter v1",
+    "primary_method": "correlated_student",
+    "research_status": "EXPERIMENTAL / UNCALIBRATED / NOT C0",
+    "input_record": {
+      "published_date": "2026-10-23",
+      "sources": [
+        "https://www.mako.co.il/news-israel-elections/2026/Article-8ea5e45ec2961a1027.htm",
+        "https://13tv.co.il/item/news/politics/politics/survey-905415900/?pid=98577",
+        "https://www.timesofisrael.com/final-polls-before-election-show-both-blocs-short-of-majority-small-parties-out-of-knesset/"
+      ],
+      "vectors": [
+        [
+          21,
+          23,
+          15,
+          10,
+          9,
+          8,
+          8,
+          7,
+          8,
+          6,
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          19,
+          22,
+          14,
+          10,
+          9,
+          8,
+          7,
+          8,
+          8,
+          8,
+          7,
+          0,
+          0,
+          0
+        ],
+        [
+          20,
+          22,
+          14,
+          8,
+          9,
+          8,
+          7,
+          8,
+          8,
+          7,
+          5,
+          4,
+          0,
+          0
+        ]
+      ],
+      "custody": "N12 and C13 direct reads previously verified; Kan secondary corroboration; no later-count input",
+      "weighting": "equal weight of 3 survey snapshots; omitted minor lists explicitly outside modeled universe"
+    },
+    "center_seats": {
+      "Likud": 20.0,
+      "Yashar": 22.333333333333332,
+      "Together": 14.333333333333334,
+      "Democrats": 9.333333333333334,
+      "Joint List": 9.0,
+      "Otzma Yehudit": 8.0,
+      "Shas": 7.333333333333333,
+      "UTJ": 7.666666666666667,
+      "Yisrael Beiteinu": 8.0,
+      "Religious Zionism-Zehut": 7.0,
+      "Raam": 5.666666666666667,
+      "Reservists-Economic": 1.3333333333333333,
+      "People of Israel": 0.0,
+      "Noam": 0.0
+    },
+    "methods": {
+      "correlated_student": {
+        "seed": 3878634287,
+        "parties": [
+          {
+            "party": "Likud",
+            "mean_seats": 19.778916666666667,
+            "point_seats": 20,
+            "interval90": [
+              15,
+              24
+            ],
+            "p_represented": 0.9996666666666667
+          },
+          {
+            "party": "Yashar",
+            "mean_seats": 22.114583333333332,
+            "point_seats": 22,
+            "interval90": [
+              18,
+              26
+            ],
+            "p_represented": 0.99975
+          },
+          {
+            "party": "Together",
+            "mean_seats": 14.2065,
+            "point_seats": 14,
+            "interval90": [
+              10,
+              19
+            ],
+            "p_represented": 0.99875
+          },
+          {
+            "party": "Democrats",
+            "mean_seats": 9.276916666666667,
+            "point_seats": 9,
+            "interval90": [
+              5,
+              13
+            ],
+            "p_represented": 0.9866666666666667
+          },
+          {
+            "party": "Joint List",
+            "mean_seats": 8.929666666666666,
+            "point_seats": 9,
+            "interval90": [
+              5,
+              13
+            ],
+            "p_represented": 0.98675
+          },
+          {
+            "party": "Otzma Yehudit",
+            "mean_seats": 7.940416666666667,
+            "point_seats": 8,
+            "interval90": [
+              4,
+              12
+            ],
+            "p_represented": 0.97475
+          },
+          {
+            "party": "Shas",
+            "mean_seats": 7.2275833333333335,
+            "point_seats": 7,
+            "interval90": [
+              3,
+              11
+            ],
+            "p_represented": 0.96225
+          },
+          {
+            "party": "UTJ",
+            "mean_seats": 7.525416666666667,
+            "point_seats": 7,
+            "interval90": [
+              3,
+              12
+            ],
+            "p_represented": 0.96625
+          },
+          {
+            "party": "Yisrael Beiteinu",
+            "mean_seats": 7.954166666666667,
+            "point_seats": 8,
+            "interval90": [
+              4,
+              12
+            ],
+            "p_represented": 0.97375
+          },
+          {
+            "party": "Religious Zionism-Zehut",
+            "mean_seats": 6.895333333333333,
+            "point_seats": 7,
+            "interval90": [
+              3,
+              11
+            ],
+            "p_represented": 0.9531666666666667
+          },
+          {
+            "party": "Raam",
+            "mean_seats": 5.537416666666667,
+            "point_seats": 6,
+            "interval90": [
+              0,
+              10
+            ],
+            "p_represented": 0.8954166666666666
+          },
+          {
+            "party": "Reservists-Economic",
+            "mean_seats": 1.3401666666666667,
+            "point_seats": 1,
+            "interval90": [
+              0,
+              6
+            ],
+            "p_represented": 0.3084166666666667
+          },
+          {
+            "party": "People of Israel",
+            "mean_seats": 0.6565833333333333,
+            "point_seats": 1,
+            "interval90": [
+              0,
+              4
+            ],
+            "p_represented": 0.152
+          },
+          {
+            "party": "Noam",
+            "mean_seats": 0.6163333333333333,
+            "point_seats": 1,
+            "interval90": [
+              0,
+              4
+            ],
+            "p_represented": 0.14658333333333334
+          }
+        ],
+        "largest_list_probabilities": {
+          "Likud": 0.19708333333333333,
+          "Yashar": 0.6993333333333334,
+          "Together": 0.009416666666666667,
+          "Democrats": 0.0008333333333333334,
+          "Joint List": 0.0008333333333333334,
+          "Otzma Yehudit": 0.0003333333333333333,
+          "Shas": 0.00025,
+          "UTJ": 0.0004166666666666667,
+          "Yisrael Beiteinu": 0.0006666666666666666,
+          "Religious Zionism-Zehut": 0.0004166666666666667,
+          "Raam": 8.333333333333333e-05,
+          "Reservists-Economic": 0.0,
+          "People of Israel": 0.0,
+          "Noam": 0.0,
+          "TIE": 0.09033333333333333
+        },
+        "groups": {
+          "government_parties": {
+            "mean": 49.367666666666665,
+            "interval90": [
+              41,
+              57
+            ],
+            "p_at_least_61": 0.012416666666666666
+          },
+          "zionist_opposition": {
+            "mean": 53.552166666666665,
+            "interval90": [
+              46,
+              61
+            ],
+            "p_at_least_61": 0.057583333333333334
+          }
+        },
+        "all_draws_sum120": true
+      },
+      "shrinkage_gaussian": {
+        "seed": 2065723501,
+        "parties": [
+          {
+            "party": "Likud",
+            "mean_seats": 19.768083333333333,
+            "point_seats": 20,
+            "interval90": [
+              15,
+              24
+            ],
+            "p_represented": 1.0
+          },
+          {
+            "party": "Yashar",
+            "mean_seats": 22.09925,
+            "point_seats": 22,
+            "interval90": [
+              18,
+              27
+            ],
+            "p_represented": 1.0
+          },
+          {
+            "party": "Together",
+            "mean_seats": 14.162583333333334,
+            "point_seats": 14,
+            "interval90": [
+              10,
+              19
+            ],
+            "p_represented": 1.0
+          },
+          {
+            "party": "Democrats",
+            "mean_seats": 9.214166666666667,
+            "point_seats": 9,
+            "interval90": [
+              5,
+              14
+            ],
+            "p_represented": 0.99425
+          },
+          {
+            "party": "Joint List",
+            "mean_seats": 8.832833333333333,
+            "point_seats": 9,
+            "interval90": [
+              4,
+              13
+            ],
+            "p_represented": 0.9883333333333333
+          },
+          {
+            "party": "Otzma Yehudit",
+            "mean_seats": 7.888,
+            "point_seats": 8,
+            "interval90": [
+              3,
+              12
+            ],
+            "p_represented": 0.9764166666666667
+          },
+          {
+            "party": "Shas",
+            "mean_seats": 7.209666666666666,
+            "point_seats": 7,
+            "interval90": [
+              3,
+              12
+            ],
+            "p_represented": 0.96075
+          },
+          {
+            "party": "UTJ",
+            "mean_seats": 7.56,
+            "point_seats": 8,
+            "interval90": [
+              3,
+              12
+            ],
+            "p_represented": 0.9715
+          },
+          {
+            "party": "Yisrael Beiteinu",
+            "mean_seats": 7.9366666666666665,
+            "point_seats": 8,
+            "interval90": [
+              3,
+              12
+            ],
+            "p_represented": 0.9790833333333333
+          },
+          {
+            "party": "Religious Zionism-Zehut",
+            "mean_seats": 6.8189166666666665,
+            "point_seats": 7,
+            "interval90": [
+              0,
+              11
+            ],
+            "p_represented": 0.9465
+          },
+          {
+            "party": "Raam",
+            "mean_seats": 5.5055,
+            "point_seats": 5,
+            "interval90": [
+              0,
+              10
+            ],
+            "p_represented": 0.87375
+          },
+          {
+            "party": "Reservists-Economic",
+            "mean_seats": 1.4575833333333332,
+            "point_seats": 1,
+            "interval90": [
+              0,
+              6
+            ],
+            "p_represented": 0.33766666666666667
+          },
+          {
+            "party": "People of Israel",
+            "mean_seats": 0.7933333333333333,
+            "point_seats": 1,
+            "interval90": [
+              0,
+              5
+            ],
+            "p_represented": 0.19341666666666665
+          },
+          {
+            "party": "Noam",
+            "mean_seats": 0.7534166666666666,
+            "point_seats": 1,
+            "interval90": [
+              0,
+              5
+            ],
+            "p_represented": 0.18591666666666667
+          }
+        ],
+        "largest_list_probabilities": {
+          "Likud": 0.24016666666666667,
+          "Yashar": 0.6700833333333334,
+          "Together": 0.00675,
+          "Democrats": 0.0,
+          "Joint List": 8.333333333333333e-05,
+          "Otzma Yehudit": 0.0,
+          "Shas": 0.0,
+          "UTJ": 0.0,
+          "Yisrael Beiteinu": 0.0,
+          "Religious Zionism-Zehut": 0.0,
+          "Raam": 0.0,
+          "Reservists-Economic": 0.0,
+          "People of Israel": 0.0,
+          "Noam": 0.0,
+          "TIE": 0.08291666666666667
+        },
+        "groups": {
+          "government_parties": {
+            "mean": 49.24466666666667,
+            "interval90": [
+              41,
+              58
+            ],
+            "p_at_least_61": 0.013
+          },
+          "zionist_opposition": {
+            "mean": 53.41266666666667,
+            "interval90": [
+              45,
+              61
+            ],
+            "p_at_least_61": 0.06825
+          }
+        },
+        "all_draws_sum120": true
+      },
+      "fixed_gaussian": {
+        "seed": 142030756,
+        "parties": [
+          {
+            "party": "Likud",
+            "mean_seats": 19.720583333333334,
+            "point_seats": 20,
+            "interval90": [
+              15,
+              25
+            ],
+            "p_represented": 1.0
+          },
+          {
+            "party": "Yashar",
+            "mean_seats": 22.04425,
+            "point_seats": 22,
+            "interval90": [
+              17,
+              27
+            ],
+            "p_represented": 1.0
+          },
+          {
+            "party": "Together",
+            "mean_seats": 14.145583333333333,
+            "point_seats": 14,
+            "interval90": [
+              9,
+              19
+            ],
+            "p_represented": 0.9999166666666667
+          },
+          {
+            "party": "Democrats",
+            "mean_seats": 9.1885,
+            "point_seats": 9,
+            "interval90": [
+              4,
+              14
+            ],
+            "p_represented": 0.9880833333333333
+          },
+          {
+            "party": "Joint List",
+            "mean_seats": 8.858666666666666,
+            "point_seats": 9,
+            "interval90": [
+              4,
+              14
+            ],
+            "p_represented": 0.9844166666666667
+          },
+          {
+            "party": "Otzma Yehudit",
+            "mean_seats": 7.851416666666666,
+            "point_seats": 8,
+            "interval90": [
+              3,
+              13
+            ],
+            "p_represented": 0.9671666666666666
+          },
+          {
+            "party": "Shas",
+            "mean_seats": 7.16325,
+            "point_seats": 7,
+            "interval90": [
+              0,
+              12
+            ],
+            "p_represented": 0.9465
+          },
+          {
+            "party": "UTJ",
+            "mean_seats": 7.53,
+            "point_seats": 8,
+            "interval90": [
+              3,
+              12
+            ],
+            "p_represented": 0.9573333333333334
+          },
+          {
+            "party": "Yisrael Beiteinu",
+            "mean_seats": 7.871,
+            "point_seats": 8,
+            "interval90": [
+              3,
+              13
+            ],
+            "p_represented": 0.96575
+          },
+          {
+            "party": "Religious Zionism-Zehut",
+            "mean_seats": 6.867333333333334,
+            "point_seats": 7,
+            "interval90": [
+              0,
+              12
+            ],
+            "p_represented": 0.9341666666666667
+          },
+          {
+            "party": "Raam",
+            "mean_seats": 5.527166666666667,
+            "point_seats": 5,
+            "interval90": [
+              0,
+              11
+            ],
+            "p_represented": 0.855
+          },
+          {
+            "party": "Reservists-Economic",
+            "mean_seats": 1.5261666666666667,
+            "point_seats": 1,
+            "interval90": [
+              0,
+              6
+            ],
+            "p_represented": 0.33991666666666664
+          },
+          {
+            "party": "People of Israel",
+            "mean_seats": 0.8341666666666666,
+            "point_seats": 1,
+            "interval90": [
+              0,
+              5
+            ],
+            "p_represented": 0.19883333333333333
+          },
+          {
+            "party": "Noam",
+            "mean_seats": 0.8719166666666667,
+            "point_seats": 1,
+            "interval90": [
+              0,
+              5
+            ],
+            "p_represented": 0.20575
+          }
+        ],
+        "largest_list_probabilities": {
+          "Likud": 0.25366666666666665,
+          "Yashar": 0.6534166666666666,
+          "Together": 0.010416666666666666,
+          "Democrats": 8.333333333333333e-05,
+          "Joint List": 0.0,
+          "Otzma Yehudit": 0.0,
+          "Shas": 0.0,
+          "UTJ": 8.333333333333333e-05,
+          "Yisrael Beiteinu": 0.0,
+          "Religious Zionism-Zehut": 0.0,
+          "Raam": 0.0,
+          "Reservists-Economic": 0.0,
+          "People of Israel": 0.0,
+          "Noam": 0.0,
+          "TIE": 0.08233333333333333
+        },
+        "groups": {
+          "government_parties": {
+            "mean": 49.132583333333336,
+            "interval90": [
+              40,
+              58
+            ],
+            "p_at_least_61": 0.01725
+          },
+          "zionist_opposition": {
+            "mean": 53.24933333333333,
+            "interval90": [
+              45,
+              62
+            ],
+            "p_at_least_61": 0.08308333333333333
+          }
+        },
+        "all_draws_sum120": true
+      }
+    },
+    "draws": 12000,
+    "fit": {
+      "sd_seats": 2.7741950621936238,
+      "training_elections": [
+        {
+          "election_id": "2013-01-22",
+          "poll_ids": [
+            "INHERITED-2013-01-22-D2"
+          ],
+          "residual_mse": 12.285714285714286,
+          "party_count": 14
+        },
+        {
+          "election_id": "2015-03-17",
+          "poll_ids": [
+            "INHERITED-2015-03-17-D7",
+            "MIDGAM-N12-20150313",
+            "INHERITED-2015-03-17-D2"
+          ],
+          "residual_mse": 11.056596164264697,
+          "party_count": 11
+        },
+        {
+          "election_id": "2019-04-09",
+          "poll_ids": [
+            "INHERITED-2019-04-09-D14",
+            "INHERITED-2019-04-09-D2"
+          ],
+          "residual_mse": 13.778228133372966,
+          "party_count": 14
+        },
+        {
+          "election_id": "2019-09-17",
+          "poll_ids": [
+            "MIDGAM-N12-20190913",
+            "INHERITED-2019-09-17-D2"
+          ],
+          "residual_mse": 3.25,
+          "party_count": 10
+        },
+        {
+          "election_id": "2020-03-02",
+          "poll_ids": [
+            "INHERITED-2020-03-02-D7",
+            "MIDGAM-N12-20200228"
+          ],
+          "residual_mse": 1.5056343408440807,
+          "party_count": 9
+        },
+        {
+          "election_id": "2021-03-23",
+          "poll_ids": [
+            "INHERITED-2021-03-23-D2",
+            "INHERITED-2021-03-23-D7"
+          ],
+          "residual_mse": 3.8831015546768812,
+          "party_count": 14
+        },
+        {
+          "election_id": "2022-11-01",
+          "poll_ids": [
+            "INHERITED-2022-11-01-D2",
+            "INHERITED-2022-11-01-D7"
+          ],
+          "residual_mse": 2.8984661952214004,
+          "party_count": 13
+        }
+      ],
+      "historical_representation_rate": 0.7820710154043486,
+      "prior_equivalent_elections": 4.0,
+      "excluded_2013": false,
+      "training_exclusions": []
+    },
+    "source_hashes": {
+      "model/seat_space.py": "112e1e2fd30f7989ed55c9e83f3dab4efb94774bd1855475177e58f45ccf1929",
+      "configs/model_config.json": "b45706a1c38211752b55cd6f01442e5b1c3ffe0bfab319bba1578978838721c2",
+      "data/polling_inputs.json": "e54cd03c443842c75f03e8f23e6be152b78891bde8679f7ffaa76fafa9ef565b"
+    },
+    "scope": "Poll-covered 14-list universe. Other ballot lists are not modeled. Three-seat support hurdle inherited from v0.6; heuristic, not statutory Bader-Ofer or genuine vote-threshold inference.",
+    "issue_timing": "Issued after scheduled poll close and after inspecting exit-poll information. Cannot be scored as a pre-election prediction.",
+    "uncertainty": "Intervals and probabilities are conditional model simulations, not validated calibration. Election-night exit-poll errors were not separately fitted; historical D-2 polling errors are reused conservatively, with no claim they are correct exit-poll uncertainty."
+  },
+  "initial_exit_poll_nowcast": {
+    "id": "4bd2f859ebf84ca9",
+    "issued_at": "2026-10-27T20:28:29.104520Z",
+    "classification": "POST_CLOSE_EXIT_POLL_CONDITIONED_NOWCAST",
+    "model": "K-PREDICT v0.6 seat-space / 2026 adapter v1",
+    "primary_method": "correlated_student",
+    "research_status": "EXPERIMENTAL / UNCALIBRATED / NOT C0",
+    "input_record": {
+      "source_url": "https://www.thepetek.com/results",
+      "source_type": "SECONDARY_EXIT_POLL_AGGREGATE",
+      "source_label": "The 120 Knesset seats as the Kan 11, Channel 12, Channel 13, c14 and i24 exit poll projects them",
+      "seats": {
+        "Yashar": 21,
+        "Together": 13,
+        "Democrats": 9,
+        "Yisrael Beiteinu": 7,
+        "Joint List": 10,
+        "Raam": 7,
+        "Likud": 26,
+        "Otzma Yehudit": 7,
+        "Shas": 7,
+        "UTJ": 7,
+        "Religious Zionism-Zehut": 6,
+        "People of Israel": 0,
+        "Reservists-Economic": 0,
+        "Noam": 0
+      }
+    },
+    "center_seats": {
+      "Likud": 26.0,
+      "Yashar": 21.0,
+      "Together": 13.0,
+      "Democrats": 9.0,
+      "Joint List": 10.0,
+      "Otzma Yehudit": 7.0,
+      "Shas": 7.0,
+      "UTJ": 7.0,
+      "Yisrael Beiteinu": 7.0,
+      "Religious Zionism-Zehut": 6.0,
+      "Raam": 7.0,
+      "Reservists-Economic": 0.0,
+      "People of Israel": 0.0,
+      "Noam": 0.0
+    },
+    "methods": {
+      "correlated_student": {
+        "seed": 699773239,
+        "parties": [
+          {
+            "party": "Likud",
+            "mean_seats": 25.58725,
+            "point_seats": 25,
+            "interval90": [
+              21,
+              30
+            ],
+            "p_represented": 0.9998333333333334
+          },
+          {
+            "party": "Yashar",
+            "mean_seats": 20.671333333333333,
+            "point_seats": 21,
+            "interval90": [
+              16,
+              25
+            ],
+            "p_represented": 0.9998333333333334
+          },
+          {
+            "party": "Together",
+            "mean_seats": 12.816166666666666,
+            "point_seats": 13,
+            "interval90": [
+              9,
+              17
+            ],
+            "p_represented": 0.9983333333333333
+          },
+          {
+            "party": "Democrats",
+            "mean_seats": 8.86025,
+            "point_seats": 9,
+            "interval90": [
+              5,
+              13
+            ],
+            "p_represented": 0.9865
+          },
+          {
+            "party": "Joint List",
+            "mean_seats": 9.84825,
+            "point_seats": 10,
+            "interval90": [
+              6,
+              14
+            ],
+            "p_represented": 0.99175
+          },
+          {
+            "party": "Otzma Yehudit",
+            "mean_seats": 6.834333333333333,
+            "point_seats": 7,
+            "interval90": [
+              3,
+              11
+            ],
+            "p_represented": 0.9514166666666667
+          },
+          {
+            "party": "Shas",
+            "mean_seats": 6.9325,
+            "point_seats": 7,
+            "interval90": [
+              3,
+              11
+            ],
+            "p_represented": 0.9573333333333334
+          },
+          {
+            "party": "UTJ",
+            "mean_seats": 6.909833333333333,
+            "point_seats": 7,
+            "interval90": [
+              3,
+              11
+            ],
+            "p_represented": 0.9553333333333334
+          },
+          {
+            "party": "Yisrael Beiteinu",
+            "mean_seats": 6.878833333333334,
+            "point_seats": 7,
+            "interval90": [
+              3,
+              11
+            ],
+            "p_represented": 0.9560833333333333
+          },
+          {
+            "party": "Religious Zionism-Zehut",
+            "mean_seats": 5.897,
+            "point_seats": 6,
+            "interval90": [
+              0,
+              10
+            ],
+            "p_represented": 0.9196666666666666
+          },
+          {
+            "party": "Raam",
+            "mean_seats": 6.89125,
+            "point_seats": 7,
+            "interval90": [
+              3,
+              11
+            ],
+            "p_represented": 0.956
+          },
+          {
+            "party": "Reservists-Economic",
+            "mean_seats": 0.6125833333333334,
+            "point_seats": 0,
+            "interval90": [
+              0,
+              4
+            ],
+            "p_represented": 0.14516666666666667
+          },
+          {
+            "party": "People of Israel",
+            "mean_seats": 0.6031666666666666,
+            "point_seats": 0,
+            "interval90": [
+              0,
+              4
+            ],
+            "p_represented": 0.1415
+          },
+          {
+            "party": "Noam",
+            "mean_seats": 0.65725,
+            "point_seats": 1,
+            "interval90": [
+              0,
+              4
+            ],
+            "p_represented": 0.14975
+          }
+        ],
+        "largest_list_probabilities": {
+          "Likud": 0.8883333333333333,
+          "Yashar": 0.0695,
+          "Together": 0.0015,
+          "Democrats": 0.00016666666666666666,
+          "Joint List": 0.0005,
+          "Otzma Yehudit": 0.00016666666666666666,
+          "Shas": 0.0003333333333333333,
+          "UTJ": 0.0,
+          "Yisrael Beiteinu": 8.333333333333333e-05,
+          "Religious Zionism-Zehut": 0.00016666666666666666,
+          "Raam": 8.333333333333333e-05,
+          "Reservists-Economic": 0.0,
+          "People of Israel": 0.0,
+          "Noam": 0.0,
+          "TIE": 0.03916666666666667
+        },
+        "groups": {
+          "government_parties": {
+            "mean": 52.160916666666665,
+            "interval90": [
+              44,
+              60
+            ],
+            "p_at_least_61": 0.033416666666666664
+          },
+          "zionist_opposition": {
+            "mean": 49.22658333333333,
+            "interval90": [
+              42,
+              56
+            ],
+            "p_at_least_61": 0.00825
+          }
+        },
+        "all_draws_sum120": true
+      },
+      "shrinkage_gaussian": {
+        "seed": 1855284025,
+        "parties": [
+          {
+            "party": "Likud",
+            "mean_seats": 25.591333333333335,
+            "point_seats": 25,
+            "interval90": [
+              21,
+              30
+            ],
+            "p_represented": 1.0
+          },
+          {
+            "party": "Yashar",
+            "mean_seats": 20.641166666666667,
+            "point_seats": 20,
+            "interval90": [
+              16,
+              25
+            ],
+            "p_represented": 1.0
+          },
+          {
+            "party": "Together",
+            "mean_seats": 12.809916666666666,
+            "point_seats": 13,
+            "interval90": [
+              8,
+              17
+            ],
+            "p_represented": 0.9999166666666667
+          },
+          {
+            "party": "Democrats",
+            "mean_seats": 8.884333333333334,
+            "point_seats": 9,
+            "interval90": [
+              4,
+              13
+            ],
+            "p_represented": 0.9900833333333333
+          },
+          {
+            "party": "Joint List",
+            "mean_seats": 9.848,
+            "point_seats": 10,
+            "interval90": [
+              5,
+              14
+            ],
+            "p_represented": 0.9971666666666666
+          },
+          {
+            "party": "Otzma Yehudit",
+            "mean_seats": 6.8865,
+            "point_seats": 7,
+            "interval90": [
+              3,
+              11
+            ],
+            "p_represented": 0.9504166666666667
+          },
+          {
+            "party": "Shas",
+            "mean_seats": 6.831916666666666,
+            "point_seats": 7,
+            "interval90": [
+              0,
+              11
+            ],
+            "p_represented": 0.9440833333333334
+          },
+          {
+            "party": "UTJ",
+            "mean_seats": 6.846583333333333,
+            "point_seats": 7,
+            "interval90": [
+              0,
+              11
+            ],
+            "p_represented": 0.94575
+          },
+          {
+            "party": "Yisrael Beiteinu",
+            "mean_seats": 6.832833333333333,
+            "point_seats": 7,
+            "interval90": [
+              0,
+              11
+            ],
+            "p_represented": 0.9458333333333333
+          },
+          {
+            "party": "Religious Zionism-Zehut",
+            "mean_seats": 5.789916666666667,
+            "point_seats": 6,
+            "interval90": [
+              0,
+              10
+            ],
+            "p_represented": 0.8949166666666667
+          },
+          {
+            "party": "Raam",
+            "mean_seats": 6.866583333333334,
+            "point_seats": 7,
+            "interval90": [
+              0,
+              11
+            ],
+            "p_represented": 0.9469166666666666
+          },
+          {
+            "party": "Reservists-Economic",
+            "mean_seats": 0.72425,
+            "point_seats": 1,
+            "interval90": [
+              0,
+              5
+            ],
+            "p_represented": 0.17941666666666667
+          },
+          {
+            "party": "People of Israel",
+            "mean_seats": 0.7341666666666666,
+            "point_seats": 1,
+            "interval90": [
+              0,
+              5
+            ],
+            "p_represented": 0.1805
+          },
+          {
+            "party": "Noam",
+            "mean_seats": 0.7125,
+            "point_seats": 0,
+            "interval90": [
+              0,
+              4
+            ],
+            "p_represented": 0.17866666666666667
+          }
+        ],
+        "largest_list_probabilities": {
+          "Likud": 0.8659166666666667,
+          "Yashar": 0.08725,
+          "Together": 8.333333333333333e-05,
+          "Democrats": 0.0,
+          "Joint List": 0.0,
+          "Otzma Yehudit": 0.0,
+          "Shas": 0.0,
+          "UTJ": 0.0,
+          "Yisrael Beiteinu": 0.0,
+          "Religious Zionism-Zehut": 0.0,
+          "Raam": 0.0,
+          "Reservists-Economic": 0.0,
+          "People of Israel": 0.0,
+          "Noam": 0.0,
+          "TIE": 0.04675
+        },
+        "groups": {
+          "government_parties": {
+            "mean": 51.94625,
+            "interval90": [
+              44,
+              60
+            ],
+            "p_at_least_61": 0.043583333333333335
+          },
+          "zionist_opposition": {
+            "mean": 49.16825,
+            "interval90": [
+              41,
+              57
+            ],
+            "p_at_least_61": 0.0085
+          }
+        },
+        "all_draws_sum120": true
+      },
+      "fixed_gaussian": {
+        "seed": 239046191,
+        "parties": [
+          {
+            "party": "Likud",
+            "mean_seats": 25.524833333333333,
+            "point_seats": 25,
+            "interval90": [
+              21,
+              31
+            ],
+            "p_represented": 1.0
+          },
+          {
+            "party": "Yashar",
+            "mean_seats": 20.60375,
+            "point_seats": 20,
+            "interval90": [
+              16,
+              26
+            ],
+            "p_represented": 1.0
+          },
+          {
+            "party": "Together",
+            "mean_seats": 12.758166666666666,
+            "point_seats": 12,
+            "interval90": [
+              8,
+              18
+            ],
+            "p_represented": 0.9998333333333334
+          },
+          {
+            "party": "Democrats",
+            "mean_seats": 8.858,
+            "point_seats": 9,
+            "interval90": [
+              4,
+              14
+            ],
+            "p_represented": 0.9858333333333333
+          },
+          {
+            "party": "Joint List",
+            "mean_seats": 9.8215,
+            "point_seats": 10,
+            "interval90": [
+              5,
+              15
+            ],
+            "p_represented": 0.9935833333333334
+          },
+          {
+            "party": "Otzma Yehudit",
+            "mean_seats": 6.843416666666666,
+            "point_seats": 7,
+            "interval90": [
+              0,
+              12
+            ],
+            "p_represented": 0.9318333333333333
+          },
+          {
+            "party": "Shas",
+            "mean_seats": 6.828916666666666,
+            "point_seats": 7,
+            "interval90": [
+              0,
+              12
+            ],
+            "p_represented": 0.93175
+          },
+          {
+            "party": "UTJ",
+            "mean_seats": 6.818083333333333,
+            "point_seats": 7,
+            "interval90": [
+              0,
+              12
+            ],
+            "p_represented": 0.9336666666666666
+          },
+          {
+            "party": "Yisrael Beiteinu",
+            "mean_seats": 6.8373333333333335,
+            "point_seats": 7,
+            "interval90": [
+              0,
+              12
+            ],
+            "p_represented": 0.93325
+          },
+          {
+            "party": "Religious Zionism-Zehut",
+            "mean_seats": 5.784833333333333,
+            "point_seats": 6,
+            "interval90": [
+              0,
+              11
+            ],
+            "p_represented": 0.8785833333333334
+          },
+          {
+            "party": "Raam",
+            "mean_seats": 6.787583333333333,
+            "point_seats": 7,
+            "interval90": [
+              0,
+              12
+            ],
+            "p_represented": 0.93275
+          },
+          {
+            "party": "Reservists-Economic",
+            "mean_seats": 0.8235,
+            "point_seats": 1,
+            "interval90": [
+              0,
+              5
+            ],
+            "p_represented": 0.19958333333333333
+          },
+          {
+            "party": "People of Israel",
+            "mean_seats": 0.861,
+            "point_seats": 1,
+            "interval90": [
+              0,
+              5
+            ],
+            "p_represented": 0.20491666666666666
+          },
+          {
+            "party": "Noam",
+            "mean_seats": 0.8490833333333333,
+            "point_seats": 1,
+            "interval90": [
+              0,
+              5
+            ],
+            "p_represented": 0.2015
+          }
+        ],
+        "largest_list_probabilities": {
+          "Likud": 0.8429166666666666,
+          "Yashar": 0.10766666666666666,
+          "Together": 0.00016666666666666666,
+          "Democrats": 0.0,
+          "Joint List": 8.333333333333333e-05,
+          "Otzma Yehudit": 0.0,
+          "Shas": 0.0,
+          "UTJ": 0.0,
+          "Yisrael Beiteinu": 0.0,
+          "Religious Zionism-Zehut": 0.0,
+          "Raam": 0.0,
+          "Reservists-Economic": 0.0,
+          "People of Israel": 0.0,
+          "Noam": 0.0,
+          "TIE": 0.049166666666666664
+        },
+        "groups": {
+          "government_parties": {
+            "mean": 51.80008333333333,
+            "interval90": [
+              43,
+              61
+            ],
+            "p_at_least_61": 0.051
+          },
+          "zionist_opposition": {
+            "mean": 49.05725,
+            "interval90": [
+              41,
+              57
+            ],
+            "p_at_least_61": 0.014
+          }
+        },
+        "all_draws_sum120": true
+      }
+    },
+    "draws": 12000,
+    "fit": {
+      "sd_seats": 2.7741950621936238,
+      "training_elections": [
+        {
+          "election_id": "2013-01-22",
+          "poll_ids": [
+            "INHERITED-2013-01-22-D2"
+          ],
+          "residual_mse": 12.285714285714286,
+          "party_count": 14
+        },
+        {
+          "election_id": "2015-03-17",
+          "poll_ids": [
+            "INHERITED-2015-03-17-D7",
+            "MIDGAM-N12-20150313",
+            "INHERITED-2015-03-17-D2"
+          ],
+          "residual_mse": 11.056596164264697,
+          "party_count": 11
+        },
+        {
+          "election_id": "2019-04-09",
+          "poll_ids": [
+            "INHERITED-2019-04-09-D14",
+            "INHERITED-2019-04-09-D2"
+          ],
+          "residual_mse": 13.778228133372966,
+          "party_count": 14
+        },
+        {
+          "election_id": "2019-09-17",
+          "poll_ids": [
+            "MIDGAM-N12-20190913",
+            "INHERITED-2019-09-17-D2"
+          ],
+          "residual_mse": 3.25,
+          "party_count": 10
+        },
+        {
+          "election_id": "2020-03-02",
+          "poll_ids": [
+            "INHERITED-2020-03-02-D7",
+            "MIDGAM-N12-20200228"
+          ],
+          "residual_mse": 1.5056343408440807,
+          "party_count": 9
+        },
+        {
+          "election_id": "2021-03-23",
+          "poll_ids": [
+            "INHERITED-2021-03-23-D2",
+            "INHERITED-2021-03-23-D7"
+          ],
+          "residual_mse": 3.8831015546768812,
+          "party_count": 14
+        },
+        {
+          "election_id": "2022-11-01",
+          "poll_ids": [
+            "INHERITED-2022-11-01-D2",
+            "INHERITED-2022-11-01-D7"
+          ],
+          "residual_mse": 2.8984661952214004,
+          "party_count": 13
+        }
+      ],
+      "historical_representation_rate": 0.7820710154043486,
+      "prior_equivalent_elections": 4.0,
+      "excluded_2013": false,
+      "training_exclusions": []
+    },
+    "source_hashes": {
+      "model/seat_space.py": "112e1e2fd30f7989ed55c9e83f3dab4efb94774bd1855475177e58f45ccf1929",
+      "configs/model_config.json": "b45706a1c38211752b55cd6f01442e5b1c3ffe0bfab319bba1578978838721c2",
+      "data/polling_inputs.json": "e54cd03c443842c75f03e8f23e6be152b78891bde8679f7ffaa76fafa9ef565b"
+    },
+    "scope": "Poll-covered 14-list universe. Other ballot lists are not modeled. Three-seat support hurdle inherited from v0.6; heuristic, not statutory Bader-Ofer or genuine vote-threshold inference.",
+    "issue_timing": "Issued after scheduled poll close and after inspecting exit-poll information. Cannot be scored as a pre-election prediction.",
+    "uncertainty": "Intervals and probabilities are conditional model simulations, not validated calibration. Election-night exit-poll errors were not separately fitted; historical D-2 polling errors are reused conservatively, with no claim they are correct exit-poll uncertainty."
+  }
+}
