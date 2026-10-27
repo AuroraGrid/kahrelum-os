@@ -1,0 +1,1457 @@
+{
+  "checked_at": "2026-10-27T21:06:23.772564Z",
+  "sources": {
+    "opposition": {
+      "url": "https://www.timesofisrael.com/at-meeting-opposition-chiefs-pledge-not-to-attack-each-other-set-up-working-groups/",
+      "reported_date": "2026-09-26",
+      "claim": "Opposition leaders reported cooperation and working groups; not a verified post-election coalition agreement."
+    },
+    "raam": {
+      "url": "https://www.timesofisrael.com/eisenkot-raam-wont-be-in-my-government-pms-approval-of-qatari-funds-between-breach-of-trust-and-treason/",
+      "reported_date": "2026-09-27",
+      "claim": "Eisenkot publicly ruled out Raam participation in its current form and stated conditions for Arab/Haredi partners."
+    },
+    "netanyahu": {
+      "url": "https://www.jpost.com/israel-election-2026/article-912401",
+      "reported_date": "2026-10-21",
+      "claim": "Eisenkot ruled out serving in a Netanyahu-led government, including rotation."
+    },
+    "minority": {
+      "url": "https://www.jpost.com/israel-election-2026/article-911855",
+      "reported_date": "2026-10-15",
+      "claim": "Liberman rejected a minority government and joining Netanyahu. A minority scenario retaining his party conflicts with that statement."
+    },
+    "haredi": {
+      "url": "https://www.jpost.com/israel-election-2026/article-911533",
+      "reported_date": "2026-10-13",
+      "claim": "Reported Haredi-source assessments of possible flexibility are not confirmed party agreements."
+    },
+    "process": {
+      "url": "https://apnews.com/article/3b38fd7c304ac2a68281a891cbfe6063",
+      "reported_date": "2026-10-27",
+      "claim": "Outside support or abstention can affect government confidence; no particular agreement is verified here."
+    }
+  },
+  "records": {
+    "current_nowcast": {
+      "prediction_id": "34cf920388ad7815",
+      "issued_at": "2026-10-27T20:53:42.649339Z",
+      "parties": [
+        "Likud",
+        "Yashar",
+        "Together",
+        "Democrats",
+        "Joint List",
+        "Otzma Yehudit",
+        "Shas",
+        "UTJ",
+        "Yisrael Beiteinu",
+        "Religious Zionism-Zehut",
+        "Raam",
+        "Reservists-Economic",
+        "People of Israel",
+        "Noam"
+      ],
+      "scenarios": {
+        "correlated_student": [
+          {
+            "id": "net-core",
+            "name": "Netanyahu: existing five-party grouping",
+            "cabinet": [
+              "Likud",
+              "Otzma Yehudit",
+              "Shas",
+              "UTJ",
+              "Religious Zionism-Zehut"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "MODELED_ALIGNMENT_NOT_NEW_AGREEMENT",
+            "note": "Baseline incumbent-party grouping; eventual participation remains unverified.",
+            "sources": [],
+            "cabinet_expected_seats": 53.18975,
+            "support_expected_seats": 53.18975,
+            "cabinet_interval90": [
+              45.0,
+              61.0
+            ],
+            "p_cabinet_at_least61": 0.05325,
+            "p_support_at_least61": 0.05325,
+            "p_yes_more_than_no_given_roles": 0.05325,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-core",
+            "name": "Eisenkot: four-party opposition grouping",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "REPORTED_OPPOSITION_COOPERATION",
+            "note": "Reported cooperation; not a verified government-formation agreement.",
+            "sources": [
+              "opposition"
+            ],
+            "cabinet_expected_seats": 48.24333333333333,
+            "support_expected_seats": 48.24333333333333,
+            "cabinet_interval90": [
+              41.0,
+              55.0
+            ],
+            "p_cabinet_at_least61": 0.007416666666666667,
+            "p_support_at_least61": 0.007416666666666667,
+            "p_yes_more_than_no_given_roles": 0.007416666666666667,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-raam",
+            "name": "Eisenkot bloc + Raam in cabinet",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu",
+              "Raam"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "PUBLIC_RED_LINE_CONFLICT",
+            "note": "Hypothetical arithmetic. Conflicts with Eisenkot’s reported exclusion of Raam in its current form.",
+            "sources": [
+              "raam"
+            ],
+            "cabinet_expected_seats": 55.081833333333336,
+            "support_expected_seats": 55.081833333333336,
+            "cabinet_interval90": [
+              47.0,
+              63.0
+            ],
+            "p_cabinet_at_least61": 0.10566666666666667,
+            "p_support_at_least61": 0.10566666666666667,
+            "p_yes_more_than_no_given_roles": 0.10566666666666667,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-arab-support",
+            "name": "Eisenkot cabinet; Joint List + Raam support",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu"
+            ],
+            "support": [
+              "Joint List",
+              "Raam"
+            ],
+            "abstain": [],
+            "status": "HYPOTHETICAL_DISPUTED_SUPPORT",
+            "note": "Outside support is not cabinet membership. No agreement verified; Liberman’s minority-government rejection is a conflict.",
+            "sources": [
+              "minority",
+              "process"
+            ],
+            "cabinet_expected_seats": 48.24333333333333,
+            "support_expected_seats": 64.91891666666666,
+            "cabinet_interval90": [
+              41.0,
+              55.0
+            ],
+            "p_cabinet_at_least61": 0.007416666666666667,
+            "p_support_at_least61": 0.8480833333333333,
+            "p_yes_more_than_no_given_roles": 0.8480833333333333,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-arab-abstain",
+            "name": "Eisenkot cabinet; Joint List + Raam abstain",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu"
+            ],
+            "support": [],
+            "abstain": [
+              "Joint List",
+              "Raam"
+            ],
+            "status": "HYPOTHETICAL_DISPUTED_ABSTENTION",
+            "note": "Confidence arithmetic assumes these abstentions and all unselected parties oppose. Not an agreed arrangement.",
+            "sources": [
+              "minority",
+              "process"
+            ],
+            "cabinet_expected_seats": 48.24333333333333,
+            "support_expected_seats": 48.24333333333333,
+            "cabinet_interval90": [
+              41.0,
+              55.0
+            ],
+            "p_cabinet_at_least61": 0.007416666666666667,
+            "p_support_at_least61": 0.007416666666666667,
+            "p_yes_more_than_no_given_roles": 0.17316666666666666,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-haredi",
+            "name": "Eisenkot bloc + Shas + UTJ",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu",
+              "Shas",
+              "UTJ"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "CONDITIONAL_UNVERIFIED",
+            "note": "Only reported possibilities; no verified acceptance. Conscription and Eisenkot’s conditions are material obstacles.",
+            "sources": [
+              "haredi",
+              "raam"
+            ],
+            "cabinet_expected_seats": 63.01558333333333,
+            "support_expected_seats": 63.01558333333333,
+            "cabinet_interval90": [
+              55.0,
+              70.0
+            ],
+            "p_cabinet_at_least61": 0.74,
+            "p_support_at_least61": 0.74,
+            "p_yes_more_than_no_given_roles": 0.74,
+            "government_formation_probability": null
+          },
+          {
+            "id": "net-res",
+            "name": "Netanyahu bloc + Reservists–Economic",
+            "cabinet": [
+              "Likud",
+              "Otzma Yehudit",
+              "Shas",
+              "UTJ",
+              "Religious Zionism-Zehut",
+              "Reservists-Economic"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "ARITHMETIC_ONLY_NOT_VERIFIED",
+            "note": "No joining agreement verified in this run; inclusion is a user-explorable hypothetical.",
+            "sources": [],
+            "cabinet_expected_seats": 53.8175,
+            "support_expected_seats": 53.8175,
+            "cabinet_interval90": [
+              46.0,
+              61.0
+            ],
+            "p_cabinet_at_least61": 0.071,
+            "p_support_at_least61": 0.071,
+            "p_yes_more_than_no_given_roles": 0.071,
+            "government_formation_probability": null
+          },
+          {
+            "id": "unity",
+            "name": "Likud + Yashar + Together",
+            "cabinet": [
+              "Likud",
+              "Yashar",
+              "Together"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "LEADERSHIP_RED_LINE_CONFLICT",
+            "note": "A Netanyahu-led version conflicts with Eisenkot’s stated refusal. Alternative leadership and negotiations are not modeled.",
+            "sources": [
+              "netanyahu"
+            ],
+            "cabinet_expected_seats": 59.08841666666667,
+            "support_expected_seats": 59.08841666666667,
+            "cabinet_interval90": [
+              52.0,
+              66.0
+            ],
+            "p_cabinet_at_least61": 0.36966666666666664,
+            "p_support_at_least61": 0.36966666666666664,
+            "p_yes_more_than_no_given_roles": 0.36966666666666664,
+            "government_formation_probability": null
+          }
+        ],
+        "shrinkage_gaussian": [
+          {
+            "id": "net-core",
+            "name": "Netanyahu: existing five-party grouping",
+            "cabinet": [
+              "Likud",
+              "Otzma Yehudit",
+              "Shas",
+              "UTJ",
+              "Religious Zionism-Zehut"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "MODELED_ALIGNMENT_NOT_NEW_AGREEMENT",
+            "note": "Baseline incumbent-party grouping; eventual participation remains unverified.",
+            "sources": [],
+            "cabinet_expected_seats": 52.914833333333334,
+            "support_expected_seats": 52.914833333333334,
+            "cabinet_interval90": [
+              45.0,
+              61.0
+            ],
+            "p_cabinet_at_least61": 0.06391666666666666,
+            "p_support_at_least61": 0.06391666666666666,
+            "p_yes_more_than_no_given_roles": 0.06391666666666666,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-core",
+            "name": "Eisenkot: four-party opposition grouping",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "REPORTED_OPPOSITION_COOPERATION",
+            "note": "Reported cooperation; not a verified government-formation agreement.",
+            "sources": [
+              "opposition"
+            ],
+            "cabinet_expected_seats": 48.10025,
+            "support_expected_seats": 48.10025,
+            "cabinet_interval90": [
+              40.0,
+              56.0
+            ],
+            "p_cabinet_at_least61": 0.004916666666666666,
+            "p_support_at_least61": 0.004916666666666666,
+            "p_yes_more_than_no_given_roles": 0.004916666666666666,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-raam",
+            "name": "Eisenkot bloc + Raam in cabinet",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu",
+              "Raam"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "PUBLIC_RED_LINE_CONFLICT",
+            "note": "Hypothetical arithmetic. Conflicts with Eisenkot’s reported exclusion of Raam in its current form.",
+            "sources": [
+              "raam"
+            ],
+            "cabinet_expected_seats": 54.97383333333333,
+            "support_expected_seats": 54.97383333333333,
+            "cabinet_interval90": [
+              47.0,
+              63.0
+            ],
+            "p_cabinet_at_least61": 0.134,
+            "p_support_at_least61": 0.134,
+            "p_yes_more_than_no_given_roles": 0.134,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-arab-support",
+            "name": "Eisenkot cabinet; Joint List + Raam support",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu"
+            ],
+            "support": [
+              "Joint List",
+              "Raam"
+            ],
+            "abstain": [],
+            "status": "HYPOTHETICAL_DISPUTED_SUPPORT",
+            "note": "Outside support is not cabinet membership. No agreement verified; Liberman’s minority-government rejection is a conflict.",
+            "sources": [
+              "minority",
+              "process"
+            ],
+            "cabinet_expected_seats": 48.10025,
+            "support_expected_seats": 64.83166666666666,
+            "cabinet_interval90": [
+              40.0,
+              56.0
+            ],
+            "p_cabinet_at_least61": 0.004916666666666666,
+            "p_support_at_least61": 0.802,
+            "p_yes_more_than_no_given_roles": 0.802,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-arab-abstain",
+            "name": "Eisenkot cabinet; Joint List + Raam abstain",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu"
+            ],
+            "support": [],
+            "abstain": [
+              "Joint List",
+              "Raam"
+            ],
+            "status": "HYPOTHETICAL_DISPUTED_ABSTENTION",
+            "note": "Confidence arithmetic assumes these abstentions and all unselected parties oppose. Not an agreed arrangement.",
+            "sources": [
+              "minority",
+              "process"
+            ],
+            "cabinet_expected_seats": 48.10025,
+            "support_expected_seats": 48.10025,
+            "cabinet_interval90": [
+              40.0,
+              56.0
+            ],
+            "p_cabinet_at_least61": 0.004916666666666666,
+            "p_support_at_least61": 0.004916666666666666,
+            "p_yes_more_than_no_given_roles": 0.19775,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-haredi",
+            "name": "Eisenkot bloc + Shas + UTJ",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu",
+              "Shas",
+              "UTJ"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "CONDITIONAL_UNVERIFIED",
+            "note": "Only reported possibilities; no verified acceptance. Conscription and Eisenkot’s conditions are material obstacles.",
+            "sources": [
+              "haredi",
+              "raam"
+            ],
+            "cabinet_expected_seats": 62.799416666666666,
+            "support_expected_seats": 62.799416666666666,
+            "cabinet_interval90": [
+              54.0,
+              71.0
+            ],
+            "p_cabinet_at_least61": 0.6741666666666667,
+            "p_support_at_least61": 0.6741666666666667,
+            "p_yes_more_than_no_given_roles": 0.6741666666666667,
+            "government_formation_probability": null
+          },
+          {
+            "id": "net-res",
+            "name": "Netanyahu bloc + Reservists–Economic",
+            "cabinet": [
+              "Likud",
+              "Otzma Yehudit",
+              "Shas",
+              "UTJ",
+              "Religious Zionism-Zehut",
+              "Reservists-Economic"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "ARITHMETIC_ONLY_NOT_VERIFIED",
+            "note": "No joining agreement verified in this run; inclusion is a user-explorable hypothetical.",
+            "sources": [],
+            "cabinet_expected_seats": 53.65541666666667,
+            "support_expected_seats": 53.65541666666667,
+            "cabinet_interval90": [
+              45.0,
+              62.0
+            ],
+            "p_cabinet_at_least61": 0.08858333333333333,
+            "p_support_at_least61": 0.08858333333333333,
+            "p_yes_more_than_no_given_roles": 0.08858333333333333,
+            "government_formation_probability": null
+          },
+          {
+            "id": "unity",
+            "name": "Likud + Yashar + Together",
+            "cabinet": [
+              "Likud",
+              "Yashar",
+              "Together"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "LEADERSHIP_RED_LINE_CONFLICT",
+            "note": "A Netanyahu-led version conflicts with Eisenkot’s stated refusal. Alternative leadership and negotiations are not modeled.",
+            "sources": [
+              "netanyahu"
+            ],
+            "cabinet_expected_seats": 59.046,
+            "support_expected_seats": 59.046,
+            "cabinet_interval90": [
+              52.0,
+              66.0
+            ],
+            "p_cabinet_at_least61": 0.36733333333333335,
+            "p_support_at_least61": 0.36733333333333335,
+            "p_yes_more_than_no_given_roles": 0.36733333333333335,
+            "government_formation_probability": null
+          }
+        ],
+        "fixed_gaussian": [
+          {
+            "id": "net-core",
+            "name": "Netanyahu: existing five-party grouping",
+            "cabinet": [
+              "Likud",
+              "Otzma Yehudit",
+              "Shas",
+              "UTJ",
+              "Religious Zionism-Zehut"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "MODELED_ALIGNMENT_NOT_NEW_AGREEMENT",
+            "note": "Baseline incumbent-party grouping; eventual participation remains unverified.",
+            "sources": [],
+            "cabinet_expected_seats": 52.720083333333335,
+            "support_expected_seats": 52.720083333333335,
+            "cabinet_interval90": [
+              44.0,
+              62.0
+            ],
+            "p_cabinet_at_least61": 0.07291666666666667,
+            "p_support_at_least61": 0.07291666666666667,
+            "p_yes_more_than_no_given_roles": 0.07291666666666667,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-core",
+            "name": "Eisenkot: four-party opposition grouping",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "REPORTED_OPPOSITION_COOPERATION",
+            "note": "Reported cooperation; not a verified government-formation agreement.",
+            "sources": [
+              "opposition"
+            ],
+            "cabinet_expected_seats": 48.02041666666667,
+            "support_expected_seats": 48.02041666666667,
+            "cabinet_interval90": [
+              40.0,
+              56.0
+            ],
+            "p_cabinet_at_least61": 0.007416666666666667,
+            "p_support_at_least61": 0.007416666666666667,
+            "p_yes_more_than_no_given_roles": 0.007416666666666667,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-raam",
+            "name": "Eisenkot bloc + Raam in cabinet",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu",
+              "Raam"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "PUBLIC_RED_LINE_CONFLICT",
+            "note": "Hypothetical arithmetic. Conflicts with Eisenkot’s reported exclusion of Raam in its current form.",
+            "sources": [
+              "raam"
+            ],
+            "cabinet_expected_seats": 54.85208333333333,
+            "support_expected_seats": 54.85208333333333,
+            "cabinet_interval90": [
+              46.0,
+              64.0
+            ],
+            "p_cabinet_at_least61": 0.148,
+            "p_support_at_least61": 0.148,
+            "p_yes_more_than_no_given_roles": 0.148,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-arab-support",
+            "name": "Eisenkot cabinet; Joint List + Raam support",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu"
+            ],
+            "support": [
+              "Joint List",
+              "Raam"
+            ],
+            "abstain": [],
+            "status": "HYPOTHETICAL_DISPUTED_SUPPORT",
+            "note": "Outside support is not cabinet membership. No agreement verified; Liberman’s minority-government rejection is a conflict.",
+            "sources": [
+              "minority",
+              "process"
+            ],
+            "cabinet_expected_seats": 48.02041666666667,
+            "support_expected_seats": 64.67391666666667,
+            "cabinet_interval90": [
+              40.0,
+              56.0
+            ],
+            "p_cabinet_at_least61": 0.007416666666666667,
+            "p_support_at_least61": 0.7776666666666666,
+            "p_yes_more_than_no_given_roles": 0.7776666666666666,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-arab-abstain",
+            "name": "Eisenkot cabinet; Joint List + Raam abstain",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu"
+            ],
+            "support": [],
+            "abstain": [
+              "Joint List",
+              "Raam"
+            ],
+            "status": "HYPOTHETICAL_DISPUTED_ABSTENTION",
+            "note": "Confidence arithmetic assumes these abstentions and all unselected parties oppose. Not an agreed arrangement.",
+            "sources": [
+              "minority",
+              "process"
+            ],
+            "cabinet_expected_seats": 48.02041666666667,
+            "support_expected_seats": 48.02041666666667,
+            "cabinet_interval90": [
+              40.0,
+              56.0
+            ],
+            "p_cabinet_at_least61": 0.007416666666666667,
+            "p_support_at_least61": 0.007416666666666667,
+            "p_yes_more_than_no_given_roles": 0.21608333333333332,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-haredi",
+            "name": "Eisenkot bloc + Shas + UTJ",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu",
+              "Shas",
+              "UTJ"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "CONDITIONAL_UNVERIFIED",
+            "note": "Only reported possibilities; no verified acceptance. Conscription and Eisenkot’s conditions are material obstacles.",
+            "sources": [
+              "haredi",
+              "raam"
+            ],
+            "cabinet_expected_seats": 62.6335,
+            "support_expected_seats": 62.6335,
+            "cabinet_interval90": [
+              54.0,
+              72.0
+            ],
+            "p_cabinet_at_least61": 0.6525833333333333,
+            "p_support_at_least61": 0.6525833333333333,
+            "p_yes_more_than_no_given_roles": 0.6525833333333333,
+            "government_formation_probability": null
+          },
+          {
+            "id": "net-res",
+            "name": "Netanyahu bloc + Reservists–Economic",
+            "cabinet": [
+              "Likud",
+              "Otzma Yehudit",
+              "Shas",
+              "UTJ",
+              "Religious Zionism-Zehut",
+              "Reservists-Economic"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "ARITHMETIC_ONLY_NOT_VERIFIED",
+            "note": "No joining agreement verified in this run; inclusion is a user-explorable hypothetical.",
+            "sources": [],
+            "cabinet_expected_seats": 53.5975,
+            "support_expected_seats": 53.5975,
+            "cabinet_interval90": [
+              45.0,
+              63.0
+            ],
+            "p_cabinet_at_least61": 0.10266666666666667,
+            "p_support_at_least61": 0.10266666666666667,
+            "p_yes_more_than_no_given_roles": 0.10266666666666667,
+            "government_formation_probability": null
+          },
+          {
+            "id": "unity",
+            "name": "Likud + Yashar + Together",
+            "cabinet": [
+              "Likud",
+              "Yashar",
+              "Together"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "LEADERSHIP_RED_LINE_CONFLICT",
+            "note": "A Netanyahu-led version conflicts with Eisenkot’s stated refusal. Alternative leadership and negotiations are not modeled.",
+            "sources": [
+              "netanyahu"
+            ],
+            "cabinet_expected_seats": 58.92825,
+            "support_expected_seats": 58.92825,
+            "cabinet_interval90": [
+              51.0,
+              67.0
+            ],
+            "p_cabinet_at_least61": 0.36725,
+            "p_support_at_least61": 0.36725,
+            "p_yes_more_than_no_given_roles": 0.36725,
+            "government_formation_probability": null
+          }
+        ]
+      },
+      "draw_file": "coalition-draws/34cf920388ad7815.json"
+    },
+    "frozen_prediction": {
+      "prediction_id": "335795cb5382d85a",
+      "issued_at": "2026-10-27T20:28:26.273653Z",
+      "parties": [
+        "Likud",
+        "Yashar",
+        "Together",
+        "Democrats",
+        "Joint List",
+        "Otzma Yehudit",
+        "Shas",
+        "UTJ",
+        "Yisrael Beiteinu",
+        "Religious Zionism-Zehut",
+        "Raam",
+        "Reservists-Economic",
+        "People of Israel",
+        "Noam"
+      ],
+      "scenarios": {
+        "correlated_student": [
+          {
+            "id": "net-core",
+            "name": "Netanyahu: existing five-party grouping",
+            "cabinet": [
+              "Likud",
+              "Otzma Yehudit",
+              "Shas",
+              "UTJ",
+              "Religious Zionism-Zehut"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "MODELED_ALIGNMENT_NOT_NEW_AGREEMENT",
+            "note": "Baseline incumbent-party grouping; eventual participation remains unverified.",
+            "sources": [],
+            "cabinet_expected_seats": 49.367666666666665,
+            "support_expected_seats": 49.367666666666665,
+            "cabinet_interval90": [
+              41.0,
+              57.0
+            ],
+            "p_cabinet_at_least61": 0.012416666666666666,
+            "p_support_at_least61": 0.012416666666666666,
+            "p_yes_more_than_no_given_roles": 0.012416666666666666,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-core",
+            "name": "Eisenkot: four-party opposition grouping",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "REPORTED_OPPOSITION_COOPERATION",
+            "note": "Reported cooperation; not a verified government-formation agreement.",
+            "sources": [
+              "opposition"
+            ],
+            "cabinet_expected_seats": 53.552166666666665,
+            "support_expected_seats": 53.552166666666665,
+            "cabinet_interval90": [
+              46.0,
+              61.0
+            ],
+            "p_cabinet_at_least61": 0.057583333333333334,
+            "p_support_at_least61": 0.057583333333333334,
+            "p_yes_more_than_no_given_roles": 0.057583333333333334,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-raam",
+            "name": "Eisenkot bloc + Raam in cabinet",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu",
+              "Raam"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "PUBLIC_RED_LINE_CONFLICT",
+            "note": "Hypothetical arithmetic. Conflicts with Eisenkot’s reported exclusion of Raam in its current form.",
+            "sources": [
+              "raam"
+            ],
+            "cabinet_expected_seats": 59.08958333333333,
+            "support_expected_seats": 59.08958333333333,
+            "cabinet_interval90": [
+              51.0,
+              67.0
+            ],
+            "p_cabinet_at_least61": 0.3809166666666667,
+            "p_support_at_least61": 0.3809166666666667,
+            "p_yes_more_than_no_given_roles": 0.3809166666666667,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-arab-support",
+            "name": "Eisenkot cabinet; Joint List + Raam support",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu"
+            ],
+            "support": [
+              "Joint List",
+              "Raam"
+            ],
+            "abstain": [],
+            "status": "HYPOTHETICAL_DISPUTED_SUPPORT",
+            "note": "Outside support is not cabinet membership. No agreement verified; Liberman’s minority-government rejection is a conflict.",
+            "sources": [
+              "minority",
+              "process"
+            ],
+            "cabinet_expected_seats": 53.552166666666665,
+            "support_expected_seats": 68.01925,
+            "cabinet_interval90": [
+              46.0,
+              61.0
+            ],
+            "p_cabinet_at_least61": 0.057583333333333334,
+            "p_support_at_least61": 0.9365833333333333,
+            "p_yes_more_than_no_given_roles": 0.9365833333333333,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-arab-abstain",
+            "name": "Eisenkot cabinet; Joint List + Raam abstain",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu"
+            ],
+            "support": [],
+            "abstain": [
+              "Joint List",
+              "Raam"
+            ],
+            "status": "HYPOTHETICAL_DISPUTED_ABSTENTION",
+            "note": "Confidence arithmetic assumes these abstentions and all unselected parties oppose. Not an agreed arrangement.",
+            "sources": [
+              "minority",
+              "process"
+            ],
+            "cabinet_expected_seats": 53.552166666666665,
+            "support_expected_seats": 53.552166666666665,
+            "cabinet_interval90": [
+              46.0,
+              61.0
+            ],
+            "p_cabinet_at_least61": 0.057583333333333334,
+            "p_support_at_least61": 0.057583333333333334,
+            "p_yes_more_than_no_given_roles": 0.575,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-haredi",
+            "name": "Eisenkot bloc + Shas + UTJ",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu",
+              "Shas",
+              "UTJ"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "CONDITIONAL_UNVERIFIED",
+            "note": "Only reported possibilities; no verified acceptance. Conscription and Eisenkot’s conditions are material obstacles.",
+            "sources": [
+              "haredi",
+              "raam"
+            ],
+            "cabinet_expected_seats": 68.30516666666666,
+            "support_expected_seats": 68.30516666666666,
+            "cabinet_interval90": [
+              60.0,
+              76.0
+            ],
+            "p_cabinet_at_least61": 0.9406666666666667,
+            "p_support_at_least61": 0.9406666666666667,
+            "p_yes_more_than_no_given_roles": 0.9406666666666667,
+            "government_formation_probability": null
+          },
+          {
+            "id": "net-res",
+            "name": "Netanyahu bloc + Reservists–Economic",
+            "cabinet": [
+              "Likud",
+              "Otzma Yehudit",
+              "Shas",
+              "UTJ",
+              "Religious Zionism-Zehut",
+              "Reservists-Economic"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "ARITHMETIC_ONLY_NOT_VERIFIED",
+            "note": "No joining agreement verified in this run; inclusion is a user-explorable hypothetical.",
+            "sources": [],
+            "cabinet_expected_seats": 50.70783333333333,
+            "support_expected_seats": 50.70783333333333,
+            "cabinet_interval90": [
+              43.0,
+              58.04999999999927
+            ],
+            "p_cabinet_at_least61": 0.025083333333333332,
+            "p_support_at_least61": 0.025083333333333332,
+            "p_yes_more_than_no_given_roles": 0.025083333333333332,
+            "government_formation_probability": null
+          },
+          {
+            "id": "unity",
+            "name": "Likud + Yashar + Together",
+            "cabinet": [
+              "Likud",
+              "Yashar",
+              "Together"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "LEADERSHIP_RED_LINE_CONFLICT",
+            "note": "A Netanyahu-led version conflicts with Eisenkot’s stated refusal. Alternative leadership and negotiations are not modeled.",
+            "sources": [
+              "netanyahu"
+            ],
+            "cabinet_expected_seats": 56.1,
+            "support_expected_seats": 56.1,
+            "cabinet_interval90": [
+              49.0,
+              63.0
+            ],
+            "p_cabinet_at_least61": 0.13508333333333333,
+            "p_support_at_least61": 0.13508333333333333,
+            "p_yes_more_than_no_given_roles": 0.13508333333333333,
+            "government_formation_probability": null
+          }
+        ],
+        "shrinkage_gaussian": [
+          {
+            "id": "net-core",
+            "name": "Netanyahu: existing five-party grouping",
+            "cabinet": [
+              "Likud",
+              "Otzma Yehudit",
+              "Shas",
+              "UTJ",
+              "Religious Zionism-Zehut"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "MODELED_ALIGNMENT_NOT_NEW_AGREEMENT",
+            "note": "Baseline incumbent-party grouping; eventual participation remains unverified.",
+            "sources": [],
+            "cabinet_expected_seats": 49.24466666666667,
+            "support_expected_seats": 49.24466666666667,
+            "cabinet_interval90": [
+              41.0,
+              58.0
+            ],
+            "p_cabinet_at_least61": 0.013,
+            "p_support_at_least61": 0.013,
+            "p_yes_more_than_no_given_roles": 0.013,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-core",
+            "name": "Eisenkot: four-party opposition grouping",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "REPORTED_OPPOSITION_COOPERATION",
+            "note": "Reported cooperation; not a verified government-formation agreement.",
+            "sources": [
+              "opposition"
+            ],
+            "cabinet_expected_seats": 53.41266666666667,
+            "support_expected_seats": 53.41266666666667,
+            "cabinet_interval90": [
+              45.0,
+              61.0
+            ],
+            "p_cabinet_at_least61": 0.06825,
+            "p_support_at_least61": 0.06825,
+            "p_yes_more_than_no_given_roles": 0.06825,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-raam",
+            "name": "Eisenkot bloc + Raam in cabinet",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu",
+              "Raam"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "PUBLIC_RED_LINE_CONFLICT",
+            "note": "Hypothetical arithmetic. Conflicts with Eisenkot’s reported exclusion of Raam in its current form.",
+            "sources": [
+              "raam"
+            ],
+            "cabinet_expected_seats": 58.918166666666664,
+            "support_expected_seats": 58.918166666666664,
+            "cabinet_interval90": [
+              50.0,
+              67.0
+            ],
+            "p_cabinet_at_least61": 0.381,
+            "p_support_at_least61": 0.381,
+            "p_yes_more_than_no_given_roles": 0.381,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-arab-support",
+            "name": "Eisenkot cabinet; Joint List + Raam support",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu"
+            ],
+            "support": [
+              "Joint List",
+              "Raam"
+            ],
+            "abstain": [],
+            "status": "HYPOTHETICAL_DISPUTED_SUPPORT",
+            "note": "Outside support is not cabinet membership. No agreement verified; Liberman’s minority-government rejection is a conflict.",
+            "sources": [
+              "minority",
+              "process"
+            ],
+            "cabinet_expected_seats": 53.41266666666667,
+            "support_expected_seats": 67.751,
+            "cabinet_interval90": [
+              45.0,
+              61.0
+            ],
+            "p_cabinet_at_least61": 0.06825,
+            "p_support_at_least61": 0.91775,
+            "p_yes_more_than_no_given_roles": 0.91775,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-arab-abstain",
+            "name": "Eisenkot cabinet; Joint List + Raam abstain",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu"
+            ],
+            "support": [],
+            "abstain": [
+              "Joint List",
+              "Raam"
+            ],
+            "status": "HYPOTHETICAL_DISPUTED_ABSTENTION",
+            "note": "Confidence arithmetic assumes these abstentions and all unselected parties oppose. Not an agreed arrangement.",
+            "sources": [
+              "minority",
+              "process"
+            ],
+            "cabinet_expected_seats": 53.41266666666667,
+            "support_expected_seats": 53.41266666666667,
+            "cabinet_interval90": [
+              45.0,
+              61.0
+            ],
+            "p_cabinet_at_least61": 0.06825,
+            "p_support_at_least61": 0.06825,
+            "p_yes_more_than_no_given_roles": 0.536,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-haredi",
+            "name": "Eisenkot bloc + Shas + UTJ",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu",
+              "Shas",
+              "UTJ"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "CONDITIONAL_UNVERIFIED",
+            "note": "Only reported possibilities; no verified acceptance. Conscription and Eisenkot’s conditions are material obstacles.",
+            "sources": [
+              "haredi",
+              "raam"
+            ],
+            "cabinet_expected_seats": 68.18233333333333,
+            "support_expected_seats": 68.18233333333333,
+            "cabinet_interval90": [
+              60.0,
+              76.0
+            ],
+            "p_cabinet_at_least61": 0.9316666666666666,
+            "p_support_at_least61": 0.9316666666666666,
+            "p_yes_more_than_no_given_roles": 0.9316666666666666,
+            "government_formation_probability": null
+          },
+          {
+            "id": "net-res",
+            "name": "Netanyahu bloc + Reservists–Economic",
+            "cabinet": [
+              "Likud",
+              "Otzma Yehudit",
+              "Shas",
+              "UTJ",
+              "Religious Zionism-Zehut",
+              "Reservists-Economic"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "ARITHMETIC_ONLY_NOT_VERIFIED",
+            "note": "No joining agreement verified in this run; inclusion is a user-explorable hypothetical.",
+            "sources": [],
+            "cabinet_expected_seats": 50.70225,
+            "support_expected_seats": 50.70225,
+            "cabinet_interval90": [
+              42.0,
+              59.0
+            ],
+            "p_cabinet_at_least61": 0.031166666666666665,
+            "p_support_at_least61": 0.031166666666666665,
+            "p_yes_more_than_no_given_roles": 0.031166666666666665,
+            "government_formation_probability": null
+          },
+          {
+            "id": "unity",
+            "name": "Likud + Yashar + Together",
+            "cabinet": [
+              "Likud",
+              "Yashar",
+              "Together"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "LEADERSHIP_RED_LINE_CONFLICT",
+            "note": "A Netanyahu-led version conflicts with Eisenkot’s stated refusal. Alternative leadership and negotiations are not modeled.",
+            "sources": [
+              "netanyahu"
+            ],
+            "cabinet_expected_seats": 56.029916666666665,
+            "support_expected_seats": 56.029916666666665,
+            "cabinet_interval90": [
+              49.0,
+              63.0
+            ],
+            "p_cabinet_at_least61": 0.15691666666666668,
+            "p_support_at_least61": 0.15691666666666668,
+            "p_yes_more_than_no_given_roles": 0.15691666666666668,
+            "government_formation_probability": null
+          }
+        ],
+        "fixed_gaussian": [
+          {
+            "id": "net-core",
+            "name": "Netanyahu: existing five-party grouping",
+            "cabinet": [
+              "Likud",
+              "Otzma Yehudit",
+              "Shas",
+              "UTJ",
+              "Religious Zionism-Zehut"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "MODELED_ALIGNMENT_NOT_NEW_AGREEMENT",
+            "note": "Baseline incumbent-party grouping; eventual participation remains unverified.",
+            "sources": [],
+            "cabinet_expected_seats": 49.132583333333336,
+            "support_expected_seats": 49.132583333333336,
+            "cabinet_interval90": [
+              40.0,
+              58.0
+            ],
+            "p_cabinet_at_least61": 0.01725,
+            "p_support_at_least61": 0.01725,
+            "p_yes_more_than_no_given_roles": 0.01725,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-core",
+            "name": "Eisenkot: four-party opposition grouping",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "REPORTED_OPPOSITION_COOPERATION",
+            "note": "Reported cooperation; not a verified government-formation agreement.",
+            "sources": [
+              "opposition"
+            ],
+            "cabinet_expected_seats": 53.24933333333333,
+            "support_expected_seats": 53.24933333333333,
+            "cabinet_interval90": [
+              45.0,
+              62.0
+            ],
+            "p_cabinet_at_least61": 0.08308333333333333,
+            "p_support_at_least61": 0.08308333333333333,
+            "p_yes_more_than_no_given_roles": 0.08308333333333333,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-raam",
+            "name": "Eisenkot bloc + Raam in cabinet",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu",
+              "Raam"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "PUBLIC_RED_LINE_CONFLICT",
+            "note": "Hypothetical arithmetic. Conflicts with Eisenkot’s reported exclusion of Raam in its current form.",
+            "sources": [
+              "raam"
+            ],
+            "cabinet_expected_seats": 58.7765,
+            "support_expected_seats": 58.7765,
+            "cabinet_interval90": [
+              50.0,
+              68.0
+            ],
+            "p_cabinet_at_least61": 0.37575,
+            "p_support_at_least61": 0.37575,
+            "p_yes_more_than_no_given_roles": 0.37575,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-arab-support",
+            "name": "Eisenkot cabinet; Joint List + Raam support",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu"
+            ],
+            "support": [
+              "Joint List",
+              "Raam"
+            ],
+            "abstain": [],
+            "status": "HYPOTHETICAL_DISPUTED_SUPPORT",
+            "note": "Outside support is not cabinet membership. No agreement verified; Liberman’s minority-government rejection is a conflict.",
+            "sources": [
+              "minority",
+              "process"
+            ],
+            "cabinet_expected_seats": 53.24933333333333,
+            "support_expected_seats": 67.63516666666666,
+            "cabinet_interval90": [
+              45.0,
+              62.0
+            ],
+            "p_cabinet_at_least61": 0.08308333333333333,
+            "p_support_at_least61": 0.90175,
+            "p_yes_more_than_no_given_roles": 0.90175,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-arab-abstain",
+            "name": "Eisenkot cabinet; Joint List + Raam abstain",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu"
+            ],
+            "support": [],
+            "abstain": [
+              "Joint List",
+              "Raam"
+            ],
+            "status": "HYPOTHETICAL_DISPUTED_ABSTENTION",
+            "note": "Confidence arithmetic assumes these abstentions and all unselected parties oppose. Not an agreed arrangement.",
+            "sources": [
+              "minority",
+              "process"
+            ],
+            "cabinet_expected_seats": 53.24933333333333,
+            "support_expected_seats": 53.24933333333333,
+            "cabinet_interval90": [
+              45.0,
+              62.0
+            ],
+            "p_cabinet_at_least61": 0.08308333333333333,
+            "p_support_at_least61": 0.08308333333333333,
+            "p_yes_more_than_no_given_roles": 0.5165,
+            "government_formation_probability": null
+          },
+          {
+            "id": "eis-haredi",
+            "name": "Eisenkot bloc + Shas + UTJ",
+            "cabinet": [
+              "Yashar",
+              "Together",
+              "Democrats",
+              "Yisrael Beiteinu",
+              "Shas",
+              "UTJ"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "CONDITIONAL_UNVERIFIED",
+            "note": "Only reported possibilities; no verified acceptance. Conscription and Eisenkot’s conditions are material obstacles.",
+            "sources": [
+              "haredi",
+              "raam"
+            ],
+            "cabinet_expected_seats": 67.94258333333333,
+            "support_expected_seats": 67.94258333333333,
+            "cabinet_interval90": [
+              59.0,
+              77.0
+            ],
+            "p_cabinet_at_least61": 0.9095,
+            "p_support_at_least61": 0.9095,
+            "p_yes_more_than_no_given_roles": 0.9095,
+            "government_formation_probability": null
+          },
+          {
+            "id": "net-res",
+            "name": "Netanyahu bloc + Reservists–Economic",
+            "cabinet": [
+              "Likud",
+              "Otzma Yehudit",
+              "Shas",
+              "UTJ",
+              "Religious Zionism-Zehut",
+              "Reservists-Economic"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "ARITHMETIC_ONLY_NOT_VERIFIED",
+            "note": "No joining agreement verified in this run; inclusion is a user-explorable hypothetical.",
+            "sources": [],
+            "cabinet_expected_seats": 50.65875,
+            "support_expected_seats": 50.65875,
+            "cabinet_interval90": [
+              41.0,
+              60.0
+            ],
+            "p_cabinet_at_least61": 0.0385,
+            "p_support_at_least61": 0.0385,
+            "p_yes_more_than_no_given_roles": 0.0385,
+            "government_formation_probability": null
+          },
+          {
+            "id": "unity",
+            "name": "Likud + Yashar + Together",
+            "cabinet": [
+              "Likud",
+              "Yashar",
+              "Together"
+            ],
+            "support": [],
+            "abstain": [],
+            "status": "LEADERSHIP_RED_LINE_CONFLICT",
+            "note": "A Netanyahu-led version conflicts with Eisenkot’s stated refusal. Alternative leadership and negotiations are not modeled.",
+            "sources": [
+              "netanyahu"
+            ],
+            "cabinet_expected_seats": 55.91041666666667,
+            "support_expected_seats": 55.91041666666667,
+            "cabinet_interval90": [
+              48.0,
+              64.0
+            ],
+            "p_cabinet_at_least61": 0.17083333333333334,
+            "p_support_at_least61": 0.17083333333333334,
+            "p_yes_more_than_no_given_roles": 0.17083333333333334,
+            "government_formation_probability": null
+          }
+        ]
+      },
+      "draw_file": "coalition-draws/335795cb5382d85a.json"
+    }
+  },
+  "definitions": {
+    "p61": "Share of original seat draws where selected cabinet parties total61 or more.",
+    "confidence": "Share of original draws where cabinet+outside-support seats exceed opposing seats, conditional on fixed roles, all members attending, and all unselected parties opposing.",
+    "formation": "Not estimated. Arithmetic percentages do not estimate willingness, agreements, appointment or government survival."
+  },
+  "political_position_freshness": "Reported statements from dates shown, checked in this session; not a live tracker of every later negotiation. Disputed and unverified combinations remain labeled."
+}

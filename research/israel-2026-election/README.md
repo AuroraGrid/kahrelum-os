@@ -146,3 +146,8 @@ Evidence cutoff: **2026-10-26T21:54:15Z / October 27 02:54:15 PKT**. Direct fina
 ## Live model comparison and bloc split
 
 [Dashboard comparison](https://kahrelum.com/election-live#competition) · [Head-to-head protocol](./HEAD_TO_HEAD_PROTOCOL_2026-10-28.md) · [First captured pair, frozen](./HEAD_TO_HEAD_LOCK_2026-10-28.json). KAHRELUM versus Israel Votes; marginal median seat MAE is primary, with aligned80% interval diagnostics. Netanyahu and Eisenkot bloc displays are separate; Joint List/Ra’am remain separate. Both models are exit-informed with differing issue times and panels. **NOT SCORED / official final result pending.** Original C0 and scoring protocol unchanged.
+
+
+## Conditional coalition explorer
+
+[Live role explorer](https://kahrelum.com/election-live#coalitions) · [Method and limits](./COALITION_EXPLORER_2026-10-28.md) · [Captured scenarios and source notes](./COALITION_SCENARIO_LOCK_2026-10-28.json). Cabinet, support and abstention roles produce separate conditional seat probabilities. Actual formation probability is not estimated; public red lines and unverified participation remain explicit. Official count fields stay Unknown until a verified denominator is available.
