@@ -163,3 +163,8 @@ Documentation in this repository is provided for transparency of the public arch
 ### Prospective Israel 2026 | Pre-opening source-audit release v0.3
 
 - [**Reproducible nine-poll, 13-list pre-election source audit**](./research/israel-2026-election/PREOPEN_SOURCE_AUDIT_V03_2026-10-27.md): verified 53/53 automated engineering tests, source discrepancies, missing-vs-zero controls, correlated pollster notes and official-count safeguards. **This is not KAHRELUM's own party-seat electoral prediction or calibrated probabilities**. Original C0 and scoring rules retained unchanged; the [ongoing case](./research/israel-2026-election/README.md) remains unresolved.
+
+
+### Final Israel historical extension: 2013–2022 (KAHRELUM v0.4)
+
+- [**Seven-election mechanical reconstruction and retrospective source audit, closed at 2013**](./research/israel-2026-election/HISTORICAL_CLOSURE_V04_2013.md). The independently implemented owner code reproduces all 73 represented list-seat allocations across 840 seats, with 65 tests passing. The 2013 election used a **2% threshold**, unlike later 3.25% elections. Twenty-one third-party archival poll seat maps were scored descriptively, **not as KAHRELUM's proprietary historical forecasts**. The pre-2026 archive covers no elections earlier than 2013. [Case index](./research/israel-2026-election/README.md).
