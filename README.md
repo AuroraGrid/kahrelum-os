@@ -1,5 +1,8 @@
 # KAHRELUM OS
 
+**New technical research:** [K-PREDICT v0.6: probabilistic election modeling and honest historical evaluation](./research/israel-2026-election/K_PREDICT_V06_2026-10-27.md). Retrospective evidence; overall PARTIAL; no established model superiority or KAHRELUM live 2026 election-outcome forecast.
+
+
 **Evidence-to-decision control plane**
 
 Founder: [Hasan Raza Kazmi](https://github.com/AuroraGrid)

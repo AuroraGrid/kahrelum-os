@@ -1,5 +1,8 @@
 # KAHRELUM Research & Investigations
 
+**New technical research:** [K-PREDICT v0.6: probabilistic election modeling and honest historical evaluation](./israel-2026-election/K_PREDICT_V06_2026-10-27.md). Retrospective evidence; overall PARTIAL; no established model superiority or KAHRELUM live 2026 election-outcome forecast.
+
+
 **Hasan Raza Kazmi — public-source research, AI accountability, evidence synthesis, and forecasting**
 
 This section is a portfolio of research dossiers produced through KAHRELUM, Hasan Raza Kazmi's evidence-to-decision workflow.

@@ -1,5 +1,8 @@
 # Portfolio case | Israel's 2026 Knesset election: prospective evidence-and-forecast audit
 
+**K-PREDICT v0.6.0 research:** [Methods, historical results and limitations](./K_PREDICT_V06_2026-10-27.md) · [methodology](./K_PREDICT_V06_METHODS_2026-10-27.md) · [benchmarks](./K_PREDICT_V06_BENCHMARKS_2026-10-27.csv) · [cutoffs](./K_PREDICT_V06_CUTOFFS_2026-10-27.csv) · [sources](./K_PREDICT_V06_SOURCES_2026-10-27.json). Overall **PARTIAL**: six retrospective held-out elections, no authenticated historical cutoff captures, and no supported claim of prospective model superiority. The genuine vote-share engine has synthetic verification only; the historical scores concern seat-space models. Final archive/publication evidence is appended separately.
+
+
 
 > **Current checkpoint update:** [C1 delayed pre-opening source capture](./C1_PREOPEN_2026-10-27.md) was recorded at 2026-10-27T04:43:23.041Z, 13m23s after the registered target. Exact-cutoff capture was missed; C0 and the original scoring protocol are unchanged. C2–C7 remain pending. New v0.6 historical modeling was first executed successfully after the C1 cutoff.
 
