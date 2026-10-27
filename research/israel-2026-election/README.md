@@ -108,3 +108,8 @@ Evidence cutoff: **2026-10-26T21:54:15Z / October 27 02:54:15 PKT**. Direct fina
 ## October 27, 2026 | Election-day candidate-security incident (14:46 Israel)
 
 [**Attributed Yair Golan knife/security incident and CEC queue-close rule, recorded 12:46:29 UTC**](./ELECTION_INTEGRITY_OBSERVATION_20261027T1246Z.md) ([immutable creation commit](https://github.com/AuroraGrid/kahrelum-os/blob/927d632798b12c9b709270d1f6321d25928eb506/research/israel-2026-election/ELECTION_INTEGRITY_OBSERVATION_20261027T1246Z.md)). Party account reported by multiple outlets, **not independently police-verified**; alleged intent and systemic effects unestablished. Normal closing still 22:00 IST, but those already queued may continue voting. This is an append-only observation, **not C2 or a counted-vote milestone**. C0 and scoring protocol stay locked; C1 remains archived late, C2–C7 pending.
+
+
+## October 27, 2026 | CEC 14:00 turnout and police correction (15:49 Israel)
+
+[**New prospective 13:49:02 UTC observation: 44.9% turnout, queue instructions, police denial of attempted stabbing and unverified Holon assault report**](./ELECTION_INTEGRITY_OBSERVATION_20261027T1349Z.md) ([immutable creation commit](https://github.com/AuroraGrid/kahrelum-os/blob/6617bbe703cb2b80499f22250bb6283316276c94/research/israel-2026-election/ELECTION_INTEGRITY_OBSERVATION_20261027T1349Z.md)). Turnout measures participation rather than votes counted. Police-attributed correction narrows the earlier Yair Golan report; unverified allegations remain attributed. C0, preregistered protocol, registry and prior snapshots were not rewritten. C1 remains archived late, C2–C7 conditional, official result unscored.
