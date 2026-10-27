@@ -1,0 +1,101 @@
+{
+  "case_id": "KAH-IL26-PROSPECTIVE-001",
+  "artifact_id": "KAH-IL26-HIST-v0.4",
+  "finalized_historical_coverage": {
+    "earliest_election": "2013-01-22",
+    "latest_election": "2022-11-01",
+    "elections_total": 7,
+    "verified_2013_2015_2019_2020_2021_2022": true,
+    "no_2009_or_earlier_included": true,
+    "owner_requested_stop_after_2013": true
+  },
+  "reconstructed_mechanics": {
+    "historical_election_count": 7,
+    "official_seat_bearing_lists_matched": 73,
+    "total_individual_seat_allocations": 840,
+    "seat_errors": 0,
+    "specific_2013": {
+      "valid_votes_cec": 3792742,
+      "threshold_basis_points": 200,
+      "party_lists_2013": 32,
+      "represented_party_lists": 12,
+      "first_round_seats": 113,
+      "remainder_seats": 7,
+      "official_seats_total": 120
+    },
+    "unit_tests_pass": 65,
+    "unit_tests_failed": 0
+  },
+  "retrospective_external_polls": {
+    "snapshots": 21,
+    "strict_original_publication_timestamps_independently_verified": 0,
+    "forward_test_eligible": false,
+    "kahrelum_proprietary_forecast_skill_evidenced": false,
+    "selected_2013_D14_D7_D2_L1": [
+      28,
+      28,
+      28
+    ],
+    "selection_after_historical_results": true,
+    "explicit_blank_to_zero_source_qualification": "2013 D14 archive cells Kadima/Otzma blank; algebraically derived zero from printed other fields summing 120, not source-said zero"
+  },
+  "local_owner_package": {
+    "file_name": "KAHRELUM_Israel_Audit_v0_4_2013_FINAL_verified.zip",
+    "bytes": 62751,
+    "entries": 35,
+    "sha256": "1675add9bb7ba0d600d3c699c109cf7ffd3f809f4fbc73ae61016e72f6c23d11",
+    "manifest_sha256": "ee536dd11e0361c40099ff0dc3c7f98e0dfd115a85f9188ada73582c32319b71",
+    "zip_crc_ok": true,
+    "all_manifest_files_sha256_verified": true,
+    "prior_six_elections_vote_data_byte_unchanged": true,
+    "prior_18_poll_objects_unchanged": true,
+    "source_code_not_in_public_github": true
+  },
+  "public_github": {
+    "repo": "AuroraGrid/kahrelum-os",
+    "historical_report": "research/israel-2026-election/HISTORICAL_CLOSURE_V04_2013.md",
+    "report_creation_commit": "70366b2621e3c970dfa9466458a0b69deb26a5c6",
+    "report_blob": "fa34beffcace2222c3ec8162fccfd5ff46779452",
+    "pre_receipt_branch_head": "df626b3ec19c734781e9f3e5b825740c68734330",
+    "website_repository_homepage_source_updated": true,
+    "website_actual_live_deployment_independently_verified": false,
+    "post_write_readback_verified": true,
+    "linked_research_portfolio_blobs": [
+      {
+        "path": "research/israel-2026-election/README.md",
+        "sha": "6db4b8f591788d674b25cbbc1fbb336c2c04b2d1"
+      },
+      {
+        "path": "research/README.md",
+        "sha": "bf1da7d4d0b226e8145c3795246d026317153059"
+      },
+      {
+        "path": "README.md",
+        "sha": "54c94de176bd1fb9c7be931916af5bb08f03495c"
+      },
+      {
+        "path": "index.html",
+        "sha": "e1c71848f961e19d866f19a0d6a4047da0ac46cd"
+      }
+    ]
+  },
+  "preserved_separate_2026_prospective_election": {
+    "c0_path": "research/israel-2026-election/BASELINE_LOCK_2026-10-26.md",
+    "c0_original_blob": "b9adfe504c15def6e1804a78a8828e54ae5e93a5",
+    "c0_blob_unchanged_post_publication": true,
+    "scoring_path": "research/israel-2026-election/SCORING_PROTOCOL_2026-10-26.md",
+    "scoring_original_blob": "ab0692085b63c90570065f602c005c409c3b72d5",
+    "scoring_blob_unchanged_post_publication": true,
+    "election_case_status": "LIVE_UNRESOLVED_NOT_SCORED",
+    "original_2026_election_forward_proprietary_outcome_prediction_published": false,
+    "immutable_kahrelum_v2_3_4_runtime_executed": false
+  },
+  "evidence_limits": [
+    "2013 original CEC government webpage body not retrievable (403), CEC indexed text used alongside readable Knesset/IDI result; direct official PDF bytes not sealed",
+    "Some historical databases disagree on valid-vote denominator: IFES 3,793,469 versus CEC 3,792,742, no source versions mixed",
+    "2013 IDI webpage introduction says 34 parties, CEC 32 list-results table enumerates 32; discrepancy disclosed",
+    "2013 and six earlier historical vote-to-seat reconstructions are not predictions",
+    "21 archived polling rows selected retrospectively with incomplete original publication-time custody",
+    "Commit history and hashes show source-file order/integrity, not signed trusted clock provenance"
+  ]
+}
