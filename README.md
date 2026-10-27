@@ -158,3 +158,8 @@ Documentation in this repository is provided for transparency of the public arch
 ### Israel 2015–2022: extended mechanical validation (v0.2)
 
 - [**Six-election independent seat-mechanics test and provisional archived-poll audit**](./research/israel-2026-election/HISTORICAL_VALIDATION_V02_2026-10-27.md): all 61 represented historical party lists, 720 reconstructed seats, zero mechanical seat mismatch and 33 automated tests; 18 retrospective third-party poll snapshots scored separately. **No proprietary election-outcome forecast or calibrated winner probability claimed.** [Full case and registered checkpoints](./research/israel-2026-election/README.md).
+
+
+### Prospective Israel 2026 | Pre-opening source-audit release v0.3
+
+- [**Reproducible nine-poll, 13-list pre-election source audit**](./research/israel-2026-election/PREOPEN_SOURCE_AUDIT_V03_2026-10-27.md): verified 53/53 automated engineering tests, source discrepancies, missing-vs-zero controls, correlated pollster notes and official-count safeguards. **This is not KAHRELUM's own party-seat electoral prediction or calibrated probabilities**. Original C0 and scoring rules retained unchanged; the [ongoing case](./research/israel-2026-election/README.md) remains unresolved.
