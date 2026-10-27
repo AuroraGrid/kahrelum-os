@@ -57,7 +57,7 @@
   function names(){return state.drawPackage?.parties||[];}
   function defaults(target,which){
     const list=records()?.scenarios?.[state.method]||[];
-    const base=which==="A"?list.find(x=>x.id==="net-core"):list.find(x=>(x.name||"").toLowerCase().includes("outside"));
+    const base=which==="A"?list.find(x=>x.id==="net-core"):(list.find(x=>x.id==="eis-arab-support")||list.find(x=>(x.name||"").toLowerCase().includes("outside")));
     const preset=base||(which==="A"?list[0]:list[Math.min(4,list.length-1)]);
     if(!preset)return;
     applyPreset(which,preset);
@@ -68,6 +68,8 @@
     for(const party of preset.cabinet||[])if(party in target)target[party]="cabinet";
     for(const party of preset.support||[])if(party in target)target[party]="support";
     for(const party of preset.abstain||[])if(party in target)target[party]="abstain";
+    const menu=$("preset"+which);if(menu)menu.value=preset.id;
+    const note=$("preset"+which+"-note");if(note)note.textContent=(preset.note||"")+" Political status: "+(preset.status||"unverified");
     renderRoles();render();
   }
   function initialRoles(){
