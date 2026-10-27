@@ -61,3 +61,8 @@ Evidence cutoff: **2026-10-26T21:54:15Z / October 27 02:54:15 PKT**. Direct fina
 ## Historical seat-allocation verification v0.2: six elections (October 27, 2026)
 
 [**Six historical elections, 61 represented lists, 720 seats correctly reconstructed; 18 separately labeled provisional archived-poll comparisons; 33 passing tests**](./HISTORICAL_VALIDATION_V02_2026-10-27.md). Owner-package ZIP SHA-256: `78b804a0f0bc67101a9541a0c44f0c10f4490721150d0dc6b2678841c94e413d`. Mechanical correctness **is not forecasting accuracy**; the D−14/D−7/D−2 archived poll maps are **external poll comparisons**, not a fitted KAHRELUM prediction; source publication times are not authenticated. No 2026 first-party election winner/seat probability is produced. C0, protocol, previous reports and C1–C7 remain separately governed and unchanged.
+
+
+## Pre-opening audit v0.3, October 27, 05:41 PKT
+
+[**New independent nine-poll source-diagnostic and process-audit report**](./PREOPEN_SOURCE_AUDIT_V03_2026-10-27.md). The separately frozen owner ZIP contains an independently written audit extension, all six previously reconstructed historical election gold sets, 18 retrospective external poll comparisons and **53 passing automated tests**. It records nine published pre-election survey maps, 37-list registry linkage, full party seat ranges, non-independent houses and missing-vs-zero evidence gates. **Not a proprietary KAHRELUM 2026 seat or winner prediction**, and no event probabilities were issued. C1–C7 continue as preregistered; original C0 and protocol remain unchanged.
