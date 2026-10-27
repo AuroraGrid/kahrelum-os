@@ -56,3 +56,8 @@ Evidence cutoff: **2026-10-26T21:54:15Z / October 27 02:54:15 PKT**. Direct fina
 ## New independently executed engineering supplement (October 27, pre-C1)
 
 [**KAHRELUM model core v0.1: code-hash freeze, 2021/2022 vote-to-seat reconstruction, 15 passing tests and nine-survey source-disagreement analysis**](./MODEL_CORE_V01_2026-10-27.md). This is an **independently implemented analysis subsystem** (owner source package committed by SHA-256), not a run of the immutable KAHRELUM runtime. **No proprietary numerical 2026 election winner, seat outcome or probabilities were issued**; the forecast accuracy and C1–C7 stages remain unresolved. Preserve original C0 and scoring protocol unchanged.
+
+
+## Historical seat-allocation verification v0.2: six elections (October 27, 2026)
+
+[**Six historical elections, 61 represented lists, 720 seats correctly reconstructed; 18 separately labeled provisional archived-poll comparisons; 33 passing tests**](./HISTORICAL_VALIDATION_V02_2026-10-27.md). Owner-package ZIP SHA-256: `78b804a0f0bc67101a9541a0c44f0c10f4490721150d0dc6b2678841c94e413d`. Mechanical correctness **is not forecasting accuracy**; the D−14/D−7/D−2 archived poll maps are **external poll comparisons**, not a fitted KAHRELUM prediction; source publication times are not authenticated. No 2026 first-party election winner/seat probability is produced. C0, protocol, previous reports and C1–C7 remain separately governed and unchanged.
