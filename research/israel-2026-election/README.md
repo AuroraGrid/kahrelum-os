@@ -66,3 +66,8 @@ Evidence cutoff: **2026-10-26T21:54:15Z / October 27 02:54:15 PKT**. Direct fina
 ## Pre-opening audit v0.3, October 27, 05:41 PKT
 
 [**New independent nine-poll source-diagnostic and process-audit report**](./PREOPEN_SOURCE_AUDIT_V03_2026-10-27.md). The separately frozen owner ZIP contains an independently written audit extension, all six previously reconstructed historical election gold sets, 18 retrospective external poll comparisons and **53 passing automated tests**. It records nine published pre-election survey maps, 37-list registry linkage, full party seat ranges, non-independent houses and missing-vs-zero evidence gates. **Not a proprietary KAHRELUM 2026 seat or winner prediction**, and no event probabilities were issued. C1–C7 continue as preregistered; original C0 and protocol remain unchanged.
+
+
+## Historical verification closed at 2013: final v0.4 (October 27, 2026)
+
+**[Seven-election historical suite, year-specific 2013 threshold and archived-poll evidence](./HISTORICAL_CLOSURE_V04_2013.md)**: 2013, 2015, both 2019 contests, 2020, 2021 and 2022. All **73/73 represented ballot-list allocations and 840 seats reconstructed**, no mechanical seat mismatch; **65/65 tests pass**. Three explicitly provisional third-party 2013 poll rows bring the historic source comparison total to **21**. This is **counting mechanics from known past votes, NOT KAHRELUM's future-election forecasting skill**. The earlier v0.1/v0.2/v0.3 reports are preserved as predecessor releases. Scope is CLOSED at January 2013, with no 2009 or earlier election. The 2026 case C0 and scoring protocol remain unchanged, and C1–C7 operate separately; election outcome still LIVE / UNRESOLVED / NOT SCORED.
