@@ -25,6 +25,9 @@ The purpose is not to present speculation as reporting. Each dossier separates:
 4. [Israel 2026 Knesset election: prospective evidence-and-forecast audit](./israel-2026-election/README.md)  
    A pre-opening RECORD LOCK, dated public polling and an external forecast comparator, predeclared count milestones, and a final official-result scorecard. This is an open, AI-assisted operator-run prospective case: C0 was frozen Oct 26; final outcome is pending. [Inspect the immutable baseline](https://github.com/AuroraGrid/kahrelum-os/blob/05d441adad2f82a043fe8fbec1be7e35e2edf12a/research/israel-2026-election/BASELINE_LOCK_2026-10-26.md).
 
+5. [AI Driving Test: two attempts, evidence-based operator assessment](./ai-driving-test-2026-10-27.md)  
+   A conversation-scored simulated AI-operations exercise. The first attempt scored **86/100**, the retake **100/100**, for **186/200 = 93% combined**. Includes the original fault ledger, 13/13 planted-error detections on retake, both five-question autonomy tests, methodological limits and explicit **not independently validated** classification.
+
 ## Research standard
 
 KAHRELUM uses a source hierarchy that prefers primary legal, regulatory, company, and technical records before relying on secondary reporting. Secondary reporting is used when it contains material not available in primary records, and is labeled accordingly.
