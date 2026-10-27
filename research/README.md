@@ -92,3 +92,8 @@ Appended evidence cutoff **2026-10-26T21:54:15Z (October 27 02:54:15 PKT)**: [fu
 ## October 27, 2026 | Prospective Israeli election candidate-security observation
 
 [**Yair Golan security/knife incident as attributed to party, and CEC 22:00 voting-queue clarification**](./israel-2026-election/ELECTION_INTEGRITY_OBSERVATION_20261027T1246Z.md) ([immutable capture](https://github.com/AuroraGrid/kahrelum-os/blob/927d632798b12c9b709270d1f6321d25928eb506/research/israel-2026-election/ELECTION_INTEGRITY_OBSERVATION_20261027T1246Z.md)). At 12:46 UTC: no independent police record establishing attempted stabbing; no election postponement, real-vote count fraction or prediction. C0 immutability and all prior observation links retained.
+
+
+## October 27, 2026 | Israel election: CEC turnout and police correction
+
+[**13:49 UTC contemporaneous turnout/security observation**](./israel-2026-election/ELECTION_INTEGRITY_OBSERVATION_20261027T1349Z.md) ([immutable creation commit](https://github.com/AuroraGrid/kahrelum-os/blob/6617bbe703cb2b80499f22250bb6283316276c94/research/israel-2026-election/ELECTION_INTEGRITY_OBSERVATION_20261027T1349Z.md)). CEC-attributed 44.9% 14:00 turnout is **not actual votes counted**; subsequent Israeli police statement says no attempted stabbing in the earlier Yair Golan knife incident. Separate reported assault against a Democrats activist in Holon remains an unverified party allegation. No legal postponement or count/projection checkpoint. [Full prospective case](./israel-2026-election/README.md) remains LIVE / UNRESOLVED / NOT SCORED; C0 and protocol unmodified.
