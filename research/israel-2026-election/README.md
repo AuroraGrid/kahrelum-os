@@ -93,3 +93,8 @@ Evidence cutoff: **2026-10-26T21:54:15Z / October 27 02:54:15 PKT**. Direct fina
 ## Election-day integrity source observation (27 October 2026)
 
 [Election-day integrity observation (27 October 09:33 IST)](./ELECTION_INTEGRITY_OBSERVATION_20261027T0733Z.md) records newly published reports of possible future election-result challenges and localized voting-station interference, together with the CEC's reported rejection of a separate voter-tracking allegation. This is an append-only, timestamped **unresolved source-risk supplement**, not a certified violation, national postponement, counted-vote stage, or election-outcome prediction. C0, the original scoring protocol, and C1 are unchanged; C2–C7 remain conditional.
+
+
+## October 27, 11:23 Israel | Additional election-integrity evidence
+
+[Police-announced three arrests in suspected electoral bribery investigation, and separately unverified ballot-access / voter-data complaints](./ELECTION_INTEGRITY_OBSERVATION_20261027T0923Z.md). Observed 2026-10-27T09:23:20.445Z; suspected motive remains an unadjudicated allegation, and no political-party leadership culpability or national fraud is established. This is an append-only event supplement, **not** C2–C7 or any proprietary electoral probability update. C0 and scoring protocol remain immutable; C1 archived late; final result pending.
