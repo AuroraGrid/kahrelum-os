@@ -56,3 +56,8 @@ Appended evidence cutoff **2026-10-26T21:54:15Z (October 27 02:54:15 PKT)**: [fu
 ### Israel 2026 election: separate technical model core (October 27)
 
 - [**New proprietary-code model engineering supplement, source digest and historical arithmetic validation**](./israel-2026-election/MODEL_CORE_V01_2026-10-27.md): stdlib-only implementation reconstructs 2021 and 2022 vote-to-seat mechanics, logs nine published October 2026 survey differences, and states missing forecast-skill evidence. **Not a KAHRELUM election-winner prediction.** C0 and preregistered validation remain separately frozen.
+
+
+## Historical-methods validation | Six election rounds (October 27, 2026)
+
+[**KAHRELUM v0.2: 2015, both 2019 rounds, 2020, 2021 and 2022**](./israel-2026-election/HISTORICAL_VALIDATION_V02_2026-10-27.md). Code independently reconstructs 61 lists and 720 historical seats exactly, with 33 automated tests. Also reports 18 retrospective third-party poll seat-map errors, *not* proprietary historical forecast skill. Original election C0 and scoring protocol are untouched. This new appendix is a public-methodology audit, not the immutable v2.3.4 runtime.
