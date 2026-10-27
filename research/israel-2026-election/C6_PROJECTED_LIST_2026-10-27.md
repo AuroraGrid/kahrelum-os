@@ -1,0 +1,18 @@
+# KAHRELUM | C6 FIRST IDENTIFIABLE PROJECTED LARGEST LIST | 27 October 2026
+
+**Case:** KAH-IL26-PROSPECTIVE-001  
+**Stage:** C6; earliest independently traceable, timestamped public RELAY of named outlet's 22:00 exit poll identified by this run; **NOT official projection completion and NOT prime-minister call**.  
+**Capture:** 2026-10-27T20:50:14Z / 2026-10-27 22:50:14 IST (UTC+02) / 2026-10-27 16:50:14 EDT (UTC-04) / 2026-10-28 01:50:14 PKT (UTC+05).  
+**Trigger:** A named broadcaster's post-close EXIT POLL projected the largest Knesset electoral list.  
+**Earliest verified publication timestamp found:** **22:03 IST / 20:03 UTC / 16:03 EDT / 2026-10-28 01:03 PKT**, by The Times of Israel, reporting **Channel 12** exit poll. Source: https://www.timesofisrael.com/liveblog_entry/channel-12-exit-poll-shows-no-clear-victor-netanyahus-likud-is-largest-party-but-his-opponents-have-bigger-bloc/ . This is the **earliest independently traceable relay in this source scan**, not proof that Channel 12's own first broadcast was not at 22:00 or that no earlier third-party report existed.  
+**First-party publisher corroboration:** N12 https://www.mako.co.il/news-israel-elections/2026/liveblog-c84cc98a6ce71a1027.htm , updated 22:43 IST; origin broadcast associated with 22:00 close.  
+**Call:** **Likud projected largest electoral list: 24 Knesset seats**, **Yashar 22** (Channel 12 early exit-poll projection). Largest LIST only, not an overall governing-majority or PM prediction.  
+**Cross-check:** Channel 13 exit poll (ToI 22:06 IST) projects Likud **25**, Yashar **23**; Kan first-party exit poll (ToI 22:09 IST) projects Likud **25**, Yashar **21**. Source URLs: https://www.timesofisrael.com/liveblog_entry/channel-13-exit-poll-eisenkot-led-bloc-in-lead-likud-as-largest-party-but-neither-camp-gets-majority-amid-record-arab-showing/ ; https://www.timesofisrael.com/liveblog_entry/kan-exit-poll-shows-no-clear-victor-as-netanyahus-likud-is-largest-party-but-opponents-have-larger-bloc/ ; https://www.kan.org.il/content/kan-news/politic/1113403/ .
+**Channel 12 bloc estimates at initial report:** change bloc 52, pro-Netanyahu bloc 50, Arab-led lists 18; neither defined main bloc reaches 61. Bloc inclusion/coalition bargaining NOT equivalent to eligibility to govern.  
+**Vote count at 22:03 IST:** actual valid-vote-count numerator **NULL**, credible denominator **NULL**, actual counted percentage **NOT VERIFIED**, party vote shares **NULL**. Explicitly NOT 25/50/75% counted. Turnout is a different measurement.  
+**Seat vector:** only individually evidenced partial list counts recorded here; full matched 120-seat vector NOT verified. No extrapolation from the bloc allocation.  
+**Later update:** N12 live page revised Democrats 9→10, Yisrael Beytenu 9→8 by page update marked 22:43 IST. Preserve original exit poll attribution; record updates distinctly in C2.  
+**Contradiction with prior pre-election polls:** the Oct 23 Channel 12 seat poll had Yashar 23 over Likud 21 (C0); the exit poll reverses plurality ordering. This is a testable PRE-POLL vs POST-POLL contrast, not electoral fraud, not calibration of a proprietary KAHRELUM winner probability.  
+**C6B:** No separately identifiable, dated formal **projection-complete** event obtained; remains untriggered.  
+**C7:** official CEC 120-seat result expected around Nov 4; winner Brier for originally locked KAHRELUM outcome **NOT EVALUABLE** because C0 includes no proprietary outcome probability. Newer independent predictive work must not be backdated into C0.
+**Method and limitations:** contemporaneous source review, append-only record. External exit polls are sampled estimates and subject to updating and threshold effects. No formal winner or prime minister is certified.
