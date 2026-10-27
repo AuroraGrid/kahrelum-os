@@ -1,0 +1,47 @@
+{
+  "case": "KAH-IL26-PROSPECTIVE-001",
+  "release": "v0.6 recovery attempt",
+  "observed_utc": "2026-10-27T07:31:32.995Z",
+  "original_directory": "C:\\Users\\Asif Computer\\Documents\\Codex\\2026-10-27\\new-chat\\release_v06",
+  "original_directory_located": true,
+  "observed_components": [
+    "model",
+    "vendor",
+    "configs",
+    "data",
+    "outputs",
+    "tests",
+    "review_a_sources",
+    "review_b_statistics",
+    "review_c_engineering",
+    "review_d_falsification",
+    "review_e_publication",
+    "run_model.py",
+    "MODEL_CARD.md",
+    "README_REPRODUCE.md"
+  ],
+  "rebuild_performed": false,
+  "reproducibility_rerun": {
+    "command": "python -X utf8 review_c_engineering/reproduce_v06_final.py",
+    "started": true,
+    "completion_verified": false,
+    "error": "No usable execution environment is available"
+  },
+  "deployment": {
+    "attempted": true,
+    "completion_verified": false,
+    "error": "Transport closed",
+    "live_page_readback": "External retrieval unavailable"
+  },
+  "frozen_zip_created": false,
+  "library_delivery_completed": false,
+  "existing_library_recovery_kit": {
+    "library_file_id": "libfile_4a4e6bbae6348191a0e1a6685a2ffdc0",
+    "filename": "KAHRELUM_KPREDICT_V06_RECOVERY_KIT_2026-10-27.zip",
+    "size_bytes": 89054,
+    "is_complete_executable_v06_package": false
+  },
+  "scientific_status": "Unchanged: authentic historical cutoffs not established; historical genuine vote-share validation blocked; prospective superiority unestablished.",
+  "protected_files_modified": false,
+  "status": "BLOCKED_BY_EXECUTION_ENVIRONMENT_DISCONNECTION"
+}
