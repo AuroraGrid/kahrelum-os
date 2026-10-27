@@ -1,0 +1,450 @@
+{
+  "release": "K-PREDICT-v0.6.0",
+  "case": "KAH-IL26-PROSPECTIVE-001",
+  "observed_utc": "2026-10-27T05:09:46.409Z",
+  "overall": "PARTIAL",
+  "execution_status": "RESEARCH_EXECUTED_PUBLICATION_VERIFIED_FINAL_PACKAGING_BLOCKED",
+  "archive": {
+    "filename": null,
+    "sha256": null,
+    "crc_verified": false,
+    "reason": "No completed v0.6 ZIP was created before the active execution environment became unavailable. Do not substitute an output hash or predecessor ZIP hash."
+  },
+  "historical_output_sha256": "5706bed1e996ac4db3fbad9b66e882522cecf9bef4fb1b696658dee8619010f6",
+  "predecessor_zip_sha256": "3ecc7a4a19d5d5f26856615a14922292f553ecc279516b8f14f6711861590d0e",
+  "initial_historical_output_sha256": "0e28e95f03494e7e69a35dc7412ec154234e5f1c56177f06e3f3dd110d6d482f",
+  "protected": {
+    "c0_sha256": "cbb9c2fdaa6a3d2ad318345d2d7d4e638f0f7185ddd5d3f9df9dcaebdc59d30d",
+    "protocol_sha256": "6ac673b0f6e5b32f9ae7d049d798314e04626dbdc4b64c886eadd2a9d95ca513"
+  },
+  "github_research_readback": {
+    "commit": "5a64beac2e6f97d0c03baf2baf7ad546530bcaa6",
+    "observed_utc": "2026-10-27T05:02:09.976Z",
+    "files": [
+      {
+        "path": "research/israel-2026-election/K_PREDICT_V06_2026-10-27.md",
+        "blob_sha": "cfeb10b3ccd56a53f13b15aec68da0528142c0d4",
+        "exact_content_match": true
+      },
+      {
+        "path": "research/israel-2026-election/K_PREDICT_V06_METHODS_2026-10-27.md",
+        "blob_sha": "889fcde6e13af5bfa8e8208100833a94ff066593",
+        "exact_content_match": true
+      },
+      {
+        "path": "research/israel-2026-election/K_PREDICT_V06_BENCHMARKS_2026-10-27.csv",
+        "blob_sha": "2125d2b8bf6517fc419c4670376e6b5c5be55eb8",
+        "exact_content_match": true
+      },
+      {
+        "path": "research/israel-2026-election/K_PREDICT_V06_CUTOFFS_2026-10-27.csv",
+        "blob_sha": "5cd6164e1749255fa81d78d3133e72368ea5d910",
+        "exact_content_match": true
+      },
+      {
+        "path": "research/israel-2026-election/K_PREDICT_V06_SOURCES_2026-10-27.json",
+        "blob_sha": "b643d3816f9177f8c10b8c35c3a58dcdf7a8af2d",
+        "exact_content_match": true
+      },
+      {
+        "path": "research/israel-2026-election/README.md",
+        "blob_sha": "9e4ff81a6ebe4522f5e4dd71da22757473194805",
+        "exact_content_match": true
+      },
+      {
+        "path": "README.md",
+        "blob_sha": "c5421bc8b21b4c9c87a0192a4c8761cb966ae403",
+        "exact_content_match": true
+      },
+      {
+        "path": "research/README.md",
+        "blob_sha": "0d6eb5c416e0ff7fdd5dcca49b0ef62ed0d06d48",
+        "exact_content_match": true
+      },
+      {
+        "path": "index.html",
+        "blob_sha": "ebb8f1e0737b27c22ea77894fb9c1e0af9ee567f",
+        "exact_content_match": true
+      },
+      {
+        "path": "research/israel-2026-election/BASELINE_LOCK_2026-10-26.md",
+        "blob_sha": "b9adfe504c15def6e1804a78a8828e54ae5e93a5",
+        "exact_content_match": true
+      },
+      {
+        "path": "research/israel-2026-election/SCORING_PROTOCOL_2026-10-26.md",
+        "blob_sha": "ab0692085b63c90570065f602c005c409c3b72d5",
+        "exact_content_match": true
+      }
+    ],
+    "commit_inspection": {
+      "sha": "5a64beac2e6f97d0c03baf2baf7ad546530bcaa6",
+      "url": "https://github.com/AuroraGrid/kahrelum-os/commit/5a64beac2e6f97d0c03baf2baf7ad546530bcaa6",
+      "parents": [
+        "f747d4f84c20cda78b45684e7181b1019f550f27"
+      ],
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      },
+      "changed_files": [
+        {
+          "filename": "README.md",
+          "status": "modified",
+          "sha": "c5421bc8b21b4c9c87a0192a4c8761cb966ae403"
+        },
+        {
+          "filename": "index.html",
+          "status": "modified",
+          "sha": "ebb8f1e0737b27c22ea77894fb9c1e0af9ee567f"
+        },
+        {
+          "filename": "research/README.md",
+          "status": "modified",
+          "sha": "0d6eb5c416e0ff7fdd5dcca49b0ef62ed0d06d48"
+        },
+        {
+          "filename": "research/israel-2026-election/K_PREDICT_V06_2026-10-27.md",
+          "status": "added",
+          "sha": "cfeb10b3ccd56a53f13b15aec68da0528142c0d4"
+        },
+        {
+          "filename": "research/israel-2026-election/K_PREDICT_V06_BENCHMARKS_2026-10-27.csv",
+          "status": "added",
+          "sha": "2125d2b8bf6517fc419c4670376e6b5c5be55eb8"
+        },
+        {
+          "filename": "research/israel-2026-election/K_PREDICT_V06_CUTOFFS_2026-10-27.csv",
+          "status": "added",
+          "sha": "5cd6164e1749255fa81d78d3133e72368ea5d910"
+        },
+        {
+          "filename": "research/israel-2026-election/K_PREDICT_V06_METHODS_2026-10-27.md",
+          "status": "added",
+          "sha": "889fcde6e13af5bfa8e8208100833a94ff066593"
+        },
+        {
+          "filename": "research/israel-2026-election/K_PREDICT_V06_SOURCES_2026-10-27.json",
+          "status": "added",
+          "sha": "b643d3816f9177f8c10b8c35c3a58dcdf7a8af2d"
+        },
+        {
+          "filename": "research/israel-2026-election/README.md",
+          "status": "modified",
+          "sha": "9e4ff81a6ebe4522f5e4dd71da22757473194805"
+        }
+      ]
+    }
+  },
+  "preexisting_record_checks": [
+    {
+      "path": ".github/workflows/public-surface-integrity.yml",
+      "before": "cd671f07d9a056a67865cea3321a1b1077fa5e7e",
+      "after": "cd671f07d9a056a67865cea3321a1b1077fa5e7e",
+      "unchanged": true
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "before": "fca2a998d077b39819f9a61a432ba3eeb29ecd92",
+      "after": "fca2a998d077b39819f9a61a432ba3eeb29ecd92",
+      "unchanged": true
+    },
+    {
+      "path": "BENCHMARKS.md",
+      "before": "cb5e1a0922debf6218ae6745b65a24ebb7b709c2",
+      "after": "cb5e1a0922debf6218ae6745b65a24ebb7b709c2",
+      "unchanged": true
+    },
+    {
+      "path": "CHANGELOG.md",
+      "before": "ec2fd6e14497c05cf42e3f8fd44c86b07934a732",
+      "after": "ec2fd6e14497c05cf42e3f8fd44c86b07934a732",
+      "unchanged": true
+    },
+    {
+      "path": "CURRENT_OPERATING_DOCTRINE.md",
+      "before": "d172bb02e2e40085233d83d44c81bd4ebeb7f17f",
+      "after": "d172bb02e2e40085233d83d44c81bd4ebeb7f17f",
+      "unchanged": true
+    },
+    {
+      "path": "INTELLIGENCE-PIPELINE.md",
+      "before": "8c8e024275d913bca47f52d0e3032ea2148f3b3d",
+      "after": "8c8e024275d913bca47f52d0e3032ea2148f3b3d",
+      "unchanged": true
+    },
+    {
+      "path": "PILOT.md",
+      "before": "72dfcd4cc224e9911246964fe20d28dcdc53a981",
+      "after": "72dfcd4cc224e9911246964fe20d28dcdc53a981",
+      "unchanged": true
+    },
+    {
+      "path": "RELEASE_v2.3.3_FINAL.md",
+      "before": "d66f37d6ca1ffbc064a5dd6985416da8dff722f4",
+      "after": "d66f37d6ca1ffbc064a5dd6985416da8dff722f4",
+      "unchanged": true
+    },
+    {
+      "path": "RELEASE_v2.3.4_FINAL.md",
+      "before": "dc69719d11083cebb1281a353c84cb70f8f47eb8",
+      "after": "dc69719d11083cebb1281a353c84cb70f8f47eb8",
+      "unchanged": true
+    },
+    {
+      "path": "evidence/EXTERNAL_AUDIT_SUMMARY.md",
+      "before": "376ce5dfcff2bd8d3877466f88f189823632781a",
+      "after": "376ce5dfcff2bd8d3877466f88f189823632781a",
+      "unchanged": true
+    },
+    {
+      "path": "evidence/PROSPECTIVE_VALIDATION_PROTOCOL.md",
+      "before": "d513b35db2106f7b5009daf39c3cc074627d30ef",
+      "after": "d513b35db2106f7b5009daf39c3cc074627d30ef",
+      "unchanged": true
+    },
+    {
+      "path": "og.jpg",
+      "before": "76ffb02d4f5efede1db5a4782911ebc529cc873a",
+      "after": "76ffb02d4f5efede1db5a4782911ebc529cc873a",
+      "unchanged": true
+    },
+    {
+      "path": "og.svg",
+      "before": "9b66e5d349c024e84e4f190ce2d181d0093355f5",
+      "after": "9b66e5d349c024e84e4f190ce2d181d0093355f5",
+      "unchanged": true
+    },
+    {
+      "path": "research/ai-driving-test-2026-10-27.md",
+      "before": "8d18d2f86a0178f0154ea8121799d145d03140c4",
+      "after": "8d18d2f86a0178f0154ea8121799d145d03140c4",
+      "unchanged": true
+    },
+    {
+      "path": "research/ai-incident-disclosure.md",
+      "before": "d57ecb2f36a90bb0e16b86ee292614c0b83b7510",
+      "after": "d57ecb2f36a90bb0e16b86ee292614c0b83b7510",
+      "unchanged": true
+    },
+    {
+      "path": "research/anthropic-compute-governance.md",
+      "before": "546bafc0dc0e7b3f1df365d8089a81b4ee99511b",
+      "after": "546bafc0dc0e7b3f1df365d8089a81b4ee99511b",
+      "unchanged": true
+    },
+    {
+      "path": "research/israel-2026-election/BASELINE_LOCK_2026-10-26.md",
+      "before": "b9adfe504c15def6e1804a78a8828e54ae5e93a5",
+      "after": "b9adfe504c15def6e1804a78a8828e54ae5e93a5",
+      "unchanged": true
+    },
+    {
+      "path": "research/israel-2026-election/HISTORICAL_CLOSURE_V04_2013.md",
+      "before": "fa34beffcace2222c3ec8162fccfd5ff46779452",
+      "after": "fa34beffcace2222c3ec8162fccfd5ff46779452",
+      "unchanged": true
+    },
+    {
+      "path": "research/israel-2026-election/HISTORICAL_CLOSURE_V04_VERIFICATION_2026-10-27.json",
+      "before": "3c1738fadb1d2101037fb8df427e4839e2a1137d",
+      "after": "3c1738fadb1d2101037fb8df427e4839e2a1137d",
+      "unchanged": true
+    },
+    {
+      "path": "research/israel-2026-election/HISTORICAL_VALIDATION_V02_2026-10-27.md",
+      "before": "b55e15e4bf47104f378b342b4133863fe95e3ea6",
+      "after": "b55e15e4bf47104f378b342b4133863fe95e3ea6",
+      "unchanged": true
+    },
+    {
+      "path": "research/israel-2026-election/HISTORICAL_VALIDATION_V02_VERIFICATION_2026-10-27.json",
+      "before": "d0f3210dd6da51bfa0470ee5c18bb34a5088fdeb",
+      "after": "d0f3210dd6da51bfa0470ee5c18bb34a5088fdeb",
+      "unchanged": true
+    },
+    {
+      "path": "research/israel-2026-election/INTEGRITY_2026-10-26T215415Z.json",
+      "before": "3d7b13245082ee5e19ad30f293a15fbb5fb7ad7f",
+      "after": "3d7b13245082ee5e19ad30f293a15fbb5fb7ad7f",
+      "unchanged": true
+    },
+    {
+      "path": "research/israel-2026-election/MODEL_CORE_V01_2026-10-27.md",
+      "before": "435c3ce09e9640635c3daa971396626fe601f083",
+      "after": "435c3ce09e9640635c3daa971396626fe601f083",
+      "unchanged": true
+    },
+    {
+      "path": "research/israel-2026-election/MODEL_CORE_V01_VERIFICATION_2026-10-27.json",
+      "before": "1c52cd3510580328c48fdc564c291968255fa630",
+      "after": "1c52cd3510580328c48fdc564c291968255fa630",
+      "unchanged": true
+    },
+    {
+      "path": "research/israel-2026-election/PARTIES_AND_LEADERS_2026-10-27T20261026T234042Z.md",
+      "before": "127a23761945c13239757d642c994736f96eee32",
+      "after": "127a23761945c13239757d642c994736f96eee32",
+      "unchanged": true
+    },
+    {
+      "path": "research/israel-2026-election/PREOPEN_SOURCE_AUDIT_V03_2026-10-27.md",
+      "before": "7439e5087d2438ce534b0f71ee67d14e495d36e0",
+      "after": "7439e5087d2438ce534b0f71ee67d14e495d36e0",
+      "unchanged": true
+    },
+    {
+      "path": "research/israel-2026-election/PREOPEN_SOURCE_AUDIT_V03_RECEIPT_2026-10-27.json",
+      "before": "3889b4d2c74c7d63dde56c5169c525a9932b172a",
+      "after": "3889b4d2c74c7d63dde56c5169c525a9932b172a",
+      "unchanged": true
+    },
+    {
+      "path": "research/israel-2026-election/PUBLICATION_VERIFICATION_2026-10-26.json",
+      "before": "664ffbd860c1029d076f9cf6f8ea7617367cafa0",
+      "after": "664ffbd860c1029d076f9cf6f8ea7617367cafa0",
+      "unchanged": true
+    },
+    {
+      "path": "research/israel-2026-election/RUN_2026-10-26T215415Z.md",
+      "before": "79b40fae3528e226f56d2158108e72e6aa402abe",
+      "after": "79b40fae3528e226f56d2158108e72e6aa402abe",
+      "unchanged": true
+    },
+    {
+      "path": "research/israel-2026-election/SCORING_PROTOCOL_2026-10-26.md",
+      "before": "ab0692085b63c90570065f602c005c409c3b72d5",
+      "after": "ab0692085b63c90570065f602c005c409c3b72d5",
+      "unchanged": true
+    },
+    {
+      "path": "research/israel-2026-election/SOURCES_2026-10-26T215415Z.json",
+      "before": "0fe75583fc1511585c7e8807d5a5ca5ebf91e09d",
+      "after": "0fe75583fc1511585c7e8807d5a5ca5ebf91e09d",
+      "unchanged": true
+    },
+    {
+      "path": "research/israel-2026-election/SOURCE_RISK_MODEL_V05_2026-10-27.md",
+      "before": "1fead746473ec1af101315fb7dd3ad0e015cfbc6",
+      "after": "1fead746473ec1af101315fb7dd3ad0e015cfbc6",
+      "unchanged": true
+    },
+    {
+      "path": "research/israel-2026-election/SOURCE_RISK_MODEL_V05_VERIFICATION_2026-10-27.json",
+      "before": "54101b17add961e11dbce30fe2b0ef1f46d95f99",
+      "after": "54101b17add961e11dbce30fe2b0ef1f46d95f99",
+      "unchanged": true
+    },
+    {
+      "path": "research/model-weight-security.md",
+      "before": "78002a243739155ff85af41f46b19e56c84f614a",
+      "after": "78002a243739155ff85af41f46b19e56c84f614a",
+      "unchanged": true
+    },
+    {
+      "path": "vercel.json",
+      "before": "bd6fd8faa87ee01e1f2443b040259db7001be22b",
+      "after": "bd6fd8faa87ee01e1f2443b040259db7001be22b",
+      "unchanged": true
+    }
+  ],
+  "c1_readback": {
+    "commit": "f747d4f84c20cda78b45684e7181b1019f550f27",
+    "observed_utc": "2026-10-27T04:52:19.742Z",
+    "files": [
+      {
+        "path": "research/israel-2026-election/C1_PREOPEN_2026-10-27.md",
+        "blob_sha": "3d20647a50f51aff85c99b5f2080510b3d4bd4ff",
+        "exact_content_match": true
+      },
+      {
+        "path": "research/israel-2026-election/README.md",
+        "blob_sha": "afa3f1caf531f501343f35ae0b3793455b3b95c8",
+        "exact_content_match": true
+      },
+      {
+        "path": "research/israel-2026-election/BASELINE_LOCK_2026-10-26.md",
+        "blob_sha": "b9adfe504c15def6e1804a78a8828e54ae5e93a5",
+        "exact_content_match": true
+      },
+      {
+        "path": "research/israel-2026-election/SCORING_PROTOCOL_2026-10-26.md",
+        "blob_sha": "ab0692085b63c90570065f602c005c409c3b72d5",
+        "exact_content_match": true
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "requirement": "Historical dataset completeness",
+      "status": "PARTIAL",
+      "reason": "41 records across seven specified elections; incomplete raw vote vectors, ballot coverage and metadata."
+    },
+    {
+      "requirement": "Statistical uncertainty model",
+      "status": "PARTIAL",
+      "reason": "Executable vote uncertainty and Bader–Ofer capability; historical evaluation uses a separate seat-space model."
+    },
+    {
+      "requirement": "Authentic pre-election information cutoffs",
+      "status": "BLOCKED",
+      "reason": "Zero strictly authenticated historical cutoff-eligible polling records."
+    },
+    {
+      "requirement": "Chronological out-of-sample testing",
+      "status": "PARTIAL",
+      "reason": "Earlier-election fitting across six held-out elections and 18 horizons; retrospective source custody and known outcomes."
+    },
+    {
+      "requirement": "Probability calibration",
+      "status": "PARTIAL",
+      "reason": "Reliability diagnostics and sequential recalibration executed; calibration not established prospectively."
+    },
+    {
+      "requirement": "Comparisons against statistical baselines",
+      "status": "PASS",
+      "reason": "Six candidates, latest-poll, historical-rate and 50% same-target comparisons retained."
+    },
+    {
+      "requirement": "Numerical reproducibility",
+      "status": "PASS",
+      "reason": "Independent exact reproduction of 11 outputs and 120 arrays; 29,841 plus 5,118 numerical checks."
+    },
+    {
+      "requirement": "Engineering test suite",
+      "status": "PASS",
+      "reason": "51 new tests and 118 predecessor tests passed in the documented environment."
+    },
+    {
+      "requirement": "Independent QA",
+      "status": "PASS",
+      "reason": "Five actual separate AI-agent reviews; 66 final adversarial checks. Not external human certification."
+    },
+    {
+      "requirement": "Frozen owner package",
+      "status": "BLOCKED",
+      "reason": "Execution environment disconnected before ZIP freeze, CRC/manifest closure and durable file delivery."
+    },
+    {
+      "requirement": "GitHub portfolio publication",
+      "status": "PASS",
+      "reason": "Research, methods, benchmarks, cutoffs, sources and all requested repository indexes/homepage source published and read back."
+    },
+    {
+      "requirement": "Live website deployment",
+      "status": "BLOCKED",
+      "reason": "No verified release/readback; GITHUB PUBLISHED / LIVE DEPLOYMENT UNVERIFIED."
+    }
+  ],
+  "live_deployment": {
+    "status": "GITHUB PUBLISHED / LIVE DEPLOYMENT UNVERIFIED",
+    "verified": false
+  },
+  "file_delivery_error": "no primary turn environment is available",
+  "trusted_time_attestation": false,
+  "prospective_superiority_established": false,
+  "no_live_2026_forecast": true
+}
