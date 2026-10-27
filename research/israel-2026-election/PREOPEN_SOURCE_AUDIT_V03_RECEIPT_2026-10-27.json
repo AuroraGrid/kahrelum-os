@@ -1,0 +1,61 @@
+{
+  "case_id": "KAH-IL26-PROSPECTIVE-001",
+  "release": "KAH-IL26-AUDIT-v0.3",
+  "observation_utc": "2026-10-27T00:41:37Z",
+  "clock_attestation": "session clock, not independent secure-time attestation",
+  "input_poll_cutoff": "2026-10-23",
+  "owner_archive": "KAHRELUM_Israel_Audit_v0_3_FROZEN.zip",
+  "archive_bytes": 46525,
+  "archive_sha256": "f1daa6baf0a3e5bbcc2c4eed0ed992b0a48c1231806df9303bb6f090cfe0436a",
+  "archive_files": 28,
+  "manifest_hash_entries": 27,
+  "archive_integrity": "ZIP CRC and all 27 SHA256 manifest entries verified at creation",
+  "current_poll_dataset_sha256": "2f3798c4d073068810f6b49e3caf64c988186409fc60ec3623dfb5ea78eaa9cd",
+  "code_module_sha256": "15746d99a77eeff7aa2ae024a7bf1abb7b3c0b0c4af2f33aa973d8ce02a0bafe",
+  "postresult_scorer_sha256": "c1cb4adbe61dc738677c374f338b940c575a46bff7c9df91d00d10b54bc57fd6",
+  "audit_json_sha256": "a5fd96e8f19934bc2c82237bcadaedd2df0939fa5d84d4d65fb1fad219419e26",
+  "audit_md_sha256": "d85d07188e99be135da921dc3c934ebed23b02fbf23fe6c393d339cf36d5277e",
+  "tests": {
+    "passed": 53,
+    "failed": 0,
+    "historical_already_known_vote_seat_reconstructions": 6,
+    "historic_list_seat_matches": 61,
+    "provisional_external_historical_poll_tables": 18,
+    "2026_observed_external_poll_tables": 9,
+    "2026_survey_party_list_ids": 13
+  },
+  "publication": {
+    "repository": "AuroraGrid/kahrelum-os",
+    "report_path": "research/israel-2026-election/PREOPEN_SOURCE_AUDIT_V03_2026-10-27.md",
+    "report_create_commit": "a30471d6c926925ffbd261437e6bedb5f67a1e7f",
+    "report_blob_sha": "7439e5087d2438ce534b0f71ee67d14e495d36e0",
+    "index_commits": {
+      "case_index": "8246430f735a1ad92d9e3fe1c903f80f5bd28784",
+      "research_portfolio": "5cb7a023eddb639b0f15b10a4a648496b7f0979e",
+      "repo_readme": "421777b8c5fc763f8b94da713f18cf619d5840c1",
+      "homepage_source": "8cec026f367054d3bcc18d05fa8435b7d9ccfc98"
+    },
+    "last_branch_head_pre_receipt": "8cec026f367054d3bcc18d05fa8435b7d9ccfc98",
+    "report_content_read_back": true,
+    "four_public_index_links_read_back": true,
+    "live_kahrelum_domain_deployment_verified": false,
+    "live_domain_retrieval": "https://kahrelum.com and direct path inaccessible using live retrieval tool; no claim of visible deployed update",
+    "github_signatures": "not trusted signed attestation"
+  },
+  "protected_records": {
+    "original_C0_blob_sha": "b9adfe504c15def6e1804a78a8828e54ae5e93a5",
+    "original_protocol_blob_sha": "ab0692085b63c90570065f602c005c409c3b72d5",
+    "protected_files_modified": false,
+    "historical_previous_records_modified": false
+  },
+  "misrepresentation_gates": {
+    "original_KAHRELUM_2026_outcome_seat_vector_created": false,
+    "original_KAHRELUM_party_pass_probabilities_created": false,
+    "first_party_2026_prediction_skill_proven": false,
+    "external_forecasts_relabeled_as_KAHRELUM": false,
+    "C1_observed": false,
+    "official_2026_results_scored": false,
+    "frozen_OS_v2_3_4_runtime_executed": false
+  },
+  "final_case_state": "LIVE_UNRESOLVED_NOT_SCORED"
+}
