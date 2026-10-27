@@ -82,3 +82,8 @@ Appended evidence cutoff **2026-10-26T21:54:15Z (October 27 02:54:15 PKT)**: [fu
 ## October 27, 2026 | KAHRELUM experimental polling-source risk model v0.5
 
 [**Independent probabilistic source-error diagnostic, 118 tested engineering cases, adverse historical Brier score**](./israel-2026-election/SOURCE_RISK_MODEL_V05_2026-10-27.md). This KAHRELUM-authored owner-software module estimates **published-poll error risk**, not political-party outcome probabilities. In 18 hindsight-selected pseudo-forward rows, its mean Brier **0.305392** is worse than uninformative **0.25**; the six distinct tested election rounds and publication-time uncertainty are expressly disclosed. Archived C0 and seven-election mechanics records remain untouched; 2026 election unresolved.
+
+
+## October 27, 2026 | New prospective election-integrity source observation
+
+[**Attributed election-day rhetoric, party complaint and noon turnout audit**](./israel-2026-election/ELECTION_INTEGRITY_OBSERVATION_20261027T1142Z.md) at 11:43:34 UTC. Unsubstantiated claims and a reported complaint are not a CEC finding; 31.5% turnout is not a counted-vote milestone. C0 and preregistered scoring stay locked; no outcome projection claimed. See the [case portfolio](./israel-2026-election/README.md) for the earlier observations.
