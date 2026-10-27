@@ -64,3 +64,8 @@ Appended evidence cutoff **2026-10-26T21:54:15Z (October 27 02:54:15 PKT)**: [fu
 ## Historical-methods validation | Six election rounds (October 27, 2026)
 
 [**KAHRELUM v0.2: 2015, both 2019 rounds, 2020, 2021 and 2022**](./israel-2026-election/HISTORICAL_VALIDATION_V02_2026-10-27.md). Code independently reconstructs 61 lists and 720 historical seats exactly, with 33 automated tests. Also reports 18 retrospective third-party poll seat-map errors, *not* proprietary historical forecast skill. Original election C0 and scoring protocol are untouched. This new appendix is a public-methodology audit, not the immutable v2.3.4 runtime.
+
+
+## KAHRELUM Israel 2026 | Pre-opening source audit v0.3
+
+- [Independent public-poll evidence, complete 13-list source ranges and 53-test technical report](./israel-2026-election/PREOPEN_SOURCE_AUDIT_V03_2026-10-27.md). A published-party-seat disagreement audit and fail-closed official-count scorer, not proprietary electoral-outcome probabilities. The 37 active ballot-list registry and the separately frozen C0 remain linked from the [case index](./israel-2026-election/README.md). Election result **LIVE / UNRESOLVED / NOT SCORED**.
