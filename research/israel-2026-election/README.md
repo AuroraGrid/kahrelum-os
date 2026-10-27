@@ -98,3 +98,8 @@ Evidence cutoff: **2026-10-26T21:54:15Z / October 27 02:54:15 PKT**. Direct fina
 ## October 27, 11:23 Israel | Additional election-integrity evidence
 
 [Police-announced three arrests in suspected electoral bribery investigation, and separately unverified ballot-access / voter-data complaints](./ELECTION_INTEGRITY_OBSERVATION_20261027T0923Z.md). Observed 2026-10-27T09:23:20.445Z; suspected motive remains an unadjudicated allegation, and no political-party leadership culpability or national fraud is established. This is an append-only event supplement, **not** C2–C7 or any proprietary electoral probability update. C0 and scoring protocol remain immutable; C1 archived late; final result pending.
+
+
+## October 27, 13:43 Israel | Attributed integrity rhetoric, voter-data complaint and turnout observation
+
+[**New contemporaneous election-day source observation (11:43:34 UTC)**](./ELECTION_INTEGRITY_OBSERVATION_20261027T1142Z.md). A Jerusalem Post live report attributes a stolen-election warning to Netanyahu and says Likud complained about alleged voter-information leaks at more than 100 stations; neither allegation was adjudicated or verified as a data breach. Another report describes voluntary voter identification outside stations; no illegality has been established. CEC-attributed **31.5% noon turnout is turnout, not votes counted**. No legal postponement, counted-vote trigger or prospective party/winner forecast has been established. Original C0, preregistered protocol and earlier observations remain unchanged; C2–C7 conditional.
