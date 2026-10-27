@@ -332,7 +332,7 @@
     for(const which of ["A","B"])$("preset"+which).addEventListener("change",()=>{
       const preset=(records()?.scenarios?.[state.method]||[]).find(x=>x.id===$("preset"+which).value);
       if(preset)applyPreset(which,preset);
-      $("preset"+which).nextElementSibling.textContent=preset?(preset.note||"")+" Political status: "+(preset.status||"unverified"):"";
+      $("preset"+which+"-note").textContent=preset?(preset.note||"")+" Political status: "+(preset.status||"unverified"):"Edit individual roles below.";
     });
     for(const [key,field] of [["absentYes","absent-yes"],["absentNo","absent-no"],["switchers","switchers"]]){
       $(field).addEventListener("input",()=>{
