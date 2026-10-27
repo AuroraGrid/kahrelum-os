@@ -69,3 +69,8 @@ Appended evidence cutoff **2026-10-26T21:54:15Z (October 27 02:54:15 PKT)**: [fu
 ## KAHRELUM Israel 2026 | Pre-opening source audit v0.3
 
 - [Independent public-poll evidence, complete 13-list source ranges and 53-test technical report](./israel-2026-election/PREOPEN_SOURCE_AUDIT_V03_2026-10-27.md). A published-party-seat disagreement audit and fail-closed official-count scorer, not proprietary electoral-outcome probabilities. The 37 active ballot-list registry and the separately frozen C0 remain linked from the [case index](./israel-2026-election/README.md). Election result **LIVE / UNRESOLVED / NOT SCORED**.
+
+
+## Seven-election historical validation concluded at 2013 (v0.4)
+
+[**Final 2013 historical extension and engineering QA**](./israel-2026-election/HISTORICAL_CLOSURE_V04_2013.md): seven elections (2013–2022), 73 winning-list seat totals exactly reproduced from historical votes, 840 parliamentary seats reconstructed and 65 automated tests passed. Includes 21 **retrospective third-party poll** comparisons; archive first-publication timestamps are not independently authenticated, and the 2013 rule uses a distinct **2% threshold**. The historical study **stops at 2013**, as requested. Proprietary election-outcome predictive accuracy remains unestablished; the 2026 prospective case and C0 evidence remain separate.
