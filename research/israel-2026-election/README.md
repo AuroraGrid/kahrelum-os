@@ -153,3 +153,6 @@ Evidence cutoff: **2026-10-26T21:54:15Z / October 27 02:54:15 PKT**. Direct fina
 ## Conditional coalition explorer
 
 [Live role explorer](https://kahrelum.com/election-live#coalitions) · [Method and limits](./COALITION_EXPLORER_2026-10-28.md) · [Captured scenarios and source notes](./COALITION_SCENARIO_LOCK_2026-10-28.json). Cabinet, support and abstention roles produce separate conditional seat probabilities. Actual formation probability is not estimated; public red lines and unverified participation remain explicit. Official count fields stay Unknown until a verified denominator is available.
+
+
+[Live completion audit — October28](./LIVE_COMPLETION_AUDIT_2026-10-28.md): dashboard features live; official count and final scoring await verified data.

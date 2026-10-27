@@ -1,0 +1,38 @@
+{
+  "observed_at": "2026-10-27T22:00:01.372951+00:00",
+  "official_health": {
+    "source_url": "https://media26.bechirot.gov.il/files/expc.csv",
+    "status": "OFFICIAL_SOURCE_UNAVAILABLE",
+    "checked_at": "2026-10-27T21:59:42.964199Z",
+    "attempts": [
+      {
+        "url": "https://media26.bechirot.gov.il/files/expc.csv",
+        "checked_at": "2026-10-27T21:59:40.775369Z",
+        "http_status": 202,
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0,
+        "status": "NO_USABLE_PAYLOAD",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://votes26.bechirot.gov.il/",
+        "checked_at": "2026-10-27T21:59:42.515079Z",
+        "http_status": 404,
+        "status": "HTTP_ERROR"
+      }
+    ],
+    "seats": null,
+    "votes": null,
+    "ballots_counted": null,
+    "total_ballots": null,
+    "counted_pct": null,
+    "remaining_pct": null,
+    "denominator_verified": false,
+    "final": false,
+    "detail": "Both committee endpoints are checked each cycle. A successful HTTP response still requires election identity, schema, totals and denominator validation before count-based updates.",
+    "forecast_gate": "BLOCKED: verified current-election counts and coverage semantics required; retain exit-poll model."
+  },
+  "tests_passed": 16,
+  "status": "FEATURES_LIVE; OFFICIAL_COUNT_AND_FINAL_SCORING_BLOCKED",
+  "runtime": "owner-computer / five-minute scheduled task"
+}
