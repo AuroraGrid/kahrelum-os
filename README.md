@@ -29,6 +29,7 @@ KAHRELUM now includes a public **AI accountability research portfolio** demonstr
 - [Disclosure by choice or disclosure by law?](./research/ai-incident-disclosure.md)
 - [Model-weight security: what lawmakers ask, and what frontier labs disclose](./research/model-weight-security.md)
 - [Israel 2026 Knesset election: frozen pre-poll audit and prospective count checkpoints](./research/israel-2026-election/README.md) — Case `KAH-IL26-PROSPECTIVE-001`; C0 locked Oct 26; third-party comparator, original scoring protocol and live-stage append-only rules; **final result pending**.
+- [AI Driving Test: two-attempt operator skills assessment](./research/ai-driving-test-2026-10-27.md) — Informal, AI-graded simulation: **86/100 first attempt, 100/100 retake, 186/200 = 93% combined**. Contains full fault ledger, controlled autonomy decisions, and explicit non-independent verification boundaries. **Not a prediction-accuracy or external-certification claim.**
 
 These are public-source research dossiers produced through an AI-assisted KAHRELUM workflow. They are labeled accordingly and are not represented as unaided writing samples where an employer or publication requires work created without AI assistance.
 
