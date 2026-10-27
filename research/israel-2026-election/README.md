@@ -8,7 +8,7 @@
 
 
 **KAHRELUM OS case:** KAH-IL26-PROSPECTIVE-001  
-**Status:** C0 original archived on 26 October 2026; election and score unresolved.  
+**Status:** C0 original archived October 26; C1 archived with a documented 13m23s late pre-opening capture on October 27; election outcome and scoring remain unresolved.  
 **Mode:** Public, AI-assisted, operator-directed case study applying the published KAHRELUM research/forecast-control method; **not a witnessed execution of the immutable v2.3.4 runtime**.  
 **Purpose:** Test evidence provenance, timestamp discipline, proper distinction between exit polls / reported votes / final certified results, comparability of public quantitative forecast sources, and no-hindsight reconstruction.
 
@@ -25,7 +25,7 @@ The original C0 and scoring methodology were recorded in GitHub commits **before
 | Stage | Goal | Status |
 | --- | --- | --- |
 | C0 | Original source & comparator freeze, Oct 26 | **ARCHIVED** |
-| C1 | Pre-opening refresh, Oct 27 at 06:30 Israel / 09:30 PKT | AWAITING |
+| C1 | Pre-opening refresh, Oct 27 at 06:30 Israel / 09:30 PKT | **ARCHIVED LATE**: [C1 source capture](./C1_PREOPEN_2026-10-27.md) at 06:43:23 Israel / 09:43:23 PKT, 13m23s late ([immutable commit](https://github.com/AuroraGrid/kahrelum-os/blob/f747d4f84c20cda78b45684e7181b1019f550f27/research/israel-2026-election/C1_PREOPEN_2026-10-27.md)); exact registered cutoff missed |
 | C2 | Poll close / outlet exit polls, Oct 27 at 22:05 Israel / Oct 28 at 01:05 PKT | AWAITING |
 | C3 | First observed >=25% valid votes counted, verified denominator | AWAITING / CONDITIONAL |
 | C4 | First observed >=50% valid votes counted, verified denominator | AWAITING / CONDITIONAL |
