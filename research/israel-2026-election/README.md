@@ -103,3 +103,8 @@ Evidence cutoff: **2026-10-26T21:54:15Z / October 27 02:54:15 PKT**. Direct fina
 ## October 27, 13:43 Israel | Attributed integrity rhetoric, voter-data complaint and turnout observation
 
 [**New contemporaneous election-day source observation (11:43:34 UTC)**](./ELECTION_INTEGRITY_OBSERVATION_20261027T1142Z.md). A Jerusalem Post live report attributes a stolen-election warning to Netanyahu and says Likud complained about alleged voter-information leaks at more than 100 stations; neither allegation was adjudicated or verified as a data breach. Another report describes voluntary voter identification outside stations; no illegality has been established. CEC-attributed **31.5% noon turnout is turnout, not votes counted**. No legal postponement, counted-vote trigger or prospective party/winner forecast has been established. Original C0, preregistered protocol and earlier observations remain unchanged; C2–C7 conditional.
+
+
+## October 27, 2026 | Election-day candidate-security incident (14:46 Israel)
+
+[**Attributed Yair Golan knife/security incident and CEC queue-close rule, recorded 12:46:29 UTC**](./ELECTION_INTEGRITY_OBSERVATION_20261027T1246Z.md) ([immutable creation commit](https://github.com/AuroraGrid/kahrelum-os/blob/927d632798b12c9b709270d1f6321d25928eb506/research/israel-2026-election/ELECTION_INTEGRITY_OBSERVATION_20261027T1246Z.md)). Party account reported by multiple outlets, **not independently police-verified**; alleged intent and systemic effects unestablished. Normal closing still 22:00 IST, but those already queued may continue voting. This is an append-only observation, **not C2 or a counted-vote milestone**. C0 and scoring protocol stay locked; C1 remains archived late, C2–C7 pending.
