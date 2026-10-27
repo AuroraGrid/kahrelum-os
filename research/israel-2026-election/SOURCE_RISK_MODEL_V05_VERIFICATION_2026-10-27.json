@@ -1,0 +1,92 @@
+{
+  "case_id": "KAH-IL26-PROSPECTIVE-001",
+  "engineering_module": "KAHRELUM K-source-risk v0.5",
+  "original_c0_cutoff_frozen": "2026-10-26T21:33:42.393Z",
+  "new_release_observation": "2026-10-27 pre-C1 (session clock, no independent signed timestamp)",
+  "release_status": "ENGINEERING_EXECUTED_AND_ARCHIVED; ELECTORAL_OUTCOME_PREDICTION_NOT_ISSUED",
+  "owner_package": {
+    "name": "KAHRELUM_Israel_Model_v0_5_FROZEN.zip",
+    "bytes": 86346,
+    "files": 44,
+    "sha256": "3ecc7a4a19d5d5f26856615a14922292f553ecc279516b8f14f6711861590d0e",
+    "code_sha256": "6001a2a206f866339f8056d0af23e9bc1db3fe0a96aeda03aac4b881bf115b98",
+    "execution_result_sha256": "ffdd3be6e51d5333b0378401b779e7b1ed23d4c5a364a04d67f6ceae6e3973b5",
+    "manifest_sha256": "de80d3c4e6014dd2412e672728086691f006cdda40917452e042b79f3545baf8",
+    "prior_v0_4_zip_sha256": "1675add9bb7ba0d600d3c699c109cf7ffd3f809f4fbc73ae61016e72f6c23d11",
+    "inherited_prior_members": 35,
+    "inherited_prior_members_exact_byte_matches": 35,
+    "modified_prior_members": 0,
+    "CRC_and_all_manifest_checks_validated": true,
+    "unit_tests_passed": 118,
+    "unit_tests_failed": 0
+  },
+  "model_scope": {
+    "outcome": "Third-party published electoral seat-poll absolute aggregate L1 error >=20, evaluated after historical official results are known",
+    "outcome_is_electoral_winner_or_party_seats": false,
+    "source_polls_in_retrospective_archive": 21,
+    "historical_election_rounds": 7,
+    "pseudo_chronological_test_rows": 18,
+    "truly_distinct_test_election_rounds": 6,
+    "same_event_at_all_three_horizons_for_each_test_election": true,
+    "preliminary_mean_brier": 0.305392,
+    "uninformed_half_brier_reference": 0.25,
+    "preliminary_skill_advantage": false,
+    "original_first_publication_timestamps_verified": false,
+    "historical_polls_selected_after_results": true,
+    "proprietary_first_party_2026_party_seat_vector": null,
+    "proprietary_first_party_election_winner_probability": null,
+    "external_frozen_C0_model_reidentified_as_kahrelum": false
+  },
+  "source_quality": {
+    "October_2026_published_poll_outlet_records": 9,
+    "declared_distinct_pollster_house_families": 7,
+    "reused_families": [
+      "Kantar",
+      "Filber/Direct Polls"
+    ],
+    "active_ballot_count_as_of_election_day": "UNRESOLVED: Oct22 37 vs later secondary reports 35/36",
+    "CEC_current_list_count_independently_verified": false
+  },
+  "repo_publication": {
+    "repo": "AuroraGrid/kahrelum-os",
+    "report_path": "research/israel-2026-election/SOURCE_RISK_MODEL_V05_2026-10-27.md",
+    "initial_report_create_commit": "9ce8c62fde72a1357ed46745e91d36fb79a09883",
+    "report_blob": "1fead746473ec1af101315fb7dd3ad0e015cfbc6",
+    "portfolio_updates_verified": true,
+    "pre_receipt_main_commit": "6f11a02ddef2da7ae7656756da2e5da8e483d026",
+    "readback_verified_paths": [
+      {
+        "path": "research/israel-2026-election/README.md",
+        "sha": "c5ded55a048e106960d7e81fd4fb357620468fc2"
+      },
+      {
+        "path": "research/README.md",
+        "sha": "e4f9aa44e3b38d4282bf2b1d91f00b042d3e88de"
+      },
+      {
+        "path": "README.md",
+        "sha": "e766751dbf750f3aa4588b08332e6bc15d262c17"
+      },
+      {
+        "path": "index.html",
+        "sha": "c9a52bb11fc789bf86a3bc287e7b2d11689d1844"
+      }
+    ],
+    "live_kahrelum_com_verified": false,
+    "note_live_site": "Available web retrieval could not access kahrelum.com; do not claim deployed Firebase website displays v0.5. GitHub portfolio publication is independently checked.",
+    "signature_attestation": "No independently signed GitHub or time attestation established"
+  },
+  "protected": {
+    "original_c0_blob": "b9adfe504c15def6e1804a78a8828e54ae5e93a5",
+    "original_scoring_blob": "ab0692085b63c90570065f602c005c409c3b72d5",
+    "both_verified_unchanged_after_index_publication": true
+  },
+  "future_stages": {
+    "C1": "2026-10-27 09:30 PKT",
+    "C2": "2026-10-28 01:05 PKT target; hourly watcher checks at :30, subject to delay",
+    "C3_C5": "First verifiable counted valid-ballot threshold >=25,>=50,>=75 percent with credible denominator",
+    "C6": "Attributable external projection; NOT automatically PM",
+    "C7": "Official result and separate scoring; still PENDING",
+    "lifecycle": "LIVE_UNRESOLVED_NOT_SCORED"
+  }
+}
