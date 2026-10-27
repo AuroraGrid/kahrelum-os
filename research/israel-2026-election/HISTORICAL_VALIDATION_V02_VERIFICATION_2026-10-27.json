@@ -1,0 +1,105 @@
+{
+  "case_id": "KAH-IL26-PROSPECTIVE-001",
+  "artifact_id": "KAH-IL26-HIST-v0.2",
+  "artifact_title": "Six-election historical seat-mechanics verification and archived public-poll comparison",
+  "declared_evidence_cutoff": "2026-10-27T05:16:06+05:00",
+  "cutoff_assurance": "session time source, NOT trusted external timestamp attestation",
+  "run_status": "MECHANICS_RECONSTRUCTION_PASSED; RETROSPECTIVE_POLLS_SCORED_PROVISIONAL; PROPRIETARY_ELECTION_OUTCOME_PREDICTION_NOT_ISSUED",
+  "owner_private_deliverable": {
+    "archive": "KAHRELUM_Israel_Model_v0_2_FROZEN.zip",
+    "bytes": 32190,
+    "sha256": "78b804a0f0bc67101a9541a0c44f0c10f4490721150d0dc6b2678841c94e413d",
+    "file_count": 20,
+    "manifest_sha256": "8954953e810e6a62bfd4aa83c5771239897ceaf69f77477c3b6eda00c0f6a719",
+    "result_json_sha256": "f8d241025559946e7d8bb9b26192a59ab5415a05da0f04abe992b476b474d208",
+    "readme_sha256": "f51c63e59097bb6093c08e2dcc0f2f85f23140f511f321ee12428cca3a75c2c0",
+    "tests_total": 33,
+    "tests_passed": 33,
+    "archive_crc_and_all_manifest_hashes_validated": true
+  },
+  "mechanics": {
+    "historical_election_ids": [
+      "2015-03-17",
+      "2019-04-09",
+      "2019-09-17",
+      "2020-03-02",
+      "2021-03-23",
+      "2022-11-01"
+    ],
+    "historical_elections_reconstructed": 6,
+    "represented_list_seat_identifiers_exactly_reconstructed": 61,
+    "across_election_seat_observations_total": 720,
+    "seat_mismatches": 0,
+    "interpretation": "Mechanics from known final vote totals, NOT election forecasting."
+  },
+  "third_party_archival_poll_comparisons": {
+    "sample_count": 18,
+    "reference_horizons": [
+      "D14",
+      "D7",
+      "D2"
+    ],
+    "source_class": "Current archival polling tables, dates not independently verified as original publication timestamps",
+    "raw_original_publisher_capture_verified": false,
+    "forward_test_eligible": false,
+    "mean_L1_by_horizon": {
+      "D14": 21.333,
+      "D7": 21.667,
+      "D2": 19.333
+    },
+    "interpretation": "Post-hoc selected external polling benchmarks; NOT KAHRELUM predictions or blinded forecast model calibration"
+  },
+  "public_github": {
+    "repository": "AuroraGrid/kahrelum-os",
+    "report_path": "research/israel-2026-election/HISTORICAL_VALIDATION_V02_2026-10-27.md",
+    "report_create_commit": "0f6d80ebf9aa967c0adc9d5dd71a533794349c7e",
+    "report_blob_sha": "b55e15e4bf47104f378b342b4133863fe95e3ea6",
+    "portfolio_link_commits": [
+      "bf1c2939b48352d0d4341430b27076f389c98067",
+      "47f7c48711f09d975a930c115029fc8a0b09cf6c",
+      "09cf4d1a155241750ca59cb90eb3c5e93eb03cf4"
+    ],
+    "last_verified_branch_head_before_receipt": "09cf4d1a155241750ca59cb90eb3c5e93eb03cf4",
+    "portfolio_links_verified": [
+      {
+        "path": "research/israel-2026-election/README.md",
+        "blob": "9aa51c7c821260dc0e0196f42c7318199ec45599"
+      },
+      {
+        "path": "research/README.md",
+        "blob": "b53ac339e91f5fb614ce2d1d913f6255c5f9fcf6"
+      },
+      {
+        "path": "README.md",
+        "blob": "cf8bb2dc0f9b06f0f467bf9dd6aad14c73c27ccf"
+      }
+    ],
+    "report_retrieved_exactly_after_commit": true,
+    "all_portfolio_file_links_retrieved_exactly_after_commit": true,
+    "unsigned_repository_commits_not_signature_verified": true,
+    "live_kahrelum_com_domain_verified": false,
+    "live_domain_note": "Both https://kahrelum.com and https://kahrelum.com/sample returned inaccessible status through available web fetching. Public GitHub publication was verified; Firebase/deployed website publication was NOT verified."
+  },
+  "protected_records": {
+    "original_C0": {
+      "path": "research/israel-2026-election/BASELINE_LOCK_2026-10-26.md",
+      "blob_sha": "b9adfe504c15def6e1804a78a8828e54ae5e93a5",
+      "unchanged_verified": true
+    },
+    "original_scoring_protocol": {
+      "path": "research/israel-2026-election/SCORING_PROTOCOL_2026-10-26.md",
+      "blob_sha": "ab0692085b63c90570065f602c005c409c3b72d5",
+      "unchanged_verified": true
+    }
+  },
+  "future_election_case": "LIVE / UNRESOLVED / NOT SCORED",
+  "limitations": [
+    "No owner 2026 election seat forecast generated",
+    "No historical first-party prospective predictive model tested",
+    "No authenticated publication timestamp for 18 archive poll entries",
+    "No independent signed timestamp or external auditor",
+    "Historical sample retrospectively curated and correlated",
+    "Frozen KAHRELUM OS v2.3.4 runtime not executed",
+    "Public GitHub portfolio evidence not equivalent to deployed Firebase website"
+  ]
+}
