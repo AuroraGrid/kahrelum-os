@@ -1,5 +1,9 @@
 # Portfolio case | Israel's 2026 Knesset election: prospective evidence-and-forecast audit
 
+
+> **Current checkpoint update:** [C1 delayed pre-opening source capture](./C1_PREOPEN_2026-10-27.md) was recorded at 2026-10-27T04:43:23.041Z, 13m23s after the registered target. Exact-cutoff capture was missed; C0 and the original scoring protocol are unchanged. C2–C7 remain pending. New v0.6 historical modeling was first executed successfully after the C1 cutoff.
+
+
 **KAHRELUM OS case:** KAH-IL26-PROSPECTIVE-001  
 **Status:** C0 original archived on 26 October 2026; election and score unresolved.  
 **Mode:** Public, AI-assisted, operator-directed case study applying the published KAHRELUM research/forecast-control method; **not a witnessed execution of the immutable v2.3.4 runtime**.  
