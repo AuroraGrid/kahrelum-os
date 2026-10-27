@@ -1,0 +1,371 @@
+{
+  "locked_at": "2026-10-27T20:55:59.484461Z",
+  "case_id": "KAH-IL26-PROSPECTIVE-001",
+  "contest": "LATE_REGISTERED_POST_CLOSE_COMPARISON",
+  "requested_domain": "israelelections.org",
+  "resolved_comparator": "https://www.israelielection.org",
+  "domain_status": "Exact requested domain inaccessible; existing case comparator explicitly substituted",
+  "KAHRELUM_anchor": {
+    "name": "KAHRELUM K-PREDICT",
+    "prediction_id": "34cf920388ad7815",
+    "issued_at": "2026-10-27T20:53:42.649339Z",
+    "input_stage": "POST_CLOSE_EXIT_POLL_CONDITIONED_NOWCAST",
+    "model": "K-PREDICT v0.6 seat-space / 2026 adapter v1",
+    "method": "correlated_student",
+    "medians": {
+      "Likud": 26.0,
+      "Yashar": 21.0,
+      "Together": 13.0,
+      "Democrats": 9.0,
+      "Joint List": 10.0,
+      "Otzma Yehudit": 7.0,
+      "Shas": 8.0,
+      "UTJ": 7.0,
+      "Yisrael Beiteinu": 6.0,
+      "Religious Zionism-Zehut": 6.0,
+      "Raam": 7.0,
+      "Reservists-Economic": 0.0,
+      "People of Israel": 0.0,
+      "Noam": 0.0
+    },
+    "means": {
+      "Likud": 25.620666666666665,
+      "Yashar": 20.7125,
+      "Together": 12.75525,
+      "Democrats": 8.886083333333334,
+      "Joint List": 9.837083333333334,
+      "Otzma Yehudit": 6.90925,
+      "Shas": 7.868,
+      "UTJ": 6.90425,
+      "Yisrael Beiteinu": 5.8895,
+      "Religious Zionism-Zehut": 5.887583333333334,
+      "Raam": 6.8385,
+      "Reservists-Economic": 0.62775,
+      "People of Israel": 0.6328333333333334,
+      "Noam": 0.63075
+    },
+    "interval80": {
+      "Likud": [
+        22.0,
+        29.0
+      ],
+      "Yashar": [
+        18.0,
+        24.0
+      ],
+      "Together": [
+        10.0,
+        16.0
+      ],
+      "Democrats": [
+        6.0,
+        12.0
+      ],
+      "Joint List": [
+        7.0,
+        13.0
+      ],
+      "Otzma Yehudit": [
+        4.0,
+        10.0
+      ],
+      "Shas": [
+        5.0,
+        11.0
+      ],
+      "UTJ": [
+        4.0,
+        10.0
+      ],
+      "Yisrael Beiteinu": [
+        3.0,
+        9.0
+      ],
+      "Religious Zionism-Zehut": [
+        3.0,
+        9.0
+      ],
+      "Raam": [
+        4.0,
+        10.0
+      ],
+      "Reservists-Economic": [
+        0.0,
+        3.0
+      ],
+      "People of Israel": [
+        0.0,
+        3.0
+      ],
+      "Noam": [
+        0.0,
+        3.0
+      ]
+    },
+    "coherent_point": {
+      "Likud": 26,
+      "Yashar": 21,
+      "Together": 13,
+      "Democrats": 8,
+      "Joint List": 10,
+      "Otzma Yehudit": 7,
+      "Shas": 9,
+      "UTJ": 7,
+      "Yisrael Beiteinu": 6,
+      "Religious Zionism-Zehut": 6,
+      "Raam": 7,
+      "Reservists-Economic": 0,
+      "People of Israel": 0,
+      "Noam": 0
+    },
+    "representative_rule": "Archived joint draw minimizing squared Euclidean distance to its mean; first draw wins a tie. This is separate from rounded means in older JSON.",
+    "largest_list_probabilities": {
+      "Likud": 0.891,
+      "Yashar": 0.07133333333333333,
+      "Together": 0.0013333333333333333,
+      "Democrats": 0.00025,
+      "Joint List": 0.0004166666666666667,
+      "Otzma Yehudit": 0.00016666666666666666,
+      "Shas": 0.0003333333333333333,
+      "UTJ": 0.00025,
+      "Yisrael Beiteinu": 0.00016666666666666666,
+      "Religious Zionism-Zehut": 0.0003333333333333333,
+      "Raam": 0.0,
+      "Reservists-Economic": 0.0,
+      "People of Israel": 0.0,
+      "Noam": 8.333333333333333e-05,
+      "TIE": 0.034333333333333334
+    },
+    "interval_mass": 0.8,
+    "draw_archive_sha256": "eef7055b0b19524282b150c089a77907517e429de100543e3d9c072717b29af1"
+  },
+  "external_anchor": {
+    "name": "Israel Votes 2026",
+    "source": {
+      "url": "https://www.israelielection.org/api/live-forecast",
+      "captured_at": "2026-10-27T20:55:59.258435Z",
+      "raw_sha256": "3655019dcebc134c9f992b10578003788de0a01eebe69938becd1911a3395357"
+    },
+    "website_url": "https://www.israelielection.org/results",
+    "issued_at": "2026-10-27T20:30:05.639Z",
+    "revision": "0dd94142a9f8a67f3efeeec4bb645c1417f260a858e5effac67174f6ec52244c",
+    "input_stage": "EXIT_POLL_CONDITIONED",
+    "model": "live-v3-joint-blocs",
+    "medians": {
+      "Likud": 24.0,
+      "Otzma Yehudit": 6.0,
+      "Shas": 7.0,
+      "UTJ": 6.0,
+      "Religious Zionism-Zehut": 6.0,
+      "People of Israel": 0.0,
+      "Noam": 0.0,
+      "Yashar": 22.0,
+      "Together": 13.0,
+      "Democrats": 9.0,
+      "Yisrael Beiteinu": 8.0,
+      "Reservists-Economic": 0.0,
+      "Joint List": 10.0,
+      "Raam": 7.0
+    },
+    "interval80": {
+      "Likud": [
+        21.0,
+        28.0
+      ],
+      "Otzma Yehudit": [
+        4.0,
+        8.0
+      ],
+      "Shas": [
+        5.0,
+        8.0
+      ],
+      "UTJ": [
+        5.0,
+        8.0
+      ],
+      "Religious Zionism-Zehut": [
+        4.0,
+        8.0
+      ],
+      "People of Israel": [
+        0.0,
+        4.0
+      ],
+      "Noam": [
+        0.0,
+        0.0
+      ],
+      "Yashar": [
+        19.0,
+        25.0
+      ],
+      "Together": [
+        11.0,
+        15.0
+      ],
+      "Democrats": [
+        7.0,
+        11.0
+      ],
+      "Yisrael Beiteinu": [
+        6.0,
+        10.0
+      ],
+      "Reservists-Economic": [
+        0.0,
+        4.0
+      ],
+      "Joint List": [
+        8.0,
+        14.0
+      ],
+      "Raam": [
+        5.0,
+        9.0
+      ]
+    },
+    "coherent_point": {
+      "Likud": 25,
+      "Otzma Yehudit": 7,
+      "Shas": 6,
+      "UTJ": 6,
+      "Religious Zionism-Zehut": 6,
+      "People of Israel": 0,
+      "Noam": 0,
+      "Yashar": 22,
+      "Together": 13,
+      "Democrats": 9,
+      "Yisrael Beiteinu": 8,
+      "Reservists-Economic": 0,
+      "Joint List": 11,
+      "Raam": 7
+    },
+    "largest_list_probabilities": {
+      "Likud": 0.7119,
+      "Otzma Yehudit": 0.0,
+      "Shas": 0.0,
+      "UTJ": 0.0,
+      "Religious Zionism-Zehut": 0.0,
+      "People of Israel": 0.0,
+      "Noam": 0.0,
+      "Yashar": 0.2024,
+      "Together": 3.3333333333333335e-05,
+      "Democrats": 0.0,
+      "Yisrael Beiteinu": 0.0,
+      "Reservists-Economic": 0.0,
+      "Joint List": 0.00036666666666666667,
+      "Raam": 0.0,
+      "TIE": 0.0853
+    },
+    "interval_mass": 0.8,
+    "diagnostics": {
+      "runs": 30000,
+      "count_gate": "blocked"
+    },
+    "source_freshness": {
+      "lastAttemptAt": "2026-10-27T20:45:03.292Z",
+      "lastSuccessfulAcquisitionAt": "2026-10-27T20:45:03.292Z",
+      "status": "current"
+    }
+  },
+  "campaign_context": {
+    "name": "Israel Votes saved campaign forecast",
+    "source": {
+      "url": "https://raw.githubusercontent.com/RavBogard/israelielection/main/data/forecast.json",
+      "captured_at": "2026-10-27T20:55:59.454241Z",
+      "raw_sha256": "12ed7cf3a3369fc3c552867f09fe26f2b5b8b7c2befd1d141cd8281491325330"
+    },
+    "issued_at": "2026-10-27T02:00:44.663Z",
+    "coherent_point": {
+      "Likud": 21,
+      "Otzma Yehudit": 8,
+      "Shas": 9,
+      "UTJ": 8,
+      "Religious Zionism-Zehut": 7,
+      "People of Israel": 0,
+      "Noam": 0,
+      "Yashar": 22,
+      "Together": 13,
+      "Democrats": 9,
+      "Yisrael Beiteinu": 8,
+      "Reservists-Economic": 0,
+      "Joint List": 9,
+      "Raam": 6
+    },
+    "means": {
+      "Likud": 20.6,
+      "Otzma Yehudit": 8.0,
+      "Shas": 9.1,
+      "UTJ": 7.9,
+      "Religious Zionism-Zehut": 7.0,
+      "People of Israel": 0.5,
+      "Noam": 0.0,
+      "Yashar": 21.7,
+      "Together": 12.5,
+      "Democrats": 9.0,
+      "Yisrael Beiteinu": 7.9,
+      "Reservists-Economic": 0.7,
+      "Joint List": 9.0,
+      "Raam": 6.2
+    },
+    "input_stage": "PRE_ELECTION_POLLS",
+    "final_forecast_flag": true,
+    "note": "This is an independently retrieved campaign record, not official election results. Not a matched-time contest with post-close KAHRELUM."
+  },
+  "common_list_mapping": {
+    "likud": "Likud",
+    "yashar": "Yashar",
+    "byachad": "Together",
+    "dem": "Democrats",
+    "jl": "Joint List",
+    "otzma": "Otzma Yehudit",
+    "shas": "Shas",
+    "utj": "UTJ",
+    "yb": "Yisrael Beiteinu",
+    "rz": "Religious Zionism-Zehut",
+    "raam": "Raam",
+    "res": "Reservists-Economic",
+    "poi": "People of Israel",
+    "noam": "Noam"
+  },
+  "groups": {
+    "netanyahu": [
+      "Likud",
+      "Otzma Yehudit",
+      "Shas",
+      "UTJ",
+      "Religious Zionism-Zehut"
+    ],
+    "eisenkot": [
+      "Yashar",
+      "Together",
+      "Democrats",
+      "Yisrael Beiteinu"
+    ],
+    "arab_lists": [
+      "Joint List",
+      "Raam"
+    ],
+    "other_modeled": [
+      "Reservists-Economic",
+      "People of Israel",
+      "Noam"
+    ]
+  },
+  "primary_metric": "Mean absolute error of marginal median seats across the fixed 14-list universe. Lower wins; equality is a tie. Medians need not sum120; never rescale.",
+  "secondary_metrics": [
+    "L1 and RMSE of marginal medians",
+    "L1 of separately labeled coherent 120-seat point allocations",
+    "Strict-largest-list multiclass Brier over14 parties plus TIE; lower wins",
+    "80% marginal seat-interval coverage; descriptive, not proof of calibration"
+  ],
+  "gold_gate": "Official final 26th Knesset seats, explicit aliases, complete common universe and source verification; no scoring against either model or provisional/exit-poll observations",
+  "fairness_limits": [
+    "Both models are exit-informed; source panels, methods and issue times differ. Not an equal-information or blinded controlled trial.",
+    "KAHRELUM was frozen before this competitor capture; no retuning to beat displayed values.",
+    "Campaign-versus-post-close comparison is timing-confounded and not a clean competitive result.",
+    "New score plan registered after election-day information was observed; original C0 scoring remains unchanged.",
+    "One election cannot establish general superiority."
+  ]
+}
