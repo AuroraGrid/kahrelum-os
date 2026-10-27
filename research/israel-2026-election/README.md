@@ -88,3 +88,8 @@ Evidence cutoff: **2026-10-26T21:54:15Z / October 27 02:54:15 PKT**. Direct fina
 ## K-PREDICT v0.6 post-disconnection recovery | October 27, 2026
 
 [**Recovery-kit verification, package SHA-256 and fail-closed blockers**](./K_PREDICT_V06_POST_DISCONNECT_RECOVERY_2026-10-27.md). The original v0.6 owner source directory is still inaccessible after Work disconnected, so the original v0.6 frozen source ZIP has **not** been produced and cannot be claimed. A **distinct** verified recovery kit containing the exact executable v0.5 predecessor, public benchmark references, freshly reexecuted 118 predecessor tests and original-source recovery script is archived in the owner's KAHRELUM file library (SHA-256 `411edb2c964539778606cee344afe22a373dc00d46ba45f173faccba82e9cd3f`). This does NOT replace the original v0.6 code or establish predictive superiority. Live-site deployment and authenticated historical input times remain unverified. Original C0/protocol unchanged.
+
+
+## Election-day integrity source observation (27 October 2026)
+
+[Election-day integrity observation (27 October 09:33 IST)](./ELECTION_INTEGRITY_OBSERVATION_20261027T0733Z.md) records newly published reports of possible future election-result challenges and localized voting-station interference, together with the CEC's reported rejection of a separate voter-tracking allegation. This is an append-only, timestamped **unresolved source-risk supplement**, not a certified violation, national postponement, counted-vote stage, or election-outcome prediction. C0, the original scoring protocol, and C1 are unchanged; C2–C7 remain conditional.
