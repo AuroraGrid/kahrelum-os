@@ -153,3 +153,8 @@ Evidence cutoff: **2026-10-26T21:54:15Z / October 27 02:54:15 PKT**. Direct fina
 ## Conditional coalition explorer
 
 [Live role explorer](https://kahrelum.com/election-live#coalitions) · [Method and limits](./COALITION_EXPLORER_2026-10-28.md) · [Captured scenarios and source notes](./COALITION_SCENARIO_LOCK_2026-10-28.json). Cabinet, support and abstention roles produce separate conditional seat probabilities. Actual formation probability is not estimated; public red lines and unverified participation remain explicit. Official count fields stay Unknown until a verified denominator is available.
+
+
+## Coalition analysis lab | 28 October 2026
+
+A separate [**election analysis lab**](https://kahrelum-os.vercel.app/election-lab) extends the existing role-based coalition explorer with two coherent scenario comparisons, cabinet-seat and per-list histograms, three-method sensitivity, dated prediction chronology, a corrected 36-list ballot directory, authored political evidence ledger, historical/source audit and reproducible scenario exports. [Engineering evidence and Firebase release gate](./ELECTION_ANALYSIS_LAB_RELEASE_2026-10-28.md). This Vercel-hosted lab is a **separate preview/production surface** until its additive Firebase deployment at `https://kahrelum.com/election-lab` is verified. Historical cutoff authentication, statutory threshold validation and prospective predictive superiority remain unresolved. Original C0 and scoring protocol unchanged.
