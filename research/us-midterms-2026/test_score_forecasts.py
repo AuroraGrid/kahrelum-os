@@ -64,11 +64,13 @@ class ScoreTests(unittest.TestCase):
             ])
             strict = scoremod.score(scoremod.load_predictions(str(pred)),
                                     scoremod.load_outcomes(str(out)))
-            self.assertEqual(strict["leaderboard"][1]["numeric_scored_rows"], 0)
+            strict_by_source = {x["source_id"]: x for x in strict["leaderboard"]}
+            self.assertEqual(strict_by_source["POLL"]["numeric_scored_rows"], 0)
             provisional = scoremod.score(scoremod.load_predictions(str(pred), True),
                                          scoremod.load_outcomes(str(out)))
-            self.assertEqual(provisional["leaderboard"][1]["numeric_scored_rows"], 1)
-            self.assertEqual(provisional["leaderboard"][0]["decisive_called_rows"], 0)
+            provisional_by_source = {x["source_id"]: x for x in provisional["leaderboard"]}
+            self.assertEqual(provisional_by_source["POLL"]["numeric_scored_rows"], 1)
+            self.assertEqual(provisional_by_source["SAM"]["decisive_called_rows"], 0)
 
     def test_invalid_probability(self):
         self.assertRaises(ValueError, scoremod.probability, "1.01")
