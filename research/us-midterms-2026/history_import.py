@@ -45,7 +45,8 @@ def parse_file(path, expected_year):
         if state not in STATES:
             excluded["non_state"]=excluded["non_state"]+1
             continue
-        if record["stage"]!="GEN" or record["special"].lower()!="false" or record["runoff"].lower()!="false":
+        # In legacy MEDSL rows the GEN runoff field is often blank, not true.
+        if record["stage"]!="GEN" or record["special"].lower()!="false" or record["runoff"].strip().lower() not in ("false",""):
             excluded["other_election_type"]+=1; continue
         if record["mode"]!="TOTAL":
             excluded["other_vote_mode"]+=1; continue
