@@ -64,6 +64,13 @@ class TestSources(unittest.TestCase):
             facts,manifest=merge(a,b)
             self.assertEqual(facts[0]["forecast_readiness"],"BLOCKED_REVIEW_REQUIRED")
             self.assertEqual(facts[0]["map_2026_status"],"REBUILD_REQUIRED")
+    def test_legacy_blank_runoff_is_general_election(self):
+        with tempfile.TemporaryDirectory() as d:
+            rows=[{"runoff":"","candidate":"A","party":"DEMOCRAT"},
+                  {"runoff":"","candidate":"B","party":"REPUBLICAN"}]
+            result,_=parse_file(self.write(Path(d),2010,rows),2010)
+            self.assertEqual(len(result),1)
+            self.assertEqual(result["HOUSE:NY-01"]["flags"],[])
     def test_party_parser(self):
         self.assertEqual(party_of("DEMOCRATIC FARMER LABOR"),"D")
         self.assertEqual(party_of("REPUBLICAN, LIBERTARIAN"),"R")
