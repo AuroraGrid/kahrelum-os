@@ -1,0 +1,35 @@
+# KAHRELUM election integrity | CEC acting director explicitly rejects systematic fraud allegations
+
+**Case:** KAH-IL26-PROSPECTIVE-001  
+**Record:** Dated, append-only supplementary source-risk observation, NOT C3/C4/C5/C6B/C7  
+**Captured UTC:** 2026-10-29T14:46:08.505Z  
+**Captured Jerusalem / IST (UTC+02):** 2026-10-29T16:46:08 IST  
+**Captured U.S. Eastern / EDT (UTC-04):** 2026-10-29T10:46:08 EDT  
+**Captured Pakistan / PKT (UTC+05):** 2026-10-29T19:46:08 PKT  
+**Condition:** Newly recovered direct attributed statement from Central Elections Committee acting director-general about lawful voting and unsubstantiated systematic fraud allegations, clarified in correspondence with a CEC member.
+
+## FACT / source attribution
+
+1. At **14:13 IST, 29 October 2026**, *Davar* (Hebrew) published/updated its report quoting the response of acting Central Elections Committee director-general **Dean Livne** to MK **Vladimir Beliak**, who had requested an emergency committee discussion about foreign-interference allegations. Livne stated that the election was conducted lawfully and polling-station integrity was carefully preserved. He reportedly declined the requested committee presidency meeting, citing very sensitive classified information and an ongoing investigation. Source: https://www.davar1.co.il/704631/ (published/updated 29 Oct 14:13 Israel time).
+2. At **14:32 IST**, *The Times of Israel* published the response with the more specific statement that, to the CEC's knowledge, **there is no basis for allegations of systematic election-integrity violations**. Livne distinguished that assertion from the separate classified information that led CEC chairman Justice Noam Sohlberg to ask Shin Bet for an investigation, saying that the classified allegations had **not been verified**. Source: https://www.timesofisrael.com/liveblog_entry/elections-panel-director-says-claims-of-widespread-fraud-appear-to-be-baseless-vote-was-conducted-lawfully/ (29 Oct 14:32 IST).
+3. **Provenance caveat:** Both sources reproduce/attribute statements from a named CEC official and correspondence; the full signed original letter, its file number and the classified underlying intelligence **were not directly retrieved from CEC**. This is corroborated reporting of an attributed CEC official statement, NOT a first-party document independently authenticated by KAHRELUM.
+4. Previously archived CEC chair/Shin Bet investigative referral, police sources' rebuttal, and Qatar's reported official denial remain separate. The fact of an investigative request **does not substantiate** its underlying allegations, and the director's statement **does not establish** that every individual irregularity allegation is false.
+
+## INFERENCE / legal-mechanism audit
+
+The institutional assurance that no systematic fraud is known to the CEC weakens any assertion that national invalidation or delay is already legally warranted. But it is not a judicial dismissal, legal certification or conclusion of Shin Bet's classified inquiry. No authenticated new bill, court injunction, emergency suspension, CEC order invalidating votes, or legally effective change of the November 4 official-results target was found in this review. Political pressure is not a legal act. A result may still be reviewed under established procedures.
+
+## Provisional count and conflicting seat calculations: separate from the integrity event
+
+- The independent tracker https://www.israelielections.com/2026/results/ displays **5,515,211 valid votes counted** at **15:58 IST (29 Oct)**, with a third-party **54 Netanyahu-aligned / 48 Jewish-led opposition / 18 Arab-led** seat calculation, explicitly excluding surplus-vote agreements. Its 97.3% figure compares this count to **5,695,682 previously reported votes cast**, not an authenticated final nationwide valid-vote denominator. It reports 5,540,051 ballots processed and 24,840 invalid.
+- Independently, https://www.poliwave.com/il/live/knesset-2026 identifies a **15:06 IST** source update also reporting 5,515,211 valid votes but calculating **53 / 48 / 19**, likewise unofficial. A broadcaster report at https://www.timesofisrael.com/liveblog_entry/as-vote-count-continues-likud-gains-a-seat-at-expense-of-ally-shas-no-change-in-blocs/ (**15:23 IST**) attributed to CEC partial results also gives **53 / 48 / 19**, noting 295,607 double-envelope ballots counted against an estimated 430,000–480,000 double envelopes. Its reported Likud/Shas transfer is within the same bloc; none of these reports establishes certified allocation.
+- **True current valid-vote numerator:** 5,515,211 (CEC-attributed through independent source, not directly authenticated against raw CEC file). **Independently authenticated final/received valid-vote denominator: NULL / UNAVAILABLE**. Therefore **verified counted-valid-vote fraction: NULL**, **C3 >=25% / C4 >=50% / C5 >=75%: NOT TRIGGERED UNDER PREREGISTRATION**. The fraction 5,515,211 / 5,695,682 is not qualifying; its denominator is turnout, not final valid votes. 99.6% precincts reported (another tracker) likewise does not qualify.
+- **Vote shares (third-party, not certified):** Likud 20.56% (1,133,834), Yashar 16.09% (887,341), Together 9.24% (509,399), Joint List 8.95% (493,536), Democrats 6.45% (355,768), Ra'am 5.99% (330,630), per https://www.israelielections.com/2026/results/ as of 15:58 IST. These shares describe published *valid votes counted so far*, not the final electorate.
+- Main CEC live portal https://votes26.bechirot.gov.il/ presented a JavaScript robot-verification challenge to the public browsing tool; the linked raw results host https://media26.bechirot.gov.il/ was not retrievable. Certified national results unavailable. Distinguish provisional seat calculations and percentage of precincts from certified seats.
+
+## Existing checkpoint and immutable-file checks
+
+As of this capture, GitHub directory contains C1_PREOPEN_2026-10-27.md, C2_POLLCLOSE_2026-10-27.md, and C6_PROJECTED_LIST_2026-10-27.md; no C3/C4/C5, C6B, or C7 stage file exists. Party registry, separate correction and source-risk supplement remain archived. C0 at the original commit and current main matches blob b9adfe504c15def6e1804a78a8828e54ae5e93a5; frozen scoring protocol matches ab0692085b63c90570065f602c005c409c3b72d5. This file is an **additional integrity observation**, not a scoring or checkpoint substitute. No electoral winner probability was registered or backfilled. KAHRELUM proprietary election-winner Brier remains NOT EVALUABLE. C7 calibration awaits official result and original frozen comparator.
+
+**Classification:** FACT = attributed CEC official correspondence reported by two outlets; INFERENCE = no authenticated process step sufficient to delay or invalidate results; FORECAST = no new election-delay probability (unregistered / uncalibrated).  
+**Status:** SOURCE-CORROBORATED CEC OFFICIAL RESPONSE / FIRST-PARTY ORIGINAL LETTER NOT RETRIEVED / INVESTIGATION UNRESOLVED / C3–C5 BLOCKED / NO CERTIFIED RESULT.  
