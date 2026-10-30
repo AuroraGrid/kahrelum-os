@@ -8,6 +8,7 @@ const welcomePanel = $('#welcomePanel');
 const installButton = $('#installButton');
 let deferredInstall = null;
 let verificationMode = false;
+let liveResearchAvailable = false;
 let turns = [];
 
 function showChat() { inviteScreen.hidden = true; chatScreen.hidden = false; $('#newChatButton').hidden = false; input.focus(); }
@@ -15,7 +16,8 @@ function showInvite() { chatScreen.hidden = true; inviteScreen.hidden = false; $
 async function checkSession() {
   try {
     const response = await fetch('/api/one/session', { credentials: 'same-origin' });
-    if (response.ok) showChat(); else showInvite();
+    if (response.ok) { const config=await response.json(); liveResearchAvailable=Boolean(config.liveResearchAvailable); showChat(); }
+    else showInvite();
   } catch { showInvite(); }
 }
 
@@ -40,6 +42,9 @@ function setMode(enabled) {
   $('#modeName').textContent = enabled ? 'KAHRELUM Check' : 'Everyday';
   $('#modeBadge').textContent = enabled ? 'KAHRELUM Check' : 'Everyday';
   $('#modeHint').textContent = enabled ? 'Separate what the evidence shows from inference, gaps, and uncertainty.' : 'Simple, helpful answers for everyday questions.';
+  $('#researchOption').hidden = !enabled;
+  $('#liveResearchToggle').disabled = !liveResearchAvailable;
+  $('#researchAvailability').textContent = liveResearchAvailable ? 'Sends this question to Tavily. 1 free credit; stops at the monthly limit.' : 'Live search is not configured on this beta yet.';
 }
 $('#modeToggle').addEventListener('click', () => setMode(!verificationMode));
 
@@ -56,11 +61,19 @@ async function send(text) {
   const button = $('.send-button'); button.disabled = true;
   const history = [...turns, {role:'user', content:clean}].slice(-12);
   try {
-    const response = await fetch('/api/one/chat', {method:'POST', credentials:'same-origin', headers:{'Content-Type':'application/json'}, body:JSON.stringify({messages:history, mode:verificationMode?'check':'everyday'})});
+    const response = await fetch('/api/one/chat', {method:'POST', credentials:'same-origin', headers:{'Content-Type':'application/json'}, body:JSON.stringify({messages:history, mode:verificationMode?'check':'everyday', liveResearch:verificationMode&&liveResearchAvailable&&$('#liveResearchToggle').checked})});
     const payload = await response.json();
     if (response.status === 401) { pending.remove(); showInvite(); throw new Error('Your access session ended. Enter your invite code again.'); }
     if (!response.ok) throw new Error(payload.error || 'The assistant could not answer right now.');
     pending.textContent = payload.answer;
+    if(Array.isArray(payload.sources)&&payload.sources.length){
+      const list=document.createElement('div');list.className='source-list';
+      const label=document.createElement('span');label.textContent='Sources searched just now';list.append(label);
+      payload.sources.forEach((source,index)=>{
+        try{const url=new URL(source.url);if(url.protocol!=='https:')return;const link=document.createElement('a');link.href=url.href;link.target='_blank';link.rel='noopener noreferrer';link.textContent=`[${index+1}] ${source.title||url.hostname}`;list.append(link);}catch{}
+      });
+      pending.append(list);
+    }
     turns = [...history, {role:'assistant', content:payload.answer}].slice(-12);
   } catch(error) { pending.remove(); addError(error.message); }
   finally { button.disabled = false; input.focus(); }

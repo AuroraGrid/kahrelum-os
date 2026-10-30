@@ -11,6 +11,7 @@ const code='K1-test-invite-code-that-is-long-enough-1234567890';
 const hash=crypto.createHash('sha256').update(code).digest('hex');
 function response(){return {headers:{},statusCode:200,setHeader(k,v){this.headers[k]=v;return this},status(n){this.statusCode=n;return this},json(value){this.body=value;return this}}}
 function req(method,body={},headers={}){return {method,body,headers:{host:'localhost:3000',...headers}}}
+function signedToken(){const value=Buffer.from(JSON.stringify({aud:'kahrelum-one',exp:Math.floor(Date.now()/1000)+60})).toString('base64url');const mac=crypto.createHmac('sha256',secret).update(value).digest('base64url');return `${value}.${mac}`}
 const old={...process.env};
 test('invite redemption and signed session enforce server-side access',async t=>{
  t.after(()=>{process.env={...old}});
@@ -34,10 +35,34 @@ test('chat API rejects browser-only authorization and sends valid turns only thr
  let res=response();await chat(req('POST',{messages:[{role:'user',content:'hello'}],mode:'everyday'}),res);assert.equal(res.statusCode,401);
  process.env.GEMINI_API_KEY='test-secret';
  global.fetch=async(_url,options)=>{const request=JSON.parse(options.body);assert.equal(request.contents[0].parts[0].text,'hello');return {ok:true,json:async()=>({candidates:[{content:{parts:[{text:'Hi there.'}]}}]})}};
- const token=(()=>{const value=Buffer.from(JSON.stringify({aud:'kahrelum-one',exp:Math.floor(Date.now()/1000)+60})).toString('base64url');const mac=crypto.createHmac('sha256',secret).update(value).digest('base64url');return `${value}.${mac}`})();
+ const token=signedToken();
  delete process.env.GEMINI_API_KEY;res=response();await chat(req('POST',{messages:[{role:'user',content:'hello'}],mode:'everyday'},{cookie:`k1_session=${token}`}),res);assert.equal(res.statusCode,503);assert.match(res.body.error,/not configured/);
  process.env.GEMINI_API_KEY='test-secret';
  res=response();await chat(req('POST',{messages:[{role:'user',content:'hello'}],mode:'everyday'},{cookie:`k1_session=${token}`}),res);assert.equal(res.statusCode,200);assert.equal(res.body.answer,'Hi there.');
+});
+test('live research is explicit, free-tier basic search, cited, and fails closed without a Tavily key',async t=>{
+ t.after(()=>{process.env={...old};global.fetch=originalFetch});
+ process.env.KAHRELUM_ONE_SESSION_SECRET=secret;process.env.KAHRELUM_ONE_INVITE_HASHES=hash;process.env.GEMINI_API_KEY='test-gemini';
+ const originalFetch=global.fetch, token=signedToken();let calls=[];
+ delete process.env.TAVILY_API_KEY;
+ global.fetch=async()=>{throw new Error('A provider must not be called without its key')};
+ let res=response();await chat(req('POST',{messages:[{role:'user',content:'What changed today?'}],mode:'check',liveResearch:true},{cookie:`k1_session=${token}`}),res);assert.equal(res.statusCode,503);assert.match(res.body.error,/No search or model request/);
+ process.env.TAVILY_API_KEY='test-tavily';
+ global.fetch=async(url,options)=>{
+  calls.push(url);
+  if(url==='https://api.tavily.com/search'){
+   assert.equal(options.headers.Authorization,'Bearer test-tavily');const body=JSON.parse(options.body);assert.equal(body.search_depth,'basic');assert.equal(body.max_results,5);assert.equal(body.include_answer,false);
+   return{ok:true,json:async()=>({results:[{title:'Official update',url:'https://example.org/current',content:'A verified current source excerpt.'}]})};
+  }
+  assert.ok(url.startsWith('https://generativelanguage.googleapis.com/'));assert.equal(options.headers['x-goog-api-key'],'test-gemini');
+  const body=JSON.parse(options.body);assert.match(body.contents.at(-1).parts[0].text,/\[1\] Official update/);
+  return{ok:true,json:async()=>({candidates:[{content:{parts:[{text:'The update says this [1].'}]}}]})};
+ };
+ res=response();await chat(req('POST',{messages:[{role:'user',content:'What changed today?'}],mode:'check',liveResearch:true},{cookie:`k1_session=${token}`}),res);
+ assert.equal(res.statusCode,200);assert.deepEqual(calls,['https://api.tavily.com/search',calls[1]]);assert.equal(res.body.sources[0].url,'https://example.org/current');assert.match(res.body.answer,/\[1\]/);
+ calls=[];global.fetch=async url=>{calls.push(url);return{ok:false,status:429,json:async()=>({})}};
+ res=response();await chat(req('POST',{messages:[{role:'user',content:'What changed today?'}],mode:'check',liveResearch:true},{cookie:`k1_session=${token}`}),res);
+ assert.equal(res.statusCode,503);assert.match(res.body.error,/quota is exhausted/);assert.deepEqual(calls,['https://api.tavily.com/search']);
 });
 test('PWA manifest includes Android-sized install icons and a scoped standalone start URL',()=>{
  const manifest=JSON.parse(fs.readFileSync(path.join(__dirname,'../one/manifest.webmanifest'),'utf8'));

@@ -36,6 +36,7 @@
     <section id="chatScreen" class="chat-screen" hidden aria-label="Conversation">
       <aside id="modePanel" class="mode-panel"><div><span class="status-dot"></span><span id="modeName">Everyday</span></div><button id="modeToggle" class="mode-toggle" aria-pressed="false"><span class="toggle-thumb"></span></button></aside>
       <div id="modeHint" class="mode-hint">Simple, helpful answers for everyday questions.</div>
+      <label id="researchOption" class="research-option" hidden><input id="liveResearchToggle" type="checkbox" disabled><span><b>Search live sources</b><small id="researchAvailability">Uses the free search quota; stops when it runs out.</small></span></label>
       <div id="conversation" class="conversation" aria-live="polite">
         <div id="welcomePanel" class="welcome-panel">
           <div class="welcome-orb">K</div><p class="eyebrow">Your space to think</p>
@@ -45,7 +46,7 @@
         </div>
       </div>
       <form id="chatForm" class="composer"><textarea id="messageInput" rows="1" maxlength="4000" placeholder="Message KAHRELUM ONE" aria-label="Message" required></textarea><button class="send-button" type="submit" aria-label="Send message">↑</button><div class="composer-meta"><span>Replies via Gemini · chats aren’t saved by KAHRELUM</span><span id="modeBadge">Everyday</span></div></form>
-      <p class="disclaimer">Messages are sent to Google Gemini to generate replies. Don’t share sensitive information. AI can make mistakes.</p>
+      <p class="disclaimer">Messages go to Google Gemini; live searches go to Tavily. Free-tier providers may use prompts to improve their services. Don’t share sensitive information.</p>
     </section>
   </main>
   <script src="/one/app.js" defer></script>
