@@ -1,0 +1,15 @@
+{
+  "name": "KAHRELUM ONE",
+  "short_name": "KAHRELUM",
+  "description": "A general-purpose assistant with optional evidence checks.",
+  "start_url": "/one/",
+  "scope": "/one/",
+  "display": "standalone",
+  "background_color": "#f6f5f2",
+  "theme_color": "#f6f5f2",
+  "icons": [
+    { "src": "/one/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/one/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/one/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
