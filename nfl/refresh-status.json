@@ -1,17 +1,22 @@
 {
   "schema": "KAHRELUM_REFRESH_STATUS_v1.0",
-  "lastAttemptAt": "2026-10-30T20:45:29Z",
-  "lastSuccessfulSourceCheckAt": "2026-10-30T20:45:29Z",
+  "lastAttemptAt": "2026-10-30T20:51:53Z",
+  "lastSuccessfulSourceCheckAt": "2026-10-30T20:51:53Z",
   "lastPublishedUpdateAt": "2026-10-30T15:12:12-04:00",
-  "feedFreshness": "FRESH",
+  "feedFreshness": "DEGRADED",
   "monitoringState": "DEADLINE_WINDOW_OPEN",
   "deadlineUtc": "2026-11-10T21:00:00Z",
   "sourcesAttempted": 5,
-  "sourcesSucceeded": 5,
-  "sourcesFailed": 0,
-  "observationsNew": 26,
-  "reviewQueueCount": 26,
+  "sourcesSucceeded": 4,
+  "sourcesFailed": 1,
+  "observationsNew": 3,
+  "reviewQueueCount": 29,
   "materialAlerts": [],
-  "errors": [],
+  "errors": [
+    {
+      "sourceIntegrationId": "ESPN_RSS",
+      "error": "OSError: HTTP 202"
+    }
+  ],
   "truthBoundary": "Source checks and publication are separate. A successful check does not mean every source was reviewed or any report was verified."
 }
