@@ -23,6 +23,12 @@ The beta includes a **Memory & instructions** panel. Custom instructions and up 
 
 Assistant answers are normalized to remove visible asterisk-style Markdown markers; lists use hyphens or numbering.
 
+## Beta pipeline execution boundary
+
+Everyday chat uses one Gemini request with quiet evidence and uncertainty guidance. The server-side ROUTER sends explicit verification/source requests, or a user-selected **KAHRELUM Check**, through an ordered beta review: a deterministic route and keyword-only AAIK exposure screen; optional Tavily SCOUT retrieval; SOURCEGRID mapping by publisher host; a Terra K-ALIGN/IPR pass; a separate Luna/BLACKGLASS-I counterevidence pass; then Sol CRF/COMMAND synthesis with a same-model BLACKGLASS-II self-audit. A SHA-256 response fingerprint is returned, but the preview has no durable RECORD LOCK store.
+
+All three review passes use the same Gemini model and provider. They are sequential responsibilities, not independent model verification and not the frozen KAHRELUM OS v2.3.4 runtime. A Check uses three Gemini requests; opting into live search adds one Tavily basic-search request. The beta uses no paid fallback and fails closed when a free-tier provider limit or service error prevents completion. Search remains user-opted-in to protect the monthly Tavily allowance.
+
 ## Deploy
 
 The existing `kahrelum-os` Vercel project is separate from the Firebase commercial site and has no `kahrelum.com` custom domain attached. A Vercel deployment makes this beta available at its Vercel host under `/one/`; it does not put the PWA on the commercial domain. Do not point the root domain or change Firebase hosting as part of this beta. A later custom subdomain can be connected after its DNS is verified.
