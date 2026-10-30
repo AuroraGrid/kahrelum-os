@@ -21,6 +21,7 @@ const OVERLAY_FILES = [
   'assurance.html',
   'investigations.html',
   'forecasting.html',
+  'election-challenge.html',
   'digital-id.html',
   'one.html',
   'os.html',
@@ -42,6 +43,7 @@ const OVERLAY_FILES = [
 
 const HTML_ROUTES = [
   '/', '/assurance', '/investigations', '/forecasting', '/digital-id', '/one', '/os',
+  '/election-challenge',
   '/pilot', '/demo', '/sample', '/connect', '/hasan', '/election-lab', '/election-live',
   '/election-count', '/election-method', '/election-showdown', '/election-comparison',
   '/nfl/trades', '/nfl/analysis',
@@ -53,6 +55,18 @@ const REQUIRED_REWRITES = {
   '/api/v1/example': '/data/api/v1/example.json',
 };
 const DIVISION_ROUTES = ['/assurance', '/investigations', '/forecasting', '/digital-id', '/one', '/os'];
+const RELEASE_PROFILES = {
+  full: {
+    overlayFiles: OVERLAY_FILES,
+    sitemapRoutes: [...DIVISION_ROUTES, '/election-lab', '/election-challenge', '/nfl/trades', '/nfl/analysis'],
+    includeHomepage: true,
+  },
+  'election-challenge': {
+    overlayFiles: ['forecasting.html', 'election-challenge.html'],
+    sitemapRoutes: ['/election-challenge'],
+    includeHomepage: false,
+  },
+};
 
 const sha256 = (value) => crypto.createHash('sha256').update(value).digest('hex');
 const stableMapHash = (value) => sha256(Buffer.from(JSON.stringify(Object.fromEntries(Object.entries(value).sort()))));
@@ -164,10 +178,10 @@ function replaceHomepageSection(home, fragment) {
   return Buffer.from(output, 'utf8');
 }
 
-function updateSitemap(xml) {
+function updateSitemap(xml, routes) {
   let output = xml;
   if (!output.includes('</urlset>')) fail('Live sitemap has no closing urlset element.');
-  for (const route of [...DIVISION_ROUTES, '/election-lab', '/nfl/trades', '/nfl/analysis']) {
+  for (const route of routes) {
     const url = DOMAIN + route;
     if (!output.includes(`<loc>${url}</loc>`)) {
       output = output.replace('</urlset>', `<url><loc>${url}</loc></url>\n</urlset>`);
@@ -188,12 +202,14 @@ function readRepositoryTextBytes(name) {
   return Buffer.from(text.replace(/\r?\n/g, '\r\n'), 'utf8');
 }
 
-async function buildOverlay(live) {
+async function buildOverlay(live, profileName) {
   assertHostingConfig(live.config);
+  const profile = RELEASE_PROFILES[profileName];
+  if (!profile) fail(`Unknown release profile: ${profileName}`);
   const desired = { ...live.fileMap };
   const blobs = {};
 
-  for (const name of OVERLAY_FILES) {
+  for (const name of profile.overlayFiles) {
     const source = path.join(ROOT, name);
     if (!fs.existsSync(source)) fail(`Repository overlay source is missing: ${name}`);
     addBlob(desired, blobs, '/' + name, readRepositoryTextBytes(name));
@@ -207,12 +223,14 @@ async function buildOverlay(live) {
     if (!forecast.includes(required)) fail(`Forecasting custody check failed for: ${required}`);
   }
 
-  const home = (await verifiedLiveFile(live, '/index.html', '/')).toString('utf8');
-  const fragment = fs.readFileSync(path.join(ROOT, 'hosting', 'homepage-divisions.html'), 'utf8');
-  addBlob(desired, blobs, '/index.html', replaceHomepageSection(home, fragment));
+  if (profile.includeHomepage) {
+    const home = (await verifiedLiveFile(live, '/index.html', '/')).toString('utf8');
+    const fragment = fs.readFileSync(path.join(ROOT, 'hosting', 'homepage-divisions.html'), 'utf8');
+    addBlob(desired, blobs, '/index.html', replaceHomepageSection(home, fragment));
+  }
 
   const sitemap = (await verifiedLiveFile(live, '/sitemap.xml', '/sitemap.xml')).toString('utf8');
-  addBlob(desired, blobs, '/sitemap.xml', updateSitemap(sitemap));
+  addBlob(desired, blobs, '/sitemap.xml', updateSitemap(sitemap, profile.sitemapRoutes));
 
   const changedPaths = Object.keys(desired).filter((item) => live.fileMap[item] !== desired[item]).sort();
   const removedPaths = Object.keys(live.fileMap).filter((item) => !(item in desired));
@@ -278,7 +296,7 @@ async function verifySurface(origin, expectedApiHashes) {
   return { origin, routes: checks, internalTargets: internal.size, apiHashes };
 }
 
-async function createPreview(hosting, client, live, overlay) {
+async function createPreview(hosting, client, live, overlay, profileName) {
   if (!overlay.changedPaths.length) fail('The overlay is already identical to production; no preview release is needed.');
   const versionName = await hosting.createVersion(SITE, {
     config: live.config,
@@ -312,6 +330,7 @@ async function createPreview(hosting, client, live, overlay) {
   const receipt = {
     createdAt: new Date().toISOString(),
     site: SITE,
+    releaseProfile: profileName,
     baseVersion: live.version.name,
     baseConfig: live.config,
     baseConfigHash: sha256(Buffer.from(JSON.stringify(live.config))),
@@ -370,6 +389,9 @@ async function promotePreview(hosting, client, live) {
 async function main() {
   const mode = process.argv[2] || '--plan';
   if (!['--plan', '--preview', '--promote'].includes(mode)) fail(`Unknown mode: ${mode}`);
+  const profileFlag = process.argv.indexOf('--profile');
+  const profileName = profileFlag === -1 ? 'full' : process.argv[profileFlag + 1];
+  if (!profileName || !RELEASE_PROFILES[profileName]) fail(`Unknown or missing release profile: ${profileName || '(missing)'}`);
   const { firebase, hosting, Client, hostingApiOrigin } = requireFirebaseTools();
   await firebase.projects.list({ json: true, nonInteractive: true });
   const client = new Client({ urlPrefix: hostingApiOrigin(), apiVersion: 'v1beta1', auth: true });
@@ -380,10 +402,11 @@ async function main() {
     return;
   }
 
-  const overlay = await buildOverlay(live);
+  const overlay = await buildOverlay(live, profileName);
   const summary = {
     mode: mode.slice(2).toUpperCase(),
     site: SITE,
+    releaseProfile: profileName,
     baseVersion: live.version.name,
     baseFileCount: live.files.length,
     desiredFileCount: Object.keys(overlay.desired).length,
@@ -395,7 +418,7 @@ async function main() {
     console.log(JSON.stringify(summary, null, 2));
     return;
   }
-  const receipt = await createPreview(hosting, client, live, overlay);
+  const receipt = await createPreview(hosting, client, live, overlay, profileName);
   console.log(JSON.stringify({ ...summary, previewUrl: receipt.previewUrl, previewVersion: receipt.previewVersion }, null, 2));
 }
 

@@ -36,6 +36,7 @@ jobs:
               "scripts/firebase-overlay-release.cjs",
               "assurance.html", "investigations.html", "forecasting.html",
               "digital-id.html", "one.html", "os.html", "election-lab.html",
+              "election-challenge.html",
               "election-lab-app.js", "election-lab-roster.json",
               "nfl/trades.html", "nfl/analysis.html", "nfl/trade-board.json",
               "nfl/sourcegrid.json", "nfl/source-observations.json", "nfl/review-queue.json",
@@ -84,6 +85,7 @@ jobs:
               "election-lab.html": "/election-lab",
               "nfl/trades.html": "/nfl/trades",
               "nfl/analysis.html": "/nfl/analysis",
+              "election-challenge.html": "/election-challenge",
           }
           for filename, route in overlay_pages.items():
               page = Metadata()

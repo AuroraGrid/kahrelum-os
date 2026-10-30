@@ -4,7 +4,9 @@ param(
     [switch]$Preview,
     [switch]$Promote,
     [switch]$Deploy,
-    [string]$FirebaseRoot
+    [string]$FirebaseRoot,
+    [ValidateSet("full", "election-challenge")]
+    [string]$Profile = "full"
 )
 
 $ErrorActionPreference = "Stop"
@@ -36,7 +38,7 @@ $mode = "--plan"
 if ($Preview) { $mode = "--preview" }
 if ($Promote) { $mode = "--promote" }
 
-& $node.Source $script $mode
+& $node.Source $script $mode --profile $Profile
 if ($LASTEXITCODE -ne 0) {
     throw "Firebase overlay release failed with exit code $LASTEXITCODE."
 }

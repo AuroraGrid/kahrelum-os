@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f4efe6">
+  <title>2026 Election Forecast Challenge | KAHRELUM</title>
+  <meta name="description" content="A source-linked, pre-election record of KAHRELUM forecasts and 14 public challengers, with original cutoffs, model editions and scoring limits preserved.">
+  <link rel="canonical" href="https://kahrelum.com/election-challenge">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kahrelum.com/election-challenge">
+  <meta property="og:title" content="2026 Election Forecast Challenge | KAHRELUM">
+  <meta property="og:description" content="Original forecasts, later research editions, source custody and scoreable outcomes kept in one auditable record.">
+  <link rel="stylesheet" href="/divisions.css">
+  <style>
+    .status-row{display:flex;flex-wrap:wrap;gap:.55rem;margin:1.2rem 0}.status{display:inline-flex;align-items:center;gap:.35rem;padding:.42rem .7rem;border:1px solid #9e917c;border-radius:999px;background:#fffaf0;font-size:.8rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}.status.pending{border-color:#b57622;color:#6d4107}.status.verified{border-color:#3d7660;color:#24513f}.forecast-strip{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1.4rem 0}.forecast-card{padding:1.25rem;border:1px solid #c8bcaa;border-radius:14px;background:#fffdf8}.forecast-card .value{font-size:clamp(2rem,6vw,4rem);font-weight:800;letter-spacing:-.05em;line-height:1}.forecast-card h2{font-size:1.1rem;margin:.35rem 0}.model-tag{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.76rem;color:#5d5549}.table-wrap{overflow-x:auto;border:1px solid #c8bcaa;border-radius:12px;background:#fffdf8;margin:1rem 0 1.4rem}.challenge-table{width:100%;border-collapse:collapse;min-width:780px}.challenge-table th,.challenge-table td{padding:.75rem .7rem;border-bottom:1px solid #ded5c6;text-align:left;vertical-align:top}.challenge-table th{position:sticky;top:0;background:#28231d;color:#fff;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase}.challenge-table td:nth-child(2),.challenge-table td:nth-child(3){font-variant-numeric:tabular-nums;white-space:nowrap}.challenge-table tr:last-child td{border-bottom:0}.missing{color:#786f62;font-style:italic}.caution{padding:1rem 1.1rem;border-left:4px solid #b57622;background:#fff5e4}.method-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.8rem}.method-grid article{padding:1rem;border:1px solid #c8bcaa;border-radius:12px;background:#fffdf8}.method-grid h3{margin-top:0}.hash{overflow-wrap:anywhere;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.78rem}.share-line{font-size:1.08rem;font-weight:700;max-width:46rem}.score-gate{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center;padding:1rem;border:1px solid #c8bcaa;border-radius:12px;background:#fffdf8}.score-gate strong{color:#7b4300}.fine{font-size:.82rem;color:#6a6257}@media(max-width:800px){.forecast-strip,.method-grid{grid-template-columns:1fr 1fr}.score-gate{grid-template-columns:1fr}.challenge-table{min-width:680px}}@media(max-width:520px){.forecast-strip,.method-grid{grid-template-columns:1fr}.forecast-card .value{font-size:2.65rem}.table-wrap{margin-left:-.8rem;margin-right:-.8rem;border-radius:0}.challenge-table{min-width:620px}.hero{padding-top:2rem}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="/">KAHRELUM</a>
+    <nav aria-label="Main navigation"><a href="/">Home</a><a href="/forecasting">Forecasting</a><a href="/election-challenge" aria-current="page">Election Challenge</a><a href="/election-lab">Election Lab</a><a href="/os">OS &amp; Method</a><a href="/pilot">Pilot</a></nav>
+  </header>
+  <main>
+    <div class="hero">
+      <p class="eyebrow">2026 United States election / evidence checkpoint</p>
+      <h1>The forecast is recorded before the score.</h1>
+      <p class="lede">KAHRELUM is tracking its original House and Senate calls beside 14 public challengers. Every edition, cutoff and missing source stays visible. No forecaster is declared the winner while outcomes remain unresolved or methodologically incomparable.</p>
+      <div class="status-row"><span class="status pending">Outcome pending</span><span class="status verified">Evidence checkpoint verified</span><span class="status">Model skill unvalidated</span></div>
+      <p class="asof">Public comparison edition: 2026-10-30. Election cutoff: 2026-11-03 00:00 EST (05:00 UTC). Official certification and scoreability remain pending.</p>
+    </div>
+
+    <section aria-labelledby="original-locks">
+      <p class="eyebrow">Original research locks</p>
+      <h2 id="original-locks">The two original calls remain unchanged</h2>
+      <div class="forecast-strip">
+        <article class="forecast-card"><div class="model-tag">v0.1_HOUSE / created 2026-10-29 13:11 EDT</div><div class="value">91%</div><h2>Democratic House control</h2><p>228.02 expected Democratic seats. This manually preserved headline has its own cutoff and is not silently replaced by the later computed run.</p></article>
+        <article class="forecast-card"><div class="model-tag">v0.1_SENATE / created 2026-10-29 22:17 EDT / inputs through 2026-10-20</div><div class="value">46.090647%</div><h2>Democratic-caucus Senate control</h2><p>50.229989 expected Democratic-caucus seats. The scoring rule requires 51 seats; a 50-seat result resolves NO under this lock.</p></article>
+      </div>
+      <div class="caution"><strong>Different information cutoffs:</strong> the House and Senate records were created at different times from different inputs. They must not be treated as one synchronized model release.</div>
+    </section>
+
+    <section aria-labelledby="version-history">
+      <p class="eyebrow">Version history</p>
+      <h2 id="version-history">Later computation and sensitivity scenarios</h2>
+      <div class="table-wrap"><table class="challenge-table"><thead><tr><th>Record</th><th>Probability</th><th>Expected seats</th><th>Meaning</th></tr></thead><tbody>
+        <tr><td>House original research lock</td><td>91.000000%</td><td>228.02</td><td>Preserved headline; remains the original record.</td></tr>
+        <tr><td>House Oct. 30 computed run</td><td>90.574505%</td><td>228.02</td><td>Fresh execution of inherited assumptions using the Oct. 23 rating edition; separate later result.</td></tr>
+        <tr><td>Senate baseline lock</td><td>46.090647%</td><td>50.229990</td><td>Original baseline; assumptions were not estimated from long-run Senate calibration data.</td></tr>
+        <tr><td>Senate +0.15 probit shift</td><td>58.032694%</td><td>51.008946</td><td>Alternative national-shift sensitivity; not an adopted replacement.</td></tr>
+        <tr><td>Senate +0.30 probit shift</td><td>69.276125%</td><td>51.785777</td><td>Alternative national-shift sensitivity; not an adopted replacement.</td></tr>
+      </tbody></table></div>
+    </section>
+
+    <section aria-labelledby="challengers">
+      <p class="eyebrow">Source-linked field</p>
+      <h2 id="challengers">KAHRELUM and 14 tracked challengers</h2>
+      <p>Numbers below are dated research observations from the named publisher pages. A blank means no first-party numerical top line was verified for that chamber. The current strict comparable-admission count is <strong>zero</strong> because source custody, cutoff matching and event-rule equivalence are still incomplete.</p>
+      <div class="table-wrap"><table class="challenge-table"><thead><tr><th>Provider / edition</th><th>House D control</th><th>Senate D control</th><th>Publisher edition</th><th>Evidence note</th></tr></thead><tbody>
+        <tr><td><strong>KAHRELUM</strong> / original locks</td><td>91.0%</td><td>46.090647%</td><td>Oct. 29, separate cutoffs</td><td>Self-attested internal locks; third-party checkpoint was created later.</td></tr>
+        <tr><td><a href="https://votes.decisiondeskhq.com/forecast/2026">Decision Desk HQ</a> / DDHQ 2026</td><td>80.0%</td><td>60.0%</td><td>Oct. 29, 14:25 EDT observation</td><td>Dated edition; later live pages may differ.</td></tr>
+        <tr><td><a href="https://99chambers.app/updates/2026-10-30">99chambers</a> / Horizon</td><td>97.0%</td><td>78.0%</td><td>Oct. 30</td><td>Pulse is a second model edition, not another challenger.</td></tr>
+        <tr><td><a href="https://www.callthemap.com/house">CalltheMap</a> / Main</td><td>84.0%</td><td>58.0%</td><td>Oct. 29</td><td>Senate page showed an edition ambiguity in the preserved review.</td></tr>
+        <tr><td><a href="https://chasecoyne.com/house">COYNTOSS</a> / House Beta</td><td>80.54%</td><td>69.1%</td><td>Oct. 29; House inputs Oct. 18</td><td>House model was labeled provisional.</td></tr>
+        <tr><td><a href="https://scrutinel.com/">Scrutinel</a> / Main</td><td>91.0%</td><td>65.0%</td><td>Oct. 30, 05:29 EDT</td><td>Independent-caucus and expected-seat semantics need matching.</td></tr>
+        <tr><td><a href="https://www.economist.com/">The Economist</a> / Forecast</td><td class="missing">Not verified</td><td class="missing">Not verified</td><td>Oct. 25 reference</td><td>Secondary numerical observations excluded.</td></tr>
+        <tr><td><a href="https://www.natesilver.net/p/nate-silver-2026-midterm-election-polls-model">Silver Bulletin</a> / FLIPR</td><td class="missing">Not verified</td><td class="missing">Not verified</td><td>Oct. 29 method page</td><td>No paywall bypass; no primary numerical top line admitted.</td></tr>
+        <tr><td><a href="https://vote-scope.com/en/us/house/">Vote-Scope</a> / House Model</td><td>93.0%</td><td class="missing">Not verified</td><td>Oct. 29; inputs Oct. 27</td><td>238 is the median; 231 favored seats is a different quantity.</td></tr>
+        <tr><td><a href="https://electindex.com/forecasts/">ElectIndex</a> / Main</td><td class="missing">Not verified</td><td class="missing">Not verified</td><td>Oct. 30 page</td><td>Dynamic source did not yield an authenticated numerical extract.</td></tr>
+        <tr><td><a href="https://datumsignals.com/">Datum Signals</a> / Main</td><td>70.0%</td><td>64.0%</td><td>Oct. 29, 16:01 UTC</td><td>Favored-seat count is not an expected-seat forecast.</td></tr>
+        <tr><td><a href="https://fredcornell.com/us/house">Fred Cornell independent</a> / House Beta</td><td>99.0%</td><td>69.0%</td><td>Oct. 30</td><td>Senate party-seat definition may differ from caucus control.</td></tr>
+        <tr><td><a href="https://kevinmdeluca.com/forecast/class/">Yale PLSC 2219 class model</a> / fundamentals</td><td>96.0%</td><td>43.0%</td><td>Oct. 29</td><td>Class fundamentals model; 50 Senate seats resolves Republican under its stated rule.</td></tr>
+        <tr><td><a href="https://x.com/sb4liberty">Sam Brown</a> / provisional map</td><td class="missing">No probability</td><td class="missing">No probability</td><td>Oct. 27 secondary record</td><td>227 D / 208 R map only; original post and timestamp remain unauthenticated.</td></tr>
+        <tr><td><a href="https://x.com/BlackLabelAdvsr">Jon Elder</a> / qualitative post</td><td class="missing">No probability</td><td class="missing">No probability</td><td class="missing">Exact time unverified</td><td>Directional commentary only; original post URL and meaning of "10+" remain unresolved.</td></tr>
+      </tbody></table></div>
+      <p class="fine">Probabilities are displayed as publisher-attributed research observations. They are not investment prices, KAHRELUM endorsements or proof of equivalent targets.</p>
+    </section>
+
+    <section aria-labelledby="custody">
+      <p class="eyebrow">Evidence custody</p>
+      <h2 id="custody">What the timestamp evidence proves</h2>
+      <div class="grid">
+        <article class="card"><h3>Release identity</h3><p>KAHRELUM Prediction Command v0.5.2 verified ZIP:</p><p class="hash">60c9d6e6903283c2bdc77c51ecb9b92d51390b17f2c534f6748260ca09f81d1c</p><p>Oct. 30 execution package verified ZIP:</p><p class="hash">cc635a8fabf962769ab3c6620c97282b8459ed0693045acb7e616d7d2b9f3d65</p></article>
+        <article class="card"><h3>Independent checkpoint</h3><p>An OpenTimestamps proof anchors the checkpoint digest to Bitcoin block 973844, whose independently cross-checked block time is 2026-10-30 16:18:01 UTC. A FreeTSA receipt signed the execution manifest at 2026-10-30 17:23:23 UTC.</p><p class="fine">These receipts prove the checkpoint existed by their actual receipt times. They do not backdate or independently prove the earlier self-attested creation times.</p></article>
+      </div>
+    </section>
+
+    <section aria-labelledby="scoring">
+      <p class="eyebrow">Resolution and accountability</p>
+      <h2 id="scoring">Scores remain gated on comparable, certified outcomes</h2>
+      <div class="score-gate"><div><strong>Current state: pending.</strong> Projections, partial counts and market prices do not close the record. Certification, target equivalence and first-party forecast evidence must pass before a leaderboard is published.</div><span class="status pending">No winner declared</span></div>
+      <div class="method-grid">
+        <article><h3>Brier score</h3><p>For a binary probability <em>p</em> and outcome <em>y</em>: (p &minus; y)<sup>2</sup>. Lower is better. Only forecasts with the same resolved proposition qualify.</p></article>
+        <article><h3>Log loss</h3><p>&minus;[y ln(p) + (1 &minus; y) ln(1 &minus; p)]. Extreme, wrong confidence is penalized heavily. Probability clipping rules must be fixed before scoring.</p></article>
+        <article><h3>Seat-count error</h3><p>Absolute error between the forecast seat statistic and the certified total, while preserving whether the source published a mean, median, map or favored-seat count.</p></article>
+        <article><h3>District comparison</h3><p>Score only districts with authenticated pre-cutoff probabilities and matched candidate/event definitions. A 50% toss-up is not counted as a correct directional call.</p></article>
+      </div>
+      <div class="boundary">Two chamber outcomes cannot establish general calibration or universal superiority. Unlike cutoffs are descriptive unless a matched-cutoff analysis is available. Missing records, exclusions, corrections and unfavorable results remain part of the audit.</div>
+    </section>
+
+    <section aria-labelledby="share">
+      <p class="eyebrow">Shareable statement</p>
+      <h2 id="share">The public challenge</h2>
+      <p class="share-line">KAHRELUM locked its calls, preserved the later variants, and will score every eligible model under the same published rules after certification. The evidence record stays visible whichever forecast performs best.</p>
+      <div class="buttons"><a class="btn primary" href="/forecasting">Forecasting &amp; Intelligence</a><a class="btn" href="/election-method">Resolution method</a><a class="btn" href="/election-live">Live election record</a></div>
+    </section>
+  </main>
+  <footer><p>Independent, operator-assisted research and evidence review. Not a certification, guaranteed forecast, betting recommendation or proof of predictive superiority.</p><p>&copy; 2026 KAHRELUM &middot; <a href="mailto:hasan@kahrelum.com">hasan@kahrelum.com</a> &middot; <a href="https://github.com/AuroraGrid/kahrelum-os">Public evidence repository</a></p></footer>
+</div>
+</body>
+</html>
