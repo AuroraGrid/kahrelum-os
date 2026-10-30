@@ -67,6 +67,15 @@ const RELEASE_PROFILES = {
     sitemapRoutes: ['/election-challenge'],
     includeHomepage: false,
   },
+  'sports-intelligence': {
+    overlayFiles: [
+      'nfl/trades.html', 'nfl/sourcegrid.json', 'nfl/source-observations.json',
+      'nfl/review-queue.json', 'nfl/refresh-status.json', 'nfl/public-feed.json',
+      'nfl/forecast-ledger.json', 'nfl/deadline-audit.json', 'nfl/publishing.json',
+    ],
+    sitemapRoutes: ['/nfl/trades', '/nfl/analysis'],
+    includeHomepage: false,
+  },
 };
 
 const sha256 = (value) => crypto.createHash('sha256').update(value).digest('hex');
@@ -286,7 +295,7 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
       nflData.sourceAccountability?.certifiedMeanBrier !== null) {
     fail('NFL trade board data integrity or forecast-certification boundary failed.');
   }
-  if (profileName === 'full') {
+  if (['full', 'sports-intelligence'].includes(profileName)) {
     const [sourcegrid, status, ledger, audit, publicFeed, publishing] = await Promise.all([
       '/nfl/sourcegrid.json', '/nfl/refresh-status.json', '/nfl/forecast-ledger.json',
       '/nfl/deadline-audit.json', '/nfl/public-feed.json', '/nfl/publishing.json',

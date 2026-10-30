@@ -5,7 +5,7 @@ param(
     [switch]$Promote,
     [switch]$Deploy,
     [string]$FirebaseRoot,
-    [ValidateSet("full", "election-challenge")]
+    [ValidateSet("full", "election-challenge", "sports-intelligence")]
     [string]$Profile = "full"
 )
 
