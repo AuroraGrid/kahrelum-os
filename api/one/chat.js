@@ -37,7 +37,7 @@ module.exports=async function handler(req,res){
   try{
     const upstream=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':key},body:JSON.stringify({systemInstruction:{parts:[{text:mode==='check'?CHECK_PROMPT:EVERYDAY_PROMPT}]},generationConfig:{temperature:0.6,maxOutputTokens:1200},contents:normalized})});
     const data=await upstream.json();
-    if(!upstream.ok)return send(res,502,{error:upstream.status===429?'The model’s free-tier request limit has been reached. Try again later.':'The assistant provider returned an error. Try again shortly.'});
+    if(!upstream.ok){console.error('KAHRELUM ONE Gemini upstream error',upstream.status,data?.error?.status||'unknown');return send(res,502,{error:upstream.status===429?'The model’s free-tier request limit has been reached. Try again later.':`Gemini request failed (HTTP ${upstream.status}). Check the API key, model access, and free-tier quota.`});}
     const answer=data.candidates?.[0]?.content?.parts?.map(part=>part.text||'').join('').trim();
     if(!answer)return send(res,502,{error:'The assistant returned an empty answer. Please try again.'});
     return send(res,200,{answer,sources:sources.map(({title,url})=>({title,url}))});
