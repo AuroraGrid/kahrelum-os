@@ -116,6 +116,15 @@ async function readLiveState(hosting, client) {
   };
 }
 
+async function createRelease(client, channel, versionName, partialRelease) {
+  const siteResource = versionName.replace(/\/versions\/[^/]+$/, '');
+  if (!/^projects\/[^/]+\/sites\/[^/]+$/.test(siteResource)) fail(`Invalid Firebase version resource: ${versionName}`);
+  const response = await client.post(`/${siteResource}/channels/${channel}/releases`, partialRelease, {
+    queryParams: { versionName },
+  });
+  return response.body;
+}
+
 async function verifiedLiveFile(live, hostingPath, publicPath) {
   const expected = live.fileMap[hostingPath];
   if (!expected) fail(`Live Firebase inventory does not contain ${hostingPath}.`);
@@ -278,7 +287,7 @@ async function createPreview(hosting, client, live, overlay) {
     if (error.status !== 404) throw error;
     channel = await hosting.createChannel('-', SITE, CHANNEL, 24 * 60 * 60 * 1000);
   }
-  await hosting.createRelease(SITE, CHANNEL, versionName, {
+  await createRelease(client, CHANNEL, versionName, {
     message: `Safe overlay preview based on ${live.version.name}`,
   });
   channel = await hosting.getChannel('-', SITE, CHANNEL);
@@ -319,7 +328,7 @@ async function promotePreview(hosting, client, live) {
   const finalLiveCheck = await hosting.getChannel('-', SITE, 'live');
   if (finalLiveCheck?.release?.version?.name !== receipt.baseVersion) fail('Production changed during promotion checks. Prepare a new preview.');
 
-  const release = await hosting.createRelease(SITE, 'live', receipt.previewVersion, {
+  const release = await createRelease(client, 'live', receipt.previewVersion, {
     message: `Promote verified safe overlay ${receipt.previewVersion.split('/').pop()}`,
   });
   const released = await hosting.getChannel('-', SITE, 'live');
