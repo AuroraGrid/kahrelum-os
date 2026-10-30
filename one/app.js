@@ -6,13 +6,27 @@ const input = $('#messageInput');
 const conversation = $('#conversation');
 const welcomePanel = $('#welcomePanel');
 const installButton = $('#installButton');
+const preferencesButton = $('#preferencesButton');
+const preferencesDialog = $('#preferencesDialog');
+const PERSONALIZATION_KEY = 'kahrelum-one-personalization-v1';
+let personalization = { instructions: '', memories: [] };
 let deferredInstall = null;
 let verificationMode = false;
 let liveResearchAvailable = false;
 let turns = [];
 
-function showChat() { inviteScreen.hidden = true; chatScreen.hidden = false; $('#newChatButton').hidden = false; input.focus(); }
-function showInvite() { chatScreen.hidden = true; inviteScreen.hidden = false; $('#newChatButton').hidden = true; }
+function showChat() { inviteScreen.hidden = true; chatScreen.hidden = false; $('#newChatButton').hidden = false; preferencesButton.hidden = false; input.focus(); }
+function showInvite() { chatScreen.hidden = true; inviteScreen.hidden = false; $('#newChatButton').hidden = true; preferencesButton.hidden = true; }
+
+function loadPersonalization() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(PERSONALIZATION_KEY) || '{}');
+    personalization = {
+      instructions: typeof saved.instructions === 'string' ? saved.instructions.slice(0, 2000) : '',
+      memories: Array.isArray(saved.memories) ? saved.memories.filter(item => typeof item === 'string').slice(0, 15).map(item => item.slice(0, 200)) : []
+    };
+  } catch { personalization = { instructions: '', memories: [] }; }
+}
 async function checkSession() {
   try {
     const response = await fetch('/api/one/session', { credentials: 'same-origin' });
@@ -31,7 +45,8 @@ $('#inviteForm').addEventListener('submit', async event => {
     const response = await fetch('/api/one/redeem', { method: 'POST', credentials: 'same-origin', headers: {'Content-Type':'application/json'}, body: JSON.stringify({code}) });
     const payload = await response.json();
     if (!response.ok) throw new Error(payload.error || 'That code could not be redeemed.');
-    $('#inviteCode').value = ''; showChat();
+    $('#inviteCode').value = ''; await loadPersonalization();
+checkSession();
   } catch (error) { note.textContent = error.message === 'Failed to fetch' ? 'The assistant service is not connected yet. Try again shortly.' : error.message; }
   finally { button.disabled = false; button.innerHTML = 'Continue <span aria-hidden="true">→</span>'; }
 });
@@ -42,7 +57,7 @@ function setMode(enabled) {
   $('#modeToggle').setAttribute('aria-pressed', String(enabled));
   $('#modeName').textContent = enabled ? 'KAHRELUM Check' : 'Everyday';
   $('#modeBadge').textContent = enabled ? 'KAHRELUM Check' : 'Everyday';
-  $('#modeHint').textContent = enabled ? 'Separate what the evidence shows from inference, gaps, and uncertainty.' : 'Simple, helpful answers for everyday questions.';
+  $('#modeHint').textContent = enabled ? 'Three ordered Gemini passes align evidence, challenge it, then synthesize. Search is optional; free-tier limits apply.' : 'Simple, helpful answers for everyday questions.';
   $('#researchOption').hidden = !enabled;
   $('#liveResearchToggle').disabled = !liveResearchAvailable;
   $('#researchAvailability').textContent = liveResearchAvailable ? 'Searches DuckDuckGo for this question. Free, best-effort; may be rate-limited.' : 'Live search is not configured on this beta yet.';
@@ -58,11 +73,11 @@ function addError(message) { const el = document.createElement('div'); el.classN
 async function send(text) {
   const clean = text.trim(); if (!clean) return;
   addMessage('user', clean); input.value = ''; input.style.height = 'auto';
-  const pending = addMessage('assistant', 'Thinking…');
+  const pending = addMessage('assistant', verificationMode ? 'Routing, aligning evidence, and challenging the answer…' : 'Thinking…');
   const button = $('.send-button'); button.disabled = true;
   const history = [...turns, {role:'user', content:clean}].slice(-12);
   try {
-    const response = await fetch('/api/one/chat', {method:'POST', credentials:'same-origin', headers:{'Content-Type':'application/json'}, body:JSON.stringify({messages:history, mode:verificationMode?'check':'everyday', liveResearch:verificationMode&&liveResearchAvailable&&$('#liveResearchToggle').checked})});
+    const response = await fetch('/api/one/chat', {method:'POST', credentials:'same-origin', headers:{'Content-Type':'application/json'}, body:JSON.stringify({messages:history, mode:verificationMode?'check':'everyday', liveResearch:verificationMode&&liveResearchAvailable&&$('#liveResearchToggle').checked, customInstructions:personalization.instructions, memories:personalization.memories})});
     const payload = await response.json();
     if (response.status === 401) { pending.remove(); showInvite(); throw new Error('Your access session ended. Enter your invite code again.'); }
     if (!response.ok) throw new Error(payload.error || 'The assistant could not answer right now.');
@@ -75,6 +90,17 @@ async function send(text) {
       });
       pending.append(list);
     }
+    if(payload.pipeline&&Array.isArray(payload.pipeline.stages)){
+      const trace=document.createElement('details');trace.className='review-trace';
+      const summary=document.createElement('summary');summary.textContent='KAHRELUM Check review trail';trace.append(summary);
+      const stages=document.createElement('ol');
+      payload.pipeline.stages.forEach(stage=>{const item=document.createElement('li');item.textContent=stage.name+': '+stage.detail;stages.append(item);});
+      trace.append(stages);
+      const limitation=document.createElement('p');limitation.textContent='Beta limitation: all review passes use the same Gemini model. This is not independent multi-model verification, and the server does not retain an immutable record.';
+      trace.append(limitation);
+      if(payload.pipeline.responseFingerprint){const fingerprint=document.createElement('code');fingerprint.textContent='Response fingerprint: '+payload.pipeline.responseFingerprint;trace.append(fingerprint);}
+      pending.append(trace);
+    }
     turns = [...history, {role:'assistant', content:payload.answer}].slice(-12);
   } catch(error) { pending.remove(); addError(error.message); }
   finally { button.disabled = false; input.focus(); }
@@ -84,6 +110,41 @@ input.addEventListener('input', () => {input.style.height='auto'; input.style.he
 input.addEventListener('keydown', event => { if(event.key==='Enter'&&!event.shiftKey){event.preventDefault(); form.requestSubmit();} });
 document.querySelectorAll('[data-prompt]').forEach(button => button.addEventListener('click', () => send(button.dataset.prompt)));
 $('#newChatButton').addEventListener('click', () => {turns=[]; conversation.replaceChildren(welcomePanel); welcomePanel.hidden=false; input.focus();});
+
+preferencesButton.addEventListener('click', () => {
+  $('#customInstructions').value = personalization.instructions;
+  $('#memoryInput').value = personalization.memories.join('\n');
+  $('#preferencesStatus').textContent = '';
+  preferencesDialog.showModal();
+  $('#customInstructions').focus();
+});
+$('#closePreferencesButton').addEventListener('click', () => preferencesDialog.close());
+$('#cancelPreferencesButton').addEventListener('click', () => preferencesDialog.close());
+$('#preferencesForm').addEventListener('submit', event => {
+  event.preventDefault();
+  const memories = $('#memoryInput').value.split(/\r?\n/).map(item => item.trim()).filter(Boolean).slice(0, 15).map(item => item.slice(0, 200));
+  const next = { instructions: $('#customInstructions').value.trim().slice(0, 2000), memories };
+  try {
+    localStorage.setItem(PERSONALIZATION_KEY, JSON.stringify(next));
+    personalization = next;
+    $('#preferencesStatus').textContent = 'Saved on this device. It will apply to your next message.';
+    window.setTimeout(() => preferencesDialog.close(), 600);
+  } catch {
+    $('#preferencesStatus').textContent = 'Could not save in this browser. Check your storage settings and try again.';
+  }
+});
+$('#forgetAllButton').addEventListener('click', () => {
+  if (!window.confirm('Forget all saved instructions and memories on this device?')) return;
+  try {
+    localStorage.removeItem(PERSONALIZATION_KEY);
+    personalization = { instructions: '', memories: [] };
+    $('#customInstructions').value = '';
+    $('#memoryInput').value = '';
+    $('#preferencesStatus').textContent = 'Saved details forgotten on this device.';
+  } catch {
+    $('#preferencesStatus').textContent = 'Could not clear saved details in this browser.';
+  }
+});
 window.addEventListener('beforeinstallprompt', event => {event.preventDefault();deferredInstall=event;installButton.hidden=false;});
 installButton.addEventListener('click', async () => { if(!deferredInstall)return; deferredInstall.prompt(); await deferredInstall.userChoice; deferredInstall=null; installButton.hidden=true; });
 if('serviceWorker' in navigator) navigator.serviceWorker.register('/one/sw.js').catch(()=>{});
