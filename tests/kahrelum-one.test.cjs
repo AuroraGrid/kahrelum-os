@@ -21,6 +21,12 @@ test('invite redemption and signed session enforce server-side access',async t=>
  res=response();await session(req('GET',{}, {cookie:`k1_session=${token}`}),res);assert.equal(res.statusCode,200);
  const tampered=token.slice(0,-1)+(token.endsWith('a')?'b':'a');res=response();await session(req('GET',{}, {cookie:`k1_session=${tampered}`}),res);assert.equal(res.statusCode,401);
 });
+test('existing Vercel ONE_* secrets can configure the invite gate without new secret names',async t=>{
+ t.after(()=>{process.env={...old}});
+ delete process.env.KAHRELUM_ONE_SESSION_SECRET;delete process.env.KAHRELUM_ONE_INVITE_HASHES;
+ process.env.ONE_SESSION_SECRET=secret;process.env.ONE_INVITES_JSON=JSON.stringify([{sha256:hash}]);
+ const res=response();await redeem(req('POST',{code}),res);assert.equal(res.statusCode,200);
+});
 test('chat API rejects browser-only authorization and sends valid turns only through configured backend',async t=>{
  t.after(()=>{process.env={...old};global.fetch=originalFetch});
  process.env.KAHRELUM_ONE_SESSION_SECRET=secret;process.env.KAHRELUM_ONE_INVITE_HASHES=hash;
