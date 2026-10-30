@@ -65,10 +65,33 @@ test('live research is explicit, free-tier basic search, cited, and fails closed
   return{ok:true,json:async()=>({candidates:[{content:{parts:[{text:'The update says this [1].'}]}}]})};
  };
  res=response();await chat(req('POST',{messages:[{role:'user',content:'What changed today?'}],mode:'check',liveResearch:true},{cookie:`k1_session=${token}`}),res);
- assert.equal(res.statusCode,200);assert.deepEqual(calls,['https://api.tavily.com/search',calls[1]]);assert.equal(res.body.sources[0].url,'https://example.org/current');assert.match(res.body.answer,/\[1\]/);
+ assert.equal(res.statusCode,200);assert.equal(calls.length,4);assert.equal(calls[0],'https://api.tavily.com/search');assert.ok(calls.slice(1).every(url=>url.startsWith('https://generativelanguage.googleapis.com/')));assert.equal(res.body.sources[0].url,'https://example.org/current');assert.match(res.body.answer,/\[1\]/);assert.equal(res.body.pipeline.reviewPasses,3);
  calls=[];global.fetch=async url=>{calls.push(url);return{ok:false,status:429,json:async()=>({})}};
  res=response();await chat(req('POST',{messages:[{role:'user',content:'What changed today?'}],mode:'check',liveResearch:true},{cookie:`k1_session=${token}`}),res);
  assert.equal(res.statusCode,503);assert.match(res.body.error,/quota is exhausted/);assert.deepEqual(calls,['https://api.tavily.com/search']);
+});
+test('router sends explicit verification requests through ordered staged review passes',async t=>{
+ t.after(()=>{process.env={...old};global.fetch=originalFetch});
+ process.env.KAHRELUM_ONE_SESSION_SECRET=secret;process.env.KAHRELUM_ONE_INVITE_HASHES=hash;process.env.GEMINI_API_KEY='test-gemini';
+ delete process.env.TAVILY_API_KEY;
+ const originalFetch=global.fetch,token=signedToken(),prompts=[],stageInputs=[];
+ global.fetch=async(url,options)=>{
+  assert.ok(url.startsWith('https://generativelanguage.googleapis.com/'));
+  const body=JSON.parse(options.body);prompts.push(body.systemInstruction.parts[0].text);stageInputs.push(body.contents.at(-1).parts[0].text);
+  const n=prompts.length;
+  return{ok:true,json:async()=>({candidates:[{content:{parts:[{text:n===1?'Evidence map: one claim is unverified.':n===2?'Countercase: the evidence has a gap.':'**Conclusion.**'}]}}]})};
+ };
+ const res=response();
+ await chat(req('POST',{messages:[{role:'user',content:'Verify whether this claim is true.'}],mode:'everyday'},{cookie:'k1_session='+token}),res);
+ assert.equal(res.statusCode,200);assert.equal(prompts.length,3);
+ assert.match(prompts[0],/Terra evidence-alignment pass/);
+ assert.match(prompts[1],/Blackglass-I adversarial pass/);
+ assert.match(prompts[2],/Sol\/Command synthesis/);
+ assert.match(stageInputs[1],/Evidence map/);assert.match(stageInputs[2],/Countercase/);
+ assert.equal(res.body.answer,'Conclusion.');
+ assert.equal(res.body.pipeline.route,'check');assert.equal(res.body.pipeline.reviewPasses,3);
+ assert.equal(res.body.pipeline.recordRetention,'not persisted by server');
+ assert.match(res.body.pipeline.responseFingerprint,/^[a-f0-9]{64}$/);
 });
 test('PWA manifest includes Android-sized install icons and a scoped standalone start URL',()=>{
  const manifest=JSON.parse(fs.readFileSync(path.join(__dirname,'../one/manifest.webmanifest'),'utf8'));
