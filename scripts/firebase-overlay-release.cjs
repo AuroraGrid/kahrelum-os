@@ -27,12 +27,15 @@ const OVERLAY_FILES = [
   'election-lab.html',
   'election-lab-app.js',
   'election-lab-roster.json',
+  'nfl/trades.html',
+  'nfl/trade-board.json',
 ];
 
 const HTML_ROUTES = [
   '/', '/assurance', '/investigations', '/forecasting', '/digital-id', '/one', '/os',
   '/pilot', '/demo', '/sample', '/connect', '/hasan', '/election-lab', '/election-live',
   '/election-count', '/election-method', '/election-showdown', '/election-comparison',
+  '/nfl/trades',
 ];
 const API_ROUTES = ['/api/v1', '/api/v1/release', '/api/v1/example'];
 const REQUIRED_REWRITES = {
@@ -146,7 +149,7 @@ function replaceHomepageSection(home, fragment) {
 function updateSitemap(xml) {
   let output = xml;
   if (!output.includes('</urlset>')) fail('Live sitemap has no closing urlset element.');
-  for (const route of [...DIVISION_ROUTES, '/election-lab']) {
+  for (const route of [...DIVISION_ROUTES, '/election-lab', '/nfl/trades']) {
     const url = DOMAIN + route;
     if (!output.includes(`<loc>${url}</loc>`)) {
       output = output.replace('</urlset>', `<url><loc>${url}</loc></url>\n</urlset>`);
