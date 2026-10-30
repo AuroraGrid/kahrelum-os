@@ -231,6 +231,12 @@ async function verifySurface(origin, expectedApiHashes) {
     checks.push({ route, status: 200, sha256: sha256(bytes) });
   }
 
+  const nflData = JSON.parse((await fetchBytes(origin + '/nfl/trade-board.json')).toString('utf8'));
+  if (!Array.isArray(nflData.candidates) || nflData.candidates.length !== 124 ||
+      !Array.isArray(nflData.deals) || nflData.deals.length !== 7 ||
+      nflData.sourceAccountability?.certifiedMeanBrier !== null) {
+    fail('NFL trade board data integrity or forecast-certification boundary failed.');
+  }
   const one = (await fetchBytes(origin + '/one')).toString('utf8');
   if (!/in development/i.test(one)) fail('KAHRELUM ONE development warning is absent from the deployed page.');
   const home = (await fetchBytes(origin + '/')).toString('utf8');
