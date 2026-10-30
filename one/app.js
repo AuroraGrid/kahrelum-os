@@ -57,7 +57,7 @@ function setMode(enabled) {
   $('#modeToggle').setAttribute('aria-pressed', String(enabled));
   $('#modeName').textContent = enabled ? 'KAHRELUM Check' : 'Everyday';
   $('#modeBadge').textContent = enabled ? 'KAHRELUM Check' : 'Everyday';
-  $('#modeHint').textContent = enabled ? 'Separate what the evidence shows from inference, gaps, and uncertainty.' : 'Simple, helpful answers for everyday questions.';
+  $('#modeHint').textContent = enabled ? 'Three ordered Gemini passes align evidence, challenge it, then synthesize. Search is optional; free-tier limits apply.' : 'Simple, helpful answers for everyday questions.';
   $('#researchOption').hidden = !enabled;
   $('#liveResearchToggle').disabled = !liveResearchAvailable;
   $('#researchAvailability').textContent = liveResearchAvailable ? 'Sends this question to Tavily. 1 free credit; stops at the monthly limit.' : 'Live search is not configured on this beta yet.';
@@ -73,7 +73,7 @@ function addError(message) { const el = document.createElement('div'); el.classN
 async function send(text) {
   const clean = text.trim(); if (!clean) return;
   addMessage('user', clean); input.value = ''; input.style.height = 'auto';
-  const pending = addMessage('assistant', 'Thinking…');
+  const pending = addMessage('assistant', verificationMode ? 'Routing, aligning evidence, and challenging the answer…' : 'Thinking…');
   const button = $('.send-button'); button.disabled = true;
   const history = [...turns, {role:'user', content:clean}].slice(-12);
   try {
@@ -89,6 +89,17 @@ async function send(text) {
         try{const url=new URL(source.url);if(url.protocol!=='https:')return;const link=document.createElement('a');link.href=url.href;link.target='_blank';link.rel='noopener noreferrer';link.textContent=`[${index+1}] ${source.title||url.hostname}`;list.append(link);}catch{}
       });
       pending.append(list);
+    }
+    if(payload.pipeline&&Array.isArray(payload.pipeline.stages)){
+      const trace=document.createElement('details');trace.className='review-trace';
+      const summary=document.createElement('summary');summary.textContent='KAHRELUM Check review trail';trace.append(summary);
+      const stages=document.createElement('ol');
+      payload.pipeline.stages.forEach(stage=>{const item=document.createElement('li');item.textContent=stage.name+': '+stage.detail;stages.append(item);});
+      trace.append(stages);
+      const limitation=document.createElement('p');limitation.textContent='Beta limitation: all review passes use the same Gemini model. This is not independent multi-model verification, and the server does not retain an immutable record.';
+      trace.append(limitation);
+      if(payload.pipeline.responseFingerprint){const fingerprint=document.createElement('code');fingerprint.textContent='Response fingerprint: '+payload.pipeline.responseFingerprint;trace.append(fingerprint);}
+      pending.append(trace);
     }
     turns = [...history, {role:'assistant', content:payload.answer}].slice(-12);
   } catch(error) { pending.remove(); addError(error.message); }
