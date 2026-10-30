@@ -73,3 +73,23 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px soli
 .disclaimer{margin:12px 2px 0;color:#999f98;font-size:10px;line-height:1.5;text-align:center}
 @media(max-width:600px){.shell{padding:0 17px}.topbar{height:65px}.gate-screen{justify-content:center;padding:32px 0 24px}.gate-card{padding:27px 22px;border-radius:21px}.gate-card h1{font-size:35px}.intro{font-size:14px}.input-row{flex-direction:column}.input-row input,.primary-button{width:100%;height:49px}.chat-screen{min-height:calc(100dvh - 66px);padding:18px 0 14px}.conversation{padding:18px 1px 22px}.welcome-panel{min-height:280px}.welcome-panel h1{font-size:32px}.suggestions{gap:7px}.suggestions button{font-size:10px;padding:9px 11px}.message{max-width:94%;font-size:13px}.composer{border-radius:16px;padding:8px}.composer-meta{font-size:9px}.disclaimer{font-size:9px}.quiet-button{padding:8px 11px;font-size:11px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+
+
+/* Personal memory and instruction editor */
+.preferences-dialog{width:min(calc(100% - 32px),560px);max-height:min(84dvh,760px);padding:0;border:1px solid var(--line);border-radius:22px;color:var(--ink);background:var(--surface);box-shadow:var(--shadow)}
+.preferences-dialog::backdrop{background:rgba(22,32,26,.34);backdrop-filter:blur(3px)}
+.preferences-card{padding:26px}
+.preferences-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.preferences-heading .eyebrow{margin:0 0 6px}
+.preferences-heading h2{margin:0;font-family:Manrope,system-ui,sans-serif;font-size:25px;line-height:1.2}
+.preferences-intro{margin:13px 0 20px;color:var(--muted);font-size:13px}
+.preferences-dialog form{display:grid;gap:9px}
+.preferences-dialog label{margin-top:8px;font-size:12px;font-weight:700}
+.preferences-dialog textarea{width:100%;resize:vertical;border:1px solid var(--line);border-radius:12px;background:#fcfcfa;padding:12px;color:var(--ink);font-size:13px;line-height:1.55}
+.preferences-dialog textarea:focus{border-color:#9caf9f}
+.field-help{margin-top:-4px;color:var(--muted);font-size:11px;line-height:1.45}
+.preferences-actions{display:flex;align-items:center;gap:8px;margin-top:12px;flex-wrap:wrap}
+.action-spacer{flex:1}
+.icon-button{width:34px;height:34px;border:1px solid var(--line);border-radius:50%;background:#fff;color:var(--muted);font-size:22px;line-height:1}
+.preferences-status{min-height:18px;margin:0;color:var(--green);font-size:12px}
+@media(max-width:600px){.preferences-card{padding:21px}.preferences-heading h2{font-size:22px}.preferences-actions .quiet-button{padding:8px 11px;font-size:11px}}
