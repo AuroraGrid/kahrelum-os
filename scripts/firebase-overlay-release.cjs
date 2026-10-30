@@ -27,12 +27,15 @@ const OVERLAY_FILES = [
   'election-lab.html',
   'election-lab-app.js',
   'election-lab-roster.json',
+  'nfl/trades.html',
+  'nfl/trade-board.json',
 ];
 
 const HTML_ROUTES = [
   '/', '/assurance', '/investigations', '/forecasting', '/digital-id', '/one', '/os',
   '/pilot', '/demo', '/sample', '/connect', '/hasan', '/election-lab', '/election-live',
   '/election-count', '/election-method', '/election-showdown', '/election-comparison',
+  '/nfl/trades',
 ];
 const API_ROUTES = ['/api/v1', '/api/v1/release', '/api/v1/example'];
 const REQUIRED_REWRITES = {
@@ -146,7 +149,7 @@ function replaceHomepageSection(home, fragment) {
 function updateSitemap(xml) {
   let output = xml;
   if (!output.includes('</urlset>')) fail('Live sitemap has no closing urlset element.');
-  for (const route of [...DIVISION_ROUTES, '/election-lab']) {
+  for (const route of [...DIVISION_ROUTES, '/election-lab', '/nfl/trades']) {
     const url = DOMAIN + route;
     if (!output.includes(`<loc>${url}</loc>`)) {
       output = output.replace('</urlset>', `<url><loc>${url}</loc></url>\n</urlset>`);
@@ -228,6 +231,12 @@ async function verifySurface(origin, expectedApiHashes) {
     checks.push({ route, status: 200, sha256: sha256(bytes) });
   }
 
+  const nflData = JSON.parse((await fetchBytes(origin + '/nfl/trade-board.json')).toString('utf8'));
+  if (!Array.isArray(nflData.candidates) || nflData.candidates.length !== 124 ||
+      !Array.isArray(nflData.deals) || nflData.deals.length !== 7 ||
+      nflData.sourceAccountability?.certifiedMeanBrier !== null) {
+    fail('NFL trade board data integrity or forecast-certification boundary failed.');
+  }
   const one = (await fetchBytes(origin + '/one')).toString('utf8');
   if (!/in development/i.test(one)) fail('KAHRELUM ONE development warning is absent from the deployed page.');
   const home = (await fetchBytes(origin + '/')).toString('utf8');

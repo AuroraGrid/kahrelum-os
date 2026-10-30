@@ -1,0 +1,1956 @@
+{
+  "schema": "KAHRELUM_NFL_TRADE_BOARD_PUBLIC_v0.2",
+  "asOf": "2026-10-30T15:12:12-04:00",
+  "deadline": "2026-11-10T16:00:00-05:00",
+  "lastIndependentSync": null,
+  "liveFeed": false,
+  "confidenceNotice": "Snapshot, NOT live. KAHRELUM estimates conversation-recovered and provisional; no independent original timestamp custody. Analyst radar is not an offer or market report.",
+  "sourceCoverage": "Selected original reporting and research indices; not every team/source fully checked. Links do not imply source supports an offer.",
+  "candidates": [
+    {
+      "id": "K26-001",
+      "name": "Daron Payne",
+      "team": "WAS",
+      "pos": "DT",
+      "kahrelumProbability": 61,
+      "kahrelumIntegrity": "CONVERSATION_RECOVERED_PROVISIONAL",
+      "espnProbability": 25,
+      "evidenceType": "REPORTED_MARKET",
+      "sourceIds": [
+        "BREER",
+        "NFLTR",
+        "FOX",
+        "ESPN",
+        "WASHINGTON_GM"
+      ]
+    },
+    {
+      "id": "K26-002",
+      "name": "Josh Uche",
+      "team": "MIA",
+      "pos": "EDGE",
+      "kahrelumProbability": 61,
+      "kahrelumIntegrity": "CONVERSATION_RECOVERED_PROVISIONAL",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR",
+        "ESPN"
+      ]
+    },
+    {
+      "id": "K26-003",
+      "name": "Josh Downs",
+      "team": "IND",
+      "pos": "WR",
+      "kahrelumProbability": 58,
+      "kahrelumIntegrity": "CONVERSATION_RECOVERED_PROVISIONAL",
+      "espnProbability": 45,
+      "evidenceType": "COACH_CONFIRMED_PLAYER_REQUEST",
+      "sourceIds": [
+        "NFL_DOWNS",
+        "ESPN",
+        "BOWEN",
+        "STEICHEN_DOWNS",
+        "SCHULTZ"
+      ]
+    },
+    {
+      "id": "K26-004",
+      "name": "A'Shawn Robinson",
+      "team": "TB",
+      "pos": "DT",
+      "kahrelumProbability": 57,
+      "kahrelumIntegrity": "CONVERSATION_RECOVERED_PROVISIONAL",
+      "espnProbability": 30,
+      "evidenceType": "ESPN_WATCHLIST",
+      "sourceIds": [
+        "ESPN"
+      ]
+    },
+    {
+      "id": "K26-005",
+      "name": "Will McDonald IV",
+      "team": "NYJ",
+      "pos": "EDGE",
+      "kahrelumProbability": 52,
+      "kahrelumIntegrity": "CONVERSATION_RECOVERED_PROVISIONAL",
+      "espnProbability": null,
+      "evidenceType": "TEAM_RESISTING",
+      "sourceIds": [
+        "BREER",
+        "NFLTR",
+        "FOX",
+        "NYPOST"
+      ]
+    },
+    {
+      "id": "K26-006",
+      "name": "Grover Stewart",
+      "team": "IND",
+      "pos": "DT",
+      "kahrelumProbability": 49,
+      "kahrelumIntegrity": "CONVERSATION_RECOVERED_PROVISIONAL",
+      "espnProbability": null,
+      "evidenceType": "REPORTED_INQUIRY",
+      "sourceIds": [
+        "BREER",
+        "NFLTR",
+        "FOX",
+        "ESPN"
+      ]
+    },
+    {
+      "id": "K26-007",
+      "name": "Marquise Brown",
+      "team": "PHI",
+      "pos": "WR",
+      "kahrelumProbability": 42,
+      "kahrelumIntegrity": "CONVERSATION_RECOVERED_PROVISIONAL",
+      "espnProbability": null,
+      "evidenceType": "REPORTED_MARKET",
+      "sourceIds": [
+        "BREER",
+        "ESPN",
+        "INSIDERS"
+      ]
+    },
+    {
+      "id": "K26-008",
+      "name": "Jauan Jennings",
+      "team": "MIN",
+      "pos": "WR",
+      "kahrelumProbability": 40,
+      "kahrelumIntegrity": "CONVERSATION_RECOVERED_PROVISIONAL",
+      "espnProbability": 50,
+      "evidenceType": "ESPN_WATCHLIST",
+      "sourceIds": [
+        "ESPN",
+        "FOX"
+      ]
+    },
+    {
+      "id": "K26-009",
+      "name": "Josh Sweat",
+      "team": "ARI",
+      "pos": "EDGE",
+      "kahrelumProbability": 39,
+      "kahrelumIntegrity": "CONVERSATION_RECOVERED_PROVISIONAL",
+      "espnProbability": 40,
+      "evidenceType": "ESPN_WATCHLIST",
+      "sourceIds": [
+        "ESPN",
+        "AZSPORTS"
+      ]
+    },
+    {
+      "id": "K26-010",
+      "name": "Riq Woolen",
+      "team": "PHI",
+      "pos": "CB",
+      "kahrelumProbability": 39,
+      "kahrelumIntegrity": "CONVERSATION_RECOVERED_PROVISIONAL",
+      "espnProbability": 35,
+      "evidenceType": "REPORTED_MARKET",
+      "sourceIds": [
+        "BREER",
+        "ESPN",
+        "EAGLES_BEAT",
+        "INSIDERS"
+      ]
+    },
+    {
+      "id": "K26-011",
+      "name": "Brian Thomas Jr.",
+      "team": "JAX",
+      "pos": "WR",
+      "kahrelumProbability": 34,
+      "kahrelumIntegrity": "CONVERSATION_RECOVERED_PROVISIONAL",
+      "espnProbability": 45,
+      "evidenceType": "REPORTED_MARKET",
+      "sourceIds": [
+        "ESPN",
+        "NFLTR",
+        "BTJ"
+      ]
+    },
+    {
+      "id": "K26-012",
+      "name": "YaYa Diaby",
+      "team": "TB",
+      "pos": "EDGE",
+      "kahrelumProbability": 31,
+      "kahrelumIntegrity": "CONVERSATION_RECOVERED_PROVISIONAL",
+      "espnProbability": 35,
+      "evidenceType": "ESPN_WATCHLIST",
+      "sourceIds": [
+        "ESPN"
+      ]
+    },
+    {
+      "id": "K26-013",
+      "name": "Calvin Ridley",
+      "team": "TEN",
+      "pos": "WR",
+      "kahrelumProbability": 30,
+      "kahrelumIntegrity": "CONVERSATION_RECOVERED_PROVISIONAL",
+      "espnProbability": null,
+      "evidenceType": "TEAM_RESISTING",
+      "sourceIds": [
+        "BREER",
+        "NFLTR",
+        "FOX"
+      ]
+    },
+    {
+      "id": "K26-014",
+      "name": "Alontae Taylor",
+      "team": "TEN",
+      "pos": "CB",
+      "kahrelumProbability": 25,
+      "kahrelumIntegrity": "CONVERSATION_RECOVERED_PROVISIONAL",
+      "espnProbability": 10,
+      "evidenceType": "ESPN_WATCHLIST",
+      "sourceIds": [
+        "ESPN",
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-015",
+      "name": "Christian Barmore",
+      "team": "NE",
+      "pos": "DT",
+      "kahrelumProbability": 24,
+      "kahrelumIntegrity": "CONVERSATION_RECOVERED_PROVISIONAL",
+      "espnProbability": null,
+      "evidenceType": "REPORTED_MARKET",
+      "sourceIds": [
+        "BREER"
+      ]
+    },
+    {
+      "id": "K26-016",
+      "name": "Tony Pollard",
+      "team": "TEN",
+      "pos": "RB",
+      "kahrelumProbability": 17,
+      "kahrelumIntegrity": "CONVERSATION_RECOVERED_PROVISIONAL",
+      "espnProbability": 15,
+      "evidenceType": "TEAM_RESISTING",
+      "sourceIds": [
+        "BREER",
+        "ESPN"
+      ]
+    },
+    {
+      "id": "K26-017",
+      "name": "Jonathan Taylor",
+      "team": "IND",
+      "pos": "RB",
+      "kahrelumProbability": 9,
+      "kahrelumIntegrity": "CONVERSATION_RECOVERED_PROVISIONAL",
+      "espnProbability": 30,
+      "evidenceType": "TEAM_RESISTING",
+      "sourceIds": [
+        "BREER",
+        "ESPN",
+        "SCHEFTER_PAT"
+      ]
+    },
+    {
+      "id": "K26-018",
+      "name": "Khalil Mack",
+      "team": "LAC",
+      "pos": "EDGE",
+      "kahrelumProbability": 8,
+      "kahrelumIntegrity": "CONVERSATION_RECOVERED_PROVISIONAL",
+      "espnProbability": 35,
+      "evidenceType": "TEAM_RESISTING",
+      "sourceIds": [
+        "BREER",
+        "ESPN"
+      ]
+    },
+    {
+      "id": "K26-019",
+      "name": "Moro Ojomo",
+      "team": "PHI",
+      "pos": "DT",
+      "kahrelumProbability": 4,
+      "kahrelumIntegrity": "CONVERSATION_RECOVERED_PROVISIONAL",
+      "espnProbability": null,
+      "evidenceType": "TEAM_RESISTING",
+      "sourceIds": [
+        "BREER"
+      ]
+    },
+    {
+      "id": "K26-020",
+      "name": "Aaron Brewer",
+      "team": "MIA",
+      "pos": "C",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "TEAM_RESISTING",
+      "sourceIds": [
+        "BREER"
+      ]
+    },
+    {
+      "id": "K26-021",
+      "name": "Alex Highsmith",
+      "team": "PIT",
+      "pos": "EDGE",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-022",
+      "name": "Alvin Kamara",
+      "team": "NO",
+      "pos": "RB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "ESPN"
+      ]
+    },
+    {
+      "id": "K26-023",
+      "name": "Amani Hooker",
+      "team": "TEN",
+      "pos": "S",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "YAHOO"
+      ]
+    },
+    {
+      "id": "K26-024",
+      "name": "Amik Robertson",
+      "team": "WAS",
+      "pos": "CB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-025",
+      "name": "Andre Cisco",
+      "team": "NYJ",
+      "pos": "S",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-026",
+      "name": "Andrew Wylie",
+      "team": "WAS",
+      "pos": "OT",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "ESPN"
+      ]
+    },
+    {
+      "id": "K26-027",
+      "name": "Anthony Richardson Sr.",
+      "team": "IND",
+      "pos": "QB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "BREER"
+      ]
+    },
+    {
+      "id": "K26-028",
+      "name": "Antoine Winfield Jr.",
+      "team": "TB",
+      "pos": "S",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-029",
+      "name": "Arden Key",
+      "team": "IND",
+      "pos": "EDGE",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-030",
+      "name": "Austin Jackson",
+      "team": "MIA",
+      "pos": "OT",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "REPORTED_MARKET",
+      "sourceIds": [
+        "BREER",
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-031",
+      "name": "Braden Smith",
+      "team": "HOU",
+      "pos": "OT",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "ESPN"
+      ]
+    },
+    {
+      "id": "K26-032",
+      "name": "Breece Hall",
+      "team": "NYJ",
+      "pos": "RB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "BREER"
+      ]
+    },
+    {
+      "id": "K26-033",
+      "name": "Brevin Jordan",
+      "team": "HOU",
+      "pos": "TE",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-034",
+      "name": "Bud Dupree",
+      "team": "LAC",
+      "pos": "EDGE",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-035",
+      "name": "Budda Baker",
+      "team": "ARI",
+      "pos": "S",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": 35,
+      "evidenceType": "ESPN_WATCHLIST",
+      "sourceIds": [
+        "ESPN",
+        "AZSPORTS",
+        "PFT"
+      ]
+    },
+    {
+      "id": "K26-036",
+      "name": "Cameron Jordan",
+      "team": "NO",
+      "pos": "EDGE",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "FOX"
+      ]
+    },
+    {
+      "id": "K26-037",
+      "name": "Carrington Valentine",
+      "team": "GB",
+      "pos": "CB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-038",
+      "name": "Cedric Gray",
+      "team": "TEN",
+      "pos": "LB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "YAHOO"
+      ]
+    },
+    {
+      "id": "K26-039",
+      "name": "Cesar Ruiz",
+      "team": "NO",
+      "pos": "G",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": 25,
+      "evidenceType": "ESPN_WATCHLIST",
+      "sourceIds": [
+        "ESPN"
+      ]
+    },
+    {
+      "id": "K26-040",
+      "name": "Chris Godwin Jr.",
+      "team": "TB",
+      "pos": "WR",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": 15,
+      "evidenceType": "ESPN_WATCHLIST",
+      "sourceIds": [
+        "ESPN"
+      ]
+    },
+    {
+      "id": "K26-041",
+      "name": "Cody Barton",
+      "team": "TEN",
+      "pos": "LB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-042",
+      "name": "Colby Parkinson",
+      "team": "LAR",
+      "pos": "TE",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "FOX"
+      ]
+    },
+    {
+      "id": "K26-043",
+      "name": "Cole Holcomb",
+      "team": "PIT",
+      "pos": "LB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "ESPN"
+      ]
+    },
+    {
+      "id": "K26-044",
+      "name": "Cole Kmet",
+      "team": "CHI",
+      "pos": "TE",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "FOX"
+      ]
+    },
+    {
+      "id": "K26-045",
+      "name": "Daiyan Henley",
+      "team": "LAC",
+      "pos": "LB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-046",
+      "name": "Dallas Goedert",
+      "team": "PHI",
+      "pos": "TE",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "REPORTED_MARKET",
+      "sourceIds": [
+        "INSIDERS",
+        "BREER",
+        "ESPN"
+      ]
+    },
+    {
+      "id": "K26-047",
+      "name": "Dalvin Tomlinson",
+      "team": "LAC",
+      "pos": "DT",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-048",
+      "name": "Darnell Mooney",
+      "team": "NYG",
+      "pos": "WR",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "YAHOO"
+      ]
+    },
+    {
+      "id": "K26-049",
+      "name": "Davon Godchaux",
+      "team": "NO",
+      "pos": "DT",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-050",
+      "name": "Dawand Jones",
+      "team": "CLE",
+      "pos": "OT",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-051",
+      "name": "Denzel Perryman",
+      "team": "LAC",
+      "pos": "LB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-052",
+      "name": "Derwin James",
+      "team": "LAC",
+      "pos": "S",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-053",
+      "name": "Devin Singletary",
+      "team": "NYG",
+      "pos": "RB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-054",
+      "name": "Dillon Gabriel",
+      "team": "CLE",
+      "pos": "QB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-055",
+      "name": "Donte Jackson",
+      "team": "LAC",
+      "pos": "CB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": 25,
+      "evidenceType": "ESPN_WATCHLIST",
+      "sourceIds": [
+        "ESPN",
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-056",
+      "name": "Dorance Armstrong Jr.",
+      "team": "WAS",
+      "pos": "EDGE",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "REPORTED_MARKET",
+      "sourceIds": [
+        "BREER",
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-057",
+      "name": "Gardner Minshew",
+      "team": "ARI",
+      "pos": "QB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "AZSPORTS"
+      ]
+    },
+    {
+      "id": "K26-058",
+      "name": "Garrett Wilson",
+      "team": "NYJ",
+      "pos": "WR",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "TEAM_RESISTING",
+      "sourceIds": [
+        "BREER"
+      ]
+    },
+    {
+      "id": "K26-059",
+      "name": "Greg Dulcich",
+      "team": "MIA",
+      "pos": "TE",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-060",
+      "name": "Isaiah Pola-Mao",
+      "team": "LV",
+      "pos": "S",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-061",
+      "name": "Ja'Tavion Sanders",
+      "team": "CAR",
+      "pos": "TE",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "FOX",
+        "ESPN"
+      ]
+    },
+    {
+      "id": "K26-062",
+      "name": "Jack Jones",
+      "team": "SF",
+      "pos": "CB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "YAHOO"
+      ]
+    },
+    {
+      "id": "K26-063",
+      "name": "Jackson Powers-Johnson",
+      "team": "LV",
+      "pos": "G",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": 35,
+      "evidenceType": "ESPN_WATCHLIST",
+      "sourceIds": [
+        "ESPN"
+      ]
+    },
+    {
+      "id": "K26-064",
+      "name": "Jacoby Brissett",
+      "team": "ARI",
+      "pos": "QB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "ESPN",
+        "AZSPORTS"
+      ]
+    },
+    {
+      "id": "K26-065",
+      "name": "Jahdae Barron",
+      "team": "DEN",
+      "pos": "CB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "FOX"
+      ]
+    },
+    {
+      "id": "K26-066",
+      "name": "Jalen Tolbert",
+      "team": "MIA",
+      "pos": "WR",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-067",
+      "name": "James Hudson",
+      "team": "TEN",
+      "pos": "OT",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-068",
+      "name": "Jamien Sherwood",
+      "team": "NYJ",
+      "pos": "LB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "BREER"
+      ]
+    },
+    {
+      "id": "K26-069",
+      "name": "Jarvis Brownlee Jr.",
+      "team": "NYJ",
+      "pos": "CB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "BREER"
+      ]
+    },
+    {
+      "id": "K26-070",
+      "name": "Jayden Reed",
+      "team": "GB",
+      "pos": "WR",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "FOX"
+      ]
+    },
+    {
+      "id": "K26-071",
+      "name": "Jermaine Johnson II",
+      "team": "TEN",
+      "pos": "EDGE",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": 30,
+      "evidenceType": "ESPN_WATCHLIST",
+      "sourceIds": [
+        "ESPN"
+      ]
+    },
+    {
+      "id": "K26-072",
+      "name": "Jerry Jeudy",
+      "team": "CLE",
+      "pos": "WR",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": 20,
+      "evidenceType": "TEAM_RESISTING",
+      "sourceIds": [
+        "ESPN",
+        "FOX"
+      ]
+    },
+    {
+      "id": "K26-073",
+      "name": "Jerry Tillery",
+      "team": "IND",
+      "pos": "DT",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-074",
+      "name": "Jessie Bates III",
+      "team": "ATL",
+      "pos": "S",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "ESPN"
+      ]
+    },
+    {
+      "id": "K26-075",
+      "name": "John Michael Schmitz",
+      "team": "NYG",
+      "pos": "G",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-076",
+      "name": "Jordyn Brooks",
+      "team": "MIA",
+      "pos": "LB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "BREER"
+      ]
+    },
+    {
+      "id": "K26-077",
+      "name": "Josh Palmer",
+      "team": "BUF",
+      "pos": "WR",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "WGR",
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-078",
+      "name": "Justin Herbert",
+      "team": "LAC",
+      "pos": "QB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "BREER"
+      ]
+    },
+    {
+      "id": "K26-079",
+      "name": "K'Lavon Chaisson",
+      "team": "WAS",
+      "pos": "EDGE",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "REPORTED_MARKET",
+      "sourceIds": [
+        "BREER",
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-080",
+      "name": "Kayvon Thibodeaux",
+      "team": "NYG",
+      "pos": "EDGE",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "FOX",
+        "ESPN"
+      ]
+    },
+    {
+      "id": "K26-081",
+      "name": "Keenan Allen",
+      "team": "IND",
+      "pos": "WR",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "YAHOO"
+      ]
+    },
+    {
+      "id": "K26-082",
+      "name": "Keisean Nixon",
+      "team": "GB",
+      "pos": "CB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "YAHOO"
+      ]
+    },
+    {
+      "id": "K26-083",
+      "name": "Kelee Ringo",
+      "team": "PHI",
+      "pos": "CB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-084",
+      "name": "Kenneth Grant",
+      "team": "MIA",
+      "pos": "DT",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-085",
+      "name": "Kenny Gainwell",
+      "team": "TB",
+      "pos": "RB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "FOX",
+        "ESPN"
+      ]
+    },
+    {
+      "id": "K26-086",
+      "name": "Khalil Benson",
+      "team": "KC",
+      "pos": "OT",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "FOX"
+      ]
+    },
+    {
+      "id": "K26-087",
+      "name": "Kimani Vidal",
+      "team": "LAC",
+      "pos": "RB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-088",
+      "name": "Kirk Cousins",
+      "team": "LV",
+      "pos": "QB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": 20,
+      "evidenceType": "ESPN_WATCHLIST",
+      "sourceIds": [
+        "ESPN",
+        "FOX"
+      ]
+    },
+    {
+      "id": "K26-089",
+      "name": "Kristian Fulton",
+      "team": "KC",
+      "pos": "CB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-090",
+      "name": "Landon Dickerson",
+      "team": "PHI",
+      "pos": "G",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": 25,
+      "evidenceType": "ESPN_WATCHLIST",
+      "sourceIds": [
+        "INSIDERS",
+        "ESPN"
+      ]
+    },
+    {
+      "id": "K26-091",
+      "name": "Laquon Treadwell",
+      "team": "IND",
+      "pos": "WR",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "YAHOO"
+      ]
+    },
+    {
+      "id": "K26-092",
+      "name": "Larry Borom",
+      "team": "DET",
+      "pos": "OT",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "FOX"
+      ]
+    },
+    {
+      "id": "K26-093",
+      "name": "Luke Schoonmaker",
+      "team": "DAL",
+      "pos": "TE",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "FOX",
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-094",
+      "name": "Mac Jones",
+      "team": "SF",
+      "pos": "QB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "FOX"
+      ]
+    },
+    {
+      "id": "K26-095",
+      "name": "Mason Rudolph",
+      "team": "PIT",
+      "pos": "QB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "YAHOO"
+      ]
+    },
+    {
+      "id": "K26-096",
+      "name": "Maxx Crosby",
+      "team": "LV",
+      "pos": "EDGE",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "BREER"
+      ]
+    },
+    {
+      "id": "K26-097",
+      "name": "Mike Hughes",
+      "team": "ATL",
+      "pos": "CB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "FOX"
+      ]
+    },
+    {
+      "id": "K26-098",
+      "name": "Nahshon Wright",
+      "team": "NYJ",
+      "pos": "CB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-099",
+      "name": "Olu Oluwatimi",
+      "team": "SEA",
+      "pos": "C",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "FOX"
+      ]
+    },
+    {
+      "id": "K26-100",
+      "name": "Patrick Queen",
+      "team": "PIT",
+      "pos": "LB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": 20,
+      "evidenceType": "ESPN_WATCHLIST",
+      "sourceIds": [
+        "ESPN",
+        "FOX"
+      ]
+    },
+    {
+      "id": "K26-101",
+      "name": "Paulson Adebo",
+      "team": "NYG",
+      "pos": "CB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-102",
+      "name": "Quentin Johnston",
+      "team": "LAC",
+      "pos": "WR",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": 25,
+      "evidenceType": "TEAM_RESISTING",
+      "sourceIds": [
+        "BREER",
+        "ESPN"
+      ]
+    },
+    {
+      "id": "K26-103",
+      "name": "Rashod Bateman",
+      "team": "BAL",
+      "pos": "WR",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": 15,
+      "evidenceType": "ESPN_WATCHLIST",
+      "sourceIds": [
+        "ESPN",
+        "FOX"
+      ]
+    },
+    {
+      "id": "K26-104",
+      "name": "Saquon Barkley",
+      "team": "PHI",
+      "pos": "RB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-105",
+      "name": "Sean Tucker",
+      "team": "TB",
+      "pos": "RB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-106",
+      "name": "Shedeur Sanders",
+      "team": "CLE",
+      "pos": "QB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-107",
+      "name": "Sheldon Rankins",
+      "team": "HOU",
+      "pos": "DT",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "FOX"
+      ]
+    },
+    {
+      "id": "K26-108",
+      "name": "Shemar Stewart",
+      "team": "CIN",
+      "pos": "EDGE",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": 35,
+      "evidenceType": "ESPN_WATCHLIST",
+      "sourceIds": [
+        "ESPN",
+        "FOX"
+      ]
+    },
+    {
+      "id": "K26-109",
+      "name": "Stefon Diggs",
+      "team": "WAS",
+      "pos": "WR",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "ESPN"
+      ]
+    },
+    {
+      "id": "K26-110",
+      "name": "Tatum Bethune",
+      "team": "SF",
+      "pos": "LB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-111",
+      "name": "Tony Adams",
+      "team": "TEN",
+      "pos": "S",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-112",
+      "name": "Tony Jefferson",
+      "team": "LAC",
+      "pos": "S",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-113",
+      "name": "TreVeyon Henderson",
+      "team": "NE",
+      "pos": "RB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "FOX"
+      ]
+    },
+    {
+      "id": "K26-114",
+      "name": "Troy Dye",
+      "team": "LAC",
+      "pos": "LB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-115",
+      "name": "Tuli Tuipulotu",
+      "team": "LAC",
+      "pos": "EDGE",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR",
+        "ESPN"
+      ]
+    },
+    {
+      "id": "K26-116",
+      "name": "Tyjae Spears",
+      "team": "TEN",
+      "pos": "RB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-117",
+      "name": "Tyler Nubin",
+      "team": "NYG",
+      "pos": "S",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-118",
+      "name": "Tyrone Tracy Jr.",
+      "team": "NYG",
+      "pos": "RB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-119",
+      "name": "Vita Vea",
+      "team": "TB",
+      "pos": "DT",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "ESPN"
+      ]
+    },
+    {
+      "id": "K26-120",
+      "name": "Willie Gay Jr.",
+      "team": "MIA",
+      "pos": "LB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-121",
+      "name": "Wyatt Teller",
+      "team": "HOU",
+      "pos": "G",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "NFLTR"
+      ]
+    },
+    {
+      "id": "K26-122",
+      "name": "Zach Sieler",
+      "team": "MIA",
+      "pos": "DT",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "TEAM_RESISTING",
+      "sourceIds": [
+        "BREER",
+        "NFLTR",
+        "FOX"
+      ]
+    },
+    {
+      "id": "K26-123",
+      "name": "Zyon McCollum",
+      "team": "TB",
+      "pos": "CB",
+      "kahrelumProbability": null,
+      "kahrelumIntegrity": "UNPRICED",
+      "espnProbability": null,
+      "evidenceType": "ANALYST_RADAR",
+      "sourceIds": [
+        "YAHOO"
+      ]
+    },
+    {
+      "id": "K26-124",
+      "name": "Adetomiwa Adebawore",
+      "team": "IND",
+      "pos": "DT",
+      "kahrelumProbability": 4,
+      "kahrelumIntegrity": "CONVERSATION_RECOVERED_PROVISIONAL",
+      "espnProbability": null,
+      "evidenceType": "OFF_MARKET_REPORTED",
+      "sourceIds": [
+        "GARAFOLo_ADE"
+      ]
+    }
+  ],
+  "deals": [
+    {
+      "date": "2026-09-28",
+      "name": "J.J. McCarthy",
+      "from": "MIN",
+      "to": "NYG",
+      "reportedTerms": "2027 fifth-round pick to Minnesota",
+      "sourceId": "NFL"
+    },
+    {
+      "date": "2026-10-01",
+      "name": "Joey Porter Jr.",
+      "from": "PIT",
+      "to": "DAL",
+      "reportedTerms": "2027 sixth-round and 2028 second-round picks to Pittsburgh",
+      "sourceId": "NFL"
+    },
+    {
+      "date": "2026-10-07",
+      "name": "Cam Jurgens",
+      "from": "PHI",
+      "to": "BAL",
+      "reportedTerms": "Jurgens and 2027 seventh to Baltimore; 2027 fifth and 2028 second to Philadelphia",
+      "sourceId": "NFL"
+    },
+    {
+      "date": "2026-10-12",
+      "name": "Marvin Harrison Jr.",
+      "from": "ARI",
+      "to": "HOU",
+      "reportedTerms": "Harrison and 2027 sixth to Houston; 2027 second and seventh to Arizona",
+      "sourceId": "NFL"
+    },
+    {
+      "date": "2026-10-27",
+      "name": "Quenton Nelson",
+      "from": "IND",
+      "to": "SEA",
+      "reportedTerms": "2027 third and 2028 fifth to Indianapolis",
+      "sourceId": "NFL"
+    },
+    {
+      "date": "2026-10-27",
+      "name": "DeForest Buckner",
+      "from": "IND",
+      "to": "SF",
+      "reportedTerms": "2027 fourth to Indianapolis; transactions register posted October 28",
+      "sourceId": "NFL"
+    },
+    {
+      "date": "2026-10-29",
+      "name": "Jeffery Simmons",
+      "from": "TEN",
+      "to": "CHI",
+      "reportedTerms": "Simmons and 2028 fifth to Chicago; 2027 first and fourth, 2028 first to Tennessee",
+      "sourceId": "NFL"
+    }
+  ],
+  "sources": [
+    {
+      "id": "NFL",
+      "name": "NFL official deadline tracker",
+      "kind": "OFFICIAL",
+      "date": "2026-10-29",
+      "url": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season",
+      "checkedStatus": "INDEXED_LINK_NOT_EVERY_SOURCE_FIRSTHAND_VERIFIED"
+    },
+    {
+      "id": "NFLTX",
+      "name": "NFL transactions register",
+      "kind": "OFFICIAL",
+      "date": "2026-10-30",
+      "url": "https://www.nfl.com/transactions/",
+      "checkedStatus": "INDEXED_LINK_NOT_EVERY_SOURCE_FIRSTHAND_VERIFIED"
+    },
+    {
+      "id": "ESPN",
+      "name": "Jeremy Fowler and Matt Bowen / ESPN",
+      "kind": "MIXED_REPORT_ANALYSIS",
+      "date": "2026-10-28",
+      "url": "https://abc7news.com/post/2026-nfl-trade-deadline-ranking-top-25-candidates-move-team-fits/19989132/",
+      "checkedStatus": "INDEXED_LINK_NOT_EVERY_SOURCE_FIRSTHAND_VERIFIED"
+    },
+    {
+      "id": "FOX",
+      "name": "FOX Sports / 32-team hypothetical candidates",
+      "kind": "ANALYST_SCENARIO",
+      "date": "2026-10-21",
+      "url": "https://www.foxsports.com/stories/nfl/nfl-trade-deadline-top-trade-candidate-all-32-teams",
+      "checkedStatus": "INDEXED_LINK_NOT_EVERY_SOURCE_FIRSTHAND_VERIFIED"
+    },
+    {
+      "id": "NFLTR",
+      "name": "Logan Ulrich / NFLTradeRumors radar",
+      "kind": "MIXED_RADAR",
+      "date": "2026-10-27",
+      "url": "https://nfltraderumors.co/updated-2026-nfl-midseason-trade-block/",
+      "checkedStatus": "INDEXED_LINK_NOT_EVERY_SOURCE_FIRSTHAND_VERIFIED"
+    },
+    {
+      "id": "BREER",
+      "name": "Albert Breer / SI",
+      "kind": "REPORTER",
+      "date": "2026-10-30",
+      "url": "https://www.si.com/nfl/albert-breer-how-two-former-roommates-put-jeffery-simmons-trade-together",
+      "checkedStatus": "INDEXED_LINK_NOT_EVERY_SOURCE_FIRSTHAND_VERIFIED"
+    },
+    {
+      "id": "INSIDERS",
+      "name": "NFL Network / The Insiders Oct 29",
+      "kind": "BROADCAST",
+      "date": "2026-10-29",
+      "url": "https://podcasts.apple.com/ca/podcast/the-insiders-podcast-chiefs-sign-kicker-justin-tucker/id1543090622?i=1000798615364",
+      "checkedStatus": "INDEXED_LINK_NOT_EVERY_SOURCE_FIRSTHAND_VERIFIED"
+    },
+    {
+      "id": "SCHEFTER_PAT",
+      "name": "Schefter on Pat McAfee Show",
+      "kind": "BROADCAST",
+      "date": "2026-10-27",
+      "url": "https://www.iheart.com/podcast/10-the-pat-mcafee-show-29837505/episode/pms-20-1654-mnf-recap-348565537/",
+      "checkedStatus": "INDEXED_LINK_NOT_EVERY_SOURCE_FIRSTHAND_VERIFIED"
+    },
+    {
+      "id": "BOWEN",
+      "name": "Kevin Bowen / 107.5 The Fan",
+      "kind": "LOCAL_BEAT",
+      "date": "2026-10-28",
+      "url": "https://1075thefan.com/735061/colts-wednesday-notebook-josh-downs-open-to-trade/",
+      "checkedStatus": "INDEXED_LINK_NOT_EVERY_SOURCE_FIRSTHAND_VERIFIED"
+    },
+    {
+      "id": "STEICHEN_DOWNS",
+      "name": "Shane Steichen remarks / via Matt Taylor",
+      "kind": "TEAM_STATEMENT_REPORTED",
+      "date": "2026-10-30",
+      "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/shane-steichen-confirms-josh-downs-requested-a-trade-and-will-play-sunday",
+      "checkedStatus": "INDEXED_LINK_NOT_EVERY_SOURCE_FIRSTHAND_VERIFIED"
+    },
+    {
+      "id": "NFL_DOWNS",
+      "name": "NFL.com / Downs request citing Fowler",
+      "kind": "SECONDARY_REPORT",
+      "date": "2026-10-28",
+      "url": "https://www.nfl.com/news/colts-wr-josh-downs-requests-trade",
+      "checkedStatus": "INDEXED_LINK_NOT_EVERY_SOURCE_FIRSTHAND_VERIFIED"
+    },
+    {
+      "id": "SCHULTZ",
+      "name": "Jordan Schultz / Pittsburgh among interested clubs",
+      "kind": "ORIGINAL_REPORT_TRACE",
+      "date": "2026-10-28",
+      "url": "https://www.si.com/nfl/steelers/onsi/pittsburgh-steelers-showing-interest-in-colts-wr-josh-downs",
+      "checkedStatus": "INDEXED_LINK_NOT_EVERY_SOURCE_FIRSTHAND_VERIFIED"
+    },
+    {
+      "id": "GARAFOLo_ADE",
+      "name": "Mike Garafolo / Adebawore inquiries",
+      "kind": "ORIGINAL_REPORT_X_LINK_UNREAD",
+      "date": "2026-10-29",
+      "url": "https://x.com/MikeGarafolo/status/2115895220927668415",
+      "checkedStatus": "INDEXED_LINK_NOT_EVERY_SOURCE_FIRSTHAND_VERIFIED"
+    },
+    {
+      "id": "EAGLES_BEAT",
+      "name": "NBC Sports Philadelphia / Riq Woolen",
+      "kind": "TEAM_BEAT",
+      "date": "2026-10-30",
+      "url": "https://www.nbcsportsphiladelphia.com/nfl/philadelphia-eagles/riq-woolen-deals-trade-rumors-nfl-deadline-value-seahawks/762693/",
+      "checkedStatus": "INDEXED_LINK_NOT_EVERY_SOURCE_FIRSTHAND_VERIFIED"
+    },
+    {
+      "id": "AZSPORTS",
+      "name": "Arizona Sports / Cardinals trade radar",
+      "kind": "TEAM_BEAT",
+      "date": "2026-10-27",
+      "url": "https://arizonasports.com/nfl/arizona-cardinals/josh-sweat-headlines-most-movable-cardinals-ahead-of-nfl-trade-deadline",
+      "checkedStatus": "INDEXED_LINK_NOT_EVERY_SOURCE_FIRSTHAND_VERIFIED"
+    },
+    {
+      "id": "NYPOST",
+      "name": "NY Post / Jets options",
+      "kind": "TEAM_BEAT",
+      "date": "2026-10-28",
+      "url": "https://nypost.com/2026/10/28/sports/breaking-down-jets-trade-options-before-deadline-the-most-likely-to-get-dealt/",
+      "checkedStatus": "INDEXED_LINK_NOT_EVERY_SOURCE_FIRSTHAND_VERIFIED"
+    },
+    {
+      "id": "PFT",
+      "name": "NBC Sports / NFL trade report",
+      "kind": "TRACKER",
+      "date": "2026-10-29",
+      "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/2026-nfl-trade-deadline-live-updates-tracker-deals-news-rumors-analysis",
+      "checkedStatus": "INDEXED_LINK_NOT_EVERY_SOURCE_FIRSTHAND_VERIFIED"
+    },
+    {
+      "id": "WASHINGTON_GM",
+      "name": "Washington GM remarks, secondary transcript",
+      "kind": "SECONDARY_TRACE",
+      "date": "2026-10-30",
+      "url": "https://www.hogshaven.com/washington-commanders-news/451915/commanders-gm-adam-peters-nfl-trade-deadline-antonio-williams-amik-robertson",
+      "checkedStatus": "INDEXED_LINK_NOT_EVERY_SOURCE_FIRSTHAND_VERIFIED"
+    },
+    {
+      "id": "WGR",
+      "name": "WGR550 Bills trade radio discussion",
+      "kind": "RADIO_OPINION",
+      "date": "2026-10-23",
+      "url": "https://www.audacy.com/wgr550/video/analyzing-what-the-bills-should-do-in-trade-market-the-jeremy-and-joe-show-xbqon3u",
+      "checkedStatus": "INDEXED_LINK_NOT_EVERY_SOURCE_FIRSTHAND_VERIFIED"
+    },
+    {
+      "id": "YAHOO",
+      "name": "Yahoo trade speculation and coverage",
+      "kind": "MIXED_ANALYSIS",
+      "date": "2026-10-29",
+      "url": "https://sports.yahoo.com/nfl/article/2026-nfl-trade-deadline-tracker-grades-analysis-and-details-from-every-key-deal-233619744.html",
+      "checkedStatus": "INDEXED_LINK_NOT_EVERY_SOURCE_FIRSTHAND_VERIFIED"
+    },
+    {
+      "id": "BTJ",
+      "name": "NFL.com / Brian Thomas Jr. statement",
+      "kind": "PLAYER_QUOTE_REPORTED",
+      "date": "2026-10-30",
+      "url": "https://www.nfl.com/news/jaguars-brian-thomas-jr-trade-rumors-show-everybody-what-i-can-do",
+      "checkedStatus": "INDEXED_LINK_NOT_EVERY_SOURCE_FIRSTHAND_VERIFIED"
+    }
+  ],
+  "history": [
+    {
+      "name": "Marvin Harrison Jr.",
+      "probability": 49,
+      "estimatedOrigin": "2026-10-10",
+      "actualDate": "2026-10-12",
+      "outcome": 1,
+      "scorable": false,
+      "reason": "Original forecast custody not independently verified"
+    },
+    {
+      "name": "Quenton Nelson",
+      "probability": 39,
+      "estimatedOrigin": "2026-10-26",
+      "actualDate": "2026-10-27",
+      "outcome": 1,
+      "scorable": false,
+      "reason": "Original forecast custody not independently verified"
+    },
+    {
+      "name": "DeForest Buckner",
+      "probability": 68,
+      "estimatedOrigin": "2026-10-27",
+      "actualDate": "2026-10-27",
+      "outcome": 1,
+      "scorable": false,
+      "reason": "Forecast/trade ordering not independently verified"
+    },
+    {
+      "name": "Jeffery Simmons",
+      "probability": null,
+      "estimatedOrigin": null,
+      "actualDate": "2026-10-29",
+      "outcome": 1,
+      "scorable": false,
+      "reason": "No verified pretrade forecast"
+    }
+  ],
+  "sourceAccountability": {
+    "reportingAccuracy": "Score whether a reporter's specific factual claim was supported at the asserted time, not whether a rumored deal later completed.",
+    "forecastAccuracy": "Use Brier only when binary forecast, time cutoff, event definition and resolution are verifiable before outcome.",
+    "validProspectiveForecasts": 0,
+    "certifiedMeanBrier": null
+  },
+  "offers": {
+    "public": "Free",
+    "supporter": "$9-$15/month proposed; not yet for sale",
+    "research": "$150-$500/month illustrative custom research pilot",
+    "enterprise": "Separate $750 KAHRELUM Fit Check"
+  }
+}

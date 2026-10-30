@@ -36,6 +36,8 @@ jobs:
               "assurance.html", "investigations.html", "forecasting.html",
               "digital-id.html", "one.html", "os.html", "election-lab.html",
               "election-lab-app.js", "election-lab-roster.json",
+              "nfl/trades.html", "nfl/trade-board.json",
+              "research/nfl-2026-trade-deadline/README.md",
           )
           missing = [name for name in required if not Path(name).is_file()]
           if missing:
@@ -74,12 +76,28 @@ jobs:
               "one.html": "/one",
               "os.html": "/os",
               "election-lab.html": "/election-lab",
+              "nfl/trades.html": "/nfl/trades",
           }
           for filename, route in overlay_pages.items():
               page = Metadata()
               page.feed(Path(filename).read_text(encoding="utf-8"))
               assert page.canonical == [site + route], f"Invalid canonical URL in {filename}"
 
+          nfl = json.loads(Path("nfl/trade-board.json").read_text(encoding="utf-8"))
+          assert len(nfl["candidates"]) == 124 and len(nfl["deals"]) == 7
+          assert len({p["team"] for p in nfl["candidates"]}) == 32
+          assert len({p["id"] for p in nfl["candidates"]}) == 124
+          assert nfl["liveFeed"] is False
+          assert nfl["sourceAccountability"]["certifiedMeanBrier"] is None
+          assert nfl["sourceAccountability"]["validProspectiveForecasts"] == 0
+          for player in nfl["candidates"]:
+              p = player["kahrelumProbability"]
+              assert p is None or 0 <= p <= 100
+              assert player["kahrelumIntegrity"] in {"UNPRICED", "CONVERSATION_RECOVERED_PROVISIONAL"}
+              assert player["sourceIds"], player["name"]
+          overlay = Path("scripts/firebase-overlay-release.cjs").read_text(encoding="utf-8")
+          for required_route in ("nfl/trades.html", "nfl/trade-board.json", "'/nfl/trades'"):
+              assert required_route in overlay, "NFL route missing from guarded release"
           assert "in development" in Path("one.html").read_text(encoding="utf-8").lower(), "KAHRELUM ONE status missing"
           forecasting = Path("forecasting.html").read_text(encoding="utf-8")
           for required_text in ("0.222593", "0.146176", "original cutoff", "confidence intervals include zero"):
