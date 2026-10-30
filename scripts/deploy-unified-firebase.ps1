@@ -33,12 +33,35 @@ if (-not (Test-Path -LiteralPath (Join-Path $firebaseToolsRoot "lib\hosting\api.
 
 $script = Join-Path $PSScriptRoot "firebase-overlay-release.cjs"
 $env:FIREBASE_TOOLS_ROOT = $firebaseToolsRoot
+$publisherAuthRoot = Join-Path $env:LOCALAPPDATA "KAHRELUM\publisher-auth"
+$publisherCredential = Join-Path $publisherAuthRoot "publisher-service-account.json"
+$publisherConfigRoot = Join-Path $publisherAuthRoot "isolated-config"
+$credentialExists = Test-Path -LiteralPath $publisherCredential -PathType Leaf
+$configRootExists = Test-Path -LiteralPath $publisherConfigRoot -PathType Container
+if ($credentialExists -xor $configRootExists) {
+    throw "Dedicated publisher authentication is incomplete; refusing to fall back silently."
+}
 
 $mode = "--plan"
 if ($Preview) { $mode = "--preview" }
 if ($Promote) { $mode = "--promote" }
 
-& $node.Source $script $mode --profile $Profile
-if ($LASTEXITCODE -ne 0) {
-    throw "Firebase overlay release failed with exit code $LASTEXITCODE."
+if ($credentialExists) {
+    $previousGoogleCredential = [Environment]::GetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "Process")
+    $previousXdgConfig = [Environment]::GetEnvironmentVariable("XDG_CONFIG_HOME", "Process")
+    try {
+        $env:GOOGLE_APPLICATION_CREDENTIALS = $publisherCredential
+        $env:XDG_CONFIG_HOME = $publisherConfigRoot
+        & $node.Source $script $mode --profile $Profile
+        $overlayExitCode = $LASTEXITCODE
+    } finally {
+        if ($null -eq $previousGoogleCredential) { Remove-Item Env:\GOOGLE_APPLICATION_CREDENTIALS -ErrorAction SilentlyContinue } else { $env:GOOGLE_APPLICATION_CREDENTIALS = $previousGoogleCredential }
+        if ($null -eq $previousXdgConfig) { Remove-Item Env:\XDG_CONFIG_HOME -ErrorAction SilentlyContinue } else { $env:XDG_CONFIG_HOME = $previousXdgConfig }
+    }
+} else {
+    & $node.Source $script $mode --profile $Profile
+    $overlayExitCode = $LASTEXITCODE
+}
+if ($overlayExitCode -ne 0) {
+    throw "Firebase overlay release failed with exit code $overlayExitCode."
 }
