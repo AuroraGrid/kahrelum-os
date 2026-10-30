@@ -10,7 +10,7 @@ const { Readable } = require('stream');
 
 const SITE = 'kahrelum-public-hosting';
 const DOMAIN = 'https://kahrelum.com';
-const CHANNEL = 'safe-overlay';
+const CHANNEL_PREFIX = 'safe-overlay';
 const ROOT = path.resolve(__dirname, '..');
 const STATE_DIR = path.join(ROOT, '.firebase-deploy');
 const PREVIEW_RECEIPT = path.join(STATE_DIR, 'preview-receipt.json');
@@ -312,6 +312,7 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
 
 async function createPreview(hosting, client, live, overlay, profileName, sourceState) {
   if (!overlay.changedPaths.length) fail('The overlay is already identical to production; no preview release is needed.');
+  const channelId = `${CHANNEL_PREFIX}-${stableMapHash(overlay.desired).slice(0, 12)}`;
   const versionName = await hosting.createVersion(SITE, {
     config: live.config,
     labels: { 'deployment-tool': 'kahrelum-safe-overlay' },
@@ -335,14 +336,14 @@ async function createPreview(hosting, client, live, overlay, profileName, source
   if (!util.isDeepStrictEqual(finalizedMap, overlay.desired)) fail('Finalized preview file map differs from the live-derived desired map.');
   if (!util.isDeepStrictEqual(normalizeConfig(finalized.config), live.config)) fail('Finalized preview Hosting configuration differs from production.');
 
-  let channel = await hosting.getChannel('-', SITE, CHANNEL);
+  let channel = await hosting.getChannel('-', SITE, channelId);
   if (!channel) {
-    channel = await hosting.createChannel('-', SITE, CHANNEL, 24 * 60 * 60 * 1000);
+    channel = await hosting.createChannel('-', SITE, channelId, 24 * 60 * 60 * 1000);
   }
-  await createRelease(client, CHANNEL, versionName, {
+  await createRelease(client, channelId, versionName, {
     message: `Safe overlay preview based on ${live.version.name}`,
   });
-  channel = await hosting.getChannel('-', SITE, CHANNEL);
+  channel = await hosting.getChannel('-', SITE, channelId);
   const expectedApiHashes = await captureApiHashes(DOMAIN);
   const verification = await verifySurface(channel.url, expectedApiHashes, profileName);
   const receipt = {
@@ -353,7 +354,7 @@ async function createPreview(hosting, client, live, overlay, profileName, source
     baseVersion: live.version.name,
     baseConfig: live.config,
     baseConfigHash: sha256(Buffer.from(JSON.stringify(live.config))),
-    previewChannel: CHANNEL,
+    previewChannel: channelId,
     previewUrl: channel.url,
     previewVersion: versionName,
     desiredFiles: overlay.desired,

@@ -115,6 +115,7 @@ jobs:
           wrapper = Path("scripts/deploy-unified-firebase.ps1").read_text(encoding="utf-8")
           assert "stale-directory deployment path has been removed" in wrapper, "Unsafe directory deploy guard missing"
           assert "firebase deploy --only hosting" not in wrapper, "Direct Firebase directory deploy must remain blocked"
+          assert "CHANNEL_PREFIX" in overlay and "stableMapHash(overlay.desired).slice" in overlay, "Preview channels must remain content-addressed for concurrency safety"
 
           stale_identity = b"hr185882" + b"-creator"
           tracked = subprocess.check_output(["git", "ls-files", "-z"]).split(b"\0")
