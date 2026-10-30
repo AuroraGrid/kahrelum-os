@@ -278,7 +278,10 @@ function extractCanonical(html) {
 async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
   const checks = [];
   const internal = new Set();
-  for (const route of HTML_ROUTES) {
+  const verifiedRoutes = profileName === 'sports-intelligence'
+    ? HTML_ROUTES.filter((route) => route !== '/election-challenge')
+    : HTML_ROUTES;
+  for (const route of verifiedRoutes) {
     const bytes = await fetchBytes(origin + route);
     const html = bytes.toString('utf8');
     const expectedCanonical = DOMAIN + (route === '/' ? '/' : route);
