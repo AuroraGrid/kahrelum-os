@@ -22,6 +22,18 @@
 - **Proposal:** independent verification/correction log covering a curated trade rumor timeline; avoid any suggestion that existing journalists are inaccurate without evidence.
 - **Gate:** Pakistan-vendor contracting/payment eligibility explicitly asked before any paid scope.
 
+## 4. Footballguys | fantasy and editorial briefing fit
+- **Why:** Footballguys publishes NFL/fantasy podcasts and identifies a first-party media-resources route. KAHRELUM could propose a narrow trade-evidence briefing without duplicating start/sit coverage. This is a prospective fit, not evidence of budget or demand.
+- **Verified first-party route:** Joe Bryant at `bryant@footballguys.com` for media appearances, interviews or article resources: https://www.footballguys.com/contact-us . The advertising-only address is not used for this research-services draft.
+- **Proposal:** one source-linked deadline briefing separating official moves, attributable market reports and fantasy implications.
+- **Gate:** Pakistan-vendor contracting/payment eligibility explicitly asked before any paid scope.
+
+## 5. FantasyPros | partnership and media-inquiry route
+- **Why:** FantasyPros' first-party partner pages invite proposals and additional media inquiries across content, podcasts and tools. That establishes a legitimate route, not a need for this service.
+- **Verified first-party route:** `partners@fantasypros.com` from https://www.fantasypros.com/about/contact/ and https://partnershq.fantasypros.com/contact .
+- **Proposal:** a small independently source-checked NFL trade timeline suitable for an editorial, podcast or data-partnership evaluation.
+- **Gate:** Pakistan-vendor contracting/payment eligibility explicitly asked before any paid scope.
+
 ## Shared outreach gates
 1. Already-contacted deduplication against existing correspondence should occur before sending; this file does NOT itself prove these companies have never been contacted.
 2. No messages sent, no forms submitted, no invoices issued, no contracted commitments, no transactions; individual authorized send required.
@@ -34,16 +46,16 @@
 
 Hello [relevant editorial/business team],
 
-I'm building KAHRELUM Sports Intelligence, a source-linked NFL trade research desk that separates team statements, firsthand reporting, reported inquiries, and analyst speculation. The public demonstration is https://kahrelum-os.vercel.app/nfl/trades.
+I'm building KAHRELUM Sports Intelligence, a source-linked NFL trade research desk that separates team statements, firsthand reporting, reported inquiries, and analyst speculation. The public demonstration is https://kahrelum.com/nfl/trades.
 
 I can prepare one compact sample for your [show/newsletter]: timestamped original-source claims, disagreements between credible reporters, and a clearly labeled trade probability/correction trail. If useful, we could discuss a small, narrowly scoped research pilot without access to your audience data or systems.
 
-Before going further, can your organization contract with and pay a Pakistan-based independent research vendor for a scoped external research service?
+Can your organization contract with and pay a Pakistan-based independent research vendor for this service?
 
 Would this be relevant to your editorial/research team, or is there a better commercial contact?
 
 Best,
 KAHRELUM Sports Intelligence
-https://kahrelum-os.vercel.app/nfl/trades
+https://kahrelum.com/nfl/trades
 
 **Do not send without user approval.**

@@ -16,7 +16,7 @@ jobs:
     timeout-minutes: 3
     steps:
       - name: Check out public repository
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.0
         with:
           persist-credentials: false
       - name: Validate canonical public surface
@@ -40,7 +40,7 @@ jobs:
               "election-lab-app.js", "election-lab-roster.json",
               "nfl/trades.html", "nfl/analysis.html", "nfl/trade-board.json",
               "nfl/sourcegrid.json", "nfl/source-observations.json", "nfl/review-queue.json",
-              "nfl/refresh-status.json", "nfl/public-feed.json", "nfl/forecast-ledger.json",
+              "nfl/refresh-status.json", "nfl/source-health.json", "nfl/public-feed.json", "nfl/forecast-ledger.json",
               "nfl/deadline-audit.json", "nfl/publishing.json",
               "scripts/sports_intelligence.py", ".github/workflows/sports-intelligence-sourcegrid.yml",
               "tests/test_sports_intelligence.py",

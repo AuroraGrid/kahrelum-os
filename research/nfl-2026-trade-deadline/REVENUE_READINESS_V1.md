@@ -17,8 +17,10 @@ Illustrative range: **US$150-500/month**, scoped individually. Candidate deliver
 1. Locked On Podcast Network — contact route and September 1, 2026 first-party expansion trigger already recorded.
 2. Pro Football Network — official media/business directory; no private email guessed.
 3. Sportsnaut — public contact and documented corrections standard.
+4. Footballguys — official media-resources route; advertising-only address is excluded from this research-services draft.
+5. FantasyPros — official partner/business routes explicitly accept proposals and media inquiries.
 
-Every approved first contact must ask: **Can your organization contract with and pay a Pakistan-based independent research vendor for a scoped external research service?** No outreach has been sent.
+Every approved first contact must ask: **Can your organization contract with and pay a Pakistan-based independent research vendor for this service?** No outreach has been sent.
 
 ## Separate enterprise offer
 
@@ -43,11 +45,10 @@ Hello [team],
 
 KAHRELUM Sports Intelligence maintains a public, source-linked NFL trade desk that separates official transactions, original reporting, reported inquiries and analyst scenarios. I can prepare a compact sample for your show or newsletter: timestamped original-source claims, disputed-report reconciliation and up to three material developments, with corrections kept visible.
 
-Before discussing a paid scope, can your organization contract with and pay a Pakistan-based independent research vendor for a narrowly scoped external research service? If so, is there an appropriate editorial or commercial contact for a small US$150-500/month test pilot?
+Can your organization contract with and pay a Pakistan-based independent research vendor for this service? If so, is there an appropriate editorial or commercial contact for a small US$150-500/month test pilot?
 
 Regards,  
 KAHRELUM Sports Intelligence  
 https://kahrelum.com/nfl/trades
 
 **Do not send without recipient-specific authorization and correspondence deduplication.**
-

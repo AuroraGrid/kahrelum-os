@@ -36,6 +36,7 @@ const OVERLAY_FILES = [
   'nfl/source-observations.json',
   'nfl/review-queue.json',
   'nfl/refresh-status.json',
+  'nfl/source-health.json',
   'nfl/public-feed.json',
   'nfl/forecast-ledger.json',
   'nfl/deadline-audit.json',
@@ -69,8 +70,9 @@ const RELEASE_PROFILES = {
   },
   'sports-intelligence': {
     overlayFiles: [
-      'nfl/trades.html', 'nfl/sourcegrid.json', 'nfl/source-observations.json',
+      'nfl/trades.html', 'nfl/analysis.html', 'nfl/sourcegrid.json', 'nfl/source-observations.json',
       'nfl/review-queue.json', 'nfl/refresh-status.json', 'nfl/public-feed.json',
+      'nfl/source-health.json',
       'nfl/forecast-ledger.json', 'nfl/deadline-audit.json', 'nfl/publishing.json',
     ],
     sitemapRoutes: ['/nfl/trades', '/nfl/analysis'],
@@ -299,11 +301,12 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     fail('NFL trade board data integrity or forecast-certification boundary failed.');
   }
   if (['full', 'sports-intelligence'].includes(profileName)) {
-    const [sourcegrid, status, ledger, audit, publicFeed, publishing] = await Promise.all([
-      '/nfl/sourcegrid.json', '/nfl/refresh-status.json', '/nfl/forecast-ledger.json',
-      '/nfl/deadline-audit.json', '/nfl/public-feed.json', '/nfl/publishing.json',
+    const [sourcegrid, status, health, ledger, audit, publicFeed, publishing] = await Promise.all([
+      '/nfl/sourcegrid.json', '/nfl/refresh-status.json', '/nfl/source-health.json',
+      '/nfl/forecast-ledger.json', '/nfl/deadline-audit.json', '/nfl/public-feed.json', '/nfl/publishing.json',
     ].map(async (route) => JSON.parse((await fetchBytes(origin + route)).toString('utf8'))));
-    if (sourcegrid.counts?.operational < 1 || sourcegrid.counts?.teamsCovered !== 32) fail('SourceGrid coverage gate failed.');
+    if (sourcegrid.counts?.operational < 37 || sourcegrid.counts?.teamsCovered !== 32) fail('SourceGrid coverage gate failed.');
+    if (!Array.isArray(health.sources) || health.sources.length !== sourcegrid.counts.operational) fail('Per-source health coverage gate failed.');
     if (!['FRESH', 'DEGRADED', 'STALE_FAILED', 'ARCHIVED_NO_DEADLINE_FETCH'].includes(status.feedFreshness)) fail('Refresh status is not an executed state.');
     if (!Array.isArray(ledger.eligibleLocks) || !Array.isArray(ledger.historicalExcluded) || ledger.historicalExcluded.length < 20) fail('Forecast ledger custody gate failed.');
     if ((publicFeed.materialAlerts || []).length > 3) fail('Priority alert limit exceeded.');

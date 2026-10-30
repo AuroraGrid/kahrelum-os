@@ -6,200 +6,1229 @@
       "queuedAt": "2026-10-30T20:45:29Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-d3de88917bf676653cea",
+        "proposedEvidenceClass": "REJECTED_INSUFFICIENT_EVIDENCE",
+        "disposition": "REJECT",
+        "players": [],
+        "teams": [
+          "BUF"
+        ],
+        "claimType": "IRRELEVANT_KEYWORD_FALSE_POSITIVE",
+        "recoveredOriginalUrl": "https://www.espn.com/nfl/story/_/id/50329615/bills-making-contingencies-hurt-starters-available",
+        "sourceRecoveryStatus": "DIRECT_ARTICLE_URL_FROM_FEED",
+        "claimSummary": "An injury contingency story matched the word 'available' but contained no trade claim in the headline.",
+        "rationale": "Reject as a parser false positive.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-97e98b69a49a8aee56f1",
       "queuedAt": "2026-10-30T20:45:29Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-97e98b69a49a8aee56f1",
+        "proposedEvidenceClass": "REPORT",
+        "disposition": "ARCHIVE_ONLY",
+        "players": [
+          "Jeffery Simmons"
+        ],
+        "teams": [
+          "TEN",
+          "CHI"
+        ],
+        "claimType": "POST_TRANSACTION_ORIGINAL_REPORTING",
+        "recoveredOriginalUrl": "https://www.espn.com/nfl/story/_/id/50327830/titans-call-too-good-pass-next-trading-jeffery-simmons",
+        "sourceRecoveryStatus": "DIRECT_ARTICLE_URL_FROM_FEED",
+        "claimSummary": "ESPN reported background on the Titans' decision after the completed Simmons trade.",
+        "rationale": "Useful context, but the transaction itself is independently established by the NFL record.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-3e1c98d6b81ed068d190",
       "queuedAt": "2026-10-30T20:45:29Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-3e1c98d6b81ed068d190",
+        "proposedEvidenceClass": "INFERENCE",
+        "disposition": "ARCHIVE_ONLY",
+        "players": [
+          "Jeffery Simmons"
+        ],
+        "teams": [
+          "TEN",
+          "CHI"
+        ],
+        "claimType": "HISTORICAL_TRADE_VALUE_ANALYSIS",
+        "recoveredOriginalUrl": "https://www.espn.com/nfl/story/_/id/50319184/jeffery-simmons-trade-two-first-round-picks-bears-titans",
+        "sourceRecoveryStatus": "DIRECT_ARTICLE_URL_FROM_FEED",
+        "claimSummary": "Analysis of whether multi-first-round-pick trades tend to work.",
+        "rationale": "Analysis does not add a new transaction fact beyond official records.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-86371c4b11930fb438ff",
       "queuedAt": "2026-10-30T20:45:29Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-86371c4b11930fb438ff",
+        "proposedEvidenceClass": "INFERENCE",
+        "disposition": "ARCHIVE_ONLY",
+        "players": [],
+        "teams": [],
+        "claimType": "CANDIDATE_RANKING",
+        "recoveredOriginalUrl": "https://www.espn.com/nfl/story/_/id/50278445/2026-nfl-trade-deadline-ranking-top-25-candidates-available",
+        "sourceRecoveryStatus": "DIRECT_ARTICLE_URL_FROM_FEED",
+        "claimSummary": "ESPN ranked players who might move and discussed team fits.",
+        "rationale": "A candidate ranking is analysis, not evidence that a player is available.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-b253c32aff797f520010",
       "queuedAt": "2026-10-30T20:45:29Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-b253c32aff797f520010",
+        "proposedEvidenceClass": "INFERENCE",
+        "disposition": "ARCHIVE_ONLY",
+        "players": [
+          "DeForest Buckner"
+        ],
+        "teams": [
+          "SF"
+        ],
+        "claimType": "POST_TRANSACTION_TEAM_PLAN_ANALYSIS",
+        "recoveredOriginalUrl": "https://www.espn.com/nfl/story/_/id/50308923/san-francisco-49ers-deforest-buckner-trade-deadline-plans",
+        "sourceRecoveryStatus": "DIRECT_ARTICLE_URL_FROM_FEED",
+        "claimSummary": "ESPN analyzed whether San Francisco might remain active after acquiring Buckner.",
+        "rationale": "The headline does not itself report another inquiry or offer.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-61875c5fa2f9cb8b8f98",
       "queuedAt": "2026-10-30T20:45:29Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-61875c5fa2f9cb8b8f98",
+        "proposedEvidenceClass": "INFERENCE",
+        "disposition": "ARCHIVE_ONLY",
+        "players": [],
+        "teams": [],
+        "claimType": "ALL_TEAM_NEEDS_AND_OPTIONS_ANALYSIS",
+        "recoveredOriginalUrl": "https://www.cbssports.com/nfl/news/2026-nfl-trade-deadline-needs-potential-options-all-32-teams/",
+        "sourceRecoveryStatus": "DIRECT_ARTICLE_URL_FROM_FEED",
+        "claimSummary": "CBS analysts proposed needs and potential options for all teams.",
+        "rationale": "Potential options are hypothetical unless separately supported by reporting.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-c979c2d3f5d59fd82116",
       "queuedAt": "2026-10-30T20:45:29Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-c979c2d3f5d59fd82116",
+        "proposedEvidenceClass": "INFERENCE",
+        "disposition": "ARCHIVE_ONLY",
+        "players": [
+          "Joey Porter Jr."
+        ],
+        "teams": [
+          "PIT",
+          "DAL"
+        ],
+        "claimType": "POST_TRANSACTION_OPINION",
+        "recoveredOriginalUrl": "https://www.cbssports.com/nfl/news/cowboys-already-won-2026-nfl-trade-deadline-joey-porter-jr-trade/",
+        "sourceRecoveryStatus": "DIRECT_ARTICLE_URL_FROM_FEED",
+        "claimSummary": "CBS argued Dallas had already won the deadline after the Porter trade.",
+        "rationale": "The 'won' claim is opinion; the transaction belongs in the official record.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-cd8b8d2323778ef4d7aa",
       "queuedAt": "2026-10-30T20:45:29Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-cd8b8d2323778ef4d7aa",
+        "proposedEvidenceClass": "REPORT",
+        "disposition": "APPROVAL_CANDIDATE",
+        "players": [
+          "Brian Thomas Jr."
+        ],
+        "teams": [
+          "JAX"
+        ],
+        "claimType": "ATTRIBUTED_PLAYER_STATEMENT_WITH_ANALYSIS",
+        "recoveredOriginalUrl": "https://www.nfl.com/news/jaguars-brian-thomas-jr-trade-rumors-show-everybody-what-i-can-do",
+        "sourceRecoveryStatus": "DIRECT_NFL_ARTICLE_RECOVERED",
+        "claimSummary": "NFL.com relayed Thomas's public comments but did not report an inquiry, offer or agreement.",
+        "rationale": "Publish, if approved, only as a player statement amid rumors; NFL.com's fit analysis is not team availability confirmation.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-328c5f0a8ef15b4215e5",
       "queuedAt": "2026-10-30T20:45:29Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-328c5f0a8ef15b4215e5",
+        "proposedEvidenceClass": "DUPLICATE",
+        "disposition": "DUPLICATE",
+        "players": [],
+        "teams": [],
+        "claimType": "DISCOVERY_DUPLICATE",
+        "recoveredOriginalUrl": "https://www.cbssports.com/nfl/news/2026-nfl-trade-deadline-needs-potential-options-all-32-teams/",
+        "sourceRecoveryStatus": "DIRECT_ARTICLE_RECOVERED",
+        "duplicateOfObservationId": "OBS-61875c5fa2f9cb8b8f98",
+        "claimSummary": "Google News discovery copy of the directly ingested CBS article.",
+        "rationale": "Suppress the redirect copy and retain the publisher URL.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-e4cd7343fc8cb273f235",
       "queuedAt": "2026-10-30T20:45:29Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-e4cd7343fc8cb273f235",
+        "proposedEvidenceClass": "INFERENCE",
+        "disposition": "ARCHIVE_ONLY",
+        "players": [],
+        "teams": [
+          "IND"
+        ],
+        "claimType": "FANTASY_IMPLICATION_ANALYSIS",
+        "recoveredOriginalUrl": null,
+        "sourceRecoveryStatus": "ESPN_CANONICAL_URL_NOT_RECOVERED_DISCOVERY_LINK_PRESERVED",
+        "claimSummary": "A fantasy-oriented article identified players to monitor around the deadline.",
+        "rationale": "Fantasy monitoring is analysis and does not independently establish trade activity.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-526c01baa09f7aea0ba5",
       "queuedAt": "2026-10-30T20:45:29Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-526c01baa09f7aea0ba5",
+        "proposedEvidenceClass": "INFERENCE",
+        "disposition": "ARCHIVE_ONLY",
+        "players": [
+          "Jeffery Simmons",
+          "DeForest Buckner",
+          "Quenton Nelson"
+        ],
+        "teams": [],
+        "claimType": "TRADE_GRADES",
+        "recoveredOriginalUrl": "https://abc13.com/post/nfl-trade-deadline-grades-jj-mccarthy-giants/19884289/",
+        "sourceRecoveryStatus": "ESPN_SYNDICATED_COPY_RECOVERED",
+        "claimSummary": "Analysts graded already recorded transactions.",
+        "rationale": "Editorial grading is analysis; official transaction rows are the controlling facts.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-4b95ffd5a607198bf252",
       "queuedAt": "2026-10-30T20:45:29Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-4b95ffd5a607198bf252",
+        "proposedEvidenceClass": "UNVERIFIED",
+        "disposition": "HOLD_ORIGINAL_SOURCE",
+        "players": [
+          "Josh Downs"
+        ],
+        "teams": [
+          "NE",
+          "IND"
+        ],
+        "claimType": "ROLLING_RUMOR_AGGREGATION",
+        "recoveredOriginalUrl": "https://sports.yahoo.com/articles/patriots-trade-deadline-tracker-news-231608460.html",
+        "sourceRecoveryStatus": "RECOVERED_REPUBLICATION",
+        "claimSummary": "A rolling team blog tracker linked onward to separate reports.",
+        "rationale": "The tracker is not the original source for its individual rumor claims.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-dc4b1467af36c6b4991e",
       "queuedAt": "2026-10-30T20:45:29Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-dc4b1467af36c6b4991e",
+        "proposedEvidenceClass": "INFERENCE",
+        "disposition": "ARCHIVE_ONLY",
+        "players": [],
+        "teams": [
+          "BUF"
+        ],
+        "claimType": "TEAM_NEEDS_RANKING",
+        "recoveredOriginalUrl": "https://www.si.com/nfl/bills/onsi/trade-deadline-ranking-buffalo-bills-biggest-needs-under-two-weeks-left",
+        "sourceRecoveryStatus": "DIRECT_ARTICLE_RECOVERED",
+        "claimSummary": "A Sports Illustrated team-site article ranked positions Buffalo should address.",
+        "rationale": "A recommendation does not establish team contact or an available player.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-af0067759c5db884f465",
       "queuedAt": "2026-10-30T20:45:29Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-af0067759c5db884f465",
+        "proposedEvidenceClass": "INFERENCE",
+        "disposition": "ARCHIVE_ONLY",
+        "players": [],
+        "teams": [
+          "DEN"
+        ],
+        "claimType": "TEAM_DEADLINE_APPROACH_ANALYSIS",
+        "recoveredOriginalUrl": null,
+        "sourceRecoveryStatus": "DENVER_POST_BLOCKED_BY_ROBOTS_ORIGINAL_DISCOVERY_LINK_PRESERVED",
+        "claimSummary": "A Denver Post headline framed how the Broncos might approach the deadline.",
+        "rationale": "No accessible original text established an inquiry, offer or negotiation.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-be0f1483e1bc81c4828d",
       "queuedAt": "2026-10-30T20:45:29Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-be0f1483e1bc81c4828d",
+        "proposedEvidenceClass": "REPORT",
+        "disposition": "APPROVAL_CANDIDATE",
+        "players": [
+          "Marquise Brown",
+          "Riq Woolen",
+          "Dallas Goedert",
+          "Saquon Barkley",
+          "Moro Ojomo"
+        ],
+        "teams": [
+          "PHI"
+        ],
+        "claimType": "ATTRIBUTED_AVAILABILITY_AND_NON_AVAILABILITY_REPORT",
+        "recoveredOriginalUrl": "https://www.si.com/nfl/albert-breer-how-two-former-roommates-put-jeffery-simmons-trade-together",
+        "sourceRecoveryStatus": "ORIGINAL_ALBERT_BREER_COLUMN_RECOVERED",
+        "claimSummary": "Breer reported three contract-year Eagles could be had, Barkley was less likely, and Ojomo was not available.",
+        "rationale": "Preserve the positive and negative availability claims together; no offer or agreement was reported.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-b70aff82ef9d5a076a16",
       "queuedAt": "2026-10-30T20:45:29Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-b70aff82ef9d5a076a16",
+        "proposedEvidenceClass": "INFERENCE",
+        "disposition": "ARCHIVE_ONLY",
+        "players": [],
+        "teams": [
+          "DET"
+        ],
+        "claimType": "TEAM_NEEDS_ANALYSIS",
+        "recoveredOriginalUrl": null,
+        "sourceRecoveryStatus": "DETROIT_FREE_PRESS_BLOCKED_BY_ROBOTS_ORIGINAL_DISCOVERY_LINK_PRESERVED",
+        "claimSummary": "A team-needs article identified defensive help as Detroit's priority.",
+        "rationale": "Needs analysis does not establish contact with a seller.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-a8aa0ced2782021e0b46",
       "queuedAt": "2026-10-30T20:45:29Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-a8aa0ced2782021e0b46",
+        "proposedEvidenceClass": "REPORT",
+        "disposition": "APPROVAL_CANDIDATE",
+        "players": [
+          "Josh Downs"
+        ],
+        "teams": [
+          "IND"
+        ],
+        "claimType": "ATTRIBUTED_TRADE_REQUEST_AND_COACH_CONFIRMATION",
+        "recoveredOriginalUrl": "https://www.nfl.com/news/colts-wide-receiver-josh-downs-will-play-vs-jaguars-despite-trade-request",
+        "sourceRecoveryStatus": "NFL_SYNDICATED_ATHLETIC_REPORT_RECOVERED",
+        "claimSummary": "James Boyd reported that Josh Downs requested a trade, and quoted coach Shane Steichen discussing the request.",
+        "rationale": "This supports a trade request, not a completed trade, offer or agreement.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-7516a3f7ad767966add0",
       "queuedAt": "2026-10-30T20:45:29Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-7516a3f7ad767966add0",
+        "proposedEvidenceClass": "REPORT",
+        "disposition": "APPROVAL_CANDIDATE",
+        "players": [],
+        "teams": [
+          "CLE"
+        ],
+        "claimType": "ATTRIBUTED_TEAM_BUYER_NEEDS_REPORT",
+        "recoveredOriginalUrl": "https://www.si.com/nfl/albert-breer-how-two-former-roommates-put-jeffery-simmons-trade-together",
+        "sourceRecoveryStatus": "ORIGINAL_ALBERT_BREER_COLUMN_RECOVERED",
+        "claimSummary": "Albert Breer reported Cleveland was checking pass-rush and blocking-tight-end options.",
+        "rationale": "This supports buyer activity at position level only; it does not identify an offer or agreement.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-a89078f692a173cfd6ba",
       "queuedAt": "2026-10-30T20:45:29Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-a89078f692a173cfd6ba",
+        "proposedEvidenceClass": "INFERENCE",
+        "disposition": "ARCHIVE_ONLY",
+        "players": [],
+        "teams": [
+          "SF"
+        ],
+        "claimType": "DEADLINE_EXPLAINER_AND_POTENTIAL_TARGETS",
+        "recoveredOriginalUrl": "https://sports.yahoo.com/articles/nfl-trade-deadline-49ers-deals-134757768.html",
+        "sourceRecoveryStatus": "NINERS_WIRE_REPUBLICATION_RECOVERED",
+        "claimSummary": "An explainer listed the deadline, team needs and players the author thought San Francisco could target.",
+        "rationale": "The target list is hypothetical and provides no evidence of contact.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-2e3394e1412f7ce83132",
       "queuedAt": "2026-10-30T20:45:29Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-2e3394e1412f7ce83132",
+        "proposedEvidenceClass": "UNVERIFIED",
+        "disposition": "HOLD_ORIGINAL_SOURCE",
+        "players": [
+          "Brian Thomas Jr.",
+          "Josh Downs",
+          "Jonathan Taylor"
+        ],
+        "teams": [
+          "KC",
+          "DEN",
+          "MIN",
+          "DET",
+          "PIT"
+        ],
+        "claimType": "SECONDARY_ACCOUNT_OF_ORIGINAL_BROADCAST_REPORT",
+        "recoveredOriginalUrl": "https://bleacherreport.com/articles/25527075-new-nfl-trade-rumors-top-targets-chiefs-broncos-vikings-steelers-deadline",
+        "sourceRecoveryStatus": "SECONDARY_ARTICLE_RECOVERED_ORIGINAL_PRIME_SEGMENT_NOT_CAPTURED",
+        "claimSummary": "Bleacher Report attributed phone activity and positional interest to James Palmer on Prime.",
+        "rationale": "The attributable original broadcast segment was not independently captured, so the secondary summary remains held.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-ce1e3268066b81496e37",
       "queuedAt": "2026-10-30T20:45:29Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-ce1e3268066b81496e37",
+        "proposedEvidenceClass": "DUPLICATE",
+        "disposition": "DUPLICATE",
+        "players": [
+          "Joey Porter Jr."
+        ],
+        "teams": [
+          "PIT",
+          "DAL"
+        ],
+        "claimType": "DISCOVERY_DUPLICATE",
+        "recoveredOriginalUrl": "https://www.cbssports.com/nfl/news/cowboys-already-won-2026-nfl-trade-deadline-joey-porter-jr-trade/",
+        "sourceRecoveryStatus": "DIRECT_ARTICLE_RECOVERED",
+        "duplicateOfObservationId": "OBS-c979c2d3f5d59fd82116",
+        "claimSummary": "Google News discovery copy of the directly ingested CBS article.",
+        "rationale": "Suppress the redirect copy and retain the publisher URL.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-0a541ee3c5826fc95289",
       "queuedAt": "2026-10-30T20:45:29Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-0a541ee3c5826fc95289",
+        "proposedEvidenceClass": "REJECTED_INSUFFICIENT_EVIDENCE",
+        "disposition": "REJECT",
+        "players": [],
+        "teams": [
+          "CLE"
+        ],
+        "claimType": "PREDICTION_OR_OPINION",
+        "recoveredOriginalUrl": "https://sports.yahoo.com/articles/browns-predicted-stand-pat-2026-201319933.html",
+        "sourceRecoveryStatus": "RECOVERED_REPUBLISHED_ARTICLE",
+        "claimSummary": "A columnist relayed another outlet's prediction that Cleveland would stand pat.",
+        "rationale": "A prediction is not evidence of an inquiry, offer, negotiation or team decision.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-cca98a13f45dd87f8862",
       "queuedAt": "2026-10-30T20:45:29Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-cca98a13f45dd87f8862",
+        "proposedEvidenceClass": "REPORT",
+        "disposition": "APPROVAL_CANDIDATE",
+        "players": [
+          "Khalil Mack",
+          "Quentin Johnston"
+        ],
+        "teams": [
+          "LAC"
+        ],
+        "claimType": "ATTRIBUTED_CONTRADICTORY_AVAILABILITY_REPORT",
+        "recoveredOriginalUrl": "https://www.si.com/nfl/albert-breer-how-two-former-roommates-put-jeffery-simmons-trade-together",
+        "sourceRecoveryStatus": "ORIGINAL_ALBERT_BREER_COLUMN_RECOVERED",
+        "claimSummary": "Breer reported that the Chargers had shut down trade inquiries even as availability questions persisted around Mack and Johnston.",
+        "rationale": "This is material negative evidence against treating speculation as active negotiations.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-0cef19853362bd6d455f",
       "queuedAt": "2026-10-30T20:45:29Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-0cef19853362bd6d455f",
+        "proposedEvidenceClass": "INFERENCE",
+        "disposition": "ARCHIVE_ONLY",
+        "players": [
+          "Jonathan Taylor",
+          "Maxx Crosby",
+          "Kirk Cousins",
+          "Quentin Johnston",
+          "Khalil Mack",
+          "Josh Sweat",
+          "Budda Baker",
+          "Riq Woolen",
+          "Tony Pollard"
+        ],
+        "teams": [],
+        "claimType": "DEADLINE_EXPLAINER_AND_CANDIDATE_ANALYSIS",
+        "recoveredOriginalUrl": "https://sports.yahoo.com/articles/nfl-trade-deadline-date-time-100810470.html",
+        "sourceRecoveryStatus": "RECOVERED_USA_TODAY_REPUBLICATION",
+        "claimSummary": "A deadline explainer listed possible candidates and hypothetical reasons they could move.",
+        "rationale": "Useful context, but the candidate list does not establish team contact or availability.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-6b097794910321bdf9b1",
       "queuedAt": "2026-10-30T20:45:29Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-6b097794910321bdf9b1",
+        "proposedEvidenceClass": "REPORT",
+        "disposition": "APPROVAL_CANDIDATE",
+        "players": [
+          "Josh Sweat"
+        ],
+        "teams": [
+          "ARI",
+          "DAL",
+          "SF",
+          "CHI"
+        ],
+        "claimType": "ATTRIBUTED_REPORT_OF_RIVAL_EXPECTATIONS",
+        "recoveredOriginalUrl": "https://sports.yahoo.com/articles/nfl-trade-rumors-josh-sweat-035152219.html",
+        "sourceRecoveryStatus": "CARDS_WIRE_REPUBLICATION_RECOVERED_ORIGINAL_ESPN_REPORT_NOT_CAPTURED",
+        "claimSummary": "The article attributed to Jeremy Fowler that rivals saw Arizona as potentially moving Josh Sweat and identified possible fits.",
+        "rationale": "Classify only as an attributable report, not an offer, negotiation or agreement; the article itself says much of the destination discussion is speculative.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-f31ba21ec23cc3bf5570",
       "queuedAt": "2026-10-30T20:45:29Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-f31ba21ec23cc3bf5570",
+        "proposedEvidenceClass": "REPORT",
+        "disposition": "ARCHIVE_ONLY",
+        "players": [
+          "Quenton Nelson"
+        ],
+        "teams": [
+          "IND",
+          "SEA"
+        ],
+        "claimType": "POST_TRANSACTION_PLAYER_INTERVIEW",
+        "recoveredOriginalUrl": "https://www.nfl.com/news/quenton-nelson-bittersweet-trade-colts-next-chapter-seahawks",
+        "sourceRecoveryStatus": "DIRECT_NFL_ARTICLE_RECOVERED",
+        "claimSummary": "NFL.com reported Nelson's comments after the completed trade.",
+        "rationale": "The interview adds context; the official transaction record controls the completed-trade fact.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-b45ec391821736415382",
       "queuedAt": "2026-10-30T20:51:53Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-b45ec391821736415382",
+        "proposedEvidenceClass": "INFERENCE",
+        "disposition": "ARCHIVE_ONLY",
+        "players": [
+          "Jonathan Taylor",
+          "Brian Thomas Jr.",
+          "Xavier Worthy",
+          "Vita Vea",
+          "Budda Baker",
+          "Josh Downs"
+        ],
+        "teams": [],
+        "claimType": "EXPLICIT_TRADE_WISHLIST_OPINION",
+        "recoveredOriginalUrl": "https://www.foxsportsradio1310.com/2026/10/29/the-5-trades-i-want-to-see-before-the-nfl-trade-deadline/",
+        "sourceRecoveryStatus": "FOX_CONTENT_SYNDICATION_RECOVERED",
+        "claimSummary": "The author proposed five trades they wanted to see.",
+        "rationale": "Explicitly hypothetical ideas must not be represented as reported trade activity.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-3273160814776931bf6c",
       "queuedAt": "2026-10-30T20:51:53Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
-      "status": "OPEN"
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-3273160814776931bf6c",
+        "proposedEvidenceClass": "REJECTED_INSUFFICIENT_EVIDENCE",
+        "disposition": "REJECT",
+        "players": [
+          "Khalil Mack",
+          "Brian Thomas Jr.",
+          "Maxx Crosby"
+        ],
+        "teams": [],
+        "claimType": "RUMOR_ROUNDUP_AND_TRADE_IDEAS",
+        "recoveredOriginalUrl": null,
+        "sourceRecoveryStatus": "ORIGINAL_HEAVY_URL_NOT_RECOVERED_DISCOVERY_LINK_PRESERVED",
+        "claimSummary": "A roundup mixed rumors, possible fits and proposed trade costs.",
+        "rationale": "No accessible original evidence established a specific inquiry, offer or negotiation.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
     },
     {
       "observationId": "OBS-62590eb73d1563589a4c",
       "queuedAt": "2026-10-30T20:51:53Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "PROPOSAL_READY",
+      "reviewProposal": {
+        "observationId": "OBS-62590eb73d1563589a4c",
+        "proposedEvidenceClass": "REPORT",
+        "disposition": "ARCHIVE_ONLY",
+        "players": [
+          "Jeffery Simmons"
+        ],
+        "teams": [
+          "TEN",
+          "CHI"
+        ],
+        "claimType": "POST_TRANSACTION_ORIGINAL_REPORTING",
+        "recoveredOriginalUrl": "https://www.si.com/nfl/albert-breer-how-two-former-roommates-put-jeffery-simmons-trade-together",
+        "sourceRecoveryStatus": "ORIGINAL_ALBERT_BREER_COLUMN_RECOVERED",
+        "claimSummary": "Breer reported how the Simmons transaction was negotiated and approved.",
+        "rationale": "Preserve as original reporting context; the official transaction record controls the completed-trade fact.",
+        "batchId": "NFL-REVIEW-2026-10-30-INITIAL-29",
+        "reviewedAtUtc": "2026-10-30T22:10:00Z"
+      }
+    },
+    {
+      "observationId": "OBS-3a2193c383d946c12965",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-d7988df3744664320bec",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-68575350446f114b86c0",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-253efd213b9ada57ed19",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-28f9c02f373e6e878d36",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-a686c047e134b79db1f5",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-7196f2328caec110b7c2",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-184dec19da6c7533d09a",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-03628fcd1d4cb3891162",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-f5144f2cdb5bdc854f30",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-f8eb51d554bfd2a696a5",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-a613b3ee2ff9d9061416",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-e691385e1f4171b089f2",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-649a9f0bd8a6e06b73c6",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-25301336dd20503e0939",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-ed50c9faaf333810cbd9",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-bd3e7238a980f86d8ddc",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-5b298e78de6c29dbb660",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-b095d8eab066c6cf2d55",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-cdc06c4b074cf26e07e6",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-1f80e99aafa6e7327521",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-b1df94ed3d5072dbb5e8",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-395fd1bef7cc502ae958",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-58be809716616faf9e2a",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-caf03f28bdd016437b4f",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-7c27b7d088f5b8567f81",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-68c10cee75ea49d26683",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-dffe7791bee8845c0487",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-725cf80dc1899f26bd8b",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-519ee3357f2047e41cf6",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-abd1e75566f52621402b",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-18aaacef2dcd3a097759",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-0880a4f474bb0e13d0bb",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-fc696ae42b48d8c06d7c",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-ca0ebdca909daf410cb1",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_EDITOR_APPROVAL",
+      "priority": "HIGH",
+      "status": "SUPERSEDED",
+      "supersededByObservationId": "OBS-ad79cc1d82507dc31582"
+    },
+    {
+      "observationId": "OBS-b7d517bfebcd53560dce",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_EDITOR_APPROVAL",
+      "priority": "HIGH",
+      "status": "SUPERSEDED",
+      "supersededByObservationId": "OBS-748583205d29cf088e02"
+    },
+    {
+      "observationId": "OBS-7130838f5fbbdb30723d",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_EDITOR_APPROVAL",
+      "priority": "HIGH",
+      "status": "SUPERSEDED",
+      "supersededByObservationId": "OBS-5a0084150ef5709715f2"
+    },
+    {
+      "observationId": "OBS-4818f9cb98ed6a6f40f2",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_EDITOR_APPROVAL",
+      "priority": "HIGH",
+      "status": "SUPERSEDED",
+      "supersededByObservationId": "OBS-412659f24ce9fa446ac3"
+    },
+    {
+      "observationId": "OBS-cb39dfd374d95ba41687",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_EDITOR_APPROVAL",
+      "priority": "HIGH",
+      "status": "SUPERSEDED",
+      "supersededByObservationId": "OBS-0aa2d92e46d4ff15a5cf"
+    },
+    {
+      "observationId": "OBS-3dd79b988b938179df7e",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_EDITOR_APPROVAL",
+      "priority": "HIGH",
+      "status": "SUPERSEDED",
+      "supersededByObservationId": "OBS-c6f095bbeee732df0664"
+    },
+    {
+      "observationId": "OBS-3d83a38827b4cfff226f",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-b8632e139a3f9fe94db2",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-6a42a151752f642c0e38",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-da386d67cc3c6586408e",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-4309a1e434603ba0adbb",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-aae5a689b6e8c9cd339c",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-d699af90b593ffdd95b4",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-2f7e8349a9020f867121",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-9a54d1ae1979bdd5fce6",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-9f4553c0f29e98c29e3c",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-bc89f8ad07b832ba8815",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-ae6b3868eac99a396482",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-5279d52e217140fe7db9",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-2705c6bb0cc8a5eac49e",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-0ec691056fdd607fc0fb",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-3e724acc79f8afa56827",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-fa12ab511d5f1533cbc8",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-b45c369aba732cf4efe8",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-c9f84b750298def47d59",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-f70010a064301c9da4f0",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-9a8a61b5deeccb74e03f",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-20889497588dcaff198e",
+      "queuedAt": "2026-10-30T22:01:18Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-396745b00812788d96b6",
+      "queuedAt": "2026-10-30T22:11:33Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-d7c33bbfaf459fa57982",
+      "queuedAt": "2026-10-30T22:11:33Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-ad79cc1d82507dc31582",
+      "queuedAt": "2026-10-30T22:11:33Z",
+      "reason": "BLOCKED_PENDING_EDITOR_APPROVAL",
+      "priority": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-748583205d29cf088e02",
+      "queuedAt": "2026-10-30T22:11:33Z",
+      "reason": "BLOCKED_PENDING_EDITOR_APPROVAL",
+      "priority": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-5a0084150ef5709715f2",
+      "queuedAt": "2026-10-30T22:11:33Z",
+      "reason": "BLOCKED_PENDING_EDITOR_APPROVAL",
+      "priority": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-412659f24ce9fa446ac3",
+      "queuedAt": "2026-10-30T22:11:33Z",
+      "reason": "BLOCKED_PENDING_EDITOR_APPROVAL",
+      "priority": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-0aa2d92e46d4ff15a5cf",
+      "queuedAt": "2026-10-30T22:11:33Z",
+      "reason": "BLOCKED_PENDING_EDITOR_APPROVAL",
+      "priority": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-c6f095bbeee732df0664",
+      "queuedAt": "2026-10-30T22:11:33Z",
+      "reason": "BLOCKED_PENDING_EDITOR_APPROVAL",
+      "priority": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-e82d9b30a82b5fe2ac45",
+      "queuedAt": "2026-10-30T22:11:33Z",
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
       "status": "OPEN"

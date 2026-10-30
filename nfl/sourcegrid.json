@@ -1,6 +1,6 @@
 {
-  "schema": "KAHRELUM_SOURCEGRID_v1.0",
-  "generatedAt": "2026-10-30T20:45:26Z",
+  "schema": "KAHRELUM_SOURCEGRID_v1.1",
+  "generatedAt": "2026-10-30T22:00:55Z",
   "policy": {
     "defaultEvidenceClass": "UNVERIFIED",
     "autoConfirmTransactions": false,
@@ -44,9 +44,297 @@
     {
       "id": "NFL_TRANSACTIONS",
       "name": "NFL official transactions",
-      "url": "https://www.nfl.com/transactions/",
-      "type": "official_page",
+      "url": "https://www.nfl.com/transactions/league/trades/2026/10",
+      "type": "official_transactions",
       "role": "OFFICIAL_VERIFICATION_ENDPOINT",
+      "operational": true
+    },
+    {
+      "id": "TEAM_ARI_RSS",
+      "name": "ARI official news RSS",
+      "url": "https://www.azcardinals.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "ARI",
+      "operational": true
+    },
+    {
+      "id": "TEAM_ATL_RSS",
+      "name": "ATL official news RSS",
+      "url": "https://www.atlantafalcons.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "ATL",
+      "operational": true
+    },
+    {
+      "id": "TEAM_BAL_RSS",
+      "name": "BAL official news RSS",
+      "url": "https://www.baltimoreravens.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "BAL",
+      "operational": true
+    },
+    {
+      "id": "TEAM_BUF_RSS",
+      "name": "BUF official news RSS",
+      "url": "https://www.buffalobills.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "BUF",
+      "operational": true
+    },
+    {
+      "id": "TEAM_CAR_RSS",
+      "name": "CAR official news RSS",
+      "url": "https://www.panthers.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "CAR",
+      "operational": true
+    },
+    {
+      "id": "TEAM_CHI_RSS",
+      "name": "CHI official news RSS",
+      "url": "https://www.chicagobears.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "CHI",
+      "operational": true
+    },
+    {
+      "id": "TEAM_CIN_RSS",
+      "name": "CIN official news RSS",
+      "url": "https://www.bengals.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "CIN",
+      "operational": true
+    },
+    {
+      "id": "TEAM_CLE_RSS",
+      "name": "CLE official news RSS",
+      "url": "https://www.clevelandbrowns.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "CLE",
+      "operational": true
+    },
+    {
+      "id": "TEAM_DAL_RSS",
+      "name": "DAL official news RSS",
+      "url": "https://www.dallascowboys.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "DAL",
+      "operational": true
+    },
+    {
+      "id": "TEAM_DEN_RSS",
+      "name": "DEN official news RSS",
+      "url": "https://www.denverbroncos.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "DEN",
+      "operational": true
+    },
+    {
+      "id": "TEAM_DET_RSS",
+      "name": "DET official news RSS",
+      "url": "https://www.detroitlions.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "DET",
+      "operational": true
+    },
+    {
+      "id": "TEAM_GB_RSS",
+      "name": "GB official news RSS",
+      "url": "https://www.packers.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "GB",
+      "operational": true
+    },
+    {
+      "id": "TEAM_HOU_RSS",
+      "name": "HOU official news RSS",
+      "url": "https://www.houstontexans.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "HOU",
+      "operational": true
+    },
+    {
+      "id": "TEAM_IND_RSS",
+      "name": "IND official news RSS",
+      "url": "https://www.colts.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "IND",
+      "operational": true
+    },
+    {
+      "id": "TEAM_JAX_RSS",
+      "name": "JAX official news RSS",
+      "url": "https://www.jaguars.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "JAX",
+      "operational": true
+    },
+    {
+      "id": "TEAM_KC_RSS",
+      "name": "KC official news RSS",
+      "url": "https://www.chiefs.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "KC",
+      "operational": true
+    },
+    {
+      "id": "TEAM_LV_RSS",
+      "name": "LV official news RSS",
+      "url": "https://www.raiders.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "LV",
+      "operational": true
+    },
+    {
+      "id": "TEAM_LAC_RSS",
+      "name": "LAC official news RSS",
+      "url": "https://www.chargers.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "LAC",
+      "operational": true
+    },
+    {
+      "id": "TEAM_LAR_RSS",
+      "name": "LAR official news RSS",
+      "url": "https://www.therams.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "LAR",
+      "operational": true
+    },
+    {
+      "id": "TEAM_MIA_RSS",
+      "name": "MIA official news RSS",
+      "url": "https://www.miamidolphins.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "MIA",
+      "operational": true
+    },
+    {
+      "id": "TEAM_MIN_RSS",
+      "name": "MIN official news RSS",
+      "url": "https://www.vikings.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "MIN",
+      "operational": true
+    },
+    {
+      "id": "TEAM_NE_RSS",
+      "name": "NE official news RSS",
+      "url": "https://www.patriots.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "NE",
+      "operational": true
+    },
+    {
+      "id": "TEAM_NO_RSS",
+      "name": "NO official news RSS",
+      "url": "https://www.neworleanssaints.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "NO",
+      "operational": true
+    },
+    {
+      "id": "TEAM_NYG_RSS",
+      "name": "NYG official news RSS",
+      "url": "https://www.giants.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "NYG",
+      "operational": true
+    },
+    {
+      "id": "TEAM_NYJ_RSS",
+      "name": "NYJ official news RSS",
+      "url": "https://www.newyorkjets.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "NYJ",
+      "operational": true
+    },
+    {
+      "id": "TEAM_PHI_RSS",
+      "name": "PHI official news RSS",
+      "url": "https://www.philadelphiaeagles.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "PHI",
+      "operational": true
+    },
+    {
+      "id": "TEAM_PIT_RSS",
+      "name": "PIT official news RSS",
+      "url": "https://www.steelers.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "PIT",
+      "operational": true
+    },
+    {
+      "id": "TEAM_SF_RSS",
+      "name": "SF official news RSS",
+      "url": "https://www.49ers.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "SF",
+      "operational": true
+    },
+    {
+      "id": "TEAM_SEA_RSS",
+      "name": "SEA official news RSS",
+      "url": "https://www.seahawks.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "SEA",
+      "operational": true
+    },
+    {
+      "id": "TEAM_TB_RSS",
+      "name": "TB official news RSS",
+      "url": "https://www.buccaneers.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "TB",
+      "operational": true
+    },
+    {
+      "id": "TEAM_TEN_RSS",
+      "name": "TEN official news RSS",
+      "url": "https://www.tennesseetitans.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "TEN",
+      "operational": true
+    },
+    {
+      "id": "TEAM_WAS_RSS",
+      "name": "WAS official news RSS",
+      "url": "https://www.commanders.com/rss/news",
+      "type": "rss",
+      "role": "OFFICIAL_TEAM_DISCOVERY",
+      "team": "WAS",
       "operational": true
     }
   ],
@@ -183,267 +471,11 @@
       "category": "BROADCAST",
       "status": "WATCHLIST_ONLY",
       "reason": "Original episodes require manual attributable review"
-    },
-    {
-      "id": "TEAM_ARI",
-      "name": "ARI official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.azcardinals.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_ATL",
-      "name": "ATL official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.atlantafalcons.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_BAL",
-      "name": "BAL official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.baltimoreravens.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_BUF",
-      "name": "BUF official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.buffalobills.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_CAR",
-      "name": "CAR official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.panthers.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_CHI",
-      "name": "CHI official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.chicagobears.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_CIN",
-      "name": "CIN official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.bengals.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_CLE",
-      "name": "CLE official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.clevelandbrowns.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_DAL",
-      "name": "DAL official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.dallascowboys.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_DEN",
-      "name": "DEN official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.denverbroncos.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_DET",
-      "name": "DET official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.detroitlions.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_GB",
-      "name": "GB official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.packers.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_HOU",
-      "name": "HOU official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.houstontexans.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_IND",
-      "name": "IND official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.colts.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_JAX",
-      "name": "JAX official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.jaguars.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_KC",
-      "name": "KC official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.chiefs.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_LV",
-      "name": "LV official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.raiders.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_LAC",
-      "name": "LAC official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.chargers.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_LAR",
-      "name": "LAR official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.therams.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_MIA",
-      "name": "MIA official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.miamidolphins.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_MIN",
-      "name": "MIN official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.vikings.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_NE",
-      "name": "NE official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.patriots.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_NO",
-      "name": "NO official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.neworleanssaints.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_NYG",
-      "name": "NYG official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.giants.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_NYJ",
-      "name": "NYJ official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.newyorkjets.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_PHI",
-      "name": "PHI official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.philadelphiaeagles.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_PIT",
-      "name": "PIT official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.steelers.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_SF",
-      "name": "SF official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.49ers.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_SEA",
-      "name": "SEA official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.seahawks.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_TB",
-      "name": "TB official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.buccaneers.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_TEN",
-      "name": "TEN official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.tennesseetitans.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
-    },
-    {
-      "id": "TEAM_WAS",
-      "name": "WAS official news",
-      "category": "TEAM_OFFICIAL",
-      "url": "https://www.commanders.com/news/",
-      "status": "WATCHLIST_ONLY",
-      "reason": "Official page registered; no tested stable feed endpoint"
     }
   ],
   "counts": {
-    "operational": 5,
-    "watchlistOnly": 51,
+    "operational": 37,
+    "watchlistOnly": 19,
     "teamsCovered": 32
   }
 }
