@@ -28,6 +28,12 @@ test('existing Vercel ONE_* secrets can configure the invite gate without new se
  process.env.ONE_SESSION_SECRET=secret;process.env.ONE_INVITES_JSON=JSON.stringify([{sha256:hash}]);
  const res=response();await redeem(req('POST',{code}),res);assert.equal(res.statusCode,200);
 });
+test('session only advertises live research when both free-tier provider keys exist',async t=>{
+ t.after(()=>{process.env={...old}});
+ process.env.KAHRELUM_ONE_SESSION_SECRET=secret;process.env.KAHRELUM_ONE_INVITE_HASHES=hash;process.env.GEMINI_API_KEY='test-gemini';process.env.TAVILY_API_KEY='test-tavily';
+ const token=signedToken();let res=response();await session(req('GET',{}, {cookie:`k1_session=${token}`}),res);assert.equal(res.body.liveResearchAvailable,true);
+ delete process.env.TAVILY_API_KEY;res=response();await session(req('GET',{}, {cookie:`k1_session=${token}`}),res);assert.equal(res.body.liveResearchAvailable,false);
+});
 test('chat API rejects browser-only authorization and sends valid turns only through configured backend',async t=>{
  t.after(()=>{process.env={...old};global.fetch=originalFetch});
  process.env.KAHRELUM_ONE_SESSION_SECRET=secret;process.env.KAHRELUM_ONE_INVITE_HASHES=hash;
