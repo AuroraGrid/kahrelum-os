@@ -23,7 +23,7 @@ Only trade completion under the league's announced deadline counts as YES. Compl
 
 ## Authenticity and frozen locks
 
-For each eligible forecast, record (a) identity and precise question, (b) \`p\` as decimal 0..1, (c) first public commit timestamp + immutable commit SHA/URL + exact data bytes, (d) information cutoff in ISO 8601 with timezone, (e) evidence chain and known counterevidence, (f) prospective outcome and (g) final official source. GitHub commits establish publication history **from that commit forward**; they cannot verify earlier private chat dates. External independent time anchoring is an optional improvement, not currently implemented.
+For each eligible forecast, record (a) identity and precise question, (b) `p` as decimal 0..1, (c) first public commit timestamp + immutable commit SHA/URL + exact data bytes, (d) information cutoff in ISO 8601 with timezone, (e) evidence chain and known counterevidence, (f) prospective outcome and (g) final official source. GitHub commits establish publication history **from that commit forward**; they cannot verify earlier private chat dates. External independent time anchoring is an optional improvement, not currently implemented.
 
 After a new report, open a *new version* for a revised estimate: original p and cutoff remain unchanged. Changes of ≥5 percentage points are normally alert material; smaller changes can be logged for source custody without a notification. New candidate scores must be labeled new, never misleading deltas.
 
@@ -40,13 +40,13 @@ The following pre-deadline trade estimates were recovered from conversation summ
 
 There is **no certified KAHRELUM NFL Brier score**, no authenticated record of "winning" three of these events, and no proven superiority over national reporters, ESPN, sportsbooks or prediction markets. The older 0.2449 figure is provisional and not a replacement for certified scoring.
 
-The 20 October 30 \`kahrelumProbability\` values in [trade-board.json](../../nfl/trade-board.json) were recovered as *provisional*, and published for transparent tracking, not as proof of earlier private timestamps. On public release, that GitHub commit itself can serve as the earliest verified public timestamp for *still unresolved* events, if the dataset is independently confirmed free from earlier completions; public launch time takes precedence over a historical "asOf" research label.
+The 20 October 30 `kahrelumProbability` values in [trade-board.json](../../nfl/trade-board.json) were recovered as *provisional*, and published for transparent tracking, not as proof of earlier private timestamps. On public release, that GitHub commit itself can serve as the earliest verified public timestamp for *still unresolved* events, if the dataset is independently confirmed free from earlier completions; public launch time takes precedence over a historical "asOf" research label.
 
 ## Calibration
 
 For each independent eligible binary event i, outcome y ∈ {0,1} and pre-event p:
 
-\`Brier = mean((p_i - y_i)^2)\`
+`Brier = mean((p_i - y_i)^2)`
 
 Report score for all preregistered eligible subjects, NOT just completed trades. Distinguish one forecast per event at a chosen fixed cutoff from rolling forecast versions; never count updates as independent wins. Provide baseline comparisons (e.g., naive all-NO, flat historical market rate) and only compare ESPN model estimates if their definitions and timestamps match. Market prices (Polymarket/Kalshi) are not ESPN probabilities or KAHRELUM forecasts and may require fees, liquidity and settlement-rule alignment.
 
