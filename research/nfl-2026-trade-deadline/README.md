@@ -2,7 +2,7 @@
 
 **Status:** public, read-only research snapshot build. **Deadline:** November 10, 2026, 4:00 p.m. America/New_York (EST). **Prepared:** October 30, 2026.
 
-- Public dashboard source: [nfl/trades.html](../../nfl/trades.html); intended route once safely promoted: \`https://kahrelum.com/nfl/trades\`.
+- Public dashboard source: [nfl/trades.html](../../nfl/trades.html); intended route once safely promoted: `https://kahrelum.com/nfl/trades`.
 - Dated machine-readable candidate data: [nfl/trade-board.json](../../nfl/trade-board.json).
 - [Evidence, integrity, accountability and Brier protocol](./SCORING_AND_CUSTODY.md).
 - [Original editorial launch article](./ARTICLE_2026-10-30.md).
@@ -23,7 +23,7 @@ J.J. McCarthy MIN→NYG (September 28); Joey Porter Jr. PIT→DAL (October 1); C
 
 ## Operating architecture
 
-\`ROUTER → SCOUT → SOURCEGRID → K-ALIGN → IPR → BLACKGLASS-I → CRF → COMMAND → BLACKGLASS-II → RECORD LOCK\`.
+`ROUTER → SCOUT → SOURCEGRID → K-ALIGN → IPR → BLACKGLASS-I → CRF → COMMAND → BLACKGLASS-II → RECORD LOCK`.
 
 Public reporting follows FACT / REPORT / INFERENCE / FORECAST. SourceGrid records reporter, claim, first attributable publication, original URL, confidence and competing accounts. Forecasts have exact proposition, horizon, version, timestamp, reasons, update gate, and eventual independent adjudication. A correction is appended; the original record is not silently replaced.
 
