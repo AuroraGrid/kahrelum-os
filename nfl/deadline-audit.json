@@ -1,0 +1,17 @@
+{
+  "schema": "KAHRELUM_NFL_DEADLINE_AUDIT_v1.0",
+  "scheduledForUtc": "2026-11-12T14:00:00Z",
+  "status": "SCHEDULED",
+  "officialOutcomeCutoffUtc": "2026-11-10T21:00:00Z",
+  "confirmedTransactions": [],
+  "eligibleForecasts": 0,
+  "correctTrades": 0,
+  "correctNonTrades": 0,
+  "incorrect": 0,
+  "brierScore": null,
+  "allNoBaselineBrier": null,
+  "excludedHistoricalForecasts": 20,
+  "limitations": [
+    "No eligible resolved prospective forecasts yet."
+  ]
+}

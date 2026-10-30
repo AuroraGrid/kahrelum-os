@@ -3,7 +3,7 @@
 **New technical research:** [K-PREDICT v0.6: probabilistic election modeling and honest historical evaluation](./research/israel-2026-election/K_PREDICT_V06_2026-10-27.md). Retrospective evidence; overall PARTIAL; no established model superiority or KAHRELUM live 2026 election-outcome forecast.
 
 
-**NFL Sports Intelligence Desk (2026 research launch):** [Public trade board source](./nfl/trades.html) · [Machine-readable research snapshot](./nfl/trade-board.json) · [Evidence and forecast integrity](./research/nfl-2026-trade-deadline/README.md). The `/nfl/trades` Firebase route is only live after a verified guarded deployment.
+**NFL Sports Intelligence Desk v1.0:** [Public trade board source](./nfl/trades.html) · [Historical research snapshot](./nfl/trade-board.json) · [Operational SourceGrid](./nfl/sourcegrid.json) · [Append-only forecast ledger](./nfl/forecast-ledger.json) · [Operations and publication boundary](./research/nfl-2026-trade-deadline/SPORTS_INTELLIGENCE_V1_OPERATIONS.md). The scheduled workflow records discovery and freshness in GitHub; the `/nfl/trades` Firebase route changes only after a verified guarded deployment.
 
 **Evidence-to-decision control plane**
 

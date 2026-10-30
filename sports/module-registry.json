@@ -1,0 +1,38 @@
+{
+  "schema": "KAHRELUM_SPORTS_MODULE_REGISTRY_v1.0",
+  "policy": "Each module has an isolated source registry, event namespace, forecast ledger and outcome authority. Empty modules do not imply operational coverage.",
+  "modules": [
+    {
+      "id": "NFL_TRADE_DEADLINE_2026",
+      "status": "OPERATIONAL_REVIEW_GATED",
+      "eventNamespace": "NFL-TD26",
+      "sourceRegistry": "nfl/sourcegrid.json",
+      "forecastLedger": "nfl/forecast-ledger.json",
+      "outcomeAuthority": "NFL official transactions"
+    },
+    {
+      "id": "NFL_FREE_AGENCY",
+      "status": "TEMPLATE_ONLY",
+      "eventNamespace": "NFL-FA",
+      "records": []
+    },
+    {
+      "id": "NFL_DRAFT",
+      "status": "TEMPLATE_ONLY",
+      "eventNamespace": "NFL-DRAFT",
+      "records": []
+    },
+    {
+      "id": "NBA_TRADES",
+      "status": "TEMPLATE_ONLY",
+      "eventNamespace": "NBA-TRADE",
+      "records": []
+    },
+    {
+      "id": "NCAA_FOOTBALL",
+      "status": "TEMPLATE_ONLY",
+      "eventNamespace": "NCAA-FB",
+      "records": []
+    }
+  ]
+}

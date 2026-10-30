@@ -30,6 +30,14 @@ const OVERLAY_FILES = [
   'nfl/trades.html',
   'nfl/analysis.html',
   'nfl/trade-board.json',
+  'nfl/sourcegrid.json',
+  'nfl/source-observations.json',
+  'nfl/review-queue.json',
+  'nfl/refresh-status.json',
+  'nfl/public-feed.json',
+  'nfl/forecast-ledger.json',
+  'nfl/deadline-audit.json',
+  'nfl/publishing.json',
 ];
 
 const HTML_ROUTES = [
@@ -242,11 +250,22 @@ async function verifySurface(origin, expectedApiHashes) {
   }
 
   const nflData = JSON.parse((await fetchBytes(origin + '/nfl/trade-board.json')).toString('utf8'));
-  if (!Array.isArray(nflData.candidates) || nflData.candidates.length !== 124 ||
-      !Array.isArray(nflData.deals) || nflData.deals.length !== 7 ||
+  if (!Array.isArray(nflData.candidates) || nflData.candidates.length < 124 ||
+      !Array.isArray(nflData.deals) || nflData.deals.length < 7 ||
+      !Array.isArray(nflData.sources) || nflData.sources.length < 21 ||
       nflData.sourceAccountability?.certifiedMeanBrier !== null) {
     fail('NFL trade board data integrity or forecast-certification boundary failed.');
   }
+  const [sourcegrid, status, ledger, audit, publicFeed, publishing] = await Promise.all([
+    '/nfl/sourcegrid.json', '/nfl/refresh-status.json', '/nfl/forecast-ledger.json',
+    '/nfl/deadline-audit.json', '/nfl/public-feed.json', '/nfl/publishing.json',
+  ].map(async (route) => JSON.parse((await fetchBytes(origin + route)).toString('utf8'))));
+  if (sourcegrid.counts?.operational < 1 || sourcegrid.counts?.teamsCovered !== 32) fail('SourceGrid coverage gate failed.');
+  if (!['FRESH', 'DEGRADED', 'STALE_FAILED', 'ARCHIVED_NO_DEADLINE_FETCH'].includes(status.feedFreshness)) fail('Refresh status is not an executed state.');
+  if (!Array.isArray(ledger.eligibleLocks) || !Array.isArray(ledger.historicalExcluded) || ledger.historicalExcluded.length < 20) fail('Forecast ledger custody gate failed.');
+  if ((publicFeed.materialAlerts || []).length > 3) fail('Priority alert limit exceeded.');
+  if (audit.brierScore !== null && !(audit.eligibleForecasts > 0)) fail('Brier score lacks an eligible denominator.');
+  if (publishing.publishingAuthorized !== false) fail('Third-party publishing must remain authorization-gated.');
   const one = (await fetchBytes(origin + '/one')).toString('utf8');
   if (!/in development/i.test(one)) fail('KAHRELUM ONE development warning is absent from the deployed page.');
   const home = (await fetchBytes(origin + '/')).toString('utf8');

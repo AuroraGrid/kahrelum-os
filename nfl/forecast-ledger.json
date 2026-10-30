@@ -1,0 +1,148 @@
+{
+  "schema": "KAHRELUM_FORECAST_LEDGER_v1.0",
+  "appendOnly": true,
+  "eligibleLocks": [],
+  "outcomeRecords": [],
+  "historicalExcluded": [
+    {
+      "eventId": "HIST-K26-001",
+      "player": "Daron Payne",
+      "probability": 0.61,
+      "status": "EXCLUDED_PROVISIONAL",
+      "reason": "Conversation-recovered probability; original timestamp custody not independently authenticated"
+    },
+    {
+      "eventId": "HIST-K26-002",
+      "player": "Josh Uche",
+      "probability": 0.61,
+      "status": "EXCLUDED_PROVISIONAL",
+      "reason": "Conversation-recovered probability; original timestamp custody not independently authenticated"
+    },
+    {
+      "eventId": "HIST-K26-003",
+      "player": "Josh Downs",
+      "probability": 0.58,
+      "status": "EXCLUDED_PROVISIONAL",
+      "reason": "Conversation-recovered probability; original timestamp custody not independently authenticated"
+    },
+    {
+      "eventId": "HIST-K26-004",
+      "player": "A'Shawn Robinson",
+      "probability": 0.57,
+      "status": "EXCLUDED_PROVISIONAL",
+      "reason": "Conversation-recovered probability; original timestamp custody not independently authenticated"
+    },
+    {
+      "eventId": "HIST-K26-005",
+      "player": "Will McDonald IV",
+      "probability": 0.52,
+      "status": "EXCLUDED_PROVISIONAL",
+      "reason": "Conversation-recovered probability; original timestamp custody not independently authenticated"
+    },
+    {
+      "eventId": "HIST-K26-006",
+      "player": "Grover Stewart",
+      "probability": 0.49,
+      "status": "EXCLUDED_PROVISIONAL",
+      "reason": "Conversation-recovered probability; original timestamp custody not independently authenticated"
+    },
+    {
+      "eventId": "HIST-K26-007",
+      "player": "Marquise Brown",
+      "probability": 0.42,
+      "status": "EXCLUDED_PROVISIONAL",
+      "reason": "Conversation-recovered probability; original timestamp custody not independently authenticated"
+    },
+    {
+      "eventId": "HIST-K26-008",
+      "player": "Jauan Jennings",
+      "probability": 0.4,
+      "status": "EXCLUDED_PROVISIONAL",
+      "reason": "Conversation-recovered probability; original timestamp custody not independently authenticated"
+    },
+    {
+      "eventId": "HIST-K26-009",
+      "player": "Josh Sweat",
+      "probability": 0.39,
+      "status": "EXCLUDED_PROVISIONAL",
+      "reason": "Conversation-recovered probability; original timestamp custody not independently authenticated"
+    },
+    {
+      "eventId": "HIST-K26-010",
+      "player": "Riq Woolen",
+      "probability": 0.39,
+      "status": "EXCLUDED_PROVISIONAL",
+      "reason": "Conversation-recovered probability; original timestamp custody not independently authenticated"
+    },
+    {
+      "eventId": "HIST-K26-011",
+      "player": "Brian Thomas Jr.",
+      "probability": 0.34,
+      "status": "EXCLUDED_PROVISIONAL",
+      "reason": "Conversation-recovered probability; original timestamp custody not independently authenticated"
+    },
+    {
+      "eventId": "HIST-K26-012",
+      "player": "YaYa Diaby",
+      "probability": 0.31,
+      "status": "EXCLUDED_PROVISIONAL",
+      "reason": "Conversation-recovered probability; original timestamp custody not independently authenticated"
+    },
+    {
+      "eventId": "HIST-K26-013",
+      "player": "Calvin Ridley",
+      "probability": 0.3,
+      "status": "EXCLUDED_PROVISIONAL",
+      "reason": "Conversation-recovered probability; original timestamp custody not independently authenticated"
+    },
+    {
+      "eventId": "HIST-K26-014",
+      "player": "Alontae Taylor",
+      "probability": 0.25,
+      "status": "EXCLUDED_PROVISIONAL",
+      "reason": "Conversation-recovered probability; original timestamp custody not independently authenticated"
+    },
+    {
+      "eventId": "HIST-K26-015",
+      "player": "Christian Barmore",
+      "probability": 0.24,
+      "status": "EXCLUDED_PROVISIONAL",
+      "reason": "Conversation-recovered probability; original timestamp custody not independently authenticated"
+    },
+    {
+      "eventId": "HIST-K26-016",
+      "player": "Tony Pollard",
+      "probability": 0.17,
+      "status": "EXCLUDED_PROVISIONAL",
+      "reason": "Conversation-recovered probability; original timestamp custody not independently authenticated"
+    },
+    {
+      "eventId": "HIST-K26-017",
+      "player": "Jonathan Taylor",
+      "probability": 0.09,
+      "status": "EXCLUDED_PROVISIONAL",
+      "reason": "Conversation-recovered probability; original timestamp custody not independently authenticated"
+    },
+    {
+      "eventId": "HIST-K26-018",
+      "player": "Khalil Mack",
+      "probability": 0.08,
+      "status": "EXCLUDED_PROVISIONAL",
+      "reason": "Conversation-recovered probability; original timestamp custody not independently authenticated"
+    },
+    {
+      "eventId": "HIST-K26-019",
+      "player": "Moro Ojomo",
+      "probability": 0.04,
+      "status": "EXCLUDED_PROVISIONAL",
+      "reason": "Conversation-recovered probability; original timestamp custody not independently authenticated"
+    },
+    {
+      "eventId": "HIST-K26-124",
+      "player": "Adetomiwa Adebawore",
+      "probability": 0.04,
+      "status": "EXCLUDED_PROVISIONAL",
+      "reason": "Conversation-recovered probability; original timestamp custody not independently authenticated"
+    }
+  ]
+}

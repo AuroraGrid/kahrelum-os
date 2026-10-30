@@ -37,6 +37,11 @@ jobs:
               "digital-id.html", "one.html", "os.html", "election-lab.html",
               "election-lab-app.js", "election-lab-roster.json",
               "nfl/trades.html", "nfl/analysis.html", "nfl/trade-board.json",
+              "nfl/sourcegrid.json", "nfl/source-observations.json", "nfl/review-queue.json",
+              "nfl/refresh-status.json", "nfl/public-feed.json", "nfl/forecast-ledger.json",
+              "nfl/deadline-audit.json", "nfl/publishing.json",
+              "scripts/sports_intelligence.py", ".github/workflows/sports-intelligence-sourcegrid.yml",
+              "tests/test_sports_intelligence.py",
               "research/nfl-2026-trade-deadline/README.md",
           )
           missing = [name for name in required if not Path(name).is_file()]
@@ -85,9 +90,9 @@ jobs:
               assert page.canonical == [site + route], f"Invalid canonical URL in {filename}"
 
           nfl = json.loads(Path("nfl/trade-board.json").read_text(encoding="utf-8"))
-          assert len(nfl["candidates"]) == 124 and len(nfl["deals"]) == 7
+          assert len(nfl["candidates"]) >= 124 and len(nfl["deals"]) >= 7
           assert len({p["team"] for p in nfl["candidates"]}) == 32
-          assert len({p["id"] for p in nfl["candidates"]}) == 124
+          assert len({p["id"] for p in nfl["candidates"]}) == len(nfl["candidates"])
           assert nfl["liveFeed"] is False
           assert nfl["sourceAccountability"]["certifiedMeanBrier"] is None
           assert nfl["sourceAccountability"]["validProspectiveForecasts"] == 0
@@ -117,5 +122,9 @@ jobs:
           assert not stale, f"Stale public identity in: {stale}"
           print("Public surface integrity passed.")
           PY
+      - name: Test SourceGrid, forecast custody, failure visibility and deadline audit
+        run: python3 tests/test_sports_intelligence.py -v
+      - name: Validate generated Sports Intelligence records
+        run: python3 scripts/sports_intelligence.py validate
       - name: Parse safe Firebase release script
         run: node --check scripts/firebase-overlay-release.cjs

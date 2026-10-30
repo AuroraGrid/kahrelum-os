@@ -1,0 +1,449 @@
+{
+  "schema": "KAHRELUM_SOURCEGRID_v1.0",
+  "generatedAt": "2026-10-30T20:45:26Z",
+  "policy": {
+    "defaultEvidenceClass": "UNVERIFIED",
+    "autoConfirmTransactions": false,
+    "autoPublishForecasts": false,
+    "paywallBypass": false,
+    "maxPriorityAlerts": 3
+  },
+  "operationalIntegrations": [
+    {
+      "id": "ESPN_RSS",
+      "name": "ESPN NFL RSS",
+      "url": "https://www.espn.com/espn/rss/nfl/news",
+      "type": "rss",
+      "role": "SECONDARY_DISCOVERY",
+      "operational": true
+    },
+    {
+      "id": "CBS_RSS",
+      "name": "CBS Sports NFL RSS",
+      "url": "https://www.cbssports.com/rss/headlines/nfl/",
+      "type": "rss",
+      "role": "SECONDARY_DISCOVERY",
+      "operational": true
+    },
+    {
+      "id": "YAHOO_RSS",
+      "name": "Yahoo Sports NFL RSS",
+      "url": "https://sports.yahoo.com/nfl/rss.xml",
+      "type": "rss",
+      "role": "SECONDARY_DISCOVERY",
+      "operational": true
+    },
+    {
+      "id": "GOOGLE_NEWS_RSS",
+      "name": "Google News NFL trade discovery",
+      "url": "https://news.google.com/rss/search?q=NFL+trade+when:1d&hl=en-US&gl=US&ceid=US:en",
+      "type": "rss",
+      "role": "SEARCH_DISCOVERY_ONLY",
+      "operational": true
+    },
+    {
+      "id": "NFL_TRANSACTIONS",
+      "name": "NFL official transactions",
+      "url": "https://www.nfl.com/transactions/",
+      "type": "official_page",
+      "role": "OFFICIAL_VERIFICATION_ENDPOINT",
+      "operational": true
+    }
+  ],
+  "watchlist": [
+    {
+      "id": "NATIONAL_ADAM_SCHEFTER",
+      "name": "Adam Schefter",
+      "category": "NATIONAL_REPORTER",
+      "status": "WATCHLIST_ONLY",
+      "reason": "No tested credential-free machine-readable first-party feed"
+    },
+    {
+      "id": "NATIONAL_IAN_RAPOPORT",
+      "name": "Ian Rapoport",
+      "category": "NATIONAL_REPORTER",
+      "status": "WATCHLIST_ONLY",
+      "reason": "No tested credential-free machine-readable first-party feed"
+    },
+    {
+      "id": "NATIONAL_TOM_PELISSERO",
+      "name": "Tom Pelissero",
+      "category": "NATIONAL_REPORTER",
+      "status": "WATCHLIST_ONLY",
+      "reason": "No tested credential-free machine-readable first-party feed"
+    },
+    {
+      "id": "NATIONAL_MIKE_GARAFOLO",
+      "name": "Mike Garafolo",
+      "category": "NATIONAL_REPORTER",
+      "status": "WATCHLIST_ONLY",
+      "reason": "No tested credential-free machine-readable first-party feed"
+    },
+    {
+      "id": "NATIONAL_JEREMY_FOWLER",
+      "name": "Jeremy Fowler",
+      "category": "NATIONAL_REPORTER",
+      "status": "WATCHLIST_ONLY",
+      "reason": "No tested credential-free machine-readable first-party feed"
+    },
+    {
+      "id": "NATIONAL_DAN_GRAZIANO",
+      "name": "Dan Graziano",
+      "category": "NATIONAL_REPORTER",
+      "status": "WATCHLIST_ONLY",
+      "reason": "No tested credential-free machine-readable first-party feed"
+    },
+    {
+      "id": "NATIONAL_DIANNA_RUSSINI",
+      "name": "Dianna Russini",
+      "category": "NATIONAL_REPORTER",
+      "status": "WATCHLIST_ONLY",
+      "reason": "No tested credential-free machine-readable first-party feed"
+    },
+    {
+      "id": "NATIONAL_ALBERT_BREER",
+      "name": "Albert Breer",
+      "category": "NATIONAL_REPORTER",
+      "status": "WATCHLIST_ONLY",
+      "reason": "No tested credential-free machine-readable first-party feed"
+    },
+    {
+      "id": "NATIONAL_JORDAN_SCHULTZ",
+      "name": "Jordan Schultz",
+      "category": "NATIONAL_REPORTER",
+      "status": "WATCHLIST_ONLY",
+      "reason": "No tested credential-free machine-readable first-party feed"
+    },
+    {
+      "id": "NATIONAL_JAY_GLAZER",
+      "name": "Jay Glazer",
+      "category": "NATIONAL_REPORTER",
+      "status": "WATCHLIST_ONLY",
+      "reason": "No tested credential-free machine-readable first-party feed"
+    },
+    {
+      "id": "NATIONAL_JONATHAN_JONES",
+      "name": "Jonathan Jones",
+      "category": "NATIONAL_REPORTER",
+      "status": "WATCHLIST_ONLY",
+      "reason": "No tested credential-free machine-readable first-party feed"
+    },
+    {
+      "id": "NATIONAL_RALPH_VACCHIANO",
+      "name": "Ralph Vacchiano",
+      "category": "NATIONAL_REPORTER",
+      "status": "WATCHLIST_ONLY",
+      "reason": "No tested credential-free machine-readable first-party feed"
+    },
+    {
+      "id": "NATIONAL_JAMES_PALMER",
+      "name": "James Palmer",
+      "category": "NATIONAL_REPORTER",
+      "status": "WATCHLIST_ONLY",
+      "reason": "No tested credential-free machine-readable first-party feed"
+    },
+    {
+      "id": "NATIONAL_JANE_SLATER",
+      "name": "Jane Slater",
+      "category": "NATIONAL_REPORTER",
+      "status": "WATCHLIST_ONLY",
+      "reason": "No tested credential-free machine-readable first-party feed"
+    },
+    {
+      "id": "BROADCAST_PAT_MCAFEE_SHOW",
+      "name": "Pat McAfee Show",
+      "category": "BROADCAST",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Original episodes require manual attributable review"
+    },
+    {
+      "id": "BROADCAST_NFL_NETWORK_INSIDERS",
+      "name": "NFL Network Insiders",
+      "category": "BROADCAST",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Original episodes require manual attributable review"
+    },
+    {
+      "id": "BROADCAST_THE_ADAM_SCHEFTER_PODCAST",
+      "name": "The Adam Schefter Podcast",
+      "category": "BROADCAST",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Original episodes require manual attributable review"
+    },
+    {
+      "id": "BROADCAST_THE_INSIDERS_WITH_TOM_PELISSERO",
+      "name": "The Insiders with Tom Pelissero",
+      "category": "BROADCAST",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Original episodes require manual attributable review"
+    },
+    {
+      "id": "BROADCAST_TEAM_RADIO_ORIGINAL_INTERVIEWS",
+      "name": "Team radio original interviews",
+      "category": "BROADCAST",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Original episodes require manual attributable review"
+    },
+    {
+      "id": "TEAM_ARI",
+      "name": "ARI official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.azcardinals.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_ATL",
+      "name": "ATL official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.atlantafalcons.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_BAL",
+      "name": "BAL official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.baltimoreravens.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_BUF",
+      "name": "BUF official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.buffalobills.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_CAR",
+      "name": "CAR official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.panthers.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_CHI",
+      "name": "CHI official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.chicagobears.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_CIN",
+      "name": "CIN official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.bengals.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_CLE",
+      "name": "CLE official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.clevelandbrowns.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_DAL",
+      "name": "DAL official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.dallascowboys.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_DEN",
+      "name": "DEN official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.denverbroncos.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_DET",
+      "name": "DET official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.detroitlions.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_GB",
+      "name": "GB official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.packers.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_HOU",
+      "name": "HOU official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.houstontexans.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_IND",
+      "name": "IND official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.colts.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_JAX",
+      "name": "JAX official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.jaguars.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_KC",
+      "name": "KC official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.chiefs.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_LV",
+      "name": "LV official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.raiders.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_LAC",
+      "name": "LAC official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.chargers.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_LAR",
+      "name": "LAR official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.therams.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_MIA",
+      "name": "MIA official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.miamidolphins.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_MIN",
+      "name": "MIN official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.vikings.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_NE",
+      "name": "NE official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.patriots.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_NO",
+      "name": "NO official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.neworleanssaints.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_NYG",
+      "name": "NYG official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.giants.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_NYJ",
+      "name": "NYJ official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.newyorkjets.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_PHI",
+      "name": "PHI official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.philadelphiaeagles.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_PIT",
+      "name": "PIT official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.steelers.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_SF",
+      "name": "SF official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.49ers.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_SEA",
+      "name": "SEA official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.seahawks.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_TB",
+      "name": "TB official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.buccaneers.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_TEN",
+      "name": "TEN official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.tennesseetitans.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    },
+    {
+      "id": "TEAM_WAS",
+      "name": "WAS official news",
+      "category": "TEAM_OFFICIAL",
+      "url": "https://www.commanders.com/news/",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Official page registered; no tested stable feed endpoint"
+    }
+  ],
+  "counts": {
+    "operational": 5,
+    "watchlistOnly": 51,
+    "teamsCovered": 32
+  }
+}
