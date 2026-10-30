@@ -93,3 +93,10 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px soli
 .icon-button{width:34px;height:34px;border:1px solid var(--line);border-radius:50%;background:#fff;color:var(--muted);font-size:22px;line-height:1}
 .preferences-status{min-height:18px;margin:0;color:var(--green);font-size:12px}
 @media(max-width:600px){.preferences-card{padding:21px}.preferences-heading h2{font-size:22px}.preferences-actions .quiet-button{padding:8px 11px;font-size:11px}}
+
+.review-trace{margin-top:14px;padding:11px 13px;border:1px solid var(--line);border-radius:12px;background:#fafbf9;color:var(--muted);font-size:11px;white-space:normal}
+.review-trace summary{color:var(--green);font-size:11px;font-weight:700;cursor:pointer}
+.review-trace ol{display:grid;gap:5px;margin:10px 0;padding-left:19px}
+.review-trace li{padding-left:2px;line-height:1.45}
+.review-trace p{margin:10px 0;color:var(--muted);line-height:1.45}
+.review-trace code{display:block;overflow-wrap:anywhere;color:#737c74;font-size:10px}
