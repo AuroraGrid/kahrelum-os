@@ -36,7 +36,7 @@ jobs:
               "assurance.html", "investigations.html", "forecasting.html",
               "digital-id.html", "one.html", "os.html", "election-lab.html",
               "election-lab-app.js", "election-lab-roster.json",
-              "nfl/trades.html", "nfl/trade-board.json",
+              "nfl/trades.html", "nfl/analysis.html", "nfl/trade-board.json",
               "research/nfl-2026-trade-deadline/README.md",
           )
           missing = [name for name in required if not Path(name).is_file()]
@@ -77,6 +77,7 @@ jobs:
               "os.html": "/os",
               "election-lab.html": "/election-lab",
               "nfl/trades.html": "/nfl/trades",
+              "nfl/analysis.html": "/nfl/analysis",
           }
           for filename, route in overlay_pages.items():
               page = Metadata()
@@ -96,7 +97,7 @@ jobs:
               assert player["kahrelumIntegrity"] in {"UNPRICED", "CONVERSATION_RECOVERED_PROVISIONAL"}
               assert player["sourceIds"], player["name"]
           overlay = Path("scripts/firebase-overlay-release.cjs").read_text(encoding="utf-8")
-          for required_route in ("nfl/trades.html", "nfl/trade-board.json", "'/nfl/trades'"):
+          for required_route in ("nfl/trades.html", "nfl/analysis.html", "nfl/trade-board.json", "'/nfl/trades'", "'/nfl/analysis'"):
               assert required_route in overlay, "NFL route missing from guarded release"
           assert "in development" in Path("one.html").read_text(encoding="utf-8").lower(), "KAHRELUM ONE status missing"
           forecasting = Path("forecasting.html").read_text(encoding="utf-8")
