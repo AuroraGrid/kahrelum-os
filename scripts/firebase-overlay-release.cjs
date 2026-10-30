@@ -1,6 +1,7 @@
 'use strict';
 
 const crypto = require('crypto');
+const childProcess = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const util = require('util');
@@ -79,6 +80,17 @@ function fail(message) {
 function writeJson(file, value) {
   fs.mkdirSync(path.dirname(file), { recursive: true });
   fs.writeFileSync(file, JSON.stringify(value, null, 2) + '\n');
+}
+
+function readSourceState() {
+  const options = { cwd: ROOT, encoding: 'utf8', windowsHide: true };
+  try {
+    const commit = childProcess.execFileSync('git', ['rev-parse', 'HEAD'], options).trim();
+    const status = childProcess.execFileSync('git', ['status', '--porcelain', '--untracked-files=normal'], options).trim();
+    return { commit, clean: status.length === 0 };
+  } catch (error) {
+    fail(`Unable to establish Git source identity: ${error.message}`);
+  }
 }
 
 function requireFirebaseTools() {
@@ -254,7 +266,7 @@ function extractCanonical(html) {
   return tag?.match(/href="([^"]+)"/i)?.[1];
 }
 
-async function verifySurface(origin, expectedApiHashes) {
+async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
   const checks = [];
   const internal = new Set();
   for (const route of HTML_ROUTES) {
@@ -274,16 +286,18 @@ async function verifySurface(origin, expectedApiHashes) {
       nflData.sourceAccountability?.certifiedMeanBrier !== null) {
     fail('NFL trade board data integrity or forecast-certification boundary failed.');
   }
-  const [sourcegrid, status, ledger, audit, publicFeed, publishing] = await Promise.all([
-    '/nfl/sourcegrid.json', '/nfl/refresh-status.json', '/nfl/forecast-ledger.json',
-    '/nfl/deadline-audit.json', '/nfl/public-feed.json', '/nfl/publishing.json',
-  ].map(async (route) => JSON.parse((await fetchBytes(origin + route)).toString('utf8'))));
-  if (sourcegrid.counts?.operational < 1 || sourcegrid.counts?.teamsCovered !== 32) fail('SourceGrid coverage gate failed.');
-  if (!['FRESH', 'DEGRADED', 'STALE_FAILED', 'ARCHIVED_NO_DEADLINE_FETCH'].includes(status.feedFreshness)) fail('Refresh status is not an executed state.');
-  if (!Array.isArray(ledger.eligibleLocks) || !Array.isArray(ledger.historicalExcluded) || ledger.historicalExcluded.length < 20) fail('Forecast ledger custody gate failed.');
-  if ((publicFeed.materialAlerts || []).length > 3) fail('Priority alert limit exceeded.');
-  if (audit.brierScore !== null && !(audit.eligibleForecasts > 0)) fail('Brier score lacks an eligible denominator.');
-  if (publishing.publishingAuthorized !== false) fail('Third-party publishing must remain authorization-gated.');
+  if (profileName === 'full') {
+    const [sourcegrid, status, ledger, audit, publicFeed, publishing] = await Promise.all([
+      '/nfl/sourcegrid.json', '/nfl/refresh-status.json', '/nfl/forecast-ledger.json',
+      '/nfl/deadline-audit.json', '/nfl/public-feed.json', '/nfl/publishing.json',
+    ].map(async (route) => JSON.parse((await fetchBytes(origin + route)).toString('utf8'))));
+    if (sourcegrid.counts?.operational < 1 || sourcegrid.counts?.teamsCovered !== 32) fail('SourceGrid coverage gate failed.');
+    if (!['FRESH', 'DEGRADED', 'STALE_FAILED', 'ARCHIVED_NO_DEADLINE_FETCH'].includes(status.feedFreshness)) fail('Refresh status is not an executed state.');
+    if (!Array.isArray(ledger.eligibleLocks) || !Array.isArray(ledger.historicalExcluded) || ledger.historicalExcluded.length < 20) fail('Forecast ledger custody gate failed.');
+    if ((publicFeed.materialAlerts || []).length > 3) fail('Priority alert limit exceeded.');
+    if (audit.brierScore !== null && !(audit.eligibleForecasts > 0)) fail('Brier score lacks an eligible denominator.');
+    if (publishing.publishingAuthorized !== false) fail('Third-party publishing must remain authorization-gated.');
+  }
   const one = (await fetchBytes(origin + '/one')).toString('utf8');
   if (!/in development/i.test(one)) fail('KAHRELUM ONE development warning is absent from the deployed page.');
   const home = (await fetchBytes(origin + '/')).toString('utf8');
@@ -296,7 +310,7 @@ async function verifySurface(origin, expectedApiHashes) {
   return { origin, routes: checks, internalTargets: internal.size, apiHashes };
 }
 
-async function createPreview(hosting, client, live, overlay, profileName) {
+async function createPreview(hosting, client, live, overlay, profileName, sourceState) {
   if (!overlay.changedPaths.length) fail('The overlay is already identical to production; no preview release is needed.');
   const versionName = await hosting.createVersion(SITE, {
     config: live.config,
@@ -316,6 +330,10 @@ async function createPreview(hosting, client, live, overlay, profileName) {
   const versionId = versionName.split('/').pop();
   const finalized = await hosting.updateVersion(SITE, versionId, { status: 'FINALIZED' });
   if (finalized.status !== 'FINALIZED') fail('Preview version did not finalize.');
+  const finalizedFiles = await listVersionFiles(client, versionName);
+  const finalizedMap = Object.fromEntries(finalizedFiles.map((item) => [item.path, item.hash]));
+  if (!util.isDeepStrictEqual(finalizedMap, overlay.desired)) fail('Finalized preview file map differs from the live-derived desired map.');
+  if (!util.isDeepStrictEqual(normalizeConfig(finalized.config), live.config)) fail('Finalized preview Hosting configuration differs from production.');
 
   let channel = await hosting.getChannel('-', SITE, CHANNEL);
   if (!channel) {
@@ -326,11 +344,12 @@ async function createPreview(hosting, client, live, overlay, profileName) {
   });
   channel = await hosting.getChannel('-', SITE, CHANNEL);
   const expectedApiHashes = await captureApiHashes(DOMAIN);
-  const verification = await verifySurface(channel.url, expectedApiHashes);
+  const verification = await verifySurface(channel.url, expectedApiHashes, profileName);
   const receipt = {
     createdAt: new Date().toISOString(),
     site: SITE,
     releaseProfile: profileName,
+    sourceCommit: sourceState.commit,
     baseVersion: live.version.name,
     baseConfig: live.config,
     baseConfigHash: sha256(Buffer.from(JSON.stringify(live.config))),
@@ -358,7 +377,7 @@ async function promotePreview(hosting, client, live) {
 
   const preview = await hosting.getChannel('-', SITE, receipt.previewChannel);
   if (preview?.release?.version?.name !== receipt.previewVersion) fail('Preview channel no longer points to the verified version.');
-  await verifySurface(receipt.previewUrl, receipt.expectedApiHashes);
+  await verifySurface(receipt.previewUrl, receipt.expectedApiHashes, receipt.releaseProfile || 'full');
 
   const finalLiveCheck = await hosting.getChannel('-', SITE, 'live');
   if (finalLiveCheck?.release?.version?.name !== receipt.baseVersion) fail('Production changed during promotion checks. Prepare a new preview.');
@@ -372,13 +391,14 @@ async function promotePreview(hosting, client, live) {
   if (released.release.version.name !== receipt.previewVersion) fail('Live channel did not adopt the verified preview version.');
   if (!util.isDeepStrictEqual(releasedMap, receipt.desiredFiles)) fail('Production file-map readback differs from the verified preview.');
   if (!util.isDeepStrictEqual(normalizeConfig(released.release.version.config), receipt.baseConfig)) fail('Production Hosting configuration changed during promotion.');
-  const verification = await verifySurface(DOMAIN, receipt.expectedApiHashes);
+  const verification = await verifySurface(DOMAIN, receipt.expectedApiHashes, receipt.releaseProfile || 'full');
   const productionReceipt = {
     promotedAt: new Date().toISOString(),
     release: release.name,
     version: released.release.version.name,
     fileCount: releasedFiles.length,
     desiredMapHash: receipt.desiredMapHash,
+    sourceCommit: receipt.sourceCommit,
     configUnchanged: true,
     verification,
   };
@@ -392,6 +412,8 @@ async function main() {
   const profileFlag = process.argv.indexOf('--profile');
   const profileName = profileFlag === -1 ? 'full' : process.argv[profileFlag + 1];
   if (!profileName || !RELEASE_PROFILES[profileName]) fail(`Unknown or missing release profile: ${profileName || '(missing)'}`);
+  const sourceState = readSourceState();
+  if (mode === '--preview' && !sourceState.clean) fail('Preview requires a clean Git working tree so the deployed bytes have an exact commit identity.');
   const { firebase, hosting, Client, hostingApiOrigin } = requireFirebaseTools();
   await firebase.projects.list({ json: true, nonInteractive: true });
   const client = new Client({ urlPrefix: hostingApiOrigin(), apiVersion: 'v1beta1', auth: true });
@@ -407,6 +429,8 @@ async function main() {
     mode: mode.slice(2).toUpperCase(),
     site: SITE,
     releaseProfile: profileName,
+    sourceCommit: sourceState.commit,
+    sourceClean: sourceState.clean,
     baseVersion: live.version.name,
     baseFileCount: live.files.length,
     desiredFileCount: Object.keys(overlay.desired).length,
@@ -418,7 +442,7 @@ async function main() {
     console.log(JSON.stringify(summary, null, 2));
     return;
   }
-  const receipt = await createPreview(hosting, client, live, overlay, profileName);
+  const receipt = await createPreview(hosting, client, live, overlay, profileName, sourceState);
   console.log(JSON.stringify({ ...summary, previewUrl: receipt.previewUrl, previewVersion: receipt.previewVersion }, null, 2));
 }
 
