@@ -31,7 +31,7 @@ $('#inviteForm').addEventListener('submit', async event => {
     const response = await fetch('/api/one/redeem', { method: 'POST', credentials: 'same-origin', headers: {'Content-Type':'application/json'}, body: JSON.stringify({code}) });
     const payload = await response.json();
     if (!response.ok) throw new Error(payload.error || 'That code could not be redeemed.');
-    $('#inviteCode').value = ''; showChat();
+    $('#inviteCode').value = ''; await checkSession();
   } catch (error) { note.textContent = error.message === 'Failed to fetch' ? 'The assistant service is not connected yet. Try again shortly.' : error.message; }
   finally { button.disabled = false; button.innerHTML = 'Continue <span aria-hidden="true">→</span>'; }
 });
