@@ -38,6 +38,7 @@ $('#inviteForm').addEventListener('submit', async event => {
 
 function setMode(enabled) {
   verificationMode = enabled;
+  if(!enabled) $('#liveResearchToggle').checked=false;
   $('#modeToggle').setAttribute('aria-pressed', String(enabled));
   $('#modeName').textContent = enabled ? 'KAHRELUM Check' : 'Everyday';
   $('#modeBadge').textContent = enabled ? 'KAHRELUM Check' : 'Everyday';
