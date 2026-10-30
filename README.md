@@ -23,6 +23,22 @@ This repository is KAHRELUM's canonical **public architecture, evidence, and rel
 
 Current release record: [KAHRELUM OS v2.3.4 FINAL](./RELEASE_v2.3.4_FINAL.md).
 
+## Firebase Hosting releases
+
+`kahrelum.com` is served by the existing Firebase Hosting site `kahrelum-public-hosting`. The repository is an overlay source: the live Firebase version also contains election snapshots, API payloads and public assets that are not reconstructed from this GitHub root.
+
+Use the guarded release wrapper from an authenticated deployment workstation:
+
+```powershell
+.\scripts\deploy-unified-firebase.ps1 -Plan
+.\scripts\deploy-unified-firebase.ps1 -Preview
+.\scripts\deploy-unified-firebase.ps1 -Promote
+```
+
+`-Plan` is read-only. `-Preview` starts from Firebase's current finalized live version, preserves every existing file hash and Hosting rule, applies only the governed repository overlay, and verifies the preview. `-Promote` releases that exact preview version only when production still matches the version used to build it. A concurrent production change invalidates the receipt and requires a new preview.
+
+The former `-FirebaseRoot ... -Deploy` directory workflow is intentionally blocked because a stale local directory can delete production-only files. Preview receipts are local, ignored files under `.firebase-deploy/`; they contain file hashes and release metadata, not credentials.
+
 ## Research & investigations
 
 KAHRELUM now includes a public **AI accountability research portfolio** demonstrating documentary research, claim/evidence separation, counterevidence, uncertainty, falsifiers, and open reporting questions.

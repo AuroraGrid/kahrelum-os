@@ -30,7 +30,12 @@ jobs:
           required = (
               "README.md", "ARCHITECTURE.md", "BENCHMARKS.md",
               "CHANGELOG.md", "RELEASE_v2.3.4_FINAL.md",
-              "index.html", "vercel.json",
+              "index.html", "vercel.json", "hosting/homepage-divisions.html",
+              "scripts/deploy-unified-firebase.ps1",
+              "scripts/firebase-overlay-release.cjs",
+              "assurance.html", "investigations.html", "forecasting.html",
+              "digital-id.html", "one.html", "os.html", "election-lab.html",
+              "election-lab-app.js", "election-lab-roster.json",
           )
           missing = [name for name in required if not Path(name).is_file()]
           if missing:
@@ -61,6 +66,29 @@ jobs:
           assert len(metadata.og_url) == 1 and metadata.og_url[0] in allowed, "Invalid OG URL"
           assert isinstance(json.loads(Path("vercel.json").read_text(encoding="utf-8")), dict), "Vercel config must be a JSON object"
 
+          overlay_pages = {
+              "assurance.html": "/assurance",
+              "investigations.html": "/investigations",
+              "forecasting.html": "/forecasting",
+              "digital-id.html": "/digital-id",
+              "one.html": "/one",
+              "os.html": "/os",
+              "election-lab.html": "/election-lab",
+          }
+          for filename, route in overlay_pages.items():
+              page = Metadata()
+              page.feed(Path(filename).read_text(encoding="utf-8"))
+              assert page.canonical == [site + route], f"Invalid canonical URL in {filename}"
+
+          assert "in development" in Path("one.html").read_text(encoding="utf-8").lower(), "KAHRELUM ONE status missing"
+          forecasting = Path("forecasting.html").read_text(encoding="utf-8")
+          for required_text in ("0.222593", "0.146176", "original cutoff", "confidence intervals include zero"):
+              assert required_text in forecasting, f"Forecasting custody text missing: {required_text}"
+
+          wrapper = Path("scripts/deploy-unified-firebase.ps1").read_text(encoding="utf-8")
+          assert "stale-directory deployment path has been removed" in wrapper, "Unsafe directory deploy guard missing"
+          assert "firebase deploy --only hosting" not in wrapper, "Direct Firebase directory deploy must remain blocked"
+
           stale_identity = b"hr185882" + b"-creator"
           tracked = subprocess.check_output(["git", "ls-files", "-z"]).split(b"\0")
           stale = [
@@ -70,3 +98,5 @@ jobs:
           assert not stale, f"Stale public identity in: {stale}"
           print("Public surface integrity passed.")
           PY
+      - name: Parse safe Firebase release script
+        run: node --check scripts/firebase-overlay-release.cjs
