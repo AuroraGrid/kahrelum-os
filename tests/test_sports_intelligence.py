@@ -49,13 +49,13 @@ class SportsIntelligenceTests(unittest.TestCase):
         self.assertEqual(len(self.read("observations")["observations"]), 2)
         self.assertEqual(si.ingest(si.parse_time("2026-10-30T19:00:00Z"), self.fixtures), 0)
         self.assertEqual(self.read("status")["observationsNew"], 0)
-        (self.fixtures / "ESPN_RSS.xml").write_bytes(RSS_TWO)
+        (self.fixtures / "NBC_PFT_RSS.xml").write_bytes(RSS_TWO)
         self.assertEqual(si.ingest(si.parse_time("2026-10-30T20:00:00Z"), self.fixtures), 0)
         self.assertEqual(self.read("status")["observationsNew"], 1)
         self.assertEqual(len(self.read("observations")["observations"]), 3)
 
     def test_unverified_transaction_headline_cannot_become_fact(self):
-        (self.fixtures / "ESPN_RSS.xml").write_bytes(RSS_TWO)
+        (self.fixtures / "NBC_PFT_RSS.xml").write_bytes(RSS_TWO)
         si.ingest(si.parse_time("2026-10-30T20:00:00Z"), self.fixtures)
         observation = next(x for x in self.read("observations")["observations"] if "unverified-transaction" in x["originalUrl"])
         self.assertEqual(observation["evidenceClass"], "UNVERIFIED")
@@ -136,7 +136,7 @@ class SportsIntelligenceTests(unittest.TestCase):
 
     def test_editorial_approval_and_publication_authorization_are_distinct(self):
         si.ingest(si.parse_time("2026-10-30T18:00:00Z"), self.fixtures)
-        observation = next(x for x in self.read("observations")["observations"] if x["sourceIntegrationId"] == "ESPN_RSS")
+        observation = next(x for x in self.read("observations")["observations"] if x["sourceIntegrationId"] == "NBC_PFT_RSS")
         args = argparse.Namespace(observation_id=observation["id"], evidence_class="REPORT", headline="Reviewed attributable report", claim="A reporter described an inquiry; no offer was established.", source_url=observation["originalUrl"], reviewed_at="2026-10-30T18:30:00Z", reviewed_by="TEST_REVIEWER", material=True)
         si.approve_observation(args)
         self.assertEqual(self.read("public")["publishedUpdates"], [])

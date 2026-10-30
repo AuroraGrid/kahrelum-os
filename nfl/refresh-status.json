@@ -1,28 +1,21 @@
 {
   "schema": "KAHRELUM_REFRESH_STATUS_v1.1",
-  "lastAttemptAt": "2026-10-30T22:19:50Z",
-  "lastSuccessfulSourceCheckAt": "2026-10-30T22:19:50Z",
+  "lastAttemptAt": "2026-10-30T22:24:09Z",
+  "lastSuccessfulSourceCheckAt": "2026-10-30T22:24:09Z",
   "lastPublishedUpdateAt": "2026-10-30T15:12:12-04:00",
-  "feedFreshness": "DEGRADED",
+  "feedFreshness": "FRESH",
   "monitoringState": "DEADLINE_WINDOW_OPEN",
   "deadlineUtc": "2026-11-10T21:00:00Z",
   "sourcesAttempted": 37,
-  "sourcesSucceeded": 36,
-  "sourcesFailed": 1,
-  "observationsNew": 1,
-  "reviewQueueCount": 66,
+  "sourcesSucceeded": 37,
+  "sourcesFailed": 0,
+  "observationsNew": 3,
+  "reviewQueueCount": 69,
   "materialAlerts": [],
-  "errors": [
-    {
-      "sourceIntegrationId": "ESPN_RSS",
-      "httpStatus": 202,
-      "attempts": 3,
-      "error": "FetchFailure: HTTP 202"
-    }
-  ],
+  "errors": [],
   "truthBoundary": "Source checks and publication are separate. lastSuccessfulSourceCheckAt means at least one source succeeded; lastFullySuccessfulSourceCheckAt requires every registered operational source to succeed.",
-  "lastCompletedCheckAt": "2026-10-30T22:19:50Z",
-  "lastFullySuccessfulSourceCheckAt": "2026-10-30T22:11:33Z",
+  "lastCompletedCheckAt": "2026-10-30T22:24:09Z",
+  "lastFullySuccessfulSourceCheckAt": "2026-10-30T22:24:09Z",
   "duplicatesSuppressed": 1,
   "sourceFailureAlerts": [],
   "reviewProposalCount": 29

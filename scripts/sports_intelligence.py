@@ -96,7 +96,7 @@ BROADCASTS = [
 ]
 
 INTEGRATIONS = [
-    {"id": "ESPN_RSS", "name": "ESPN NFL RSS", "url": "https://www.espn.com/espn/rss/nfl/news", "type": "rss", "role": "SECONDARY_DISCOVERY", "operational": True},
+    {"id": "NBC_PFT_RSS", "name": "NBC Sports ProFootballTalk RSS", "url": "https://profootballtalk.nbcsports.com/feed/", "type": "rss", "role": "SECONDARY_DISCOVERY", "operational": True},
     {"id": "CBS_RSS", "name": "CBS Sports NFL RSS", "url": "https://www.cbssports.com/rss/headlines/nfl/", "type": "rss", "role": "SECONDARY_DISCOVERY", "operational": True},
     {"id": "YAHOO_RSS", "name": "Yahoo Sports NFL RSS", "url": "https://sports.yahoo.com/nfl/rss.xml", "type": "rss", "role": "SECONDARY_DISCOVERY", "operational": True},
     {"id": "GOOGLE_NEWS_RSS", "name": "Google News NFL trade discovery", "url": "https://news.google.com/rss/search?q=NFL+trade+when:1d&hl=en-US&gl=US&ceid=US:en", "type": "rss", "role": "SEARCH_DISCOVERY_ONLY", "operational": True},
@@ -165,6 +165,7 @@ def bootstrap() -> None:
         {"id": "BROADCAST_" + re.sub(r"[^A-Z0-9]+", "_", name.upper()).strip("_"), "name": name, "category": "BROADCAST", "status": "WATCHLIST_ONLY", "reason": "Original episodes require manual attributable review"}
         for name in BROADCASTS
     ]
+    watchlist.append({"id": "ENDPOINT_ESPN_RSS", "name": "ESPN NFL RSS", "category": "UNSTABLE_ENDPOINT", "status": "WATCHLIST_ONLY", "reason": "Removed from operational automation after repeated HTTP 202 responses on GitHub Actions; use only for manual source discovery until runner reliability is re-established"})
     write_json(PATHS["registry"], {
         "schema": "KAHRELUM_SOURCEGRID_v1.1", "generatedAt": iso(),
         "policy": {"defaultEvidenceClass": "UNVERIFIED", "autoConfirmTransactions": False, "autoPublishForecasts": False, "paywallBypass": False, "maxPriorityAlerts": 3},
@@ -210,6 +211,8 @@ def migrate_v11() -> None:
     """Upgrade SourceGrid registration and telemetry without touching evidence or forecast records."""
     registry = read_json(PATHS["registry"])
     watchlist = [item for item in registry.get("watchlist", []) if item.get("category") != "TEAM_OFFICIAL"]
+    watchlist = [item for item in watchlist if item.get("id") != "ENDPOINT_ESPN_RSS"]
+    watchlist.append({"id": "ENDPOINT_ESPN_RSS", "name": "ESPN NFL RSS", "category": "UNSTABLE_ENDPOINT", "status": "WATCHLIST_ONLY", "reason": "Removed from operational automation after repeated HTTP 202 responses on GitHub Actions; use only for manual source discovery until runner reliability is re-established"})
     registry.update({
         "schema": "KAHRELUM_SOURCEGRID_v1.1", "generatedAt": iso(),
         "operationalIntegrations": INTEGRATIONS, "watchlist": watchlist,

@@ -1,6 +1,6 @@
 {
   "schema": "KAHRELUM_SOURCEGRID_v1.1",
-  "generatedAt": "2026-10-30T22:00:55Z",
+  "generatedAt": "2026-10-30T22:23:57Z",
   "policy": {
     "defaultEvidenceClass": "UNVERIFIED",
     "autoConfirmTransactions": false,
@@ -10,9 +10,9 @@
   },
   "operationalIntegrations": [
     {
-      "id": "ESPN_RSS",
-      "name": "ESPN NFL RSS",
-      "url": "https://www.espn.com/espn/rss/nfl/news",
+      "id": "NBC_PFT_RSS",
+      "name": "NBC Sports ProFootballTalk RSS",
+      "url": "https://profootballtalk.nbcsports.com/feed/",
       "type": "rss",
       "role": "SECONDARY_DISCOVERY",
       "operational": true
@@ -471,11 +471,18 @@
       "category": "BROADCAST",
       "status": "WATCHLIST_ONLY",
       "reason": "Original episodes require manual attributable review"
+    },
+    {
+      "id": "ENDPOINT_ESPN_RSS",
+      "name": "ESPN NFL RSS",
+      "category": "UNSTABLE_ENDPOINT",
+      "status": "WATCHLIST_ONLY",
+      "reason": "Removed from operational automation after repeated HTTP 202 responses on GitHub Actions; use only for manual source discovery until runner reliability is re-established"
     }
   ],
   "counts": {
     "operational": 37,
-    "watchlistOnly": 19,
+    "watchlistOnly": 20,
     "teamsCovered": 32
   }
 }
