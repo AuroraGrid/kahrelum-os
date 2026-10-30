@@ -155,6 +155,39 @@ def normalize_url(url: str) -> str:
     return urllib.parse.urlunsplit((parts.scheme.lower(), parts.netloc.lower(), parts.path.rstrip("/"), urllib.parse.urlencode(query), ""))
 
 
+def historical_excluded_records(board: dict) -> list[dict]:
+    records = [
+        {"eventId": f"HIST-{p['id']}", "player": p["name"], "probability": p["kahrelumProbability"] / 100,
+         "status": "EXCLUDED_PROVISIONAL", "reason": "Conversation-recovered probability; original timestamp custody not independently authenticated"}
+        for p in board["candidates"] if p.get("kahrelumProbability") is not None
+    ]
+    event_ids = {
+        "Marvin Harrison Jr.": "HIST-K26-TRADE-MHJ",
+        "Quenton Nelson": "HIST-K26-TRADE-QN",
+        "DeForest Buckner": "HIST-K26-TRADE-DB",
+    }
+    for item in board.get("history", []):
+        if item.get("name") not in event_ids or item.get("provisionalBrierArithmetic") is None:
+            continue
+        probability = item["probability"] / 100
+        outcome = item["outcome"]
+        assert abs(item["provisionalBrierArithmetic"] - ((probability - outcome) ** 2)) < 1e-12
+        records.append({
+            "eventId": event_ids[item["name"]],
+            "player": item["name"],
+            "eventDefinition": "Player is traded before the 2026 NFL trade deadline.",
+            "probability": probability,
+            "estimatedOriginDate": item["estimatedOrigin"],
+            "outcome": outcome,
+            "officialOutcomeDate": item["actualDate"],
+            "provisionalBrierArithmetic": item["provisionalBrierArithmetic"],
+            "scoringEligible": False,
+            "status": "EXCLUDED_PROVISIONAL_RESOLVED",
+            "reason": item["reason"],
+        })
+    return records
+
+
 def bootstrap() -> None:
     board = read_json(NFL / "trade-board.json")
     watchlist = [
@@ -175,11 +208,7 @@ def bootstrap() -> None:
     write_json(PATHS["observations"], {"schema": "KAHRELUM_SOURCE_OBSERVATIONS_v1.0", "observations": []})
     write_json(PATHS["queue"], {"schema": "KAHRELUM_REVIEW_QUEUE_v1.0", "items": []})
     write_json(PATHS["public"], {"schema": "KAHRELUM_PUBLIC_SPORTS_FEED_v1.0", "publishedUpdates": [], "contradictions": [], "materialAlerts": []})
-    excluded = [
-        {"eventId": f"HIST-{p['id']}", "player": p["name"], "probability": p["kahrelumProbability"] / 100,
-         "status": "EXCLUDED_PROVISIONAL", "reason": "Conversation-recovered probability; original timestamp custody not independently authenticated"}
-        for p in board["candidates"] if p.get("kahrelumProbability") is not None
-    ]
+    excluded = historical_excluded_records(board)
     write_json(PATHS["ledger"], {"schema": "KAHRELUM_FORECAST_LEDGER_v1.0", "appendOnly": True, "eligibleLocks": [], "outcomeRecords": [], "historicalExcluded": excluded})
     write_json(PATHS["status"], {
         "schema": "KAHRELUM_REFRESH_STATUS_v1.1", "lastAttemptAt": None, "lastCompletedCheckAt": None,
@@ -785,7 +814,8 @@ def publish_observation(args) -> None:
 
 
 def empty_audit(status: str, limitation: str) -> dict:
-    return {"schema": "KAHRELUM_NFL_DEADLINE_AUDIT_v1.0", "scheduledForUtc": iso(AUDIT_AT), "status": status, "officialOutcomeCutoffUtc": iso(DEADLINE), "confirmedTransactions": [], "eligibleForecasts": 0, "correctTrades": 0, "correctNonTrades": 0, "incorrect": 0, "brierScore": None, "allNoBaselineBrier": None, "excludedHistoricalForecasts": 20, "limitations": [limitation]}
+    ledger = read_json(PATHS["ledger"], {"historicalExcluded": []})
+    return {"schema": "KAHRELUM_NFL_DEADLINE_AUDIT_v1.0", "scheduledForUtc": iso(AUDIT_AT), "status": status, "officialOutcomeCutoffUtc": iso(DEADLINE), "confirmedTransactions": [], "eligibleForecasts": 0, "correctTrades": 0, "correctNonTrades": 0, "incorrect": 0, "brierScore": None, "allNoBaselineBrier": None, "excludedHistoricalForecasts": len(ledger["historicalExcluded"]), "limitations": [limitation]}
 
 
 def retrieve_official_outcomes(now: dt.datetime, fixture_dir: Path | None = None) -> None:
@@ -890,8 +920,15 @@ def validate() -> None:
     assert len(health["sources"]) == len(registry["operationalIntegrations"])
     assert {x["sourceIntegrationId"] for x in health["sources"]} == {x["id"] for x in registry["operationalIntegrations"]}
     assert len(board["candidates"]) >= 124 and len(board["deals"]) >= 7
-    assert len(ledger["historicalExcluded"]) == len([x for x in board["candidates"] if x.get("kahrelumProbability") is not None])
-    assert all(x["status"] == "EXCLUDED_PROVISIONAL" for x in ledger["historicalExcluded"])
+    expected_excluded = historical_excluded_records(board)
+    assert len(ledger["historicalExcluded"]) == len(expected_excluded)
+    assert {x["eventId"] for x in ledger["historicalExcluded"]} == {x["eventId"] for x in expected_excluded}
+    assert all(x["status"] in {"EXCLUDED_PROVISIONAL", "EXCLUDED_PROVISIONAL_RESOLVED"} for x in ledger["historicalExcluded"])
+    for record in ledger["historicalExcluded"]:
+        if record["status"] == "EXCLUDED_PROVISIONAL_RESOLVED":
+            assert record["scoringEligible"] is False
+            assert record["outcome"] in {0, 1}
+            assert abs(record["provisionalBrierArithmetic"] - ((record["probability"] - record["outcome"]) ** 2)) < 1e-12
     assert len(public.get("materialAlerts", [])) <= 3
     assert status["feedFreshness"] in {"NOT_YET_RUN", "FRESH", "DEGRADED", "STALE_FAILED", "ARCHIVED_NO_DEADLINE_FETCH"}
     previous_event_hash = None
