@@ -280,11 +280,8 @@ async function createPreview(hosting, client, live, overlay) {
   const finalized = await hosting.updateVersion(SITE, versionId, { status: 'FINALIZED' });
   if (finalized.status !== 'FINALIZED') fail('Preview version did not finalize.');
 
-  let channel;
-  try {
-    channel = await hosting.getChannel('-', SITE, CHANNEL);
-  } catch (error) {
-    if (error.status !== 404) throw error;
+  let channel = await hosting.getChannel('-', SITE, CHANNEL);
+  if (!channel) {
     channel = await hosting.createChannel('-', SITE, CHANNEL, 24 * 60 * 60 * 1000);
   }
   await createRelease(client, CHANNEL, versionName, {
