@@ -197,6 +197,32 @@ class SportsIntelligenceTests(unittest.TestCase):
         self.assertEqual(audit["correctNonTrades"], 1)
         si.validate()
 
+    def test_resolved_historical_trade_arithmetic_stays_excluded(self):
+        ledger = json.loads((ROOT / "nfl" / "forecast-ledger.json").read_text(encoding="utf-8"))
+        board = json.loads((ROOT / "nfl" / "trade-board.json").read_text(encoding="utf-8"))
+        expected = {
+            "Marvin Harrison Jr.": (0.49, 0.2601),
+            "Quenton Nelson": (0.39, 0.3721),
+            "DeForest Buckner": (0.68, 0.1024),
+        }
+        records = {
+            record["player"]: record
+            for record in ledger["historicalExcluded"]
+            if "provisionalBrierArithmetic" in record
+        }
+        self.assertEqual(set(records), set(expected))
+        self.assertEqual(ledger["eligibleLocks"], [])
+        for player, (probability, brier) in expected.items():
+            record = records[player]
+            self.assertEqual(record["probability"], probability)
+            self.assertEqual(record["outcome"], 1)
+            self.assertFalse(record["scoringEligible"])
+            self.assertAlmostEqual(record["provisionalBrierArithmetic"], (probability - 1) ** 2)
+            self.assertAlmostEqual(record["provisionalBrierArithmetic"], brier)
+            board_record = next(item for item in board["history"] if item["name"] == player)
+            self.assertFalse(board_record["scorable"])
+            self.assertAlmostEqual(board_record["provisionalBrierArithmetic"], brier)
+
 
 if __name__ == "__main__":
     unittest.main()

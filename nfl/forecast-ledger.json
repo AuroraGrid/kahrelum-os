@@ -143,6 +143,45 @@
       "probability": 0.04,
       "status": "EXCLUDED_PROVISIONAL",
       "reason": "Conversation-recovered probability; original timestamp custody not independently authenticated"
+    },
+    {
+      "eventId": "HIST-K26-TRADE-MHJ",
+      "player": "Marvin Harrison Jr.",
+      "eventDefinition": "Player is traded before the 2026 NFL trade deadline.",
+      "probability": 0.49,
+      "estimatedOriginDate": "2026-10-10",
+      "outcome": 1,
+      "officialOutcomeDate": "2026-10-12",
+      "provisionalBrierArithmetic": 0.2601,
+      "scoringEligible": false,
+      "status": "EXCLUDED_PROVISIONAL_RESOLVED",
+      "reason": "Probability and date were recovered after the outcome without independently authenticated original timestamp custody. Brier arithmetic is displayed for transparency but excluded from every certified aggregate."
+    },
+    {
+      "eventId": "HIST-K26-TRADE-QN",
+      "player": "Quenton Nelson",
+      "eventDefinition": "Player is traded before the 2026 NFL trade deadline.",
+      "probability": 0.39,
+      "estimatedOriginDate": "2026-10-26",
+      "outcome": 1,
+      "officialOutcomeDate": "2026-10-27",
+      "provisionalBrierArithmetic": 0.3721,
+      "scoringEligible": false,
+      "status": "EXCLUDED_PROVISIONAL_RESOLVED",
+      "reason": "Probability and date were recovered after the outcome without independently authenticated original timestamp custody. Brier arithmetic is displayed for transparency but excluded from every certified aggregate."
+    },
+    {
+      "eventId": "HIST-K26-TRADE-DB",
+      "player": "DeForest Buckner",
+      "eventDefinition": "Player is traded before the 2026 NFL trade deadline.",
+      "probability": 0.68,
+      "estimatedOriginDate": "2026-10-27",
+      "outcome": 1,
+      "officialOutcomeDate": "2026-10-27",
+      "provisionalBrierArithmetic": 0.1024,
+      "scoringEligible": false,
+      "status": "EXCLUDED_PROVISIONAL_RESOLVED",
+      "reason": "The forecast-versus-trade ordering on the same date is not independently verified. Brier arithmetic is displayed for transparency but excluded from every certified aggregate."
     }
   ]
 }

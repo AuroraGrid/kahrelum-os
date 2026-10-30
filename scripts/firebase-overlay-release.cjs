@@ -309,6 +309,20 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     if (!Array.isArray(health.sources) || health.sources.length !== sourcegrid.counts.operational) fail('Per-source health coverage gate failed.');
     if (!['FRESH', 'DEGRADED', 'STALE_FAILED', 'ARCHIVED_NO_DEADLINE_FETCH'].includes(status.feedFreshness)) fail('Refresh status is not an executed state.');
     if (!Array.isArray(ledger.eligibleLocks) || !Array.isArray(ledger.historicalExcluded) || ledger.historicalExcluded.length < 20) fail('Forecast ledger custody gate failed.');
+    const requestedHistorical = new Map([
+      ['Marvin Harrison Jr.', [0.49, 0.2601]],
+      ['Quenton Nelson', [0.39, 0.3721]],
+      ['DeForest Buckner', [0.68, 0.1024]],
+    ]);
+    for (const [player, [probability, brier]] of requestedHistorical) {
+      const record = ledger.historicalExcluded.find(item => item.player === player && item.provisionalBrierArithmetic !== undefined);
+      if (!record || record.scoringEligible !== false || record.outcome !== 1 ||
+          Math.abs(record.probability - probability) > 1e-12 ||
+          Math.abs(record.provisionalBrierArithmetic - brier) > 1e-12 ||
+          Math.abs(record.provisionalBrierArithmetic - ((record.probability - record.outcome) ** 2)) > 1e-12) {
+        fail(`Excluded historical Brier custody failed for ${player}.`);
+      }
+    }
     if ((publicFeed.materialAlerts || []).length > 3) fail('Priority alert limit exceeded.');
     if (audit.brierScore !== null && !(audit.eligibleForecasts > 0)) fail('Brier score lacks an eligible denominator.');
     if (publishing.publishingAuthorized !== false) fail('Third-party publishing must remain authorization-gated.');
