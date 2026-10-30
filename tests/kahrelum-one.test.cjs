@@ -28,11 +28,11 @@ test('existing Vercel ONE_* secrets can configure the invite gate without new se
  process.env.ONE_SESSION_SECRET=secret;process.env.ONE_INVITES_JSON=JSON.stringify([{sha256:hash}]);
  const res=response();await redeem(req('POST',{code}),res);assert.equal(res.statusCode,200);
 });
-test('session only advertises live research when both free-tier provider keys exist',async t=>{
+test('session advertises live research whenever the Gemini model key exists',async t=>{
  t.after(()=>{process.env={...old}});
- process.env.KAHRELUM_ONE_SESSION_SECRET=secret;process.env.KAHRELUM_ONE_INVITE_HASHES=hash;process.env.GEMINI_API_KEY='test-gemini';process.env.TAVILY_API_KEY='test-tavily';
+ process.env.KAHRELUM_ONE_SESSION_SECRET=secret;process.env.KAHRELUM_ONE_INVITE_HASHES=hash;process.env.GEMINI_API_KEY='test-gemini';delete process.env.TAVILY_API_KEY;
  const token=signedToken();let res=response();await session(req('GET',{}, {cookie:`k1_session=${token}`}),res);assert.equal(res.body.liveResearchAvailable,true);
- delete process.env.TAVILY_API_KEY;res=response();await session(req('GET',{}, {cookie:`k1_session=${token}`}),res);assert.equal(res.body.liveResearchAvailable,false);
+ delete process.env.GEMINI_API_KEY;res=response();await session(req('GET',{}, {cookie:`k1_session=${token}`}),res);assert.equal(res.body.liveResearchAvailable,false);
 });
 test('chat API rejects browser-only authorization and sends valid turns only through configured backend',async t=>{
  t.after(()=>{process.env={...old};global.fetch=originalFetch});
@@ -46,34 +46,36 @@ test('chat API rejects browser-only authorization and sends valid turns only thr
  process.env.GEMINI_API_KEY='test-secret';
  res=response();await chat(req('POST',{messages:[{role:'user',content:'hello'}],mode:'everyday'},{cookie:`k1_session=${token}`}),res);assert.equal(res.statusCode,200);assert.equal(res.body.answer,'Hi there.');
 });
-test('live research is explicit, free-tier basic search, cited, and fails closed without a Tavily key',async t=>{
+test('live research uses no-key DuckDuckGo search, cites results, and fails closed on throttling',async t=>{
  t.after(()=>{process.env={...old};global.fetch=originalFetch});
  process.env.KAHRELUM_ONE_SESSION_SECRET=secret;process.env.KAHRELUM_ONE_INVITE_HASHES=hash;process.env.GEMINI_API_KEY='test-gemini';
  const originalFetch=global.fetch, token=signedToken();let calls=[];
  delete process.env.TAVILY_API_KEY;
- global.fetch=async()=>{throw new Error('A provider must not be called without its key')};
- let res=response();await chat(req('POST',{messages:[{role:'user',content:'What changed today?'}],mode:'check',liveResearch:true},{cookie:`k1_session=${token}`}),res);assert.equal(res.statusCode,503);assert.match(res.body.error,/No search or model request/);
- process.env.TAVILY_API_KEY='test-tavily';
+ let res=response();
  global.fetch=async(url,options)=>{
   calls.push(url);
-  if(url==='https://api.tavily.com/search'){
-   assert.equal(options.headers.Authorization,'Bearer test-tavily');const body=JSON.parse(options.body);assert.equal(body.search_depth,'basic');assert.equal(body.max_results,5);assert.equal(body.include_answer,false);
-   return{ok:true,json:async()=>({results:[{title:'Official update',url:'https://example.org/current',content:'A verified current source excerpt.'}]})};
+  if(url.startsWith('https://html.duckduckgo.com/html/?q=')){
+   assert.match(url,/%3F|%20|%3F/);assert.match(options.headers.Accept,/text\/html/);
+   return{ok:true,text:async()=>'<div class="result"><a class="result__a" href="https://example.org/current">Official update</a><a class="result__snippet">A current source excerpt &amp; detail.</a></div>'};
   }
   assert.ok(url.startsWith('https://generativelanguage.googleapis.com/'));assert.equal(options.headers['x-goog-api-key'],'test-gemini');
-  const body=JSON.parse(options.body);assert.match(body.contents.at(-1).parts[0].text,/\[1\] Official update/);
+  const body=JSON.parse(options.body);assert.match(body.contents.at(-1).parts[0].text,/\[1\] Official update/);assert.match(body.contents.at(-1).parts[0].text,/search-result excerpts/);
   return{ok:true,json:async()=>({candidates:[{content:{parts:[{text:'The update says this [1].'}]}}]})};
  };
  res=response();await chat(req('POST',{messages:[{role:'user',content:'What changed today?'}],mode:'check',liveResearch:true},{cookie:`k1_session=${token}`}),res);
- assert.equal(res.statusCode,200);assert.equal(calls.length,4);assert.equal(calls[0],'https://api.tavily.com/search');assert.ok(calls.slice(1).every(url=>url.startsWith('https://generativelanguage.googleapis.com/')));assert.equal(res.body.sources[0].url,'https://example.org/current');assert.match(res.body.answer,/\[1\]/);assert.equal(res.body.pipeline.reviewPasses,3);
- calls=[];global.fetch=async url=>{calls.push(url);return{ok:false,status:429,json:async()=>({})}};
+ assert.equal(res.statusCode,200);assert.equal(calls.length,4);assert.ok(calls[0].startsWith('https://html.duckduckgo.com/html/?q='));assert.ok(calls.slice(1).every(url=>url.startsWith('https://generativelanguage.googleapis.com/')));assert.equal(res.body.sources[0].url,'https://example.org/current');assert.match(res.body.answer,/\[1\]/);assert.equal(res.body.pipeline.reviewPasses,3);
+ calls=[];global.fetch=async url=>{calls.push(url);return{ok:false,status:429,text:async()=>''}};
  res=response();await chat(req('POST',{messages:[{role:'user',content:'What changed today?'}],mode:'check',liveResearch:true},{cookie:`k1_session=${token}`}),res);
- assert.equal(res.statusCode,503);assert.match(res.body.error,/quota is exhausted/);assert.deepEqual(calls,['https://api.tavily.com/search']);
+ assert.equal(res.statusCode,503);assert.match(res.body.error,/rate-limited/);assert.equal(calls.length,1);assert.ok(calls[0].startsWith('https://html.duckduckgo.com/html/?q='));
+});
+test('DuckDuckGo parser unwraps redirects, decodes snippets, and excludes unsafe links',()=>{
+ const {parseDuckDuckGoResults}=chat;
+ const html='<a class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fexample.org%2Fstory%3Fa%3D1%26b%3D2">A &amp; B</a><a class="result__snippet">One &amp; two &#39;three&#39;.</a><a class="result__a" href="http://insecure.example/x">Insecure</a><a class="result__a" href="https://duckduckgo.com/about">Search engine</a>';
+ const results=parseDuckDuckGoResults(html);assert.equal(results.length,1);assert.equal(results[0].url,'https://example.org/story?a=1&b=2');assert.equal(results[0].title,'A & B');assert.equal(results[0].content,"One & two 'three'.");
 });
 test('router sends explicit verification requests through ordered staged review passes',async t=>{
  t.after(()=>{process.env={...old};global.fetch=originalFetch});
  process.env.KAHRELUM_ONE_SESSION_SECRET=secret;process.env.KAHRELUM_ONE_INVITE_HASHES=hash;process.env.GEMINI_API_KEY='test-gemini';
- delete process.env.TAVILY_API_KEY;
  const originalFetch=global.fetch,token=signedToken(),prompts=[],stageInputs=[];
  global.fetch=async(url,options)=>{
   assert.ok(url.startsWith('https://generativelanguage.googleapis.com/'));
