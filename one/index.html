@@ -15,7 +15,7 @@
   <main class="shell">
     <header class="topbar">
       <a class="brand" href="/one/" aria-label="KAHRELUM ONE home"><span class="brand-mark">K</span><span>KAHRELUM <b>ONE</b></span></a>
-      <div class="top-actions"><button id="installButton" class="quiet-button" hidden>Install app</button><button id="newChatButton" class="quiet-button" hidden>New chat</button></div>
+      <div class="top-actions"><button id="installButton" class="quiet-button" hidden>Install app</button><button id="preferencesButton" class="quiet-button" hidden>Memory &amp; instructions</button><button id="newChatButton" class="quiet-button" hidden>New chat</button></div>
     </header>
 
     <section id="inviteScreen" class="gate-screen" aria-labelledby="welcomeTitle">
@@ -48,6 +48,21 @@
       <form id="chatForm" class="composer"><textarea id="messageInput" rows="1" maxlength="4000" placeholder="Message KAHRELUM ONE" aria-label="Message" required></textarea><button class="send-button" type="submit" aria-label="Send message">↑</button><div class="composer-meta"><span>Replies via Gemini · chats aren’t saved by KAHRELUM</span><span id="modeBadge">Everyday</span></div></form>
       <p class="disclaimer">Messages go to Google Gemini; opted-in live searches go to DuckDuckGo. Search can be rate-limited. Don’t share sensitive information.</p>
     </section>
+    <dialog id="preferencesDialog" class="preferences-dialog" aria-labelledby="preferencesTitle">
+      <div class="preferences-card">
+        <div class="preferences-heading"><div><p class="eyebrow">Your space, your way</p><h2 id="preferencesTitle">Memory &amp; instructions</h2></div><button id="closePreferencesButton" class="icon-button" type="button" aria-label="Close settings">×</button></div>
+        <p class="preferences-intro">Personalize how KAHRELUM responds. These settings are saved only in this browser and sent with your message when you chat.</p>
+        <form id="preferencesForm">
+          <label for="customInstructions">Custom instructions</label>
+          <textarea id="customInstructions" maxlength="2000" rows="4" placeholder="For example: Keep answers concise, explain unfamiliar terms, and ask before making assumptions."></textarea>
+          <label for="memoryInput">Memory bank</label>
+          <textarea id="memoryInput" maxlength="3000" rows="6" placeholder="One useful detail per line (for example: vegetarian meals; learning Spanish)."></textarea>
+          <small class="field-help">Add, edit, or delete notes yourself. Each line is a separate memory. Chats are not automatically saved.</small>
+          <div class="preferences-actions"><button id="forgetAllButton" class="quiet-button" type="button">Forget saved details</button><span class="action-spacer"></span><button id="cancelPreferencesButton" class="quiet-button" type="button">Cancel</button><button class="primary-button" type="submit">Save</button></div>
+          <p id="preferencesStatus" class="preferences-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </dialog>
   </main>
   <script src="/one/app.js" defer></script>
 </body>
