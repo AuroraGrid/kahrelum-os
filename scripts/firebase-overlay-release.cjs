@@ -241,6 +241,9 @@ function replaceHomepageSection(home, fragment) {
   for (const route of DIVISION_ROUTES) {
     if (!output.includes(`href="${route}"`)) fail(`Homepage is missing division navigation to ${route}.`);
   }
+  for (const route of ['/sports', '/nfl/trades', '/nfl/film-room']) {
+    if (!output.includes(`href="${route}"`)) fail(`Homepage is missing sports navigation to ${route}.`);
+  }
   if (!output.includes('$750') || !output.includes('$2,500')) fail('Homepage pricing custody check failed.');
   const publicReleaseIdentity = /<section>\s*<p class="eyebrow">Release identity<\/p>[\s\S]*?<\/section>\s*/gi;
   const identitySections = output.match(publicReleaseIdentity) || [];
