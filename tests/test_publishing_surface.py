@@ -73,6 +73,8 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertNotIn('id="telemetrySource"', page)
         self.assertIn("reloads every 10 minutes", page)
         self.assertIn('id="sourceCheckStatus"', page)
+        self.assertIn("api.github.com/repos/AuroraGrid/kahrelum-os/contents/nfl/refresh-status.json", page)
+        self.assertIn("application/vnd.github.raw+json", page)
         self.assertIn("raw.githubusercontent.com/AuroraGrid/kahrelum-os/main/nfl/refresh-status.json", page)
         self.assertIn('candidate.schema!=="KAHRELUM_REFRESH_STATUS_v1.1"', page)
         self.assertIn("remain review-gated", page)

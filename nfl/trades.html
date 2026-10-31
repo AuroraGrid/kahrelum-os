@@ -62,9 +62,9 @@ $("#resultCount").textContent=arr.length+" of "+db.candidates.length+" records Â
 $("#candidates").innerHTML=arr.length?arr.map(card).join(""):'<p class="loading">No candidates match those filters.</p>';}
 function showTime(value){return value?new Date(value).toLocaleString("en-US",{dateStyle:"medium",timeStyle:"short",timeZone:"America/New_York"})+" Eastern":"Not yet established"}
 async function updateSourceGridStatus(){
-const node=$("#sourceCheckStatus"),remote="https://raw.githubusercontent.com/AuroraGrid/kahrelum-os/main/nfl/refresh-status.json?t="+Date.now();
+const node=$("#sourceCheckStatus"),stamp=Date.now(),api="https://api.github.com/repos/AuroraGrid/kahrelum-os/contents/nfl/refresh-status.json?ref=main&t="+stamp,remote="https://raw.githubusercontent.com/AuroraGrid/kahrelum-os/main/nfl/refresh-status.json?t="+stamp;
 let status=null;
-for(const url of [remote,"/nfl/refresh-status.json?t="+Date.now()]){try{const response=await fetch(url,{cache:"no-store"});if(!response.ok)continue;const candidate=await response.json();if(candidate.schema!=="KAHRELUM_REFRESH_STATUS_v1.1")continue;status=candidate;break}catch(_error){}}
+for(const source of [{url:api,headers:{Accept:"application/vnd.github.raw+json"}},{url:remote},{url:"/nfl/refresh-status.json?t="+stamp}]){try{const response=await fetch(source.url,{cache:"no-store",headers:source.headers||{}});if(!response.ok)continue;const candidate=await response.json();if(candidate.schema!=="KAHRELUM_REFRESH_STATUS_v1.1")continue;status=candidate;break}catch(_error){}}
 if(!status){node.textContent="SourceGrid operating status is temporarily unavailable. The published research snapshot remains separately dated below.";return}
 const checked=status.lastFullySuccessfulSourceCheckAt||status.lastCompletedCheckAt||status.lastSuccessfulSourceCheckAt;
 const newCount=Number.isFinite(status.observationsNew)?status.observationsNew:0;
