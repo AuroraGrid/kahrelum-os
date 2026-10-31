@@ -126,6 +126,11 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertIn("publicReleaseIdentity", release)
         self.assertIn("election-challenge.html", release)
 
+    def test_investigations_names_marion_county_state(self):
+        page = self.read("investigations.html")
+        self.assertIn("Marion County, Indiana case", page)
+        self.assertIn("investigations.html", self.read("scripts/firebase-overlay-release.cjs"))
+
     def test_sports_desk_uses_flat_editorial_system(self):
         css = self.read("sports-desk.css").lower()
         self.assertNotIn("gradient", css)
