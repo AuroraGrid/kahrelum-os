@@ -14,21 +14,33 @@ class CandidatePortraitTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.catalog = json.loads(portraits.DEFAULT_CATALOG.read_text())
+        cls.supplement = json.loads(portraits.DEFAULT_SUPPLEMENT.read_text())
         cls.current = json.loads((ROOT / "election/current-projections.json").read_text())
         cls.ledger = json.loads((ROOT / "election/candidate-portraits.json").read_text())
 
     def test_real_roster_coverage_and_exact_card_binding(self):
-        rebuilt = portraits.build_ledger(self.current, self.catalog, self.catalog["retrievedAtUtc"])
+        rebuilt = portraits.build_ledger(self.current, self.catalog, self.supplement["retrievedAtUtc"], self.supplement)
         self.assertEqual(rebuilt["records"], self.ledger["records"])
         self.assertEqual(rebuilt["coverage"]["sourceListedCandidateRecords"], 940)
-        self.assertEqual(rebuilt["coverage"]["candidateCardsWithPortraits"], 373)
-        self.assertEqual(rebuilt["coverage"]["candidateCardsWithoutPortraits"], 567)
-        self.assertEqual(len({r["bioguideId"] for r in rebuilt["records"]}), 373)
+        self.assertEqual(rebuilt["coverage"]["candidateCardsWithPortraits"], 397)
+        self.assertEqual(rebuilt["coverage"]["candidateCardsWithoutPortraits"], 543)
+        self.assertEqual(len({r["bioguideId"] for r in rebuilt["records"]}), 397)
         for record in rebuilt["records"]:
-            self.assertIn(self.catalog["photoSource"]["commit"], record["url"])
             self.assertEqual(record["license"], "Public domain")
             self.assertTrue(record["sourceUrl"].startswith("https://"))
-            self.assertTrue(record["licenseUrl"].endswith("README.md#public-domain"))
+            if record["url"].startswith("/"):
+                self.assertTrue(record["licenseUrl"].endswith("#Licensing"))
+                self.assertEqual(len(record["imageSha256"]), 64)
+            else:
+                self.assertIn(self.catalog["photoSource"]["commit"], record["url"])
+                self.assertTrue(record["licenseUrl"].endswith("README.md#public-domain"))
+
+    def test_all_previous_portraits_remain_identical(self):
+        original = portraits.build_ledger(self.current, self.catalog, self.catalog["retrievedAtUtc"])
+        combined = {r["sourceCandidateId"]: r for r in self.ledger["records"]}
+        self.assertEqual(len(original["records"]), 373)
+        for record in original["records"]:
+            self.assertEqual(record, combined[record["sourceCandidateId"]])
 
     def test_wrong_state_or_party_does_not_match(self):
         candidate = {"name": "Robert Aderholt", "state": "AL", "party": "R"}
@@ -53,9 +65,44 @@ class CandidatePortraitTests(unittest.TestCase):
         self.assertNotIn("Robert Aderholt", [r["candidateName"] for r in ledger["records"]])
 
     def test_identity_without_image_is_not_admitted(self):
-        blocked = next(r for r in self.ledger["unresolved"] if r["candidateName"] == "Nick Begich")
+        original = portraits.build_ledger(self.current, self.catalog, self.catalog["retrievedAtUtc"])
+        blocked = next(r for r in original["unresolved"] if r["candidateName"] == "Nick Begich")
         self.assertEqual(blocked["reason"], "NO_REVIEWED_IMAGE")
         self.assertEqual(blocked["bioguideId"], "B001323")
+        added = next(r for r in self.ledger["records"] if r["candidateName"] == "Nick Begich")
+        self.assertEqual(added["bioguideId"], "B001323")
+        self.assertTrue(added["url"].startswith("/assets/candidate-portraits/"))
+
+    def test_former_members_have_distinct_pinned_identities(self):
+        expected = {"Mary Peltola": ("AK", "P000619"), "Sherrod Brown": ("OH", "B000944"),
+                    "Mike Rogers": ("MI", "R000572"), "John Sununu": ("NH", "S001078")}
+        for name, (state, bioguide_id) in expected.items():
+            record = next(r for r in self.ledger["records"] if r["candidateName"] == name and r["state"] == state)
+            self.assertEqual(record["bioguideId"], bioguide_id)
+            self.assertTrue(record["identitySourceUrl"].endswith("/legislators-historical.csv"))
+        # Alabama's Mike Rogers is a different person, despite the exact same name.
+        alabama = next(r for r in self.ledger["records"] if r["candidateName"] == "Mike Rogers" and r["state"] == "AL")
+        self.assertNotEqual(alabama["bioguideId"], "R000572")
+
+    def test_supplement_cannot_override_prior_portraits(self):
+        supplement = copy.deepcopy(self.supplement)
+        supplement["archiveImages"].append(copy.deepcopy(self.catalog["images"][0]))
+        with self.assertRaisesRegex(ValueError, "Duplicate Bioguide image"):
+            portraits.build_ledger(self.current, self.catalog, supplement["retrievedAtUtc"], supplement)
+
+    def test_local_image_rights_bytes_and_provenance_are_required(self):
+        for field, value, message in [
+            ("license", "unknown", "public-domain declaration"),
+            ("bytes", 1, "bytes do not match"),
+            ("path", "../unrelated.jpg", "path or digest"),
+            ("sourceOriginalImageSha1", "0" * 40, "provenance differs"),
+            ("bioguideName", "Another Candidate", "identity is not documented"),
+        ]:
+            with self.subTest(field=field):
+                supplement = copy.deepcopy(self.supplement)
+                supplement["commonsImages"][0][field] = value
+                with self.assertRaisesRegex(ValueError, message):
+                    portraits.build_ledger(self.current, self.catalog, supplement["retrievedAtUtc"], supplement)
 
     def test_rights_missing_or_reused_candidate_ids_fail(self):
         catalog = copy.deepcopy(self.catalog)

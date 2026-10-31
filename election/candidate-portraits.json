@@ -1,8 +1,8 @@
 {
   "schema": "KAHRELUM_CANDIDATE_PORTRAITS_v1.0",
   "status": "PARTIAL_VERIFIED_COVERAGE",
-  "updatedAtUtc": "2026-10-31T04:15:50Z",
-  "admissionRule": "One exact documented name or explicit source alias, the same state and party, a unique Bioguide identity, an existing pinned image blob, and an explicit corpus public-domain declaration. No fuzzy name or facial matching. Photo identity does not certify nomination or ballot eligibility.",
+  "updatedAtUtc": "2026-10-31T05:08:39Z",
+  "admissionRule": "One exact documented name or explicit source alias, the same state and party, a unique Bioguide identity, an existing pinned image blob, and an explicit corpus public-domain declaration. No fuzzy name or facial matching. Photo identity does not certify nomination or ballot eligibility. Reviewed supplements may add exact identities from the same pinned historical CSV and official public-domain images captured from Wikimedia Commons; local image bytes and source revisions are verified before admission. Existing photos are never replaced by a supplement.",
   "sourceCatalog": "research/candidate-portraits/congressional-sources-2026-10-31.json",
   "sources": {
     "identity": {
@@ -21,22 +21,105 @@
       "license": "Public domain",
       "licenseUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
       "rightsBasis": "The source repository describes its congressional portraits as public domain, cites GPO's assurance for its Member Guide photos, and requires contributed photos to be official and public domain."
+    },
+    "additionalIdentities": {
+      "historical": {
+        "repository": "unitedstates/congress-legislators",
+        "commit": "577ca04282d14688cb14f6559eb27b52bdc50dfc",
+        "path": "legislators-historical.csv",
+        "url": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-historical.csv",
+        "description": "Eleven reviewed former members whose documented name, state, party and Bioguide identity exactly match current source-listed candidates. Identity only; not ballot certification. Historical-name matches are individually reviewed to exclude unrelated deceased namesakes."
+      }
+    },
+    "additionalPhotos": {
+      "provider": "Wikimedia Commons",
+      "metadataFile": "research/candidate-portraits/commons-metadata-2026-10-31.json",
+      "metadataSha256": "65ca1065cc943b8d4f44680a4f45ecac074d3cd46b45321819989b80a857ddf0",
+      "capturedAtUtc": "2026-10-31T04:58:06Z",
+      "localImages": 13
     }
   },
   "coverage": {
     "sourceListedCandidateRecords": 940,
     "uniqueCandidateIds": 940,
-    "identityMatchedCandidates": 386,
-    "admittedPortraits": 373,
-    "uniquePeopleWithPortraits": 373,
-    "candidateCardsWithPortraits": 373,
-    "candidateCardsWithoutPortraits": 567,
+    "identityMatchedCandidates": 397,
+    "admittedPortraits": 397,
+    "uniquePeopleWithPortraits": 397,
+    "candidateCardsWithPortraits": 397,
+    "candidateCardsWithoutPortraits": 543,
     "unresolvedReasons": {
-      "IDENTITY_NOT_VERIFIED": 554,
-      "NO_REVIEWED_IMAGE": 13
+      "IDENTITY_NOT_VERIFIED": 543
     }
   },
   "records": [
+    {
+      "sourceCandidateId": 15073,
+      "candidateName": "Nick Begich",
+      "state": "AK",
+      "party": "R",
+      "contestId": "AK-AL",
+      "chamber": "House",
+      "status": "ADMITTED",
+      "bioguideId": "B001323",
+      "matchedName": "Nick Begich",
+      "matchMethod": "EXACT_DOCUMENTED_NAME_STATE_PARTY",
+      "matchedSourceField": "documented_wikipedia_alias",
+      "identitySourceUrl": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-current.csv",
+      "identityRole": {
+        "chamber": "House",
+        "state": "AK",
+        "party": "Republican",
+        "district": "0"
+      },
+      "url": "/assets/candidate-portraits/B001323-b4c0b08ba65e61de.jpg",
+      "width": 330,
+      "height": 495,
+      "imageSha256": "b4c0b08ba65e61deff57f04fb979d90eed924ac26afb32932a6bb6eac5807f32",
+      "imageBytes": 32317,
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?oldid=1270471227",
+      "originalSourceUrl": "https://begich.house.gov/about",
+      "originalSourceName": "Ike Hayman",
+      "sourceOriginalImageSha1": "ebbcf297eb577f774134da3b09d0ca162dfb25e4",
+      "commonsRevisionId": 1270471227,
+      "sourceImageUploadedAt": "2025-01-03T17:08:13Z",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/w/index.php?oldid=1270471227#Licensing",
+      "rightsBasis": "Captured Commons public-domain declaration for the official congressional image; unchanged downloaded Commons thumbnail.",
+      "attribution": "Ike Hayman / Wikimedia Commons",
+      "reviewedAtUtc": "2026-10-31T04:58:06Z"
+    },
+    {
+      "sourceCandidateId": 16068,
+      "candidateName": "Jerry Carl",
+      "state": "AL",
+      "party": "R",
+      "contestId": "AL-1",
+      "chamber": "House",
+      "status": "ADMITTED",
+      "bioguideId": "C001054",
+      "matchedName": "Jerry Carl",
+      "matchMethod": "EXACT_DOCUMENTED_NAME_STATE_PARTY",
+      "matchedSourceField": "documented_name_fields",
+      "identitySourceUrl": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-historical.csv",
+      "identityRole": {
+        "chamber": "House",
+        "state": "AL",
+        "party": "Republican",
+        "district": "1"
+      },
+      "url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/C001054.jpg",
+      "width": 225,
+      "height": 275,
+      "imageBlobSha": "ec36bc243a9c88f18dfc60a1d75f377d6728206f",
+      "sourceUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/C001054.jpg",
+      "originalSourceUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/C001054.jpg",
+      "originalSourceName": "Congressional public-domain portrait archive",
+      "license": "Public domain",
+      "licenseUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+      "rightsBasis": "Public-domain declaration of the pinned congressional image corpus",
+      "attribution": "U.S. Congress / unitedstates/images",
+      "reviewedAtUtc": "2026-10-31T05:08:39Z"
+    },
     {
       "sourceCandidateId": 18330,
       "candidateName": "Shomari Figures",
@@ -486,6 +569,42 @@
       "reviewedAtUtc": "2026-10-31T04:15:50Z"
     },
     {
+      "sourceCandidateId": 26445,
+      "candidateName": "Adelita Grijalva",
+      "state": "AZ",
+      "party": "D",
+      "contestId": "AZ-7",
+      "chamber": "House",
+      "status": "ADMITTED",
+      "bioguideId": "G000606",
+      "matchedName": "Adelita Grijalva",
+      "matchMethod": "EXACT_DOCUMENTED_NAME_STATE_PARTY",
+      "matchedSourceField": "documented_name_fields",
+      "identitySourceUrl": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-current.csv",
+      "identityRole": {
+        "chamber": "House",
+        "state": "AZ",
+        "party": "Democrat",
+        "district": "7"
+      },
+      "url": "/assets/candidate-portraits/G000606-f7fd3d6369c47a0f.jpg",
+      "width": 330,
+      "height": 495,
+      "imageSha256": "f7fd3d6369c47a0fb41ca4f1bd3d35faf5ac4086e53c0f5d553cce0034aadce9",
+      "imageBytes": 43713,
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?oldid=1271063998",
+      "originalSourceUrl": "https://bioguide.congress.gov/search/bio/G000606",
+      "originalSourceName": "Damien Salas, Office of the Clerk U.S.House of Representatives",
+      "sourceOriginalImageSha1": "6f4c358ea9da3c1506c3fa49448113a608eb8f09",
+      "commonsRevisionId": 1271063998,
+      "sourceImageUploadedAt": "2025-11-13T15:55:42Z",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/w/index.php?oldid=1271063998#Licensing",
+      "rightsBasis": "Captured Commons public-domain declaration for the official congressional image; unchanged downloaded Commons thumbnail.",
+      "attribution": "Damien Salas, Office of the Clerk U.S.House of Representatives / Wikimedia Commons",
+      "reviewedAtUtc": "2026-10-31T04:58:06Z"
+    },
+    {
       "sourceCandidateId": 26448,
       "candidateName": "Abraham Hamadeh",
       "state": "AZ",
@@ -548,6 +667,42 @@
       "rightsBasis": "Public-domain declaration of the pinned congressional image corpus",
       "attribution": "U.S. Congress / unitedstates/images",
       "reviewedAtUtc": "2026-10-31T04:15:50Z"
+    },
+    {
+      "sourceCandidateId": 21000,
+      "candidateName": "James Gallagher",
+      "state": "CA",
+      "party": "R",
+      "contestId": "CA-1",
+      "chamber": "House",
+      "status": "ADMITTED",
+      "bioguideId": "G000607",
+      "matchedName": "James Gallagher",
+      "matchMethod": "EXACT_DOCUMENTED_NAME_STATE_PARTY",
+      "matchedSourceField": "full_name",
+      "identitySourceUrl": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-current.csv",
+      "identityRole": {
+        "chamber": "House",
+        "state": "CA",
+        "party": "Republican",
+        "district": "1"
+      },
+      "url": "/assets/candidate-portraits/G000607-03c228cf9fb665d7.jpg",
+      "width": 330,
+      "height": 412,
+      "imageSha256": "03c228cf9fb665d7453fc3e647fa3f03ed8eb5bf40bf31064ee8e36e6f6ee135",
+      "imageBytes": 31757,
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?oldid=1288810210",
+      "originalSourceUrl": "https://bioguide.congress.gov/search/bio/G000607",
+      "originalSourceName": "U.S. House of Representatives",
+      "sourceOriginalImageSha1": "23e3824c156578cbd2946d37a7f167aae669dc7a",
+      "commonsRevisionId": 1288810210,
+      "sourceImageUploadedAt": "2026-06-12T00:24:57Z",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/w/index.php?oldid=1288810210#Licensing",
+      "rightsBasis": "Captured Commons public-domain declaration for the official congressional image; unchanged downloaded Commons thumbnail.",
+      "attribution": "U.S. House of Representatives / Wikimedia Commons",
+      "reviewedAtUtc": "2026-10-31T04:58:06Z"
     },
     {
       "sourceCandidateId": 21346,
@@ -644,6 +799,42 @@
       "rightsBasis": "Public-domain declaration of the pinned congressional image corpus",
       "attribution": "U.S. Congress / unitedstates/images",
       "reviewedAtUtc": "2026-10-31T04:15:50Z"
+    },
+    {
+      "sourceCandidateId": 21140,
+      "candidateName": "Aisha Wahab",
+      "state": "CA",
+      "party": "D",
+      "contestId": "CA-14",
+      "chamber": "House",
+      "status": "ADMITTED",
+      "bioguideId": "W000832",
+      "matchedName": "Aisha Wahab",
+      "matchMethod": "EXACT_DOCUMENTED_NAME_STATE_PARTY",
+      "matchedSourceField": "documented_name_fields",
+      "identitySourceUrl": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-current.csv",
+      "identityRole": {
+        "chamber": "House",
+        "state": "CA",
+        "party": "Democrat",
+        "district": "14"
+      },
+      "url": "/assets/candidate-portraits/W000832-f0775534f5ca61d6.jpg",
+      "width": 330,
+      "height": 412,
+      "imageSha256": "f0775534f5ca61d66a07152959129b613e7fbd7aa0e334be6f662ac55936c5d0",
+      "imageBytes": 31655,
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?oldid=1271470721",
+      "originalSourceUrl": "https://bioguide.congress.gov/search/bio/W000832",
+      "originalSourceName": "U.S. House of Representatives",
+      "sourceOriginalImageSha1": "073f96cba047e9a2f194441fd8b3a2e4e75bbb2f",
+      "commonsRevisionId": 1271470721,
+      "sourceImageUploadedAt": "2026-09-02T19:33:06Z",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/w/index.php?oldid=1271470721#Licensing",
+      "rightsBasis": "Captured Commons public-domain declaration for the official congressional image; unchanged downloaded Commons thumbnail.",
+      "attribution": "U.S. House of Representatives / Wikimedia Commons",
+      "reviewedAtUtc": "2026-10-31T04:58:06Z"
     },
     {
       "sourceCandidateId": 21012,
@@ -1412,6 +1603,38 @@
       "rightsBasis": "Public-domain declaration of the pinned congressional image corpus",
       "attribution": "U.S. Congress / unitedstates/images",
       "reviewedAtUtc": "2026-10-31T04:15:50Z"
+    },
+    {
+      "sourceCandidateId": 21032,
+      "candidateName": "Hilda Solis",
+      "state": "CA",
+      "party": "D",
+      "contestId": "CA-38",
+      "chamber": "House",
+      "status": "ADMITTED",
+      "bioguideId": "S001153",
+      "matchedName": "Hilda Solis",
+      "matchMethod": "EXACT_DOCUMENTED_NAME_STATE_PARTY",
+      "matchedSourceField": "documented_name_fields",
+      "identitySourceUrl": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-historical.csv",
+      "identityRole": {
+        "chamber": "House",
+        "state": "CA",
+        "party": "Democrat",
+        "district": "32"
+      },
+      "url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/S001153.jpg",
+      "width": 225,
+      "height": 275,
+      "imageBlobSha": "d2c3352bf288d5b1665b043d5d851daa2fa2c47d",
+      "sourceUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/S001153.jpg",
+      "originalSourceUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/S001153.jpg",
+      "originalSourceName": "Congressional public-domain portrait archive",
+      "license": "Public domain",
+      "licenseUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+      "rightsBasis": "Public-domain declaration of the pinned congressional image corpus",
+      "attribution": "U.S. Congress / unitedstates/images",
+      "reviewedAtUtc": "2026-10-31T05:08:39Z"
     },
     {
       "sourceCandidateId": 21034,
@@ -3142,6 +3365,42 @@
       "reviewedAtUtc": "2026-10-31T04:15:50Z"
     },
     {
+      "sourceCandidateId": 19421,
+      "candidateName": "Clay Fuller",
+      "state": "GA",
+      "party": "R",
+      "contestId": "GA-14",
+      "chamber": "House",
+      "status": "ADMITTED",
+      "bioguideId": "F000485",
+      "matchedName": "Clay Fuller",
+      "matchMethod": "EXACT_DOCUMENTED_NAME_STATE_PARTY",
+      "matchedSourceField": "full_name",
+      "identitySourceUrl": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-current.csv",
+      "identityRole": {
+        "chamber": "House",
+        "state": "GA",
+        "party": "Republican",
+        "district": "14"
+      },
+      "url": "/assets/candidate-portraits/F000485-2c78c2fb6d822c6a.jpg",
+      "width": 330,
+      "height": 413,
+      "imageSha256": "2c78c2fb6d822c6a495fd274f9498cc0ff9b12c4170afbb5f4423c4a2b4d01cc",
+      "imageBytes": 28923,
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?oldid=1270956690",
+      "originalSourceUrl": "https://fuller.house.gov/about",
+      "originalSourceName": "Brian Thorpe",
+      "sourceOriginalImageSha1": "ea6ed8bef071be5e5d61d63cbdc434b581378be3",
+      "commonsRevisionId": 1270956690,
+      "sourceImageUploadedAt": "2026-08-31T19:08:56Z",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/w/index.php?oldid=1270956690#Licensing",
+      "rightsBasis": "Captured Commons public-domain declaration for the official congressional image; unchanged downloaded Commons thumbnail.",
+      "attribution": "Brian Thorpe / Wikimedia Commons",
+      "reviewedAtUtc": "2026-10-31T04:58:06Z"
+    },
+    {
       "sourceCandidateId": 19397,
       "candidateName": "Sanford Bishop",
       "state": "GA",
@@ -3972,6 +4231,38 @@
       "rightsBasis": "Public-domain declaration of the pinned congressional image corpus",
       "attribution": "U.S. Congress / unitedstates/images",
       "reviewedAtUtc": "2026-10-31T04:15:50Z"
+    },
+    {
+      "sourceCandidateId": 20259,
+      "candidateName": "Melissa Bean",
+      "state": "IL",
+      "party": "D",
+      "contestId": "IL-8",
+      "chamber": "House",
+      "status": "ADMITTED",
+      "bioguideId": "B001253",
+      "matchedName": "Melissa Bean",
+      "matchMethod": "EXACT_DOCUMENTED_NAME_STATE_PARTY",
+      "matchedSourceField": "documented_name_fields",
+      "identitySourceUrl": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-historical.csv",
+      "identityRole": {
+        "chamber": "House",
+        "state": "IL",
+        "party": "Democrat",
+        "district": "8"
+      },
+      "url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/B001253.jpg",
+      "width": 225,
+      "height": 275,
+      "imageBlobSha": "ac76863ede063b050427c5cb91670ae4ecad547d",
+      "sourceUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/B001253.jpg",
+      "originalSourceUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/B001253.jpg",
+      "originalSourceName": "Congressional public-domain portrait archive",
+      "license": "Public domain",
+      "licenseUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+      "rightsBasis": "Public-domain declaration of the pinned congressional image corpus",
+      "attribution": "U.S. Congress / unitedstates/images",
+      "reviewedAtUtc": "2026-10-31T05:08:39Z"
     },
     {
       "sourceCandidateId": 19303,
@@ -5350,6 +5641,42 @@
       "reviewedAtUtc": "2026-10-31T04:15:50Z"
     },
     {
+      "sourceCandidateId": 16379,
+      "candidateName": "Tom Barrett",
+      "state": "MI",
+      "party": "R",
+      "contestId": "MI-7",
+      "chamber": "House",
+      "status": "ADMITTED",
+      "bioguideId": "B001321",
+      "matchedName": "Tom Barrett",
+      "matchMethod": "EXACT_DOCUMENTED_NAME_STATE_PARTY",
+      "matchedSourceField": "full_name",
+      "identitySourceUrl": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-current.csv",
+      "identityRole": {
+        "chamber": "House",
+        "state": "MI",
+        "party": "Republican",
+        "district": "7"
+      },
+      "url": "/assets/candidate-portraits/B001321-21e5e39339820b64.jpg",
+      "width": 330,
+      "height": 412,
+      "imageSha256": "21e5e39339820b64577dd4cfe75b0b000559faddcf40d8202099a4c7dab83dd3",
+      "imageBytes": 30350,
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?oldid=1271367268",
+      "originalSourceUrl": "https://barrett.house.gov/about",
+      "originalSourceName": "Brian Thorpe",
+      "sourceOriginalImageSha1": "8a4fd9b86439f1c3de17ecc876eba746c8eb74c2",
+      "commonsRevisionId": 1271367268,
+      "sourceImageUploadedAt": "2026-08-02T02:20:26Z",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/w/index.php?oldid=1271367268#Licensing",
+      "rightsBasis": "Captured Commons public-domain declaration for the official congressional image; unchanged downloaded Commons thumbnail.",
+      "attribution": "Brian Thorpe / Wikimedia Commons",
+      "reviewedAtUtc": "2026-10-31T04:58:06Z"
+    },
+    {
       "sourceCandidateId": 16484,
       "candidateName": "Kristen McDonald Rivet",
       "state": "MI",
@@ -5636,6 +5963,42 @@
       "rightsBasis": "Public-domain declaration of the pinned congressional image corpus",
       "attribution": "U.S. Congress / unitedstates/images",
       "reviewedAtUtc": "2026-10-31T04:15:50Z"
+    },
+    {
+      "sourceCandidateId": 26304,
+      "candidateName": "Wesley Bell",
+      "state": "MO",
+      "party": "D",
+      "contestId": "MO-1",
+      "chamber": "House",
+      "status": "ADMITTED",
+      "bioguideId": "B001324",
+      "matchedName": "Wesley Bell",
+      "matchMethod": "EXACT_DOCUMENTED_NAME_STATE_PARTY",
+      "matchedSourceField": "full_name",
+      "identitySourceUrl": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-current.csv",
+      "identityRole": {
+        "chamber": "House",
+        "state": "MO",
+        "party": "Democrat",
+        "district": "1"
+      },
+      "url": "/assets/candidate-portraits/B001324-e22db29e1e9adec8.jpg",
+      "width": 330,
+      "height": 412,
+      "imageSha256": "e22db29e1e9adec810108527ebd369a162b6188656d2b787a3e3e86aa257eb99",
+      "imageBytes": 33473,
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?oldid=1271068974",
+      "originalSourceUrl": "https://bell.house.gov/sites/evo-subsites/bell.house.gov/files/evo-media-image/2025-01-07_bt_0002-1).jpg",
+      "originalSourceName": "Brian Thorpe",
+      "sourceOriginalImageSha1": "0a73b69a99333a4c2791f8a30ec27d8ce8c51848",
+      "commonsRevisionId": 1271068974,
+      "sourceImageUploadedAt": "2025-05-12T14:21:47Z",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/w/index.php?oldid=1271068974#Licensing",
+      "rightsBasis": "Captured Commons public-domain declaration for the official congressional image; unchanged downloaded Commons thumbnail.",
+      "attribution": "Brian Thorpe / Wikimedia Commons",
+      "reviewedAtUtc": "2026-10-31T04:58:06Z"
     },
     {
       "sourceCandidateId": 26306,
@@ -6596,6 +6959,42 @@
       "rightsBasis": "Public-domain declaration of the pinned congressional image corpus",
       "attribution": "U.S. Congress / unitedstates/images",
       "reviewedAtUtc": "2026-10-31T04:15:50Z"
+    },
+    {
+      "sourceCandidateId": 16304,
+      "candidateName": "Analilia Mejia",
+      "state": "NJ",
+      "party": "D",
+      "contestId": "NJ-11",
+      "chamber": "House",
+      "status": "ADMITTED",
+      "bioguideId": "M001246",
+      "matchedName": "Analilia Mejia",
+      "matchMethod": "EXACT_DOCUMENTED_NAME_STATE_PARTY",
+      "matchedSourceField": "full_name",
+      "identitySourceUrl": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-current.csv",
+      "identityRole": {
+        "chamber": "House",
+        "state": "NJ",
+        "party": "Democrat",
+        "district": "11"
+      },
+      "url": "/assets/candidate-portraits/M001246-6876bc06de68ed50.jpg",
+      "width": 330,
+      "height": 412,
+      "imageSha256": "6876bc06de68ed50a6a0ff177336a190170a7aac242f73cf394fae8f46c68cdf",
+      "imageBytes": 46318,
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?oldid=1270464497",
+      "originalSourceUrl": "https://bioguide.congress.gov/search/bio/M001246",
+      "originalSourceName": "U.S. House of Representatives",
+      "sourceOriginalImageSha1": "1a0e9b85876b09b0c072e2791d28dc5a87b4c1c5",
+      "commonsRevisionId": 1270464497,
+      "sourceImageUploadedAt": "2026-04-25T18:18:24Z",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/w/index.php?oldid=1270464497#Licensing",
+      "rightsBasis": "Captured Commons public-domain declaration for the official congressional image; unchanged downloaded Commons thumbnail.",
+      "attribution": "U.S. House of Representatives / Wikimedia Commons",
+      "reviewedAtUtc": "2026-10-31T04:58:06Z"
     },
     {
       "sourceCandidateId": 16291,
@@ -9286,6 +9685,42 @@
       "reviewedAtUtc": "2026-10-31T04:15:50Z"
     },
     {
+      "sourceCandidateId": 23158,
+      "candidateName": "Matt Van Epps",
+      "state": "TN",
+      "party": "R",
+      "contestId": "TN-7",
+      "chamber": "House",
+      "status": "ADMITTED",
+      "bioguideId": "V000139",
+      "matchedName": "Matt Van Epps",
+      "matchMethod": "EXACT_DOCUMENTED_NAME_STATE_PARTY",
+      "matchedSourceField": "full_name",
+      "identitySourceUrl": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-current.csv",
+      "identityRole": {
+        "chamber": "House",
+        "state": "TN",
+        "party": "Republican",
+        "district": "7"
+      },
+      "url": "/assets/candidate-portraits/V000139-74b98e6cd8489546.jpg",
+      "width": 330,
+      "height": 412,
+      "imageSha256": "74b98e6cd8489546470e10bfc9db8deedb640c62f942a98907a5b67ccc78a79d",
+      "imageBytes": 31279,
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?oldid=1270982301",
+      "originalSourceUrl": "https://bioguide.congress.gov/search/bio/V000139",
+      "originalSourceName": "US Congress",
+      "sourceOriginalImageSha1": "702669223b3241ab9deb3ad5fd7c5f5be5328343",
+      "commonsRevisionId": 1270982301,
+      "sourceImageUploadedAt": "2025-12-04T22:33:35Z",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/w/index.php?oldid=1270982301#Licensing",
+      "rightsBasis": "Captured Commons public-domain declaration for the official congressional image; unchanged downloaded Commons thumbnail.",
+      "attribution": "US Congress / Wikimedia Commons",
+      "reviewedAtUtc": "2026-10-31T04:58:06Z"
+    },
+    {
       "sourceCandidateId": 23160,
       "candidateName": "David Kustoff",
       "state": "TN",
@@ -9572,6 +10007,42 @@
       "rightsBasis": "Public-domain declaration of the pinned congressional image corpus",
       "attribution": "U.S. Congress / unitedstates/images",
       "reviewedAtUtc": "2026-10-31T04:15:50Z"
+    },
+    {
+      "sourceCandidateId": 18112,
+      "candidateName": "Christian Menefee",
+      "state": "TX",
+      "party": "D",
+      "contestId": "TX-18",
+      "chamber": "House",
+      "status": "ADMITTED",
+      "bioguideId": "M001245",
+      "matchedName": "Christian Menefee",
+      "matchMethod": "EXACT_DOCUMENTED_NAME_STATE_PARTY",
+      "matchedSourceField": "documented_name_fields",
+      "identitySourceUrl": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-current.csv",
+      "identityRole": {
+        "chamber": "House",
+        "state": "TX",
+        "party": "Democrat",
+        "district": "18"
+      },
+      "url": "/assets/candidate-portraits/M001245-8459d2dd3e2b8e1c.jpg",
+      "width": 330,
+      "height": 413,
+      "imageSha256": "8459d2dd3e2b8e1c777285d8ecc1843324e5198c7ef76f18d5ec758fbcb5654a",
+      "imageBytes": 30402,
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?oldid=1277722345",
+      "originalSourceUrl": "https://menefee.house.gov/about/biography",
+      "originalSourceName": "Brendan O'Hara",
+      "sourceOriginalImageSha1": "83bfc43a6a8c40d379fcc4321fff834da84769ac",
+      "commonsRevisionId": 1277722345,
+      "sourceImageUploadedAt": "2026-07-28T18:02:05Z",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/w/index.php?oldid=1277722345#Licensing",
+      "rightsBasis": "Captured Commons public-domain declaration for the official congressional image; unchanged downloaded Commons thumbnail.",
+      "attribution": "Brendan O'Hara / Wikimedia Commons",
+      "reviewedAtUtc": "2026-10-31T04:58:06Z"
     },
     {
       "sourceCandidateId": 20447,
@@ -9862,6 +10333,38 @@
       "reviewedAtUtc": "2026-10-31T04:15:50Z"
     },
     {
+      "sourceCandidateId": 20481,
+      "candidateName": "Colin Allred",
+      "state": "TX",
+      "party": "D",
+      "contestId": "TX-33",
+      "chamber": "House",
+      "status": "ADMITTED",
+      "bioguideId": "A000376",
+      "matchedName": "Colin Allred",
+      "matchMethod": "EXACT_DOCUMENTED_NAME_STATE_PARTY",
+      "matchedSourceField": "documented_name_fields",
+      "identitySourceUrl": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-historical.csv",
+      "identityRole": {
+        "chamber": "House",
+        "state": "TX",
+        "party": "Democrat",
+        "district": "32"
+      },
+      "url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/A000376.jpg",
+      "width": 225,
+      "height": 275,
+      "imageBlobSha": "6487779c82e0bc233b44be366afcf010e99cba4d",
+      "sourceUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/A000376.jpg",
+      "originalSourceUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/A000376.jpg",
+      "originalSourceName": "Congressional public-domain portrait archive",
+      "license": "Public domain",
+      "licenseUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+      "rightsBasis": "Public-domain declaration of the pinned congressional image corpus",
+      "attribution": "U.S. Congress / unitedstates/images",
+      "reviewedAtUtc": "2026-10-31T05:08:39Z"
+    },
+    {
       "sourceCandidateId": 20472,
       "candidateName": "Vicente Gonzalez",
       "state": "TX",
@@ -10086,6 +10589,38 @@
       "reviewedAtUtc": "2026-10-31T04:15:50Z"
     },
     {
+      "sourceCandidateId": 23517,
+      "candidateName": "Ben McAdams",
+      "state": "UT",
+      "party": "D",
+      "contestId": "UT-1",
+      "chamber": "House",
+      "status": "ADMITTED",
+      "bioguideId": "M001209",
+      "matchedName": "Ben McAdams",
+      "matchMethod": "EXACT_DOCUMENTED_NAME_STATE_PARTY",
+      "matchedSourceField": "full_name",
+      "identitySourceUrl": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-historical.csv",
+      "identityRole": {
+        "chamber": "House",
+        "state": "UT",
+        "party": "Democrat",
+        "district": "4"
+      },
+      "url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/M001209.jpg",
+      "width": 225,
+      "height": 275,
+      "imageBlobSha": "b418cdb5399592b9f912fd59d1c37eb91bc7c2fc",
+      "sourceUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/M001209.jpg",
+      "originalSourceUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/M001209.jpg",
+      "originalSourceName": "Congressional public-domain portrait archive",
+      "license": "Public domain",
+      "licenseUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+      "rightsBasis": "Public-domain declaration of the pinned congressional image corpus",
+      "attribution": "U.S. Congress / unitedstates/images",
+      "reviewedAtUtc": "2026-10-31T05:08:39Z"
+    },
+    {
       "sourceCandidateId": 23519,
       "candidateName": "Blake Moore",
       "state": "UT",
@@ -10246,6 +10781,42 @@
       "reviewedAtUtc": "2026-10-31T04:15:50Z"
     },
     {
+      "sourceCandidateId": 20649,
+      "candidateName": "James Walkinshaw",
+      "state": "VA",
+      "party": "D",
+      "contestId": "VA-11",
+      "chamber": "House",
+      "status": "ADMITTED",
+      "bioguideId": "W000831",
+      "matchedName": "James Walkinshaw",
+      "matchMethod": "EXACT_DOCUMENTED_NAME_STATE_PARTY",
+      "matchedSourceField": "documented_name_fields",
+      "identitySourceUrl": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-current.csv",
+      "identityRole": {
+        "chamber": "House",
+        "state": "VA",
+        "party": "Democrat",
+        "district": "11"
+      },
+      "url": "/assets/candidate-portraits/W000831-5f9002522bd9e23c.jpg",
+      "width": 330,
+      "height": 412,
+      "imageSha256": "5f9002522bd9e23ca8a9f9409884dbc529a0c42d646dc4b52a7c8fcadf32d0c2",
+      "imageBytes": 33517,
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?oldid=1177243595",
+      "originalSourceUrl": "https://bioguide.congress.gov/search/bio/W000831",
+      "originalSourceName": "US Congress",
+      "sourceOriginalImageSha1": "a49dcc440a28d81bc9fcb096fc2aaf38a89c2412",
+      "commonsRevisionId": 1177243595,
+      "sourceImageUploadedAt": "2025-09-11T19:50:49Z",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/w/index.php?oldid=1177243595#Licensing",
+      "rightsBasis": "Captured Commons public-domain declaration for the official congressional image; unchanged downloaded Commons thumbnail.",
+      "attribution": "US Congress / Wikimedia Commons",
+      "reviewedAtUtc": "2026-10-31T04:58:06Z"
+    },
+    {
       "sourceCandidateId": 20632,
       "candidateName": "Jen Kiggans",
       "state": "VA",
@@ -10276,6 +10847,38 @@
       "rightsBasis": "Public-domain declaration of the pinned congressional image corpus",
       "attribution": "U.S. Congress / unitedstates/images",
       "reviewedAtUtc": "2026-10-31T04:15:50Z"
+    },
+    {
+      "sourceCandidateId": 20631,
+      "candidateName": "Elaine Luria",
+      "state": "VA",
+      "party": "D",
+      "contestId": "VA-2",
+      "chamber": "House",
+      "status": "ADMITTED",
+      "bioguideId": "L000591",
+      "matchedName": "Elaine Luria",
+      "matchMethod": "EXACT_DOCUMENTED_NAME_STATE_PARTY",
+      "matchedSourceField": "documented_name_fields",
+      "identitySourceUrl": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-historical.csv",
+      "identityRole": {
+        "chamber": "House",
+        "state": "VA",
+        "party": "Democrat",
+        "district": "2"
+      },
+      "url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/L000591.jpg",
+      "width": 225,
+      "height": 275,
+      "imageBlobSha": "374057c1817fc2f291e8695a81e14c44ab82c44f",
+      "sourceUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/L000591.jpg",
+      "originalSourceUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/L000591.jpg",
+      "originalSourceName": "Congressional public-domain portrait archive",
+      "license": "Public domain",
+      "licenseUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+      "rightsBasis": "Public-domain declaration of the pinned congressional image corpus",
+      "attribution": "U.S. Congress / unitedstates/images",
+      "reviewedAtUtc": "2026-10-31T05:08:39Z"
     },
     {
       "sourceCandidateId": 20633,
@@ -10372,6 +10975,38 @@
       "rightsBasis": "Public-domain declaration of the pinned congressional image corpus",
       "attribution": "U.S. Congress / unitedstates/images",
       "reviewedAtUtc": "2026-10-31T04:15:50Z"
+    },
+    {
+      "sourceCandidateId": 20638,
+      "candidateName": "Tom Perriello",
+      "state": "VA",
+      "party": "D",
+      "contestId": "VA-5",
+      "chamber": "House",
+      "status": "ADMITTED",
+      "bioguideId": "P000600",
+      "matchedName": "Tom Perriello",
+      "matchMethod": "EXACT_DOCUMENTED_NAME_STATE_PARTY",
+      "matchedSourceField": "documented_wikipedia_alias",
+      "identitySourceUrl": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-historical.csv",
+      "identityRole": {
+        "chamber": "House",
+        "state": "VA",
+        "party": "Democrat",
+        "district": "5"
+      },
+      "url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/P000600.jpg",
+      "width": 225,
+      "height": 275,
+      "imageBlobSha": "8cf209d42239eefc0fac54bed9f059a012c6fcc9",
+      "sourceUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/P000600.jpg",
+      "originalSourceUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/P000600.jpg",
+      "originalSourceName": "Congressional public-domain portrait archive",
+      "license": "Public domain",
+      "licenseUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+      "rightsBasis": "Public-domain declaration of the pinned congressional image corpus",
+      "attribution": "U.S. Congress / unitedstates/images",
+      "reviewedAtUtc": "2026-10-31T05:08:39Z"
     },
     {
       "sourceCandidateId": 20639,
@@ -11078,6 +11713,38 @@
       "reviewedAtUtc": "2026-10-31T04:15:50Z"
     },
     {
+      "sourceCandidateId": 18073,
+      "candidateName": "Mary Peltola",
+      "state": "AK",
+      "party": "D",
+      "contestId": "AK",
+      "chamber": "Senate",
+      "status": "ADMITTED",
+      "bioguideId": "P000619",
+      "matchedName": "Mary Peltola",
+      "matchMethod": "EXACT_DOCUMENTED_NAME_STATE_PARTY",
+      "matchedSourceField": "documented_name_fields",
+      "identitySourceUrl": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-historical.csv",
+      "identityRole": {
+        "chamber": "House",
+        "state": "AK",
+        "party": "Democrat",
+        "district": "0"
+      },
+      "url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/P000619.jpg",
+      "width": 225,
+      "height": 275,
+      "imageBlobSha": "337dea6820046970f882b3cbdd04cf03c3fc2e8e",
+      "sourceUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/P000619.jpg",
+      "originalSourceUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/P000619.jpg",
+      "originalSourceName": "Congressional public-domain portrait archive",
+      "license": "Public domain",
+      "licenseUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+      "rightsBasis": "Public-domain declaration of the pinned congressional image corpus",
+      "attribution": "U.S. Congress / unitedstates/images",
+      "reviewedAtUtc": "2026-10-31T04:58:06Z"
+    },
+    {
       "sourceCandidateId": 18074,
       "candidateName": "Dan Sullivan",
       "state": "AK",
@@ -11558,6 +12225,38 @@
       "reviewedAtUtc": "2026-10-31T04:15:50Z"
     },
     {
+      "sourceCandidateId": 15061,
+      "candidateName": "Mike Rogers",
+      "state": "MI",
+      "party": "R",
+      "contestId": "MI",
+      "chamber": "Senate",
+      "status": "ADMITTED",
+      "bioguideId": "R000572",
+      "matchedName": "Mike Rogers",
+      "matchMethod": "EXACT_DOCUMENTED_NAME_STATE_PARTY",
+      "matchedSourceField": "full_name",
+      "identitySourceUrl": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-historical.csv",
+      "identityRole": {
+        "chamber": "House",
+        "state": "MI",
+        "party": "Republican",
+        "district": "8"
+      },
+      "url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/R000572.jpg",
+      "width": 225,
+      "height": 275,
+      "imageBlobSha": "7662e562d4de67cfe95ee064adfc1ab4cd7011ea",
+      "sourceUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/R000572.jpg",
+      "originalSourceUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/R000572.jpg",
+      "originalSourceName": "Congressional public-domain portrait archive",
+      "license": "Public domain",
+      "licenseUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+      "rightsBasis": "Public-domain declaration of the pinned congressional image corpus",
+      "attribution": "U.S. Congress / unitedstates/images",
+      "reviewedAtUtc": "2026-10-31T04:58:06Z"
+    },
+    {
       "sourceCandidateId": 20368,
       "candidateName": "Cindy Hyde-Smith",
       "state": "MS",
@@ -11654,6 +12353,38 @@
       "reviewedAtUtc": "2026-10-31T04:15:50Z"
     },
     {
+      "sourceCandidateId": 18090,
+      "candidateName": "John Sununu",
+      "state": "NH",
+      "party": "R",
+      "contestId": "NH",
+      "chamber": "Senate",
+      "status": "ADMITTED",
+      "bioguideId": "S001078",
+      "matchedName": "John Sununu",
+      "matchMethod": "EXACT_DOCUMENTED_NAME_STATE_PARTY",
+      "matchedSourceField": "documented_name_fields",
+      "identitySourceUrl": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-historical.csv",
+      "identityRole": {
+        "chamber": "Senate",
+        "state": "NH",
+        "party": "Republican",
+        "district": ""
+      },
+      "url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/S001078.jpg",
+      "width": 225,
+      "height": 275,
+      "imageBlobSha": "5dba7b4df5f2b2b3287990af7ea0a7e4f18586c2",
+      "sourceUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/S001078.jpg",
+      "originalSourceUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/S001078.jpg",
+      "originalSourceName": "Congressional public-domain portrait archive",
+      "license": "Public domain",
+      "licenseUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+      "rightsBasis": "Public-domain declaration of the pinned congressional image corpus",
+      "attribution": "U.S. Congress / unitedstates/images",
+      "reviewedAtUtc": "2026-10-31T04:58:06Z"
+    },
+    {
       "sourceCandidateId": 16323,
       "candidateName": "Cory Booker",
       "state": "NJ",
@@ -11716,6 +12447,74 @@
       "rightsBasis": "Public-domain declaration of the pinned congressional image corpus",
       "attribution": "U.S. Congress / unitedstates/images",
       "reviewedAtUtc": "2026-10-31T04:15:50Z"
+    },
+    {
+      "sourceCandidateId": 15041,
+      "candidateName": "Sherrod Brown",
+      "state": "OH",
+      "party": "D",
+      "contestId": "OH-special",
+      "chamber": "Senate",
+      "status": "ADMITTED",
+      "bioguideId": "B000944",
+      "matchedName": "Sherrod Brown",
+      "matchMethod": "EXACT_DOCUMENTED_NAME_STATE_PARTY",
+      "matchedSourceField": "full_name",
+      "identitySourceUrl": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-historical.csv",
+      "identityRole": {
+        "chamber": "Senate",
+        "state": "OH",
+        "party": "Democrat",
+        "district": ""
+      },
+      "url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/B000944.jpg",
+      "width": 225,
+      "height": 275,
+      "imageBlobSha": "241dc6be608ab3281df36d83341f1b79396c215c",
+      "sourceUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/B000944.jpg",
+      "originalSourceUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/B000944.jpg",
+      "originalSourceName": "Congressional public-domain portrait archive",
+      "license": "Public domain",
+      "licenseUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+      "rightsBasis": "Public-domain declaration of the pinned congressional image corpus",
+      "attribution": "U.S. Congress / unitedstates/images",
+      "reviewedAtUtc": "2026-10-31T04:58:06Z"
+    },
+    {
+      "sourceCandidateId": 15040,
+      "candidateName": "Jon Husted",
+      "state": "OH",
+      "party": "R",
+      "contestId": "OH-special",
+      "chamber": "Senate",
+      "status": "ADMITTED",
+      "bioguideId": "H001104",
+      "matchedName": "Jon Husted",
+      "matchMethod": "EXACT_DOCUMENTED_NAME_STATE_PARTY",
+      "matchedSourceField": "full_name",
+      "identitySourceUrl": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-current.csv",
+      "identityRole": {
+        "chamber": "Senate",
+        "state": "OH",
+        "party": "Republican",
+        "district": ""
+      },
+      "url": "/assets/candidate-portraits/H001104-368acad342b0ee60.jpg",
+      "width": 330,
+      "height": 412,
+      "imageSha256": "368acad342b0ee60ad9cfeea32e5bad7c800766e64b0fd16edf0fac8757a6327",
+      "imageBytes": 30017,
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?oldid=1282126047",
+      "originalSourceUrl": "https://www.husted.senate.gov/about/",
+      "originalSourceName": "United States Senate",
+      "sourceOriginalImageSha1": "5c04afc64a70b25b9ef64ee3c98947fc5541b103",
+      "commonsRevisionId": 1282126047,
+      "sourceImageUploadedAt": "2025-03-31T22:39:02Z",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/w/index.php?oldid=1282126047#Licensing",
+      "rightsBasis": "Captured Commons public-domain declaration for the official congressional image; unchanged downloaded Commons thumbnail.",
+      "attribution": "United States Senate / Wikimedia Commons",
+      "reviewedAtUtc": "2026-10-31T04:58:06Z"
     },
     {
       "sourceCandidateId": 20114,
@@ -11812,6 +12611,42 @@
       "rightsBasis": "Public-domain declaration of the pinned congressional image corpus",
       "attribution": "U.S. Congress / unitedstates/images",
       "reviewedAtUtc": "2026-10-31T04:15:50Z"
+    },
+    {
+      "sourceCandidateId": 17298,
+      "candidateName": "Darline Graham",
+      "state": "SC",
+      "party": "R",
+      "contestId": "SC",
+      "chamber": "Senate",
+      "status": "ADMITTED",
+      "bioguideId": "G000608",
+      "matchedName": "Darline Graham",
+      "matchMethod": "EXACT_DOCUMENTED_NAME_STATE_PARTY",
+      "matchedSourceField": "full_name",
+      "identitySourceUrl": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-current.csv",
+      "identityRole": {
+        "chamber": "Senate",
+        "state": "SC",
+        "party": "Republican",
+        "district": ""
+      },
+      "url": "/assets/candidate-portraits/G000608-2f48d5b1e84a8853.jpg",
+      "width": 330,
+      "height": 486,
+      "imageSha256": "2f48d5b1e84a88537311e9cceaa9c99d4ddd7679781514c26e09ea29d1a3bc51",
+      "imageBytes": 30831,
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?oldid=1273254808",
+      "originalSourceUrl": "https://www.dgraham.senate.gov/",
+      "originalSourceName": "Rosa Pineda, United States Senate",
+      "sourceOriginalImageSha1": "3ba44b267757d6cb37fe55df1d7287537381feb0",
+      "commonsRevisionId": 1273254808,
+      "sourceImageUploadedAt": "2026-09-04T12:21:13Z",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/w/index.php?oldid=1273254808#Licensing",
+      "rightsBasis": "Captured Commons public-domain declaration for the official congressional image; unchanged downloaded Commons thumbnail.",
+      "attribution": "Rosa Pineda, United States Senate / Wikimedia Commons",
+      "reviewedAtUtc": "2026-10-31T04:58:06Z"
     },
     {
       "sourceCandidateId": 19056,
@@ -11976,16 +12811,6 @@
   ],
   "unresolved": [
     {
-      "sourceCandidateId": 15073,
-      "candidateName": "Nick Begich",
-      "state": "AK",
-      "party": "R",
-      "contestId": "AK-AL",
-      "chamber": "House",
-      "bioguideId": "B001323",
-      "reason": "NO_REVIEWED_IMAGE"
-    },
-    {
       "sourceCandidateId": 18487,
       "candidateName": "Eric Hafner",
       "state": "AK",
@@ -12009,15 +12834,6 @@
       "state": "AK",
       "party": "L",
       "contestId": "AK-AL",
-      "chamber": "House",
-      "reason": "IDENTITY_NOT_VERIFIED"
-    },
-    {
-      "sourceCandidateId": 16068,
-      "candidateName": "Jerry Carl",
-      "state": "AL",
-      "party": "R",
-      "contestId": "AL-1",
       "chamber": "House",
       "reason": "IDENTITY_NOT_VERIFIED"
     },
@@ -12202,16 +13018,6 @@
       "reason": "IDENTITY_NOT_VERIFIED"
     },
     {
-      "sourceCandidateId": 26445,
-      "candidateName": "Adelita Grijalva",
-      "state": "AZ",
-      "party": "D",
-      "contestId": "AZ-7",
-      "chamber": "House",
-      "bioguideId": "G000606",
-      "reason": "NO_REVIEWED_IMAGE"
-    },
-    {
       "sourceCandidateId": 26447,
       "candidateName": "Bernadette Greene-Placentia",
       "state": "AZ",
@@ -12228,16 +13034,6 @@
       "contestId": "AZ-9",
       "chamber": "House",
       "reason": "IDENTITY_NOT_VERIFIED"
-    },
-    {
-      "sourceCandidateId": 21000,
-      "candidateName": "James Gallagher",
-      "state": "CA",
-      "party": "R",
-      "contestId": "CA-1",
-      "chamber": "House",
-      "bioguideId": "G000607",
-      "reason": "NO_REVIEWED_IMAGE"
     },
     {
       "sourceCandidateId": 21001,
@@ -12301,16 +13097,6 @@
       "contestId": "CA-14",
       "chamber": "House",
       "reason": "IDENTITY_NOT_VERIFIED"
-    },
-    {
-      "sourceCandidateId": 21140,
-      "candidateName": "Aisha Wahab",
-      "state": "CA",
-      "party": "D",
-      "contestId": "CA-14",
-      "chamber": "House",
-      "bioguideId": "W000832",
-      "reason": "NO_REVIEWED_IMAGE"
     },
     {
       "sourceCandidateId": 21013,
@@ -12551,15 +13337,6 @@
       "candidateName": "Pedro Casas",
       "state": "CA",
       "party": "R",
-      "contestId": "CA-38",
-      "chamber": "House",
-      "reason": "IDENTITY_NOT_VERIFIED"
-    },
-    {
-      "sourceCandidateId": 21032,
-      "candidateName": "Hilda Solis",
-      "state": "CA",
-      "party": "D",
       "contestId": "CA-38",
       "chamber": "House",
       "reason": "IDENTITY_NOT_VERIFIED"
@@ -13276,16 +14053,6 @@
       "reason": "IDENTITY_NOT_VERIFIED"
     },
     {
-      "sourceCandidateId": 19421,
-      "candidateName": "Clay Fuller",
-      "state": "GA",
-      "party": "R",
-      "contestId": "GA-14",
-      "chamber": "House",
-      "bioguideId": "F000485",
-      "reason": "NO_REVIEWED_IMAGE"
-    },
-    {
       "sourceCandidateId": 19422,
       "candidateName": "Shawn Harris",
       "state": "GA",
@@ -13615,15 +14382,6 @@
       "state": "IL",
       "party": "R",
       "contestId": "IL-7",
-      "chamber": "House",
-      "reason": "IDENTITY_NOT_VERIFIED"
-    },
-    {
-      "sourceCandidateId": 20259,
-      "candidateName": "Melissa Bean",
-      "state": "IL",
-      "party": "D",
-      "contestId": "IL-8",
       "chamber": "House",
       "reason": "IDENTITY_NOT_VERIFIED"
     },
@@ -14213,16 +14971,6 @@
       "reason": "IDENTITY_NOT_VERIFIED"
     },
     {
-      "sourceCandidateId": 16379,
-      "candidateName": "Tom Barrett",
-      "state": "MI",
-      "party": "R",
-      "contestId": "MI-7",
-      "chamber": "House",
-      "bioguideId": "B001321",
-      "reason": "NO_REVIEWED_IMAGE"
-    },
-    {
       "sourceCandidateId": 16268,
       "candidateName": "William Lawrence",
       "state": "MI",
@@ -14329,16 +15077,6 @@
       "contestId": "MN-8",
       "chamber": "House",
       "reason": "IDENTITY_NOT_VERIFIED"
-    },
-    {
-      "sourceCandidateId": 26304,
-      "candidateName": "Wesley Bell",
-      "state": "MO",
-      "party": "D",
-      "contestId": "MO-1",
-      "chamber": "House",
-      "bioguideId": "B001324",
-      "reason": "NO_REVIEWED_IMAGE"
     },
     {
       "sourceCandidateId": 26305,
@@ -14717,16 +15455,6 @@
       "contestId": "NJ-11",
       "chamber": "House",
       "reason": "IDENTITY_NOT_VERIFIED"
-    },
-    {
-      "sourceCandidateId": 16304,
-      "candidateName": "Analilia Mejia",
-      "state": "NJ",
-      "party": "D",
-      "contestId": "NJ-11",
-      "chamber": "House",
-      "bioguideId": "M001246",
-      "reason": "NO_REVIEWED_IMAGE"
     },
     {
       "sourceCandidateId": 16306,
@@ -15800,16 +16528,6 @@
       "reason": "IDENTITY_NOT_VERIFIED"
     },
     {
-      "sourceCandidateId": 23158,
-      "candidateName": "Matt Van Epps",
-      "state": "TN",
-      "party": "R",
-      "contestId": "TN-7",
-      "chamber": "House",
-      "bioguideId": "V000139",
-      "reason": "NO_REVIEWED_IMAGE"
-    },
-    {
       "sourceCandidateId": 23159,
       "candidateName": "Heidi Kuhn",
       "state": "TN",
@@ -15925,16 +16643,6 @@
       "contestId": "TX-17",
       "chamber": "House",
       "reason": "IDENTITY_NOT_VERIFIED"
-    },
-    {
-      "sourceCandidateId": 18112,
-      "candidateName": "Christian Menefee",
-      "state": "TX",
-      "party": "D",
-      "contestId": "TX-18",
-      "chamber": "House",
-      "bioguideId": "M001245",
-      "reason": "NO_REVIEWED_IMAGE"
     },
     {
       "sourceCandidateId": 20444,
@@ -16153,15 +16861,6 @@
       "reason": "IDENTITY_NOT_VERIFIED"
     },
     {
-      "sourceCandidateId": 20481,
-      "candidateName": "Colin Allred",
-      "state": "TX",
-      "party": "D",
-      "contestId": "TX-33",
-      "chamber": "House",
-      "reason": "IDENTITY_NOT_VERIFIED"
-    },
-    {
       "sourceCandidateId": 20480,
       "candidateName": "Patrick Gillespie",
       "state": "TX",
@@ -16306,15 +17005,6 @@
       "reason": "IDENTITY_NOT_VERIFIED"
     },
     {
-      "sourceCandidateId": 23517,
-      "candidateName": "Ben McAdams",
-      "state": "UT",
-      "party": "D",
-      "contestId": "UT-1",
-      "chamber": "House",
-      "reason": "IDENTITY_NOT_VERIFIED"
-    },
-    {
       "sourceCandidateId": 23518,
       "candidateName": "Riley Owen",
       "state": "UT",
@@ -16378,25 +17068,6 @@
       "reason": "IDENTITY_NOT_VERIFIED"
     },
     {
-      "sourceCandidateId": 20649,
-      "candidateName": "James Walkinshaw",
-      "state": "VA",
-      "party": "D",
-      "contestId": "VA-11",
-      "chamber": "House",
-      "bioguideId": "W000831",
-      "reason": "NO_REVIEWED_IMAGE"
-    },
-    {
-      "sourceCandidateId": 20631,
-      "candidateName": "Elaine Luria",
-      "state": "VA",
-      "party": "D",
-      "contestId": "VA-2",
-      "chamber": "House",
-      "reason": "IDENTITY_NOT_VERIFIED"
-    },
-    {
       "sourceCandidateId": 20634,
       "candidateName": "Edwin Rivera",
       "state": "VA",
@@ -16411,15 +17082,6 @@
       "state": "VA",
       "party": "R",
       "contestId": "VA-4",
-      "chamber": "House",
-      "reason": "IDENTITY_NOT_VERIFIED"
-    },
-    {
-      "sourceCandidateId": 20638,
-      "candidateName": "Tom Perriello",
-      "state": "VA",
-      "party": "D",
-      "contestId": "VA-5",
       "chamber": "House",
       "reason": "IDENTITY_NOT_VERIFIED"
     },
@@ -16703,15 +17365,6 @@
       "reason": "IDENTITY_NOT_VERIFIED"
     },
     {
-      "sourceCandidateId": 18073,
-      "candidateName": "Mary Peltola",
-      "state": "AK",
-      "party": "D",
-      "contestId": "AK",
-      "chamber": "Senate",
-      "reason": "IDENTITY_NOT_VERIFIED"
-    },
-    {
       "sourceCandidateId": 18292,
       "candidateName": "Everett Wess",
       "state": "AL",
@@ -16847,15 +17500,6 @@
       "reason": "IDENTITY_NOT_VERIFIED"
     },
     {
-      "sourceCandidateId": 15061,
-      "candidateName": "Mike Rogers",
-      "state": "MI",
-      "party": "R",
-      "contestId": "MI",
-      "chamber": "Senate",
-      "reason": "IDENTITY_NOT_VERIFIED"
-    },
-    {
       "sourceCandidateId": 18352,
       "candidateName": "Peggy Flanagan",
       "state": "MN",
@@ -16937,15 +17581,6 @@
       "reason": "IDENTITY_NOT_VERIFIED"
     },
     {
-      "sourceCandidateId": 18090,
-      "candidateName": "John Sununu",
-      "state": "NH",
-      "party": "R",
-      "contestId": "NH",
-      "chamber": "Senate",
-      "reason": "IDENTITY_NOT_VERIFIED"
-    },
-    {
       "sourceCandidateId": 16324,
       "candidateName": "Justin Murphy",
       "state": "NJ",
@@ -16962,25 +17597,6 @@
       "contestId": "NM",
       "chamber": "Senate",
       "reason": "IDENTITY_NOT_VERIFIED"
-    },
-    {
-      "sourceCandidateId": 15041,
-      "candidateName": "Sherrod Brown",
-      "state": "OH",
-      "party": "D",
-      "contestId": "OH-special",
-      "chamber": "Senate",
-      "reason": "IDENTITY_NOT_VERIFIED"
-    },
-    {
-      "sourceCandidateId": 15040,
-      "candidateName": "Jon Husted",
-      "state": "OH",
-      "party": "R",
-      "contestId": "OH-special",
-      "chamber": "Senate",
-      "bioguideId": "H001104",
-      "reason": "NO_REVIEWED_IMAGE"
     },
     {
       "sourceCandidateId": 22013,
@@ -17017,16 +17633,6 @@
       "contestId": "SC",
       "chamber": "Senate",
       "reason": "IDENTITY_NOT_VERIFIED"
-    },
-    {
-      "sourceCandidateId": 17298,
-      "candidateName": "Darline Graham",
-      "state": "SC",
-      "party": "R",
-      "contestId": "SC",
-      "chamber": "Senate",
-      "bioguideId": "G000608",
-      "reason": "NO_REVIEWED_IMAGE"
     },
     {
       "sourceCandidateId": 29056,
@@ -17092,5 +17698,7 @@
       "reason": "IDENTITY_NOT_VERIFIED"
     }
   ],
-  "sourceCatalogSha256": "ba52f968f672bb2c7d8177d5b69f2fb32f1c8d515dcf09e60bb02db0b912edd1"
+  "supplementalSourceCatalog": "research/candidate-portraits/supplemental-sources-2026-10-31.json",
+  "sourceCatalogSha256": "ba52f968f672bb2c7d8177d5b69f2fb32f1c8d515dcf09e60bb02db0b912edd1",
+  "supplementalSourceCatalogSha256": "a66fd3ffd62a50eb8c52d0e2b96318a7501bb3d719431e671621303fde7d2a94"
 }

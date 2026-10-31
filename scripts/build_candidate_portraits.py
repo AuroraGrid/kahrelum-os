@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rebuild candidate portraits from a captured, pinned public-domain source catalog.
+"""Rebuild candidate portraits from captured public-domain source catalogs.
 
 No live requests and no fuzzy name matching. Refresh the reviewed source catalog
 before importing a newer congressional identity or image edition.
@@ -16,6 +16,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_CATALOG = ROOT / "research/candidate-portraits/congressional-sources-2026-10-31.json"
+DEFAULT_SUPPLEMENT = ROOT / "research/candidate-portraits/supplemental-sources-2026-10-31.json"
 PARTIES = {"Democrat": "D", "Republican": "R", "Independent": "I", "Libertarian": "L"}
 
 
@@ -76,7 +77,80 @@ def identity_matches(candidate: dict, people: list[dict]) -> list[tuple[dict, di
     return matches
 
 
-def build_ledger(current: dict, catalog: dict, reviewed_at: str) -> dict:
+def reviewed_supplement(supplement: dict, catalog: dict) -> tuple[list[dict], list[dict], dict]:
+    """Validate captured additions without replacing any previously admitted photo.
+
+    Former members use the same pinned congressional identity corpus. Local
+    photographs require the captured Commons revision, an explicit federal
+    public-domain declaration, official source, and exact downloaded bytes.
+    """
+    if supplement.get("schema") != "KAHRELUM_SUPPLEMENTAL_CANDIDATE_PORTRAIT_SOURCES_v1.0":
+        raise ValueError("Unknown supplemental portrait catalog schema")
+    for source in supplement["identitySources"].values():
+        expected = f"https://raw.githubusercontent.com/{source['repository']}/{source['commit']}/{source['path']}"
+        if (source["repository"] != catalog["identitySource"]["repository"]
+                or source["commit"] != catalog["identitySource"]["commit"]
+                or source["path"] != "legislators-historical.csv" or source["url"] != expected):
+            raise ValueError("Supplemental identities must use the pinned historical congressional source")
+    people = supplement["people"]
+    for person in people:
+        if person.get("identitySourceKey") not in supplement["identitySources"]:
+            raise ValueError("Missing supplemental identity source")
+        if person.get("reviewedAtUtc") and not re.fullmatch(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z", person["reviewedAtUtc"]):
+            raise ValueError("Supplemental identity review timestamp must be UTC")
+    metadata_path = supplement["commonsMetadataFile"]
+    if metadata_path != "research/candidate-portraits/commons-metadata-2026-10-31.json":
+        raise ValueError("Unexpected Commons evidence path")
+    raw_metadata = (ROOT / metadata_path).read_bytes()
+    if hashlib.sha256(raw_metadata).hexdigest() != supplement["commonsMetadataSha256"]:
+        raise ValueError("Commons evidence digest does not match")
+    captured = json.loads(raw_metadata)
+    pages = {page["title"]: page for page in captured["response"]["query"]["pages"].values()}
+    commons_images = {}
+    for photo in supplement["commonsImages"]:
+        bioguide_id = photo["bioguideId"]
+        digest = photo["imageSha256"]
+        expected_path = f"assets/candidate-portraits/{bioguide_id}-{digest[:16]}.jpg"
+        if (not re.fullmatch(r"[A-Z]\d{6}", bioguide_id)
+                or not re.fullmatch(r"[a-f0-9]{64}", digest)
+                or photo["path"] != expected_path):
+            raise ValueError("Invalid local portrait path or digest")
+        image_bytes = (ROOT / photo["path"]).read_bytes()
+        if (hashlib.sha256(image_bytes).hexdigest() != digest
+                or len(image_bytes) != photo["bytes"] or not image_bytes.startswith(b"\xff\xd8\xff")):
+            raise ValueError("Local portrait bytes do not match the reviewed image")
+        if not (0 < photo["width"] <= 1024 and 0 < photo["height"] <= 2048):
+            raise ValueError("Invalid local portrait dimensions")
+        page = pages.get(photo["commonsTitle"])
+        if page is None:
+            raise ValueError("Local photo has no captured Commons evidence")
+        info = page["imageinfo"][0]
+        rights = info["extmetadata"]
+        if (photo["license"] != "Public domain" or photo.get("copyrighted") is not False
+                or rights["LicenseShortName"]["value"] != "Public domain"
+                or rights["Copyrighted"]["value"] != "False"
+                or not set(photo["licenseCategories"]).intersection({"PD US Congress", "PD US Government"})
+                or not set(photo["licenseCategories"]).issubset(set(rights["Categories"]["value"].split("|")))):
+            raise ValueError("Missing per-image federal public-domain declaration")
+        revision_url = f"https://commons.wikimedia.org/w/index.php?oldid={page['revisions'][0]['revid']}"
+        if (photo["commonsRevisionId"] != page["revisions"][0]["revid"]
+                or photo["sourceRevisionUrl"] != revision_url
+                or photo["licenseUrl"] != revision_url + "#Licensing"
+                or photo["sourceOriginalImageSha1"] != info["sha1"]
+                or photo["sourceThumbnailUrl"] != info["thumburl"]
+                or photo["sourceUrl"] != info["descriptionurl"]):
+            raise ValueError("Local portrait provenance differs from captured evidence")
+        if (not re.match(r"https://(?:[\w-]+\.)*(?:house|senate|congress)\.gov/", photo["originalSourceUrl"])
+                or photo["originalSourceUrl"] not in rights["Credit"]["value"]
+                or not photo["attribution"]):
+            raise ValueError("Official image origin and attribution are required")
+        if bioguide_id in commons_images:
+            raise ValueError("Duplicate supplemental portrait identities")
+        commons_images[bioguide_id] = photo
+    return people, supplement["archiveImages"], commons_images
+
+
+def build_ledger(current: dict, catalog: dict, reviewed_at: str, supplement: dict | None = None) -> dict:
     if catalog.get("schema") != "KAHRELUM_CONGRESSIONAL_PORTRAIT_SOURCES_v1.0":
         raise ValueError("Unknown portrait source catalog schema")
     photo_source = catalog["photoSource"]
@@ -87,12 +161,19 @@ def build_ledger(current: dict, catalog: dict, reviewed_at: str) -> dict:
             raise ValueError("Source editions must be pinned commits")
     if not re.fullmatch(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z", reviewed_at):
         raise ValueError("Review timestamp must be UTC")
-    images = {image["bioguideId"]: image for image in catalog["images"]}
-    if len(images) != len(catalog["images"]):
+    additional_people, additional_images, commons_images = reviewed_supplement(supplement, catalog) if supplement else ([], [], {})
+    all_images = catalog["images"] + additional_images
+    images = {image["bioguideId"]: image for image in all_images}
+    if len(images) != len(all_images) or images.keys() & commons_images.keys():
         raise ValueError("Duplicate Bioguide image identities")
-    people = catalog["people"]
+    people = catalog["people"] + additional_people
     if len({person["bioguide_id"] for person in people}) != len(people):
         raise ValueError("Duplicate Bioguide identity records")
+    people_by_id = {person["bioguide_id"]: person for person in people}
+    for bioguide_id, photo in commons_images.items():
+        person = people_by_id.get(bioguide_id)
+        if person is None or normalize_name(photo["bioguideName"]) not in documented_names(person):
+            raise ValueError("Supplemental image identity is not documented in the pinned crosswalk")
     candidates = candidate_rows(current)
     ids = [str(candidate["sourceCandidateId"]) for candidate in candidates]
     if len(set(ids)) != len(ids):
@@ -111,6 +192,27 @@ def build_ledger(current: dict, catalog: dict, reviewed_at: str) -> dict:
         identity_count += 1
         bioguide_id = person["bioguide_id"]
         image = images.get(bioguide_id)
+        local_image = commons_images.get(bioguide_id)
+        identity_source = (supplement["identitySources"][person["identitySourceKey"]]
+                           if person.get("identitySourceKey") else catalog["identitySource"])
+        if local_image:
+            records.append({
+                **binding,
+                "status": "ADMITTED", "bioguideId": bioguide_id,
+                "matchedName": alias["name"], "matchMethod": "EXACT_DOCUMENTED_NAME_STATE_PARTY",
+                "matchedSourceField": alias["sourceField"], "identitySourceUrl": identity_source["url"],
+                "identityRole": {"chamber": "House" if person["type"] == "rep" else "Senate", "state": person["state"], "party": person["party"], "district": person["district"]},
+                "url": "/" + local_image["path"], "width": local_image["width"], "height": local_image["height"],
+                "imageSha256": local_image["imageSha256"], "imageBytes": local_image["bytes"],
+                "sourceUrl": local_image["sourceRevisionUrl"],
+                "originalSourceUrl": local_image["originalSourceUrl"], "originalSourceName": local_image["originalSourceName"],
+                "sourceOriginalImageSha1": local_image["sourceOriginalImageSha1"],
+                "commonsRevisionId": local_image["commonsRevisionId"], "sourceImageUploadedAt": local_image["sourceImageUploadedAt"],
+                "license": local_image["license"], "licenseUrl": local_image["licenseUrl"],
+                "rightsBasis": local_image["rightsBasis"], "attribution": local_image["attribution"],
+                "reviewedAtUtc": supplement["retrievedAtUtc"],
+            })
+            continue
         if image is None:
             unresolved.append({**binding, "bioguideId": bioguide_id, "reason": "NO_REVIEWED_IMAGE"})
             continue
@@ -123,7 +225,7 @@ def build_ledger(current: dict, catalog: dict, reviewed_at: str) -> dict:
             "matchedName": alias["name"],
             "matchMethod": "EXACT_DOCUMENTED_NAME_STATE_PARTY",
             "matchedSourceField": alias["sourceField"],
-            "identitySourceUrl": catalog["identitySource"]["url"],
+            "identitySourceUrl": identity_source["url"],
             "identityRole": {"chamber": "House" if person["type"] == "rep" else "Senate", "state": person["state"], "party": person["party"], "district": person["district"]},
             "url": f"{image_base}/{image['path']}",
             "width": image["width"], "height": image["height"],
@@ -135,7 +237,7 @@ def build_ledger(current: dict, catalog: dict, reviewed_at: str) -> dict:
             "licenseUrl": photo_source["licenseUrl"],
             "rightsBasis": "Public-domain declaration of the pinned congressional image corpus",
             "attribution": "U.S. Congress / unitedstates/images",
-            "reviewedAtUtc": reviewed_at,
+            "reviewedAtUtc": (person.get("reviewedAtUtc", supplement["retrievedAtUtc"]) if person.get("identitySourceKey") else catalog["retrievedAtUtc"]) if supplement else reviewed_at,
         })
     coverage = {
         "sourceListedCandidateRecords": len(candidates),
@@ -147,7 +249,7 @@ def build_ledger(current: dict, catalog: dict, reviewed_at: str) -> dict:
         "candidateCardsWithoutPortraits": len(unresolved),
         "unresolvedReasons": dict(sorted(Counter(row["reason"] for row in unresolved).items())),
     }
-    return {
+    result = {
         "schema": "KAHRELUM_CANDIDATE_PORTRAITS_v1.0",
         "status": "PARTIAL_VERIFIED_COVERAGE" if unresolved else "VERIFIED_COVERAGE",
         "updatedAtUtc": reviewed_at,
@@ -158,19 +260,29 @@ def build_ledger(current: dict, catalog: dict, reviewed_at: str) -> dict:
         "records": records,
         "unresolved": unresolved,
     }
+    if supplement:
+        result["admissionRule"] += " Reviewed supplements may add exact identities from the same pinned historical CSV and official public-domain images captured from Wikimedia Commons; local image bytes and source revisions are verified before admission. Existing photos are never replaced by a supplement."
+        result["supplementalSourceCatalog"] = "research/candidate-portraits/supplemental-sources-2026-10-31.json"
+        result["sources"]["additionalIdentities"] = supplement["identitySources"]
+        result["sources"]["additionalPhotos"] = {"provider": "Wikimedia Commons", "metadataFile": supplement["commonsMetadataFile"], "metadataSha256": supplement["commonsMetadataSha256"], "capturedAtUtc": supplement["retrievedAtUtc"], "localImages": len(commons_images)}
+    return result
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--catalog", type=Path, default=DEFAULT_CATALOG)
+    parser.add_argument("--supplement", type=Path, default=DEFAULT_SUPPLEMENT)
     parser.add_argument("--current", type=Path, default=ROOT / "election/current-projections.json")
     parser.add_argument("--output", type=Path, default=ROOT / "election/candidate-portraits.json")
     parser.add_argument("--reviewed-at", help="UTC review timestamp; defaults to the captured catalog timestamp")
     parser.add_argument("--check", action="store_true", help="Verify the checked-in ledger is reproducible without writing")
     args = parser.parse_args()
     catalog = json.loads(args.catalog.read_text())
-    ledger = build_ledger(json.loads(args.current.read_text()), catalog, args.reviewed_at or catalog["retrievedAtUtc"])
+    supplement = json.loads(args.supplement.read_text())
+    reviewed_at = args.reviewed_at or max(catalog["retrievedAtUtc"], supplement["retrievedAtUtc"], supplement.get("updatedAtUtc", supplement["retrievedAtUtc"]))
+    ledger = build_ledger(json.loads(args.current.read_text()), catalog, reviewed_at, supplement)
     ledger["sourceCatalogSha256"] = hashlib.sha256(args.catalog.read_bytes()).hexdigest()
+    ledger["supplementalSourceCatalogSha256"] = hashlib.sha256(args.supplement.read_bytes()).hexdigest()
     rendered = json.dumps(ledger, indent=2, ensure_ascii=False) + "\n"
     if args.check:
         if not args.output.exists() or args.output.read_text() != rendered:

@@ -1,9 +1,83 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f4efe6">
-<title>NBA Intelligence Module | KAHRELUM Sports</title><meta name="description" content="KAHRELUM NBA intelligence expansion module. Template only; no operational sources, records or forecasts are published.">
-<link rel="canonical" href="https://kahrelum.com/sports/nba"><meta property="og:type" content="website"><meta property="og:url" content="https://kahrelum.com/sports/nba"><meta property="og:title" content="NBA Intelligence Module | KAHRELUM Sports"><meta property="og:description" content="KAHRELUM NBA intelligence expansion module. Template only; no operational sources, records or forecasts are published."><meta property="og:image" content="https://kahrelum.com/assets/social/og-sports-nba.png"><meta property="og:image:secure_url" content="https://kahrelum.com/assets/social/og-sports-nba.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="NBA Intelligence Module — KAHRELUM social preview"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="NBA Intelligence Module | KAHRELUM Sports"><meta name="twitter:description" content="KAHRELUM NBA intelligence expansion module. Template only; no operational sources, records or forecasts are published."><meta name="twitter:image" content="https://kahrelum.com/assets/social/og-sports-nba.png"><meta name="twitter:image:alt" content="NBA Intelligence Module — KAHRELUM social preview"><link rel="stylesheet" href="/sports-desk.css"></head>
-<body><div class="desk-shell"><header><div><a class="brand" href="/">KAHRELUM</a><div class="desk-code">Sports Intelligence / NBA</div></div><nav aria-label="Sports desks"><a href="/sports">All desks</a><a href="/nfl/trades">NFL</a><a href="/nfl/film-room">Film</a><a href="/sports/nba" aria-current="page">NBA</a><a href="/sports/mlb">MLB</a><a href="/sports/nhl">NHL</a></nav></header>
-<div class="ops-strip"><div class="ops-cell"><span>Module</span><b>NBA-TRADE</b></div><div class="ops-cell"><span>Status</span><b class="standby">TEMPLATE ONLY</b></div><div class="ops-cell"><span>Operational sources</span><b>0</b></div><div class="ops-cell"><span>Published records</span><b>0</b></div><div class="ops-cell"><span>Forecast ledger</span><b>EMPTY</b></div></div>
-<main><div class="brief-head"><div><p class="eyebrow">Basketball intelligence</p><h1>NBA desk</h1><p>The route and custody contract exist. Monitoring does not. No NBA transaction, injury, game, player grade or probability is published in this module.</p></div><aside><p class="report-id">ACTIVATION GATE</p><h2>Standby</h2><p>Requires first-party transaction and injury sources, a reviewed source taxonomy, separate event IDs and an official outcome authority.</p></aside></div>
-<section><h2>Planned lanes</h2><table class="status-table"><thead><tr><th>Lane</th><th>Required evidence</th><th>Status</th></tr></thead><tbody><tr><td>Transactions</td><td>NBA official transaction source plus team announcement</td><td>NOT CONNECTED</td></tr><tr><td>Trade reporting</td><td>Attributable original reporter URL and exact claim class</td><td>NOT CONNECTED</td></tr><tr><td>Availability</td><td>Official injury report with game and timestamp</td><td>NOT CONNECTED</td></tr><tr><td>Film / impact</td><td>Permitted clips, sample definition and reviewer custody</td><td>NOT ACTIVE</td></tr></tbody></table></section>
-<section><div class="empty-state"><b>NO OPERATIONAL NBA DATA</b><p>This empty state is intentional. It prevents the existence of a page from being mistaken for active monitoring.</p></div></section></main><footer><span>© 2026 KAHRELUM · NBA module</span><a href="/sports">Sports operations registry</a></footer></div></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f4efe6">
+  <title>NBA Players &amp; Photos | KAHRELUM Sports</title>
+  <meta name="description" content="Browse NBA players by name, team and position, with source-linked headshots and a dated roster snapshot. NBA forecasts remain separate.">
+  <link rel="canonical" href="https://kahrelum.com/sports/nba">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kahrelum.com/sports/nba">
+  <meta property="og:title" content="NBA Players &amp; Photos | KAHRELUM Sports">
+  <meta property="og:description" content="NBA player photos, names, teams and positions in a searchable roster directory.">
+  <meta property="og:image" content="https://kahrelum.com/assets/social/og-sports-nba.png">
+  <meta property="og:image:secure_url" content="https://kahrelum.com/assets/social/og-sports-nba.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="NBA Intelligence Module — KAHRELUM social preview">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NBA Players &amp; Photos | KAHRELUM Sports">
+  <meta name="twitter:description" content="Browse NBA player photos by name, team and position.">
+  <meta name="twitter:image" content="https://kahrelum.com/assets/social/og-sports-nba.png">
+  <meta name="twitter:image:alt" content="NBA Intelligence Module — KAHRELUM social preview">
+  <link rel="stylesheet" href="/sports-desk.css">
+  <link rel="stylesheet" href="/sports/nba-players.css?v=20261031-portraits">
+  <script src="/sports/nba-players.js?v=20261031-portraits" defer></script>
+</head>
+<body>
+  <div class="desk-shell nba-desk">
+    <header>
+      <div><a class="brand" href="/">KAHRELUM</a><div class="desk-code">Sports Intelligence / NBA</div></div>
+      <nav aria-label="Sports desks"><a href="/sports">All desks</a><a href="/nfl/trades">NFL</a><a href="/nfl/film-room">Film</a><a href="/sports/nba" aria-current="page">NBA</a><a href="/sports/mlb">MLB</a><a href="/sports/nhl">NHL</a></nav>
+    </header>
+    <div class="ops-strip" aria-label="NBA directory summary">
+      <div class="ops-cell"><span>Directory</span><b>NBA PLAYERS</b></div>
+      <div class="ops-cell"><span>Teams</span><b id="nbaTeamCount">—</b></div>
+      <div class="ops-cell"><span>Players</span><b id="nbaPlayerCount">—</b></div>
+      <div class="ops-cell"><span>Verified photos</span><b id="nbaPhotoCount">—</b></div>
+      <div class="ops-cell"><span>Roster captured</span><b id="nbaCapturedAt">Loading</b></div>
+    </div>
+    <main>
+      <div class="brief-head">
+        <div>
+          <p class="eyebrow">The people on the court</p>
+          <h1>NBA player directory</h1>
+          <p>Find a player, put a face to the name, and explore the team roster. Search across the league or narrow the view to one team and position.</p>
+          <a class="desk-button primary" href="#nbaDirectory">Browse players</a>
+        </div>
+        <aside>
+          <p class="report-id">ROSTER SNAPSHOT</p>
+          <h2>Names. Teams. Photos.</h2>
+          <p>Player profiles and headshots are linked to their source. Team listings reflect the recorded snapshot and may change.</p>
+          <p class="tiny">NBA forecasts and trade monitoring are not active.</p>
+        </aside>
+      </div>
+      <section id="nbaDirectory" aria-labelledby="nbaDirectoryTitle" aria-busy="true">
+        <p class="section-no">PLAYER INDEX</p>
+        <h2 id="nbaDirectoryTitle">Across the league</h2>
+        <div class="nba-filters" id="nbaFilters" hidden>
+          <label for="nbaSearch">Player or team<input id="nbaSearch" type="search" autocomplete="off" placeholder="Search a name or team"></label>
+          <label for="nbaTeam">Team<select id="nbaTeam"><option value="">All teams</option></select></label>
+          <label for="nbaPosition">Position<select id="nbaPosition"><option value="">All positions</option></select></label>
+          <button id="nbaClear" type="button">Clear filters</button>
+        </div>
+        <p id="nbaResultCount" class="tiny" role="status" aria-live="polite">Loading NBA player profiles…</p>
+        <div id="nbaLoadError" class="empty-state" hidden><b>Player directory unavailable</b><p>The roster could not be loaded. Please try again.</p><button id="nbaRetry" class="desk-button" type="button">Try again</button></div>
+        <div id="nbaPlayers" class="nba-player-grid" role="list" aria-label="NBA player profiles"></div>
+        <div id="nbaNoResults" class="empty-state" hidden><b>No matching players</b><p>Try a shorter name or clear the team and position filters.</p></div>
+        <noscript><p class="empty-state">Enable JavaScript to search and display player photos. You can also <a href="/sports/nba-player-portraits.json">open the player directory data</a>.</p></noscript>
+      </section>
+      <details class="nba-photo-notes">
+        <summary>About these photos and rosters</summary>
+        <p>Photos are small, externally hosted editorial headshots from ESPN, linked to the corresponding player profile. Rights remain with their respective owners. A dated source record and a unique NBA athlete ID connect each photo to its player.</p>
+        <p>If a photo is missing or fails to load, the player’s initials remain visible. A portrait does not establish playing availability, a forecast, or a completed transaction.</p>
+        <p id="nbaSourceTime" class="tiny"></p>
+        <a href="/sports/nba-player-portraits.json">View source and photo records</a>
+      </details>
+    </main>
+    <footer><span>© 2026 KAHRELUM · NBA player directory</span><a href="/sports">Sports operations registry</a></footer>
+  </div>
+</body>
+</html>

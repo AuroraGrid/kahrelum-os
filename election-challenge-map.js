@@ -39,7 +39,7 @@
     const opposing = total - value;
     const valueWidth = (value / total) * 100;
     const thresholdPosition = (threshold / total) * 100;
-    byId(targetId).innerHTML = `<h4>${escapeHtml(title)}</h4><div class="seat-total"><strong>${value.toFixed(2)}</strong><span>Democratic${title === 'Senate' ? '-caucus' : ''} seats</span></div><div class="chamber-seat-bar" aria-label="${value.toFixed(2)} Democratic seats and ${opposing.toFixed(2)} Republican${title === 'Senate' ? '-aligned' : ''} seats"><i class="democratic" style="width:${valueWidth.toFixed(3)}%"></i><i class="republican" style="width:${(100 - valueWidth).toFixed(3)}%"></i><i class="majority-line" style="left:${thresholdPosition.toFixed(3)}%" title="Control threshold: ${threshold}"></i></div><div class="seat-split"><span class="party-dem">D ${value.toFixed(2)}</span><span>Control ${threshold}</span><span class="party-rep">R ${opposing.toFixed(2)}</span></div><p class="fine">${escapeHtml(seatType)} · fresh execution</p>`;
+    byId(targetId).innerHTML = `<h4>${escapeHtml(title)}</h4><div class="seat-total"><strong>${value.toFixed(2)}</strong><span>Democratic${title === 'Senate' ? '-caucus' : ''} seats</span></div><div class="chamber-seat-bar" aria-label="${value.toFixed(2)} Democratic seats and ${opposing.toFixed(2)} Republican${title === 'Senate' ? '-aligned' : ''} seats"><i class="democratic" style="width:${valueWidth.toFixed(3)}%"></i><i class="republican" style="width:${(100 - valueWidth).toFixed(3)}%"></i><i class="majority-line" style="left:${thresholdPosition.toFixed(3)}%" title="Control threshold: ${threshold}"></i></div><div class="seat-split"><span class="party-dem">D ${value.toFixed(2)}</span><span>Control ${threshold}</span><span class="party-rep">R ${opposing.toFixed(2)}</span></div><p class="fine">${escapeHtml(seatType)} · mapped edition</p>`;
   }
 
   function renderSeatTracker(data) {
@@ -178,7 +178,9 @@
 
   function admittedPortrait(candidate) {
     const portrait = candidate.portrait;
-    if (!portrait || portrait.status !== 'ADMITTED' || !httpsUrl(portrait.url) || !httpsUrl(portrait.sourceUrl) || !httpsUrl(portrait.licenseUrl) || !portrait.license || !portrait.bioguideId || !portrait.reviewedAtUtc) return null;
+    if (!portrait || portrait.status !== 'ADMITTED' || !httpsUrl(portrait.sourceUrl) || !httpsUrl(portrait.licenseUrl) || !portrait.license || !portrait.bioguideId || !portrait.reviewedAtUtc) return null;
+    const localImage = /^[A-Z][0-9]{6}$/.test(portrait.bioguideId) && /^[a-f0-9]{64}$/.test(portrait.imageSha256 || '') && portrait.url === `/assets/candidate-portraits/${portrait.bioguideId}-${portrait.imageSha256.slice(0,16)}.jpg`;
+    if (!httpsUrl(portrait.url) && !localImage) return null;
     return portrait;
   }
 
@@ -296,7 +298,7 @@
   function renderStateBrief() {
     const panel = byId('stateBrief');
     if (selectedState === 'ALL') {
-      panel.innerHTML = `<p class="eyebrow">National projection</p><h3>Choose a state</h3><div class="state-code">USA</div><p>The current KAHRELUM edition prices all 470 congressional contests. Each state shape summarizes D-leaning, R-leaning and toss-up race calls for the selected chamber.</p><dl><div><dt>Expected Democratic House seats</dt><dd>${currentProjectionData.house.expectedDemocraticSeats.toFixed(2)}</dd></div><div><dt>Democratic House control</dt><dd>${pct(currentProjectionData.house.pDemocraticControl)}</dd></div><div><dt>Expected D-caucus Senate seats</dt><dd>${currentProjectionData.senate.expectedDemocraticCaucusSeats.toFixed(2)}</dd></div><div><dt>Democratic Senate control</dt><dd>${pct(currentProjectionData.senate.pDemocraticCaucusControl)}</dd></div></dl><div class="boundary">Map colors summarize KAHRELUM probabilities from the latest accessible rating editions, not votes counted or certified results.</div>`;
+      panel.innerHTML = `<p class="eyebrow">National projection</p><h3>Choose a state</h3><div class="state-code">USA</div><p>This published KAHRELUM map covers all 470 congressional contests. Each state shape summarizes D-leaning, R-leaning and toss-up race calls for the selected chamber.</p><dl><div><dt>Expected Democratic House seats</dt><dd>${currentProjectionData.house.expectedDemocraticSeats.toFixed(2)}</dd></div><div><dt>Democratic House control</dt><dd>${pct(currentProjectionData.house.pDemocraticControl)}</dd></div><div><dt>Expected D-caucus Senate seats</dt><dd>${currentProjectionData.senate.expectedDemocraticCaucusSeats.toFixed(2)}</dd></div><div><dt>Democratic Senate control</dt><dd>${pct(currentProjectionData.senate.pDemocraticCaucusControl)}</dd></div></dl><div class="boundary">Map colors summarize KAHRELUM probabilities from the displayed rating editions, not votes counted or certified results.</div>`;
       return;
     }
     const summary = stateSummary(selectedState);
@@ -417,7 +419,7 @@
       byId('mapCandidateCount').textContent = current.coverage.sourceListedCandidateRecords;
       byId('mapPortraitCount').textContent = portraitCoverage.available ? portraitCoverage.matchedCards : '—';
       byId('mapPortraitCount').title = portraitCoverage.available ? `${portraitCoverage.matchedCards} of ${current.coverage.sourceListedCandidateRecords} source-listed candidate records have an identity-matched public-domain photo.` : 'Portrait ledger unavailable; candidate names and initials remain visible.';
-      byId('currentEditionLine').textContent = `Fresh retrieval and computation: ${new Date(current.computedAtUtc).toLocaleString()} · House publisher rating edition: ${current.sources.house.publisherEdition} · Senate publisher rating edition: ${current.sources.senate.publisherEdition}.`;
+      byId('currentEditionLine').textContent = `Mapped edition computed: ${new Date(current.computedAtUtc).toLocaleString()} · House publisher rating edition: ${current.sources.house.publisherEdition} · Senate publisher rating edition: ${current.sources.senate.publisherEdition}.`;
       byId('mapLoadStatus').hidden = true;
       byId('raceList').addEventListener('error',handlePortraitError,true);
       populateStateFilter(); populateSearchSuggestions(); renderMap(); renderStateBrief(); renderRaces(); renderSeatTracker(current); renderSeatComparison(); renderChallengerTable();
