@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-10-31T03:04:30.193Z",
+  "checkedAtUtc": "2026-10-31T03:22:45.434Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -40,15 +40,17 @@
       "provider": "99chambers",
       "edition": "Horizon",
       "sourceUrl": "https://99chambers.app/updates/2026-10-30",
-      "houseDemocraticControlPct": 97.0,
-      "senateDemocraticControlPct": 78.0,
-      "houseDemocraticSeats": 238.1,
+      "houseDemocraticControlPct": 98.0,
+      "senateDemocraticControlPct": 80.0,
+      "houseDemocraticSeats": 241.3,
       "houseSeatType": "expected",
-      "senateDemocraticSeats": 52.3,
+      "senateDemocraticSeats": 52.5,
       "senateSeatType": "expected",
-      "sourceEdition": "Forecast as of Oct. 30",
+      "sourceEdition": "Forecast as of Oct. 30; retrieved Oct. 31 03:22 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "note": "Horizon values; Pulse remains a separate model edition."
+      "retrievedAtUtc": "2026-10-31T03:22:43.990Z",
+      "rawSha256": "92ef28fd0a9fff8ffbc580d243df4fbc3bd628bfe76f1ffd6229db05513db90f",
+      "note": "Horizon values; Pulse remains a separate model edition (97% House, 76% Senate, 243.0 expected D House seats and 52.4 expected D Senate seats on this retrieval)."
     },
     {
       "provider": "CalltheMap",
@@ -83,14 +85,16 @@
       "edition": "Main",
       "sourceUrl": "https://scrutinel.com/",
       "houseDemocraticControlPct": 93.0,
-      "senateDemocraticControlPct": 69.0,
+      "senateDemocraticControlPct": 70.0,
       "houseDemocraticSeats": 238.0,
       "houseSeatType": "expected",
       "senateDemocraticSeats": 52.0,
       "senateSeatType": "expected",
-      "sourceEdition": "Updated Oct. 30, 5:25 PM EDT",
+      "sourceEdition": "Updated Oct. 30, 11:24 PM EDT; retrieved Oct. 31 03:22 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "note": "Fresh first-party page check; site also describes rounded central estimates."
+      "retrievedAtUtc": "2026-10-31T03:22:45.434Z",
+      "rawSha256": "89842084b45a56e71064a6c63fd2ef90fa6d3220800f0b9003e1252918fda460",
+      "note": "Fresh first-party page check; House control remained 93%, Senate control increased from the previously recorded 69% to 70%, and the site separately describes a rounded 239-seat central House estimate."
     },
     {
       "provider": "Vote-Scope",

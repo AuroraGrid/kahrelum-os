@@ -62,6 +62,61 @@
       "height": 630
     },
     {
+      "route": "/pilot",
+      "sourceHtml": null,
+      "productionManaged": true,
+      "image": "assets/social/og-pilot.png",
+      "title": "Historical AI Decision Review — KAHRELUM Pilot",
+      "description": "Fixed-scope historical AI decision review for teams evaluating an AI agent or workflow against evidence, policy, and its information cutoff.",
+      "sha256": "767562feb23b2c4ac7fadfcd38f2738b72d5b0b44014fe274b157b695e12d071",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/demo",
+      "sourceHtml": null,
+      "productionManaged": true,
+      "image": "assets/social/og-demo.png",
+      "title": "KAHRELUM Worked Example — Synthetic, Prerecorded",
+      "description": "Inspect a labeled synthetic example of evidence, inference, uncertainty, counterargument, decision gate, and record.",
+      "sha256": "4fd6c2164c64a9476dba9904c769d00439b15e96162bf77c1a6873fa0fc3c2f0",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/sample",
+      "sourceHtml": null,
+      "productionManaged": true,
+      "image": "assets/social/og-sample.png",
+      "title": "Synthetic Sample Deliverable — KAHRELUM Prospective Evaluation Pilot",
+      "description": "A synthetic sample KAHRELUM evaluation record showing evidence, inference, uncertainty, counterargument, decision result, limitations, and record preservation.",
+      "sha256": "9cb9a3ccdb32482c688e8c885f9728e6f7aa8b69e2a50e1278f11a8a1cc2c2d0",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/connect",
+      "sourceHtml": null,
+      "productionManaged": true,
+      "image": "assets/social/og-connect.png",
+      "title": "Connect with Hasan Raza Kazmi — KAHRELUM",
+      "description": "Connect with Hasan Raza Kazmi, Founder of KAHRELUM: evidence-to-decision systems for forecasting, AI evaluation, and research assurance.",
+      "sha256": "c8da23355ceeca1738133ccb91aedb9e6fed1d8ba3507496a4a158e5bde55114",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/hasan",
+      "sourceHtml": null,
+      "productionManaged": true,
+      "image": "assets/social/og-hasan.png",
+      "title": "Hasan Raza Kazmi — Founder, KAHRELUM",
+      "description": "Hasan Raza Kazmi, Founder of KAHRELUM — evidence-to-decision systems for forecasting, AI evaluation, and research assurance.",
+      "sha256": "cda2ca56d855cc9160c1e46ec9ed137d043ee18c2f00639192d688506f888419",
+      "width": 1200,
+      "height": 630
+    },
+    {
       "route": "/insights/ai-bots-money-claims",
       "sourceHtml": "insights/ai-bots-money-claims.html",
       "image": "assets/social/og-insights-ai-bots-money-claims.png",

@@ -20,6 +20,11 @@ const FIREBASE_TOOLS_ROOT = process.env.FIREBASE_TOOLS_ROOT;
 const SOCIAL_CARD_FILES = [
   'assets/social-manifest.json',
   'assets/social/og-home.png',
+  'assets/social/og-pilot.png',
+  'assets/social/og-demo.png',
+  'assets/social/og-sample.png',
+  'assets/social/og-connect.png',
+  'assets/social/og-hasan.png',
   'assets/social/og-assurance.png',
   'assets/social/og-digital-id.png',
   'assets/social/og-election-challenge.png',
@@ -109,6 +114,13 @@ const HTML_ROUTES = [
   '/insights/ai-bots-money-claims', '/sports-interest',
 ];
 const API_ROUTES = ['/api/v1', '/api/v1/release', '/api/v1/example'];
+const LEGACY_SOCIAL_SPECS = {
+  '/pilot': { hostingPath: '/pilot.html', image: '/assets/social/og-pilot.png', alt: 'Historical AI Decision Review — KAHRELUM Pilot social preview' },
+  '/demo': { hostingPath: '/demo.html', image: '/assets/social/og-demo.png', alt: 'KAHRELUM Worked Example — Synthetic, Prerecorded social preview' },
+  '/sample': { hostingPath: '/sample.html', image: '/assets/social/og-sample.png', alt: 'Synthetic Sample Deliverable — KAHRELUM social preview' },
+  '/connect': { hostingPath: '/connect.html', image: '/assets/social/og-connect.png', alt: 'Connect with Hasan Raza Kazmi — KAHRELUM social preview' },
+  '/hasan': { hostingPath: '/hasan.html', image: '/assets/social/og-hasan.png', alt: 'Hasan Raza Kazmi — Founder, KAHRELUM social preview' },
+};
 const REQUIRED_REWRITES = {
   '/api/v1': '/data/api/v1/index.json',
   '/api/v1/release': '/data/api/v1/release.json',
@@ -179,6 +191,17 @@ const RELEASE_PROFILES = {
       '/election-comparison',
     ],
     includeHomepage: true,
+  },
+  'social-previews': {
+    overlayFiles: [
+      'assets/social-manifest.json',
+      'assets/social/og-pilot.png', 'assets/social/og-demo.png', 'assets/social/og-sample.png',
+      'assets/social/og-connect.png', 'assets/social/og-hasan.png',
+      'election/challenger-source-checks.json', 'election/seat-projections.json',
+    ],
+    sitemapRoutes: [],
+    includeHomepage: false,
+    patchLegacySocial: true,
   },
 };
 
@@ -340,6 +363,46 @@ function replaceHomepageSocialMetadata(home, repositoryHome) {
   return Buffer.from(output, 'utf8');
 }
 
+function htmlAttribute(value) {
+  return value.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function replaceLegacySocialMetadata(html, route, spec) {
+  const canonicalUrl = DOMAIN + route;
+  const title = html.match(/<title>([\s\S]*?)<\/title>/i)?.[1]?.trim();
+  const descriptionTag = html.match(/<meta\b(?=[^>]*name=["']description["'])[^>]*>/i)?.[0];
+  const description = descriptionTag?.match(/content=["']([^"']*)["']/i)?.[1];
+  if (!title || !description) fail(`Legacy social source is missing a title or description: ${route}`);
+  if (extractCanonical(html) !== canonicalUrl) fail(`Legacy social canonical changed for ${route}.`);
+  const socialPattern = /<meta\b(?=[^>]*(?:property|name)=["'](?:og:(?:type|url|title|description|image(?::(?:secure_url|type|width|height|alt))?)|twitter:(?:card|title|description|image|image:alt))["'])[^>]*>\s*/gi;
+  let output = html.replace(socialPattern, '');
+  const canonicalTag = output.match(/<link\b(?=[^>]*rel=["']canonical["'])[^>]*>/i)?.[0];
+  if (!canonicalTag) fail(`Legacy social source has no canonical tag: ${route}`);
+  const imageUrl = DOMAIN + spec.image;
+  const tags = [
+    `<meta property="og:type" content="website">`,
+    `<meta property="og:url" content="${canonicalUrl}">`,
+    `<meta property="og:title" content="${htmlAttribute(title)}">`,
+    `<meta property="og:description" content="${htmlAttribute(description)}">`,
+    `<meta property="og:image" content="${imageUrl}">`,
+    `<meta property="og:image:secure_url" content="${imageUrl}">`,
+    `<meta property="og:image:type" content="image/png">`,
+    `<meta property="og:image:width" content="1200">`,
+    `<meta property="og:image:height" content="630">`,
+    `<meta property="og:image:alt" content="${htmlAttribute(spec.alt)}">`,
+    `<meta name="twitter:card" content="summary_large_image">`,
+    `<meta name="twitter:title" content="${htmlAttribute(title)}">`,
+    `<meta name="twitter:description" content="${htmlAttribute(description)}">`,
+    `<meta name="twitter:image" content="${imageUrl}">`,
+    `<meta name="twitter:image:alt" content="${htmlAttribute(spec.alt)}">`,
+  ];
+  const insertion = canonicalTag + tags.join('');
+  output = output.replace(canonicalTag, insertion);
+  if ((output.match(/property="og:image"/g) || []).length !== 1) fail(`Legacy Open Graph image cardinality failed: ${route}`);
+  if ((output.match(/name="twitter:image"/g) || []).length !== 1) fail(`Legacy X image cardinality failed: ${route}`);
+  return Buffer.from(output, 'utf8');
+}
+
 function updateSitemap(xml, routes) {
   let output = xml;
   if (!output.includes('</urlset>')) fail('Live sitemap has no closing urlset element.');
@@ -392,6 +455,13 @@ async function buildOverlay(live, profileName) {
     const repositoryHome = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
     const boundedHome = replaceHomepageSection(home, fragment).toString('utf8');
     addBlob(desired, blobs, '/index.html', replaceHomepageSocialMetadata(boundedHome, repositoryHome));
+  }
+
+  if (profile.patchLegacySocial) {
+    for (const [route, spec] of Object.entries(LEGACY_SOCIAL_SPECS)) {
+      const html = (await verifiedLiveFile(live, spec.hostingPath, route)).toString('utf8');
+      addBlob(desired, blobs, spec.hostingPath, replaceLegacySocialMetadata(html, route, spec));
+    }
   }
 
   const sitemap = (await verifiedLiveFile(live, '/sitemap.xml', '/sitemap.xml')).toString('utf8');

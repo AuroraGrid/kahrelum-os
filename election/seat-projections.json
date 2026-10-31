@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "edition": "KAH-US-2026-20261031T030533Z with challenger source checks through 2026-10-31T03:04:30Z",
+  "edition": "KAH-US-2026-20261031T030533Z with challenger source checks through 2026-10-31T03:22:45Z",
   "comparisonStatus": "DESCRIPTIVE_ONLY_UNMATCHED_CUTOFFS_AND_SEAT_TYPES",
-  "sourceObservationFileSha256": "0caa8cc4c0a05e0bea0461519a68cd452d31b874ee1cb9e0ed63e14cdd54f248",
+  "sourceObservationFileSha256": "dda2faa73c9276164a420c34bb7c1a726ad24181dce1b0a5f8e0ab2575d68036",
   "house": {
     "totalSeats": 435,
     "democraticControlThreshold": 218,
@@ -16,10 +16,10 @@
     "observations": [
       {"provider":"KAHRELUM","democraticSeats":228.02,"seatType":"expected","edition":"Fresh run Oct. 31 03:05 UTC; ratings Oct. 23","sourceUrl":"/election-challenge"},
       {"provider":"Decision Desk HQ","democraticSeats":239,"seatType":"projected","edition":"Updated Oct. 30 2:39 PM","sourceUrl":"https://votes.decisiondeskhq.com/forecast/2026"},
-      {"provider":"99chambers Horizon","democraticSeats":238.1,"seatType":"expected","edition":"Oct. 30","sourceUrl":"https://99chambers.app/updates/2026-10-30"},
+      {"provider":"99chambers Horizon","democraticSeats":241.3,"seatType":"expected","edition":"Oct. 30; retrieved Oct. 31 03:22 UTC","sourceUrl":"https://99chambers.app/updates/2026-10-30"},
       {"provider":"CalltheMap","democraticSeats":235.8,"seatType":"expected","edition":"Forecast Oct. 30","sourceUrl":"https://www.callthemap.com/house"},
       {"provider":"COYNTOSS","democraticSeats":236.2,"seatType":"expected","edition":"Oct. 30 site; model Oct. 18","sourceUrl":"https://chasecoyne.com/house"},
-      {"provider":"Scrutinel","democraticSeats":238,"seatType":"expected","edition":"Oct. 30 5:25 PM EDT","sourceUrl":"https://scrutinel.com/"},
+      {"provider":"Scrutinel","democraticSeats":238,"seatType":"expected","edition":"Oct. 30 11:24 PM EDT","sourceUrl":"https://scrutinel.com/"},
       {"provider":"Vote-Scope","democraticSeats":241,"seatType":"projected; median 246","edition":"Updated Oct. 30","sourceUrl":"https://vote-scope.com/en/us/house/"},
       {"provider":"ElectIndex","democraticSeats":247.4,"seatType":"average","edition":"Public feed checked Oct. 31","sourceUrl":"https://electindex.com/forecasts/"},
       {"provider":"Fred Cornell","democraticSeats":251,"seatType":"median","edition":"Oct. 30","sourceUrl":"https://fredcornell.com/us/house"},
@@ -43,10 +43,10 @@
     "observations": [
       {"provider":"KAHRELUM","democraticSeats":50.229989536494045,"seatType":"expected caucus","edition":"Fresh run Oct. 31 03:05 UTC; ratings Oct. 20","sourceUrl":"/election-challenge"},
       {"provider":"Decision Desk HQ","democraticSeats":52,"seatType":"projected","edition":"Updated Oct. 30 2:39 PM","sourceUrl":"https://votes.decisiondeskhq.com/forecast/2026"},
-      {"provider":"99chambers Horizon","democraticSeats":52.3,"seatType":"expected","edition":"Oct. 30","sourceUrl":"https://99chambers.app/updates/2026-10-30"},
+      {"provider":"99chambers Horizon","democraticSeats":52.5,"seatType":"expected","edition":"Oct. 30; retrieved Oct. 31 03:22 UTC","sourceUrl":"https://99chambers.app/updates/2026-10-30"},
       {"provider":"CalltheMap","democraticSeats":51.4,"seatType":"expected incl. aligned independents","edition":"Forecast Oct. 30; rechecked Oct. 31 01:57 UTC","sourceUrl":"https://www.callthemap.com/senate"},
       {"provider":"COYNTOSS","democraticSeats":51.64,"seatType":"expected caucus","edition":"Model inputs Oct. 30","sourceUrl":"https://chasecoyne.com/senate"},
-      {"provider":"Scrutinel","democraticSeats":52,"seatType":"expected","edition":"Oct. 30 5:25 PM EDT","sourceUrl":"https://scrutinel.com/"},
+      {"provider":"Scrutinel","democraticSeats":52,"seatType":"expected","edition":"Oct. 30 11:24 PM EDT","sourceUrl":"https://scrutinel.com/"},
       {"provider":"ElectIndex","democraticSeats":52.9,"seatType":"average","edition":"Public feed checked Oct. 31","sourceUrl":"https://electindex.com/forecasts/"},
       {"provider":"Fred Cornell","democraticSeats":52,"seatType":"expected party seats; plus 1 independent","edition":"Run Oct. 30","sourceUrl":"https://fredcornell.com/us/senate"},
       {"provider":"Yale PLSC 2219","democraticSeats":50,"seatType":"class model","edition":"Snapshot Oct. 30","sourceUrl":"https://kevinmdeluca.com/forecast/"},

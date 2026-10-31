@@ -16,7 +16,7 @@ class PublishingSurfaceTests(unittest.TestCase):
         manifest = json.loads(self.read("assets/social-manifest.json"))
         cards = manifest["cards"]
         self.assertEqual(manifest["schema"], "KAHRELUM_SOCIAL_CARDS_v1.0")
-        self.assertEqual(len(cards), 22)
+        self.assertEqual(len(cards), 27)
         self.assertEqual(len({card["route"] for card in cards}), len(cards))
         self.assertEqual(len({card["image"] for card in cards}), len(cards))
         for card in cards:
@@ -29,6 +29,11 @@ class PublishingSurfaceTests(unittest.TestCase):
                     self.assertGreaterEqual(length, 8)
                     width, height = struct.unpack(">II", stream.read(8))
                 self.assertEqual((width, height), (1200, 630))
+                self.assertEqual(hashlib.sha256(image.read_bytes()).hexdigest(), card["sha256"])
+                if card.get("productionManaged"):
+                    self.assertIsNone(card["sourceHtml"])
+                    self.assertIn(card["route"], {"/pilot", "/demo", "/sample", "/connect", "/hasan"})
+                    continue
                 page = self.read(card["sourceHtml"])
                 absolute_image = f'https://kahrelum.com/{card["image"]}'
                 self.assertIn(f'property="og:image" content="{absolute_image}"', page)
@@ -43,6 +48,22 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertIn('content="630"', page)
         self.assertIn('name="twitter:card" content="summary_large_image"', page)
         self.assertIn('/assets/social/og-nfl-trades.png', page)
+
+    def test_production_managed_legacy_routes_have_guarded_social_overlays(self):
+        release = self.read("scripts/firebase-overlay-release.cjs")
+        for route, image in {
+            "/pilot": "og-pilot.png",
+            "/demo": "og-demo.png",
+            "/sample": "og-sample.png",
+            "/connect": "og-connect.png",
+            "/hasan": "og-hasan.png",
+        }.items():
+            with self.subTest(route=route):
+                self.assertIn(f"'{route}'", release)
+                self.assertIn(image, release)
+        self.assertIn("patchLegacySocial: true", release)
+        self.assertIn("replaceLegacySocialMetadata", release)
+        self.assertIn("verifiedLiveFile(live, spec.hostingPath, route)", release)
 
     def test_every_sports_operations_route_has_large_social_preview(self):
         for relative in [
@@ -237,6 +258,11 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertEqual(unpriced, [])
         ddhq = next(row for row in challengers["records"] if row["provider"] == "Decision Desk HQ")
         self.assertEqual((ddhq["houseDemocraticControlPct"], ddhq["senateDemocraticControlPct"]), (82.0, 62.0))
+        chambers = next(row for row in challengers["records"] if row["provider"] == "99chambers")
+        self.assertEqual((chambers["houseDemocraticControlPct"], chambers["senateDemocraticControlPct"]), (98.0, 80.0))
+        self.assertEqual((chambers["houseDemocraticSeats"], chambers["senateDemocraticSeats"]), (241.3, 52.5))
+        scrutinel = next(row for row in challengers["records"] if row["provider"] == "Scrutinel")
+        self.assertEqual((scrutinel["houseDemocraticControlPct"], scrutinel["senateDemocraticControlPct"]), (93.0, 70.0))
         callthemap = next(row for row in challengers["records"] if row["provider"] == "CalltheMap")
         self.assertEqual((callthemap["senateDemocraticControlPct"], callthemap["senateDemocraticSeats"]), (60.0, 51.4))
         new_numeric = {row["provider"]: row for row in challengers["records"] if row["provider"] in {"Dave Manuel", "On Point Politics", "VotePredictor", "Midterm Forecast"}}
