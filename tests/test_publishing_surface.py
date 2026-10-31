@@ -154,34 +154,57 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertIn("publicReleaseIdentity", release)
         self.assertIn("election-challenge.html", release)
 
-    def test_election_challenge_maps_only_locked_race_coverage(self):
+    def test_election_challenge_maps_fresh_full_federal_projection(self):
         import json
 
         page = self.read("election-challenge.html")
         script = self.read("election-challenge-map.js")
         release = self.read("scripts/firebase-overlay-release.cjs")
         house = json.loads(self.read("election/house-forecast-lock.json"))
-        senate = json.loads(self.read("election/senate-ratings-source.json"))
+        current = json.loads(self.read("election/current-projections.json"))
+        seats = json.loads(self.read("election/seat-projections.json"))
         self.assertEqual(len(house["competitive_districts"]), 81)
-        self.assertEqual(senate["ballot_seats"], 35)
+        self.assertEqual(current["status"], "FRESH_EXECUTION_LATEST_ACCESSIBLE_SOURCE_EDITIONS")
+        self.assertEqual(current["house"]["raceCount"], 435)
+        self.assertEqual(current["senate"]["raceCount"], 35)
+        self.assertEqual(current["coverage"]["totalRaces"], 470)
+        self.assertEqual(current["coverage"]["racesWithSourceListedCandidates"], 470)
+        self.assertGreater(current["coverage"]["sourceListedCandidateRecords"], 0)
+        self.assertEqual(current["coverage"]["admittedPortraits"], 0)
+        self.assertEqual(current["sources"]["house"]["publisherEdition"], "October 23, 2026")
+        self.assertEqual(current["sources"]["senate"]["publisherEdition"], "October 20, 2026")
+        self.assertRegex(current["sources"]["house"]["sha256"], r"^[a-f0-9]{64}$")
+        self.assertRegex(current["sources"]["senate"]["sha256"], r"^[a-f0-9]{64}$")
         self.assertIn('id="challengeUsMap"', page)
         self.assertIn('id="raceList"', page)
         self.assertIn('id="loadMoreRaces"', page)
+        self.assertIn('id="seatTracker"', page)
+        self.assertIn('id="seatComparisonChart"', page)
         self.assertIn("census.gov/data/tables/2020/dec/2020-apportionment-data.html", page)
         self.assertIn("Candidate and portrait boundary", page)
-        self.assertIn("Current officeholders are not treated as nominees", script)
+        self.assertIn("source-listed; portrait not admitted", script)
+        self.assertIn("/election/current-projections.json", script)
         self.assertIn("races.length !== 470", script)
-        self.assertIn("explicitCount !== 116", script)
-        self.assertIn("aggregateCount !== 354", script)
+        self.assertIn("current.house.raceCount !== 435", script)
+        self.assertIn("current.senate.raceCount !== 35", script)
         self.assertNotIn("<img", script.lower())
+        self.assertEqual(seats["house"]["kahrelum"]["democraticSeats"], 228.02)
+        self.assertAlmostEqual(seats["senate"]["kahrelum"]["democraticSeats"], 50.229989536494045)
+        self.assertEqual(seats["comparisonStatus"], "DESCRIPTIVE_ONLY_UNMATCHED_CUTOFFS_AND_SEAT_TYPES")
         for path in (
             "election-challenge-map.css",
             "election-challenge-map.js",
             "election/house-forecast-lock.json",
             "election/senate-forecast-lock.json",
             "election/senate-ratings-source.json",
+            "election/current-projections.json",
+            "election/seat-projections.json",
         ):
             self.assertIn(path, release)
+
+        refresh = self.read("scripts/refresh-election-projections.py")
+        self.assertIn("EXPECTED_HOUSE_RACES = 435", refresh)
+        self.assertIn("EXPECTED_SENATE_RACES = 35", refresh)
 
     def test_investigations_names_marion_county_state(self):
         page = self.read("investigations.html")

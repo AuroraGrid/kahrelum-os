@@ -14,34 +14,55 @@
     ['VT','Vermont',2,10],['WA','Washington',3,1],['WI','Wisconsin',3,6],['WV','West Virginia',5,7],['WY','Wyoming',4,3]
   ];
   const stateByCode = Object.fromEntries(states.map(([code,name]) => [code,name]));
-  const houseSeats = {AL:7,AK:1,AZ:9,AR:4,CA:52,CO:8,CT:5,DE:1,FL:28,GA:14,HI:2,ID:2,IL:17,IN:9,IA:4,KS:4,KY:6,LA:6,ME:2,MD:8,MA:9,MI:13,MN:8,MS:4,MO:8,MT:2,NE:3,NV:4,NH:2,NJ:12,NM:3,NY:26,NC:14,ND:1,OH:15,OK:5,OR:6,PA:17,RI:2,SC:7,SD:1,TN:9,TX:38,UT:4,VT:1,VA:11,WA:10,WV:2,WI:8,WY:1};
-  const tierProbability = {'Solid D':.99,'Likely D':.88,'Lean D':.70,'Toss Up':.50,'Lean R':.30,'Likely R':.12,'Solid R':.01};
   let races = [];
   let selectedState = 'ALL';
   let displayLimit = 40;
+  let seatProjectionData = null;
+  let currentProjectionData = null;
+  let seatComparisonMode = 'house';
 
   const byId = (id) => document.getElementById(id);
   const pct = (value) => `${Math.round(value * 100)}%`;
   const escapeHtml = (value) => String(value).replace(/[&<>'"]/g, (char) => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
 
-  function buildRaces(house, senateRatings) {
-    const explicitHouse = house.competitive_districts.map((item) => ({
-      id:item.district, state:item.district.split('-')[0], chamber:'House', tier:item.tier,
-      pDem:item.p_dem, sourceDate:'2026-10-23', event:'Democratic nominee wins district', coverage:'explicit'
+  function renderChamberTracker(targetId,title,value,total,threshold,seatType) {
+    const opposing = total - value;
+    const valueWidth = (value / total) * 100;
+    const thresholdPosition = (threshold / total) * 100;
+    byId(targetId).innerHTML = `<h4>${escapeHtml(title)}</h4><div class="seat-total"><strong>${value.toFixed(2)}</strong><span>Democratic${title === 'Senate' ? '-caucus' : ''} seats</span></div><div class="chamber-seat-bar" aria-label="${value.toFixed(2)} Democratic seats and ${opposing.toFixed(2)} Republican${title === 'Senate' ? '-aligned' : ''} seats"><i class="democratic" style="width:${valueWidth.toFixed(3)}%"></i><i class="majority-line" style="left:${thresholdPosition.toFixed(3)}%" title="Control threshold: ${threshold}"></i></div><div class="seat-split"><span>D ${value.toFixed(2)}</span><span>Control ${threshold}</span><span>R ${opposing.toFixed(2)}</span></div><p class="fine">${escapeHtml(seatType)} · fresh execution</p>`;
+  }
+
+  function renderSeatTracker(data) {
+    renderChamberTracker('houseSeatTracker','House',data.house.expectedDemocraticSeats,435,data.house.controlThreshold,'expected seats');
+    renderChamberTracker('senateSeatTracker','Senate',data.senate.expectedDemocraticCaucusSeats,100,51,'expected caucus seats');
+  }
+
+  function renderSeatComparison() {
+    const chamber = seatProjectionData[seatComparisonMode];
+    const [minimum,maximum] = chamber.chartRange;
+    const threshold = seatComparisonMode === 'house' ? chamber.democraticControlThreshold : chamber.democraticCaucusControlThreshold;
+    const thresholdPosition = ((threshold - minimum) / (maximum - minimum)) * 100;
+    const rows = chamber.observations.map((item) => {
+      const position = Math.max(0,Math.min(100,((item.democraticSeats - minimum) / (maximum - minimum)) * 100));
+      const precision = Number.isInteger(item.democraticSeats) ? item.democraticSeats.toFixed(0) : item.democraticSeats.toFixed(2).replace(/0$/,'');
+      return `<div class="comparison-row"><div class="comparison-provider"><a href="${escapeHtml(item.sourceUrl)}">${escapeHtml(item.provider)}</a><small>${escapeHtml(item.edition)}</small></div><div class="comparison-bar" aria-label="${escapeHtml(item.provider)}: ${precision} Democratic seats, ${escapeHtml(item.seatType)}"><i style="width:${position.toFixed(3)}%"></i><span class="control-mark" style="left:${thresholdPosition.toFixed(3)}%" title="Control threshold: ${threshold}"></span></div><div class="comparison-value"><strong>${precision}</strong><small>${escapeHtml(item.seatType)}</small></div></div>`;
+    }).join('');
+    byId('seatComparisonChart').innerHTML = `<div class="comparison-axis"><span>Publisher / edition</span><div><span>${minimum} D seats</span><span>Control ${threshold}</span><span>${maximum} D seats</span></div><span>Statistic</span></div>${rows}`;
+  }
+
+  function buildRaces(houseLock, current) {
+    const originalIds = new Set(houseLock.competitive_districts.map((item) => item.district));
+    const houseRaces = current.house.districts.map((item) => ({
+      id:item.contestId,state:item.state,chamber:'House',tier:item.tier,pDem:item.pDem,
+      sourceDate:current.sources.house.publisherEdition,event:'Democratic nominee wins district',coverage:'current',
+      originalLock:originalIds.has(item.contestId),candidates:item.candidates || []
     }));
-    const explicitById = Object.fromEntries(explicitHouse.map((race) => [race.id,race]));
-    const houseRaces = Object.entries(houseSeats).flatMap(([state,count]) => Array.from({length:count},(_,index) => {
-      const id = `${state}-${count === 1 ? 'AL' : index + 1}`;
-      return explicitById[id] || {id,state,chamber:'House',tier:'Aggregate-only solid seat',pDem:null,sourceDate:'2026-10-29',event:'No district-level forecast preserved',coverage:'aggregate'};
+    const senateRaces = current.senate.races.map((item) => ({
+      id:`${item.state} Senate${item.contestId.endsWith('-special') ? ' special' : ''}`,state:item.state,
+      chamber:'Senate',tier:item.tier,pDem:item.pDemocraticCaucus,sourceDate:current.sources.senate.publisherEdition,
+      event:'Democratic-caucus candidate wins seat',coverage:'current',originalLock:true,candidates:item.candidates || [],
+      independentCandidateRisk:item.independentCandidateRisk
     }));
-    const senateRaces = [];
-    Object.entries(senateRatings.races_by_rating).forEach(([tier, entries]) => {
-      entries.forEach((entry) => {
-        const special = entry.endsWith('-special');
-        const state = entry.replace('-special','');
-        senateRaces.push({id:`${state} Senate${special ? ' special' : ''}`,state,chamber:'Senate',tier,pDem:tierProbability[tier],sourceDate:senateRatings.source_as_of,event:'Democratic-caucus nominee wins seat',coverage:'explicit'});
-      });
-    });
     return [...houseRaces, ...senateRaces];
   }
 
@@ -49,9 +70,12 @@
     const stateRaces = races.filter((race) => race.state === code);
     const house = stateRaces.filter((race) => race.chamber === 'House');
     const senate = stateRaces.filter((race) => race.chamber === 'Senate');
-    const explicit = stateRaces.filter((race) => race.coverage === 'explicit');
-    const average = explicit.length ? explicit.reduce((sum,race) => sum + race.pDem,0) / explicit.length : null;
-    return {stateRaces,house,senate,explicit,average};
+    const average = stateRaces.length ? stateRaces.reduce((sum,race) => sum + race.pDem,0) / stateRaces.length : null;
+    const projectedDem = stateRaces.filter((race) => race.pDem > .5).length;
+    const projectedRep = stateRaces.filter((race) => race.pDem < .5).length;
+    const tossups = stateRaces.filter((race) => race.pDem === .5).length;
+    const expectedHouseDem = house.reduce((sum,race) => sum + race.pDem,0);
+    return {stateRaces,house,senate,average,projectedDem,projectedRep,tossups,expectedHouseDem};
   }
 
   function mapClass(summary) {
@@ -72,8 +96,8 @@
       button.style.gridColumn = column;
       button.dataset.state = code;
       button.setAttribute('aria-pressed', selectedState === code ? 'true' : 'false');
-      button.setAttribute('aria-label', `${name}: ${summary.stateRaces.length} congressional contests, ${summary.explicit.length} explicit KAHRELUM race forecasts`);
-      button.innerHTML = `<strong>${code}</strong><small>${summary.explicit.length}/${summary.stateRaces.length}</small>`;
+      button.setAttribute('aria-label', `${name}: ${summary.projectedDem} Democratic-leaning calls, ${summary.projectedRep} Republican-leaning calls, ${summary.tossups} toss-ups across ${summary.stateRaces.length} contests`);
+      button.innerHTML = `<strong>${code}</strong><small>D${summary.projectedDem} R${summary.projectedRep}${summary.tossups ? ` T${summary.tossups}` : ''}</small>`;
       button.addEventListener('click', () => selectState(code));
       map.appendChild(button);
     });
@@ -92,35 +116,35 @@
   function renderStateBrief() {
     const panel = byId('stateBrief');
     if (selectedState === 'ALL') {
-      panel.innerHTML = `<p class="eyebrow">National coverage</p><h3>Choose a state</h3><div class="state-code">USA</div><p>The map covers all 470 congressional contests. Each tile shows explicit forecasts divided by total contests in that state.</p><dl><div><dt>House contests</dt><dd>435</dd></div><div><dt>Senate contests</dt><dd>35</dd></div><div><dt>Explicit race forecasts</dt><dd>116</dd></div><div><dt>Aggregate-only House seats</dt><dd>354</dd></div></dl><div class="boundary">A dashed state still has elections; it means no race in that state received an explicit identifier in the original KAHRELUM lock.</div>`;
+      panel.innerHTML = `<p class="eyebrow">National projection</p><h3>Choose a state</h3><div class="state-code">USA</div><p>The current KAHRELUM edition prices all 470 congressional contests. Each tile shows D-leaning, R-leaning and toss-up race calls.</p><dl><div><dt>Expected Democratic House seats</dt><dd>${currentProjectionData.house.expectedDemocraticSeats.toFixed(2)}</dd></div><div><dt>Democratic House control</dt><dd>${pct(currentProjectionData.house.pDemocraticControl)}</dd></div><div><dt>Expected D-caucus Senate seats</dt><dd>${currentProjectionData.senate.expectedDemocraticCaucusSeats.toFixed(2)}</dd></div><div><dt>Democratic Senate control</dt><dd>${pct(currentProjectionData.senate.pDemocraticCaucusControl)}</dd></div></dl><div class="boundary">Map colors summarize KAHRELUM probabilities from the latest accessible rating editions, not votes counted or certified results.</div>`;
       return;
     }
     const summary = stateSummary(selectedState);
-    const averageText = summary.average === null ? 'Not modeled' : `${pct(summary.average)} average D probability`;
-    panel.innerHTML = `<p class="eyebrow">State intelligence file</p><h3>${escapeHtml(stateByCode[selectedState])}</h3><div class="state-code">${selectedState}</div><p>${summary.explicit.length ? 'At least one race-level probability is available from the preserved KAHRELUM locks.' : 'The state is inventoried, but no explicit race identifier appears in the preserved KAHRELUM lock.'}</p><dl><div><dt>House contests</dt><dd>${summary.house.length}</dd></div><div><dt>Senate contests</dt><dd>${summary.senate.length}</dd></div><div><dt>Explicit forecasts</dt><dd>${summary.explicit.length}</dd></div><div><dt>Model signal</dt><dd>${averageText}</dd></div><div><dt>Verified candidate portraits</dt><dd>0</dd></div></dl><div class="boundary">Candidate names and photographs are withheld until an official ballot roster and a reusable portrait source are verified. Current officeholders are not treated as nominees.</div>`;
+    const averageText = `${pct(summary.average)} average D probability`;
+    panel.innerHTML = `<p class="eyebrow">State projection file</p><h3>${escapeHtml(stateByCode[selectedState])}</h3><div class="state-code">${selectedState}</div><p>Current KAHRELUM race-level projection for every House and Senate contest in this state.</p><dl><div><dt>House expected D seats</dt><dd>${summary.expectedHouseDem.toFixed(2)} / ${summary.house.length}</dd></div><div><dt>Senate races</dt><dd>${summary.senate.length}</dd></div><div><dt>D / R / toss-up calls</dt><dd>${summary.projectedDem} / ${summary.projectedRep} / ${summary.tossups}</dd></div><div><dt>Model signal</dt><dd>${averageText}</dd></div><div><dt>Admitted candidate portraits</dt><dd>0</dd></div></dl><div class="boundary">Names below are source-listed discovery records, not official nominee certification. Portraits remain withheld pending identity and reuse-rights verification.</div>`;
+  }
+
+  function candidateCards(race) {
+    if (!race.candidates.length) return '<p class="roster-warning">No source-listed candidate record was returned for this race.</p>';
+    return `<div class="nominee-grid">${race.candidates.map((candidate) => {
+      const party = candidate.party || 'UNKNOWN';
+      const label = `${party}${candidate.incumbent ? ' · incumbent' : ''}`;
+      return `<div class="nominee"><span class="nominee-avatar" aria-hidden="true">${escapeHtml(party.slice(0,1) || '?')}</span><div><strong>${escapeHtml(candidate.name)}</strong><small>${escapeHtml(label)} · source-listed; portrait not admitted</small></div></div>`;
+    }).join('')}</div>`;
   }
 
   function raceCard(race) {
-    if (race.coverage === 'aggregate') {
-      return `<article class="race-record">
-        <div><div class="race-id">${escapeHtml(race.id)}</div><div class="race-tier">House · inventory record</div><p class="fine">The contest exists; its original district-level forecast does not.</p></div>
-        <div><div class="race-tier">Aggregate-only coverage</div><p><strong>No recoverable district probability</strong></p><p class="fine">The original House lock preserved 354 solid-seat counts in aggregate but did not identify which districts occupied those tiers. No party or percentage is inferred here.</p></div>
-        <div><div class="race-tier">Candidate file</div><div class="nominee-grid"><div class="nominee"><span class="nominee-avatar" aria-hidden="true">D</span><div><strong>Democratic nominee</strong><small>Identity and portrait not admitted</small></div></div><div class="nominee"><span class="nominee-avatar" aria-hidden="true">R</span><div><strong>Republican nominee</strong><small>Identity and portrait not admitted</small></div></div></div><p class="roster-warning">No placeholder person, incumbent, or unlicensed portrait has been substituted.</p></div>
-      </article>`;
-    }
     const dem = pct(race.pDem);
     const rep = pct(1 - race.pDem);
     return `<article class="race-record">
-      <div><div class="race-id">${escapeHtml(race.id)}</div><div class="race-tier">${escapeHtml(race.chamber)} · ${escapeHtml(race.tier)}</div><p class="fine">Input edition: ${escapeHtml(race.sourceDate)}</p></div>
+      <div><div class="race-id">${escapeHtml(race.id)}</div><div class="race-tier">${escapeHtml(race.chamber)} · ${escapeHtml(race.tier)}</div><p class="fine">Publisher rating edition: ${escapeHtml(race.sourceDate)}${race.originalLock ? ' · also present in original lock' : ''}</p></div>
       <div><div class="race-tier">KAHRELUM party-outcome probability</div><div class="probability-pair"><div><strong>${dem}</strong><span>Democratic side</span></div><div><strong>${rep}</strong><span>Republican side</span></div></div><div class="probability-track" aria-label="${dem} Democratic probability and ${rep} Republican probability"><i style="width:${dem}"></i></div><p class="fine">Event: ${escapeHtml(race.event)}. This is not a named-candidate probability.</p></div>
-      <div><div class="race-tier">Candidate file</div><div class="nominee-grid"><div class="nominee"><span class="nominee-avatar" aria-hidden="true">D</span><div><strong>Democratic nominee</strong><small>Identity and portrait not admitted</small></div></div><div class="nominee"><span class="nominee-avatar" aria-hidden="true">R</span><div><strong>Republican nominee</strong><small>Identity and portrait not admitted</small></div></div></div><p class="roster-warning">No placeholder person, incumbent, or unlicensed portrait has been substituted.</p></div>
+      <div><div class="race-tier">Source-listed candidate file</div>${candidateCards(race)}<p class="roster-warning">Discovery roster only; official ballot identity and portrait rights remain unverified.</p></div>
     </article>`;
   }
 
   function matchesBand(race, band) {
-    if (band === 'explicit') return race.coverage === 'explicit';
-    if (band === 'aggregate') return race.coverage === 'aggregate';
-    if (race.pDem === null) return band === 'ALL';
+    if (band === 'original') return race.originalLock;
     if (band === 'competitive') return race.pDem >= .3 && race.pDem <= .7;
     if (band === 'dem') return race.pDem > .5;
     if (band === 'rep') return race.pDem < .5;
@@ -135,7 +159,7 @@
     const filtered = races.filter((race) =>
       (selectedState === 'ALL' || race.state === selectedState) &&
       (chamber === 'ALL' || race.chamber === chamber) && matchesBand(race,band) &&
-      (!query || `${race.id} ${stateByCode[race.state]} ${race.tier} ${race.chamber}`.toLowerCase().includes(query))
+      (!query || `${race.id} ${stateByCode[race.state]} ${race.tier} ${race.chamber} ${race.candidates.map((candidate) => candidate.name).join(' ')}`.toLowerCase().includes(query))
     );
     const displayed = filtered.slice(0,displayLimit);
     byId('raceResultCount').textContent = `Showing ${displayed.length} of ${filtered.length} matching contests · ${races.length} nationwide`;
@@ -152,27 +176,30 @@
 
   async function init() {
     try {
-      const [houseResponse,senateResponse,ratingsResponse] = await Promise.all([
-        fetch('/election/house-forecast-lock.json'),fetch('/election/senate-forecast-lock.json'),fetch('/election/senate-ratings-source.json')
+      const [houseResponse,senateResponse,currentResponse,seatsResponse] = await Promise.all([
+        fetch('/election/house-forecast-lock.json'),fetch('/election/senate-forecast-lock.json'),fetch('/election/current-projections.json'),fetch('/election/seat-projections.json')
       ]);
-      if (![houseResponse,senateResponse,ratingsResponse].every((response) => response.ok)) throw new Error('One or more locked forecast files could not be loaded.');
-      const [house,senate,ratings] = await Promise.all([houseResponse.json(),senateResponse.json(),ratingsResponse.json()]);
-      races = buildRaces(house,ratings);
-      const explicitCount = races.filter((race) => race.coverage === 'explicit').length;
-      const aggregateCount = races.filter((race) => race.coverage === 'aggregate').length;
-      if (races.length !== 470 || explicitCount !== 116 || aggregateCount !== 354 || house.competitive_districts.length !== 81 || ratings.ballot_seats !== 35) throw new Error('Election inventory did not match the preserved custody record.');
-      byId('mapHouseCount').textContent = races.filter((race) => race.chamber === 'House').length;
-      byId('mapSenateCount').textContent = ratings.ballot_seats;
-      byId('mapExplicitCount').textContent = explicitCount;
-      byId('mapAggregateCount').textContent = aggregateCount;
+      if (![houseResponse,senateResponse,currentResponse,seatsResponse].every((response) => response.ok)) throw new Error('One or more forecast files could not be loaded.');
+      const [house,senate,current,seats] = await Promise.all([houseResponse.json(),senateResponse.json(),currentResponse.json(),seatsResponse.json()]);
+      seatProjectionData = seats;
+      currentProjectionData = current;
+      races = buildRaces(house,current);
+      if (races.length !== 470 || current.house.raceCount !== 435 || current.senate.raceCount !== 35 || current.coverage.racesWithSourceListedCandidates !== 470 || house.competitive_districts.length !== 81) throw new Error('Fresh election projection did not pass 470-race and candidate-coverage validation.');
+      byId('mapHouseCount').textContent = current.house.raceCount;
+      byId('mapSenateCount').textContent = current.senate.raceCount;
+      byId('mapCandidateCount').textContent = current.coverage.sourceListedCandidateRecords;
+      byId('mapPortraitCount').textContent = current.coverage.admittedPortraits;
+      byId('currentEditionLine').textContent = `Fresh retrieval and computation: ${new Date(current.computedAtUtc).toLocaleString()} · House publisher rating edition: ${current.sources.house.publisherEdition} · Senate publisher rating edition: ${current.sources.senate.publisherEdition}.`;
       byId('mapLoadStatus').hidden = true;
-      populateStateFilter(); renderMap(); renderStateBrief(); renderRaces();
+      populateStateFilter(); renderMap(); renderStateBrief(); renderRaces(); renderSeatTracker(current); renderSeatComparison();
       const resetAndRender = () => {displayLimit=40;renderRaces();};
       byId('raceSearch').addEventListener('input',resetAndRender);
       byId('raceChamber').addEventListener('change',resetAndRender);
       byId('raceBand').addEventListener('change',resetAndRender);
       byId('raceState').addEventListener('change',(event) => {selectedState=event.target.value;displayLimit=40;renderMap();renderStateBrief();renderRaces();});
       byId('loadMoreRaces').addEventListener('click',() => {displayLimit+=40;renderRaces();});
+      byId('houseComparisonButton').addEventListener('click',() => {seatComparisonMode='house';byId('houseComparisonButton').setAttribute('aria-pressed','true');byId('senateComparisonButton').setAttribute('aria-pressed','false');renderSeatComparison();});
+      byId('senateComparisonButton').addEventListener('click',() => {seatComparisonMode='senate';byId('senateComparisonButton').setAttribute('aria-pressed','true');byId('houseComparisonButton').setAttribute('aria-pressed','false');renderSeatComparison();});
       document.querySelectorAll('[data-map-chamber]').forEach((button) => button.addEventListener('click',() => {
         document.querySelectorAll('[data-map-chamber]').forEach((item) => item.setAttribute('aria-pressed','false'));
         button.setAttribute('aria-pressed','true'); byId('raceChamber').value=button.dataset.mapChamber; displayLimit=40; renderRaces();
