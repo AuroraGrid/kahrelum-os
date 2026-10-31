@@ -20,7 +20,7 @@ class CandidatePortraitTests(unittest.TestCase):
 
     def test_real_roster_coverage_and_exact_card_binding(self):
         rebuilt = portraits.build_ledger(self.current, self.catalog, self.supplement["retrievedAtUtc"], self.supplement)
-        self.assertEqual(rebuilt["records"], self.ledger["records"])
+        self.assertEqual(rebuilt["records"], [r for r in self.ledger["records"] if r.get("bioguideId")])
         self.assertEqual(rebuilt["coverage"]["sourceListedCandidateRecords"], 940)
         self.assertEqual(rebuilt["coverage"]["candidateCardsWithPortraits"], 397)
         self.assertEqual(rebuilt["coverage"]["candidateCardsWithoutPortraits"], 543)
@@ -47,6 +47,19 @@ class CandidatePortraitTests(unittest.TestCase):
         self.assertEqual(len(portraits.identity_matches(candidate, self.catalog["people"])), 1)
         self.assertEqual(portraits.identity_matches({**candidate, "state": "AK"}, self.catalog["people"]), [])
         self.assertEqual(portraits.identity_matches({**candidate, "party": "D"}, self.catalog["people"]), [])
+
+    def test_later_historical_additions_preserve_first_supplement(self):
+        earlier = copy.deepcopy(self.supplement)
+        added = {p["bioguide_id"] for p in earlier["people"] if p.get("reviewedAtUtc")}
+        self.assertEqual(len(added), 7)
+        earlier["people"] = [p for p in earlier["people"] if p["bioguide_id"] not in added]
+        earlier["archiveImages"] = [p for p in earlier["archiveImages"] if p["bioguideId"] not in added]
+        old = portraits.build_ledger(self.current, self.catalog, earlier["retrievedAtUtc"], earlier)
+        current = {r["sourceCandidateId"]: r for r in self.ledger["records"]}
+        self.assertEqual(len(old["records"]), 390)
+        self.assertTrue(all(r == current[r["sourceCandidateId"]] for r in old["records"]))
+        self.assertTrue(all(r["reviewedAtUtc"] > earlier["retrievedAtUtc"] for r in self.ledger["records"] if r.get("bioguideId") in added))
+        self.assertNotIn("W000522", {r.get("bioguideId") for r in self.ledger["records"]})
 
     def test_typo_is_not_a_match_and_explicit_alias_is(self):
         self.assertEqual(portraits.identity_matches({"name": "Pramilia Jayapal", "state": "WA", "party": "D"}, self.catalog["people"]), [])

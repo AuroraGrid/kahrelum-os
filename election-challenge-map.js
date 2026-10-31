@@ -178,7 +178,26 @@
 
   function admittedPortrait(candidate) {
     const portrait = candidate.portrait;
-    if (!portrait || portrait.status !== 'ADMITTED' || !httpsUrl(portrait.sourceUrl) || !httpsUrl(portrait.licenseUrl) || !portrait.license || !portrait.bioguideId || !portrait.reviewedAtUtc) return null;
+    if (!portrait || portrait.status !== 'ADMITTED' || !httpsUrl(portrait.sourceUrl) || !httpsUrl(portrait.licenseUrl) || !portrait.license || !portrait.reviewedAtUtc) return null;
+    if (portrait.identityType === 'FEC_CANDIDATE') {
+      const id = String(portrait.identityId || '');
+      const prefix = portrait.chamber === 'House' ? 'H' : portrait.chamber === 'Senate' ? 'S' : '';
+      const revisionUrl = `https://commons.wikimedia.org/w/index.php?oldid=${portrait.commonsRevisionId}`;
+      const license = /^CC BY(?:-SA)? (1\.0|2\.0|2\.5|3\.0|4\.0)$/.exec(portrait.license);
+      const licenseOkay = portrait.license === 'Public domain' ? portrait.licenseUrl === `${revisionUrl}#Licensing`
+        : portrait.license === 'CC0' ? /^https:\/\/creativecommons\.org\/publicdomain\/zero\/1\.0(?:\/deed\.[a-z]+)?\/?$/.test(portrait.licenseUrl)
+        : license && new RegExp(`^https://creativecommons\\.org/licenses/${portrait.license.includes('BY-SA') ? 'by-sa' : 'by'}/${license[1].replace('.', '\\.')}(/deed\\.[a-z]+)?/?$`).test(portrait.licenseUrl);
+      if (!prefix || !/^[A-Z]{2}$/.test(portrait.state) || !new RegExp(`^${prefix}\\d${portrait.state}\\d{5}$`).test(id)
+          || portrait.bioguideId || portrait.identitySourceUrl !== `https://www.fec.gov/data/candidate/${id}/?cycle=2026`
+          || !/^[a-f0-9]{64}$/.test(portrait.identitySourceSha256 || '') || !/^[a-f0-9]{40}$/.test(portrait.sourceOriginalImageSha1 || '')
+          || !Number.isSafeInteger(portrait.commonsRevisionId) || portrait.commonsRevisionId <= 0 || portrait.sourceUrl !== revisionUrl
+          || !licenseOkay || !String(portrait.attribution || '').trim() || !portrait.rightsBasis
+          || portrait.url !== portrait.sourceThumbnailUrl || !httpsUrl(portrait.url)
+          || !['upload.wikimedia.org','thumb.wikimedia.org'].includes(new URL(portrait.url).hostname)
+          || portrait.imageCheck?.httpStatus !== 200 || !String(portrait.imageCheck?.contentType || '').startsWith('image/')) return null;
+      return portrait;
+    }
+    if ((portrait.identityType && portrait.identityType !== 'BIOGUIDE') || !/^[A-Z][0-9]{6}$/.test(portrait.bioguideId || '')) return null;
     const localImage = /^[A-Z][0-9]{6}$/.test(portrait.bioguideId) && /^[a-f0-9]{64}$/.test(portrait.imageSha256 || '') && portrait.url === `/assets/candidate-portraits/${portrait.bioguideId}-${portrait.imageSha256.slice(0,16)}.jpg`;
     if (!httpsUrl(portrait.url) && !localImage) return null;
     return portrait;
@@ -206,7 +225,7 @@
       if (!portrait || duplicates.has(id) || portrait.state !== race.state || portrait.party !== candidate.party || portrait.contestId !== race.contestId || portrait.chamber !== race.chamber || normalizePortraitName(portrait.candidateName) !== normalizePortraitName(candidate.name) || !admittedPortrait({portrait})) return;
       candidate.portrait = portrait;
       matchedCards += 1;
-      people.add(portrait.bioguideId);
+      people.add(portrait.bioguideId || `FEC:${portrait.identityId}`);
     }));
     return {matchedCards,uniquePeople:people.size,available:true};
   }
@@ -303,7 +322,7 @@
     }
     const summary = stateSummary(selectedState);
     const averageText = summary.average === null ? `No ${mapChamber} contest on the current file` : `${pct(summary.average)} average D probability`;
-    panel.innerHTML = `<p class="eyebrow">State projection file</p><h3>${escapeHtml(stateByCode[selectedState])}</h3><div class="state-code">${selectedState}</div><p>Current KAHRELUM race-level projection for the selected ${mapChamber === 'ALL' ? 'House and Senate' : mapChamber} view in this state.</p><dl><div><dt>House expected D seats</dt><dd>${summary.expectedHouseDem.toFixed(2)} / ${summary.house.length}</dd></div><div><dt>Senate races</dt><dd>${summary.senate.length}</dd></div><div><dt>D / R / toss-up calls</dt><dd>${summary.projectedDem} / ${summary.projectedRep} / ${summary.tossups}</dd></div><div><dt>Model signal</dt><dd>${averageText}</dd></div><div><dt>Verified portraits in this view</dt><dd>${portraitCount(summary.stateRaces)} / ${summary.stateRaces.reduce((total,race) => total + race.candidates.length,0)}</dd></div></dl><div class="boundary">Names are source-listed discovery records, not official nominee certification. Photos have recorded identity and public-domain provenance; initials mark records without a verified photo.</div>`;
+    panel.innerHTML = `<p class="eyebrow">State projection file</p><h3>${escapeHtml(stateByCode[selectedState])}</h3><div class="state-code">${selectedState}</div><p>Current KAHRELUM race-level projection for the selected ${mapChamber === 'ALL' ? 'House and Senate' : mapChamber} view in this state.</p><dl><div><dt>House expected D seats</dt><dd>${summary.expectedHouseDem.toFixed(2)} / ${summary.house.length}</dd></div><div><dt>Senate races</dt><dd>${summary.senate.length}</dd></div><div><dt>D / R / toss-up calls</dt><dd>${summary.projectedDem} / ${summary.projectedRep} / ${summary.tossups}</dd></div><div><dt>Model signal</dt><dd>${averageText}</dd></div><div><dt>Verified portraits in this view</dt><dd>${portraitCount(summary.stateRaces)} / ${summary.stateRaces.reduce((total,race) => total + race.candidates.length,0)}</dd></div></dl><div class="boundary">Names are source-listed discovery records, not official nominee certification. Photos have recorded identity and reuse-license provenance; initials mark records without a verified photo.</div>`;
   }
 
   function candidateCards(race) {
@@ -317,7 +336,8 @@
       const initials = candidate.name.split(/\s+/).map((part) => part[0]).join('').slice(0,2) || '?';
       const fallback = `<span class="nominee-avatar party-${escapeHtml(party.toLowerCase())}" aria-hidden="true">${escapeHtml(initials)}</span>`;
       const visual = `<span class="nominee-visual">${fallback}${portrait ? `<img class="nominee-photo" src="${escapeHtml(portrait.url)}" alt="${escapeHtml(candidate.name)}" width="56" height="56" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : ''}</span>`;
-      const custody = portrait ? `<a class="portrait-source" href="${escapeHtml(portrait.sourceUrl)}" title="${escapeHtml(portrait.attribution)}">Photo source</a> · <a class="portrait-source" href="${escapeHtml(portrait.licenseUrl)}">${escapeHtml(portrait.license)}</a>` : 'Photo not yet verified';
+      const creator = portrait?.identityType === 'FEC_CANDIDATE' ? `${escapeHtml(portrait.attribution)} · ` : '';
+      const custody = portrait ? `${creator}<a class="portrait-source" href="${escapeHtml(portrait.sourceUrl)}" title="${escapeHtml(portrait.attribution)}">Photo source</a> · <a class="portrait-source" href="${escapeHtml(portrait.licenseUrl)}">${escapeHtml(portrait.license)}</a>${portrait.identityType === 'FEC_CANDIDATE' ? ' · Source thumbnail; no additional edits' : ''}` : 'Photo not yet verified';
       return `<div class="nominee">${visual}<div><strong>${escapeHtml(candidate.name)}</strong><small>${escapeHtml(label)}</small><small class="portrait-credit">${custody}</small></div></div>`;
     }).join('')}</div>`;
   }
@@ -418,7 +438,7 @@
       byId('mapSenateCount').textContent = current.senate.raceCount;
       byId('mapCandidateCount').textContent = current.coverage.sourceListedCandidateRecords;
       byId('mapPortraitCount').textContent = portraitCoverage.available ? portraitCoverage.matchedCards : '—';
-      byId('mapPortraitCount').title = portraitCoverage.available ? `${portraitCoverage.matchedCards} of ${current.coverage.sourceListedCandidateRecords} source-listed candidate records have an identity-matched public-domain photo.` : 'Portrait ledger unavailable; candidate names and initials remain visible.';
+      byId('mapPortraitCount').title = portraitCoverage.available ? `${portraitCoverage.matchedCards} of ${current.coverage.sourceListedCandidateRecords} source-listed candidate records have an identity-matched photo with recorded reuse rights.` : 'Portrait ledger unavailable; candidate names and initials remain visible.';
       byId('currentEditionLine').textContent = `Mapped edition computed: ${new Date(current.computedAtUtc).toLocaleString()} · House publisher rating edition: ${current.sources.house.publisherEdition} · Senate publisher rating edition: ${current.sources.senate.publisherEdition}.`;
       byId('mapLoadStatus').hidden = true;
       byId('raceList').addEventListener('error',handlePortraitError,true);
