@@ -269,7 +269,7 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertEqual((new_numeric["On Point Politics"]["houseDemocraticSeats"], new_numeric["On Point Politics"]["senateDemocraticSeats"]), (253.0, 54.6))
         self.assertEqual((new_numeric["VotePredictor"]["houseDemocraticControlPct"], new_numeric["VotePredictor"]["senateDemocraticControlPct"]), (76.0, None))
         self.assertEqual(new_numeric["VotePredictor"]["houseDemocraticSeats"], 229.7)
-        self.assertEqual((new_numeric["Midterm Forecast"]["houseDemocraticControlPct"], new_numeric["Midterm Forecast"]["senateDemocraticControlPct"]), (91.0, 71.0))
+        self.assertEqual((new_numeric["Midterm Forecast"]["houseDemocraticControlPct"], new_numeric["Midterm Forecast"]["senateDemocraticControlPct"]), (91.0, 72.0))
         datum = next(row for row in challengers["records"] if row["provider"] == "Datum Signals")
         self.assertEqual((datum["houseDemocraticControlPct"], datum["senateDemocraticControlPct"]), (71.0, 63.0))
         self.assertFalse({"The Economist", "Silver Bulletin", "Sam Brown", "Jon Elder"} & {row["provider"] for row in challengers["records"]})

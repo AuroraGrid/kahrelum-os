@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-10-31T14:12:52.901Z",
+  "checkedAtUtc": "2026-10-31T14:26:41.819Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -233,16 +233,18 @@
       "edition": "2026 Senate and House",
       "sourceUrl": "https://midtermforecast.com/",
       "houseDemocraticControlPct": 91.0,
-      "senateDemocraticControlPct": 71.0,
+      "senateDemocraticControlPct": 72.0,
       "houseDemocraticSeats": 236.0,
       "houseSeatType": "median",
       "senateDemocraticSeats": 53.0,
       "senateSeatType": "median Democratic seats",
-      "sourceEdition": "Model run Oct. 31, 7:42 AM ET; polls through Oct. 31; retrieved Oct. 31 12:54 UTC",
+      "sourceEdition": "House page run Oct. 31, 7:42 AM ET; Senate page run Oct. 31, 10:39 AM ET; polls through Oct. 31; Senate retrieved Oct. 31 14:26 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
       "retrievedAtUtc": "2026-10-31T12:54:17.306Z",
       "rawSha256": "c0c789e4e1eab7aa7429d5e346ca3d6502a2b5a94dc5b39049db7a3ebe0e3e79",
-      "note": "The model-run timestamp advanced to Oct. 31 7:42 AM ET while the admitted 91% House control, 71% Senate control, 236-seat House median and 53-seat Senate median stayed unchanged. The Senate separately assigns 1% to independents deciding control."
+      "retrievedSenateAtUtc": "2026-10-31T14:26:41.819Z",
+      "rawSha256Senate": "fccd09ae74e347ad21e7591ef89884c9563f3da019b60fb51d67a5f8f8173496",
+      "note": "The Oct. 31 10:39 AM ET Senate run raised Democratic Senate control from 71% to 72% while retaining a 53-seat median and a separate 1% chance of independents deciding control. The House page remains on its 7:42 AM ET run at 91% control and a 236-seat median; House and Senate cutoffs are therefore kept distinct. The source HTTP Date was ahead of the local observer clock and is retained only in the private retrieval receipt."
     }
   ]
 }
