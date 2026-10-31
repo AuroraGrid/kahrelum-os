@@ -8,13 +8,13 @@ const test = require('node:test');
 
 const root = path.resolve(__dirname, '..');
 const source = fs.readFileSync(path.join(root, 'scripts/firebase-overlay-release.cjs'), 'utf8');
-const readerSource = source.match(/function readRepositoryBytes\\(name\\) \\{[\\s\\S]*?\\n\\}/)?.[0];
+const readerSource = source.match(/function readRepositoryBytes\(name\) \{[\s\S]*?\n\}/)?.[0];
 assert.ok(readerSource, 'The production Firebase overlay source-byte reader must exist');
 
 function makeReader(fileSystem, base = root) {
   // Execute only the small, isolated source-reader function. Never execute the
   // Firebase deployment command in a unit test.
-  return new Function('fs', 'path', 'ROOT', 'Buffer', readerSource + '\\nreturn readRepositoryBytes;')(fileSystem, path, base, Buffer);
+  return new Function('fs', 'path', 'ROOT', 'Buffer', readerSource + '\nreturn readRepositoryBytes;')(fileSystem, path, base, Buffer);
 }
 
 test('Firebase release preserves JPEG and other image bytes exactly', () => {
@@ -44,6 +44,6 @@ test('Text-file CRLF normalization remains unchanged', () => {
   const name = 'nfl/trades.html';
   const reader = makeReader(fs);
   const original = fs.readFileSync(path.join(root, name));
-  const expected = Buffer.from(original.toString('utf8').replace(/\\r?\\n/g, '\\r\\n'), 'utf8');
+  const expected = Buffer.from(original.toString('utf8').replace(/\r?\n/g, '\r\n'), 'utf8');
   assert.ok(reader(name).equals(expected));
 });
