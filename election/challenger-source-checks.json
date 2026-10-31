@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-10-31T14:07:43Z",
+  "checkedAtUtc": "2026-10-31T13:33:28.083Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -124,11 +124,11 @@
       "houseSeatType": "average",
       "senateDemocraticSeats": 52.8,
       "senateSeatType": "average",
-      "sourceEdition": "Public chambers.csv commit 89a378b, Oct. 31 13:41:19 UTC; retrieved Oct. 31 14:07:43 UTC",
+      "sourceEdition": "Public chambers.csv commit 89a378b; locally retrieved Oct. 31 13:33:28 UTC; GitHub commit metadata reports 13:41:19 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_DATA_FEED_VERIFIED",
-      "retrievedAtUtc": "2026-10-31T14:07:43Z",
+      "retrievedAtUtc": "2026-10-31T13:33:28.083Z",
       "rawSha256": "afcd447b028b8ffa2e3cf993b315c3a15b4e19f8699c2bc76f2e4acf9ba515af",
-      "note": "Values came from ElectIndex's first-party public GitHub chambers.csv at commit 89a378b3cfa7052f597ce58c865a2c0ff1442b0d. Relative to the prior admitted feed, Democratic House control moved from 91.8% to 91.5%, Democratic Senate control from 72.5% to 73.3%, average Democratic House seats from 247.5 to 247.6, and average Democratic Senate seats from 52.9 to 52.8. Projected integer seats remained 244 House and 53 Senate."
+      "note": "Values came from ElectIndex's first-party public GitHub chambers.csv at commit 89a378b3cfa7052f597ce58c865a2c0ff1442b0d. Relative to the prior admitted feed, Democratic House control moved from 91.8% to 91.5%, Democratic Senate control from 72.5% to 73.3%, average Democratic House seats from 247.5 to 247.6, and average Democratic Senate seats from 52.9 to 52.8. Projected integer seats remained 244 House and 53 Senate. GitHub's commit metadata and HTTP Date clocks were ahead of the local observer clock; those remote timestamps are preserved as source metadata but are not used as the retrieval-custody timestamp."
     },
     {
       "provider": "Datum Signals",
