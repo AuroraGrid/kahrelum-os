@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.2.0",
+  "source": "Cook Political Report 2026 Senate Race Ratings",
+  "source_url": "https://www.cookpolitical.com/ratings/senate-race-ratings",
+  "source_as_of": "2026-10-20",
+  "recovered_after_market_exposure": true,
+  "source_custody": "Read current first-party rating table showing Oct 20, 2026. Not an archived timestamp-verified original capture; provider may update the URL.",
+  "source_kind": "third-party editorial race competitiveness tiers, not numeric probabilities",
+  "off_ballot_D_caucus_seats": 34,
+  "off_ballot_R_seats": 31,
+  "ballot_seats": 35,
+  "democratic_caucus_control_threshold": 51,
+  "tie_control_assumption": "50-50 is treated as Republican controlled owing to Republican vice president; re-check official venue-specific settlement, independent caucusing, Senate membership and VP at outcome.",
+  "binary_model_limitation": "All 35 races reduced to Democratic-caucus vs Republican-caucus outcome; non-party and multi-candidate outcome risks not fully represented.",
+  "races_by_rating": {
+    "Solid D": ["CO", "DE", "IL", "MA", "NJ", "NM", "OR", "RI", "VA"],
+    "Likely D": ["GA", "NC"],
+    "Lean D": ["MN", "NH"],
+    "Toss Up": ["AK", "IA", "KS", "ME", "MI", "OH-special", "TX"],
+    "Lean R": ["SC"],
+    "Likely R": ["MS", "NE"],
+    "Solid R": ["AL", "AR", "FL-special", "ID", "KY", "LA", "MT", "OK", "SD", "TN", "WV", "WY"]
+  },
+  "held_by_democratic_caucus": ["CO", "DE", "IL", "MA", "NJ", "NM", "OR", "RI", "VA", "GA", "MN", "NH", "MI"],
+  "background_source_urls": [
+    "https://www.dailypress.senate.gov/on-the-floor/senate-facts/",
+    "https://ballotpedia.org/United_States_Senate_elections%2C_2026"
+  ]
+}

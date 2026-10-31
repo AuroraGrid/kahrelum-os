@@ -154,6 +154,35 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertIn("publicReleaseIdentity", release)
         self.assertIn("election-challenge.html", release)
 
+    def test_election_challenge_maps_only_locked_race_coverage(self):
+        import json
+
+        page = self.read("election-challenge.html")
+        script = self.read("election-challenge-map.js")
+        release = self.read("scripts/firebase-overlay-release.cjs")
+        house = json.loads(self.read("election/house-forecast-lock.json"))
+        senate = json.loads(self.read("election/senate-ratings-source.json"))
+        self.assertEqual(len(house["competitive_districts"]), 81)
+        self.assertEqual(senate["ballot_seats"], 35)
+        self.assertIn('id="challengeUsMap"', page)
+        self.assertIn('id="raceList"', page)
+        self.assertIn('id="loadMoreRaces"', page)
+        self.assertIn("census.gov/data/tables/2020/dec/2020-apportionment-data.html", page)
+        self.assertIn("Candidate and portrait boundary", page)
+        self.assertIn("Current officeholders are not treated as nominees", script)
+        self.assertIn("races.length !== 470", script)
+        self.assertIn("explicitCount !== 116", script)
+        self.assertIn("aggregateCount !== 354", script)
+        self.assertNotIn("<img", script.lower())
+        for path in (
+            "election-challenge-map.css",
+            "election-challenge-map.js",
+            "election/house-forecast-lock.json",
+            "election/senate-forecast-lock.json",
+            "election/senate-ratings-source.json",
+        ):
+            self.assertIn(path, release)
+
     def test_investigations_names_marion_county_state(self):
         page = self.read("investigations.html")
         self.assertIn("Marion County, Indiana case", page)

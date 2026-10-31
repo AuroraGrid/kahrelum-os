@@ -1,0 +1,450 @@
+{
+  "schema_version": "0.1.0",
+  "event_id": "KAH-US-HOUSE-2026-10-29",
+  "artifact": "KAHRELUM_US_House_Forecast_20261029.md",
+  "sha256": "e8926018e1dd38b8c0921a6c48578e4434220da0f44e969c92bf8452a9596171",
+  "original_claimed_lock_at": "2026-10-29T13:11:00-04:00",
+  "import_provenance": "User-owned library artifact, independently materialized at project assembly; original lock time is stated in artifact and is not cryptographically attested by this later import.",
+  "model_type": "MANUAL_EVIDENCE_LED_NOT_HISTORICALLY_VALIDATED",
+  "forecast_probability": {
+    "dem_house_control": 0.91,
+    "rep_house_control": 0.09
+  },
+  "expected_dem_seats": 228.02,
+  "interval_80_dem_seats": [
+    218,
+    238
+  ],
+  "sigma_dem_seats_assumed": 8.0,
+  "tier_mapping": {
+    "Solid Democratic": 0.99,
+    "Likely Democratic": 0.88,
+    "Lean Democratic": 0.7,
+    "Toss-up": 0.5,
+    "Lean Republican": 0.3,
+    "Likely Republican": 0.12,
+    "Solid Republican": 0.01
+  },
+  "tier_counts": {
+    "Solid Democratic": 186,
+    "Likely Democratic": 18,
+    "Lean Democratic": 16,
+    "Toss-up": 17,
+    "Lean Republican": 17,
+    "Likely Republican": 13,
+    "Solid Republican": 168
+  },
+  "competitive_districts": [
+    {
+      "district": "CA-13",
+      "tier": "Likely Democratic",
+      "p_dem": 0.88
+    },
+    {
+      "district": "CA-45",
+      "tier": "Likely Democratic",
+      "p_dem": 0.88
+    },
+    {
+      "district": "IN-1",
+      "tier": "Likely Democratic",
+      "p_dem": 0.88
+    },
+    {
+      "district": "MI-8",
+      "tier": "Likely Democratic",
+      "p_dem": 0.88
+    },
+    {
+      "district": "MN-2",
+      "tier": "Likely Democratic",
+      "p_dem": 0.88
+    },
+    {
+      "district": "NE-2",
+      "tier": "Likely Democratic",
+      "p_dem": 0.88
+    },
+    {
+      "district": "NH-1",
+      "tier": "Likely Democratic",
+      "p_dem": 0.88
+    },
+    {
+      "district": "NJ-9",
+      "tier": "Likely Democratic",
+      "p_dem": 0.88
+    },
+    {
+      "district": "NV-1",
+      "tier": "Likely Democratic",
+      "p_dem": 0.88
+    },
+    {
+      "district": "NV-3",
+      "tier": "Likely Democratic",
+      "p_dem": 0.88
+    },
+    {
+      "district": "NV-4",
+      "tier": "Likely Democratic",
+      "p_dem": 0.88
+    },
+    {
+      "district": "NY-3",
+      "tier": "Likely Democratic",
+      "p_dem": 0.88
+    },
+    {
+      "district": "NY-4",
+      "tier": "Likely Democratic",
+      "p_dem": 0.88
+    },
+    {
+      "district": "NY-19",
+      "tier": "Likely Democratic",
+      "p_dem": 0.88
+    },
+    {
+      "district": "OH-1",
+      "tier": "Likely Democratic",
+      "p_dem": 0.88
+    },
+    {
+      "district": "OH-13",
+      "tier": "Likely Democratic",
+      "p_dem": 0.88
+    },
+    {
+      "district": "TX-28",
+      "tier": "Likely Democratic",
+      "p_dem": 0.88
+    },
+    {
+      "district": "VA-7",
+      "tier": "Likely Democratic",
+      "p_dem": 0.88
+    },
+    {
+      "district": "AZ-1",
+      "tier": "Lean Democratic",
+      "p_dem": 0.7
+    },
+    {
+      "district": "AZ-6",
+      "tier": "Lean Democratic",
+      "p_dem": 0.7
+    },
+    {
+      "district": "CA-48",
+      "tier": "Lean Democratic",
+      "p_dem": 0.7
+    },
+    {
+      "district": "CO-8",
+      "tier": "Lean Democratic",
+      "p_dem": 0.7
+    },
+    {
+      "district": "FL-25",
+      "tier": "Lean Democratic",
+      "p_dem": 0.7
+    },
+    {
+      "district": "IA-1",
+      "tier": "Lean Democratic",
+      "p_dem": 0.7
+    },
+    {
+      "district": "IA-3",
+      "tier": "Lean Democratic",
+      "p_dem": 0.7
+    },
+    {
+      "district": "NC-11",
+      "tier": "Lean Democratic",
+      "p_dem": 0.7
+    },
+    {
+      "district": "NJ-7",
+      "tier": "Lean Democratic",
+      "p_dem": 0.7
+    },
+    {
+      "district": "NM-2",
+      "tier": "Lean Democratic",
+      "p_dem": 0.7
+    },
+    {
+      "district": "PA-7",
+      "tier": "Lean Democratic",
+      "p_dem": 0.7
+    },
+    {
+      "district": "PA-10",
+      "tier": "Lean Democratic",
+      "p_dem": 0.7
+    },
+    {
+      "district": "TX-34",
+      "tier": "Lean Democratic",
+      "p_dem": 0.7
+    },
+    {
+      "district": "VA-2",
+      "tier": "Lean Democratic",
+      "p_dem": 0.7
+    },
+    {
+      "district": "WA-3",
+      "tier": "Lean Democratic",
+      "p_dem": 0.7
+    },
+    {
+      "district": "WI-3",
+      "tier": "Lean Democratic",
+      "p_dem": 0.7
+    },
+    {
+      "district": "CA-22",
+      "tier": "Toss-up",
+      "p_dem": 0.5
+    },
+    {
+      "district": "FL-14",
+      "tier": "Toss-up",
+      "p_dem": 0.5
+    },
+    {
+      "district": "FL-22",
+      "tier": "Toss-up",
+      "p_dem": 0.5
+    },
+    {
+      "district": "IA-2",
+      "tier": "Toss-up",
+      "p_dem": 0.5
+    },
+    {
+      "district": "KY-6",
+      "tier": "Toss-up",
+      "p_dem": 0.5
+    },
+    {
+      "district": "MI-4",
+      "tier": "Toss-up",
+      "p_dem": 0.5
+    },
+    {
+      "district": "MI-7",
+      "tier": "Toss-up",
+      "p_dem": 0.5
+    },
+    {
+      "district": "MI-10",
+      "tier": "Toss-up",
+      "p_dem": 0.5
+    },
+    {
+      "district": "MT-1",
+      "tier": "Toss-up",
+      "p_dem": 0.5
+    },
+    {
+      "district": "NC-1",
+      "tier": "Toss-up",
+      "p_dem": 0.5
+    },
+    {
+      "district": "NY-17",
+      "tier": "Toss-up",
+      "p_dem": 0.5
+    },
+    {
+      "district": "OH-7",
+      "tier": "Toss-up",
+      "p_dem": 0.5
+    },
+    {
+      "district": "OH-9",
+      "tier": "Toss-up",
+      "p_dem": 0.5
+    },
+    {
+      "district": "PA-8",
+      "tier": "Toss-up",
+      "p_dem": 0.5
+    },
+    {
+      "district": "TX-15",
+      "tier": "Toss-up",
+      "p_dem": 0.5
+    },
+    {
+      "district": "TX-35",
+      "tier": "Toss-up",
+      "p_dem": 0.5
+    },
+    {
+      "district": "VA-1",
+      "tier": "Toss-up",
+      "p_dem": 0.5
+    },
+    {
+      "district": "AK-AL",
+      "tier": "Lean Republican",
+      "p_dem": 0.3
+    },
+    {
+      "district": "AL-2",
+      "tier": "Lean Republican",
+      "p_dem": 0.3
+    },
+    {
+      "district": "AZ-2",
+      "tier": "Lean Republican",
+      "p_dem": 0.3
+    },
+    {
+      "district": "CO-4",
+      "tier": "Lean Republican",
+      "p_dem": 0.3
+    },
+    {
+      "district": "CO-5",
+      "tier": "Lean Republican",
+      "p_dem": 0.3
+    },
+    {
+      "district": "FL-13",
+      "tier": "Lean Republican",
+      "p_dem": 0.3
+    },
+    {
+      "district": "FL-27",
+      "tier": "Lean Republican",
+      "p_dem": 0.3
+    },
+    {
+      "district": "ME-2",
+      "tier": "Lean Republican",
+      "p_dem": 0.3
+    },
+    {
+      "district": "MN-1",
+      "tier": "Lean Republican",
+      "p_dem": 0.3
+    },
+    {
+      "district": "NV-2",
+      "tier": "Lean Republican",
+      "p_dem": 0.3
+    },
+    {
+      "district": "NY-21",
+      "tier": "Lean Republican",
+      "p_dem": 0.3
+    },
+    {
+      "district": "OH-10",
+      "tier": "Lean Republican",
+      "p_dem": 0.3
+    },
+    {
+      "district": "OH-15",
+      "tier": "Lean Republican",
+      "p_dem": 0.3
+    },
+    {
+      "district": "PA-1",
+      "tier": "Lean Republican",
+      "p_dem": 0.3
+    },
+    {
+      "district": "SC-1",
+      "tier": "Lean Republican",
+      "p_dem": 0.3
+    },
+    {
+      "district": "TX-23",
+      "tier": "Lean Republican",
+      "p_dem": 0.3
+    },
+    {
+      "district": "WI-1",
+      "tier": "Lean Republican",
+      "p_dem": 0.3
+    },
+    {
+      "district": "AR-2",
+      "tier": "Likely Republican",
+      "p_dem": 0.12
+    },
+    {
+      "district": "CO-3",
+      "tier": "Likely Republican",
+      "p_dem": 0.12
+    },
+    {
+      "district": "FL-7",
+      "tier": "Likely Republican",
+      "p_dem": 0.12
+    },
+    {
+      "district": "FL-9",
+      "tier": "Likely Republican",
+      "p_dem": 0.12
+    },
+    {
+      "district": "FL-16",
+      "tier": "Likely Republican",
+      "p_dem": 0.12
+    },
+    {
+      "district": "IN-5",
+      "tier": "Likely Republican",
+      "p_dem": 0.12
+    },
+    {
+      "district": "KS-2",
+      "tier": "Likely Republican",
+      "p_dem": 0.12
+    },
+    {
+      "district": "MO-2",
+      "tier": "Likely Republican",
+      "p_dem": 0.12
+    },
+    {
+      "district": "NC-3",
+      "tier": "Likely Republican",
+      "p_dem": 0.12
+    },
+    {
+      "district": "NC-13",
+      "tier": "Likely Republican",
+      "p_dem": 0.12
+    },
+    {
+      "district": "NE-1",
+      "tier": "Likely Republican",
+      "p_dem": 0.12
+    },
+    {
+      "district": "TX-9",
+      "tier": "Likely Republican",
+      "p_dem": 0.12
+    },
+    {
+      "district": "VA-5",
+      "tier": "Likely Republican",
+      "p_dem": 0.12
+    }
+  ],
+  "limitations": [
+    "81 district IDs are explicit; 354 solid-rated district IDs not present in source",
+    "The 8-seat SD is judgmentally assumed, not historically calibrated",
+    "No official or first-party independent pre-cutoff source snapshot authentication",
+    "Aggregate probability assumes two-party House majority for forecast model; venue contract terms may differ"
+  ]
+}
