@@ -180,9 +180,25 @@ function requireFirebaseTools() {
 }
 
 async function fetchBytes(url) {
-  const response = await fetch(url, { redirect: 'follow' });
-  if (!response.ok) fail(`${url} returned HTTP ${response.status}`);
-  return Buffer.from(await response.arrayBuffer());
+  const previewRequest = new URL(url).hostname.includes('--safe-overlay-');
+  const attempts = previewRequest ? 5 : 1;
+  let lastStatus = 0;
+  for (let attempt = 0; attempt < attempts; attempt += 1) {
+    const requestUrl = new URL(url);
+    if (previewRequest) requestUrl.searchParams.set('kahrelum_preview_check', `${Date.now()}-${attempt}`);
+    const response = await fetch(requestUrl, {
+      redirect: 'follow',
+      headers: previewRequest ? { 'Cache-Control': 'no-cache', Pragma: 'no-cache' } : {},
+    });
+    if (response.ok) return Buffer.from(await response.arrayBuffer());
+    lastStatus = response.status;
+    if (attempt + 1 < attempts && (response.status === 404 || response.status >= 500)) {
+      await new Promise((resolve) => setTimeout(resolve, 1000 * (attempt + 1)));
+      continue;
+    }
+    break;
+  }
+  fail(`${url} returned HTTP ${lastStatus}`);
 }
 
 function normalizeConfig(config) {
