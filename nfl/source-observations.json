@@ -2760,6 +2760,30 @@
       "originalUrlPreserved": false,
       "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT",
       "contentFingerprint": "7c1b9f5e909b411f1a65"
+    },
+    {
+      "id": "OBS-7422769d896c947ccaaa",
+      "sourceIntegrationId": "USER_SCREENSHOT_TIP",
+      "sourceName": "User-supplied screenshot (unverified; original post not found)",
+      "title": "UNVERIFIED USER TIP: Screenshot claims Colts are open to trading Jonathan Taylor and talks are active",
+      "originalUrl": "https://github.com/AuroraGrid/kahrelum-os/blob/main/research/nfl-2026-trade-deadline/SCREENSHOT_TIP_TAYLOR_20261031.md",
+      "normalizedUrl": "https://github.com/AuroraGrid/kahrelum-os/blob/main/research/nfl-2026-trade-deadline/SCREENSHOT_TIP_TAYLOR_20261031.md",
+      "sourcePublishedAt": null,
+      "firstObservedAt": "2026-10-31T11:23:00Z",
+      "lastObservedAt": "2026-10-31T11:23:00Z",
+      "evidenceClass": "UNVERIFIED",
+      "claimType": "UNVERIFIED_USER_SCREENSHOT_TIP",
+      "reviewStatus": "REVIEW_REQUIRED",
+      "publicationGate": "BLOCKED_PENDING_ORIGINAL_POST_VERIFICATION",
+      "originalUrlPreserved": false,
+      "linkCustody": "CONVERSATION_SCREENSHOT_NO_VERIFIED_REPORT_URL",
+      "contentFingerprint": "7422769d896c947ccaaa",
+      "candidateId": "K26-017",
+      "player": "Jonathan Taylor",
+      "team": "IND",
+      "claimedAttribution": "Adam Schefter (as displayed in screenshot, NOT authenticated)",
+      "screenshotSha256": "7422769d896c947ccaaabb0e1e29304778d5fb0264af01c20efb1f0233994e9e",
+      "sourceRecoveryStatus": "NO_VERIFIED_X_STATUS_OR_ESPN_ORIGINAL"
     }
   ],
   "contradictions": []

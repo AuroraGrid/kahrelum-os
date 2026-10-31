@@ -1568,6 +1568,15 @@
       "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
       "priority": "NORMAL",
       "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-7422769d896c947ccaaa",
+      "queuedAt": "2026-10-31T11:23:00Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_POST_VERIFICATION",
+      "priority": "HIGH",
+      "status": "OPEN",
+      "candidateId": "K26-017",
+      "reviewNote": "User-supplied screenshot is not proof the attributed post exists; verify original Schefter X status or ESPN report before changing availability, forecast, or editorial claims."
     }
   ]
 }
