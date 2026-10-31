@@ -96,7 +96,7 @@ These dossiers demonstrate a research process and evidence discipline. They shou
 ---
 
 **Contact:** hr185882@gmail.com  
-**LinkedIn:** https://www.linkedin.com/in/hasan-kazmi-a756b4407  
+**LinkedIn:** https://www.linkedin.com/in/hasan-raza-kazmi  
 **KAHRELUM:** https://kahrelum-public-hosting.web.app
 
 
