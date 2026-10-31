@@ -1,6 +1,12 @@
 (() => {
   'use strict';
 
+  // Keep the projection shell and its data dependencies on one release generation.
+  // The query token prevents an already-open production browser from pairing a new
+  // HTML shell with an older cached map bundle or projection payload.
+  const ASSET_VERSION = '20261031-2';
+  const readJson = (assetPath) => fetch(`${assetPath}?v=${ASSET_VERSION}`, { cache: 'no-store' });
+
   const states = [
     ['AK','Alaska',2,1],['AL','Alabama',7,7],['AR','Arkansas',6,5],['AZ','Arizona',6,2],['CA','California',5,1],
     ['CO','Colorado',5,3],['CT','Connecticut',3,11],['DE','Delaware',5,10],['FL','Florida',8,9],['GA','Georgia',7,8],
@@ -273,7 +279,7 @@
   async function init() {
     try {
       const [houseResponse,senateResponse,currentResponse,seatsResponse,challengerResponse,mapResponse,portraitResponse] = await Promise.all([
-        fetch('/election/house-forecast-lock.json'),fetch('/election/senate-forecast-lock.json'),fetch('/election/current-projections.json'),fetch('/election/seat-projections.json'),fetch('/election/challenger-source-checks.json'),fetch('/assets/us-states-map.json'),fetch('/election/candidate-portraits.json')
+        readJson('/election/house-forecast-lock.json'),readJson('/election/senate-forecast-lock.json'),readJson('/election/current-projections.json'),readJson('/election/seat-projections.json'),readJson('/election/challenger-source-checks.json'),readJson('/assets/us-states-map.json'),readJson('/election/candidate-portraits.json')
       ]);
       if (![houseResponse,senateResponse,currentResponse,seatsResponse,challengerResponse,mapResponse,portraitResponse].every((response) => response.ok)) throw new Error('One or more forecast files, the geographic map or the portrait ledger could not be loaded.');
       const [house,senate,current,seats,challengers,geometry,portraits] = await Promise.all([houseResponse.json(),senateResponse.json(),currentResponse.json(),seatsResponse.json(),challengerResponse.json(),mapResponse.json(),portraitResponse.json()]);

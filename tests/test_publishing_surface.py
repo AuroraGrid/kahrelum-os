@@ -291,6 +291,10 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertIn("event.key === 'Enter' || event.key === ' '", script)
         self.assertIn('role="group" aria-label="Map chamber"', page)
         self.assertIn("Suggestions include every source-listed candidate", page)
+        self.assertIn('/election-challenge-map.css?v=', page)
+        self.assertIn('/election-challenge-map.js?v=', page)
+        self.assertIn("cache: 'no-store'", script)
+        self.assertIn("ASSET_VERSION", script)
 
     def test_sports_desk_uses_flat_editorial_system(self):
         css = self.read("sports-desk.css").lower()
