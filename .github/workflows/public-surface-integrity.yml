@@ -94,7 +94,8 @@ jobs:
 
           nfl = json.loads(Path("nfl/trade-board.json").read_text(encoding="utf-8"))
           assert len(nfl["candidates"]) >= 124 and len(nfl["deals"]) >= 7
-          assert len({p["team"] for p in nfl["candidates"]}) == 32
+          assert len({p["team"] for p in nfl["candidates"] if p["team"] != "FA"}) == 32
+          assert all(p.get("rosterStatus") == "RELEASED_FREE_AGENT" and p.get("rosterStatusSource", "").startswith("https://") for p in nfl["candidates"] if p["team"] == "FA")
           assert len({p["id"] for p in nfl["candidates"]}) == len(nfl["candidates"])
           assert nfl["liveFeed"] is False
           assert nfl["sourceAccountability"]["certifiedMeanBrier"] is None
