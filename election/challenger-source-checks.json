@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-10-31T20:21:52.477Z",
+  "checkedAtUtc": "2026-10-31T21:00:50.810Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -142,16 +142,16 @@
       "provider": "Datum Signals",
       "edition": "Main",
       "sourceUrl": "https://datumsignals.com/",
-      "houseDemocraticControlPct": 71.0,
+      "houseDemocraticControlPct": 70.0,
       "senateDemocraticControlPct": 63.0,
       "houseDemocraticSeats": null,
       "houseSeatType": null,
       "senateDemocraticSeats": null,
       "senateSeatType": null,
-      "sourceEdition": "Updated Oct. 31, 4:01 PM UTC; rendered retrieval Oct. 31 20:21 UTC",
+      "sourceEdition": "Updated Oct. 31, 4:01 PM UTC; rendered retrieval Oct. 31 21:00 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "retrievedAtUtc": "2026-10-31T20:21:52.477Z",
-      "note": "The rendered first-party page now displays 71% Democratic House control, up from the previously recorded 70%, while Democratic Senate control remains 63%. The page still labels the edition Oct. 31 at 4:01 PM UTC, so the 20:21 UTC rendered retrieval is the observation custody time. Direct raw HTTP custody remains blocked by TLS transport failure, and Chrome returned ERR_CONNECTION_RESET. Private rendered-observation receipt SHA256: ea1f823f9d6959c06583ab29b175737547e0630612d3f222935025a74e942df8. Displayed favored and toss-up race counts are not a compatible expected full-chamber seat total."
+      "retrievedAtUtc": "2026-10-31T21:00:50.810Z",
+      "note": "The rendered first-party page displays 70% Democratic House control, reverting from the separately observed 71% reading at 20:21 UTC, while Democratic Senate control remains 63%. The page still labels the edition Oct. 31 at 4:01 PM UTC, so the 21:00 UTC rendered retrieval is the observation custody time. Direct raw HTTP custody remains blocked by TLS transport failure. Private rendered-observation receipt SHA256: 9d882c533c51cc9f5af41f3a20fb6e9f6ef7a00818a4e99bbefcfc188004186d. Displayed favored and toss-up race counts are not a compatible expected full-chamber seat total."
     },
     {
       "provider": "Fred Cornell independent",
