@@ -184,6 +184,7 @@ class PublishingSurfaceTests(unittest.TestCase):
         shared_css = self.read("insights.css").lower()
         analysis_css = self.read("sports-article.css").lower()
         analysis = self.read("nfl/analysis.html")
+        release = self.read("scripts/firebase-overlay-release.cjs")
         self.assertIn("color-scheme:light", shared_css)
         self.assertIn("--bg:#f4efe6", shared_css)
         self.assertNotIn("gradient", shared_css)
@@ -191,6 +192,8 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertIn('href="/sports-article.css"', analysis)
         self.assertIn('name="twitter:card" content="summary_large_image"', analysis)
         self.assertIn('property="og:image"', analysis)
+        publishing_profile = release.split("publishing:", 1)[1].split("],", 1)[0]
+        self.assertIn("nfl/analysis.html", publishing_profile)
 
     def test_sports_registry_does_not_overstate_expansion_coverage(self):
         import json
