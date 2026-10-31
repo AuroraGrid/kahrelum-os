@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "ddhq_methods",
+  "sourceUrl": "https://votes-docs.decisiondeskhq.com/forecast-methodology",
+  "primarySource": true,
+  "capture": {
+    "startedAtUtc": "2026-10-31T04:16:58Z",
+    "completedAtUtc": "2026-10-31T04:17:03Z",
+    "method": "Firecrawl fresh scrape maxAge=0",
+    "cachePolicy": "maxAge=0"
+  },
+  "custody": {
+    "representation": "TOOL_RETURNED_RAW_HTML_UTF8",
+    "sha256": "5fc3b9961ba66c4a253b3160925778c6858815c7860f59139fe0ac4f787565b7",
+    "utf8Bytes": 283635,
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false,
+    "rawCaptureRetention": "Working capture; not part of the public commit. The public immutable receipt preserves factual observations and digests, not a replayable HTTP archive.",
+    "toolMarkdownSha256": "64e7a522fafcb464de02195ec58f475bca75db9f819ed9493121be50f55f5d18"
+  },
+  "publisherMetadata": {
+    "title": "Forecast Methodology | Votes Documentation",
+    "scrapeId": "01a1902c-d6db-760e-9866-65bf6e1740a9",
+    "sourceURL": "https://votes-docs.decisiondeskhq.com/forecast-methodology",
+    "url": "https://votes-docs.decisiondeskhq.com/forecast-methodology",
+    "statusCode": 200,
+    "contentType": "text/html; charset=utf-8",
+    "indexId": "c6414046-8383-4871-9fe6-4850498a1ffc"
+  },
+  "evidenceExcerpts": [],
+  "crossSourceReview": {
+    "scope": "Related provider review synthesized across the manifest sourceIds; a method page need not itself contain the numerical forecast.",
+    "facts": []
+  }
+}

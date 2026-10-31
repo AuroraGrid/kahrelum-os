@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "electindex",
+  "sourceUrl": "https://electindex.com/forecasts/",
+  "primarySource": true,
+  "capture": {
+    "startedAtUtc": "2026-10-31T04:12:28Z",
+    "completedAtUtc": "2026-10-31T04:14:24Z",
+    "method": "Firecrawl fresh scrape maxAge=0",
+    "cachePolicy": "maxAge=0"
+  },
+  "custody": {
+    "representation": "TOOL_RETURNED_RAW_HTML_UTF8",
+    "sha256": "850f6bd55386015ab62493d80d0a4d64f44a194293f011c47ab5a936415eb0c8",
+    "utf8Bytes": 3103034,
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false,
+    "rawCaptureRetention": "Working capture; not part of the public commit. The public immutable receipt preserves factual observations and digests, not a replayable HTTP archive.",
+    "toolMarkdownSha256": "be69abcc9bb32139183d6286b00ed2d7a50169577a0033577d1cc36684a1b3a5"
+  },
+  "publisherMetadata": {
+    "title": "2026 House, Senate & Governor Election Forecast • ElectIndex",
+    "scrapeId": "01a19029-7b4d-7029-b71d-9cc6ce7e32c6",
+    "sourceURL": "https://electindex.com/forecasts/",
+    "url": "https://electindex.com/forecasts/",
+    "statusCode": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "indexId": "a213cb74-a740-4ecc-8441-4a014533baa6"
+  },
+  "evidenceExcerpts": [],
+  "crossSourceReview": {
+    "scope": "Related provider review synthesized across the manifest sourceIds; a method page need not itself contain the numerical forecast.",
+    "facts": [
+      {
+        "providerId": "electindex",
+        "houseControlPercent": 91.8,
+        "senateControlPercent": 72.5,
+        "publicationLabel": "GitHub data modified October 31, 2026, 04:07:33 UTC",
+        "publishedAtUtc": "2026-10-31T04:07:33Z",
+        "houseEventReview": "The publisher-linked public CSV gives House dem_control_pct 91.8 and needed 218. Its methodology defines chamber probabilities from simulated majority counts.",
+        "senateEventReview": "The CSV establishes a 51-seat threshold, but the methods refer to an independent in the Democratic challenger slot. Complete matching of the Senate caucus classification is not established."
+      }
+    ]
+  }
+}

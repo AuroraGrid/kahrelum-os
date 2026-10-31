@@ -3,8 +3,10 @@ name: Sports Intelligence SourceGrid
 on:
   workflow_dispatch:
   schedule:
-    # Recheck credential-free sources every ten minutes during the deadline lifecycle.
-    - cron: "*/10 * * * *"
+    # Five-minute requests, offset from the top of the hour. GitHub is best-effort.
+    # Limit monitoring to the remaining 2026 deadline dates; the year gate is below.
+    - cron: "3-58/5 * 31 10 *"
+    - cron: "3-58/5 * 1-10 11 *"
     # The script gates this annual cron to the 2026 audit lifecycle and remains fail-closed thereafter.
     - cron: "37 14 12 11 *"
 
@@ -22,7 +24,22 @@ jobs:
     env:
       SOURCEGRID_REF: ${{ github.ref_name }}
     steps:
+      - name: Gate the 2026 monitoring and audit lifecycle
+        id: lifecycle
+        shell: bash
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import datetime as dt
+          now = dt.datetime.now(dt.timezone.utc)
+          deadline = dt.datetime(2026, 11, 10, 21, tzinfo=dt.timezone.utc)
+          audit_start = dt.datetime(2026, 11, 12, 14, tzinfo=dt.timezone.utc)
+          audit_end = dt.datetime(2026, 11, 13, tzinfo=dt.timezone.utc)
+          enabled = now.year == 2026 and (now < deadline or audit_start <= now < audit_end)
+          print(f"enabled={str(enabled).lower()}")
+          PY
+
       - name: Check out triggering branch
+        if: steps.lifecycle.outputs.enabled == 'true'
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.0
         with:
           ref: ${{ github.ref_name }}
@@ -30,19 +47,25 @@ jobs:
           persist-credentials: true
 
       - name: Run fail-closed tests before network activity
-        run: python3 tests/test_sports_intelligence.py -v
+        id: tests
+        if: steps.lifecycle.outputs.enabled == 'true'
+        run: |
+          python3 tests/test_sports_intelligence.py -v
+          python3 tests/test_sports_forecasts.py -v
 
       - name: Check credential-free SourceGrid endpoints
         id: sourcegrid
+        if: steps.lifecycle.outputs.enabled == 'true'
         continue-on-error: true
         run: python3 scripts/sports_intelligence.py ingest
 
       - name: Validate custody and generated state
-        if: always()
+        id: validation
+        if: always() && steps.lifecycle.outputs.enabled == 'true'
         run: python3 scripts/sports_intelligence.py validate
 
       - name: Record truthful source health in the run summary
-        if: always()
+        if: always() && steps.lifecycle.outputs.enabled == 'true'
         shell: bash
         run: |
           python3 - <<'PY' >> "$GITHUB_STEP_SUMMARY"
@@ -58,19 +81,20 @@ jobs:
           PY
 
       - name: Record source-check state on main
-        if: always()
+        if: always() && steps.lifecycle.outputs.enabled == 'true' && steps.tests.outcome == 'success' && steps.validation.outcome == 'success'
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add nfl/source-observations.json nfl/review-queue.json nfl/refresh-status.json nfl/source-health.json nfl/public-feed.json nfl/publishing.json nfl/deadline-audit.json
+          git add nfl/sourcegrid.json nfl/source-observations.json nfl/review-queue.json nfl/refresh-status.json nfl/source-health.json nfl/public-feed.json nfl/publishing.json nfl/deadline-audit.json nfl/forecast-ledger.json nfl/desk-live.json
           if ! git diff --cached --quiet; then
             git commit -m "sourcegrid: record scheduled NFL source check"
             git push origin "HEAD:${SOURCEGRID_REF}"
           fi
 
       - name: Fail workflow if every integration failed
-        if: steps.sourcegrid.outcome != 'success'
+        if: steps.lifecycle.outputs.enabled == 'true' && steps.sourcegrid.outcome != 'success'
         run: |
           echo "SourceGrid recorded a failed/stale refresh; see nfl/refresh-status.json"
           exit 1
+

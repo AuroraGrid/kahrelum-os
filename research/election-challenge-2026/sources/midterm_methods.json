@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "midterm_methods",
+  "sourceUrl": "https://midtermforecast.com/methodology/",
+  "primarySource": true,
+  "capture": {
+    "startedAtUtc": "2026-10-31T04:16:13Z",
+    "completedAtUtc": "2026-10-31T04:16:25Z",
+    "method": "Firecrawl fresh scrape maxAge=0",
+    "cachePolicy": "maxAge=0"
+  },
+  "custody": {
+    "representation": "TOOL_RETURNED_RAW_HTML_UTF8",
+    "sha256": "b7b37466a7aa379215f1d2d5df9dce6c32f426f4d01f7d14175e19d21b5da0a2",
+    "utf8Bytes": 33369,
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false,
+    "rawCaptureRetention": "Working capture; not part of the public commit. The public immutable receipt preserves factual observations and digests, not a replayable HTTP archive.",
+    "toolMarkdownSha256": "5ac1a43bb05adde2441aad61b3516f3b23f6587a23db467ba43d788e9fd982f6"
+  },
+  "publisherMetadata": {
+    "title": "How the 2026 Midterm Forecast Works | Midterm Forecast",
+    "scrapeId": "01a1902c-269b-76bc-8d51-c563ac7a7ddd",
+    "sourceURL": "https://midtermforecast.com/methodology/",
+    "url": "https://midtermforecast.com/methodology/",
+    "statusCode": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "indexId": "9c0d7c87-12df-41f7-a97a-c693d99a7f7a"
+  },
+  "evidenceExcerpts": [
+    {
+      "exactText": "Democrats win the House in 91% of simulations.",
+      "representation": "markdown",
+      "characterOffset": 6376
+    },
+    {
+      "exactText": "a majority is 218.",
+      "representation": "markdown",
+      "characterOffset": 6466
+    }
+  ],
+  "crossSourceReview": {
+    "scope": "Related provider review synthesized across the manifest sourceIds; a method page need not itself contain the numerical forecast.",
+    "facts": [
+      {
+        "providerId": "midterm",
+        "houseControlPercent": 91,
+        "senateControlPercent": 71,
+        "publicationLabel": "Model run October 30, 2026, 10:40 PM ET",
+        "publishedAtUtc": "2026-10-31T02:40:00Z",
+        "houseEventReview": "The current model reports 91 percent Democratic House control; the methods explicitly define a 218-seat majority.",
+        "senateEventReview": "The methods use 51 seats and a Republican tiebreak at 50, but count uncommitted independents separately in an independents-decide outcome. Equivalence to KAHRELUM conditional caucus assumptions is unproved."
+      }
+    ]
+  }
+}

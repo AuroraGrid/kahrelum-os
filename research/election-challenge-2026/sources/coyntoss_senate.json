@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "coyntoss_senate",
+  "sourceUrl": "https://chasecoyne.com/senate.html",
+  "primarySource": true,
+  "capture": {
+    "startedAtUtc": "2026-10-31T04:16:13Z",
+    "completedAtUtc": "2026-10-31T04:16:25Z",
+    "method": "Firecrawl fresh scrape maxAge=0",
+    "cachePolicy": "maxAge=0"
+  },
+  "custody": {
+    "representation": "TOOL_RETURNED_RAW_HTML_UTF8",
+    "sha256": "2faab8626fb0d52ae964b8cfe501d615eff8241bbc65a541bbe447c5edb59170",
+    "utf8Bytes": 1224611,
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false,
+    "rawCaptureRetention": "Working capture; not part of the public commit. The public immutable receipt preserves factual observations and digests, not a replayable HTTP archive.",
+    "toolMarkdownSha256": "25363e5fef9084b74ebe6c2d5ed511dc81b424c28c6cd215a15e6bddf2307d95"
+  },
+  "publisherMetadata": {
+    "title": "2026 Senate Forecast | COYNTOSS",
+    "scrapeId": "01a1902c-282a-74d4-aabb-6a0acd1fa5ed",
+    "sourceURL": "https://chasecoyne.com/senate.html",
+    "url": "https://chasecoyne.com/senate",
+    "statusCode": 200,
+    "contentType": "text/html",
+    "indexId": "becac45a-cfcb-4842-8fbb-9f70e4d19925"
+  },
+  "evidenceExcerpts": [
+    {
+      "exactText": "Democrats have a 70.85% chance of controlling the Senate",
+      "representation": "markdown",
+      "characterOffset": 36564
+    }
+  ],
+  "crossSourceReview": {
+    "scope": "Related provider review synthesized across the manifest sourceIds; a method page need not itself contain the numerical forecast.",
+    "facts": [
+      {
+        "providerId": "coyntoss",
+        "houseControlPercent": 80.5,
+        "senateControlPercent": 70.85,
+        "publicationLabel": "House inputs October 18; Senate October 30, release 3",
+        "publishedAtUtc": null,
+        "houseEventReview": "The House headline is 80.5 percent with 218 seats for a majority. It is explicitly an experimental forecast.",
+        "senateEventReview": "The Senate event includes Democrats and allied independents. The current release reports 70.85 percent; complete candidate-level alignment equivalence is unproven."
+      }
+    ]
+  }
+}

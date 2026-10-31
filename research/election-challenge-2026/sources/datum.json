@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "datum",
+  "sourceUrl": "https://datumsignals.com/",
+  "primarySource": true,
+  "capture": {
+    "startedAtUtc": "2026-10-31T04:15:38Z",
+    "completedAtUtc": "2026-10-31T04:15:49Z",
+    "method": "Firecrawl fresh scrape maxAge=0",
+    "cachePolicy": "maxAge=0"
+  },
+  "custody": {
+    "representation": "TOOL_RETURNED_RAW_HTML_UTF8",
+    "sha256": "b9850dcfe8cf68aa5ae69ff85edd6bdf81f4101a119ad6af44d2c5d9cf6b3a5d",
+    "utf8Bytes": 344386,
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false,
+    "rawCaptureRetention": "Working capture; not part of the public commit. The public immutable receipt preserves factual observations and digests, not a replayable HTTP archive.",
+    "toolMarkdownSha256": "79859dda4d8b16b296e2b8736596f37e56f4b1ee5764d8a20a3a6deaedc3227a"
+  },
+  "publisherMetadata": {
+    "title": "Datum Signals",
+    "scrapeId": "01a1902b-9eb7-71bc-9da4-74ff7c65ca42",
+    "sourceURL": "https://datumsignals.com/",
+    "url": "https://datumsignals.com/",
+    "statusCode": 200,
+    "contentType": "text/html; charset=utf-8",
+    "indexId": "524323fe-404d-4d18-be63-2f0231d8f4be"
+  },
+  "evidenceExcerpts": [
+    {
+      "exactText": "data-target=\"72\"",
+      "representation": "rawHtml",
+      "characterOffset": 23577
+    },
+    {
+      "exactText": "data-target=\"63\"",
+      "representation": "rawHtml",
+      "characterOffset": 23236
+    }
+  ],
+  "crossSourceReview": {
+    "scope": "Related provider review synthesized across the manifest sourceIds; a method page need not itself contain the numerical forecast.",
+    "facts": [
+      {
+        "providerId": "datum",
+        "houseControlPercent": 72,
+        "senateControlPercent": 63,
+        "publicationLabel": "October 30, 2026, 4:01 PM UTC",
+        "publishedAtUtc": "2026-10-30T16:01:00Z",
+        "houseEventReview": "The House control counter has data-target 72 and its adjacent label defines 218 needed. The HTML animation placeholder zero is not a forecast.",
+        "senateEventReview": "The captured page describes only 33 Senate seats up, whereas the comparison includes 35 including specials. Independent handling is also unresolved; the public 63 percent is retained as an excluded observation."
+      }
+    ]
+  }
+}

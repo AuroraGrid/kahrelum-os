@@ -842,7 +842,7 @@
     {
       "id": "K26-062",
       "name": "Jack Jones",
-      "team": "SF",
+      "team": "FA",
       "pos": "CB",
       "kahrelumProbability": null,
       "kahrelumIntegrity": "UNPRICED",
@@ -850,7 +850,10 @@
       "evidenceType": "ANALYST_RADAR",
       "sourceIds": [
         "YAHOO"
-      ]
+      ],
+      "rosterStatus": "RELEASED_FREE_AGENT",
+      "rosterStatusAsOf": "2026-10-28",
+      "rosterStatusSource": "https://www.49ers.com/news/the-49ers-acquire-dl-deforest-buckner"
     },
     {
       "id": "K26-063",
@@ -1159,7 +1162,7 @@
     },
     {
       "id": "K26-086",
-      "name": "Khalil Benson",
+      "name": "Kahlil Benson",
       "team": "KC",
       "pos": "OT",
       "kahrelumProbability": null,
@@ -1168,7 +1171,11 @@
       "evidenceType": "ANALYST_RADAR",
       "sourceIds": [
         "FOX"
-      ]
+      ],
+      "identityCorrection": {
+        "previousDisplayName": "Khalil Benson",
+        "reason": "Reviewed spelling correction; Chiefs and ESPN player identity agree."
+      }
     },
     {
       "id": "K26-087",
