@@ -68,7 +68,7 @@ for(const source of [{url:api,headers:{Accept:"application/vnd.github.raw+json"}
 if(!status){node.textContent="SourceGrid operating status is temporarily unavailable. The published research snapshot remains separately dated below.";return}
 const checked=status.lastFullySuccessfulSourceCheckAt||status.lastCompletedCheckAt||status.lastSuccessfulSourceCheckAt;
 const newCount=Number.isFinite(status.observationsNew)?status.observationsNew:0;
-node.textContent="SourceGrid: "+status.feedFreshness+" · "+status.sourcesSucceeded+"/"+status.sourcesAttempted+" sources succeeded · checked "+showTime(checked)+". "+newCount+" new observation"+(newCount===1?"":"s")+" remain review-gated; the published snapshot changes only after validation.";
+node.textContent="SourceGrid: "+status.feedFreshness+" · "+status.sourcesSucceeded+"/"+status.sourcesAttempted+" sources succeeded · checked "+showTime(checked)+". "+newCount+" new observation"+(newCount===1?" remains":"s remain")+" review-gated; the published snapshot changes only after validation.";
 }
 async function init(){
 try{

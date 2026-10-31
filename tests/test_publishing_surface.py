@@ -77,7 +77,8 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertIn("application/vnd.github.raw+json", page)
         self.assertIn("raw.githubusercontent.com/AuroraGrid/kahrelum-os/main/nfl/refresh-status.json", page)
         self.assertIn('candidate.schema!=="KAHRELUM_REFRESH_STATUS_v1.1"', page)
-        self.assertIn("remain review-gated", page)
+        self.assertIn('newCount===1?" remains":"s remain"', page)
+        self.assertIn("review-gated; the published snapshot changes only after validation", page)
 
     def test_editorial_pages_have_canonical_and_viewport(self):
         routes = {
