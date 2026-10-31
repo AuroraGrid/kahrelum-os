@@ -1,0 +1,27 @@
+.nba-desk header { flex-wrap: wrap; }
+.nba-filters { display: grid; grid-template-columns: 2fr 1.4fr 1fr auto; border: 1px solid var(--line); margin-top: 1.5rem; }
+.nba-filters label { display: block; min-width: 0; padding: .75rem .75rem 0; background: var(--panel); border-right: 1px solid var(--line); font-size: .75rem; font-weight: 700; }
+.nba-filters input, .nba-filters select { display: block; padding: .75rem 0; font-size: .875rem; font-weight: 400; }
+.nba-filters button { border: 0; padding: .75rem; background: var(--panel2); color: var(--text); font-size: .75rem; cursor: pointer; }
+.nba-filters button:hover { background: var(--text); color: var(--bg); }
+.nba-desk button:focus-visible, .nba-desk a:focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; }
+.nba-player-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.nba-player-grid:empty { border: 0; }
+.nba-player-card { min-width: 0; display: grid; grid-template-columns: 7rem minmax(0, 1fr); gap: 1rem; align-items: center; padding: 1.25rem 1rem; background: var(--panel); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.nba-player-photo { position: relative; display: grid; place-items: center; width: 7rem; height: 5.25rem; background: var(--panel2); overflow: hidden; }
+.nba-player-photo img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; background: var(--panel2); }
+.nba-player-photo img[hidden] { display: none; }
+.nba-initials { font: 700 1.5rem/1 ui-monospace, SFMono-Regular, Consolas, monospace; color: var(--soft); }
+.nba-player-details { min-width: 0; }
+.nba-player-details h3 { margin: .25rem 0; font-size: 1rem; line-height: 1.3; overflow-wrap: anywhere; }
+.nba-player-name { color: var(--text); text-decoration: none; }
+.nba-player-name:hover { text-decoration: underline; }
+.nba-team-name { margin: 0; color: var(--soft); font-size: .75rem; line-height: 1.4; }
+.nba-player-meta { margin: .375rem 0; color: var(--soft); font: .6875rem/1.4 ui-monospace, SFMono-Regular, Consolas, monospace; }
+.nba-photo-credit { font-size: .625rem; color: var(--soft); }
+.nba-photo-notes { margin-top: 2rem; }
+.nba-photo-notes p { max-width: 56rem; }
+.nba-desk [hidden] { display: none !important; }
+@media (max-width: 1100px) { .nba-player-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 760px) { .nba-filters { grid-template-columns: 1fr 1fr; } .nba-filters label { border-bottom: 1px solid var(--line); } .nba-filters label:first-child { grid-column: 1 / -1; } .nba-filters button { grid-column: 1 / -1; } }
+@media (max-width: 600px) { .nba-player-grid { grid-template-columns: minmax(0, 1fr); } .nba-player-card { grid-template-columns: 6rem minmax(0, 1fr); gap: .75rem; } .nba-player-photo { width: 6rem; height: 4.5rem; } .nba-desk .ops-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } .nba-desk .ops-cell:last-child { grid-column: 1 / -1; } }

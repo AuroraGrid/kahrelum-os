@@ -66,6 +66,21 @@
       "status": "TEMPLATE_ONLY",
       "eventNamespace": "NCAA-FB",
       "records": []
+    },
+    {
+      "id": "NBA_PLAYER_DIRECTORY",
+      "status": "ROSTER_SNAPSHOT_WITH_VERIFIED_PORTRAITS",
+      "eventNamespace": "NBA-PLAYER",
+      "publicRoute": "/sports/nba",
+      "dataFile": "sports/nba-player-portraits.json",
+      "sourceProvider": "ESPN",
+      "snapshotAtUtc": "2026-10-31T04:55:39Z",
+      "teams": 30,
+      "publicRecords": 522,
+      "verifiedPortraits": 522,
+      "forecastRecords": 0,
+      "liveMonitoring": false,
+      "policy": "Dated roster and photo directory only. NBA_TRADES remains a separate inactive forecasting/transaction module."
     }
   ]
 }

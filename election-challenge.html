@@ -13,6 +13,7 @@
     .status-row{display:flex;flex-wrap:wrap;gap:.55rem;margin:1.2rem 0}.status{display:inline-flex;align-items:center;gap:.35rem;padding:.42rem .7rem;border:1px solid #9e917c;border-radius:999px;background:#fffaf0;font-size:.8rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}.status.pending{border-color:#b57622;color:#6d4107}.status.verified{border-color:#3d7660;color:#24513f}.forecast-strip{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1.4rem 0}.forecast-card{padding:1.25rem;border:1px solid #c8bcaa;border-radius:14px;background:#fffdf8}.forecast-card .value{font-size:clamp(2rem,6vw,4rem);font-weight:800;letter-spacing:-.05em;line-height:1}.forecast-card h2{font-size:1.1rem;margin:.35rem 0}.model-tag{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.76rem;color:#5d5549}.table-wrap{overflow-x:auto;border:1px solid #c8bcaa;border-radius:12px;background:#fffdf8;margin:1rem 0 1.4rem}.challenge-table{width:100%;border-collapse:collapse;min-width:780px}.challenge-table th,.challenge-table td{padding:.75rem .7rem;border-bottom:1px solid #ded5c6;text-align:left;vertical-align:top}.challenge-table th{position:sticky;top:0;background:#28231d;color:#fff;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase}.challenge-table td:nth-child(2),.challenge-table td:nth-child(3){font-variant-numeric:tabular-nums;white-space:nowrap}.challenge-table tr:last-child td{border-bottom:0}.missing{color:#786f62;font-style:italic}.caution{padding:1rem 1.1rem;border-left:4px solid #b57622;background:#fff5e4}.method-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.8rem}.method-grid article{padding:1rem;border:1px solid #c8bcaa;border-radius:12px;background:#fffdf8}.method-grid h3{margin-top:0}.hash{overflow-wrap:anywhere;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.78rem}.share-line{font-size:1.08rem;font-weight:700;max-width:46rem}.score-gate{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center;padding:1rem;border:1px solid #c8bcaa;border-radius:12px;background:#fffdf8}.score-gate strong{color:#7b4300}.fine{font-size:.82rem;color:#6a6257}@media(max-width:800px){.forecast-strip,.method-grid{grid-template-columns:1fr 1fr}.score-gate{grid-template-columns:1fr}.challenge-table{min-width:680px}}@media(max-width:520px){.forecast-strip,.method-grid{grid-template-columns:1fr}.forecast-card .value{font-size:2.65rem}.table-wrap{margin-left:-.8rem;margin-right:-.8rem;border-radius:0}.challenge-table{min-width:620px}.hero{padding-top:2rem}}
   </style>
   <style>
+    #latest-research-checkpoint .value{font-size:clamp(1.7rem,4vw,2.65rem)}
     .admission-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1.25rem 0}.admission-stats article{padding:1.1rem;background:#fffdf8;border:1px solid #c8bcaa;border-radius:12px}.admission-stats h3{font-size:1rem;margin:0 0 .5rem}.admission-stats strong{display:block;font-size:1.65rem}.admission-stats p{font-size:.84rem;margin:.4rem 0 0}.admission-table{min-width:940px}.admission-table td:nth-child(2),.admission-table td:nth-child(3){white-space:normal;min-width:155px}.admission-table td:first-child{min-width:175px}.admission-table td:last-child{min-width:310px}.admission-table td>small{display:block;margin-top:.4rem;color:#6a6257}.admission-table td p{margin:0 0 .65rem}.admission-table .status{font-size:.66rem;letter-spacing:.01em;line-height:1.35;margin-top:.45rem}.admission-probability{font-size:1.25rem;font-weight:800;white-space:nowrap}.admission-table summary,.historical-comparison>summary{cursor:pointer;font-weight:700}.historical-comparison{margin-top:1.8rem;padding-top:1rem;border-top:1px solid #c8bcaa}.historical-comparison>summary{font-size:1.1rem}.admission-proof{padding:1rem;border:1px solid #9e917c;border-radius:10px;background:#fffaf0}.admission-proof p:last-child{margin-bottom:0}@media(max-width:650px){.admission-stats{grid-template-columns:1fr}.admission-stats strong{font-size:1.45rem}}
   </style>
 </head>
@@ -31,6 +32,18 @@
       <p class="asof">Prospective comparison capture: 2026-10-31. Election cutoff: 2026-11-03 00:00 EST (05:00 UTC). Original research locks remain preserved; outcomes await certification.</p>
     </div>
 
+    <section id="latest-research-checkpoint" aria-labelledby="latest-research-heading">
+      <p class="eyebrow">Latest research checkpoint</p>
+      <h2 id="latest-research-heading">October 31 computation using Cook's October 30 ratings</h2>
+      <p class="asof">Completed <time datetime="2026-10-31T04:49:46.856075Z">October 31, 2026 at 04:49 UTC</time>. Publisher rating edition: October 30, 2026.</p>
+      <div class="forecast-strip">
+        <article class="forecast-card"><div class="model-tag">HOUSE / AGGREGATE RESEARCH COMPUTATION</div><div class="value">230 D / 205 R</div><h3>Expected House seats</h3><p><strong>94.0914877%</strong> computed probability of Democratic control at 218 seats, using KAHRELUM's fixed rating-to-probability mapping and an assumed 8-seat standard deviation.</p></article>
+        <article class="forecast-card"><div class="model-tag">SENATE / CONDITIONAL CAUCUS SCENARIOS</div><div class="value">45.68%–50.17%</div><h3>Democratic-caucus control at 51 seats</h3><p>Three scenarios vary how independent winners count toward the Democratic caucus. <strong>This span is not a confidence interval or an unconditional Senate probability.</strong></p></article>
+      </div>
+      <p class="caution"><strong>Research-only checkpoint:</strong> this computation derives from Cook ratings and has not been validated as an independent K-PREDICT model or admitted as a new comparable forecast lock. The House update uses aggregate rating counts; it does not refresh district probabilities. The original locks and the older map edition below remain separate records.</p>
+      <p><a href="/election/fresh-run-checkpoint.json">Download the completed checkpoint and all three Senate scenarios</a> · <a href="https://thecookpoliticalreport.substack.com/p/two-senate-and-a-dozen-house-moves">Read Cook's October 30 rating changes</a></p>
+    </section>
+
     <section aria-labelledby="original-locks">
       <p class="eyebrow">Original research locks</p>
       <h2 id="original-locks">The two original calls remain unchanged</h2>
@@ -43,11 +56,11 @@
 
     <section aria-labelledby="race-map-heading">
       <p class="eyebrow">National race intelligence map</p>
-      <h2 id="race-map-heading">The current KAHRELUM projected-seat map</h2>
-      <p>This fresh execution covers all 435 House seats and all 35 Senate contests on the 2026 ballot. House seat totals follow the <a href="https://www.census.gov/data/tables/2020/dec/2020-apportionment-data.html">official 2020 Census apportionment</a> used for this decade. The new edition is separate from—and does not rewrite—the original locks above.</p>
+      <h2 id="race-map-heading">The published KAHRELUM projected-seat map</h2>
+      <p>This mapped edition covers all 435 House seats and all 35 Senate contests on the 2026 ballot. It retains the older House October 23 and Senate October 20 publisher rating editions; the latest research checkpoint above does not replace its race probabilities. House seat totals follow the <a href="https://www.census.gov/data/tables/2020/dec/2020-apportionment-data.html">official 2020 Census apportionment</a> used for this decade.</p>
       <p id="currentEditionLine" class="asof">Loading current retrieval and publisher-edition times…</p>
       <div class="challenge-map-shell">
-        <div class="challenge-map-head"><div><h3>2026 KAHRELUM Congressional projection</h3><p>Select a state to inspect current race probabilities, projected seat direction and source-listed candidate records.</p></div><span class="status verified">Fresh execution</span></div>
+        <div class="challenge-map-head"><div><h3>2026 KAHRELUM Congressional projection</h3><p>Select a state to inspect the mapped race probabilities, projected seat direction and source-listed candidate records.</p></div><span class="status">Prior mapped edition</span></div>
         <div class="coverage-ledger" aria-label="Forecast coverage ledger">
           <div><strong id="mapHouseCount">435</strong><span>House races projected</span></div>
           <div><strong id="mapSenateCount">35</strong><span>Senate races projected</span></div>
@@ -55,7 +68,7 @@
           <div><strong id="mapPortraitCount">0</strong><span>Portraits admitted</span></div>
         </div>
         <div id="seatTracker" class="seat-tracker" aria-label="KAHRELUM projected seat tracker">
-          <div class="seat-tracker-intro"><p class="eyebrow">Projected seats</p><h3>KAHRELUM chamber tracker</h3><p>Expected seat values from the current fresh execution. These are model summaries, not official results.</p></div>
+          <div class="seat-tracker-intro"><p class="eyebrow">Projected seats</p><h3>KAHRELUM chamber tracker</h3><p>Expected seat values from the prior mapped edition. These are model summaries, not official results.</p></div>
           <div id="houseSeatTracker" class="chamber-tracker"><p>Loading House projection…</p></div>
           <div id="senateSeatTracker" class="chamber-tracker"><p>Loading Senate projection…</p></div>
         </div>

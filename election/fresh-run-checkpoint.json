@@ -1,0 +1,51 @@
+{
+  "schema": "KAHRELUM_RESEARCH_CHECKPOINT_v1.0",
+  "checkpointId": "KAH-US-2026-20261031-COOK30-RESEARCH",
+  "completedAtUtc": "2026-10-31T04:49:46.856075Z",
+  "status": "RESEARCH_EXECUTION_COMPLETE",
+  "modelStatus": "UNVALIDATED_COOK_RATINGS_DERIVATIVE",
+  "independentKPredictStatus": "BLOCKED_IN_EXISTING_SOURCE_ONLY_PROTOTYPE_CALIBRATION_AND_2026_INPUTS_INCOMPLETE",
+  "sourcePublisherEdition": "2026-10-30",
+  "sourceObservedAtUtc": "2026-10-31T04:48:22Z",
+  "sourceURLs": [
+    "https://www.cookpolitical.com/ratings/house-race-ratings",
+    "https://www.cookpolitical.com/ratings/senate-race-ratings?lctg=5b5af86fe3a98c1ca865edcb&stream=top",
+    "https://thecookpoliticalreport.substack.com/p/two-senate-and-a-dozen-house-moves"
+  ],
+  "house": {
+    "expectedDemocraticSeats": 229.99999999999997,
+    "expectedRepublicanSeats": 205.00000000000003,
+    "pDemocraticControl": 0.940914877067332,
+    "controlThreshold": 218,
+    "assumedSeatSigma": 8,
+    "interval80DemocraticSeats": [
+      219.74758747564317,
+      240.25241252435677
+    ],
+    "granularity": "435-seat aggregate tier counts; no claim of refreshed district mapping",
+    "expectedDemocraticSeatChangeFromPreviousRun": 1.9799999999999613,
+    "probabilityPointChangeFromPreviousRun": 3.516982830542459
+  },
+  "senateUnconditionalProbability": null,
+  "senateConditionalScenarios": {
+    "allNonRepublicanWinnersCountTowardDemocraticCaucus": {
+      "probability": 0.501746862482746,
+      "expectedCaucusSeats": 50.5199907869988
+    },
+    "nebraskaNeverCountsTowardDemocraticCaucusOtherAssignmentsInherited": {
+      "probability": 0.45988932648049635,
+      "expectedCaucusSeats": 50.21999414299469
+    },
+    "noneOfTheFlaggedIndependentRacesCountsTowardDemocraticCaucus": {
+      "probability": 0.45680176598067856,
+      "expectedCaucusSeats": 50.19000796249643
+    }
+  },
+  "forecastAdmissionStatus": "RESEARCH_ONLY_NOT_ADMITTED_AS_NEW_COMPARABLE_LOCK",
+  "originalLockHashes": {
+    "election/house-forecast-lock.json": "0764412b0fb8962db62ff60a52331280ee0d9052176267fd2e4568d4b7631bfe",
+    "election/senate-forecast-lock.json": "28f9368d30a6c3d5bbf01cc135f360adc9b8be655f7160821d0f42264e810963"
+  },
+  "researchOutputSha256": "d82f245c55c8a4a68fc94af9d7c3a0f9e81ccd5e328bc569408fb3086834c823",
+  "followup": "Candidate and NBA portrait work follows this completed research checkpoint. Portrait changes do not certify or amend forecasts."
+}

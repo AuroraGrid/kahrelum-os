@@ -1,0 +1,1471 @@
+{
+  "retrievedAtUtc": "2026-10-31T04:56:17Z",
+  "requestUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Ctimestamp%7Cextmetadata&iiurlwidth=320&rvprop=ids%7Ctimestamp&titles=File%3ARep.+Nick+Begich+III+%28119th+Congress%29.jpg%7CFile%3ACongresswoman+Adelita+Grijalva+Official+Portrait.jpg%7CFile%3AJames+Gallagher%2C+official+portrait+%28119th+Congress%29.jpg%7CFile%3AAisha+Wahab%2C+official+portrait+-+2026.jpg%7CFile%3AClay+Fuller%2C+official+portrait+%28119th+Congress%29.jpg%7CFile%3ATom+Barrett%2C+official+portrait+%28119th+Congress%29.jpg%7CFile%3AWesley+Bell%2C+official+portrait+%28119th+Congress%29.jpg%7CFile%3AAnalilia+Mejia%2C+official+portrait+%28119th+Congress%29.jpg%7CFile%3AMatt+Van+Epps+official+portrait.jpg%7CFile%3AChristian+Menefee%2C+official+portrait+%28119th+Congress%29+%282%29.jpg%7CFile%3AJames+Walkinshaw.jpg%7CFile%3ASen.+Jon+Husted+official+portrait%2C+119th+Congress.jpg%7CFile%3ASenator+Darline+Graham+Official+Portrait%2C+119th+Congress.jpg",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "pages": {
+        "198717611": {
+          "pageid": 198717611,
+          "ns": 6,
+          "title": "File:Aisha Wahab, official portrait - 2026.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "timestamp": "2026-09-02T19:33:06Z",
+              "size": 344273,
+              "width": 600,
+              "height": 750,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Aisha_Wahab%2C_official_portrait_-_2026.jpg/330px-Aisha_Wahab%2C_official_portrait_-_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 320,
+              "thumbheight": 400,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Aisha_Wahab%2C_official_portrait_-_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Aisha_Wahab%2C_official_portrait_-_2026.jpg/330px-Aisha_Wahab%2C_official_portrait_-_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 320,
+                "height": 400,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Aisha_Wahab%2C_official_portrait_-_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Aisha_Wahab%2C_official_portrait_-_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Aisha_Wahab,_official_portrait_-_2026.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=198717611",
+              "sha1": "073f96cba047e9a2f194441fd8b3a2e4e75bbb2f",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-09-02 19:33:06",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Aisha Wahab, official portrait - 2026",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Aisha Wahab|PD US Congress|Images with extracted images|PD-USGov missing SDC copyright status|Official portraits of members of the 119th United States Congress",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Official portrait of Aisha Wahab, the U.S. representative for California's 14th congressional district.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2026-09-02",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://bioguide.congress.gov/search/bio/W000832\">https://bioguide.congress.gov/search/bio/W000832</a> (<a rel=\"nofollow\" class=\"external text\" href=\"https://bioguide.congress.gov/photo/6a986b632a68122e10181e6b.jpg\">File</a>)",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "U.S. House of Representatives",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              }
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1271470721,
+              "parentid": 1271458826,
+              "timestamp": "2026-09-02T20:25:39Z"
+            }
+          ]
+        },
+        "190181109": {
+          "pageid": 190181109,
+          "ns": 6,
+          "title": "File:Analilia Mejia, official portrait (119th Congress).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "timestamp": "2026-04-25T18:18:24Z",
+              "size": 527985,
+              "width": 600,
+              "height": 750,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Analilia_Mejia%2C_official_portrait_%28119th_Congress%29.jpg/330px-Analilia_Mejia%2C_official_portrait_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 320,
+              "thumbheight": 400,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/7/78/Analilia_Mejia%2C_official_portrait_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Analilia_Mejia%2C_official_portrait_%28119th_Congress%29.jpg/330px-Analilia_Mejia%2C_official_portrait_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 320,
+                "height": 400,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/7/78/Analilia_Mejia%2C_official_portrait_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Analilia_Mejia%2C_official_portrait_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Analilia_Mejia,_official_portrait_(119th_Congress).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=190181109",
+              "sha1": "1a0e9b85876b09b0c072e2791d28dc5a87b4c1c5",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-04-25 18:18:24",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Analilia Mejia, official portrait (119th Congress)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD US Government|CC-PD-Mark|PD-USGov missing SDC copyright status|Official portraits of members of the 119th United States Congress|Portrait photographs of women with blue background|Analilia Mejia in 2026",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Official portrait of Analilia Mejia, the U.S. representative for New Jersey's 11th congressional district.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2026-04-20",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://bioguide.congress.gov/search/bio/M001246\">https://bioguide.congress.gov/search/bio/M001246</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "U.S. House of Representatives",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              }
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1270464497,
+              "parentid": 1217385025,
+              "timestamp": "2026-08-31T18:28:56Z"
+            }
+          ]
+        },
+        "196383251": {
+          "pageid": 196383251,
+          "ns": 6,
+          "title": "File:Christian Menefee, official portrait (119th Congress) (2).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "timestamp": "2026-07-28T18:02:05Z",
+              "size": 207058,
+              "width": 1638,
+              "height": 2048,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Christian_Menefee%2C_official_portrait_%28119th_Congress%29_%282%29.jpg/330px-Christian_Menefee%2C_official_portrait_%28119th_Congress%29_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 320,
+              "thumbheight": 400,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Christian_Menefee%2C_official_portrait_%28119th_Congress%29_%282%29.jpg/960px-Christian_Menefee%2C_official_portrait_%28119th_Congress%29_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Christian_Menefee%2C_official_portrait_%28119th_Congress%29_%282%29.jpg/330px-Christian_Menefee%2C_official_portrait_%28119th_Congress%29_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 320,
+                "height": 400,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Christian_Menefee%2C_official_portrait_%28119th_Congress%29_%282%29.jpg/960px-Christian_Menefee%2C_official_portrait_%28119th_Congress%29_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Christian_Menefee%2C_official_portrait_%28119th_Congress%29_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Christian_Menefee,_official_portrait_(119th_Congress)_(2).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=196383251",
+              "sha1": "83bfc43a6a8c40d379fcc4321fff834da84769ac",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-07-28 18:02:05",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Christian Menefee, official portrait (119th Congress) (2)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD US Congress|Images with extracted images|PD-USGov missing SDC copyright status|Official portraits of members of the 119th United States Congress|Christian Menefee|Photographs by Brendan O'Hara",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Official portrait of Christian Menefee, the U.S. representative for Texas's 18th congressional district.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2026-04-14",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://menefee.house.gov/about/biography\">https://menefee.house.gov/about/biography</a> (<a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/20260801205151/https://scontent.frkh1-1.fna.fbcdn.net/v/t39.30808-6/675385201_122114576175250979_6548400167591702400_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1638x2048&amp;ctp=s1638x2048&amp;_nc_cat=111&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=hb0v6tC4g7oQ7kNvwE3vEPQ&amp;_nc_oc=AdrO4Nd4YSWS458edGx3fTcVMZy4WMTJwZdAOnmqFFEK6yD-mvwyG9Eo7bJr8-ZQPJ4&amp;_nc_zt=23&amp;_nc_ht=scontent.frkh1-1.fna&amp;_nc_gid=nNhcq8BINrrlgfusPUGm9Q&amp;_nc_ss=7a2a8&amp;oh=00_AQGiQziJH19EpyoxpasQ5lq7qym5C5p0gtvw1SpP7vi6HQ&amp;oe=6A74369A\">File</a>)",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Brendan O'Hara",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://menefee.house.gov/copyright\">https://menefee.house.gov/copyright</a>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              }
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1277722345,
+              "parentid": 1270475608,
+              "timestamp": "2026-09-17T10:55:22Z"
+            }
+          ]
+        },
+        "190375552": {
+          "pageid": 190375552,
+          "ns": 6,
+          "title": "File:Clay Fuller, official portrait (119th Congress).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "timestamp": "2026-08-31T19:08:56Z",
+              "size": 204415,
+              "width": 1638,
+              "height": 2048,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Clay_Fuller%2C_official_portrait_%28119th_Congress%29.jpg/330px-Clay_Fuller%2C_official_portrait_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 320,
+              "thumbheight": 400,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Clay_Fuller%2C_official_portrait_%28119th_Congress%29.jpg/960px-Clay_Fuller%2C_official_portrait_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Clay_Fuller%2C_official_portrait_%28119th_Congress%29.jpg/330px-Clay_Fuller%2C_official_portrait_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 320,
+                "height": 400,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Clay_Fuller%2C_official_portrait_%28119th_Congress%29.jpg/960px-Clay_Fuller%2C_official_portrait_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Clay_Fuller%2C_official_portrait_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Clay_Fuller,_official_portrait_(119th_Congress).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=190375552",
+              "sha1": "ea6ed8bef071be5e5d61d63cbdc434b581378be3",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-08-31 19:08:56",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Clay Fuller, official portrait (119th Congress)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD US Congress|PD-USGov missing SDC copyright status|Official portraits of members of the 119th United States Congress|Clay Fuller",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Official portrait of Clay Fuller, the U.S. representative for Georgia's 14th congressional district.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2026-04-14",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://fuller.house.gov/about\">https://fuller.house.gov/about</a> (<a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/20260901182727/https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/675906390_122100943286689395_7671766009948764631_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1638x2048&amp;ctp=s1638x2048&amp;_nc_cat=105&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=OZ55__z6V0QQ7kNvwGNRlaa&amp;_nc_oc=AdqBm2K0ev8Eh_srQs85w2HlnhJKpL4lWVWkmLLFqTqbJyAUumV5XaSEwtbE8lhsEe-unGsIbF-agnbgtt1LvqJn&amp;_nc_zt=23&amp;_nc_ht=scontent-atl3-2.xx&amp;_nc_gid=1LvbWPEw1WomyIuF7t8bOA&amp;_nc_ss=7b2a8&amp;oh=00_AQKjKeRS_-4H_GlW_W_4xpeYpxS_zx-8ceCdUsSqoVLKrg&amp;oe=6A9CF639\">Hi-res file</a>) (<a rel=\"nofollow\" class=\"external text\" href=\"https://fuller.house.gov/sites/evo-subsites/fuller.house.gov/files/evo-media-image/2026-04-14_bt_0008_sm.jpg\">Low-res file with metadata</a>)",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Brian Thorpe",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://fuller.house.gov/copyright\">https://fuller.house.gov/copyright</a>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              }
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1270956690,
+              "parentid": 1270956557,
+              "timestamp": "2026-09-01T18:28:37Z"
+            }
+          ]
+        },
+        "178387803": {
+          "pageid": 178387803,
+          "ns": 6,
+          "title": "File:Congresswoman Adelita Grijalva Official Portrait.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "timestamp": "2025-11-13T15:55:42Z",
+              "size": 99405,
+              "width": 500,
+              "height": 750,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Congresswoman_Adelita_Grijalva_Official_Portrait.jpg/330px-Congresswoman_Adelita_Grijalva_Official_Portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 320,
+              "thumbheight": 480,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Congresswoman_Adelita_Grijalva_Official_Portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Congresswoman_Adelita_Grijalva_Official_Portrait.jpg/330px-Congresswoman_Adelita_Grijalva_Official_Portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 320,
+                "height": 480,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Congresswoman_Adelita_Grijalva_Official_Portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Congresswoman_Adelita_Grijalva_Official_Portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Congresswoman_Adelita_Grijalva_Official_Portrait.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=178387803",
+              "sha1": "6f4c358ea9da3c1506c3fa49448113a608eb8f09",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-11-13 15:55:42",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Congresswoman Adelita Grijalva Official Portrait",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD US Congress|Official portraits of members of the 119th United States Congress|Representatives from Arizona's 7th congressional district|Adelita Grijalva",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Official portrait of Congresswoman Adelita Grijalva of Arizona.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-11-12",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://bioguide.congress.gov/search/bio/G000606\">https://bioguide.congress.gov/search/bio/G000606</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Damien Salas, Office of the Clerk U.S.House of Representatives",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              }
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1271063998,
+              "parentid": 1131964899,
+              "timestamp": "2026-09-02T00:13:31Z"
+            }
+          ]
+        },
+        "193692694": {
+          "pageid": 193692694,
+          "ns": 6,
+          "title": "File:James Gallagher, official portrait (119th Congress).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "timestamp": "2026-06-12T00:24:57Z",
+              "size": 320636,
+              "width": 600,
+              "height": 750,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/James_Gallagher%2C_official_portrait_%28119th_Congress%29.jpg/330px-James_Gallagher%2C_official_portrait_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 320,
+              "thumbheight": 400,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/c/c8/James_Gallagher%2C_official_portrait_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/James_Gallagher%2C_official_portrait_%28119th_Congress%29.jpg/330px-James_Gallagher%2C_official_portrait_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 320,
+                "height": 400,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/c/c8/James_Gallagher%2C_official_portrait_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/James_Gallagher%2C_official_portrait_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:James_Gallagher,_official_portrait_(119th_Congress).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=193692694",
+              "sha1": "23e3824c156578cbd2946d37a7f167aae669dc7a",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-06-12 00:24:57",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "James Gallagher, official portrait (119th Congress)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "James Gallagher|PD US Congress|Images with extracted images|Official portraits of members of the 119th United States Congress",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Official portrait of James Gallagher, the U.S. representative for California's 1st congressional district.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2026-06-10",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://bioguide.congress.gov/search/bio/G000607\">https://bioguide.congress.gov/search/bio/G000607</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "U.S. House of Representatives",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              }
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1288810210,
+              "parentid": 1270973707,
+              "timestamp": "2026-10-19T04:27:56Z"
+            }
+          ]
+        },
+        "174843154": {
+          "pageid": 174843154,
+          "ns": 6,
+          "title": "File:James Walkinshaw.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "timestamp": "2025-09-11T19:50:49Z",
+              "size": 107154,
+              "width": 600,
+              "height": 750,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/James_Walkinshaw.jpg/330px-James_Walkinshaw.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 320,
+              "thumbheight": 400,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/6/6d/James_Walkinshaw.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/James_Walkinshaw.jpg/330px-James_Walkinshaw.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 320,
+                "height": 400,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/6/6d/James_Walkinshaw.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/James_Walkinshaw.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:James_Walkinshaw.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=174843154",
+              "sha1": "a49dcc440a28d81bc9fcb096fc2aaf38a89c2412",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-09-11 19:50:49",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "James Walkinshaw",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD US Government|Images with extracted images|CC-PD-Mark|James Walkinshaw",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "US congressional portrait",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-09-10",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://bioguide.congress.gov/search/bio/W000831\">https://bioguide.congress.gov/search/bio/W000831</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "US Congress",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              }
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1177243595,
+              "parentid": 1084596079,
+              "timestamp": "2026-03-07T13:21:51Z"
+            }
+          ]
+        },
+        "179409314": {
+          "pageid": 179409314,
+          "ns": 6,
+          "title": "File:Matt Van Epps official portrait.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "timestamp": "2025-12-04T22:33:35Z",
+              "size": 321102,
+              "width": 600,
+              "height": 750,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Matt_Van_Epps_official_portrait.jpg/330px-Matt_Van_Epps_official_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 320,
+              "thumbheight": 400,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Matt_Van_Epps_official_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Matt_Van_Epps_official_portrait.jpg/330px-Matt_Van_Epps_official_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 320,
+                "height": 400,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Matt_Van_Epps_official_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Matt_Van_Epps_official_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Matt_Van_Epps_official_portrait.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=179409314",
+              "sha1": "702669223b3241ab9deb3ad5fd7c5f5be5328343",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-12-04 22:33:35",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Matt Van Epps official portrait",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD US Government|Images with extracted images|CC-PD-Mark|Official portraits of members of the 119th United States Congress|Matt Van Epps",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://bioguide.congress.gov/search/bio/V000139\">https://bioguide.congress.gov/search/bio/V000139</a>",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-12-04",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://bioguide.congress.gov/search/bio/V000139\">https://bioguide.congress.gov/search/bio/V000139</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "US Congress",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              }
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1270982301,
+              "parentid": 1270982268,
+              "timestamp": "2026-09-01T19:42:38Z"
+            }
+          ]
+        },
+        "156691054": {
+          "pageid": 156691054,
+          "ns": 6,
+          "title": "File:Rep. Nick Begich III (119th Congress).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "timestamp": "2025-01-03T17:08:13Z",
+              "size": 1856343,
+              "width": 2800,
+              "height": 4200,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Rep._Nick_Begich_III_%28119th_Congress%29.jpg/330px-Rep._Nick_Begich_III_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 320,
+              "thumbheight": 480,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Rep._Nick_Begich_III_%28119th_Congress%29.jpg/960px-Rep._Nick_Begich_III_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Rep._Nick_Begich_III_%28119th_Congress%29.jpg/330px-Rep._Nick_Begich_III_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 320,
+                "height": 480,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Rep._Nick_Begich_III_%28119th_Congress%29.jpg/960px-Rep._Nick_Begich_III_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Rep._Nick_Begich_III_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Rep._Nick_Begich_III_(119th_Congress).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=156691054",
+              "sha1": "ebbcf297eb577f774134da3b09d0ca162dfb25e4",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-01-03 17:08:13",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Rep. Nick Begich III (119th Congress)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD US Congress|Images with extracted images|Nick Begich III|Official portraits of members of the 119th United States Congress|Photographs by Ike Hayman",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Official portrait of Nick Begich III, the U.S. representative for Alaska's at-large congressional district.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2024-11-15",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://begich.house.gov/about\">https://begich.house.gov/about</a> (<a rel=\"nofollow\" class=\"external text\" href=\"https://begich.house.gov/sites/evo-subsites/begich.house.gov/files/evo-media-image/2024-11-15_ike_-begich_nick_0003_re_web.jpg\">File</a>)",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Ike Hayman",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://begich.house.gov/copyright\">https://begich.house.gov/copyright</a>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              }
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1270471227,
+              "parentid": 1079778969,
+              "timestamp": "2026-08-31T18:44:11Z"
+            }
+          ]
+        },
+        "163037652": {
+          "pageid": 163037652,
+          "ns": 6,
+          "title": "File:Sen. Jon Husted official portrait, 119th Congress.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "timestamp": "2025-03-31T22:39:02Z",
+              "size": 2991649,
+              "width": 4130,
+              "height": 5162,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Sen._Jon_Husted_official_portrait%2C_119th_Congress.jpg/330px-Sen._Jon_Husted_official_portrait%2C_119th_Congress.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 320,
+              "thumbheight": 400,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Sen._Jon_Husted_official_portrait%2C_119th_Congress.jpg/960px-Sen._Jon_Husted_official_portrait%2C_119th_Congress.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Sen._Jon_Husted_official_portrait%2C_119th_Congress.jpg/330px-Sen._Jon_Husted_official_portrait%2C_119th_Congress.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 320,
+                "height": 400,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Sen._Jon_Husted_official_portrait%2C_119th_Congress.jpg/960px-Sen._Jon_Husted_official_portrait%2C_119th_Congress.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Sen._Jon_Husted_official_portrait%2C_119th_Congress.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Sen._Jon_Husted_official_portrait,_119th_Congress.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=163037652",
+              "sha1": "5c04afc64a70b25b9ef64ee3c98947fc5541b103",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-03-31 22:39:02",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Sen. Jon Husted official portrait, 119th Congress",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD US Congress|Images with extracted images|Official portraits of members of the 119th United States Congress|Jon Husted",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Senator Jon Husted's official portrait in 2025.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-03-13",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.husted.senate.gov/about/\">https://www.husted.senate.gov/about/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "United States Senate",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              }
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1282126047,
+              "parentid": 1271781739,
+              "timestamp": "2026-10-01T09:17:16Z"
+            }
+          ]
+        },
+        "198847397": {
+          "pageid": 198847397,
+          "ns": 6,
+          "title": "File:Senator Darline Graham Official Portrait, 119th Congress.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "timestamp": "2026-09-04T12:21:13Z",
+              "size": 10750891,
+              "width": 3414,
+              "height": 5026,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Senator_Darline_Graham_Official_Portrait%2C_119th_Congress.jpg/330px-Senator_Darline_Graham_Official_Portrait%2C_119th_Congress.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 320,
+              "thumbheight": 471,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Senator_Darline_Graham_Official_Portrait%2C_119th_Congress.jpg/960px-Senator_Darline_Graham_Official_Portrait%2C_119th_Congress.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Senator_Darline_Graham_Official_Portrait%2C_119th_Congress.jpg/330px-Senator_Darline_Graham_Official_Portrait%2C_119th_Congress.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 320,
+                "height": 471,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Senator_Darline_Graham_Official_Portrait%2C_119th_Congress.jpg/960px-Senator_Darline_Graham_Official_Portrait%2C_119th_Congress.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Senator_Darline_Graham_Official_Portrait%2C_119th_Congress.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Senator_Darline_Graham_Official_Portrait,_119th_Congress.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=198847397",
+              "sha1": "3ba44b267757d6cb37fe55df1d7287537381feb0",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-09-04 12:21:13",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Senator Darline Graham Official Portrait, 119th Congress",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD US Congress|Extracted images|Taken on missing SDC inception|PD-USGov missing SDC copyright status|Official portraits of members of the 119th United States Congress|United States photographs taken on 2026-08-05|Darline Graham",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Artist": {
+                  "value": "<div class=\"fn value\">\nRosa Pineda, United States Senate</div>",
+                  "source": "commons-desc-page"
+                },
+                "ImageDescription": {
+                  "value": "<div class=\"description\">\nSenator Darline Graham, Official Portrait in Washington, DC on August 5, 2026. (Official U.S. Senate photo by Rosa Pineda)</div>",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "Taken on 5 August 2026",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.dgraham.senate.gov/\">https://www.dgraham.senate.gov/</a> (<a rel=\"nofollow\" class=\"external text\" href=\"https://www.dgraham.senate.gov/wp-content/uploads/2026/08/20260805-pineda-028.jpg\">File</a>)",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "<i>This <a href=\"//commons.wikimedia.org/wiki/United_States_Congress\" title=\"United States Congress\">United States Congress</a> image is in the <a href=\"//commons.wikimedia.org/wiki/Public_domain\" class=\"mw-redirect\" title=\"Public domain\">public domain</a>. This may be because it was taken by an employee of the Congress as part of that person’s official duties, or because it has been released into the public domain and posted on the official websites of a member of Congress. As a <a href=\"https://en.wikipedia.org/wiki/Work_of_the_United_States_Government\" class=\"extiw\" title=\"w:Work of the United States Government\">work</a> of the <a href=\"https://en.wikipedia.org/wiki/Federal_Government_of_the_United_States\" class=\"extiw\" title=\"w:Federal Government of the United States\">U.S. federal government</a>, the image is in the <b><a href=\"https://en.wikipedia.org/wiki/public_domain\" class=\"extiw\" title=\"w:public domain\">public domain</a></b>.</i>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              }
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1273254808,
+              "parentid": 1273135258,
+              "timestamp": "2026-09-06T19:19:04Z"
+            }
+          ]
+        },
+        "196653626": {
+          "pageid": 196653626,
+          "ns": 6,
+          "title": "File:Tom Barrett, official portrait (119th Congress).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "timestamp": "2026-08-02T02:20:26Z",
+              "size": 4118807,
+              "width": 3360,
+              "height": 4200,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Tom_Barrett%2C_official_portrait_%28119th_Congress%29.jpg/330px-Tom_Barrett%2C_official_portrait_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 320,
+              "thumbheight": 400,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Tom_Barrett%2C_official_portrait_%28119th_Congress%29.jpg/960px-Tom_Barrett%2C_official_portrait_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Tom_Barrett%2C_official_portrait_%28119th_Congress%29.jpg/330px-Tom_Barrett%2C_official_portrait_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 320,
+                "height": 400,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Tom_Barrett%2C_official_portrait_%28119th_Congress%29.jpg/960px-Tom_Barrett%2C_official_portrait_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Tom_Barrett%2C_official_portrait_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Tom_Barrett,_official_portrait_(119th_Congress).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=196653626",
+              "sha1": "8a4fd9b86439f1c3de17ecc876eba746c8eb74c2",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-08-02 02:20:26",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Tom Barrett, official portrait (119th Congress)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD US Congress|Images with extracted images|PD-USGov missing SDC copyright status|Official portraits of members of the 119th United States Congress|Tom Barrett (Michigan politician)",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Official portrait of Tom Barrett, the U.S. representative for Michigan's 7th congressional district.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-02-10",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://barrett.house.gov/about\">https://barrett.house.gov/about</a> (<a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/20260802021915/https://thelivingstonpost.com/wp-content/uploads/2025/03/2025-02-10_BT_0042.jpeg\">File</a>)",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Brian Thorpe",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://barrett.house.gov/copyright\">https://barrett.house.gov/copyright</a>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              }
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1271367268,
+              "parentid": 1271367205,
+              "timestamp": "2026-09-02T15:32:04Z"
+            }
+          ]
+        },
+        "165107034": {
+          "pageid": 165107034,
+          "ns": 6,
+          "title": "File:Wesley Bell, official portrait (119th Congress).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "timestamp": "2025-05-12T14:21:47Z",
+              "size": 405727,
+              "width": 1536,
+              "height": 1920,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Wesley_Bell%2C_official_portrait_%28119th_Congress%29.jpg/330px-Wesley_Bell%2C_official_portrait_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 320,
+              "thumbheight": 400,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Wesley_Bell%2C_official_portrait_%28119th_Congress%29.jpg/960px-Wesley_Bell%2C_official_portrait_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Wesley_Bell%2C_official_portrait_%28119th_Congress%29.jpg/330px-Wesley_Bell%2C_official_portrait_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 320,
+                "height": 400,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Wesley_Bell%2C_official_portrait_%28119th_Congress%29.jpg/960px-Wesley_Bell%2C_official_portrait_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Wesley_Bell%2C_official_portrait_%28119th_Congress%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Wesley_Bell,_official_portrait_(119th_Congress).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=165107034",
+              "sha1": "0a73b69a99333a4c2791f8a30ec27d8ce8c51848",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-05-12 14:21:47",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Wesley Bell, official portrait (119th Congress)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Wesley Bell|PD US Congress|Images with extracted images|Official portraits of members of the 119th United States Congress|Photographs by Brian Thorpe",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Official portrait of Wesley Bell, the U.S. representative for Missouri's 1st congressional district.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-01-07",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://bell.house.gov/sites/evo-subsites/bell.house.gov/files/evo-media-image/2025-01-07_bt_0002-1).jpg\">https://bell.house.gov/sites/evo-subsites/bell.house.gov/files/evo-media-image/2025-01-07_bt_0002-1).jpg</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Brian Thorpe",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://bell.house.gov/copyright\">https://bell.house.gov/copyright</a>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              }
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1271068974,
+              "parentid": 1268814893,
+              "timestamp": "2026-09-02T00:30:29Z"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

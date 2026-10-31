@@ -6,24 +6,26 @@ const map = require('../election-challenge-map.js');
 const root = path.resolve(__dirname,'..');
 const read = name => JSON.parse(fs.readFileSync(path.join(root,name),'utf8'));
 const ledger = read('election/candidate-portraits.json');
+const admittedCount = ledger.coverage.admittedPortraits;
 const makeRaces = () => map.buildRaces(read('election/house-forecast-lock.json'),read('election/current-projections.json'));
 
-test('actual 940-card roster admits exactly 373 matching portraits',() => {
+test('actual 940-card roster admits its entire verified portrait ledger',() => {
   const races = makeRaces();
   assert.equal(races.reduce((n,r) => n+r.candidates.length,0),940);
-  assert.deepEqual(map.applyPortraitLedger(races,ledger),{matchedCards:373,uniquePeople:373,available:true});
-  assert.equal(map.portraitCount(races),373);
+  assert.ok(admittedCount >= 373);
+  assert.deepEqual(map.applyPortraitLedger(races,ledger),{matchedCards:admittedCount,uniquePeople:admittedCount,available:true});
+  assert.equal(map.portraitCount(races),admittedCount);
 });
 
 test('reused IDs, wrong identity and duplicate records cannot attach another face',() => {
   for (const field of ['candidateName','state','party','contestId','chamber']) {
     const changed = structuredClone(ledger);
     changed.records[0][field] = 'wrong';
-    assert.equal(map.applyPortraitLedger(makeRaces(),changed).matchedCards,372,field);
+    assert.equal(map.applyPortraitLedger(makeRaces(),changed).matchedCards,admittedCount-1,field);
   }
   const duplicate = structuredClone(ledger);
   duplicate.records.push(duplicate.records[0]);
-  assert.equal(map.applyPortraitLedger(makeRaces(),duplicate).matchedCards,372);
+  assert.equal(map.applyPortraitLedger(makeRaces(),duplicate).matchedCards,admittedCount-1);
 });
 
 test('unavailable photo ledger preserves all races and clears stale photos',() => {
@@ -56,4 +58,13 @@ test('remote image failure removes only the broken photo, exposing its existing 
 test('untrusted URL schemes never become admitted images',() => {
   const portrait={...ledger.records[0],url:'javascript:alert(1)'};
   assert.equal(map.admittedPortrait({portrait}),null);
+});
+
+test('local public-domain photos require the exact identity and content-hash path',() => {
+  const base = {...ledger.records[0],imageSha256:'a'.repeat(64)};
+  base.url = `/assets/candidate-portraits/${base.bioguideId}-${base.imageSha256.slice(0,16)}.jpg`;
+  assert.equal(map.admittedPortrait({portrait:base}),base);
+  for (const url of ['/assets/candidate-portraits/../wrong.jpg','//example.com/photo.jpg',base.url.replace('-aaaaaaaa','-bbbbbbbb')]) {
+    assert.equal(map.admittedPortrait({portrait:{...base,url}}),null);
+  }
 });

@@ -17,6 +17,23 @@ const PREVIEW_RECEIPT = path.join(STATE_DIR, 'preview-receipt.json');
 const PRODUCTION_RECEIPT = path.join(STATE_DIR, 'production-receipt.json');
 const FIREBASE_TOOLS_ROOT = process.env.FIREBASE_TOOLS_ROOT;
 
+// Local candidate portraits are public-domain source thumbnails. Only the exact
+// identity/hash paths admitted by the portrait ledger may enter a release.
+const CANDIDATE_PORTRAIT_FILES = JSON.parse(fs.readFileSync(path.join(ROOT, 'election/candidate-portraits.json'), 'utf8')).records
+  .filter((record) => typeof record.url === 'string' && record.url.startsWith('/assets/candidate-portraits/'))
+  .map((record) => {
+    if (!/^[A-Z][0-9]{6}$/.test(record.bioguideId) || !/^[a-f0-9]{64}$/.test(record.imageSha256 || '') ||
+        record.url !== `/assets/candidate-portraits/${record.bioguideId}-${record.imageSha256.slice(0,16)}.jpg`) {
+      throw new Error('Candidate portrait path is not bound to its identity and hash.');
+    }
+    const file = record.url.slice(1);
+    if (crypto.createHash('sha256').update(fs.readFileSync(path.join(ROOT, file))).digest('hex') !== record.imageSha256) {
+      throw new Error(`Candidate portrait bytes changed: ${file}`);
+    }
+    return file;
+  });
+const NBA_DIRECTORY_FILES = ['sports/nba.html', 'sports/nba-players.js', 'sports/nba-players.css', 'sports/nba-player-portraits.json'];
+
 const SOCIAL_CARD_FILES = [
   'assets/social-manifest.json',
   'assets/social/og-home.png',
@@ -59,10 +76,12 @@ const OVERLAY_FILES = [
   'assets/us-states-map.json',
   'assets/us-states-map.SOURCE.md',
   'election/candidate-portraits.json', 'election/comparator-admission.json',
+  ...CANDIDATE_PORTRAIT_FILES,
   'election/house-forecast-lock.json',
   'election/senate-forecast-lock.json',
   'election/senate-ratings-source.json',
   'election/current-projections.json',
+  'election/fresh-run-checkpoint.json',
   'election/challenger-source-checks.json',
   'election/seat-projections.json',
   'digital-id.html',
@@ -88,7 +107,7 @@ const OVERLAY_FILES = [
   'sports.html',
   'sports/module-registry.json',
   'nfl/film-room.html',
-  'sports/nba.html',
+  ...NBA_DIRECTORY_FILES,
   'sports/mlb.html',
   'sports/nhl.html',
   'insights.css',
@@ -128,6 +147,19 @@ const REQUIRED_REWRITES = {
 };
 const DIVISION_ROUTES = ['/assurance', '/investigations', '/forecasting', '/digital-id', '/one', '/os'];
 const RELEASE_PROFILES = {
+  portraits: {
+    overlayFiles: [
+      'sports.html', 'sports/module-registry.json', ...NBA_DIRECTORY_FILES,
+      'nfl/trades.html', 'nfl/trades.js', 'nfl/trade-board.json',
+      'nfl/desk-live.json', 'nfl/current-forecasts.json', 'nfl/player-portraits.json',
+      'nfl/forecast-ledger.json', 'nfl/deadline-audit.json',
+      'election-challenge.html', 'election-challenge-map.js', 'election-challenge-map.css',
+      'election/candidate-portraits.json', 'election/comparator-admission.json',
+      'election/fresh-run-checkpoint.json', ...CANDIDATE_PORTRAIT_FILES,
+    ],
+    sitemapRoutes: ['/sports', '/sports/nba', '/nfl/trades', '/election-challenge'],
+    includeHomepage: false,
+  },
   'desk-upgrade': {
     overlayFiles: [
       'nfl/trades.html', 'nfl/trades.js', 'nfl/trade-board.json',
@@ -136,6 +168,8 @@ const RELEASE_PROFILES = {
       'election-challenge.html', 'election-challenge-map.js', 'election-challenge-map.css',
       'election/candidate-portraits.json', 'election/comparator-admission.json',
       'election/current-projections.json',
+      'election/fresh-run-checkpoint.json',
+      ...CANDIDATE_PORTRAIT_FILES,
     ],
     sitemapRoutes: ['/nfl/trades', '/election-challenge'],
     includeHomepage: false,
@@ -156,11 +190,13 @@ const RELEASE_PROFILES = {
       'election-challenge-map.js', 'election/house-forecast-lock.json',
       'election/senate-forecast-lock.json', 'election/senate-ratings-source.json',
       'election/current-projections.json', 'election/challenger-source-checks.json',
+      'election/fresh-run-checkpoint.json',
       'election/seat-projections.json',
       'assets/social/og-election-challenge.png',
       'assets/us-states-map.json',
       'assets/us-states-map.SOURCE.md',
       'election/candidate-portraits.json', 'election/comparator-admission.json',
+      ...CANDIDATE_PORTRAIT_FILES,
     ],
     sitemapRoutes: ['/election-challenge'],
     includeHomepage: false,
@@ -172,7 +208,7 @@ const RELEASE_PROFILES = {
       'nfl/source-health.json',
       'nfl/forecast-ledger.json', 'nfl/deadline-audit.json', 'nfl/publishing.json',
       'sports-desk.css', 'sports-article.css', 'sports.html', 'sports/module-registry.json', 'nfl/film-room.html',
-      'sports/nba.html', 'sports/mlb.html', 'sports/nhl.html',
+      ...NBA_DIRECTORY_FILES, 'sports/mlb.html', 'sports/nhl.html',
       'assets/social/og-sports.png', 'assets/social/og-nfl-trades.png',
       'assets/social/og-nfl-analysis.png', 'assets/social/og-nfl-film-room.png',
       'assets/social/og-sports-nba.png', 'assets/social/og-sports-mlb.png',
@@ -187,7 +223,8 @@ const RELEASE_PROFILES = {
   publishing: {
     overlayFiles: [
       'forecasting.html', 'investigations.html', 'election-challenge.html', 'sports-desk.css', 'sports-article.css', 'sports.html', 'sports/module-registry.json',
-      'nfl/trades.html', 'nfl/trades.js', 'nfl/desk-live.json', 'nfl/current-forecasts.json', 'nfl/player-portraits.json', 'nfl/analysis.html', 'nfl/film-room.html', 'sports/nba.html', 'sports/mlb.html',
+      'election/fresh-run-checkpoint.json',
+      'nfl/trades.html', 'nfl/trades.js', 'nfl/desk-live.json', 'nfl/current-forecasts.json', 'nfl/player-portraits.json', 'nfl/analysis.html', 'nfl/film-room.html', ...NBA_DIRECTORY_FILES, 'sports/mlb.html',
       'sports/nhl.html', 'nfl/weekly-brief.html', 'insights.css', 'insights.html',
       'insights/nfl-brier-accountability.html', 'insights/election-forecast-custody.html',
       'insights/ai-bots-money-claims.html', 'sports-interest.html',
@@ -564,6 +601,15 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     if (portraits.schema !== 'KAHRELUM_PLAYER_PORTRAITS_v1.0' || new Set(portraits.records.map((row) => row.candidateId)).size !== expectedIds.size) fail('NFL player portrait coverage is incomplete.');
   }
   const one = (await fetchBytes(origin + '/one')).toString('utf8');
+  if (['full', 'sports-intelligence', 'publishing', 'portraits'].includes(profileName)) {
+    const nba = JSON.parse((await fetchBytes(origin + '/sports/nba-player-portraits.json')).toString('utf8'));
+    if (nba.schema !== 'KAHRELUM_NBA_PLAYER_PORTRAITS_v1.0' || nba.league !== 'NBA' ||
+        nba.coverage.teams !== 30 || nba.records.length !== nba.coverage.players ||
+        new Set(nba.records.map((record) => record.playerId)).size !== nba.records.length ||
+        nba.records.some((record) => record.id !== `NBA-ESPN-${record.playerId}`)) fail('NBA player identity or snapshot coverage check failed.');
+    const nbaPage = (await fetchBytes(origin + '/sports/nba')).toString('utf8');
+    if (!nbaPage.includes('id="nbaPlayers"') || !nbaPage.includes('/sports/nba-players.js')) fail('NBA player directory client is missing.');
+  }
   if (!/in development/i.test(one)) fail('KAHRELUM ONE development warning is absent from the deployed page.');
   const home = (await fetchBytes(origin + '/')).toString('utf8');
   if (!home.includes('$750') || !home.includes('$2,500')) fail('Deployed homepage pricing custody check failed.');
