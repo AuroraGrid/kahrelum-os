@@ -1,0 +1,92 @@
+{
+  "capturedAtUtc": "2026-10-31T12:59:01.315955Z",
+  "reason": "Live pre-promotion audit detected external thumbnail byte drift; original records retained below. No identity, attribution, license, source revision or URL changes.",
+  "records": [
+    {
+      "previousRecord": {
+        "sourceCandidateId": 20774,
+        "candidateName": "Adam Hamilton",
+        "state": "KS",
+        "party": "D",
+        "chamber": "Senate",
+        "contestId": "KS",
+        "identityType": "FEC_CANDIDATE",
+        "identityId": "S6KS00312",
+        "identitySourceUrl": "https://www.fec.gov/data/candidate/S6KS00312/?cycle=2026",
+        "commonsTitle": "File:Adam Hamilton on the Courage to Preach (cropped).png",
+        "commonsRevisionId": 1275771244,
+        "sourceUrl": "https://commons.wikimedia.org/w/index.php?oldid=1275771244",
+        "sourceOriginalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/55/Adam_Hamilton_on_the_Courage_to_Preach_%28cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "sourceOriginalImageSha1": "50d1c2ba429fa075d74fb936c827044ae0ec7ece",
+        "sourceThumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Adam_Hamilton_on_the_Courage_to_Preach_%28cropped%29.png/330px-Adam_Hamilton_on_the_Courage_to_Preach_%28cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Adam_Hamilton_on_the_Courage_to_Preach_%28cropped%29.png/330px-Adam_Hamilton_on_the_Courage_to_Preach_%28cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "imageSha256": "365ca374d1bd1272446cfa2f4a4cabeb33120ca4f640de4d7789bfc512586cdc",
+        "imageBytes": 140671,
+        "width": 330,
+        "height": 349,
+        "imageCheck": {
+          "httpStatus": 200,
+          "contentType": "image/png",
+          "retrievedAtUtc": "2026-10-31T05:12:16.589189+00:00",
+          "verification": "Downloaded and decoded the exact source thumbnail; SHA256 recorded"
+        },
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "attribution": "Working Preacher",
+        "rightsBasis": "Reviewed explicit Commons reuse license at the recorded revision; author and license are displayed with the source link.",
+        "assetTransformation": "Unchanged Commons-provided thumbnail; upstream crop is documented at the image source. No additional image edits.",
+        "reviewedAtUtc": "2026-10-31T05:16:03Z"
+      },
+      "currentImageSha256": "2328c972171645482cc3f6f79e29cf5b47785c155db6a9d01c2999b3c01a3840",
+      "currentImageBytes": 140671,
+      "decodedDimensions": [
+        330,
+        349
+      ],
+      "originalSha1Matched": true
+    },
+    {
+      "previousRecord": {
+        "sourceCandidateId": 28301,
+        "candidateName": "Todd Achilles",
+        "state": "ID",
+        "party": "I",
+        "chamber": "Senate",
+        "contestId": "ID",
+        "identityType": "FEC_CANDIDATE",
+        "identityId": "S6ID00146",
+        "identitySourceUrl": "https://www.fec.gov/data/candidate/S6ID00146/?cycle=2026",
+        "commonsTitle": "File:Todd Achilles on LibertyDad's stream.png",
+        "commonsRevisionId": 1264482147,
+        "sourceUrl": "https://commons.wikimedia.org/w/index.php?oldid=1264482147",
+        "sourceOriginalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Todd_Achilles_on_LibertyDad%27s_stream.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "sourceOriginalImageSha1": "4196ef52481a79ec43e4a04b939299d66cb8a4a5",
+        "sourceThumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Todd_Achilles_on_LibertyDad%27s_stream.png/330px-Todd_Achilles_on_LibertyDad%27s_stream.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Todd_Achilles_on_LibertyDad%27s_stream.png/330px-Todd_Achilles_on_LibertyDad%27s_stream.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "imageSha256": "ce41b393aa3850f015cda535f4e7c660eec9d9e282b8519502577696fe709d4a",
+        "imageBytes": 165520,
+        "width": 330,
+        "height": 446,
+        "imageCheck": {
+          "httpStatus": 200,
+          "contentType": "image/png",
+          "retrievedAtUtc": "2026-10-31T05:12:16.770684+00:00",
+          "verification": "Downloaded and decoded the exact source thumbnail; SHA256 recorded"
+        },
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "attribution": "DL a.k.a. LibertyDad",
+        "rightsBasis": "Reviewed explicit Commons reuse license at the recorded revision; author and license are displayed with the source link.",
+        "assetTransformation": "Unchanged Commons-provided thumbnail; upstream crop is documented at the image source. No additional image edits.",
+        "reviewedAtUtc": "2026-10-31T05:16:03Z"
+      },
+      "currentImageSha256": "81729af82e9a94e6647ee04b737e7aa18e5dce8b0c67cdc62be5a2db47e4b14f",
+      "currentImageBytes": 165556,
+      "decodedDimensions": [
+        330,
+        446
+      ],
+      "originalSha1Matched": true
+    }
+  ]
+}

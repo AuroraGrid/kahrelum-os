@@ -12886,15 +12886,15 @@
       "sourceOriginalImageSha1": "50d1c2ba429fa075d74fb936c827044ae0ec7ece",
       "sourceThumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Adam_Hamilton_on_the_Courage_to_Preach_%28cropped%29.png/330px-Adam_Hamilton_on_the_Courage_to_Preach_%28cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Adam_Hamilton_on_the_Courage_to_Preach_%28cropped%29.png/330px-Adam_Hamilton_on_the_Courage_to_Preach_%28cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "imageSha256": "365ca374d1bd1272446cfa2f4a4cabeb33120ca4f640de4d7789bfc512586cdc",
+      "imageSha256": "2328c972171645482cc3f6f79e29cf5b47785c155db6a9d01c2999b3c01a3840",
       "imageBytes": 140671,
       "width": 330,
       "height": 349,
       "imageCheck": {
         "httpStatus": 200,
         "contentType": "image/png",
-        "retrievedAtUtc": "2026-10-31T05:12:16.589189+00:00",
-        "verification": "Downloaded and decoded the exact source thumbnail; SHA256 recorded"
+        "retrievedAtUtc": "2026-10-31T12:59:01.315955Z",
+        "verification": "Downloaded and decoded exact source thumbnail; pinned original SHA1 independently matched; prior retrieval retained in thumbnail-recapture-2026-10-31.json"
       },
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
@@ -13418,15 +13418,15 @@
       "sourceOriginalImageSha1": "4196ef52481a79ec43e4a04b939299d66cb8a4a5",
       "sourceThumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Todd_Achilles_on_LibertyDad%27s_stream.png/330px-Todd_Achilles_on_LibertyDad%27s_stream.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Todd_Achilles_on_LibertyDad%27s_stream.png/330px-Todd_Achilles_on_LibertyDad%27s_stream.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "imageSha256": "ce41b393aa3850f015cda535f4e7c660eec9d9e282b8519502577696fe709d4a",
-      "imageBytes": 165520,
+      "imageSha256": "81729af82e9a94e6647ee04b737e7aa18e5dce8b0c67cdc62be5a2db47e4b14f",
+      "imageBytes": 165556,
       "width": 330,
       "height": 446,
       "imageCheck": {
         "httpStatus": 200,
         "contentType": "image/png",
-        "retrievedAtUtc": "2026-10-31T05:12:16.770684+00:00",
-        "verification": "Downloaded and decoded the exact source thumbnail; SHA256 recorded"
+        "retrievedAtUtc": "2026-10-31T12:59:01.315955Z",
+        "verification": "Downloaded and decoded exact source thumbnail; pinned original SHA1 independently matched; prior retrieval retained in thumbnail-recapture-2026-10-31.json"
       },
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
@@ -18421,5 +18421,5 @@
   "noncongressSourceCatalog": "research/candidate-portraits/noncongress-sources-2026-10-31.json",
   "sourceCatalogSha256": "ba52f968f672bb2c7d8177d5b69f2fb32f1c8d515dcf09e60bb02db0b912edd1",
   "supplementalSourceCatalogSha256": "a66fd3ffd62a50eb8c52d0e2b96318a7501bb3d719431e671621303fde7d2a94",
-  "noncongressSourceCatalogSha256": "270db838caf86bac3d9e97270d1102e71d414fbf1b5bf5277589284037e5f6b9"
+  "noncongressSourceCatalogSha256": "920e8674d912b80aec7c3b01623dbb9c357cfc1bb93be1f2fbd6bf21eb42fc73"
 }
