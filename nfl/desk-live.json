@@ -1,6 +1,6 @@
 {
   "schema": "KAHRELUM_NFL_DESK_LIVE_v1.0",
-  "generatedAtUtc": "2026-10-31T04:41:16Z",
+  "generatedAtUtc": "2026-10-31T04:47:11Z",
   "sourceStatus": {
     "schema": "KAHRELUM_REFRESH_STATUS_v1.1",
     "lastAttemptAt": "2026-10-31T03:18:54Z",
@@ -6876,7 +6876,869 @@
   "latestEditorialPublicationAt": null,
   "contradictions": [],
   "ledger": {
-    "eligibleLocks": [],
+    "eligibleLocks": [
+      {
+        "eventId": "NFL-2026-TRADE-K26-001-FC1",
+        "player": "Daron Payne",
+        "originalProbability": 0.02,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-002-FC1",
+        "player": "Josh Uche",
+        "originalProbability": 0.61,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-003-FC1",
+        "player": "Josh Downs",
+        "originalProbability": 0.58,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-004-FC1",
+        "player": "A'Shawn Robinson",
+        "originalProbability": 0.57,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-005-FC1",
+        "player": "Will McDonald IV",
+        "originalProbability": 0.52,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-006-FC1",
+        "player": "Grover Stewart",
+        "originalProbability": 0.49,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-007-FC1",
+        "player": "Marquise Brown",
+        "originalProbability": 0.42,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-008-FC1",
+        "player": "Jauan Jennings",
+        "originalProbability": 0.4,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-009-FC1",
+        "player": "Josh Sweat",
+        "originalProbability": 0.39,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-010-FC1",
+        "player": "Riq Woolen",
+        "originalProbability": 0.39,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-011-FC1",
+        "player": "Brian Thomas Jr.",
+        "originalProbability": 0.34,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-012-FC1",
+        "player": "YaYa Diaby",
+        "originalProbability": 0.31,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-013-FC1",
+        "player": "Calvin Ridley",
+        "originalProbability": 0.3,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-014-FC1",
+        "player": "Alontae Taylor",
+        "originalProbability": 0.25,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-015-FC1",
+        "player": "Christian Barmore",
+        "originalProbability": 0.24,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-016-FC1",
+        "player": "Tony Pollard",
+        "originalProbability": 0.17,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-017-FC1",
+        "player": "Jonathan Taylor",
+        "originalProbability": 0.09,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-018-FC1",
+        "player": "Khalil Mack",
+        "originalProbability": 0.08,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-019-FC1",
+        "player": "Moro Ojomo",
+        "originalProbability": 0.04,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-020-FC1",
+        "player": "Aaron Brewer",
+        "originalProbability": 0.06,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-021-FC1",
+        "player": "Alex Highsmith",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-022-FC1",
+        "player": "Alvin Kamara",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-023-FC1",
+        "player": "Amani Hooker",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-024-FC1",
+        "player": "Amik Robertson",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-025-FC1",
+        "player": "Andre Cisco",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-026-FC1",
+        "player": "Andrew Wylie",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-027-FC1",
+        "player": "Anthony Richardson Sr.",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-028-FC1",
+        "player": "Antoine Winfield Jr.",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-029-FC1",
+        "player": "Arden Key",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-030-FC1",
+        "player": "Austin Jackson",
+        "originalProbability": 0.23,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-031-FC1",
+        "player": "Braden Smith",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-032-FC1",
+        "player": "Breece Hall",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-033-FC1",
+        "player": "Brevin Jordan",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-034-FC1",
+        "player": "Bud Dupree",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-035-FC1",
+        "player": "Budda Baker",
+        "originalProbability": 0.24,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-036-FC1",
+        "player": "Cameron Jordan",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-037-FC1",
+        "player": "Carrington Valentine",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-038-FC1",
+        "player": "Cedric Gray",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-039-FC1",
+        "player": "Cesar Ruiz",
+        "originalProbability": 0.12,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-040-FC1",
+        "player": "Chris Godwin Jr.",
+        "originalProbability": 0.12,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-041-FC1",
+        "player": "Cody Barton",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-042-FC1",
+        "player": "Colby Parkinson",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-043-FC1",
+        "player": "Cole Holcomb",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-044-FC1",
+        "player": "Cole Kmet",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-045-FC1",
+        "player": "Daiyan Henley",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-046-FC1",
+        "player": "Dallas Goedert",
+        "originalProbability": 0.35,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-047-FC1",
+        "player": "Dalvin Tomlinson",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-048-FC1",
+        "player": "Darnell Mooney",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-049-FC1",
+        "player": "Davon Godchaux",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-050-FC1",
+        "player": "Dawand Jones",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-051-FC1",
+        "player": "Denzel Perryman",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-052-FC1",
+        "player": "Derwin James",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-053-FC1",
+        "player": "Devin Singletary",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-054-FC1",
+        "player": "Dillon Gabriel",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-055-FC1",
+        "player": "Donte Jackson",
+        "originalProbability": 0.09,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-056-FC1",
+        "player": "Dorance Armstrong Jr.",
+        "originalProbability": 0.23,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-057-FC1",
+        "player": "Gardner Minshew",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-058-FC1",
+        "player": "Garrett Wilson",
+        "originalProbability": 0.03,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-059-FC1",
+        "player": "Greg Dulcich",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-060-FC1",
+        "player": "Isaiah Pola-Mao",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-061-FC1",
+        "player": "Ja'Tavion Sanders",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-063-FC1",
+        "player": "Jackson Powers-Johnson",
+        "originalProbability": 0.26,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-064-FC1",
+        "player": "Jacoby Brissett",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-065-FC1",
+        "player": "Jahdae Barron",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-066-FC1",
+        "player": "Jalen Tolbert",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-067-FC1",
+        "player": "James Hudson",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-068-FC1",
+        "player": "Jamien Sherwood",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-069-FC1",
+        "player": "Jarvis Brownlee Jr.",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-070-FC1",
+        "player": "Jayden Reed",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-071-FC1",
+        "player": "Jermaine Johnson II",
+        "originalProbability": 0.21,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-072-FC1",
+        "player": "Jerry Jeudy",
+        "originalProbability": 0.07,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-073-FC1",
+        "player": "Jerry Tillery",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-074-FC1",
+        "player": "Jessie Bates III",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-075-FC1",
+        "player": "John Michael Schmitz",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-076-FC1",
+        "player": "Jordyn Brooks",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-077-FC1",
+        "player": "Josh Palmer",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-078-FC1",
+        "player": "Justin Herbert",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-079-FC1",
+        "player": "K'Lavon Chaisson",
+        "originalProbability": 0.28,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-080-FC1",
+        "player": "Kayvon Thibodeaux",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-081-FC1",
+        "player": "Keenan Allen",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-082-FC1",
+        "player": "Keisean Nixon",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-083-FC1",
+        "player": "Kelee Ringo",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-084-FC1",
+        "player": "Kenneth Grant",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-085-FC1",
+        "player": "Kenny Gainwell",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-086-FC1",
+        "player": "Kahlil Benson",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-087-FC1",
+        "player": "Kimani Vidal",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-088-FC1",
+        "player": "Kirk Cousins",
+        "originalProbability": 0.14,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-089-FC1",
+        "player": "Kristian Fulton",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-090-FC1",
+        "player": "Landon Dickerson",
+        "originalProbability": 0.18,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-091-FC1",
+        "player": "Laquon Treadwell",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-092-FC1",
+        "player": "Larry Borom",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-093-FC1",
+        "player": "Luke Schoonmaker",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-094-FC1",
+        "player": "Mac Jones",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-095-FC1",
+        "player": "Mason Rudolph",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-096-FC1",
+        "player": "Maxx Crosby",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-097-FC1",
+        "player": "Mike Hughes",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-098-FC1",
+        "player": "Nahshon Wright",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-099-FC1",
+        "player": "Olu Oluwatimi",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-100-FC1",
+        "player": "Patrick Queen",
+        "originalProbability": 0.1,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-101-FC1",
+        "player": "Paulson Adebo",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-102-FC1",
+        "player": "Quentin Johnston",
+        "originalProbability": 0.06,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-103-FC1",
+        "player": "Rashod Bateman",
+        "originalProbability": 0.12,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-104-FC1",
+        "player": "Saquon Barkley",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-105-FC1",
+        "player": "Sean Tucker",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-106-FC1",
+        "player": "Shedeur Sanders",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-107-FC1",
+        "player": "Sheldon Rankins",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-108-FC1",
+        "player": "Shemar Stewart",
+        "originalProbability": 0.26,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-109-FC1",
+        "player": "Stefon Diggs",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-110-FC1",
+        "player": "Tatum Bethune",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-111-FC1",
+        "player": "Tony Adams",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-112-FC1",
+        "player": "Tony Jefferson",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-113-FC1",
+        "player": "TreVeyon Henderson",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-114-FC1",
+        "player": "Troy Dye",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-115-FC1",
+        "player": "Tuli Tuipulotu",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-116-FC1",
+        "player": "Tyjae Spears",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-117-FC1",
+        "player": "Tyler Nubin",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-118-FC1",
+        "player": "Tyrone Tracy Jr.",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-119-FC1",
+        "player": "Vita Vea",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-120-FC1",
+        "player": "Willie Gay Jr.",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-121-FC1",
+        "player": "Wyatt Teller",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-122-FC1",
+        "player": "Zach Sieler",
+        "originalProbability": 0.06,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-123-FC1",
+        "player": "Zyon McCollum",
+        "originalProbability": 0.11,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-124-FC1",
+        "player": "Adetomiwa Adebawore",
+        "originalProbability": 0.04,
+        "publicationTimestampUtc": "2026-10-31T04:47:11Z",
+        "gitCommit": "e225387f8ae04f6cb18fee1b3db7e23858974bb4"
+      }
+    ],
     "historicalExcluded": [
       {
         "eventId": "HIST-K26-001",
@@ -7062,10 +7924,10 @@
   "audit": {
     "schema": "KAHRELUM_NFL_DEADLINE_AUDIT_v1.0",
     "scheduledForUtc": "2026-11-12T14:00:00Z",
-    "status": "SCHEDULED",
+    "status": "PENDING_SCHEDULED_AUDIT",
     "officialOutcomeCutoffUtc": "2026-11-10T21:00:00Z",
     "confirmedTransactions": [],
-    "eligibleForecasts": 0,
+    "eligibleForecasts": 123,
     "correctTrades": 0,
     "correctNonTrades": 0,
     "incorrect": 0,
@@ -7073,8 +7935,9 @@
     "allNoBaselineBrier": null,
     "excludedHistoricalForecasts": 23,
     "limitations": [
-      "No eligible resolved prospective forecasts yet."
-    ]
+      "Outcomes are not scored before the documented official audit time."
+    ],
+    "generatedAt": "2026-10-31T04:47:11Z"
   },
   "refreshPolicy": {
     "browserPollSeconds": 60,

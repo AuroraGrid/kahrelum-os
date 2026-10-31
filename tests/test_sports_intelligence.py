@@ -286,7 +286,8 @@ class SportsIntelligenceTests(unittest.TestCase):
             if "provisionalBrierArithmetic" in record
         }
         self.assertEqual(set(records), set(expected))
-        self.assertEqual(ledger["eligibleLocks"], [])
+        self.assertFalse(set(records) & {event["player"] for event in ledger["eligibleLocks"]})
+        self.assertFalse({row["eventId"] for row in ledger["historicalExcluded"]} & {event["eventId"] for event in ledger["eligibleLocks"]})
         for player, (probability, brier) in expected.items():
             record = records[player]
             self.assertEqual(record["probability"], probability)
