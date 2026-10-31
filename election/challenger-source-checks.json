@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-10-31T01:57:45.550Z",
+  "checkedAtUtc": "2026-10-31T02:07:45.695Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -124,15 +124,15 @@
       "provider": "Datum Signals",
       "edition": "Main",
       "sourceUrl": "https://datumsignals.com/",
-      "houseDemocraticControlPct": 72.0,
+      "houseDemocraticControlPct": 70.0,
       "senateDemocraticControlPct": 63.0,
       "houseDemocraticSeats": null,
       "houseSeatType": null,
       "senateDemocraticSeats": null,
       "senateSeatType": null,
-      "sourceEdition": "Updated Oct. 30, 4:01 PM UTC",
+      "sourceEdition": "Updated Oct. 30, 4:01 PM UTC; rechecked Oct. 31 02:07 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "note": "Displayed favored/toss-up race counts are not a compatible expected full-chamber seat total."
+      "note": "First-party page now displays 70% Democratic House control, down from the previously recorded 72%, while Senate control remains 63%. Displayed favored/toss-up race counts are not a compatible expected full-chamber seat total."
     },
     {
       "provider": "Fred Cornell independent",
@@ -182,13 +182,13 @@
       "sourceUrl": "https://www.tpsielections.com/forecast",
       "houseDemocraticControlPct": 97.0,
       "senateDemocraticControlPct": 86.0,
-      "houseDemocraticSeats": 251.0,
+      "houseDemocraticSeats": 249.0,
       "houseSeatType": "average",
-      "senateDemocraticSeats": 54.0,
+      "senateDemocraticSeats": 54.2,
       "senateSeatType": "average",
-      "sourceEdition": "Updated Oct. 30",
+      "sourceEdition": "Updated Oct. 30; rechecked Oct. 31 02:07 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "note": "First-party index reports 2,000 simulated elections and labels both chamber values as averages."
+      "note": "First-party index reports 2,000 simulated elections. Its displayed averages changed from the previously recorded 251 House / 54 Senate to 249 House / 54.2 Senate; chamber-control probabilities remain 97% House and 86% Senate."
     },
     {
       "provider": "VotePredictor",
