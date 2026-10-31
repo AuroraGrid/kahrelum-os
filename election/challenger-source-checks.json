@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-10-31T13:33:28.083Z",
+  "checkedAtUtc": "2026-10-31T13:51:11.496Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -57,14 +57,16 @@
       "edition": "Main",
       "sourceUrl": "https://www.callthemap.com/house",
       "houseDemocraticControlPct": 85.0,
-      "senateDemocraticControlPct": 60.0,
+      "senateDemocraticControlPct": 59.0,
       "houseDemocraticSeats": 235.8,
       "houseSeatType": "expected",
-      "senateDemocraticSeats": 51.4,
+      "senateDemocraticSeats": 51.3,
       "senateSeatType": "expected including aligned independents",
-      "sourceEdition": "Forecast as of Oct. 30; rechecked Oct. 31 01:57 UTC",
+      "sourceEdition": "House forecast Oct. 30; Senate forecast Oct. 31; retrieved Oct. 31 13:51:11 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "note": "House and Senate first-party pages checked separately; Senate expected Democratic-aligned seats increased from the prior recorded 51.3 to 51.4 while Senate control remained 60%."
+      "retrievedAtUtc": "2026-10-31T13:51:11.496Z",
+      "rawSha256Senate": "532e9eaaa7a3f338b178d42e561f069d74f5f5371b86baf0d241a7872a065f48",
+      "note": "House and Senate first-party pages were checked separately. The Oct. 31 Senate edition moved Democratic control from 60% to 59%, expected Democratic-aligned seats from 51.4 to 51.3, and expected aligned independents from 2.5 to 2.4. The House remained on its Oct. 30 edition at 85% control and 235.8 expected Democratic seats. The source HTTP Date was ahead of the local observer clock and is retained only in the private retrieval receipt."
     },
     {
       "provider": "COYNTOSS",
