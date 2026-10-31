@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-10-31T12:54:17.306Z",
+  "checkedAtUtc": "2026-10-31T13:06:20.726Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -214,13 +214,15 @@
       "sourceUrl": "https://votepredictor.com/house",
       "houseDemocraticControlPct": 76.0,
       "senateDemocraticControlPct": null,
-      "houseDemocraticSeats": 229.6,
+      "houseDemocraticSeats": 229.7,
       "houseSeatType": "expected; page headline rounds to 230",
       "senateDemocraticSeats": null,
       "senateSeatType": null,
-      "sourceEdition": "Public page retrieved Oct. 31 01:57 UTC",
+      "sourceEdition": "Public page retrieved Oct. 31 13:06 UTC; precise page update time not exposed",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_PARTIAL",
-      "note": "House probability and exact expected-seat figure are public; no Senate top line was admitted from this source."
+      "retrievedAtUtc": "2026-10-31T13:06:20.726Z",
+      "rawSha256": "a202a0fb12443619e78b40a3f12a64a244917bad7e20f078f7f26c9b85d12fa0",
+      "note": "The public first-party page increased its exact expected Democratic House seats from 229.6 to 229.7 while retaining 76% Democratic control and a separately rounded 230-seat headline. No Senate top line was admitted. Direct unattended HTTP and the interactive browser encountered a Vercel security checkpoint; the preserved structured crawl receipt is explicitly partial rather than a full HTML capture."
     },
     {
       "provider": "Midterm Forecast",

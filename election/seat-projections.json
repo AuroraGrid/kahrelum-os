@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "edition": "KAH-US-2026-20261031T040639Z with challenger source checks through 2026-10-31T12:54:17Z",
+  "edition": "KAH-US-2026-20261031T040639Z with challenger source checks through 2026-10-31T13:06:20Z",
   "comparisonStatus": "DESCRIPTIVE_ONLY_UNMATCHED_CUTOFFS_AND_SEAT_TYPES",
-  "sourceObservationFileSha256": "b62b334e7861f194608a21a63a3c01b7cd9e123a2cd82741f594e198d0961608",
+  "sourceObservationFileSha256": "8c79e1e6453c3d2d82f8897b437ea24d9764b99b3e9d4f0b6d1b50a9d3347e6a",
   "house": {
     "totalSeats": 435,
     "democraticControlThreshold": 218,
@@ -26,7 +26,7 @@
       {"provider":"Yale PLSC 2219","democraticSeats":237,"seatType":"class model","edition":"Snapshot Oct. 30","sourceUrl":"https://kevinmdeluca.com/forecast/"},
       {"provider":"Dave Manuel","democraticSeats":235,"seatType":"projected median","edition":"Updated Oct. 31 8:45 AM ET; retrieved 12:51 UTC","sourceUrl":"https://www.davemanuel.com/2026-midterm-forecast.php"},
       {"provider":"On Point Politics","democraticSeats":253,"seatType":"average; first-party forecast-in-brief","edition":"Updated Oct. 31; retrieved 12:54 UTC","sourceUrl":"https://onpointpolitics.us/forecast"},
-      {"provider":"VotePredictor","democraticSeats":229.6,"seatType":"expected","edition":"Retrieved Oct. 31 01:57 UTC","sourceUrl":"https://votepredictor.com/house"},
+      {"provider":"VotePredictor","democraticSeats":229.7,"seatType":"expected","edition":"Retrieved Oct. 31 13:06 UTC; page update time not exposed","sourceUrl":"https://votepredictor.com/house"},
       {"provider":"Midterm Forecast","democraticSeats":236,"seatType":"median","edition":"Run Oct. 31 7:42 AM ET","sourceUrl":"https://midtermforecast.com/house/"}
     ]
   },
