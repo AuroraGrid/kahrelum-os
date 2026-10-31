@@ -82,6 +82,8 @@ const RELEASE_PROFILES = {
     sitemapRoutes: [
       ...DIVISION_ROUTES, '/election-lab', '/election-challenge', '/sports', '/nfl/trades',
       '/nfl/analysis', '/nfl/film-room', '/sports/nba', '/sports/mlb', '/sports/nhl',
+      '/election-live', '/election-count', '/election-method', '/election-showdown',
+      '/election-comparison',
     ],
     includeHomepage: true,
   },
@@ -119,6 +121,8 @@ const RELEASE_PROFILES = {
       '/sports', '/nfl/trades', '/nfl/film-room', '/sports/nba', '/sports/mlb',
       '/sports/nhl', '/nfl/weekly-brief', '/insights', '/insights/nfl-brier-accountability',
       '/insights/election-forecast-custody', '/insights/ai-bots-money-claims', '/sports-interest',
+      '/election-live', '/election-count', '/election-method', '/election-showdown',
+      '/election-comparison',
     ],
     includeHomepage: true,
   },

@@ -122,6 +122,15 @@ class PublishingSurfaceTests(unittest.TestCase):
         for route in ("/sports", "/nfl/trades", "/nfl/film-room"):
             self.assertIn(f'href="{route}"', homepage_fragment)
 
+        for route in (
+            "/election-live",
+            "/election-count",
+            "/election-method",
+            "/election-showdown",
+            "/election-comparison",
+        ):
+            self.assertIn(f"'{route}'", release)
+
     def test_public_release_hash_panels_are_removed_but_private_custody_remains(self):
         self.assertNotIn("Release identity", self.read("index.html"))
         self.assertNotIn("Release identity", self.read("election-challenge.html"))
