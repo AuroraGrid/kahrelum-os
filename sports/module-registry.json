@@ -1,5 +1,5 @@
 {
-  "schema": "KAHRELUM_SPORTS_MODULE_REGISTRY_v1.0",
+  "schema": "KAHRELUM_SPORTS_MODULE_REGISTRY_v1.1",
   "policy": "Each module has an isolated source registry, event namespace, forecast ledger and outcome authority. Empty modules do not imply operational coverage.",
   "modules": [
     {
@@ -8,7 +8,19 @@
       "eventNamespace": "NFL-TD26",
       "sourceRegistry": "nfl/sourcegrid.json",
       "forecastLedger": "nfl/forecast-ledger.json",
-      "outcomeAuthority": "NFL official transactions"
+      "outcomeAuthority": "NFL official transactions",
+      "publicRoute": "/nfl/trades",
+      "operationalSources": 37,
+      "publicRecords": 124
+    },
+    {
+      "id": "NFL_FILM_ROOM",
+      "status": "OPERATIONAL_FRAMEWORK_NO_ADMITTED_FILM",
+      "eventNamespace": "NFL-FILM",
+      "publicRoute": "/nfl/film-room",
+      "operationalSources": 0,
+      "publicRecords": 0,
+      "rightsBoundary": "No copyrighted video is mirrored. A permitted source and reviewer record are required before publication."
     },
     {
       "id": "NFL_FREE_AGENCY",
@@ -26,6 +38,27 @@
       "id": "NBA_TRADES",
       "status": "TEMPLATE_ONLY",
       "eventNamespace": "NBA-TRADE",
+      "publicRoute": "/sports/nba",
+      "operationalSources": 0,
+      "publicRecords": 0,
+      "records": []
+    },
+    {
+      "id": "MLB_TRANSACTIONS",
+      "status": "TEMPLATE_ONLY",
+      "eventNamespace": "MLB-TRANSACTION",
+      "publicRoute": "/sports/mlb",
+      "operationalSources": 0,
+      "publicRecords": 0,
+      "records": []
+    },
+    {
+      "id": "NHL_TRANSACTIONS",
+      "status": "TEMPLATE_ONLY",
+      "eventNamespace": "NHL-TRANSACTION",
+      "publicRoute": "/sports/nhl",
+      "operationalSources": 0,
+      "publicRecords": 0,
       "records": []
     },
     {
