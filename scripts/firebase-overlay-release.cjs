@@ -41,6 +41,13 @@ const OVERLAY_FILES = [
   'nfl/forecast-ledger.json',
   'nfl/deadline-audit.json',
   'nfl/publishing.json',
+  'sports-desk.css',
+  'sports.html',
+  'sports/module-registry.json',
+  'nfl/film-room.html',
+  'sports/nba.html',
+  'sports/mlb.html',
+  'sports/nhl.html',
   'insights.css',
   'insights.html',
   'insights/nfl-brier-accountability.html',
@@ -49,6 +56,7 @@ const OVERLAY_FILES = [
   'nfl/weekly-brief.html',
   'sports-interest.html',
   'assets/kahrelum-sports-intelligence-nfl-social-card.png',
+  'assets/kahrelum-sports-intelligence-social-card.png',
 ];
 
 const HTML_ROUTES = [
@@ -57,6 +65,7 @@ const HTML_ROUTES = [
   '/pilot', '/demo', '/sample', '/connect', '/hasan', '/election-lab', '/election-live',
   '/election-count', '/election-method', '/election-showdown', '/election-comparison',
   '/nfl/trades', '/nfl/analysis', '/nfl/weekly-brief',
+  '/sports', '/nfl/film-room', '/sports/nba', '/sports/mlb', '/sports/nhl',
   '/insights', '/insights/nfl-brier-accountability', '/insights/election-forecast-custody',
   '/insights/ai-bots-money-claims', '/sports-interest',
 ];
@@ -70,7 +79,10 @@ const DIVISION_ROUTES = ['/assurance', '/investigations', '/forecasting', '/digi
 const RELEASE_PROFILES = {
   full: {
     overlayFiles: OVERLAY_FILES,
-    sitemapRoutes: [...DIVISION_ROUTES, '/election-lab', '/election-challenge', '/nfl/trades', '/nfl/analysis'],
+    sitemapRoutes: [
+      ...DIVISION_ROUTES, '/election-lab', '/election-challenge', '/sports', '/nfl/trades',
+      '/nfl/analysis', '/nfl/film-room', '/sports/nba', '/sports/mlb', '/sports/nhl',
+    ],
     includeHomepage: true,
   },
   'election-challenge': {
@@ -84,19 +96,28 @@ const RELEASE_PROFILES = {
       'nfl/review-queue.json', 'nfl/refresh-status.json', 'nfl/public-feed.json',
       'nfl/source-health.json',
       'nfl/forecast-ledger.json', 'nfl/deadline-audit.json', 'nfl/publishing.json',
+      'sports-desk.css', 'sports.html', 'sports/module-registry.json', 'nfl/film-room.html',
+      'sports/nba.html', 'sports/mlb.html', 'sports/nhl.html',
     ],
-    sitemapRoutes: ['/nfl/trades', '/nfl/analysis'],
+    sitemapRoutes: [
+      '/sports', '/nfl/trades', '/nfl/analysis', '/nfl/film-room',
+      '/sports/nba', '/sports/mlb', '/sports/nhl',
+    ],
     includeHomepage: false,
   },
   publishing: {
     overlayFiles: [
-      'forecasting.html', 'nfl/trades.html', 'nfl/weekly-brief.html', 'insights.css', 'insights.html',
+      'forecasting.html', 'election-challenge.html', 'sports-desk.css', 'sports.html', 'sports/module-registry.json',
+      'nfl/trades.html', 'nfl/film-room.html', 'sports/nba.html', 'sports/mlb.html',
+      'sports/nhl.html', 'nfl/weekly-brief.html', 'insights.css', 'insights.html',
       'insights/nfl-brier-accountability.html', 'insights/election-forecast-custody.html',
       'insights/ai-bots-money-claims.html', 'sports-interest.html',
       'assets/kahrelum-sports-intelligence-nfl-social-card.png',
+      'assets/kahrelum-sports-intelligence-social-card.png',
     ],
     sitemapRoutes: [
-      '/nfl/weekly-brief', '/insights', '/insights/nfl-brier-accountability',
+      '/sports', '/nfl/trades', '/nfl/film-room', '/sports/nba', '/sports/mlb',
+      '/sports/nhl', '/nfl/weekly-brief', '/insights', '/insights/nfl-brier-accountability',
       '/insights/election-forecast-custody', '/insights/ai-bots-money-claims', '/sports-interest',
     ],
     includeHomepage: true,
@@ -221,6 +242,11 @@ function replaceHomepageSection(home, fragment) {
     if (!output.includes(`href="${route}"`)) fail(`Homepage is missing division navigation to ${route}.`);
   }
   if (!output.includes('$750') || !output.includes('$2,500')) fail('Homepage pricing custody check failed.');
+  const publicReleaseIdentity = /<section>\s*<p class="eyebrow">Release identity<\/p>[\s\S]*?<\/section>\s*/gi;
+  const identitySections = output.match(publicReleaseIdentity) || [];
+  if (identitySections.length > 1) fail('Homepage contains multiple public release-identity sections.');
+  output = output.replace(publicReleaseIdentity, '');
+  if (/<p class="eyebrow">Release identity<\/p>/i.test(output)) fail('Homepage public release-identity section was not removed.');
   return Buffer.from(output, 'utf8');
 }
 
