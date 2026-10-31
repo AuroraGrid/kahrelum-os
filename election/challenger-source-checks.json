@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-10-31T13:06:20.726Z",
+  "checkedAtUtc": "2026-10-31T14:07:43Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -118,17 +118,17 @@
       "provider": "ElectIndex",
       "edition": "Main public model",
       "sourceUrl": "https://electindex.com/forecasts/",
-      "houseDemocraticControlPct": 91.8,
-      "senateDemocraticControlPct": 72.5,
-      "houseDemocraticSeats": 247.5,
+      "houseDemocraticControlPct": 91.5,
+      "senateDemocraticControlPct": 73.3,
+      "houseDemocraticSeats": 247.6,
       "houseSeatType": "average",
-      "senateDemocraticSeats": 52.9,
+      "senateDemocraticSeats": 52.8,
       "senateSeatType": "average",
-      "sourceEdition": "Public chambers.csv commit d66cc93, Oct. 31 04:07:33 UTC; retrieved Oct. 31 04:59 UTC",
+      "sourceEdition": "Public chambers.csv commit 89a378b, Oct. 31 13:41:19 UTC; retrieved Oct. 31 14:07:43 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_DATA_FEED_VERIFIED",
-      "retrievedAtUtc": "2026-10-31T04:59:04.824Z",
-      "rawSha256": "e77cd8780ac09cae1de3b64c2c0536e1affb4026ae47317b3381d74142e54490",
-      "note": "Values came from ElectIndex's first-party public GitHub chambers.csv at commit d66cc93d21d5fbefe896b7fb98d0a85b468d15d0. The feed reports 91.8% Democratic House control, 72.5% Democratic Senate control, 247.5 average Democratic House seats and 52.9 average Democratic Senate seats."
+      "retrievedAtUtc": "2026-10-31T14:07:43Z",
+      "rawSha256": "afcd447b028b8ffa2e3cf993b315c3a15b4e19f8699c2bc76f2e4acf9ba515af",
+      "note": "Values came from ElectIndex's first-party public GitHub chambers.csv at commit 89a378b3cfa7052f597ce58c865a2c0ff1442b0d. Relative to the prior admitted feed, Democratic House control moved from 91.8% to 91.5%, Democratic Senate control from 72.5% to 73.3%, average Democratic House seats from 247.5 to 247.6, and average Democratic Senate seats from 52.9 to 52.8. Projected integer seats remained 244 House and 53 Senate."
     },
     {
       "provider": "Datum Signals",

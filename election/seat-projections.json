@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "edition": "KAH-US-2026-20261031T040639Z with challenger source checks through 2026-10-31T13:06:20Z",
+  "edition": "KAH-US-2026-20261031T040639Z with challenger source checks through 2026-10-31T14:07:43Z",
   "comparisonStatus": "DESCRIPTIVE_ONLY_UNMATCHED_CUTOFFS_AND_SEAT_TYPES",
-  "sourceObservationFileSha256": "8c79e1e6453c3d2d82f8897b437ea24d9764b99b3e9d4f0b6d1b50a9d3347e6a",
+  "sourceObservationFileSha256": "cba8dd39d71d22bbb7c132992c103d6408a26b24bc62cfadec4cafba84efbe12",
   "house": {
     "totalSeats": 435,
     "democraticControlThreshold": 218,
@@ -21,7 +21,7 @@
       {"provider":"COYNTOSS","democraticSeats":236.2,"seatType":"expected","edition":"Oct. 30 site; model Oct. 18","sourceUrl":"https://chasecoyne.com/house"},
       {"provider":"Scrutinel","democraticSeats":238,"seatType":"expected","edition":"Oct. 30 11:24 PM EDT","sourceUrl":"https://scrutinel.com/"},
       {"provider":"Vote-Scope","democraticSeats":239,"seatType":"projected; median 246","edition":"Updated Oct. 31; retrieved 12:51 UTC","sourceUrl":"https://vote-scope.com/en/us/house/"},
-      {"provider":"ElectIndex","democraticSeats":247.5,"seatType":"average","edition":"Public feed commit d66cc93; Oct. 31 04:07:33 UTC","sourceUrl":"https://electindex.com/forecasts/"},
+      {"provider":"ElectIndex","democraticSeats":247.6,"seatType":"average","edition":"Public feed commit 89a378b; Oct. 31 13:41:19 UTC","sourceUrl":"https://electindex.com/forecasts/"},
       {"provider":"Fred Cornell","democraticSeats":250,"seatType":"median","edition":"Run Oct. 31; retrieved 12:51 UTC","sourceUrl":"https://fredcornell.com/us/house"},
       {"provider":"Yale PLSC 2219","democraticSeats":237,"seatType":"class model","edition":"Snapshot Oct. 30","sourceUrl":"https://kevinmdeluca.com/forecast/"},
       {"provider":"Dave Manuel","democraticSeats":235,"seatType":"projected median","edition":"Updated Oct. 31 8:45 AM ET; retrieved 12:51 UTC","sourceUrl":"https://www.davemanuel.com/2026-midterm-forecast.php"},
@@ -47,7 +47,7 @@
       {"provider":"CalltheMap","democraticSeats":51.4,"seatType":"expected incl. aligned independents","edition":"Forecast Oct. 30; rechecked Oct. 31 01:57 UTC","sourceUrl":"https://www.callthemap.com/senate"},
       {"provider":"COYNTOSS","democraticSeats":51.66,"seatType":"expected caucus","edition":"Model inputs Oct. 30","sourceUrl":"https://chasecoyne.com/senate"},
       {"provider":"Scrutinel","democraticSeats":52,"seatType":"expected","edition":"Oct. 30 11:24 PM EDT","sourceUrl":"https://scrutinel.com/"},
-      {"provider":"ElectIndex","democraticSeats":52.9,"seatType":"average","edition":"Public feed commit d66cc93; Oct. 31 04:07:33 UTC","sourceUrl":"https://electindex.com/forecasts/"},
+      {"provider":"ElectIndex","democraticSeats":52.8,"seatType":"average","edition":"Public feed commit 89a378b; Oct. 31 13:41:19 UTC","sourceUrl":"https://electindex.com/forecasts/"},
       {"provider":"Fred Cornell","democraticSeats":52,"seatType":"expected party seats; plus 1 independent","edition":"Run Oct. 31; retrieved 12:51 UTC","sourceUrl":"https://fredcornell.com/us/senate"},
       {"provider":"Yale PLSC 2219","democraticSeats":50,"seatType":"class model","edition":"Snapshot Oct. 30","sourceUrl":"https://kevinmdeluca.com/forecast/"},
       {"provider":"Dave Manuel","democraticSeats":52,"seatType":"projected median incl. aligned independents","edition":"Updated Oct. 31 8:45 AM ET; retrieved 12:51 UTC","sourceUrl":"https://www.davemanuel.com/2026-midterm-forecast.php"},
