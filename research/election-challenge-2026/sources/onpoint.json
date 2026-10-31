@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "onpoint",
+  "sourceUrl": "https://www.tpsielections.com/forecast",
+  "primarySource": true,
+  "capture": {
+    "startedAtUtc": "2026-10-31T04:15:38Z",
+    "completedAtUtc": "2026-10-31T04:15:49Z",
+    "method": "Firecrawl fresh scrape maxAge=0",
+    "cachePolicy": "maxAge=0"
+  },
+  "custody": {
+    "representation": "TOOL_RETURNED_RAW_HTML_UTF8",
+    "sha256": "af76053e2d0a93b26f7779ae826e0f1bee0183c3c28405af6db9b6fb57d8e5bb",
+    "utf8Bytes": 1148826,
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false,
+    "rawCaptureRetention": "Working capture; not part of the public commit. The public immutable receipt preserves factual observations and digests, not a replayable HTTP archive.",
+    "toolMarkdownSha256": "3481d3eecdbd6baa3b335e780a3eca02980e76a04d67dea5d2777b9d87657794"
+  },
+  "publisherMetadata": {
+    "title": "2026 midterm election forecast: Senate, House and governors | On Point Politics",
+    "scrapeId": "01a1902b-9eb3-727b-b3cc-d4e982494b10",
+    "sourceURL": "https://www.tpsielections.com/forecast",
+    "url": "https://www.tpsielections.com/forecast",
+    "statusCode": 200,
+    "contentType": "text/html; charset=utf-8",
+    "indexId": "1f06846e-d440-4070-a1d0-ebce0efee24c"
+  },
+  "evidenceExcerpts": [],
+  "crossSourceReview": {
+    "scope": "Related provider review synthesized across the manifest sourceIds; a method page need not itself contain the numerical forecast.",
+    "facts": [
+      {
+        "providerId": "onpoint",
+        "houseControlPercent": 97,
+        "senateControlPercent": 90,
+        "publicationLabel": "October 30, 2026 (date only)",
+        "publishedAtUtc": null,
+        "houseEventReview": "The primary forecast consistently gives 97 percent Democratic House control; the methods define 218 of 435.",
+        "senateEventReview": "The methods explicitly count Dan Osborn in the Democratic column. The full independent-caucus mapping has not been matched to KAHRELUM. The newly captured Senate probability is 90 percent, not the earlier 86."
+      }
+    ]
+  }
+}

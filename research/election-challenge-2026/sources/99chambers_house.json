@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "99chambers_house",
+  "sourceUrl": "https://99chambers.app/house",
+  "primarySource": true,
+  "capture": {
+    "startedAtUtc": "2026-10-31T04:16:13Z",
+    "completedAtUtc": "2026-10-31T04:16:25Z",
+    "method": "Firecrawl fresh scrape maxAge=0",
+    "cachePolicy": "maxAge=0"
+  },
+  "custody": {
+    "representation": "TOOL_RETURNED_RAW_HTML_UTF8",
+    "sha256": "f651d655dedd44dbc804aaf6b01641e7d7a60c9e83a9355c885487f5fc322e38",
+    "utf8Bytes": 1336484,
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false,
+    "rawCaptureRetention": "Working capture; not part of the public commit. The public immutable receipt preserves factual observations and digests, not a replayable HTTP archive.",
+    "toolMarkdownSha256": "ab204015d695b7046e1b29d7f4211ce8e236cc6bad33f4dd8d937e2a67ed20fa"
+  },
+  "publisherMetadata": {
+    "title": "U.S. House 2026 forecast, odds & predictions · 99chambers",
+    "scrapeId": "01a1902c-2738-7269-a622-7cf15101605e",
+    "sourceURL": "https://99chambers.app/house",
+    "url": "https://99chambers.app/house",
+    "statusCode": 200,
+    "contentType": "text/html",
+    "indexId": "7f0afef2-aeeb-4875-81a6-e08aabbb14ce"
+  },
+  "evidenceExcerpts": [
+    {
+      "exactText": "All 435 seats are on the ballot. 218 seats make a majority.",
+      "representation": "markdown",
+      "characterOffset": 2780
+    }
+  ],
+  "crossSourceReview": {
+    "scope": "Related provider review synthesized across the manifest sourceIds; a method page need not itself contain the numerical forecast.",
+    "facts": [
+      {
+        "providerId": "99chambers",
+        "houseControlPercent": 98,
+        "senateControlPercent": 80,
+        "publicationLabel": "October 30, 2026, 11:27 PM ET",
+        "publishedAtUtc": "2026-10-31T03:27:00Z",
+        "houseEventReview": "The Horizon edition gives a 98 percent House majority probability, and the House page defines the majority as 218 of 435.",
+        "senateEventReview": "The Senate page establishes 51 and a Republican 50-seat tiebreak. Its treatment of de facto party nominees does not establish a complete, identical independent-caucus mapping."
+      }
+    ]
+  }
+}

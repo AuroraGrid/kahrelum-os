@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "coyntoss_methods",
+  "sourceUrl": "https://chasecoyne.com/methodology.html",
+  "primarySource": true,
+  "capture": {
+    "startedAtUtc": "2026-10-31T04:17:39Z",
+    "completedAtUtc": "2026-10-31T04:17:46Z",
+    "method": "Firecrawl fresh scrape maxAge=0",
+    "cachePolicy": "maxAge=0"
+  },
+  "custody": {
+    "representation": "TOOL_RETURNED_RAW_HTML_UTF8",
+    "sha256": "9b1b88d49cc3feca14b3b0272e453315bad889343d517351f0e2f6b2461aee5f",
+    "utf8Bytes": 29563,
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false,
+    "rawCaptureRetention": "Working capture; not part of the public commit. The public immutable receipt preserves factual observations and digests, not a replayable HTTP archive.",
+    "toolMarkdownSha256": "b8578223bb28b3347734ad3cdcaa71050c5151dff075931a393cff3c4ea757ea"
+  },
+  "publisherMetadata": {
+    "title": "Methodology | COYNTOSS",
+    "scrapeId": "01a1902d-783b-7549-aefc-f320e298ca51",
+    "sourceURL": "https://chasecoyne.com/methodology.html",
+    "url": "https://chasecoyne.com/methodology",
+    "statusCode": 200,
+    "contentType": "text/html",
+    "indexId": "65ef6e91-2c13-48a2-95c8-8c85650ce1f5"
+  },
+  "evidenceExcerpts": [],
+  "crossSourceReview": {
+    "scope": "Related provider review synthesized across the manifest sourceIds; a method page need not itself contain the numerical forecast.",
+    "facts": [
+      {
+        "providerId": "coyntoss",
+        "houseControlPercent": 80.5,
+        "senateControlPercent": 70.85,
+        "publicationLabel": "House inputs October 18; Senate October 30, release 3",
+        "publishedAtUtc": null,
+        "houseEventReview": "The House headline is 80.5 percent with 218 seats for a majority. It is explicitly an experimental forecast.",
+        "senateEventReview": "The Senate event includes Democrats and allied independents. The current release reports 70.85 percent; complete candidate-level alignment equivalence is unproven."
+      }
+    ]
+  }
+}

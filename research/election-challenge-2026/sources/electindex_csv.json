@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "electindex_csv",
+  "sourceUrl": "https://github.com/ElectIndex/26_us_forecast_data/blob/main/output/chambers.csv",
+  "primarySource": true,
+  "capture": {
+    "startedAtUtc": "2026-10-31T04:17:03Z",
+    "completedAtUtc": "2026-10-31T04:17:09Z",
+    "method": "GitHub connector fetch",
+    "cachePolicy": "connector fetch"
+  },
+  "custody": {
+    "representation": "TOOL_RETURNED_FILE_CONTENT_UTF8",
+    "sha256": "e77cd8780ac09cae1de3b64c2c0536e1affb4026ae47317b3381d74142e54490",
+    "utf8Bytes": 229,
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false,
+    "rawCaptureRetention": "Working capture; not part of the public commit. The public immutable receipt preserves factual observations and digests, not a replayable HTTP archive."
+  },
+  "publisherMetadata": {
+    "title": "chambers.csv",
+    "modifiedDate": "2026-10-31T04:07:33Z",
+    "url": "https://github.com/ElectIndex/26_us_forecast_data/blob/main/output/chambers.csv"
+  },
+  "evidenceExcerpts": [],
+  "crossSourceReview": {
+    "scope": "Related provider review synthesized across the manifest sourceIds; a method page need not itself contain the numerical forecast.",
+    "facts": [
+      {
+        "providerId": "electindex",
+        "houseControlPercent": 91.8,
+        "senateControlPercent": 72.5,
+        "publicationLabel": "GitHub data modified October 31, 2026, 04:07:33 UTC",
+        "publishedAtUtc": "2026-10-31T04:07:33Z",
+        "houseEventReview": "The publisher-linked public CSV gives House dem_control_pct 91.8 and needed 218. Its methodology defines chamber probabilities from simulated majority counts.",
+        "senateEventReview": "The CSV establishes a 51-seat threshold, but the methods refer to an independent in the Democratic challenger slot. Complete matching of the Senate caucus classification is not established."
+      }
+    ]
+  },
+  "machineReadableFacts": "chamber,avg_dem_seats,avg_gop_seats,projected_dem_seats,dem_control_pct,needed,races,structural_dem,structural_gop\nSenate,52.9,47.1,53,72.5,51,35,34,31\nHouse,247.5,187.5,244,91.8,218,435,0,0\nGovernors,27.3,22.7,28,72.6,26,36,6,8\n"
+}

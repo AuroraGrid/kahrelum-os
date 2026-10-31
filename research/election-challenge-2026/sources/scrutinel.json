@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "scrutinel",
+  "sourceUrl": "https://scrutinel.com/",
+  "primarySource": true,
+  "capture": {
+    "startedAtUtc": "2026-10-31T04:15:25Z",
+    "completedAtUtc": "2026-10-31T04:15:32Z",
+    "method": "Firecrawl fresh scrape maxAge=0",
+    "cachePolicy": "maxAge=0"
+  },
+  "custody": {
+    "representation": "TOOL_RETURNED_RAW_HTML_UTF8",
+    "sha256": "fb0fc2c1ac5983944d91e08b4cb0c284ef56d60337a3b8926004a33588027ba1",
+    "utf8Bytes": 1797346,
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false,
+    "rawCaptureRetention": "Working capture; not part of the public commit. The public immutable receipt preserves factual observations and digests, not a replayable HTTP archive.",
+    "toolMarkdownSha256": "ceb76293bf2a85247c36f4583c9c61009460324e23e03c70516e205543dfea43"
+  },
+  "publisherMetadata": {
+    "title": "Scrutinel — 2026 Midterms Forecast",
+    "scrapeId": "01a1902b-6e30-714d-a87b-a0402dff8868",
+    "sourceURL": "https://scrutinel.com/",
+    "url": "https://scrutinel.com/",
+    "statusCode": 200,
+    "contentType": "text/html; charset=utf-8",
+    "indexId": "30f3ef02-452d-4c64-b19d-9301d258aaec"
+  },
+  "evidenceExcerpts": [
+    {
+      "exactText": "93%",
+      "representation": "markdown",
+      "characterOffset": 1104
+    },
+    {
+      "exactText": "Democrats win control · 218\\+ seats · 92%",
+      "representation": "markdown",
+      "characterOffset": 13314
+    }
+  ],
+  "crossSourceReview": {
+    "scope": "Related provider review synthesized across the manifest sourceIds; a method page need not itself contain the numerical forecast.",
+    "facts": [
+      {
+        "providerId": "scrutinel",
+        "houseControlPercent": 93,
+        "senateControlPercent": 70,
+        "publicationLabel": "October 30, 2026, 11:24 PM EDT",
+        "publishedAtUtc": "2026-10-31T03:24:00Z",
+        "houseEventReview": "The source says 218 for House control, but two widgets in the same captured page disagree on the probability.",
+        "senateEventReview": "The methods count an Osborn win toward Democrats while leaving other new independents separate. KAHRELUM has independent risks in ID, MT, NE and SD; the mappings are not proven identical."
+      }
+    ]
+  }
+}
