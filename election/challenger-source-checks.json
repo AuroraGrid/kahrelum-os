@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-10-31T04:48:49.000Z",
+  "checkedAtUtc": "2026-10-31T04:59:04.824Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -117,14 +117,16 @@
       "edition": "Main public model",
       "sourceUrl": "https://electindex.com/forecasts/",
       "houseDemocraticControlPct": 91.8,
-      "senateDemocraticControlPct": 73.8,
-      "houseDemocraticSeats": 247.4,
+      "senateDemocraticControlPct": 72.5,
+      "houseDemocraticSeats": 247.5,
       "houseSeatType": "average",
       "senateDemocraticSeats": 52.9,
       "senateSeatType": "average",
-      "sourceEdition": "Public chambers.csv retrieved Oct. 31 01:29 UTC",
+      "sourceEdition": "Public chambers.csv commit d66cc93, Oct. 31 04:07:33 UTC; retrieved Oct. 31 04:59 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_DATA_FEED_VERIFIED",
-      "note": "Values came from ElectIndex's public GitHub-backed chambers feed; feed SHA-256 d5dc550fea7e4c2b238866c461843a073dedcd31d076e8b9f54f3134529f7efb."
+      "retrievedAtUtc": "2026-10-31T04:59:04.824Z",
+      "rawSha256": "e77cd8780ac09cae1de3b64c2c0536e1affb4026ae47317b3381d74142e54490",
+      "note": "Values came from ElectIndex's first-party public GitHub chambers.csv at commit d66cc93d21d5fbefe896b7fb98d0a85b468d15d0. The feed reports 91.8% Democratic House control, 72.5% Democratic Senate control, 247.5 average Democratic House seats and 52.9 average Democratic Senate seats."
     },
     {
       "provider": "Datum Signals",
