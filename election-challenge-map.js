@@ -19,6 +19,7 @@
   let displayLimit = 40;
   let seatProjectionData = null;
   let currentProjectionData = null;
+  let challengerData = null;
   let seatComparisonMode = 'house';
 
   const byId = (id) => document.getElementById(id);
@@ -48,6 +49,22 @@
       return `<div class="comparison-row"><div class="comparison-provider"><a href="${escapeHtml(item.sourceUrl)}">${escapeHtml(item.provider)}</a><small>${escapeHtml(item.edition)}</small></div><div class="comparison-bar" aria-label="${escapeHtml(item.provider)}: ${precision} Democratic seats, ${escapeHtml(item.seatType)}"><i style="width:${position.toFixed(3)}%"></i><span class="control-mark" style="left:${thresholdPosition.toFixed(3)}%" title="Control threshold: ${threshold}"></span></div><div class="comparison-value"><strong>${precision}</strong><small>${escapeHtml(item.seatType)}</small></div></div>`;
     }).join('');
     byId('seatComparisonChart').innerHTML = `<div class="comparison-axis"><span>Publisher / edition</span><div><span>${minimum} D seats</span><span>Control ${threshold}</span><span>${maximum} D seats</span></div><span>Statistic</span></div>${rows}`;
+  }
+
+  function formatControlProbability(value) {
+    if (value === null || value === undefined) return '<span class="missing">Not verified</span>';
+    const precision = Number.isInteger(value) ? value.toFixed(1) : value.toFixed(6).replace(/0+$/,'').replace(/\.$/,'');
+    return `${precision}%`;
+  }
+
+  function renderChallengerTable() {
+    const rows = challengerData.records.map((record) => {
+      const unpriced = record.houseDemocraticControlPct === null && record.senateDemocraticControlPct === null;
+      const provider = record.provider === 'KAHRELUM' ? `<strong>${escapeHtml(record.provider)}</strong>` : `<a href="${escapeHtml(record.sourceUrl)}">${escapeHtml(record.provider)}</a>`;
+      return `<tr${unpriced ? ' class="source-unpriced"' : ''}><td data-label="Provider / edition">${provider} / ${escapeHtml(record.edition)}</td><td data-label="House D control">${formatControlProbability(record.houseDemocraticControlPct)}</td><td data-label="Senate D control">${formatControlProbability(record.senateDemocraticControlPct)}</td><td data-label="Publisher edition">${escapeHtml(record.sourceEdition)}</td><td data-label="Evidence note">${escapeHtml(record.note)} <span class="fine">${escapeHtml(record.retrievalStatus)}</span></td></tr>`;
+    }).join('');
+    byId('challengerRows').innerHTML = rows;
+    byId('challengerCheckStatus').textContent = `Fresh source check: ${new Date(challengerData.checkedAtUtc).toLocaleString()} · ${challengerData.challengersWithAtLeastOneVerifiedControlProbability} of ${challengerData.challengersChecked} challengers have at least one verified control probability; ${challengerData.unpricedChallengers} fully unpriced entries are listed last.`;
   }
 
   function buildRaces(houseLock, current) {
@@ -176,22 +193,23 @@
 
   async function init() {
     try {
-      const [houseResponse,senateResponse,currentResponse,seatsResponse] = await Promise.all([
-        fetch('/election/house-forecast-lock.json'),fetch('/election/senate-forecast-lock.json'),fetch('/election/current-projections.json'),fetch('/election/seat-projections.json')
+      const [houseResponse,senateResponse,currentResponse,seatsResponse,challengerResponse] = await Promise.all([
+        fetch('/election/house-forecast-lock.json'),fetch('/election/senate-forecast-lock.json'),fetch('/election/current-projections.json'),fetch('/election/seat-projections.json'),fetch('/election/challenger-source-checks.json')
       ]);
-      if (![houseResponse,senateResponse,currentResponse,seatsResponse].every((response) => response.ok)) throw new Error('One or more forecast files could not be loaded.');
-      const [house,senate,current,seats] = await Promise.all([houseResponse.json(),senateResponse.json(),currentResponse.json(),seatsResponse.json()]);
+      if (![houseResponse,senateResponse,currentResponse,seatsResponse,challengerResponse].every((response) => response.ok)) throw new Error('One or more forecast files could not be loaded.');
+      const [house,senate,current,seats,challengers] = await Promise.all([houseResponse.json(),senateResponse.json(),currentResponse.json(),seatsResponse.json(),challengerResponse.json()]);
       seatProjectionData = seats;
       currentProjectionData = current;
+      challengerData = challengers;
       races = buildRaces(house,current);
-      if (races.length !== 470 || current.house.raceCount !== 435 || current.senate.raceCount !== 35 || current.coverage.racesWithSourceListedCandidates !== 470 || house.competitive_districts.length !== 81) throw new Error('Fresh election projection did not pass 470-race and candidate-coverage validation.');
+      if (races.length !== 470 || current.house.raceCount !== 435 || current.senate.raceCount !== 35 || current.coverage.racesWithSourceListedCandidates !== 470 || house.competitive_districts.length !== 81 || challengers.records.length !== 15 || challengers.unpricedChallengers !== 4) throw new Error('Fresh election projection did not pass race, candidate and challenger validation.');
       byId('mapHouseCount').textContent = current.house.raceCount;
       byId('mapSenateCount').textContent = current.senate.raceCount;
       byId('mapCandidateCount').textContent = current.coverage.sourceListedCandidateRecords;
       byId('mapPortraitCount').textContent = current.coverage.admittedPortraits;
       byId('currentEditionLine').textContent = `Fresh retrieval and computation: ${new Date(current.computedAtUtc).toLocaleString()} · House publisher rating edition: ${current.sources.house.publisherEdition} · Senate publisher rating edition: ${current.sources.senate.publisherEdition}.`;
       byId('mapLoadStatus').hidden = true;
-      populateStateFilter(); renderMap(); renderStateBrief(); renderRaces(); renderSeatTracker(current); renderSeatComparison();
+      populateStateFilter(); renderMap(); renderStateBrief(); renderRaces(); renderSeatTracker(current); renderSeatComparison(); renderChallengerTable();
       const resetAndRender = () => {displayLimit=40;renderRaces();};
       byId('raceSearch').addEventListener('input',resetAndRender);
       byId('raceChamber').addEventListener('change',resetAndRender);

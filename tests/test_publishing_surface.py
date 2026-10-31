@@ -163,6 +163,7 @@ class PublishingSurfaceTests(unittest.TestCase):
         house = json.loads(self.read("election/house-forecast-lock.json"))
         current = json.loads(self.read("election/current-projections.json"))
         seats = json.loads(self.read("election/seat-projections.json"))
+        challengers = json.loads(self.read("election/challenger-source-checks.json"))
         self.assertEqual(len(house["competitive_districts"]), 81)
         self.assertEqual(current["status"], "FRESH_EXECUTION_LATEST_ACCESSIBLE_SOURCE_EDITIONS")
         self.assertEqual(current["house"]["raceCount"], 435)
@@ -184,6 +185,7 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertIn("Candidate and portrait boundary", page)
         self.assertIn("source-listed; portrait not admitted", script)
         self.assertIn("/election/current-projections.json", script)
+        self.assertIn("/election/challenger-source-checks.json", script)
         self.assertIn("races.length !== 470", script)
         self.assertIn("current.house.raceCount !== 435", script)
         self.assertIn("current.senate.raceCount !== 35", script)
@@ -191,6 +193,16 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertEqual(seats["house"]["kahrelum"]["democraticSeats"], 228.02)
         self.assertAlmostEqual(seats["senate"]["kahrelum"]["democraticSeats"], 50.229989536494045)
         self.assertEqual(seats["comparisonStatus"], "DESCRIPTIVE_ONLY_UNMATCHED_CUTOFFS_AND_SEAT_TYPES")
+        self.assertEqual(challengers["challengersChecked"], 14)
+        self.assertEqual(challengers["challengersWithAtLeastOneVerifiedControlProbability"], 10)
+        self.assertEqual(challengers["unpricedChallengers"], 4)
+        self.assertEqual(len(challengers["records"]), 15)
+        priced = [row for row in challengers["records"] if row["houseDemocraticControlPct"] is not None or row["senateDemocraticControlPct"] is not None]
+        unpriced = [row for row in challengers["records"] if row["houseDemocraticControlPct"] is None and row["senateDemocraticControlPct"] is None]
+        self.assertEqual(challengers["records"], priced + unpriced)
+        ddhq = next(row for row in challengers["records"] if row["provider"] == "Decision Desk HQ")
+        self.assertEqual((ddhq["houseDemocraticControlPct"], ddhq["senateDemocraticControlPct"]), (82.0, 62.0))
+        self.assertEqual([row["provider"] for row in unpriced], ["The Economist", "Silver Bulletin", "Sam Brown", "Jon Elder"])
         for path in (
             "election-challenge-map.css",
             "election-challenge-map.js",
@@ -198,6 +210,7 @@ class PublishingSurfaceTests(unittest.TestCase):
             "election/senate-forecast-lock.json",
             "election/senate-ratings-source.json",
             "election/current-projections.json",
+            "election/challenger-source-checks.json",
             "election/seat-projections.json",
         ):
             self.assertIn(path, release)
