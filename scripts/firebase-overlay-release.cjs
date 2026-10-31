@@ -321,6 +321,19 @@ function replaceHomepageSection(home, fragment) {
   return Buffer.from(output, 'utf8');
 }
 
+function replaceHomepageSocialMetadata(home, repositoryHome) {
+  const socialPattern = /<meta\s+(?:property|name)="(?:og:(?:type|url|title|description|image(?::(?:secure_url|type|width|height|alt))?)|twitter:(?:card|title|description|image|image:alt))"[^>]*>\s*/gi;
+  const approvedTags = repositoryHome.match(socialPattern) || [];
+  if (approvedTags.length !== 15) fail(`Repository homepage must contain exactly 15 governed social metadata tags; found ${approvedTags.length}.`);
+  let output = home.replace(socialPattern, '');
+  const canonical = /<link\s+rel="canonical"\s+href="https:\/\/kahrelum\.com\/"[^>]*>/i.exec(output);
+  if (!canonical) fail('Live homepage has no canonical URL for the bounded social metadata insertion.');
+  output = output.slice(0, canonical.index + canonical[0].length) + approvedTags.join('') + output.slice(canonical.index + canonical[0].length);
+  if ((output.match(/property="og:image"/g) || []).length !== 1) fail('Homepage must contain exactly one Open Graph image after metadata insertion.');
+  if (!output.includes('https://kahrelum.com/assets/social/og-home.png')) fail('Homepage social card URL was not inserted.');
+  return Buffer.from(output, 'utf8');
+}
+
 function updateSitemap(xml, routes) {
   let output = xml;
   if (!output.includes('</urlset>')) fail('Live sitemap has no closing urlset element.');
@@ -370,7 +383,9 @@ async function buildOverlay(live, profileName) {
   if (profile.includeHomepage) {
     const home = (await verifiedLiveFile(live, '/index.html', '/')).toString('utf8');
     const fragment = fs.readFileSync(path.join(ROOT, 'hosting', 'homepage-divisions.html'), 'utf8');
-    addBlob(desired, blobs, '/index.html', replaceHomepageSection(home, fragment));
+    const repositoryHome = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+    const boundedHome = replaceHomepageSection(home, fragment).toString('utf8');
+    addBlob(desired, blobs, '/index.html', replaceHomepageSocialMetadata(boundedHome, repositoryHome));
   }
 
   const sitemap = (await verifiedLiveFile(live, '/sitemap.xml', '/sitemap.xml')).toString('utf8');

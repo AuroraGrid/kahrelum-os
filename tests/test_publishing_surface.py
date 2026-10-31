@@ -129,6 +129,8 @@ class PublishingSurfaceTests(unittest.TestCase):
         release = self.read("scripts/firebase-overlay-release.cjs")
         wrapper = self.read("scripts/deploy-unified-firebase.ps1")
         self.assertIn("publishing:", release)
+        self.assertIn("replaceHomepageSocialMetadata", release)
+        self.assertIn("assets/social/og-home.png", release)
         for path in [
             "nfl/weekly-brief.html",
             "insights.html",
