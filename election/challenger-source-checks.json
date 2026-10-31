@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-10-31T03:22:45.434Z",
+  "checkedAtUtc": "2026-10-31T04:08:29.459Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -10,7 +10,7 @@
   "records": [
     {
       "provider": "KAHRELUM",
-      "edition": "KAH-US-2026-20261031T030533Z",
+      "edition": "KAH-US-2026-20261031T040639Z",
       "sourceUrl": "/election-challenge",
       "houseDemocraticControlPct": 90.57450487619074,
       "senateDemocraticControlPct": 46.090647437793264,
@@ -18,7 +18,7 @@
       "houseSeatType": "expected",
       "senateDemocraticSeats": 50.229989536494045,
       "senateSeatType": "expected caucus",
-      "sourceEdition": "Fresh computation Oct. 31 03:05 UTC; House ratings Oct. 23; Senate ratings Oct. 20",
+      "sourceEdition": "Fresh computation Oct. 31 04:06 UTC; House ratings Oct. 23; Senate ratings Oct. 20",
       "retrievalStatus": "INTERNAL_FRESH_EXECUTION",
       "note": "Current KAHRELUM fixed-tier execution; original locks remain separate and unchanged."
     },
@@ -71,14 +71,16 @@
       "edition": "House Beta / Senate v0.53.1",
       "sourceUrl": "https://chasecoyne.com/house",
       "houseDemocraticControlPct": 80.5,
-      "senateDemocraticControlPct": 70.56,
+      "senateDemocraticControlPct": 70.85,
       "houseDemocraticSeats": 236.2,
       "houseSeatType": "expected",
-      "senateDemocraticSeats": 51.64,
+      "senateDemocraticSeats": 51.66,
       "senateSeatType": "expected caucus",
       "sourceEdition": "Oct. 30 site; House model Oct. 18; Senate model inputs Oct. 30",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "note": "House and Senate have different model cutoffs; they are not one synchronized release."
+      "retrievedAtUtc": "2026-10-31T04:07:23Z",
+      "rawSha256": "2b29b5062d41044fc1abea0fdc3776e747a296b5386aa9245f97532c9937a251",
+      "note": "House and Senate have different model cutoffs; they are not one synchronized release. The current first-party Senate snapshot reports 70.85% Democratic-caucus control and 51.66 expected Democratic-caucus seats."
     },
     {
       "provider": "Scrutinel",
@@ -128,15 +130,15 @@
       "provider": "Datum Signals",
       "edition": "Main",
       "sourceUrl": "https://datumsignals.com/",
-      "houseDemocraticControlPct": 70.0,
+      "houseDemocraticControlPct": 71.0,
       "senateDemocraticControlPct": 63.0,
       "houseDemocraticSeats": null,
       "houseSeatType": null,
       "senateDemocraticSeats": null,
       "senateSeatType": null,
-      "sourceEdition": "Updated Oct. 30, 4:01 PM UTC; rechecked Oct. 31 02:07 UTC",
+      "sourceEdition": "Updated Oct. 30, 4:01 PM UTC; rechecked Oct. 31 04:08 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "note": "First-party page now displays 70% Democratic House control, down from the previously recorded 72%, while Senate control remains 63%. Displayed favored/toss-up race counts are not a compatible expected full-chamber seat total."
+      "note": "First-party page displays 71% Democratic House control and 63% Democratic Senate control. Direct raw HTTP custody was blocked by repeated transport resets, so the numerical values were admitted from the successful rendered first-party retrieval; displayed favored/toss-up race counts are not a compatible expected full-chamber seat total."
     },
     {
       "provider": "Fred Cornell independent",
@@ -176,23 +178,27 @@
       "houseSeatType": "projected median",
       "senateDemocraticSeats": 52.0,
       "senateSeatType": "projected median including two aligned independents",
-      "sourceEdition": "Updated Oct. 30, 10:45 PM ET; retrieved Oct. 31 03:04 UTC",
+      "sourceEdition": "Updated Oct. 30, 11:45 PM ET; retrieved Oct. 31 04:07 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "note": "Fresh first-party page check. Senate Democratic control decreased from the prior recorded 71% to 70%; House control remains 94%, projected seats remain 234 D House and 52 D-aligned Senate, and the separate 3% neither-side Senate outcome is preserved."
+      "retrievedAtUtc": "2026-10-31T04:07:23Z",
+      "rawSha256": "c3fa360cd048520dbf82896764e29ec2297457d8855f6928f7a66041b612d870",
+      "note": "Fresh first-party page check. The 11:45 PM ET edition retains 94% Democratic House control, 70% Democratic Senate control, 234 projected Democratic House seats and 52 projected Democratic-aligned Senate seats; the separate 3% neither-side Senate outcome is preserved."
     },
     {
       "provider": "On Point Politics",
       "edition": "2026 Forecast",
       "sourceUrl": "https://www.tpsielections.com/forecast",
       "houseDemocraticControlPct": 97.0,
-      "senateDemocraticControlPct": 86.0,
+      "senateDemocraticControlPct": 90.0,
       "houseDemocraticSeats": 249.0,
       "houseSeatType": "average",
-      "senateDemocraticSeats": 54.2,
+      "senateDemocraticSeats": 54.9,
       "senateSeatType": "average",
-      "sourceEdition": "Updated Oct. 30; rechecked Oct. 31 02:07 UTC",
+      "sourceEdition": "Updated Oct. 30; retrieved Oct. 31 04:07 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "note": "First-party index reports 2,000 simulated elections. Its displayed averages changed from the previously recorded 251 House / 54 Senate to 249 House / 54.2 Senate; chamber-control probabilities remain 97% House and 86% Senate."
+      "retrievedAtUtc": "2026-10-31T04:07:23Z",
+      "rawSha256": "6f2bb0eb441182e0cd8b6e7438172be1045c47ffb233479e1c04f7aa1f127b4d",
+      "note": "First-party index reports 2,000 simulated elections. The current edition reports 97% Democratic House control, 90% Democratic Senate control, 249 average Democratic House seats and 54.9 average Democratic Senate seats."
     },
     {
       "provider": "VotePredictor",
