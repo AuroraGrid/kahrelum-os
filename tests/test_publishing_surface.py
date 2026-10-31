@@ -184,6 +184,8 @@ class PublishingSurfaceTests(unittest.TestCase):
         current = json.loads(self.read("election/current-projections.json"))
         seats = json.loads(self.read("election/seat-projections.json"))
         challengers = json.loads(self.read("election/challenger-source-checks.json"))
+        geography = json.loads(self.read("assets/us-states-map.json"))
+        portraits = json.loads(self.read("election/candidate-portraits.json"))
         self.assertEqual(len(house["competitive_districts"]), 81)
         self.assertEqual(current["status"], "FRESH_EXECUTION_LATEST_ACCESSIBLE_SOURCE_EDITIONS")
         self.assertEqual(current["house"]["raceCount"], 435)
@@ -197,19 +199,28 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertRegex(current["sources"]["house"]["sha256"], r"^[a-f0-9]{64}$")
         self.assertRegex(current["sources"]["senate"]["sha256"], r"^[a-f0-9]{64}$")
         self.assertIn('id="challengeUsMap"', page)
+        self.assertIn('class="us-geo-map"', page)
+        self.assertIn('id="mapStateJump"', page)
         self.assertIn('id="raceList"', page)
+        self.assertIn('id="raceSearchSuggestions"', page)
         self.assertIn('id="loadMoreRaces"', page)
         self.assertIn('id="seatTracker"', page)
         self.assertIn('id="seatComparisonChart"', page)
         self.assertIn("census.gov/data/tables/2020/dec/2020-apportionment-data.html", page)
         self.assertIn("Candidate and portrait boundary", page)
-        self.assertIn("source-listed; portrait not admitted", script)
+        self.assertIn("photo pending identity and rights review", script)
         self.assertIn("/election/current-projections.json", script)
         self.assertIn("/election/challenger-source-checks.json", script)
+        self.assertIn("/assets/us-states-map.json", script)
+        self.assertIn("/election/candidate-portraits.json", script)
+        self.assertIn("populateSearchSuggestions", script)
+        self.assertIn("setMapChamber", script)
+        self.assertIn("state-shape", script)
         self.assertIn("races.length !== 470", script)
         self.assertIn("current.house.raceCount !== 435", script)
         self.assertIn("current.senate.raceCount !== 35", script)
-        self.assertNotIn("<img", script.lower())
+        self.assertIn('class="nominee-photo"', script)
+        self.assertIn("portrait.status !== 'ADMITTED'", script)
         self.assertEqual(seats["house"]["kahrelum"]["democraticSeats"], 228.02)
         self.assertAlmostEqual(seats["senate"]["kahrelum"]["democraticSeats"], 50.229989536494045)
         self.assertEqual(seats["comparisonStatus"], "DESCRIPTIVE_ONLY_UNMATCHED_CUTOFFS_AND_SEAT_TYPES")
@@ -230,7 +241,7 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertEqual((callthemap["senateDemocraticControlPct"], callthemap["senateDemocraticSeats"]), (60.0, 51.4))
         new_numeric = {row["provider"]: row for row in challengers["records"] if row["provider"] in {"Dave Manuel", "On Point Politics", "VotePredictor", "Midterm Forecast"}}
         self.assertEqual(set(new_numeric), {"Dave Manuel", "On Point Politics", "VotePredictor", "Midterm Forecast"})
-        self.assertEqual((new_numeric["Dave Manuel"]["houseDemocraticControlPct"], new_numeric["Dave Manuel"]["senateDemocraticControlPct"]), (94.0, 71.0))
+        self.assertEqual((new_numeric["Dave Manuel"]["houseDemocraticControlPct"], new_numeric["Dave Manuel"]["senateDemocraticControlPct"]), (94.0, 70.0))
         self.assertEqual((new_numeric["On Point Politics"]["houseDemocraticControlPct"], new_numeric["On Point Politics"]["senateDemocraticControlPct"]), (97.0, 86.0))
         self.assertEqual((new_numeric["On Point Politics"]["houseDemocraticSeats"], new_numeric["On Point Politics"]["senateDemocraticSeats"]), (249.0, 54.2))
         self.assertEqual((new_numeric["VotePredictor"]["houseDemocraticControlPct"], new_numeric["VotePredictor"]["senateDemocraticControlPct"]), (76.0, None))
@@ -238,9 +249,17 @@ class PublishingSurfaceTests(unittest.TestCase):
         datum = next(row for row in challengers["records"] if row["provider"] == "Datum Signals")
         self.assertEqual((datum["houseDemocraticControlPct"], datum["senateDemocraticControlPct"]), (70.0, 63.0))
         self.assertFalse({"The Economist", "Silver Bulletin", "Sam Brown", "Jon Elder"} & {row["provider"] for row in challengers["records"]})
+        self.assertEqual(geography["schema"], "KAHRELUM_US_STATES_MAP_v1.0")
+        self.assertEqual(geography["license"], "Unlicense / public domain dedication")
+        self.assertEqual(len(geography["locations"]), 50)
+        self.assertEqual({item["id"] for item in geography["locations"]}, {item["state"].lower() for item in current["house"]["districts"]})
+        self.assertEqual(portraits["schema"], "KAHRELUM_CANDIDATE_PORTRAITS_v1.0")
+        self.assertEqual(len(portraits["records"]), current["coverage"]["admittedPortraits"])
         for path in (
             "election-challenge-map.css",
             "election-challenge-map.js",
+            "assets/us-states-map.json",
+            "election/candidate-portraits.json",
             "election/house-forecast-lock.json",
             "election/senate-forecast-lock.json",
             "election/senate-ratings-source.json",
@@ -258,6 +277,20 @@ class PublishingSurfaceTests(unittest.TestCase):
         page = self.read("investigations.html")
         self.assertIn("Marion County, Indiana case", page)
         self.assertIn("investigations.html", self.read("scripts/firebase-overlay-release.cjs"))
+
+    def test_election_map_uses_conventional_party_colors_and_accessible_controls(self):
+        css = self.read("election-challenge-map.css").lower()
+        script = self.read("election-challenge-map.js")
+        page = self.read("election-challenge.html")
+        self.assertIn("--party-dem:#2563eb", css)
+        self.assertIn("--party-rep:#dc2626", css)
+        self.assertIn(".chamber-seat-bar .democratic", css)
+        self.assertIn(".chamber-seat-bar .republican", css)
+        self.assertIn(".probability-track .democratic", css)
+        self.assertIn(".probability-track .republican", css)
+        self.assertIn("event.key === 'Enter' || event.key === ' '", script)
+        self.assertIn('role="group" aria-label="Map chamber"', page)
+        self.assertIn("Suggestions include every source-listed candidate", page)
 
     def test_sports_desk_uses_flat_editorial_system(self):
         css = self.read("sports-desk.css").lower()

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-10-31T02:07:45.695Z",
+  "checkedAtUtc": "2026-10-31T03:04:30.193Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -10,7 +10,7 @@
   "records": [
     {
       "provider": "KAHRELUM",
-      "edition": "KAH-US-2026-20261031T013116Z",
+      "edition": "KAH-US-2026-20261031T030533Z",
       "sourceUrl": "/election-challenge",
       "houseDemocraticControlPct": 90.57450487619074,
       "senateDemocraticControlPct": 46.090647437793264,
@@ -18,7 +18,7 @@
       "houseSeatType": "expected",
       "senateDemocraticSeats": 50.229989536494045,
       "senateSeatType": "expected caucus",
-      "sourceEdition": "Fresh computation Oct. 31 01:31 UTC; House ratings Oct. 23; Senate ratings Oct. 20",
+      "sourceEdition": "Fresh computation Oct. 31 03:05 UTC; House ratings Oct. 23; Senate ratings Oct. 20",
       "retrievalStatus": "INTERNAL_FRESH_EXECUTION",
       "note": "Current KAHRELUM fixed-tier execution; original locks remain separate and unchanged."
     },
@@ -167,14 +167,14 @@
       "edition": "2026 Midterm Forecast",
       "sourceUrl": "https://www.davemanuel.com/2026-midterm-forecast.php",
       "houseDemocraticControlPct": 94.0,
-      "senateDemocraticControlPct": 71.0,
+      "senateDemocraticControlPct": 70.0,
       "houseDemocraticSeats": 234.0,
       "houseSeatType": "projected median",
       "senateDemocraticSeats": 52.0,
       "senateSeatType": "projected median including two aligned independents",
-      "sourceEdition": "Updated Oct. 30, 8:45 PM ET",
+      "sourceEdition": "Updated Oct. 30, 10:45 PM ET; retrieved Oct. 31 03:04 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "note": "First-party page reports 10,000 simulations; a separate 3% neither-side Senate outcome is preserved in the source methodology."
+      "note": "Fresh first-party page check. Senate Democratic control decreased from the prior recorded 71% to 70%; House control remains 94%, projected seats remain 234 D House and 52 D-aligned Senate, and the separate 3% neither-side Senate outcome is preserved."
     },
     {
       "provider": "On Point Politics",
@@ -214,9 +214,9 @@
       "houseSeatType": "median",
       "senateDemocraticSeats": 53.0,
       "senateSeatType": "median Democratic seats",
-      "sourceEdition": "Model run Oct. 30, 7:39 PM ET; polls through Oct. 30",
+      "sourceEdition": "Model run Oct. 30, 10:40 PM ET; polls through Oct. 30; retrieved Oct. 31 03:04 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "note": "First-party House and Senate pages report 20,000 simulations; the Senate separately assigns 2% to independents deciding control."
+      "note": "Fresh first-party page check. The model-run timestamp advanced from 7:39 PM to 10:40 PM ET while the admitted 91% House, 71% Senate, 236-seat House median and 53-seat Senate median stayed unchanged; the Senate separately assigns 2% to independents deciding control."
     }
   ]
 }

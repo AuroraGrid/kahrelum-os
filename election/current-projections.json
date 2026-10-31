@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "editionId": "KAH-US-2026-20261031T013116Z",
-  "computedAtUtc": "2026-10-31T01:31:16.155599Z",
+  "editionId": "KAH-US-2026-20261031T030533Z",
+  "computedAtUtc": "2026-10-31T03:05:33.060250Z",
   "status": "FRESH_EXECUTION_LATEST_ACCESSIBLE_SOURCE_EDITIONS",
   "modelStatus": "UNVALIDATED_PROBABILITY_MODEL_RESEARCH_ONLY",
   "sourceFreshness": "Retrieval is current; publisher rating edition dates may precede retrieval time.",
@@ -11,19 +11,19 @@
   "sources": {
     "house": {
       "url": "https://www.270towin.com/2026-house-election/cook-political-report-2026-house-ratings",
-      "retrievedAtUtc": "2026-10-31T01:31:16.155599Z",
+      "retrievedAtUtc": "2026-10-31T03:05:33.060250Z",
       "publisherEdition": "October 23, 2026",
       "sha256": "b29d82941e7ba9f2a40977ca841c00e13c94fc67243a2a57ce5e3c9ad2033604",
       "bytes": 3798305,
-      "httpDate": "Sat, 31 Oct 2026 02:05:33 GMT"
+      "httpDate": "Sat, 31 Oct 2026 03:39:49 GMT"
     },
     "senate": {
       "url": "https://www.270towin.com/2026-senate-election/cook-political-report-2026-senate",
-      "retrievedAtUtc": "2026-10-31T01:31:16.155599Z",
+      "retrievedAtUtc": "2026-10-31T03:05:33.060250Z",
       "publisherEdition": "October 20, 2026",
-      "sha256": "777d751c2a917e97f72c696d42e3ccbc53d172d1d827bbd8553ee261c89b8cd9",
-      "bytes": 437293,
-      "httpDate": "Sat, 31 Oct 2026 02:05:36 GMT"
+      "sha256": "c1de14ea6dabcb3c2d592cfc3d0e22ed2d5b6a32cdcd1f581526e3b822d96fa5",
+      "bytes": 437289,
+      "httpDate": "Sat, 31 Oct 2026 03:39:52 GMT"
     }
   },
   "coverage": {
