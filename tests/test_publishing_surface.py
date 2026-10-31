@@ -47,6 +47,21 @@ class PublishingSurfaceTests(unittest.TestCase):
                 self.assertIn('name="twitter:image"', page)
                 self.assertIn('name="twitter:image:alt"', page)
 
+    def test_nfl_page_refreshes_every_ten_minutes_without_public_telemetry_panel(self):
+        page = self.read("nfl/trades.html")
+        workflow = self.read(".github/workflows/sports-intelligence-sourcegrid.yml")
+        self.assertIn('<meta http-equiv="refresh" content="600">', page)
+        self.assertIn('cron: "*/10 * * * *"', workflow)
+        self.assertNotIn('id="command"', page)
+        self.assertNotIn('id="feedFreshness"', page)
+        self.assertNotIn('id="lastCheck"', page)
+        self.assertNotIn('id="lastPublished"', page)
+        self.assertNotIn('id="integrationCounts"', page)
+        self.assertNotIn('id="refreshBoundary"', page)
+        self.assertNotIn('id="healthSummary"', page)
+        self.assertNotIn('id="telemetrySource"', page)
+        self.assertIn("reloads every 10 minutes", page)
+
     def test_editorial_pages_have_canonical_and_viewport(self):
         routes = {
             "insights.html": "https://kahrelum.com/insights",
