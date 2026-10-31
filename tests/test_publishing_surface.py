@@ -126,12 +126,31 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertIn("publicReleaseIdentity", release)
         self.assertIn("election-challenge.html", release)
 
+    def test_investigations_names_marion_county_state(self):
+        page = self.read("investigations.html")
+        self.assertIn("Marion County, Indiana case", page)
+        self.assertIn("investigations.html", self.read("scripts/firebase-overlay-release.cjs"))
+
     def test_sports_desk_uses_flat_editorial_system(self):
         css = self.read("sports-desk.css").lower()
         self.assertNotIn("gradient", css)
         self.assertNotIn("box-shadow", css)
         self.assertIn("border-radius:0", css.replace(" ", ""))
         self.assertIn('font:14px/1.5arial,"helveticaneue",sans-serif', css.replace(" ", "").lower())
+        self.assertIn("color-scheme:light", css)
+        self.assertIn("--bg:#f4efe6", css)
+        self.assertIn("--text:#161411", css)
+        self.assertIn("--line:#c8bfae", css)
+
+        for path in (
+            "sports.html",
+            "nfl/trades.html",
+            "nfl/film-room.html",
+            "sports/nba.html",
+            "sports/mlb.html",
+            "sports/nhl.html",
+        ):
+            self.assertIn('<meta name="theme-color" content="#f4efe6">', self.read(path))
 
     def test_sports_registry_does_not_overstate_expansion_coverage(self):
         import json
