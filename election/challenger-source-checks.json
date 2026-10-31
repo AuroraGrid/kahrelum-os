@@ -1,10 +1,10 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-10-31T01:31:21.6278986Z",
+  "checkedAtUtc": "2026-10-31T01:57:45.550Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
-  "providersChecked": 11,
-  "challengersChecked": 10,
-  "challengersWithAtLeastOneVerifiedControlProbability": 10,
+  "providersChecked": 15,
+  "challengersChecked": 14,
+  "challengersWithAtLeastOneVerifiedControlProbability": 14,
   "unpricedChallengers": 0,
   "sortingRule": "KAHRELUM first; only challengers with at least one verified chamber-control probability are included.",
   "records": [
@@ -58,11 +58,11 @@
       "senateDemocraticControlPct": 60.0,
       "houseDemocraticSeats": 235.8,
       "houseSeatType": "expected",
-      "senateDemocraticSeats": 51.3,
+      "senateDemocraticSeats": 51.4,
       "senateSeatType": "expected including aligned independents",
-      "sourceEdition": "Forecast as of Oct. 30",
+      "sourceEdition": "Forecast as of Oct. 30; rechecked Oct. 31 01:57 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "note": "House and Senate first-party pages checked separately."
+      "note": "House and Senate first-party pages checked separately; Senate expected Democratic-aligned seats increased from the prior recorded 51.3 to 51.4 while Senate control remained 60%."
     },
     {
       "provider": "COYNTOSS",
@@ -161,6 +161,62 @@
       "sourceEdition": "Snapshot Oct. 30",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
       "note": "A 50-seat Senate result resolves Republican under the source's stated rule."
+    },
+    {
+      "provider": "Dave Manuel",
+      "edition": "2026 Midterm Forecast",
+      "sourceUrl": "https://www.davemanuel.com/2026-midterm-forecast.php",
+      "houseDemocraticControlPct": 94.0,
+      "senateDemocraticControlPct": 71.0,
+      "houseDemocraticSeats": 234.0,
+      "houseSeatType": "projected median",
+      "senateDemocraticSeats": 52.0,
+      "senateSeatType": "projected median including two aligned independents",
+      "sourceEdition": "Updated Oct. 30, 8:45 PM ET",
+      "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
+      "note": "First-party page reports 10,000 simulations; a separate 3% neither-side Senate outcome is preserved in the source methodology."
+    },
+    {
+      "provider": "On Point Politics",
+      "edition": "2026 Forecast",
+      "sourceUrl": "https://www.tpsielections.com/forecast",
+      "houseDemocraticControlPct": 97.0,
+      "senateDemocraticControlPct": 86.0,
+      "houseDemocraticSeats": 251.0,
+      "houseSeatType": "average",
+      "senateDemocraticSeats": 54.0,
+      "senateSeatType": "average",
+      "sourceEdition": "Updated Oct. 30",
+      "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
+      "note": "First-party index reports 2,000 simulated elections and labels both chamber values as averages."
+    },
+    {
+      "provider": "VotePredictor",
+      "edition": "2026 House Forecast",
+      "sourceUrl": "https://votepredictor.com/house",
+      "houseDemocraticControlPct": 76.0,
+      "senateDemocraticControlPct": null,
+      "houseDemocraticSeats": 229.6,
+      "houseSeatType": "expected; page headline rounds to 230",
+      "senateDemocraticSeats": null,
+      "senateSeatType": null,
+      "sourceEdition": "Public page retrieved Oct. 31 01:57 UTC",
+      "retrievalStatus": "FIRST_PARTY_PUBLIC_PARTIAL",
+      "note": "House probability and exact expected-seat figure are public; no Senate top line was admitted from this source."
+    },
+    {
+      "provider": "Midterm Forecast",
+      "edition": "2026 Senate and House",
+      "sourceUrl": "https://midtermforecast.com/",
+      "houseDemocraticControlPct": 91.0,
+      "senateDemocraticControlPct": 71.0,
+      "houseDemocraticSeats": 236.0,
+      "houseSeatType": "median",
+      "senateDemocraticSeats": 53.0,
+      "senateSeatType": "median Democratic seats",
+      "sourceEdition": "Model run Oct. 30, 7:39 PM ET; polls through Oct. 30",
+      "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
+      "note": "First-party House and Senate pages report 20,000 simulations; the Senate separately assigns 2% to independents deciding control."
     }
   ]
 }

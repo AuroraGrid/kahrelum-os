@@ -201,7 +201,7 @@
       currentProjectionData = current;
       challengerData = challengers;
       races = buildRaces(house,current);
-      if (races.length !== 470 || current.house.raceCount !== 435 || current.senate.raceCount !== 35 || current.coverage.racesWithSourceListedCandidates !== 470 || house.competitive_districts.length !== 81 || challengers.records.length !== 11 || challengers.challengersChecked !== 10 || challengers.unpricedChallengers !== 0 || challengers.records.some((record) => record.houseDemocraticControlPct === null && record.senateDemocraticControlPct === null)) throw new Error('Fresh election projection did not pass race, candidate and challenger validation.');
+      if (races.length !== 470 || current.house.raceCount !== 435 || current.senate.raceCount !== 35 || current.coverage.racesWithSourceListedCandidates !== 470 || house.competitive_districts.length !== 81 || challengers.records.length !== 15 || challengers.challengersChecked !== 14 || challengers.unpricedChallengers !== 0 || challengers.records.some((record) => record.houseDemocraticControlPct === null && record.senateDemocraticControlPct === null)) throw new Error('Fresh election projection did not pass race, candidate and challenger validation.');
       byId('mapHouseCount').textContent = current.house.raceCount;
       byId('mapSenateCount').textContent = current.senate.raceCount;
       byId('mapCandidateCount').textContent = current.coverage.sourceListedCandidateRecords;

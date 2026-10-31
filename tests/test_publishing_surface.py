@@ -197,16 +197,24 @@ class PublishingSurfaceTests(unittest.TestCase):
         canonical_challenger_bytes = self.read("election/challenger-source-checks.json").replace("\r\n", "\n").replace("\n", "\r\n").encode("utf-8")
         self.assertEqual(seats["sourceObservationFileSha256"], hashlib.sha256(canonical_challenger_bytes).hexdigest())
         self.assertEqual(challengers["status"], "VERIFIED_NUMERICAL_PROVIDERS_ONLY")
-        self.assertEqual(challengers["challengersChecked"], 10)
-        self.assertEqual(challengers["challengersWithAtLeastOneVerifiedControlProbability"], 10)
+        self.assertEqual(challengers["challengersChecked"], 14)
+        self.assertEqual(challengers["challengersWithAtLeastOneVerifiedControlProbability"], 14)
         self.assertEqual(challengers["unpricedChallengers"], 0)
-        self.assertEqual(len(challengers["records"]), 11)
+        self.assertEqual(len(challengers["records"]), 15)
         priced = [row for row in challengers["records"] if row["houseDemocraticControlPct"] is not None or row["senateDemocraticControlPct"] is not None]
         unpriced = [row for row in challengers["records"] if row["houseDemocraticControlPct"] is None and row["senateDemocraticControlPct"] is None]
         self.assertEqual(challengers["records"], priced)
         self.assertEqual(unpriced, [])
         ddhq = next(row for row in challengers["records"] if row["provider"] == "Decision Desk HQ")
         self.assertEqual((ddhq["houseDemocraticControlPct"], ddhq["senateDemocraticControlPct"]), (82.0, 62.0))
+        callthemap = next(row for row in challengers["records"] if row["provider"] == "CalltheMap")
+        self.assertEqual((callthemap["senateDemocraticControlPct"], callthemap["senateDemocraticSeats"]), (60.0, 51.4))
+        new_numeric = {row["provider"]: row for row in challengers["records"] if row["provider"] in {"Dave Manuel", "On Point Politics", "VotePredictor", "Midterm Forecast"}}
+        self.assertEqual(set(new_numeric), {"Dave Manuel", "On Point Politics", "VotePredictor", "Midterm Forecast"})
+        self.assertEqual((new_numeric["Dave Manuel"]["houseDemocraticControlPct"], new_numeric["Dave Manuel"]["senateDemocraticControlPct"]), (94.0, 71.0))
+        self.assertEqual((new_numeric["On Point Politics"]["houseDemocraticControlPct"], new_numeric["On Point Politics"]["senateDemocraticControlPct"]), (97.0, 86.0))
+        self.assertEqual((new_numeric["VotePredictor"]["houseDemocraticControlPct"], new_numeric["VotePredictor"]["senateDemocraticControlPct"]), (76.0, None))
+        self.assertEqual((new_numeric["Midterm Forecast"]["houseDemocraticControlPct"], new_numeric["Midterm Forecast"]["senateDemocraticControlPct"]), (91.0, 71.0))
         self.assertFalse({"The Economist", "Silver Bulletin", "Sam Brown", "Jon Elder"} & {row["provider"] for row in challengers["records"]})
         for path in (
             "election-challenge-map.css",
