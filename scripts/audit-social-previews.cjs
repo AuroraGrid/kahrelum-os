@@ -46,19 +46,20 @@ function imageDimensions(buffer, contentType) {
 
 async function readImage(url, cache) {
   if (cache.has(url)) return cache.get(url);
-  const response = await fetch(url, { redirect: 'follow', cache: 'no-store' });
-  const buffer = Buffer.from(await response.arrayBuffer());
-  const contentType = response.headers.get('content-type') || '';
-  const dimensions = imageDimensions(buffer, contentType);
-  const record = { status: response.status, contentType, bytes: buffer.length, ...dimensions };
-  cache.set(url, record);
-  return record;
+  const task = (async () => {
+    const response = await fetch(url, { redirect: 'follow', cache: 'no-store' });
+    const buffer = Buffer.from(await response.arrayBuffer());
+    const contentType = response.headers.get('content-type') || '';
+    const dimensions = imageDimensions(buffer, contentType);
+    return { status: response.status, contentType, bytes: buffer.length, ...dimensions };
+  })();
+  cache.set(url, task);
+  return task;
 }
 
 async function main() {
   const imageCache = new Map();
-  const pages = [];
-  for (const route of routes) {
+  const pages = await Promise.all(routes.map(async (route) => {
     const response = await fetch(`${origin}${route}`, { redirect: 'follow', cache: 'no-store' });
     const html = await response.text();
     const ogImage = meta(html, 'property', 'og:image');
@@ -68,7 +69,10 @@ async function main() {
     const declaredHeight = meta(html, 'property', 'og:image:height');
     const declaredType = meta(html, 'property', 'og:image:type');
     const ogAlt = meta(html, 'property', 'og:image:alt');
-    const image = ogImage ? await readImage(ogImage, imageCache) : null;
+    const imageFetchUrl = ogImage && origin !== 'https://kahrelum.com'
+      ? ogImage.replace(/^https:\/\/kahrelum\.com/, origin)
+      : ogImage;
+    const image = imageFetchUrl ? await readImage(imageFetchUrl, imageCache) : null;
     const issues = [];
     if (response.status !== 200) issues.push(`page returned ${response.status}`);
     if (!ogImage) issues.push('missing og:image');
@@ -79,8 +83,8 @@ async function main() {
     if (declaredWidth !== '1200' || declaredHeight !== '630') issues.push('declared dimensions are not 1200x630');
     if (image && image.status !== 200) issues.push(`image returned ${image.status}`);
     if (image && (image.width !== 1200 || image.height !== 630)) issues.push('actual dimensions are not 1200x630');
-    pages.push({ route, pageStatus: response.status, ogImage, twitterImage, twitterCard, declaredWidth, declaredHeight, declaredType, ogAlt, image, issues });
-  }
+    return { route, pageStatus: response.status, ogImage, twitterImage, twitterCard, declaredWidth, declaredHeight, declaredType, ogAlt, image, issues };
+  }));
   const grouped = new Map();
   for (const page of pages) grouped.set(page.ogImage, [...(grouped.get(page.ogImage) || []), page]);
   const shared = [...grouped.entries()]
