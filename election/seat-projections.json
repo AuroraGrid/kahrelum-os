@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "edition": "KAH-US-2026-20261031T040639Z with challenger source checks through 2026-10-31T14:26:41Z",
+  "edition": "KAH-US-2026-20261031T040639Z with challenger source checks through 2026-10-31T15:00:15Z",
   "comparisonStatus": "DESCRIPTIVE_ONLY_UNMATCHED_CUTOFFS_AND_SEAT_TYPES",
-  "sourceObservationFileSha256": "239a850d9620d0bb28b3f39a861bdd3613f14776df2a04d2bf92f074bf714f32",
+  "sourceObservationFileSha256": "d59447cb4b8f015cab83feb744d12c0fc4043c8bbbfea9b6c91b9f506204e36a",
   "house": {
     "totalSeats": 435,
     "democraticControlThreshold": 218,
@@ -44,7 +44,7 @@
       {"provider":"KAHRELUM","democraticSeats":50.229989536494045,"seatType":"expected caucus","edition":"Fresh run Oct. 31 04:06 UTC; ratings Oct. 20","sourceUrl":"/election-challenge"},
       {"provider":"Decision Desk HQ","democraticSeats":52,"seatType":"projected","edition":"Updated Oct. 30 2:39 PM","sourceUrl":"https://votes.decisiondeskhq.com/forecast/2026"},
       {"provider":"99chambers Horizon","democraticSeats":52.6,"seatType":"expected","edition":"Oct. 31 3:02 AM ET; retrieved 12:51 UTC","sourceUrl":"https://99chambers.app/updates/2026-10-31"},
-      {"provider":"CalltheMap","democraticSeats":51.3,"seatType":"expected incl. aligned independents","edition":"Forecast Oct. 31; retrieved 13:51 UTC","sourceUrl":"https://www.callthemap.com/senate"},
+      {"provider":"CalltheMap","democraticSeats":51.3,"seatType":"expected incl. aligned independents","edition":"Forecast Oct. 31; retrieved 15:00 UTC","sourceUrl":"https://www.callthemap.com/senate"},
       {"provider":"COYNTOSS","democraticSeats":51.66,"seatType":"expected caucus","edition":"Model inputs Oct. 30","sourceUrl":"https://chasecoyne.com/senate"},
       {"provider":"Scrutinel","democraticSeats":52,"seatType":"expected","edition":"Oct. 30 11:24 PM EDT","sourceUrl":"https://scrutinel.com/"},
       {"provider":"ElectIndex","democraticSeats":52.8,"seatType":"average","edition":"Public feed commit 89a378b; locally retrieved Oct. 31 13:33 UTC; source clock ahead","sourceUrl":"https://electindex.com/forecasts/"},

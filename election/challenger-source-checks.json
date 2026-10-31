@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-10-31T14:26:41.819Z",
+  "checkedAtUtc": "2026-10-31T15:00:15.755Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -57,18 +57,18 @@
       "edition": "Main",
       "sourceUrl": "https://www.callthemap.com/house",
       "houseDemocraticControlPct": 83.0,
-      "senateDemocraticControlPct": 59.0,
+      "senateDemocraticControlPct": 58.0,
       "houseDemocraticSeats": 235.8,
       "houseSeatType": "expected",
       "senateDemocraticSeats": 51.3,
       "senateSeatType": "expected including aligned independents",
-      "sourceEdition": "House and Senate forecasts Oct. 31; House retrieved Oct. 31 14:12:52 UTC; Senate retrieved Oct. 31 13:51:11 UTC",
+      "sourceEdition": "House and Senate forecasts Oct. 31; House retrieved Oct. 31 14:12:52 UTC; Senate retrieved Oct. 31 15:00:15 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "retrievedAtUtc": "2026-10-31T13:51:11.496Z",
+      "retrievedAtUtc": "2026-10-31T15:00:15.755Z",
       "retrievedHouseAtUtc": "2026-10-31T14:12:52.901Z",
       "rawSha256House": "c305363457fe8aeff396d693984b98e730228c8f31b04b4910d290cab8014591",
-      "rawSha256Senate": "532e9eaaa7a3f338b178d42e561f069d74f5f5371b86baf0d241a7872a065f48",
-      "note": "House and Senate first-party pages were checked separately. The Oct. 31 House edition moved Democratic control from 85% to 83% while expected Democratic seats remained 235.8. The Oct. 31 Senate edition remains at 59% control, 51.3 expected Democratic-aligned seats, and 2.4 expected aligned independents. Source HTTP Date values were ahead of the local observer clock and are retained only in the private retrieval receipts."
+      "rawSha256Senate": "5ad458d7573e8faa1c4ed2fc829c7ca4a06886111ec65fd3a0b658a19280eeaf",
+      "note": "House and Senate first-party pages were checked separately. The Oct. 31 House edition moved Democratic control from 85% to 83% while expected Democratic seats remained 235.8. The Oct. 31 Senate edition moved Democratic control from 59% to 58%; 51.3 expected Democratic-aligned seats and 2.4 expected aligned independents remain unchanged. Source HTTP Date values were ahead of the local observer clock and are retained only in the private retrieval receipts."
     },
     {
       "provider": "COYNTOSS",
