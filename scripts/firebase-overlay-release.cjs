@@ -42,6 +42,7 @@ const OVERLAY_FILES = [
   'nfl/deadline-audit.json',
   'nfl/publishing.json',
   'sports-desk.css',
+  'sports-article.css',
   'sports.html',
   'sports/module-registry.json',
   'nfl/film-room.html',
@@ -98,7 +99,7 @@ const RELEASE_PROFILES = {
       'nfl/review-queue.json', 'nfl/refresh-status.json', 'nfl/public-feed.json',
       'nfl/source-health.json',
       'nfl/forecast-ledger.json', 'nfl/deadline-audit.json', 'nfl/publishing.json',
-      'sports-desk.css', 'sports.html', 'sports/module-registry.json', 'nfl/film-room.html',
+      'sports-desk.css', 'sports-article.css', 'sports.html', 'sports/module-registry.json', 'nfl/film-room.html',
       'sports/nba.html', 'sports/mlb.html', 'sports/nhl.html',
     ],
     sitemapRoutes: [
@@ -109,7 +110,7 @@ const RELEASE_PROFILES = {
   },
   publishing: {
     overlayFiles: [
-      'forecasting.html', 'investigations.html', 'election-challenge.html', 'sports-desk.css', 'sports.html', 'sports/module-registry.json',
+      'forecasting.html', 'investigations.html', 'election-challenge.html', 'sports-desk.css', 'sports-article.css', 'sports.html', 'sports/module-registry.json',
       'nfl/trades.html', 'nfl/film-room.html', 'sports/nba.html', 'sports/mlb.html',
       'sports/nhl.html', 'nfl/weekly-brief.html', 'insights.css', 'insights.html',
       'insights/nfl-brier-accountability.html', 'insights/election-forecast-custody.html',

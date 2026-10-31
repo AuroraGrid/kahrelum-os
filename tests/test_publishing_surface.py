@@ -109,6 +109,7 @@ class PublishingSurfaceTests(unittest.TestCase):
             "assets/kahrelum-sports-intelligence-nfl-social-card.png",
             "assets/kahrelum-sports-intelligence-social-card.png",
             "sports-desk.css",
+            "sports-article.css",
             "sports.html",
             "sports/module-registry.json",
             "nfl/film-room.html",
@@ -163,6 +164,18 @@ class PublishingSurfaceTests(unittest.TestCase):
             "sports/nhl.html",
         ):
             self.assertIn('<meta name="theme-color" content="#f4efe6">', self.read(path))
+
+    def test_sports_articles_follow_paper_palette(self):
+        shared_css = self.read("insights.css").lower()
+        analysis_css = self.read("sports-article.css").lower()
+        analysis = self.read("nfl/analysis.html")
+        self.assertIn("color-scheme:light", shared_css)
+        self.assertIn("--bg:#f4efe6", shared_css)
+        self.assertNotIn("gradient", shared_css)
+        self.assertIn("color-scheme:light", analysis_css)
+        self.assertIn('href="/sports-article.css"', analysis)
+        self.assertIn('name="twitter:card" content="summary_large_image"', analysis)
+        self.assertIn('property="og:image"', analysis)
 
     def test_sports_registry_does_not_overstate_expansion_coverage(self):
         import json
