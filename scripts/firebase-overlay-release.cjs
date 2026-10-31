@@ -41,6 +41,14 @@ const OVERLAY_FILES = [
   'nfl/forecast-ledger.json',
   'nfl/deadline-audit.json',
   'nfl/publishing.json',
+  'insights.css',
+  'insights.html',
+  'insights/nfl-brier-accountability.html',
+  'insights/election-forecast-custody.html',
+  'insights/ai-bots-money-claims.html',
+  'nfl/weekly-brief.html',
+  'sports-interest.html',
+  'assets/kahrelum-sports-intelligence-nfl-social-card.png',
 ];
 
 const HTML_ROUTES = [
@@ -48,7 +56,9 @@ const HTML_ROUTES = [
   '/election-challenge',
   '/pilot', '/demo', '/sample', '/connect', '/hasan', '/election-lab', '/election-live',
   '/election-count', '/election-method', '/election-showdown', '/election-comparison',
-  '/nfl/trades', '/nfl/analysis',
+  '/nfl/trades', '/nfl/analysis', '/nfl/weekly-brief',
+  '/insights', '/insights/nfl-brier-accountability', '/insights/election-forecast-custody',
+  '/insights/ai-bots-money-claims', '/sports-interest',
 ];
 const API_ROUTES = ['/api/v1', '/api/v1/release', '/api/v1/example'];
 const REQUIRED_REWRITES = {
@@ -77,6 +87,19 @@ const RELEASE_PROFILES = {
     ],
     sitemapRoutes: ['/nfl/trades', '/nfl/analysis'],
     includeHomepage: false,
+  },
+  publishing: {
+    overlayFiles: [
+      'forecasting.html', 'nfl/trades.html', 'nfl/weekly-brief.html', 'insights.css', 'insights.html',
+      'insights/nfl-brier-accountability.html', 'insights/election-forecast-custody.html',
+      'insights/ai-bots-money-claims.html', 'sports-interest.html',
+      'assets/kahrelum-sports-intelligence-nfl-social-card.png',
+    ],
+    sitemapRoutes: [
+      '/nfl/weekly-brief', '/insights', '/insights/nfl-brier-accountability',
+      '/insights/election-forecast-custody', '/insights/ai-bots-money-claims', '/sports-interest',
+    ],
+    includeHomepage: true,
   },
 };
 
@@ -220,9 +243,10 @@ function addBlob(desired, blobs, hostingPath, bytes) {
   blobs[hash] = compressed;
 }
 
-function readRepositoryTextBytes(name) {
-  const text = fs.readFileSync(path.join(ROOT, name), 'utf8');
-  return Buffer.from(text.replace(/\r?\n/g, '\r\n'), 'utf8');
+function readRepositoryBytes(name) {
+  const source = fs.readFileSync(path.join(ROOT, name));
+  if (path.extname(name).toLowerCase() === '.png') return source;
+  return Buffer.from(source.toString('utf8').replace(/\r?\n/g, '\r\n'), 'utf8');
 }
 
 async function buildOverlay(live, profileName) {
@@ -235,7 +259,7 @@ async function buildOverlay(live, profileName) {
   for (const name of profile.overlayFiles) {
     const source = path.join(ROOT, name);
     if (!fs.existsSync(source)) fail(`Repository overlay source is missing: ${name}`);
-    addBlob(desired, blobs, '/' + name, readRepositoryTextBytes(name));
+    addBlob(desired, blobs, '/' + name, readRepositoryBytes(name));
   }
 
   const one = fs.readFileSync(path.join(ROOT, 'one.html'), 'utf8');
@@ -300,7 +324,7 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
       nflData.sourceAccountability?.certifiedMeanBrier !== null) {
     fail('NFL trade board data integrity or forecast-certification boundary failed.');
   }
-  if (['full', 'sports-intelligence'].includes(profileName)) {
+  if (['full', 'sports-intelligence', 'publishing'].includes(profileName)) {
     const [sourcegrid, status, health, ledger, audit, publicFeed, publishing] = await Promise.all([
       '/nfl/sourcegrid.json', '/nfl/refresh-status.json', '/nfl/source-health.json',
       '/nfl/forecast-ledger.json', '/nfl/deadline-audit.json', '/nfl/public-feed.json', '/nfl/publishing.json',
