@@ -68,3 +68,33 @@ test('local public-domain photos require the exact identity and content-hash pat
     assert.equal(map.admittedPortrait({portrait:{...base,url}}),null);
   }
 });
+
+test('non-Congress portraits use real FEC identity and complete Commons rights, without Bioguide IDs',() => {
+  const portrait=ledger.records.find(r=>r.identityType==='FEC_CANDIDATE');
+  assert.ok(portrait);
+  assert.equal(portrait.bioguideId,undefined);
+  assert.equal(map.admittedPortrait({portrait}),portrait);
+  for(const patch of [{identityType:'UNKNOWN'},{identityId:'S6XX00000'},{bioguideId:'F999999'},
+    {license:'Fair use'},{licenseUrl:'https://example.com/'},{attribution:''},{rightsBasis:''},
+    {commonsRevisionId:1},{sourceOriginalImageSha1:''},{identitySourceSha256:''},
+    {url:'https://example.com/wrong-person.jpg',sourceThumbnailUrl:'https://example.com/wrong-person.jpg'}]) {
+    assert.equal(map.admittedPortrait({portrait:{...portrait,...patch}}),null,JSON.stringify(patch));
+  }
+  for(const field of ['candidateName','state','party','chamber','contestId','sourceCandidateId']){
+    const changed=structuredClone(ledger);
+    changed.records.find(r=>r.identityType==='FEC_CANDIDATE')[field]='wrong';
+    assert.equal(map.applyPortraitLedger(makeRaces(),changed).matchedCards,admittedCount-1,field);
+  }
+});
+
+test('licensed-image creator credit and source/license links remain visible',()=>{
+  const races=makeRaces();map.applyPortraitLedger(races,ledger);
+  const race=races.find(r=>r.candidates.some(c=>c.portrait?.identityType==='FEC_CANDIDATE' && c.portrait.license.startsWith('CC BY')));
+  assert.ok(race);
+  const html=map.candidateCards(race);
+  assert.match(html,/CC BY/);
+  assert.match(html,/Photo source/);
+  assert.match(html,/Source thumbnail; no additional edits/);
+  const portrait=race.candidates.find(c=>c.portrait?.identityType==='FEC_CANDIDATE').portrait;
+  assert.ok(html.includes(portrait.attribution.replace(/&/g,'&amp;')));
+});

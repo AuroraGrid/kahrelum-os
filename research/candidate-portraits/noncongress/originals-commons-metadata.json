@@ -1,0 +1,1075 @@
+{
+  "queryUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&titles=File%3AJames+Talarico+Press+Conference.jpg%7CFile%3AOsborn+Headshot+2.jpg%7CFile%3ASeth+Bodnar+-+President+at+University+of+Montana.jpg%7CFile%3AMark+Baisley+%28cropped%29.JPG%7CFile%3AKen+Paxton+-+55022425595.jpg%7CFile%3AMichael+Whatley+%2854670563614%29.jpg%7CFile%3AAbdul+El-Sayed+meet-and-greet+by+Conlan+Houston+5.jpg&prop=imageinfo%7Crevisions%7Ccategories&iiprop=url%7Cextmetadata%7Csize%7Csha1%7Ctimestamp&iiurlwidth=330&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main&cllimit=500",
+  "result": {
+    "batchcomplete": "",
+    "query": {
+      "pages": {
+        "177428652": {
+          "pageid": 177428652,
+          "ns": 6,
+          "title": "File:Abdul El-Sayed meet-and-greet by Conlan Houston 5.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "timestamp": "2025-10-27T02:58:05Z",
+              "size": 23742154,
+              "width": 5924,
+              "height": 3942,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Abdul_El-Sayed_meet-and-greet_by_Conlan_Houston_5.jpg/330px-Abdul_El-Sayed_meet-and-greet_by_Conlan_Houston_5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 330,
+              "thumbheight": 220,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Abdul_El-Sayed_meet-and-greet_by_Conlan_Houston_5.jpg/960px-Abdul_El-Sayed_meet-and-greet_by_Conlan_Houston_5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Abdul_El-Sayed_meet-and-greet_by_Conlan_Houston_5.jpg/330px-Abdul_El-Sayed_meet-and-greet_by_Conlan_Houston_5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 330,
+                "height": 220,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Abdul_El-Sayed_meet-and-greet_by_Conlan_Houston_5.jpg/960px-Abdul_El-Sayed_meet-and-greet_by_Conlan_Houston_5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Abdul_El-Sayed_meet-and-greet_by_Conlan_Houston_5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Abdul_El-Sayed_meet-and-greet_by_Conlan_Houston_5.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=177428652",
+              "sha1": "2b3edfe1acfc94d19fb913dfedf4af79f67794d8",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-10-27 02:58:05",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Abdul El-Sayed meet-and-greet by Conlan Houston 5",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Michigan Technological University|Images with extracted images|Flickr images reviewed by FlickreviewR 2|October 2025 in Michigan|United States Senate election in Michigan, 2026|Abdul El-Sayed in 2025",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "US Senate candidate for michigan Abdul El-Sayed meets voters at Michigan Technological University. October 22, 2025",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-10-22 15:00:48",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/197161005@N08/54882601138/\">https://www.flickr.com/photos/197161005@N08/54882601138/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Conlan Houston",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "Must attribute to <b>Conlan Houston</b> if used elsewhere, other than on Wikimedia and its projects.",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              }
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1263992735,
+              "parentid": 1256949247,
+              "timestamp": "2026-08-19T21:40:53Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=US Senate candidate for michigan Abdul El-Sayed meets voters at Michigan Technological University. October 22, 2025}}\n|date=2025-10-22 15:00:48\n|source=https://www.flickr.com/photos/197161005@N08/54882601138/\n|author=Conlan Houston\n|Permission=Must attribute to '''Conlan Houston''' if used elsewhere, other than on Wikimedia and its projects.\n|other versions={{Image extracted|1=Abdul El-Sayed meet-and-greet by Conlan Houston 5 (cropped).jpg}}\n}}\n\n=={{int:license-header}}==\n{{cc-by-sa-4.0}}{{FlickreviewR|status=passed|author=cahousto|sourceurl=https://flickr.com/photos/197161005@N08/54882601138|archive=|reviewdate=2025-10-27 02:58:45|reviewlicense=cc-by-sa-4.0|reviewer=FlickreviewR 2}}\n\n[[Category:Abdul El-Sayed in 2025]]\n[[Category:United States Senate election in Michigan, 2026]]\n[[Category:Michigan Technological University]]\n[[Category:October 2025 in Michigan]]"
+                }
+              }
+            }
+          ],
+          "categories": [
+            {
+              "ns": 14,
+              "title": "Category:Abdul El-Sayed in 2025"
+            },
+            {
+              "ns": 14,
+              "title": "Category:CC-BY-SA-4.0"
+            },
+            {
+              "ns": 14,
+              "title": "Category:Flickr images reviewed by FlickreviewR 2"
+            },
+            {
+              "ns": 14,
+              "title": "Category:Images with extracted images"
+            },
+            {
+              "ns": 14,
+              "title": "Category:Michigan Technological University"
+            },
+            {
+              "ns": 14,
+              "title": "Category:October 2025 in Michigan"
+            },
+            {
+              "ns": 14,
+              "title": "Category:United States Senate election in Michigan, 2026"
+            }
+          ]
+        },
+        "162288282": {
+          "pageid": 162288282,
+          "ns": 6,
+          "title": "File:James Talarico Press Conference.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "timestamp": "2025-03-17T19:20:37Z",
+              "size": 131979,
+              "width": 645,
+              "height": 864,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/James_Talarico_Press_Conference.jpg/330px-James_Talarico_Press_Conference.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 330,
+              "thumbheight": 442,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/8/8b/James_Talarico_Press_Conference.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/James_Talarico_Press_Conference.jpg/330px-James_Talarico_Press_Conference.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 330,
+                "height": 442,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/8/8b/James_Talarico_Press_Conference.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/James_Talarico_Press_Conference.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:James_Talarico_Press_Conference.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=162288282",
+              "sha1": "04d6f226763c04e668931af2f8a751310fa171e3",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-03-17 19:20:37",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "James Talarico Press Conference",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "James Talarico|Items with VRTS permission confirmed|Images with extracted images",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "James Talarico speaking at a press conference at the Texas Capitol on January 13, 2025.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-01-13",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Antonioaesparza&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Antonioaesparza (page does not exist)\">Antonioaesparza</a>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "<p><span class=\"layouttemplateargs\" style=\"display:none;speak:none;\" title=\"template=PermissionTicket 1%3Dhttps%3A%2F%2Fticket.wikimedia.org%2Fotrs%2Findex.pl%3FAction%3DAgentTicketZoom%26TicketNumber%3D2025032710009488 2%3D2025032710009488\">\u00a0</span>\n</p>\n<style data-mw-deduplicate=\"TemplateStyles:r1254222110\">.mw-parser-output .messagebox{margin:4px 0;width:auto;border-collapse:collapse;border:2px solid var(--border-color-progressive,#6485d1);background-color:var(--background-color-neutral-subtle,#fbfcff);color:var(--color-base,#202122);box-sizing:border-box;border-inline-start-width:8px}.mw-parser-output .messagebox.mbox-small{font-size:88%;line-height:1.25em}.mw-parser-output .mbox-warning,.mw-parser-output .mbox-speedy{border:2px solid var(--border-color-error,#b22222);background:var(--background-color-error-subtle,#ffdbdb);border-inline-start-width:8px}.mw-parser-output .mbox-serious,.mw-parser-output .mbox-delete,.mw-parser-output .mbox-stop{border:2px solid var(--border-color-error,#b22222);border-inline-start-width:8px}.mw-parser-output .mbox-issue,.mw-parser-output .mbox-content{border:2px solid #f28500;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-query,.mw-parser-output .mbox-style{border:2px solid #f4c430;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-shit{border:2px solid #960;border-inline-start-width:8px}.mw-parser-output .mbox-license{border:2px solid #88a;border-inline-start-width:initial}.mw-parser-output .mbox-legal{border:2px solid var(--border-color-notice,#666);background:var(--background-color-base,#fff);border-inline-start-width:8px}.mw-parser-output .mbox-honor{border:2px solid #ca3;background:var(--background-color-warning-subtle,#fcf4db);border-inline-start-width:8px}.mw-parser-output .mbox-growth{border:2px solid #8d4;background:var(--background-color-success-subtle,#d5fdf4);border-inline-start-width:8px}.mw-parser-output .mbox-move{border:2px solid #93c;border-inline-start-width:8px}.mw-parser-output .mbox-protection,.mw-parser-output .mbox-message{border:2px solid var(--border-color-base,#aaa);border-inline-start-width:8px}.mw-parser-output .messagebox .mbox-text{border:none;padding:0.25em 0.9em;width:100%}.mw-parser-output .messagebox .mbox-image{border:none;padding-top:2px;padding-bottom:2px;padding-inline-start:0.9em;padding-inline-end:0;text-align:center}.mw-parser-output .messagebox .mbox-imageright{border:none;padding-top:2px;padding-bottom:2px;padding-inline-start:0;padding-inline-end:0.9em;text-align:center}.mw-parser-output .messagebox .mbox-empty-cell{border:none;padding:0;width:1px}.mw-parser-output .messagebox .mbox-invalid-type{text-align:center}@media(min-width:720px){.mw-parser-output .messagebox{margin:4px 10%}.mw-parser-output .messagebox.mbox-small{clear:right;float:right;margin:4px 0 4px 1em;width:238px}}body.skin--responsive .mw-parser-output table.messagebox img{max-width:none!important}</style><table class=\"plainlinks messagebox mbox-notice layouttemplate\" role=\"presentation\" style=\"margin:0.3em 0;width:100%;\"><tbody><tr><td class=\"mbox-image\"><span typeof=\"mw:File\"><span title=\"VRT Wikimedia\"><img alt=\"VRT Wikimedia\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Permission_logo_2021.svg/120px-Permission_logo_2021.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"75\" height=\"48\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Permission_logo_2021.svg/250px-Permission_logo_2021.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"935\" data-file-height=\"600\"></span></span></td><td class=\"mbox-text\">This work is <a href=\"https://freedomdefined.org/Definition\" class=\"extiw\" title=\"freedomdefined:Definition\">free</a> and may be used by anyone for any purpose. If you wish to <b><a href=\"//commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia\" title=\"Commons:Reusing content outside Wikimedia\">use this content</a></b>, you do not need to request permission as long as you follow any licensing requirements mentioned on this page.\n<p>The Wikimedia Foundation has received an e-mail confirming that the copyright holder has approved publication under the terms mentioned on this page. This correspondence has been <b><span style=\"background:transparent;color:#0f7f1f;font-weight:400;\" title=\"transparent\">reviewed</span></b> by a <a href=\"//commons.wikimedia.org/wiki/Template:PermissionTicket/Users\" title=\"Template:PermissionTicket/Users\">Volunteer Response Team (VRT) member</a> and stored in our <a href=\"//commons.wikimedia.org/wiki/Commons:Volunteer_Response_Team\" title=\"Commons:Volunteer Response Team\">permission archive</a>. The correspondence is available to trusted volunteers as <b><a href=\"https://ticket.wikimedia.org/otrs/index.pl?Action=AgentTicketZoom&amp;TicketNumber=2025032710009488\" class=\"extiw\" title=\"ticket:2025032710009488\">ticket #2025032710009488</a></b>.\n</p><p><small>If you have questions about the archived correspondence, please use the <a href=\"//commons.wikimedia.org/wiki/Commons:Volunteer_Response_Team/Noticeboard\" title=\"Commons:Volunteer Response Team/Noticeboard\">VRT noticeboard</a>.</small>\n<small>Ticket link: <a class=\"external free\" href=\"https://ticket.wikimedia.org/otrs/index.pl?Action=AgentTicketZoom&amp;TicketNumber=2025032710009488\">https://ticket.wikimedia.org/otrs/index.pl?Action=AgentTicketZoom&amp;TicketNumber=2025032710009488</a></small>\n<br><small>Find other files from the same ticket:</small> <span typeof=\"mw:File\"><a href=\"https://wcqs-beta.wmflabs.org/#%23defaultView%3AImageGrid%09%0ASELECT%20%3Fimage%20%20%20%7B%0A%20%20%3Ffile%20wdt%3AP6305%20%222025032710009488%22%20.%0A%20%20%3Ffile%20schema%3Aurl%20%3Fimage.%0A%7D%20%0A\" title=\"SDC query (SPARQL)\" rel=\"nofollow\"><img alt=\"SDC query (SPARQL)\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Wikimedia_Commons_Query_Service_Logo.svg/20px-Wikimedia_Commons_Query_Service_Logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"15\" height=\"20\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Wikimedia_Commons_Query_Service_Logo.svg/40px-Wikimedia_Commons_Query_Service_Logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"512\" data-file-height=\"688\"></a></span>\n</p>\n<span id=\"field-otrs\" title=\"https://ticket.wikimedia.org/otrs/index.pl?Action=AgentTicketZoom&amp;TicketNumber=2025032710009488\"></span></td></tr></tbody></table>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              }
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1276737013,
+              "parentid": 1168073179,
+              "timestamp": "2026-09-15T03:58:48Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=James Talarico speaking at a press conference at the Texas Capitol on January 13, 2025.}}\n|date=2025-01-13\n|source={{own}}\n|author=[[User:Antonioaesparza|Antonioaesparza]]\n|permission={{PermissionTicket|id=2025032710009488}}\n|other versions={{Image extracted|1=James Talarico Press Conference (centered).jpg|2=James Talarico Press Conference (cropped).jpg|3=James Talarico Press Conference 3x4 (cropped).jpg}}\n}}\n\n=={{int:license-header}}==\n{{Cc-by-sa-4.0}}\n\n[[Category:James Talarico]]"
+                }
+              }
+            }
+          ],
+          "categories": [
+            {
+              "ns": 14,
+              "title": "Category:CC-BY-SA-4.0"
+            },
+            {
+              "ns": 14,
+              "title": "Category:Images with extracted images"
+            },
+            {
+              "ns": 14,
+              "title": "Category:Items with VRTS permission confirmed"
+            },
+            {
+              "ns": 14,
+              "title": "Category:James Talarico"
+            }
+          ]
+        },
+        "181216594": {
+          "pageid": 181216594,
+          "ns": 6,
+          "title": "File:Ken Paxton - 55022425595.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "timestamp": "2026-01-04T15:40:56Z",
+              "size": 21511285,
+              "width": 8192,
+              "height": 5464,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Ken_Paxton_-_55022425595.jpg/330px-Ken_Paxton_-_55022425595.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 330,
+              "thumbheight": 220,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Ken_Paxton_-_55022425595.jpg/960px-Ken_Paxton_-_55022425595.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Ken_Paxton_-_55022425595.jpg/330px-Ken_Paxton_-_55022425595.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 330,
+                "height": 220,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Ken_Paxton_-_55022425595.jpg/960px-Ken_Paxton_-_55022425595.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Ken_Paxton_-_55022425595.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Ken_Paxton_-_55022425595.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=181216594",
+              "sha1": "081e9937173764e33c9ac695f98b5dfeeac11af6",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-01-04 15:40:56",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Ken Paxton - 55022425595",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Images with extracted images|Photographs by Gage Skidmore|Files with coordinates missing SDC location of creation|Flickr images reviewed by FlickreviewR 2|Files uploaded by RandomUserGuy1738|Flickr images missing SDC published in|AmericaFest 2025|Ken Paxton in 2025",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "33.449645",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "-112.068840",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Texas Attorney General Ken Paxton speaking with attendees at the 2025 AmericaFest at the Phoenix Convention Center in Phoenix, Arizona.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-12-20 14:04:55",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/gageskidmore/55022425595/\">https://www.flickr.com/photos/gageskidmore/55022425595/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Gage Skidmore",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              }
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1281484318,
+              "parentid": 1281206497,
+              "timestamp": "2026-09-29T02:40:10Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Texas Attorney General Ken Paxton speaking with attendees at the 2025 AmericaFest at the Phoenix Convention Center in Phoenix, Arizona.}}\n|date=2025-12-20 14:04:55\n|source=https://www.flickr.com/photos/gageskidmore/55022425595/\n|author=Gage Skidmore\n|permission=\n|other versions={{extracted|1=Ken Paxton - 55022425595 (cropped).jpg}}\n}}\n{{Location|33.449645|-112.06884}}\n\n=={{int:license-header}}==\n{{cc-by-sa-4.0}}{{FlickreviewR|status=passed|author=Gage Skidmore|sourceurl=https://flickr.com/photos/22007612@N05/55022425595|archive=|reviewdate=2026-01-04 15:42:42|reviewlicense=cc-by-sa-4.0|reviewer=FlickreviewR 2}}\n\n[[Category:Ken Paxton in 2025]]\n[[Category:Photographs by Gage Skidmore]]\n[[Category:Files uploaded by RandomUserGuy1738]]\n[[Category:AmericaFest 2025]]"
+                }
+              }
+            }
+          ],
+          "categories": [
+            {
+              "ns": 14,
+              "title": "Category:AmericaFest 2025"
+            },
+            {
+              "ns": 14,
+              "title": "Category:CC-BY-SA-4.0"
+            },
+            {
+              "ns": 14,
+              "title": "Category:Files uploaded by RandomUserGuy1738"
+            },
+            {
+              "ns": 14,
+              "title": "Category:Files with coordinates missing SDC location of creation"
+            },
+            {
+              "ns": 14,
+              "title": "Category:Flickr images missing SDC published in"
+            },
+            {
+              "ns": 14,
+              "title": "Category:Flickr images reviewed by FlickreviewR 2"
+            },
+            {
+              "ns": 14,
+              "title": "Category:Images with extracted images"
+            },
+            {
+              "ns": 14,
+              "title": "Category:Ken Paxton in 2025"
+            },
+            {
+              "ns": 14,
+              "title": "Category:Photographs by Gage Skidmore"
+            }
+          ]
+        },
+        "190239308": {
+          "pageid": 190239308,
+          "ns": 6,
+          "title": "File:Mark Baisley (cropped).JPG",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "timestamp": "2026-05-21T00:41:04Z",
+              "size": 547113,
+              "width": 618,
+              "height": 823,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Mark_Baisley_%28cropped%29.JPG/330px-Mark_Baisley_%28cropped%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 330,
+              "thumbheight": 439,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/1/16/Mark_Baisley_%28cropped%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Mark_Baisley_%28cropped%29.JPG/330px-Mark_Baisley_%28cropped%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 330,
+                "height": 439,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/1/16/Mark_Baisley_%28cropped%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Mark_Baisley_%28cropped%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Mark_Baisley_(cropped).JPG",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=190239308",
+              "sha1": "b20a44761563cf2ff5c97d6cafa69978f429174e",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-05-21 00:41:04",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Mark Baisley (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "1955 births|Members of the Colorado House of Representatives|Republicans from Colorado|Self-published work|Extracted images|March 2019 in Colorado|Photographs by Jeffrey Beall",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Mark Baisley, a politician from Colorado.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2019-03-30",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Denverjeffrey\" class=\"mw-redirect\" title=\"User:Denverjeffrey\">Jeffrey Beall</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              }
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1272246912,
+              "parentid": 1217603297,
+              "timestamp": "2026-09-04T18:16:25Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "== {{int:filedesc}} ==\n{{Information\n|description   ={{en|1=Mark Baisley, a politician from Colorado.}}\n|date          =2019-03-30\n|source        ={{own}}\n|author        =[[User:Denverjeffrey|Jeffrey Beall]]\n}}\n{{Extracted from|1=Mark Baisley.JPG}}\n\n== {{int:license-header}} ==\n{{self|cc-by-4.0}}\n\n[[Category:Members of the Colorado House of Representatives]]\n[[Category:Republicans from Colorado]]\n[[Category:1955 births]]\n[[Category:March 2019 in Colorado]]\n[[Category:Photographs by Jeffrey Beall]]"
+                }
+              }
+            }
+          ],
+          "categories": [
+            {
+              "ns": 14,
+              "title": "Category:1955 births"
+            },
+            {
+              "ns": 14,
+              "title": "Category:CC-BY-4.0"
+            },
+            {
+              "ns": 14,
+              "title": "Category:Extracted images"
+            },
+            {
+              "ns": 14,
+              "title": "Category:March 2019 in Colorado"
+            },
+            {
+              "ns": 14,
+              "title": "Category:Members of the Colorado House of Representatives"
+            },
+            {
+              "ns": 14,
+              "title": "Category:Photographs by Jeffrey Beall"
+            },
+            {
+              "ns": 14,
+              "title": "Category:Republicans from Colorado"
+            },
+            {
+              "ns": 14,
+              "title": "Category:Self-published work"
+            }
+          ]
+        },
+        "170672773": {
+          "pageid": 170672773,
+          "ns": 6,
+          "title": "File:Michael Whatley (54670563614).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "timestamp": "2025-07-25T06:41:02Z",
+              "size": 17631214,
+              "width": 8192,
+              "height": 5464,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Michael_Whatley_%2854670563614%29.jpg/330px-Michael_Whatley_%2854670563614%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 330,
+              "thumbheight": 220,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Michael_Whatley_%2854670563614%29.jpg/960px-Michael_Whatley_%2854670563614%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Michael_Whatley_%2854670563614%29.jpg/330px-Michael_Whatley_%2854670563614%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 330,
+                "height": 220,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Michael_Whatley_%2854670563614%29.jpg/960px-Michael_Whatley_%2854670563614%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Michael_Whatley_%2854670563614%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Michael_Whatley_(54670563614).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=170672773",
+              "sha1": "2916a479129f8a5fb6aa43da81cbc1bdfb669d7c",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-07-25 06:41:02",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Michael Whatley (54670563614)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Images with extracted images|Photographs by Gage Skidmore|Uploads using Flickypedia|Files with coordinates missing SDC location of creation|Michael Whatley|2025 Student Action Summit",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "27.942069",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "-82.456780",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Republican National Committee Chairman Michael Whatley speaking with attendees at the 2025 Student Action Summit at the Tampa Convention Center in Tampa, Florida.\u00a0<span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"//commons.wikimedia.org/wiki/File:Michael_Whatley_(54670563614).jpg#ooui-php-4\" title=\"Edit this at Structured Data on Commons\"><img alt=\"Edit this at Structured Data on Commons\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-07-11",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/gageskidmore/54670563614/\">Flickr</a>\u00a0<span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"//commons.wikimedia.org/wiki/File:Michael_Whatley_(54670563614).jpg#P7482\" title=\"Edit this at Structured Data on Commons\"><img alt=\"Edit this at Structured Data on Commons\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/gageskidmore/\">Gage Skidmore</a>\u00a0<span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"//commons.wikimedia.org/wiki/File:Michael_Whatley_(54670563614).jpg#P170\" title=\"Edit this at Structured Data on Commons\"><img alt=\"Edit this at Structured Data on Commons\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              }
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1277786248,
+              "parentid": 1177740063,
+              "timestamp": "2026-09-17T13:41:05Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description=\n|other fields=\n{{Flickr Tags 2|michael|whatley|republican|national|committee|chair|chairman|student|action|summit|2025|tampa|convention|center|florida}}\n|other_versions={{extracted|1=Michael Whatley (54670563614) (cropped).jpg}}\n}}\n{{Location}}\n\n=={{int:license-header}}==\n{{Cc-by-sa-4.0}}\n\n{{Uploaded with Flickypedia\n|user=TaurusEmerald\n|date=2025-07-25\n|flickrUser=Gage Skidmore\n|flickrUserUrl=https://www.flickr.com/people/gageskidmore/\n|flickrPhotoUrl=https://www.flickr.com/photos/gageskidmore/54670563614/\n}}\n\n[[Category:Michael Whatley]]\n[[Category:Photographs by Gage Skidmore]]\n[[Category:2025 Student Action Summit]]"
+                }
+              }
+            }
+          ],
+          "categories": [
+            {
+              "ns": 14,
+              "title": "Category:2025 Student Action Summit"
+            },
+            {
+              "ns": 14,
+              "title": "Category:CC-BY-SA-4.0"
+            },
+            {
+              "ns": 14,
+              "title": "Category:Files with coordinates missing SDC location of creation"
+            },
+            {
+              "ns": 14,
+              "title": "Category:Images with extracted images"
+            },
+            {
+              "ns": 14,
+              "title": "Category:Michael Whatley"
+            },
+            {
+              "ns": 14,
+              "title": "Category:Photographs by Gage Skidmore"
+            },
+            {
+              "ns": 14,
+              "title": "Category:Uploads using Flickypedia"
+            }
+          ]
+        },
+        "150859053": {
+          "pageid": 150859053,
+          "ns": 6,
+          "title": "File:Osborn Headshot 2.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "timestamp": "2024-07-26T20:40:48Z",
+              "size": 22421851,
+              "width": 7360,
+              "height": 4912,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Osborn_Headshot_2.jpg/330px-Osborn_Headshot_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 330,
+              "thumbheight": 220,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Osborn_Headshot_2.jpg/960px-Osborn_Headshot_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Osborn_Headshot_2.jpg/330px-Osborn_Headshot_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 330,
+                "height": 220,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Osborn_Headshot_2.jpg/960px-Osborn_Headshot_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Osborn_Headshot_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Osborn_Headshot_2.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=150859053",
+              "sha1": "9b18ebcbda1651bd9f0ec3932a8ba02644998284",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2024-07-26 20:40:48",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Osborn Headshot 2",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Self-published work|Images with extracted images|Dan Osborn",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Dan Osborn \u2013 Independent for U.S. Senate",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2023-09-17 08:30:01",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Ramseywill&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Ramseywill (page does not exist)\">Ramseywill</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              }
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1144721614,
+              "parentid": 1144566424,
+              "timestamp": "2026-01-09T09:17:53Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Dan Osborn \u2013 Independent for U.S. Senate}}\n|date=2023-09-17 08:30:01\n|source={{own}}\n|author=[[User:Ramseywill|Ramseywill]]\n|permission=\n|other versions={{Image extracted|1=Osborn Headshot 2 (cropped).jpg}}\n}}\n\n=={{int:license-header}}==\n{{self|cc-by-4.0}}\n\n[[Category:Dan Osborn]]"
+                }
+              }
+            }
+          ],
+          "categories": [
+            {
+              "ns": 14,
+              "title": "Category:CC-BY-4.0"
+            },
+            {
+              "ns": 14,
+              "title": "Category:Dan Osborn"
+            },
+            {
+              "ns": 14,
+              "title": "Category:Images with extracted images"
+            },
+            {
+              "ns": 14,
+              "title": "Category:Self-published work"
+            }
+          ]
+        },
+        "159637333": {
+          "pageid": 159637333,
+          "ns": 6,
+          "title": "File:Seth Bodnar - President at University of Montana.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "timestamp": "2025-02-12T17:08:17Z",
+              "size": 2412522,
+              "width": 6538,
+              "height": 5282,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Seth_Bodnar_-_President_at_University_of_Montana.jpg/330px-Seth_Bodnar_-_President_at_University_of_Montana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 330,
+              "thumbheight": 267,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Seth_Bodnar_-_President_at_University_of_Montana.jpg/960px-Seth_Bodnar_-_President_at_University_of_Montana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Seth_Bodnar_-_President_at_University_of_Montana.jpg/330px-Seth_Bodnar_-_President_at_University_of_Montana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 330,
+                "height": 267,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Seth_Bodnar_-_President_at_University_of_Montana.jpg/960px-Seth_Bodnar_-_President_at_University_of_Montana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Seth_Bodnar_-_President_at_University_of_Montana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Seth_Bodnar_-_President_at_University_of_Montana.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=159637333",
+              "sha1": "c80665e4e3d8da4aafdaa46e57b5e5ff1ec5d664",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-02-12 17:08:17",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Seth Bodnar - President at University of Montana",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "University of Montana|Images with extracted images",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "This is a photo of President Seth Bodnar, seated on the steps of Main Hall, which was captured by University of Montana photographer Todd Goodrich during the spring semester of 2019.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2019-04-10",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "This is a photo of President Seth Bodnar, seated on the steps of Main Hall, which was captured by University of Montana photographer Todd Goodrich during the spring semester of 2019.",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Todd Goodrich",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              }
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1242302455,
+              "parentid": 1154801516,
+              "timestamp": "2026-07-02T01:13:48Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=This is a photo of President Seth Bodnar, seated on the steps of Main Hall, which was captured by University of Montana photographer Todd Goodrich during the spring semester of 2019.}}\n|date=2019-04-10\n|source=This is a photo of President Seth Bodnar, seated on the steps of Main Hall, which was captured by University of Montana photographer Todd Goodrich during the spring semester of 2019. \n|author=Todd Goodrich\n|permission=\n|other versions={{Image extracted|1=Seth Bodnar - President at University of Montana (cropped).jpg}}\n}}\n\n=={{int:license-header}}==\n{{cc-by-sa-4.0}}\n\n[[Category:University of Montana]]"
+                }
+              }
+            }
+          ],
+          "categories": [
+            {
+              "ns": 14,
+              "title": "Category:CC-BY-SA-4.0"
+            },
+            {
+              "ns": 14,
+              "title": "Category:Images with extracted images"
+            },
+            {
+              "ns": 14,
+              "title": "Category:University of Montana"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
