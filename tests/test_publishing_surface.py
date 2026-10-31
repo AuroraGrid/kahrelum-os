@@ -1,4 +1,5 @@
 import hashlib
+import json
 import struct
 import unittest
 from pathlib import Path
@@ -11,13 +12,16 @@ class PublishingSurfaceTests(unittest.TestCase):
     def read(self, relative: str) -> str:
         return (ROOT / relative).read_text(encoding="utf-8")
 
-    def test_nfl_social_card_is_exact_open_graph_size(self):
-        for name in [
-            "kahrelum-sports-intelligence-nfl-social-card.png",
-            "kahrelum-sports-intelligence-social-card.png",
-        ]:
-            with self.subTest(name=name):
-                image = ROOT / "assets" / name
+    def test_every_canonical_page_has_a_distinct_exact_size_social_card(self):
+        manifest = json.loads(self.read("assets/social-manifest.json"))
+        cards = manifest["cards"]
+        self.assertEqual(manifest["schema"], "KAHRELUM_SOCIAL_CARDS_v1.0")
+        self.assertEqual(len(cards), 22)
+        self.assertEqual(len({card["route"] for card in cards}), len(cards))
+        self.assertEqual(len({card["image"] for card in cards}), len(cards))
+        for card in cards:
+            with self.subTest(route=card["route"]):
+                image = ROOT / card["image"]
                 with image.open("rb") as stream:
                     self.assertEqual(stream.read(8), b"\x89PNG\r\n\x1a\n")
                     length = struct.unpack(">I", stream.read(4))[0]
@@ -25,6 +29,12 @@ class PublishingSurfaceTests(unittest.TestCase):
                     self.assertGreaterEqual(length, 8)
                     width, height = struct.unpack(">II", stream.read(8))
                 self.assertEqual((width, height), (1200, 630))
+                page = self.read(card["sourceHtml"])
+                absolute_image = f'https://kahrelum.com/{card["image"]}'
+                self.assertIn(f'property="og:image" content="{absolute_image}"', page)
+                self.assertIn(f'name="twitter:image" content="{absolute_image}"', page)
+                for field in ("og:type", "og:url", "og:title", "og:description"):
+                    self.assertEqual(page.count(f'property="{field}"'), 1)
 
     def test_nfl_page_has_large_card_metadata(self):
         page = self.read("nfl/trades.html")
@@ -32,7 +42,7 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertIn('content="1200"', page)
         self.assertIn('content="630"', page)
         self.assertIn('name="twitter:card" content="summary_large_image"', page)
-        self.assertIn('/assets/kahrelum-sports-intelligence-nfl-social-card.png', page)
+        self.assertIn('/assets/social/og-nfl-trades.png', page)
 
     def test_every_sports_operations_route_has_large_social_preview(self):
         for relative in [
@@ -62,6 +72,10 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertNotIn('id="healthSummary"', page)
         self.assertNotIn('id="telemetrySource"', page)
         self.assertIn("reloads every 10 minutes", page)
+        self.assertIn('id="sourceCheckStatus"', page)
+        self.assertIn("raw.githubusercontent.com/AuroraGrid/kahrelum-os/main/nfl/refresh-status.json", page)
+        self.assertIn('candidate.schema!=="KAHRELUM_REFRESH_STATUS_v1.1"', page)
+        self.assertIn("remain review-gated", page)
 
     def test_editorial_pages_have_canonical_and_viewport(self):
         routes = {

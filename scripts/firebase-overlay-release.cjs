@@ -17,6 +17,32 @@ const PREVIEW_RECEIPT = path.join(STATE_DIR, 'preview-receipt.json');
 const PRODUCTION_RECEIPT = path.join(STATE_DIR, 'production-receipt.json');
 const FIREBASE_TOOLS_ROOT = process.env.FIREBASE_TOOLS_ROOT;
 
+const SOCIAL_CARD_FILES = [
+  'assets/social-manifest.json',
+  'assets/social/og-home.png',
+  'assets/social/og-assurance.png',
+  'assets/social/og-digital-id.png',
+  'assets/social/og-election-challenge.png',
+  'assets/social/og-election-lab.png',
+  'assets/social/og-forecasting.png',
+  'assets/social/og-insights-ai-bots-money-claims.png',
+  'assets/social/og-insights-election-forecast-custody.png',
+  'assets/social/og-insights-nfl-brier-accountability.png',
+  'assets/social/og-insights.png',
+  'assets/social/og-investigations.png',
+  'assets/social/og-nfl-analysis.png',
+  'assets/social/og-nfl-film-room.png',
+  'assets/social/og-nfl-trades.png',
+  'assets/social/og-nfl-weekly-brief.png',
+  'assets/social/og-one.png',
+  'assets/social/og-os.png',
+  'assets/social/og-sports-interest.png',
+  'assets/social/og-sports-mlb.png',
+  'assets/social/og-sports-nba.png',
+  'assets/social/og-sports-nhl.png',
+  'assets/social/og-sports.png',
+];
+
 const OVERLAY_FILES = [
   'divisions.css',
   'assurance.html',
@@ -66,6 +92,7 @@ const OVERLAY_FILES = [
   'sports-interest.html',
   'assets/kahrelum-sports-intelligence-nfl-social-card.png',
   'assets/kahrelum-sports-intelligence-social-card.png',
+  ...SOCIAL_CARD_FILES,
 ];
 
 const HTML_ROUTES = [
@@ -103,6 +130,7 @@ const RELEASE_PROFILES = {
       'election/senate-forecast-lock.json', 'election/senate-ratings-source.json',
       'election/current-projections.json', 'election/challenger-source-checks.json',
       'election/seat-projections.json',
+      'assets/social/og-election-challenge.png',
     ],
     sitemapRoutes: ['/election-challenge'],
     includeHomepage: false,
@@ -115,6 +143,10 @@ const RELEASE_PROFILES = {
       'nfl/forecast-ledger.json', 'nfl/deadline-audit.json', 'nfl/publishing.json',
       'sports-desk.css', 'sports-article.css', 'sports.html', 'sports/module-registry.json', 'nfl/film-room.html',
       'sports/nba.html', 'sports/mlb.html', 'sports/nhl.html',
+      'assets/social/og-sports.png', 'assets/social/og-nfl-trades.png',
+      'assets/social/og-nfl-analysis.png', 'assets/social/og-nfl-film-room.png',
+      'assets/social/og-sports-nba.png', 'assets/social/og-sports-mlb.png',
+      'assets/social/og-sports-nhl.png',
     ],
     sitemapRoutes: [
       '/sports', '/nfl/trades', '/nfl/analysis', '/nfl/film-room',
@@ -131,6 +163,7 @@ const RELEASE_PROFILES = {
       'insights/ai-bots-money-claims.html', 'sports-interest.html',
       'assets/kahrelum-sports-intelligence-nfl-social-card.png',
       'assets/kahrelum-sports-intelligence-social-card.png',
+      ...SOCIAL_CARD_FILES,
     ],
     sitemapRoutes: [
       '/sports', '/nfl/trades', '/nfl/film-room', '/sports/nba', '/sports/mlb',

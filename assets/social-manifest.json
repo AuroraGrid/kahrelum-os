@@ -1,0 +1,225 @@
+{
+  "schema": "KAHRELUM_SOCIAL_CARDS_v1.0",
+  "cards": [
+    {
+      "route": "/assurance",
+      "sourceHtml": "assurance.html",
+      "image": "assets/social/og-assurance.png",
+      "title": "AI & Agent Assurance | KAHRELUM",
+      "description": "Independent historical AI decision, agent risk, evidence and authority audits.",
+      "sha256": "65ba3704197863ebe7d05073c647ed02e865e55dc89a556a18bde1f42c65e060",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/digital-id",
+      "sourceHtml": "digital-id.html",
+      "image": "assets/social/og-digital-id.png",
+      "title": "Worldwide Digital Identity Watch | KAHRELUM",
+      "description": "Worldwide evidence tracker of digital IDs, national identity systems, digital wallets, biometric schemes and age-verification law.",
+      "sha256": "dca259ea608ae50b7ba4bf3eb7a495c0fb88b9dc5241429b405d2abdffaea75e",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/election-challenge",
+      "sourceHtml": "election-challenge.html",
+      "image": "assets/social/og-election-challenge.png",
+      "title": "2026 Election Forecast Challenge | KAHRELUM",
+      "description": "A source-linked, pre-election record of KAHRELUM forecasts and 14 numerical challengers, with original cutoffs, model editions and scoring limits preserved.",
+      "sha256": "ee2afb34ab25132ac80ea39de74ae4b91fb7711185b0e6a92285b9c1ec8eef73",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/election-lab",
+      "sourceHtml": "election-lab.html",
+      "image": "assets/social/og-election-lab.png",
+      "title": "KAHRELUM | Election Analysis Lab",
+      "description": "KAHRELUM election analysis lab: compare conditional coalition seat availability, inspect model uncertainty, browse verified ballot lists and audit frozen forecast sources.",
+      "sha256": "9b2faf31e40405cdd5b6c4090261f6b6223652ba5e6904457af94a185d9d5319",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/forecasting",
+      "sourceHtml": "forecasting.html",
+      "image": "assets/social/og-forecasting.png",
+      "title": "Forecasting & Intelligence | KAHRELUM",
+      "description": "Evidence-locked forecasting for elections, geopolitical risk, AI incidents, markets and sports, with transparent scoring and limitations.",
+      "sha256": "480e5aed142ba3aff1448810628b4987f2cb1d80e433d08546582ab53a97b564",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/",
+      "sourceHtml": "index.html",
+      "image": "assets/social/og-home.png",
+      "title": "KAHRELUM | AI Assurance, Investigations & Forecasting",
+      "description": "KAHRELUM unifies independent AI agent assurance, public-record investigations, evidence-locked forecasting and the developing KAHRELUM ONE assistant.",
+      "sha256": "edee3306be6a261632209c6b4a6355b37e74d5acdc62683bcb4cbdc7b13e8e60",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/insights/ai-bots-money-claims",
+      "sourceHtml": "insights/ai-bots-money-claims.html",
+      "image": "assets/social/og-insights-ai-bots-money-claims.png",
+      "title": "A Bot Can Work and the Money Pitch Can Still Fail | KAHRELUM",
+      "description": "An evidence-based guide to Grok-powered and other AI bots, agentic actions, earnings claims, trading promises, fees and financial-risk verification.",
+      "sha256": "4cddf0c9a27cff36f6f10aa383967194b2e4c232cf06a0cf1dc60199322fa387",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/insights/election-forecast-custody",
+      "sourceHtml": "insights/election-forecast-custody.html",
+      "image": "assets/social/og-insights-election-forecast-custody.png",
+      "title": "Keep the Election Monitor Alive\u2014and Its Lanes Separate | KAHRELUM",
+      "description": "Why official election counts, secondary relays, count-derived seats and KAHRELUM forecasts must remain distinct in a live monitor.",
+      "sha256": "39d474e905960b808dc09b17af457451b642a949dcd2375c71492a0e421c7293",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/insights/nfl-brier-accountability",
+      "sourceHtml": "insights/nfl-brier-accountability.html",
+      "image": "assets/social/og-insights-nfl-brier-accountability.png",
+      "title": "Three Brier Calculations That Still Do Not Count | KAHRELUM",
+      "description": "Why the Marvin Harrison Jr., Quenton Nelson and DeForest Buckner provisional Brier calculations remain excluded from certified KAHRELUM scoring.",
+      "sha256": "2e2a0f55191f023d7c56e0a4e91c8f59cfdff987a314a930d12c1132676cf9f6",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/insights",
+      "sourceHtml": "insights.html",
+      "image": "assets/social/og-insights.png",
+      "title": "Insights | KAHRELUM",
+      "description": "KAHRELUM articles on sports intelligence, election forecast custody, AI-agent accountability and money-claim verification.",
+      "sha256": "2e73f43b2197a5eeeed662de91695e304c6296b1cff248c3c1ce2b196c68c567",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/investigations",
+      "sourceHtml": "investigations.html",
+      "image": "assets/social/og-investigations.png",
+      "title": "Investigations & OSINT | KAHRELUM",
+      "description": "Independent open-source investigations into court records, corporate claims, digital policy and documented uncertainty.",
+      "sha256": "5382e61f4af3611489b5a636c556e8c057a377f1706b624760d36aecf8bb8e12",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/nfl/analysis",
+      "sourceHtml": "nfl/analysis.html",
+      "image": "assets/social/og-nfl-analysis.png",
+      "title": "NFL trade rumors have an evidence problem | KAHRELUM Sports Intelligence",
+      "description": "An original, source-attributed explanation of the differences between trade inquiries, player requests, insider reporting, and NFL transactions.",
+      "sha256": "c164ac577992cf47d40c040de1b9666d8233807d3133574d0b4ae6c1556cee3b",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/nfl/film-room",
+      "sourceHtml": "nfl/film-room.html",
+      "image": "assets/social/og-nfl-film-room.png",
+      "title": "NFL Film Room | KAHRELUM Sports Intelligence",
+      "description": "KAHRELUM NFL Film Room: a rights-safe, review-gated workstation for source-custodied clips, play-level observations and trade-context analysis.",
+      "sha256": "773a19b9ad91902afaef53938424e7cc92244561256a95ae81da9c9e82f45c97",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/nfl/trades",
+      "sourceHtml": "nfl/trades.html",
+      "image": "assets/social/og-nfl-trades.png",
+      "title": "NFL Trade Intelligence | KAHRELUM Sports Intelligence Desk",
+      "description": "Evidence-labeled NFL trade watch: official completed deals, reported inquiries, candidate research, provisional KAHRELUM trade probabilities and transparent forecast accountability.",
+      "sha256": "8e4455e8656c7c3f5e78da12c123230c907e5ef5e1aba016c8ddb1db223c3083",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/nfl/weekly-brief",
+      "sourceHtml": "nfl/weekly-brief.html",
+      "image": "assets/social/og-nfl-weekly-brief.png",
+      "title": "NFL Trade Intelligence Verified Brief | KAHRELUM",
+      "description": "KAHRELUM launch-week verified NFL trade brief: official transactions, reviewed source signals, provisional probabilities and forecast-custody limits.",
+      "sha256": "6471cc3423849fb3bce4e7eb78aa11a2a30dfc4b304ceb0542386bbc98f5f83d",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/one",
+      "sourceHtml": "one.html",
+      "image": "assets/social/og-one.png",
+      "title": "KAHRELUM ONE | KAHRELUM",
+      "description": "KAHRELUM ONE, a universal everyday AI assistant concept with optional evidence checks and accessible conversations.",
+      "sha256": "0bcd1799966955f6749d7b329e39316f70d01b93541386b664ee436643b7b6fc",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/os",
+      "sourceHtml": "os.html",
+      "image": "assets/social/og-os.png",
+      "title": "KAHRELUM OS & Method | KAHRELUM",
+      "description": "KAHRELUM OS evidence-to-decision architecture, source provenance, adversarial review and release limitations.",
+      "sha256": "0f3ef74b9b81bd9a073d75dd73cf19628815069c259de0bacea9c04fe8985abf",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/sports/mlb",
+      "sourceHtml": "sports/mlb.html",
+      "image": "assets/social/og-sports-mlb.png",
+      "title": "MLB Intelligence Module | KAHRELUM Sports",
+      "description": "KAHRELUM MLB intelligence expansion module. Template only; no operational sources, records or forecasts are published.",
+      "sha256": "3b124c1cd7c1ba9aaea4355ff3678746b332b86a3d3db942b0fda63df7e1a113",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/sports/nba",
+      "sourceHtml": "sports/nba.html",
+      "image": "assets/social/og-sports-nba.png",
+      "title": "NBA Intelligence Module | KAHRELUM Sports",
+      "description": "KAHRELUM NBA intelligence expansion module. Template only; no operational sources, records or forecasts are published.",
+      "sha256": "c850ab721d79e3e42d2205aa110878d510130d424f92abdd986ec2e4df658d0f",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/sports/nhl",
+      "sourceHtml": "sports/nhl.html",
+      "image": "assets/social/og-sports-nhl.png",
+      "title": "NHL Intelligence Module | KAHRELUM Sports",
+      "description": "KAHRELUM NHL intelligence expansion module. Template only; no operational sources, records or forecasts are published.",
+      "sha256": "b9b29bd5d65622c21e461fc7fbf1190da4d26e723635dcc1e1b865232e083e6c",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/sports-interest",
+      "sourceHtml": "sports-interest.html",
+      "image": "assets/social/og-sports-interest.png",
+      "title": "Sports Brief Interest Registration | KAHRELUM",
+      "description": "Register interest in the proposed KAHRELUM Sports Intelligence brief. No checkout, billing or subscription is active.",
+      "sha256": "1a4bd50f69ae9c054858288170f1d60d4d2f9565b7f617d2d6070d494f60036a",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/sports",
+      "sourceHtml": "sports.html",
+      "image": "assets/social/og-sports.png",
+      "title": "Sports Intelligence Desk | KAHRELUM",
+      "description": "KAHRELUM sports operations registry: an operational NFL trade desk and review-gated expansion modules for NFL film, NBA, MLB and NHL intelligence.",
+      "sha256": "8600d37aec1bcb53c6928fb3517da3d305a294707873a310a71b115ad1c0f145",
+      "width": 1200,
+      "height": 630
+    }
+  ]
+}
