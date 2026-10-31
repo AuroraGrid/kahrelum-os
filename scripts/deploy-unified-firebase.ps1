@@ -45,6 +45,7 @@ if ($credentialExists -xor $configRootExists) {
 $mode = "--plan"
 if ($Preview) { $mode = "--preview" }
 if ($Promote) { $mode = "--promote" }
+$nodeArguments = @('"' + $script + '"', $mode, "--profile", $Profile)
 
 if ($credentialExists) {
     $previousGoogleCredential = [Environment]::GetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "Process")
@@ -52,15 +53,15 @@ if ($credentialExists) {
     try {
         $env:GOOGLE_APPLICATION_CREDENTIALS = $publisherCredential
         $env:XDG_CONFIG_HOME = $publisherConfigRoot
-        & $node.Source $script $mode --profile $Profile
-        $overlayExitCode = $LASTEXITCODE
+        $nodeProcess = Start-Process -FilePath $node.Source -ArgumentList $nodeArguments -Wait -PassThru -NoNewWindow
+        $overlayExitCode = $nodeProcess.ExitCode
     } finally {
         if ($null -eq $previousGoogleCredential) { Remove-Item Env:\GOOGLE_APPLICATION_CREDENTIALS -ErrorAction SilentlyContinue } else { $env:GOOGLE_APPLICATION_CREDENTIALS = $previousGoogleCredential }
         if ($null -eq $previousXdgConfig) { Remove-Item Env:\XDG_CONFIG_HOME -ErrorAction SilentlyContinue } else { $env:XDG_CONFIG_HOME = $previousXdgConfig }
     }
 } else {
-    & $node.Source $script $mode --profile $Profile
-    $overlayExitCode = $LASTEXITCODE
+    $nodeProcess = Start-Process -FilePath $node.Source -ArgumentList $nodeArguments -Wait -PassThru -NoNewWindow
+    $overlayExitCode = $nodeProcess.ExitCode
 }
 if ($overlayExitCode -ne 0) {
     throw "Firebase overlay release failed with exit code $overlayExitCode."
