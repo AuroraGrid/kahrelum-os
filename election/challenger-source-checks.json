@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.0.0",
   "checkedAtUtc": "2026-10-31T01:31:21.6278986Z",
-  "status": "PARTIAL_SUCCESS_UNAVAILABLE_NUMBERS_REMAIN_UNPRICED",
-  "providersChecked": 15,
-  "challengersChecked": 14,
+  "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
+  "providersChecked": 11,
+  "challengersChecked": 10,
   "challengersWithAtLeastOneVerifiedControlProbability": 10,
-  "unpricedChallengers": 4,
-  "sortingRule": "KAHRELUM first; challengers with at least one verified control probability next; fully unpriced entries last.",
+  "unpricedChallengers": 0,
+  "sortingRule": "KAHRELUM first; only challengers with at least one verified chamber-control probability are included.",
   "records": [
     {
       "provider": "KAHRELUM",
@@ -161,62 +161,6 @@
       "sourceEdition": "Snapshot Oct. 30",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
       "note": "A 50-seat Senate result resolves Republican under the source's stated rule."
-    },
-    {
-      "provider": "The Economist",
-      "edition": "Forecast",
-      "sourceUrl": "https://www.economist.com/",
-      "houseDemocraticControlPct": null,
-      "senateDemocraticControlPct": null,
-      "houseDemocraticSeats": null,
-      "houseSeatType": null,
-      "senateDemocraticSeats": null,
-      "senateSeatType": null,
-      "sourceEdition": "Fresh check Oct. 31",
-      "retrievalStatus": "BLOCKED_BY_ROBOTS_NO_NUMERIC_ADMISSION",
-      "note": "No bypass attempted; no numerical top line admitted."
-    },
-    {
-      "provider": "Silver Bulletin",
-      "edition": "FLIPR",
-      "sourceUrl": "https://www.natesilver.net/p/nate-silver-2026-midterm-election-polls-model",
-      "houseDemocraticControlPct": null,
-      "senateDemocraticControlPct": null,
-      "houseDemocraticSeats": null,
-      "houseSeatType": null,
-      "senateDemocraticSeats": null,
-      "senateSeatType": null,
-      "sourceEdition": "Updated Oct. 30",
-      "retrievalStatus": "PUBLIC_EDITION_CONFIRMED_NUMERIC_TOPLINE_PAYWALLED",
-      "note": "Edition and qualitative direction were public; numerical top lines were not accessible without subscriber access."
-    },
-    {
-      "provider": "Sam Brown",
-      "edition": "Provisional map",
-      "sourceUrl": "https://x.com/sb4liberty",
-      "houseDemocraticControlPct": null,
-      "senateDemocraticControlPct": null,
-      "houseDemocraticSeats": null,
-      "houseSeatType": null,
-      "senateDemocraticSeats": null,
-      "senateSeatType": null,
-      "sourceEdition": "Fresh check Oct. 31",
-      "retrievalStatus": "HTTP_403_NO_AUTHENTICATED_POST",
-      "note": "Prior 227 D / 208 R secondary record remains unauthenticated and is not a probability."
-    },
-    {
-      "provider": "Jon Elder",
-      "edition": "Qualitative post",
-      "sourceUrl": "https://x.com/BlackLabelAdvsr",
-      "houseDemocraticControlPct": null,
-      "senateDemocraticControlPct": null,
-      "houseDemocraticSeats": null,
-      "houseSeatType": null,
-      "senateDemocraticSeats": null,
-      "senateSeatType": null,
-      "sourceEdition": "Fresh check Oct. 31",
-      "retrievalStatus": "HTTP_403_NO_AUTHENTICATED_POST",
-      "note": "Directional commentary only; no exact probability or authenticated post URL admitted."
     }
   ]
 }

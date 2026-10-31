@@ -59,12 +59,11 @@
 
   function renderChallengerTable() {
     const rows = challengerData.records.map((record) => {
-      const unpriced = record.houseDemocraticControlPct === null && record.senateDemocraticControlPct === null;
       const provider = record.provider === 'KAHRELUM' ? `<strong>${escapeHtml(record.provider)}</strong>` : `<a href="${escapeHtml(record.sourceUrl)}">${escapeHtml(record.provider)}</a>`;
-      return `<tr${unpriced ? ' class="source-unpriced"' : ''}><td data-label="Provider / edition">${provider} / ${escapeHtml(record.edition)}</td><td data-label="House D control">${formatControlProbability(record.houseDemocraticControlPct)}</td><td data-label="Senate D control">${formatControlProbability(record.senateDemocraticControlPct)}</td><td data-label="Publisher edition">${escapeHtml(record.sourceEdition)}</td><td data-label="Evidence note">${escapeHtml(record.note)} <span class="fine">${escapeHtml(record.retrievalStatus)}</span></td></tr>`;
+      return `<tr><td data-label="Provider / edition">${provider} / ${escapeHtml(record.edition)}</td><td data-label="House D control">${formatControlProbability(record.houseDemocraticControlPct)}</td><td data-label="Senate D control">${formatControlProbability(record.senateDemocraticControlPct)}</td><td data-label="Publisher edition">${escapeHtml(record.sourceEdition)}</td><td data-label="Evidence note">${escapeHtml(record.note)} <span class="fine">${escapeHtml(record.retrievalStatus)}</span></td></tr>`;
     }).join('');
     byId('challengerRows').innerHTML = rows;
-    byId('challengerCheckStatus').textContent = `Fresh source check: ${new Date(challengerData.checkedAtUtc).toLocaleString()} · ${challengerData.challengersWithAtLeastOneVerifiedControlProbability} of ${challengerData.challengersChecked} challengers have at least one verified control probability; ${challengerData.unpricedChallengers} fully unpriced entries are listed last.`;
+    byId('challengerCheckStatus').textContent = `Fresh source check: ${new Date(challengerData.checkedAtUtc).toLocaleString()} · ${challengerData.challengersWithAtLeastOneVerifiedControlProbability} numerical challengers included.`;
   }
 
   function buildRaces(houseLock, current) {
@@ -202,7 +201,7 @@
       currentProjectionData = current;
       challengerData = challengers;
       races = buildRaces(house,current);
-      if (races.length !== 470 || current.house.raceCount !== 435 || current.senate.raceCount !== 35 || current.coverage.racesWithSourceListedCandidates !== 470 || house.competitive_districts.length !== 81 || challengers.records.length !== 15 || challengers.unpricedChallengers !== 4) throw new Error('Fresh election projection did not pass race, candidate and challenger validation.');
+      if (races.length !== 470 || current.house.raceCount !== 435 || current.senate.raceCount !== 35 || current.coverage.racesWithSourceListedCandidates !== 470 || house.competitive_districts.length !== 81 || challengers.records.length !== 11 || challengers.challengersChecked !== 10 || challengers.unpricedChallengers !== 0 || challengers.records.some((record) => record.houseDemocraticControlPct === null && record.senateDemocraticControlPct === null)) throw new Error('Fresh election projection did not pass race, candidate and challenger validation.');
       byId('mapHouseCount').textContent = current.house.raceCount;
       byId('mapSenateCount').textContent = current.senate.raceCount;
       byId('mapCandidateCount').textContent = current.coverage.sourceListedCandidateRecords;

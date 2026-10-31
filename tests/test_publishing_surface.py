@@ -1,3 +1,4 @@
+import hashlib
 import struct
 import unittest
 from pathlib import Path
@@ -193,16 +194,20 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertEqual(seats["house"]["kahrelum"]["democraticSeats"], 228.02)
         self.assertAlmostEqual(seats["senate"]["kahrelum"]["democraticSeats"], 50.229989536494045)
         self.assertEqual(seats["comparisonStatus"], "DESCRIPTIVE_ONLY_UNMATCHED_CUTOFFS_AND_SEAT_TYPES")
-        self.assertEqual(challengers["challengersChecked"], 14)
+        canonical_challenger_bytes = self.read("election/challenger-source-checks.json").replace("\r\n", "\n").replace("\n", "\r\n").encode("utf-8")
+        self.assertEqual(seats["sourceObservationFileSha256"], hashlib.sha256(canonical_challenger_bytes).hexdigest())
+        self.assertEqual(challengers["status"], "VERIFIED_NUMERICAL_PROVIDERS_ONLY")
+        self.assertEqual(challengers["challengersChecked"], 10)
         self.assertEqual(challengers["challengersWithAtLeastOneVerifiedControlProbability"], 10)
-        self.assertEqual(challengers["unpricedChallengers"], 4)
-        self.assertEqual(len(challengers["records"]), 15)
+        self.assertEqual(challengers["unpricedChallengers"], 0)
+        self.assertEqual(len(challengers["records"]), 11)
         priced = [row for row in challengers["records"] if row["houseDemocraticControlPct"] is not None or row["senateDemocraticControlPct"] is not None]
         unpriced = [row for row in challengers["records"] if row["houseDemocraticControlPct"] is None and row["senateDemocraticControlPct"] is None]
-        self.assertEqual(challengers["records"], priced + unpriced)
+        self.assertEqual(challengers["records"], priced)
+        self.assertEqual(unpriced, [])
         ddhq = next(row for row in challengers["records"] if row["provider"] == "Decision Desk HQ")
         self.assertEqual((ddhq["houseDemocraticControlPct"], ddhq["senateDemocraticControlPct"]), (82.0, 62.0))
-        self.assertEqual([row["provider"] for row in unpriced], ["The Economist", "Silver Bulletin", "Sam Brown", "Jon Elder"])
+        self.assertFalse({"The Economist", "Silver Bulletin", "Sam Brown", "Jon Elder"} & {row["provider"] for row in challengers["records"]})
         for path in (
             "election-challenge-map.css",
             "election-challenge-map.js",
