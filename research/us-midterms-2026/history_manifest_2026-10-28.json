@@ -1,0 +1,53 @@
+{
+  "kind": "HISTORICAL_RETURNS_NOT_ELECTION_FORECASTS",
+  "created_utc": "2026-10-28T18:39:57.664544+00:00",
+  "inputs": [
+    {
+      "year": 2022,
+      "source_url": "https://api.electiondata.dev/v1/house-results/table/2022.csv",
+      "sha256": "677f8ab0d953d482172653e7d2b24257671e7d4bdacdbef22cc9970608088b02",
+      "raw_rows": 1349,
+      "house_races": 435,
+      "excluded": {},
+      "license": "CC0-1.0",
+      "provenance": "MIT Election Data + Science Lab via electiondata.dev"
+    },
+    {
+      "year": 2024,
+      "source_url": "https://api.electiondata.dev/v1/house-results/table/2024.csv",
+      "sha256": "6b23f0e24bb6f7d3c2c84d39ea4af66d2cb3a5d52c37bed7e5e20f3b9f10cd4a",
+      "raw_rows": 1353,
+      "house_races": 435,
+      "excluded": {
+        "non_state": 7
+      },
+      "license": "CC0-1.0",
+      "provenance": "MIT Election Data + Science Lab via electiondata.dev"
+    }
+  ],
+  "census_reference": "https://www.census.gov/programs-surveys/decennial-census/about/rdo/congressional-districts.html",
+  "changed_2026_states": [
+    "AL",
+    "CA",
+    "FL",
+    "LA",
+    "NC",
+    "OH",
+    "TN",
+    "TX",
+    "UT"
+  ],
+  "house_races": 435,
+  "readiness": {
+    "BLOCKED_REVIEW_REQUIRED": 211,
+    "HISTORY_ONLY_NOT_A_2026_FORECAST": 224
+  },
+  "review_flags": {
+    "MULTIPLE_SAME_PARTY_CANDIDATES": 25,
+    "RCV_FINAL_ROUND_REVIEW": 3,
+    "2026_MAP_REQUIRES_REBUILD": 173,
+    "NO_TWO_PARTY_CONTEST": 60,
+    "MISSING_VOTES": 4
+  },
+  "independence_note": "No rival model probabilities or seats imported"
+}
