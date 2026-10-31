@@ -1577,6 +1577,30 @@
       "status": "OPEN",
       "candidateId": "K26-017",
       "reviewNote": "User-supplied screenshot is not proof the attributed post exists; verify original Schefter X status or ESPN report before changing availability, forecast, or editorial claims."
+    },
+    {
+      "observationId": "OBS-50323095a31bcf80e1ad",
+      "queuedAt": "2026-10-31T13:13:05Z",
+      "reason": "ORIGINAL_SOURCE_VERIFIED_PENDING_EDITORIAL_APPROVAL",
+      "priority": "HIGH",
+      "status": "PUBLISHED",
+      "candidateId": "K26-017",
+      "reviewedAtUtc": "2026-10-31T13:13:05Z",
+      "reviewedBy": "KAHRELUM editorial review (GPT-6 source verification; owner-authorized)",
+      "evidenceClass": "REPORT",
+      "editorialDecision": {
+        "evidenceClass": "REPORT",
+        "headline": "ESPN sources: Colts open to trading Jonathan Taylor; multiple clubs in active talks",
+        "claim": "Adam Schefter and Ian Rapoport report Indianapolis is open to trading Jonathan Taylor and that talks are active with multiple clubs; reported interest includes Denver, Green Bay, Minnesota, New York Giants and Seattle. This is sourced reporting, not a completed trade, an agreed destination or an official club transaction.",
+        "sourceUrl": "https://www.espn.com/nfl/story/_/id/50323095/sources-colts-willing-trade-star-rb-jonathan-taylor",
+        "reviewedAtUtc": "2026-10-31T13:13:05Z",
+        "reviewedBy": "KAHRELUM editorial review (GPT-6 source verification; owner-authorized)",
+        "material": true
+      },
+      "publishedAtUtc": "2026-10-31T13:13:05Z",
+      "publicationAuthorizedBy": "KAHRELUM owner — explicit October 31, 2026 publication authorization in release request",
+      "originalSourceCheck": "ESPN article original metadata verified at 2026-10-31T11:15:00Z",
+      "historicalScreenshotPreserved": "OBS-7422769d896c947ccaaa"
     }
   ]
 }

@@ -24,3 +24,14 @@ At this intake the existing KAHRELUM public-forecast baseline is **9%**, labelle
 **Next verification:** find the exact original @AdamSchefter status URL and timestamp, matching ESPN publication or independent attributed confirmation; establish whether 'open' is a change in team stance or inference from other Colts trades. Record any contrary first-party position. The November 10 NFL/team transaction record alone determines eventual trade outcome.
 
 Research note, **not** an official Colts statement, reporter authentication, or trade confirmation.
+
+
+## Later independent-source addendum — 2026-10-31T13:13:05Z
+
+The original screenshot record above remains a distinct **UNVERIFIED USER-SUPPLIED SCREENSHOT**, with its original SHA-256, intake time, and source-not-recovered decision preserved. Its purported X post and timestamp are **not retroactively authenticated** by this addendum.
+
+A separate, original ESPN story was retrieved directly, returned HTTP 200, and provided the original metadata `DC.date.issued=2026-10-31T11:15:00Z` (07:15 EDT). Its byline identifies **Adam Schefter and Ian Rapoport**. The source reports that Indianapolis is now open to trading Jonathan Taylor and that talks with multiple clubs are active; Denver, Green Bay, Minnesota, the New York Giants, and Seattle were named as reported interested parties. Link: https://www.espn.com/nfl/story/_/id/50323095/sources-colts-willing-trade-star-rb-jonathan-taylor.
+
+**Editorial treatment:** a new, separately indexed REPORT source observation `OBS-50323095a31bcf80e1ad` was independently authenticated and owner-authorized for the KAHRELUM reviewed-news lane. This is **not** an official transaction, an accepted offer, or an agreed destination. ESPN also reports ownership's preference to retain Taylor and a high asking price; Taylor said October 29 that he had not requested a trade. Original KAHRELUM 9% / earlier ESPN 30% baselines and prospective scoring ledger remain unchanged, because this new observation has not been processed through a reproducible revised forecast model. The original screenshot custody remains historically unverified.
+
+Source-check at 2026-10-31T13:13:05Z; original-source publication at 2026-10-31T11:15:00Z; reviewed/public news record at 2026-10-31T13:13:05Z. Neither time substitutes for the independent 37-integration SourceGrid check time or for a Firebase production promotion time. A GitHub public editorial record is not equivalent to deployment at kahrelum.com.

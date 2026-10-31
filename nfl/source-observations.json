@@ -2784,6 +2784,46 @@
       "claimedAttribution": "Adam Schefter (as displayed in screenshot, NOT authenticated)",
       "screenshotSha256": "7422769d896c947ccaaabb0e1e29304778d5fb0264af01c20efb1f0233994e9e",
       "sourceRecoveryStatus": "NO_VERIFIED_X_STATUS_OR_ESPN_ORIGINAL"
+    },
+    {
+      "id": "OBS-50323095a31bcf80e1ad",
+      "sourceIntegrationId": "MANUAL_ESPN_ORIGINAL_REVIEW",
+      "sourceName": "ESPN original source: Adam Schefter and Ian Rapoport",
+      "title": "ESPN sources: Colts open to trading Jonathan Taylor; multiple clubs in active talks",
+      "originalUrl": "https://www.espn.com/nfl/story/_/id/50323095/sources-colts-willing-trade-star-rb-jonathan-taylor",
+      "normalizedUrl": "https://www.espn.com/nfl/story/_/id/50323095/sources-colts-willing-trade-star-rb-jonathan-taylor",
+      "sourcePublishedAt": "2026-10-31T11:15:00Z",
+      "sourceDate": null,
+      "firstObservedAt": "2026-10-31T13:13:05Z",
+      "lastObservedAt": "2026-10-31T13:13:05Z",
+      "evidenceClass": "REPORT",
+      "claimType": "ORIGINAL_SOURCED_REPORT_ACTIVE_TRADE_TALKS",
+      "reviewStatus": "PUBLISHED",
+      "publicationGate": "PUBLISHED_WITH_EXPLICIT_AUTHORIZATION",
+      "originalUrlPreserved": true,
+      "linkCustody": "ORIGINAL_ESPN_ARTICLE_HTTP_200_METADATA_VERIFIED",
+      "contentFingerprint": "50323095a31bcf80e1ad",
+      "candidateId": "K26-017",
+      "player": "Jonathan Taylor",
+      "team": "IND",
+      "reportedBy": [
+        "Adam Schefter",
+        "Ian Rapoport"
+      ],
+      "reportedInterestedClubs": [
+        "DEN",
+        "GB",
+        "MIN",
+        "NYG",
+        "SEA"
+      ],
+      "originalPublicationMetadata": "DC.date.issued: 2026-10-31T11:15:00Z",
+      "sourceCheckedAtUtc": "2026-10-31T13:13:05Z",
+      "reviewedAtUtc": "2026-10-31T13:13:05Z",
+      "publishedAtUtc": "2026-10-31T13:13:05Z",
+      "transactionConfirmed": false,
+      "linkedHistoricalScreenshotObservationId": "OBS-7422769d896c947ccaaa",
+      "editorialNotes": "Later independently verified ESPN article; does not retroactively authenticate the earlier screenshot/X post or its purported timestamp. No transaction/offer/destination verified. Ownership reportedly prefers to retain Taylor and is seeking substantial compensation. Prior 9% KAHRELUM and 30% ESPN baselines preserved."
     }
   ],
   "contradictions": []

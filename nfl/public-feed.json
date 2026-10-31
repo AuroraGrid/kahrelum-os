@@ -1,6 +1,38 @@
 {
   "schema": "KAHRELUM_PUBLIC_SPORTS_FEED_v1.0",
-  "publishedUpdates": [],
+  "publishedUpdates": [
+    {
+      "observationId": "OBS-50323095a31bcf80e1ad",
+      "evidenceClass": "REPORT",
+      "headline": "ESPN sources: Colts open to trading Jonathan Taylor; multiple clubs in active talks",
+      "claim": "Adam Schefter and Ian Rapoport report Indianapolis is open to trading Jonathan Taylor and that talks are active with multiple clubs; reported interest includes Denver, Green Bay, Minnesota, New York Giants and Seattle. This is sourced reporting, not a completed trade, an agreed destination or an official club transaction.",
+      "sourceUrl": "https://www.espn.com/nfl/story/_/id/50323095/sources-colts-willing-trade-star-rb-jonathan-taylor",
+      "sourcePublishedAt": "2026-10-31T11:15:00Z",
+      "reviewedAtUtc": "2026-10-31T13:13:05Z",
+      "reviewedBy": "KAHRELUM editorial review (GPT-6 source verification; owner-authorized)",
+      "publishedAtUtc": "2026-10-31T13:13:05Z",
+      "publicationAuthorizedBy": "KAHRELUM owner — explicit October 31, 2026 publication authorization in release request",
+      "automaticallyPublished": false,
+      "transactionConfirmed": false,
+      "originalScreenTipId": "OBS-7422769d896c947ccaaa"
+    }
+  ],
   "contradictions": [],
-  "materialAlerts": []
+  "materialAlerts": [
+    {
+      "observationId": "OBS-50323095a31bcf80e1ad",
+      "evidenceClass": "REPORT",
+      "headline": "ESPN sources: Colts open to trading Jonathan Taylor; multiple clubs in active talks",
+      "claim": "Adam Schefter and Ian Rapoport report Indianapolis is open to trading Jonathan Taylor and that talks are active with multiple clubs; reported interest includes Denver, Green Bay, Minnesota, New York Giants and Seattle. This is sourced reporting, not a completed trade, an agreed destination or an official club transaction.",
+      "sourceUrl": "https://www.espn.com/nfl/story/_/id/50323095/sources-colts-willing-trade-star-rb-jonathan-taylor",
+      "sourcePublishedAt": "2026-10-31T11:15:00Z",
+      "reviewedAtUtc": "2026-10-31T13:13:05Z",
+      "reviewedBy": "KAHRELUM editorial review (GPT-6 source verification; owner-authorized)",
+      "publishedAtUtc": "2026-10-31T13:13:05Z",
+      "publicationAuthorizedBy": "KAHRELUM owner — explicit October 31, 2026 publication authorization in release request",
+      "automaticallyPublished": false,
+      "transactionConfirmed": false,
+      "originalScreenTipId": "OBS-7422769d896c947ccaaa"
+    }
+  ]
 }
