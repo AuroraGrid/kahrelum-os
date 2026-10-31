@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-10-31T22:11:51.169Z",
+  "checkedAtUtc": "2026-10-31T22:53:06.165Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -142,16 +142,16 @@
       "provider": "Datum Signals",
       "edition": "Main",
       "sourceUrl": "https://datumsignals.com/",
-      "houseDemocraticControlPct": 71.0,
+      "houseDemocraticControlPct": 70.0,
       "senateDemocraticControlPct": 63.0,
       "houseDemocraticSeats": null,
       "houseSeatType": null,
       "senateDemocraticSeats": null,
       "senateSeatType": null,
-      "sourceEdition": "Updated Oct. 31, 4:01 PM UTC; rendered retrieval Oct. 31 22:11 UTC",
+      "sourceEdition": "Updated Oct. 31, 4:01 PM UTC; rendered retrieval Oct. 31 22:53 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "retrievedAtUtc": "2026-10-31T22:11:51.169Z",
-      "note": "The rendered first-party page displays 71% Democratic House control, increasing from the separately observed 70% reading at 21:00 UTC, while Democratic Senate control remains 63%. The page still labels the edition Oct. 31 at 4:01 PM UTC, so the 22:11 UTC rendered retrieval is the observation custody time. Direct raw HTTP custody remains blocked by TLS transport failure. Private rendered-observation receipt SHA256: 151818aabace37a9bd405226ac4f2ab163703ac884bd787c2f70a9dca7f59887. Displayed favored and toss-up race counts are not a compatible expected full-chamber seat total."
+      "retrievedAtUtc": "2026-10-31T22:53:06.165Z",
+      "note": "The rendered first-party page displays 70% Democratic House control, decreasing from the separately observed 71% reading at 22:41 UTC, while Democratic Senate control remains 63%. The page still labels the edition Oct. 31 at 4:01 PM UTC, so the 22:53 UTC rendered retrieval is the observation custody time. The 70% value was independently repeated twice during this check. Direct raw HTTP custody remains blocked by TLS transport failure. Private rendered-observation receipt SHA256: d76113e049ce787d6ad7eaf5e2a5f9e739b05f3edcf65baa37803a5d4716cff4. Displayed favored and toss-up race counts are not a compatible expected full-chamber seat total."
     },
     {
       "provider": "Fred Cornell independent",
