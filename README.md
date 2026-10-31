@@ -9,6 +9,8 @@
 
 Founder: [Hasan Raza Kazmi](https://github.com/AuroraGrid)
 
+**Recruiter portfolio:** [Selected research, methods, results, contributions, and limitations](./PROFESSIONAL_PORTFOLIO.md) — OSINT/public-source research, AI evaluation, threat and source monitoring, and evidence verification.
+
 **Canonical public site: https://kahrelum.com**
 
 **Commercial entry:** [Independent historical AI decision review — fixed scope and pricing](https://kahrelum.com/pilot#request). We check whether evidence and rules available *before* an agent action supported the decision, and return an inspectable case record. Public options: $750 for three historical cases / $2,500 for up to ten; operator-assisted, no production access or guaranteed performance, and existing recipient-specific quotes remain intact. [Commercial scope and handling](./PILOT.md).
