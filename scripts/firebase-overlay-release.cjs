@@ -473,7 +473,7 @@ function addBlob(desired, blobs, hostingPath, bytes) {
 
 function readRepositoryBytes(name) {
   const source = fs.readFileSync(path.join(ROOT, name));
-  if (path.extname(name).toLowerCase() === '.png') return source;
+  if (new Set(['.png', '.jpg', '.jpeg', '.webp', '.gif', '.avif', '.ico']).has(path.extname(name).toLowerCase())) return source;
   return Buffer.from(source.toString('utf8').replace(/\r?\n/g, '\r\n'), 'utf8');
 }
 
