@@ -58,7 +58,7 @@ const OVERLAY_FILES = [
   'election-challenge-map.js',
   'assets/us-states-map.json',
   'assets/us-states-map.SOURCE.md',
-  'election/candidate-portraits.json',
+  'election/candidate-portraits.json', 'election/comparator-admission.json',
   'election/house-forecast-lock.json',
   'election/senate-forecast-lock.json',
   'election/senate-ratings-source.json',
@@ -71,7 +71,7 @@ const OVERLAY_FILES = [
   'election-lab.html',
   'election-lab-app.js',
   'election-lab-roster.json',
-  'nfl/trades.html',
+  'nfl/trades.html', 'nfl/trades.js', 'nfl/desk-live.json', 'nfl/current-forecasts.json', 'nfl/player-portraits.json',
   'nfl/analysis.html',
   'nfl/trade-board.json',
   'nfl/sourcegrid.json',
@@ -128,6 +128,18 @@ const REQUIRED_REWRITES = {
 };
 const DIVISION_ROUTES = ['/assurance', '/investigations', '/forecasting', '/digital-id', '/one', '/os'];
 const RELEASE_PROFILES = {
+  'desk-upgrade': {
+    overlayFiles: [
+      'nfl/trades.html', 'nfl/trades.js', 'nfl/trade-board.json',
+      'nfl/desk-live.json', 'nfl/current-forecasts.json', 'nfl/player-portraits.json',
+      'nfl/forecast-ledger.json', 'nfl/deadline-audit.json',
+      'election-challenge.html', 'election-challenge-map.js', 'election-challenge-map.css',
+      'election/candidate-portraits.json', 'election/comparator-admission.json',
+      'election/current-projections.json',
+    ],
+    sitemapRoutes: ['/nfl/trades', '/election-challenge'],
+    includeHomepage: false,
+  },
   full: {
     overlayFiles: OVERLAY_FILES,
     sitemapRoutes: [
@@ -148,14 +160,14 @@ const RELEASE_PROFILES = {
       'assets/social/og-election-challenge.png',
       'assets/us-states-map.json',
       'assets/us-states-map.SOURCE.md',
-      'election/candidate-portraits.json',
+      'election/candidate-portraits.json', 'election/comparator-admission.json',
     ],
     sitemapRoutes: ['/election-challenge'],
     includeHomepage: false,
   },
   'sports-intelligence': {
     overlayFiles: [
-      'nfl/trades.html', 'nfl/analysis.html', 'nfl/sourcegrid.json', 'nfl/source-observations.json',
+      'nfl/trades.html', 'nfl/trades.js', 'nfl/desk-live.json', 'nfl/current-forecasts.json', 'nfl/player-portraits.json', 'nfl/trade-board.json', 'nfl/analysis.html', 'nfl/sourcegrid.json', 'nfl/source-observations.json',
       'nfl/review-queue.json', 'nfl/refresh-status.json', 'nfl/public-feed.json',
       'nfl/source-health.json',
       'nfl/forecast-ledger.json', 'nfl/deadline-audit.json', 'nfl/publishing.json',
@@ -175,7 +187,7 @@ const RELEASE_PROFILES = {
   publishing: {
     overlayFiles: [
       'forecasting.html', 'investigations.html', 'election-challenge.html', 'sports-desk.css', 'sports-article.css', 'sports.html', 'sports/module-registry.json',
-      'nfl/trades.html', 'nfl/analysis.html', 'nfl/film-room.html', 'sports/nba.html', 'sports/mlb.html',
+      'nfl/trades.html', 'nfl/trades.js', 'nfl/desk-live.json', 'nfl/current-forecasts.json', 'nfl/player-portraits.json', 'nfl/analysis.html', 'nfl/film-room.html', 'sports/nba.html', 'sports/mlb.html',
       'sports/nhl.html', 'nfl/weekly-brief.html', 'insights.css', 'insights.html',
       'insights/nfl-brier-accountability.html', 'insights/election-forecast-custody.html',
       'insights/ai-bots-money-claims.html', 'sports-interest.html',
@@ -512,7 +524,7 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
       nflData.sourceAccountability?.certifiedMeanBrier !== null) {
     fail('NFL trade board data integrity or forecast-certification boundary failed.');
   }
-  if (['full', 'sports-intelligence', 'publishing'].includes(profileName)) {
+  if (['full', 'sports-intelligence', 'publishing', 'desk-upgrade'].includes(profileName)) {
     const [sourcegrid, status, health, ledger, audit, publicFeed, publishing] = await Promise.all([
       '/nfl/sourcegrid.json', '/nfl/refresh-status.json', '/nfl/source-health.json',
       '/nfl/forecast-ledger.json', '/nfl/deadline-audit.json', '/nfl/public-feed.json', '/nfl/publishing.json',
@@ -538,6 +550,18 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     if ((publicFeed.materialAlerts || []).length > 3) fail('Priority alert limit exceeded.');
     if (audit.brierScore !== null && !(audit.eligibleForecasts > 0)) fail('Brier score lacks an eligible denominator.');
     if (publishing.publishingAuthorized !== false) fail('Third-party publishing must remain authorization-gated.');
+  }
+  if (['full', 'desk-upgrade', 'sports-intelligence'].includes(profileName)) {
+    const [current, desk, portraits] = await Promise.all([
+      '/nfl/current-forecasts.json', '/nfl/desk-live.json', '/nfl/player-portraits.json',
+    ].map(async (route) => JSON.parse((await fetchBytes(origin + route)).toString('utf8'))));
+    const expectedIds = new Set(nflData.candidates.map((row) => row.id));
+    if (current.schema !== 'KAHRELUM_CURRENT_NFL_FORECASTS_v1.0' ||
+        current.forecasts.length !== expectedIds.size ||
+        new Set(current.forecasts.map((row) => row.candidateId)).size !== expectedIds.size ||
+        current.forecasts.some((row) => !expectedIds.has(row.candidateId) || !Number.isFinite(row.probability) || row.probability < 0 || row.probability > 1)) fail('Every NFL candidate must have one valid current KAHRELUM estimate.');
+    if (desk.schema !== 'KAHRELUM_NFL_DESK_LIVE_v1.0' || desk.currentForecasts.forecasts.length !== expectedIds.size) fail('The live desk bundle is incomplete.');
+    if (portraits.schema !== 'KAHRELUM_PLAYER_PORTRAITS_v1.0' || new Set(portraits.records.map((row) => row.candidateId)).size !== expectedIds.size) fail('NFL player portrait coverage is incomplete.');
   }
   const one = (await fetchBytes(origin + '/one')).toString('utf8');
   if (!/in development/i.test(one)) fail('KAHRELUM ONE development warning is absent from the deployed page.');

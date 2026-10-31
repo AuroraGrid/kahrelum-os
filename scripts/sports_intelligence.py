@@ -21,6 +21,7 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
+import unicodedata
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -63,6 +64,7 @@ PATHS = {
     "audit": NFL / "deadline-audit.json",
     "publishing": NFL / "publishing.json",
     "health": NFL / "source-health.json",
+    "desk": NFL / "desk-live.json",
 }
 
 TEAM_SITES = {
@@ -325,11 +327,13 @@ class TransactionTableParser(html.parser.HTMLParser):
         self.cell_text = []
         self.cells = []
         self.rows = []
+        self.table_seen = False
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
         if tag == "table" and "d3-o-table" in attrs.get("class", ""):
             self.table_depth += 1
+            self.table_seen = True
         elif self.table_depth and tag == "table":
             self.table_depth += 1
         if self.table_depth and tag == "tr":
@@ -370,6 +374,7 @@ def parse_transaction_rows(content: bytes) -> list[dict]:
         output.append({
             "fromTeam": from_team, "toTeam": to_team, "player": player, "position": position,
             "transactionDate": date_text, "transactionTimestampUtc": iso(dt.datetime(2026, month, day, tzinfo=dt.timezone.utc)),
+            "timestampPrecision": "DATE_ONLY_TIMEZONE_UNSTATED",
             "action": action,
         })
     return output
@@ -377,7 +382,11 @@ def parse_transaction_rows(content: bytes) -> list[dict]:
 
 def parse_official_transactions(content: bytes, integration: dict, checked_at: str) -> list[dict]:
     output = []
-    for fields in parse_transaction_rows(content):
+    fields_rows = parse_transaction_rows(content)
+    requested_month = re.search(r"/trades/2026/(10|11)/?$", integration["url"])
+    if requested_month:
+        validate_transaction_calendar(content, requested_month.group(1), fields_rows)
+    for fields in fields_rows:
         date_text = fields["transactionDate"]
         player = fields["player"]
         from_team = fields["fromTeam"]
@@ -388,13 +397,21 @@ def parse_official_transactions(content: bytes, integration: dict, checked_at: s
             "id": "OBS-" + hashlib.sha256(identity.encode()).hexdigest()[:20],
             "sourceIntegrationId": integration["id"], "sourceName": integration["name"],
             "title": title, "originalUrl": integration["url"], "normalizedUrl": normalize_url(integration["url"]),
-            "sourcePublishedAt": fields["transactionTimestampUtc"], "firstObservedAt": checked_at, "lastObservedAt": checked_at,
+            "sourcePublishedAt": None, "sourceDate": f"2026-{int(date_text.split('/')[0]):02d}-{int(date_text.split('/')[1]):02d}", "firstObservedAt": checked_at, "lastObservedAt": checked_at,
             "evidenceClass": "FACT", "claimType": "OFFICIAL_COMPLETED_TRANSACTION",
             "reviewStatus": "REVIEW_REQUIRED", "publicationGate": "BLOCKED_PENDING_EDITOR_APPROVAL",
             "originalUrlPreserved": True, "linkCustody": "OFFICIAL_NFL_TRANSACTION_TABLE",
             "officialFields": fields,
         })
     if not output:
+        # A correctly headed November table can legitimately be empty. A fallback
+        # January page (the current site's behavior for an unopened month) cannot.
+        if integration["url"].rstrip("/").endswith("/2026/11"):
+            parser = TransactionTableParser()
+            parser.feed(content.decode("utf-8", errors="replace"))
+            if parser.table_seen:
+                validate_transaction_calendar(content, "11", [])
+                return []
         raise ValueError("official transaction table contained no traded rows")
     return output
 
@@ -517,6 +534,7 @@ def ingest(now: dt.datetime, fixture_dir: Path | None = None) -> int:
             if ledger.get("eligibleLocks"):
                 retrieve_official_outcomes(now, fixture_dir)
             run_audit(now)
+        generate_desk_live(now)
         return 0
 
     stored = read_json(PATHS["observations"])
@@ -529,6 +547,13 @@ def ingest(now: dt.datetime, fixture_dir: Path | None = None) -> int:
     successes = 0
     failures = []
     integrations = registry["operationalIntegrations"]
+    for integration in integrations:
+        if integration["id"] == "NFL_TRANSACTIONS":
+            active_url = f"https://www.nfl.com/transactions/league/trades/2026/{now.month:02d}"
+            if integration["url"] != active_url:
+                integration["url"] = active_url
+                registry["activeTransactionMonth"] = f"2026-{now.month:02d}"
+                write_json(PATHS["registry"], registry)
     if fixture_dir:
         results = [probe_integration(item, iso(now), fixture_dir) for item in integrations]
     else:
@@ -607,6 +632,7 @@ def ingest(now: dt.datetime, fixture_dir: Path | None = None) -> int:
     write_json(PATHS["status"], status)
     write_json(PATHS["health"], health)
     generate_publishing()
+    generate_desk_live(now)
     return 0 if successes else 2
 
 
@@ -679,16 +705,19 @@ def revise_forecast(args) -> None:
     event = next((x for x in ledger["eligibleLocks"] if x["eventId"] == args.event_id), None)
     if not event:
         raise ValueError("unknown event")
+    if any(row["eventId"] == args.event_id for row in ledger.get("outcomeRecords", [])):
+        raise ValueError("a resolved event cannot receive a prospective revision")
     probability = float(args.probability)
     if not 0 <= probability <= 1:
         raise ValueError("probability must be within 0..1")
     if not re.fullmatch(r"[0-9a-f]{40}", args.commit):
         raise ValueError("revision requires an immutable 40-character Git commit")
-    if parse_time(args.cutoff) <= parse_time(event["informationCutoffUtc"]):
-        raise ValueError("revision cutoff must be later than the original cutoff")
+    latest = max([event] + event["revisions"], key=lambda row: parse_time(row["publicationTimestampUtc"]))
+    if parse_time(args.cutoff) <= parse_time(latest["informationCutoffUtc"]):
+        raise ValueError("revision cutoff must be later than the latest admitted cutoff")
     revision_cutoff = parse_time(args.cutoff)
     revision_published = parse_time(args.published_at)
-    if revision_published < revision_cutoff or revision_published >= DEADLINE:
+    if revision_published < revision_cutoff or revision_published >= DEADLINE or revision_published <= parse_time(latest["publicationTimestampUtc"]):
         raise ValueError("revision cutoff and publication must be prospective and precede the deadline")
     previous = event["revisions"][-1]["recordHash"] if event["revisions"] else event["recordHash"]
     revision = chain_record({"version": len(event["revisions"]) + 2, "probability": probability, "informationCutoffUtc": iso(revision_cutoff), "publicationTimestampUtc": iso(revision_published), "gitCommit": args.commit, "rationale": args.rationale, "counterarguments": [args.counterargument]}, previous)
@@ -705,9 +734,24 @@ def resolve_forecast(args) -> None:
         raise ValueError("outcome already recorded; corrections require a new explicit audit record")
     if args.outcome not in {"0", "1"}:
         raise ValueError("outcome must be 0 or 1")
-    if not args.source.startswith("https://"):
-        raise ValueError("official outcome source must be HTTPS")
-    payload = {"eventId": args.event_id, "value": int(args.outcome), "official": True, "officialSource": args.source, "resolvedAtUtc": iso(parse_time(args.resolved_at))}
+    source = urllib.parse.urlsplit(args.source)
+    official_hosts = {urllib.parse.urlsplit(x).netloc.lower() for x in TEAM_SITES.values()} | {"www.nfl.com", "nfl.com"}
+    if source.scheme != "https" or source.netloc.lower() not in official_hosts:
+        raise ValueError("official outcome requires an NFL or registered team HTTPS source")
+    resolved_at = parse_time(args.resolved_at)
+    if resolved_at < AUDIT_AT:
+        raise ValueError("official resolution is gated to the scheduled audit")
+    audit = read_json(PATHS["audit"], {})
+    if {item.get("url") for item in audit.get("officialSources", [])} != set(OFFICIAL_AUDIT_URLS):
+        raise ValueError("manual boundary resolution requires complete official monthly-table custody first")
+    transaction_at = getattr(args, "transaction_at", None)
+    if not transaction_at:
+        raise ValueError("manual boundary resolution needs a reviewed exact official completion timestamp")
+    instant = parse_time(transaction_at)
+    expected = int(parse_time(event["publicationTimestampUtc"]) < instant <= DEADLINE)
+    if int(args.outcome) != expected or instant > resolved_at:
+        raise ValueError("outcome conflicts with the prospective event window")
+    payload = {"eventId": args.event_id, "value": expected, "official": True, "officialSource": args.source, "officialSourceSet": OFFICIAL_AUDIT_URLS, "resolvedAtUtc": iso(resolved_at), "resolutionMethod": "REVIEWED_OFFICIAL_EXACT_BOUNDARY_TIMESTAMP", "matchedOfficialTransactions": [{"player": event["player"], "transactionTimestampUtc": iso(instant), "timestampPrecision": "EXACT_VERIFIED", "officialSource": args.source}] if expected else [], "boundaryCompletionTimestampUtc": iso(instant)}
     previous = ledger["outcomeRecords"][-1]["recordHash"] if ledger["outcomeRecords"] else None
     ledger["outcomeRecords"].append(chain_record(payload, previous))
     write_json(PATHS["ledger"], ledger)
@@ -818,6 +862,66 @@ def empty_audit(status: str, limitation: str) -> dict:
     return {"schema": "KAHRELUM_NFL_DEADLINE_AUDIT_v1.0", "scheduledForUtc": iso(AUDIT_AT), "status": status, "officialOutcomeCutoffUtc": iso(DEADLINE), "confirmedTransactions": [], "eligibleForecasts": 0, "correctTrades": 0, "correctNonTrades": 0, "incorrect": 0, "brierScore": None, "allNoBaselineBrier": None, "excludedHistoricalForecasts": len(ledger["historicalExcluded"]), "limitations": [limitation]}
 
 
+def transaction_bounds(record: dict) -> tuple[dt.datetime, dt.datetime]:
+    """Never convert a date-only NFL entry into an invented completion time.
+
+    The monthly table does not state its timezone. Use the full civil-date
+    envelope (UTC+14 through UTC-12). An overlapping boundary needs a dated
+    first-party completion receipt; it cannot silently become YES or NO.
+    """
+    if record.get("timestampPrecision") == "EXACT_VERIFIED":
+        instant = parse_time(record["transactionTimestampUtc"])
+        return instant, instant
+    month, day = (int(value) for value in record["transactionDate"].split("/"))
+    date = dt.datetime(2026, month, day, tzinfo=dt.timezone.utc)
+    return date - dt.timedelta(hours=14), date + dt.timedelta(hours=36)
+
+
+def player_identity_key(value: str) -> str:
+    normalized = unicodedata.normalize("NFKD", value)
+    normalized = "".join(c for c in normalized if not unicodedata.combining(c))
+    normalized = re.sub(r"[^a-z0-9 ]", "", normalized.casefold())
+    words = normalized.split()
+    if words and words[-1] in {"jr", "sr", "ii", "iii", "iv", "v"}:
+        words.pop()
+    key = " ".join(words)
+    # Documented club-name aliases; never approximate unrelated names.
+    return {"tariq woolen": "riq woolen", "hollywood brown": "marquise brown", "joshua palmer": "josh palmer"}.get(key, key)
+
+
+class TransactionContextParser(html.parser.HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.heading = None
+        self.parts = []
+        self.headings = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag in {"h1", "h2", "h3", "h4", "h5", "h6", "caption"}:
+            self.heading = tag
+            self.parts = []
+
+    def handle_endtag(self, tag):
+        if tag == self.heading:
+            self.headings.append(" ".join(" ".join(self.parts).split()))
+            self.heading = None
+
+    def handle_data(self, data):
+        if self.heading:
+            self.parts.append(data)
+
+
+def validate_transaction_calendar(content: bytes, month: str, rows: list[dict]) -> None:
+    parser = TransactionContextParser()
+    parser.feed(content.decode("utf-8", errors="replace"))
+    expected = {"10": "October", "11": "November"}[month]
+    context = " ".join(parser.headings)
+    if not re.search(rf"\b{expected}\s+2026\b", context, re.I):
+        raise ValueError(f"official transaction headings do not establish {expected} 2026; fallback months are not complete records")
+    if any(int(row["transactionDate"].split("/")[0]) != int(month) for row in rows):
+        raise ValueError("official transaction rows do not match the requested month")
+
+
 def retrieve_official_outcomes(now: dt.datetime, fixture_dir: Path | None = None) -> None:
     """Resolve the cohort only after both official monthly tables are in custody."""
     if now < AUDIT_AT:
@@ -831,7 +935,12 @@ def retrieve_official_outcomes(now: dt.datetime, fixture_dir: Path | None = None
             month = url.rsplit("/", 1)[-1]
             fixture = fixture_dir / f"NFL_TRANSACTIONS_2026_{month}.html" if fixture_dir else None
             response = fetch(url, fixture)
+            parser = TransactionTableParser()
+            parser.feed(response["content"].decode("utf-8", errors="replace"))
+            if not parser.table_seen:
+                raise ValueError(f"official {month} transaction table was not recognized; an empty error page is not a complete record")
             rows = parse_transaction_rows(response["content"])
+            validate_transaction_calendar(response["content"], month, rows)
             # October must contain trades; November may legitimately contain none.
             if month == "10" and not rows:
                 raise ValueError("official October transaction table contained no traded rows")
@@ -844,14 +953,25 @@ def retrieve_official_outcomes(now: dt.datetime, fixture_dir: Path | None = None
         raise
 
     existing = {item["eventId"] for item in ledger.get("outcomeRecords", [])}
-    official_by_player = {}
+    official_by_player, unresolved = {}, []
     for record in records:
-        if parse_time(record["transactionTimestampUtc"]) <= DEADLINE:
-            official_by_player.setdefault(record["player"].casefold().strip(), []).append(record)
+        official_by_player.setdefault(player_identity_key(record["player"]), []).append(record)
     for event in ledger["eligibleLocks"]:
         if event["eventId"] in existing:
             continue
-        matches = official_by_player.get(event["player"].casefold().strip(), [])
+        matches, ambiguous = [], []
+        start = parse_time(event["publicationTimestampUtc"])
+        for record in official_by_player.get(player_identity_key(event["player"]), []):
+            earliest, latest = transaction_bounds(record)
+            if latest <= start or earliest > DEADLINE:
+                continue
+            if earliest > start and latest <= DEADLINE:
+                matches.append(record)
+            else:
+                ambiguous.append(record)
+        if ambiguous and not matches:
+            unresolved.append({"eventId": event["eventId"], "player": event["player"], "reason": "DATE_ONLY_RECORD_OVERLAPS_LOCK_OR_DEADLINE", "officialRecords": ambiguous})
+            continue
         matched_month = matches[0]["transactionDate"].split("/")[0] if matches else "11"
         source_url = OFFICIAL_AUDIT_URLS[1] if matched_month == "11" else OFFICIAL_AUDIT_URLS[0]
         payload = {
@@ -859,28 +979,45 @@ def retrieve_official_outcomes(now: dt.datetime, fixture_dir: Path | None = None
             "officialSource": source_url, "officialSourceSet": OFFICIAL_AUDIT_URLS,
             "officialRecordsRetrievedAtUtc": iso(now), "matchedOfficialTransactions": matches,
             "resolvedAtUtc": iso(now),
-            "resolutionMethod": "EXACT_PLAYER_MATCH_IN_COMPLETE_2026_OCTOBER_NOVEMBER_NFL_TRADE_TABLES",
+            "eventWindowStartUtc": event["publicationTimestampUtc"],
+            "eventWindowEndUtc": iso(DEADLINE),
+            "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
         }
         previous = ledger["outcomeRecords"][-1]["recordHash"] if ledger["outcomeRecords"] else None
         ledger["outcomeRecords"].append(chain_record(payload, previous))
     write_json(PATHS["ledger"], ledger)
     audit = read_json(PATHS["audit"], empty_audit("PENDING", "Official outcome scoring has not run."))
-    audit.update({"officialSources": retrieved, "officialRecordsRetrievedAtUtc": iso(now)})
+    audit.update({"officialSources": retrieved, "officialRecordsRetrievedAtUtc": iso(now), "unresolvedEvents": unresolved})
     write_json(PATHS["audit"], audit)
 
 
 def run_audit(now: dt.datetime) -> dict:
     ledger = read_json(PATHS["ledger"])
+    previous_audit = read_json(PATHS["audit"], {})
+    if now < AUDIT_AT:
+        audit = empty_audit("PENDING_SCHEDULED_AUDIT", "Outcomes are not scored before the documented official audit time.")
+        audit.update({"generatedAt": iso(now), "eligibleForecasts": len(ledger["eligibleLocks"])})
+        write_json(PATHS["audit"], audit)
+        return audit
     outcomes = {x["eventId"]: x for x in ledger.get("outcomeRecords", []) if x.get("official") is True}
     resolved = [x for x in ledger["eligibleLocks"] if x["eventId"] in outcomes]
-    if not resolved:
+    if not ledger["eligibleLocks"]:
         audit = empty_audit("INSUFFICIENT_ELIGIBLE_SAMPLE", "No independently resolved eligible prospective forecasts; Brier score remains N/A.")
         audit["generatedAt"] = iso(now)
         write_json(PATHS["audit"], audit)
         return audit
+    if len(resolved) != len(ledger["eligibleLocks"]):
+        audit = empty_audit("PENDING_COMPLETE_COHORT", "Every admitted forecast, including non-trades and uncertain event ordering, must be resolved before a cohort mean is reported.")
+        audit.update({"generatedAt": iso(now), "eligibleForecasts": len(ledger["eligibleLocks"]), "resolvedForecasts": len(resolved), "unresolvedEventIds": [x["eventId"] for x in ledger["eligibleLocks"] if x["eventId"] not in outcomes], "unresolvedEvents": previous_audit.get("unresolvedEvents", []), "officialSources": previous_audit.get("officialSources", [])})
+        write_json(PATHS["audit"], audit)
+        return audit
     errors, all_no, correct_yes, correct_no, incorrect = [], [], 0, 0, 0
     for event in resolved:
-        p = event["revisions"][-1]["probability"] if event["revisions"] else event["originalProbability"]
+        outcome = outcomes[event["eventId"]]
+        completed = outcome.get("matchedOfficialTransactions", [])
+        latest_safe_revision = min((transaction_bounds(record)[0] for record in completed), default=DEADLINE)
+        revisions = [r for r in event["revisions"] if parse_time(r["publicationTimestampUtc"]) < latest_safe_revision]
+        p = max(revisions, key=lambda row: parse_time(row["publicationTimestampUtc"]))["probability"] if revisions else event["originalProbability"]
         y = int(outcomes[event["eventId"]]["value"])
         errors.append((p - y) ** 2)
         all_no.append(float(y))
@@ -888,11 +1025,50 @@ def run_audit(now: dt.datetime) -> dict:
         if predicted == y and y == 1: correct_yes += 1
         elif predicted == y: correct_no += 1
         else: incorrect += 1
-    previous_audit = read_json(PATHS["audit"], {})
     audit = empty_audit("COMPLETE", "Scores cover only preregistered events resolved from the complete official October and November NFL trade tables.")
     audit.update({"generatedAt": iso(now), "eligibleForecasts": len(resolved), "correctTrades": correct_yes, "correctNonTrades": correct_no, "incorrect": incorrect, "brierScore": sum(errors) / len(errors), "allNoBaselineBrier": sum(all_no) / len(all_no), "confirmedTransactions": [record for outcome in outcomes.values() for record in outcome.get("matchedOfficialTransactions", [])], "officialSources": previous_audit.get("officialSources", []), "officialRecordsRetrievedAtUtc": previous_audit.get("officialRecordsRetrievedAtUtc")})
     write_json(PATHS["audit"], audit)
     return audit
+
+
+def generate_desk_live(now: dt.datetime) -> dict:
+    """Public discovery activity is attributed, never promoted into a fact.
+
+    One bundle refreshes the page without erasing filters or requiring another
+    Firebase deployment. Research/forecast dates do not advance on a poll.
+    """
+    board = read_json(NFL / "trade-board.json")
+    observations = read_json(PATHS["observations"], {"observations": []})
+    public = read_json(PATHS["public"], {"publishedUpdates": []})
+    ledger = read_json(PATHS["ledger"])
+    forecasts = read_json(NFL / "current-forecasts.json", {})
+    activity = []
+    for item in observations.get("observations", []):
+        if item.get("reviewStatus") in {"SUPERSEDED_PARSER_CORRECTION", "REJECTED"}:
+            continue
+        if item.get("claimType") == "GENERAL_NFL_DISCOVERY" and not re.search(r"trade|inquir|market|deadline|injur", item.get("title", ""), re.I):
+            continue
+        if not item.get("originalUrl", "").startswith("https://"):
+            continue
+        activity.append({key: item.get(key) for key in ("id", "title", "sourceName", "originalUrl", "sourcePublishedAt", "sourceDate", "firstObservedAt", "reviewStatus", "claimType", "linkCustody")})
+    activity.sort(key=lambda row: (row.get("firstObservedAt") or "", row["id"]), reverse=True)
+    compact_forecasts = None
+    if forecasts:
+        compact_forecasts = {key: forecasts.get(key) for key in ("schema", "generatedAtUtc", "coverage", "cohortId", "modelVersion", "calibrationStatus", "deadlineUtc", "publication")}
+        compact_forecasts["forecasts"] = [{key: row.get(key) for key in ("candidateId", "eventId", "player", "team", "probability", "probabilityPercent", "probabilityKind", "cohortEligible", "scoringStatus", "basis", "informationCutoffUtc", "lastSourceReviewAtUtc", "researchFreshness", "sensitivity", "change", "rationale", "sourceUrls", "counterarguments")} for row in forecasts["forecasts"]]
+    payload = {
+        "schema": "KAHRELUM_NFL_DESK_LIVE_v1.0", "generatedAtUtc": iso(now),
+        "sourceStatus": read_json(PATHS["status"]), "board": board,
+        "currentForecasts": compact_forecasts, "activity": activity[:30],
+        "publishedUpdates": public.get("publishedUpdates", [])[:10],
+        "latestEditorialPublicationAt": max((item.get("publishedAtUtc", item.get("publishedAt", "")) for item in public.get("publishedUpdates", [])), default=None),
+        "contradictions": observations.get("contradictions", []),
+        "ledger": {"eligibleLocks": [{key: event[key] for key in ("eventId", "player", "originalProbability", "publicationTimestampUtc", "gitCommit")} for event in ledger.get("eligibleLocks", [])], "historicalExcluded": ledger.get("historicalExcluded", [])},
+        "audit": read_json(PATHS["audit"], empty_audit("PENDING", "Official outcomes remain pending.")),
+        "refreshPolicy": {"browserPollSeconds": 60, "requestedSourceIntervalMinutes": 5, "sourceScheduleIsBestEffort": True, "researchDatesChangeOnlyOnEvidenceReview": True},
+    }
+    write_json(PATHS["desk"], payload)
+    return payload
 
 
 def generate_publishing() -> None:
@@ -920,6 +1096,19 @@ def validate() -> None:
     assert len(health["sources"]) == len(registry["operationalIntegrations"])
     assert {x["sourceIntegrationId"] for x in health["sources"]} == {x["id"] for x in registry["operationalIntegrations"]}
     assert len(board["candidates"]) >= 124 and len(board["deals"]) >= 7
+    current_path = NFL / "current-forecasts.json"
+    if current_path.exists():
+        current = read_json(current_path)
+        expected_ids = {row["id"] for row in board["candidates"]}
+        assert current["schema"] == "KAHRELUM_CURRENT_NFL_FORECASTS_v1.0"
+        assert len(current["forecasts"]) == len(expected_ids)
+        assert {row["candidateId"] for row in current["forecasts"]} == expected_ids
+        assert all(isinstance(row["probability"], (float, int)) and math.isfinite(row["probability"]) and 0 <= row["probability"] <= 1 for row in current["forecasts"])
+        if PATHS["desk"].exists():
+            desk = read_json(PATHS["desk"])
+            assert desk["schema"] == "KAHRELUM_NFL_DESK_LIVE_v1.0"
+            assert desk["currentForecasts"]["generatedAtUtc"] == current["generatedAtUtc"]
+            assert {row["candidateId"]: row["probability"] for row in desk["currentForecasts"]["forecasts"]} == {row["candidateId"]: row["probability"] for row in current["forecasts"]}
     expected_excluded = historical_excluded_records(board)
     assert len(ledger["historicalExcluded"]) == len(expected_excluded)
     assert {x["eventId"] for x in ledger["historicalExcluded"]} == {x["eventId"] for x in expected_excluded}
@@ -972,7 +1161,7 @@ def main() -> int:
     forecast_proposals = sub.add_parser("validate-forecast-proposals"); forecast_proposals.add_argument("--file", type=Path, required=True)
     lock = sub.add_parser("lock"); lock.add_argument("--event-id", required=True); lock.add_argument("--player", required=True); lock.add_argument("--probability", required=True); lock.add_argument("--question", required=True); lock.add_argument("--deadline", required=True); lock.add_argument("--cutoff", required=True); lock.add_argument("--published-at", required=True); lock.add_argument("--commit", required=True); lock.add_argument("--evidence", action="append", required=True); lock.add_argument("--counterargument", required=True)
     revise = sub.add_parser("revise"); revise.add_argument("--event-id", required=True); revise.add_argument("--probability", required=True); revise.add_argument("--cutoff", required=True); revise.add_argument("--published-at", required=True); revise.add_argument("--commit", required=True); revise.add_argument("--rationale", required=True); revise.add_argument("--counterargument", required=True)
-    resolve = sub.add_parser("resolve"); resolve.add_argument("--event-id", required=True); resolve.add_argument("--outcome", required=True); resolve.add_argument("--source", required=True); resolve.add_argument("--resolved-at", required=True)
+    resolve = sub.add_parser("resolve"); resolve.add_argument("--event-id", required=True); resolve.add_argument("--outcome", required=True); resolve.add_argument("--source", required=True); resolve.add_argument("--resolved-at", required=True); resolve.add_argument("--transaction-at", required=True)
     approve = sub.add_parser("approve"); approve.add_argument("--observation-id", required=True); approve.add_argument("--evidence-class", required=True); approve.add_argument("--headline", required=True); approve.add_argument("--claim", required=True); approve.add_argument("--source-url", required=True); approve.add_argument("--reviewed-at", required=True); approve.add_argument("--reviewed-by", required=True); approve.add_argument("--material", action="store_true")
     publish = sub.add_parser("publish"); publish.add_argument("--observation-id", required=True); publish.add_argument("--published-at", required=True); publish.add_argument("--authorized-by", required=True)
     args = parser.parse_args()
@@ -998,3 +1187,4 @@ if __name__ == "__main__":
     except Exception as error:
         print(f"ERROR: {type(error).__name__}: {error}", file=sys.stderr)
         raise SystemExit(1)
+

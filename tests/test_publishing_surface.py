@@ -79,27 +79,24 @@ class PublishingSurfaceTests(unittest.TestCase):
                 self.assertIn('name="twitter:image"', page)
                 self.assertIn('name="twitter:image:alt"', page)
 
-    def test_nfl_page_refreshes_every_ten_minutes_without_public_telemetry_panel(self):
+    def test_nfl_desk_refreshes_data_and_keeps_publication_dates_separate(self):
         page = self.read("nfl/trades.html")
+        script = self.read("nfl/trades.js")
         workflow = self.read(".github/workflows/sports-intelligence-sourcegrid.yml")
-        self.assertIn('<meta http-equiv="refresh" content="600">', page)
-        self.assertIn('cron: "*/10 * * * *"', workflow)
-        self.assertNotIn('id="command"', page)
-        self.assertNotIn('id="feedFreshness"', page)
-        self.assertNotIn('id="lastCheck"', page)
-        self.assertNotIn('id="lastPublished"', page)
-        self.assertNotIn('id="integrationCounts"', page)
-        self.assertNotIn('id="refreshBoundary"', page)
-        self.assertNotIn('id="healthSummary"', page)
-        self.assertNotIn('id="telemetrySource"', page)
-        self.assertIn("reloads every 10 minutes", page)
-        self.assertIn('id="sourceCheckStatus"', page)
-        self.assertIn("api.github.com/repos/AuroraGrid/kahrelum-os/contents/nfl/refresh-status.json", page)
-        self.assertIn("application/vnd.github.raw+json", page)
-        self.assertIn("raw.githubusercontent.com/AuroraGrid/kahrelum-os/main/nfl/refresh-status.json", page)
-        self.assertIn('candidate.schema!=="KAHRELUM_REFRESH_STATUS_v1.1"', page)
-        self.assertIn('newCount===1?" remains":"s remain"', page)
-        self.assertIn("review-gated; the published snapshot changes only after validation", page)
+        self.assertNotIn('http-equiv="refresh"', page)
+        self.assertIn('src="/nfl/trades.js?', page)
+        self.assertIn('cron: "3-58/5 * 31 10 *"', workflow)
+        self.assertIn('cron: "3-58/5 * 1-10 11 *"', workflow)
+        self.assertIn('nfl/forecast-ledger.json nfl/desk-live.json', workflow)
+        self.assertIn('id="activityRows"', page)
+        self.assertIn('id="refreshDesk"', page)
+        self.assertIn('currentForecasts', script)
+        self.assertIn('sourcePublishedAt', script)
+        self.assertIn('latestEditorialPublicationAt', script)
+        self.assertIn('Source headline · unreviewed', script)
+        self.assertIn('60000', script)
+        self.assertIn('document.hidden', script)
+        self.assertIn('deployed fallback', script)
 
     def test_editorial_pages_have_canonical_and_viewport(self):
         routes = {
@@ -229,7 +226,7 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertIn('id="seatComparisonChart"', page)
         self.assertIn("census.gov/data/tables/2020/dec/2020-apportionment-data.html", page)
         self.assertIn("Candidate and portrait boundary", page)
-        self.assertIn("photo pending identity and rights review", script)
+        self.assertIn("Photo not yet verified", script)
         self.assertIn("/election/current-projections.json", script)
         self.assertIn("/election/challenger-source-checks.json", script)
         self.assertIn("/assets/us-states-map.json", script)
@@ -280,7 +277,8 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertEqual(len(geography["locations"]), 50)
         self.assertEqual({item["id"] for item in geography["locations"]}, {item["state"].lower() for item in current["house"]["districts"]})
         self.assertEqual(portraits["schema"], "KAHRELUM_CANDIDATE_PORTRAITS_v1.0")
-        self.assertEqual(len(portraits["records"]), current["coverage"]["admittedPortraits"])
+        self.assertGreater(len(portraits["records"]), 300)
+        self.assertEqual(len({row["sourceCandidateId"] for row in portraits["records"]}), len(portraits["records"]))
         for path in (
             "election-challenge-map.css",
             "election-challenge-map.js",

@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "1.0.0",
+  "cutoffUtc": "2026-11-03T05:00:00Z",
+  "cutoffLocal": "2026-11-03 00:00 America/New_York (EST)",
+  "rosterCount": 14,
+  "providers": [
+    {
+      "id": "ddhq",
+      "provider": "Decision Desk HQ",
+      "primarySourceUrl": "https://votes.decisiondeskhq.com/forecast/2026",
+      "selectedEdition": "October 30, 2026"
+    },
+    {
+      "id": "99chambers",
+      "provider": "99chambers",
+      "primarySourceUrl": "https://99chambers.app/updates/2026-10-30",
+      "selectedEdition": "Horizon, October 30, 2026"
+    },
+    {
+      "id": "callthemap",
+      "provider": "CalltheMap",
+      "primarySourceUrl": "https://www.callthemap.com/house",
+      "selectedEdition": "October 30, 2026"
+    },
+    {
+      "id": "coyntoss",
+      "provider": "COYNTOSS",
+      "primarySourceUrl": "https://chasecoyne.com/house",
+      "selectedEdition": "House v0.25; Senate v0.53.1, October 30 release 3"
+    },
+    {
+      "id": "scrutinel",
+      "provider": "Scrutinel",
+      "primarySourceUrl": "https://scrutinel.com/",
+      "selectedEdition": "October 30, 2026, 11:24 PM EDT"
+    },
+    {
+      "id": "votescope",
+      "provider": "Vote-Scope",
+      "primarySourceUrl": "https://vote-scope.com/en/us/house/",
+      "selectedEdition": "October 30, 2026"
+    },
+    {
+      "id": "electindex",
+      "provider": "ElectIndex",
+      "primarySourceUrl": "https://electindex.com/forecasts/",
+      "selectedEdition": "Public chambers.csv modified October 31, 04:07:33 UTC"
+    },
+    {
+      "id": "datum",
+      "provider": "Datum Signals",
+      "primarySourceUrl": "https://datumsignals.com/",
+      "selectedEdition": "October 30, 2026, 16:01 UTC"
+    },
+    {
+      "id": "fred",
+      "provider": "Fred Cornell independent",
+      "primarySourceUrl": "https://fredcornell.com/us",
+      "selectedEdition": "October 30, 2026"
+    },
+    {
+      "id": "yale",
+      "provider": "Yale PLSC 2219 class model",
+      "primarySourceUrl": "https://kevinmdeluca.com/forecast/",
+      "selectedEdition": "Class model snapshot October 30, built 21:22:14 UTC"
+    },
+    {
+      "id": "dave",
+      "provider": "Dave Manuel",
+      "primarySourceUrl": "https://www.davemanuel.com/2026-midterm-forecast.php",
+      "selectedEdition": "October 30, 2026, 11:45 PM ET"
+    },
+    {
+      "id": "onpoint",
+      "provider": "On Point Politics",
+      "primarySourceUrl": "https://www.tpsielections.com/forecast",
+      "selectedEdition": "October 30, 2026"
+    },
+    {
+      "id": "votepredictor",
+      "provider": "VotePredictor",
+      "primarySourceUrl": "https://votepredictor.com/house",
+      "selectedEdition": "October 30, 2026"
+    },
+    {
+      "id": "midterm",
+      "provider": "Midterm Forecast",
+      "primarySourceUrl": "https://midtermforecast.com/",
+      "selectedEdition": "October 30, 2026, 10:40 PM ET"
+    }
+  ],
+  "freezeRules": [
+    "Capture a new final cohort; do not overwrite this October 31 cohort or the original KAHRELUM locks.",
+    "Retain all 14 providers and both chamber slots, including missing or excluded observations.",
+    "Verify each available chamber directly from the primary publisher with capture time, publisher edition and event rules.",
+    "Require 218 House and matched 51-seat caucus semantics for Senate; preserve independent categories and missing values.",
+    "Never use a post-cutoff page to backdate a pre-cutoff lock. A missed cutoff remains missed.",
+    "Record final public commit time and immutable source/manifest references before declaring admission."
+  ]
+}
