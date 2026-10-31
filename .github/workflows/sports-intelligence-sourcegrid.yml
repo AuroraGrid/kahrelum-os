@@ -3,8 +3,8 @@ name: Sports Intelligence SourceGrid
 on:
   workflow_dispatch:
   schedule:
-    # Off the top of the hour to reduce GitHub Actions schedule congestion.
-    - cron: "17 * * * *"
+    # Recheck credential-free sources every ten minutes during the deadline lifecycle.
+    - cron: "*/10 * * * *"
     # The script gates this annual cron to the 2026 audit lifecycle and remains fail-closed thereafter.
     - cron: "37 14 12 11 *"
 

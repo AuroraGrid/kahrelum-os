@@ -15,7 +15,7 @@ Status date: 2026-10-30. This is an operational boundary document, not a claim t
 
 ## Scheduling and truthful freshness
 
-`.github/workflows/sports-intelligence-sourcegrid.yml` runs at minute 17 each hour, avoiding the most congested top-of-hour period. It runs tests before network access, retries bounded transient HTTP responses (including HTTP 202) without treating them as success, records per-integration health in `nfl/source-health.json`, records aggregate success/degradation/failure in `nfl/refresh-status.json`, commits generated custody files, and fails visibly if every integration fails.
+`.github/workflows/sports-intelligence-sourcegrid.yml` requests a run every ten minutes (`*/10 * * * *`) during the deadline lifecycle. It runs tests before network access, retries bounded transient HTTP responses (including HTTP 202) without treating them as success, records per-integration health in `nfl/source-health.json`, records aggregate success/degradation/failure in `nfl/refresh-status.json`, commits generated custody files, and fails visibly if every integration fails. GitHub Actions scheduling is best-effort and may start later than the requested interval; the recorded completion time, not the cron expression, is the freshness authority.
 
 The public dashboard may read the newer v1.1 health/status schemas from the repository as operational telemetry only. Candidate claims, editorial decisions and forecasts continue to come from the exact guarded Firebase release; the telemetry fallback cannot publish a discovered claim.
 
