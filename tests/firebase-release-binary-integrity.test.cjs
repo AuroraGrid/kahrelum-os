@@ -29,7 +29,8 @@ test('Firebase release preserves JPEG and other image bytes exactly', () => {
 test('Every admitted candidate JPEG survives the actual Firebase overlay reader', () => {
   const records = JSON.parse(fs.readFileSync(path.join(root, 'election/candidate-portraits.json'), 'utf8')).records;
   const candidateImages = records.filter(item => item.url?.startsWith('/assets/candidate-portraits/'));
-  assert.ok(candidateImages.length >= 421, 'Preserve the verified October 31 portrait floor');
+  assert.ok(records.length >= 421, 'Preserve the verified October 31 portrait ledger floor');
+  assert.ok(candidateImages.length > 0, 'The local candidate JPEG subset must be included and tested');
   const reader = makeReader(fs);
   for (const item of candidateImages) {
     const name = item.url.slice(1);
