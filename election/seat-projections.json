@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "edition": "KAH-US-2026-20261031T040639Z with challenger source checks through 2026-10-31T13:51:11Z",
+  "edition": "KAH-US-2026-20261031T040639Z with challenger source checks through 2026-10-31T14:12:52Z",
   "comparisonStatus": "DESCRIPTIVE_ONLY_UNMATCHED_CUTOFFS_AND_SEAT_TYPES",
-  "sourceObservationFileSha256": "8bd619fc375b52ce7a4f47a646a3541a54516df8a5318e5cdbc9dc3f91d5bfa4",
+  "sourceObservationFileSha256": "13f5c9be244b90eea6d7d0dcd5a8993cbeb4398f229605d9be492e789c3ea173",
   "house": {
     "totalSeats": 435,
     "democraticControlThreshold": 218,
@@ -17,7 +17,7 @@
       {"provider":"KAHRELUM","democraticSeats":228.02,"seatType":"expected","edition":"Fresh run Oct. 31 04:06 UTC; ratings Oct. 23","sourceUrl":"/election-challenge"},
       {"provider":"Decision Desk HQ","democraticSeats":239,"seatType":"projected","edition":"Updated Oct. 30 2:39 PM","sourceUrl":"https://votes.decisiondeskhq.com/forecast/2026"},
       {"provider":"99chambers Horizon","democraticSeats":241.5,"seatType":"expected","edition":"Oct. 31 3:02 AM ET; retrieved 12:51 UTC","sourceUrl":"https://99chambers.app/updates/2026-10-31"},
-      {"provider":"CalltheMap","democraticSeats":235.8,"seatType":"expected","edition":"Forecast Oct. 30","sourceUrl":"https://www.callthemap.com/house"},
+      {"provider":"CalltheMap","democraticSeats":235.8,"seatType":"expected","edition":"Forecast Oct. 31; retrieved 14:12 UTC","sourceUrl":"https://www.callthemap.com/house"},
       {"provider":"COYNTOSS","democraticSeats":236.2,"seatType":"expected","edition":"Oct. 30 site; model Oct. 18","sourceUrl":"https://chasecoyne.com/house"},
       {"provider":"Scrutinel","democraticSeats":238,"seatType":"expected","edition":"Oct. 30 11:24 PM EDT","sourceUrl":"https://scrutinel.com/"},
       {"provider":"Vote-Scope","democraticSeats":239,"seatType":"projected; median 246","edition":"Updated Oct. 31; retrieved 12:51 UTC","sourceUrl":"https://vote-scope.com/en/us/house/"},

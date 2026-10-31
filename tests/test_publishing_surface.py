@@ -261,7 +261,7 @@ class PublishingSurfaceTests(unittest.TestCase):
         scrutinel = next(row for row in challengers["records"] if row["provider"] == "Scrutinel")
         self.assertEqual((scrutinel["houseDemocraticControlPct"], scrutinel["senateDemocraticControlPct"]), (93.0, 70.0))
         callthemap = next(row for row in challengers["records"] if row["provider"] == "CalltheMap")
-        self.assertEqual((callthemap["senateDemocraticControlPct"], callthemap["senateDemocraticSeats"]), (59.0, 51.3))
+        self.assertEqual((callthemap["houseDemocraticControlPct"], callthemap["senateDemocraticControlPct"], callthemap["senateDemocraticSeats"]), (83.0, 59.0, 51.3))
         new_numeric = {row["provider"]: row for row in challengers["records"] if row["provider"] in {"Dave Manuel", "On Point Politics", "VotePredictor", "Midterm Forecast"}}
         self.assertEqual(set(new_numeric), {"Dave Manuel", "On Point Politics", "VotePredictor", "Midterm Forecast"})
         self.assertEqual((new_numeric["Dave Manuel"]["houseDemocraticControlPct"], new_numeric["Dave Manuel"]["senateDemocraticControlPct"]), (94.0, 71.0))
