@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-10-31T04:08:29.459Z",
+  "checkedAtUtc": "2026-10-31T04:48:49.000Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -178,27 +178,27 @@
       "houseSeatType": "projected median",
       "senateDemocraticSeats": 52.0,
       "senateSeatType": "projected median including two aligned independents",
-      "sourceEdition": "Updated Oct. 30, 11:45 PM ET; retrieved Oct. 31 04:07 UTC",
+      "sourceEdition": "Updated Oct. 31, 12:45 AM ET; retrieved Oct. 31 04:48 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "retrievedAtUtc": "2026-10-31T04:07:23Z",
-      "rawSha256": "c3fa360cd048520dbf82896764e29ec2297457d8855f6928f7a66041b612d870",
-      "note": "Fresh first-party page check. The 11:45 PM ET edition retains 94% Democratic House control, 70% Democratic Senate control, 234 projected Democratic House seats and 52 projected Democratic-aligned Senate seats; the separate 3% neither-side Senate outcome is preserved."
+      "retrievedAtUtc": "2026-10-31T04:48:49Z",
+      "rawSha256": "301181f6740412cf3da53591297d257e9c51b336d383802eeacef750a32ab811",
+      "note": "Fresh first-party page check. The 12:45 AM ET edition retains 94% Democratic House control, 70% Democratic Senate control, 234 projected Democratic House seats and 52 projected Democratic-aligned Senate seats; the separate 3% neither-side Senate outcome is preserved."
     },
     {
       "provider": "On Point Politics",
       "edition": "2026 Forecast",
       "sourceUrl": "https://www.tpsielections.com/forecast",
       "houseDemocraticControlPct": 97.0,
-      "senateDemocraticControlPct": 90.0,
-      "houseDemocraticSeats": 249.0,
+      "senateDemocraticControlPct": 85.0,
+      "houseDemocraticSeats": 252.0,
       "houseSeatType": "average",
-      "senateDemocraticSeats": 54.9,
+      "senateDemocraticSeats": 54.2,
       "senateSeatType": "average",
-      "sourceEdition": "Updated Oct. 30; retrieved Oct. 31 04:07 UTC",
+      "sourceEdition": "Updated Oct. 31; retrieved Oct. 31 04:48 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "retrievedAtUtc": "2026-10-31T04:07:23Z",
-      "rawSha256": "6f2bb0eb441182e0cd8b6e7438172be1045c47ffb233479e1c04f7aa1f127b4d",
-      "note": "First-party index reports 2,000 simulated elections. The current edition reports 97% Democratic House control, 90% Democratic Senate control, 249 average Democratic House seats and 54.9 average Democratic Senate seats."
+      "retrievedAtUtc": "2026-10-31T04:48:49Z",
+      "rawSha256": "dba288376076889a127ecd707083242676437f397f20313858116f41ceefc59a",
+      "note": "First-party page reports 2,000 simulated elections. Its detailed forecast-in-brief text reports 97% Democratic House control with 252 average Democratic House seats and 85% Democratic Senate control with 54.2 average Democratic Senate seats. The same edition also displays a 250-seat House summary and a separate 246D/189R favored-race map; those distinct displays are disclosed rather than treated as the average-seat statistic."
     },
     {
       "provider": "VotePredictor",

@@ -265,8 +265,8 @@ class PublishingSurfaceTests(unittest.TestCase):
         new_numeric = {row["provider"]: row for row in challengers["records"] if row["provider"] in {"Dave Manuel", "On Point Politics", "VotePredictor", "Midterm Forecast"}}
         self.assertEqual(set(new_numeric), {"Dave Manuel", "On Point Politics", "VotePredictor", "Midterm Forecast"})
         self.assertEqual((new_numeric["Dave Manuel"]["houseDemocraticControlPct"], new_numeric["Dave Manuel"]["senateDemocraticControlPct"]), (94.0, 70.0))
-        self.assertEqual((new_numeric["On Point Politics"]["houseDemocraticControlPct"], new_numeric["On Point Politics"]["senateDemocraticControlPct"]), (97.0, 90.0))
-        self.assertEqual((new_numeric["On Point Politics"]["houseDemocraticSeats"], new_numeric["On Point Politics"]["senateDemocraticSeats"]), (249.0, 54.9))
+        self.assertEqual((new_numeric["On Point Politics"]["houseDemocraticControlPct"], new_numeric["On Point Politics"]["senateDemocraticControlPct"]), (97.0, 85.0))
+        self.assertEqual((new_numeric["On Point Politics"]["houseDemocraticSeats"], new_numeric["On Point Politics"]["senateDemocraticSeats"]), (252.0, 54.2))
         self.assertEqual((new_numeric["VotePredictor"]["houseDemocraticControlPct"], new_numeric["VotePredictor"]["senateDemocraticControlPct"]), (76.0, None))
         self.assertEqual((new_numeric["Midterm Forecast"]["houseDemocraticControlPct"], new_numeric["Midterm Forecast"]["senateDemocraticControlPct"]), (91.0, 71.0))
         datum = next(row for row in challengers["records"] if row["provider"] == "Datum Signals")
