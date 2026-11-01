@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-11-01T15:37:47.3234833Z",
+  "checkedAtUtc": "2026-11-01T16:01:19.9605306Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -41,18 +41,21 @@
     {
       "provider": "99chambers",
       "edition": "Horizon",
-      "sourceUrl": "https://99chambers.app/updates/2026-10-31",
+      "sourceUrl": "https://99chambers.app/updates/2026-11-01",
       "houseDemocraticControlPct": 99.0,
       "senateDemocraticControlPct": 80.0,
-      "houseDemocraticSeats": 241.5,
+      "houseDemocraticSeats": 241.8,
       "houseSeatType": "expected",
       "senateDemocraticSeats": 52.6,
       "senateSeatType": "expected",
-      "sourceEdition": "Forecast as of Oct. 31; updated Oct. 31 3:02 AM ET; retrieved Oct. 31 12:51 UTC",
+      "sourceEdition": "Forecast as of Nov. 1; updated Nov. 1 2:02 AM ET; retrieved Nov. 1 16:01 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "retrievedAtUtc": "2026-10-31T12:51:39.578Z",
-      "rawSha256": "722e4b636835bf6ec9de3efec7125234f6a65ff4c7177ac2a3d606f84684780a",
-      "note": "Horizon values. The Oct. 31 edition moved House control from 98% to 99%, expected Democratic House seats from 241.3 to 241.5 and expected Democratic Senate seats from 52.5 to 52.6; Senate control remained 80%. Pulse remains a separate model edition at 97% House, 77% Senate, 243.4 expected Democratic House seats and 52.5 expected Democratic Senate seats."
+      "retrievedAtUtc": "2026-11-01T16:01:19.9605306Z",
+      "rawSha256": "611f9e035e24bd34c89b5e8a15706b4021b0e966e3b18e3cda8a003f43395012",
+      "directHttpStatus": 200,
+      "directResponseUtf8Bytes": 197077,
+      "custodyReceiptSha256": "aeb73a553ac1c0827c22d7215d73b4c77463b2204c72145cff6ad18c65c3a9c7",
+      "note": "Horizon values. The Nov. 1 edition retains 99% Democratic House control, 80% Democratic Senate control and 52.6 expected Democratic Senate seats while expected Democratic House seats move from 241.5 to 241.8. Pulse remains a distinct model edition at 97% House, 77% Senate, 243.5 expected Democratic House seats and 52.4 expected Democratic Senate seats. The complete first-party HTTP response hash and a selected-field custody receipt are preserved separately."
     },
     {
       "provider": "CalltheMap",
@@ -142,16 +145,17 @@
       "provider": "Datum Signals",
       "edition": "Main",
       "sourceUrl": "https://datumsignals.com/",
-      "houseDemocraticControlPct": 71.0,
-      "senateDemocraticControlPct": 63.0,
+      "houseDemocraticControlPct": 70.0,
+      "senateDemocraticControlPct": 64.0,
       "houseDemocraticSeats": null,
       "houseSeatType": null,
       "senateDemocraticSeats": null,
       "senateSeatType": null,
-      "sourceEdition": "Updated Oct. 31, 4:01 PM UTC; rendered retrieval Nov. 1 14:15 UTC",
+      "sourceEdition": "Updated Nov. 1, 4:01 PM UTC; rendered retrieval Nov. 1 16:01 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "retrievedAtUtc": "2026-11-01T14:15:00.122Z",
-      "note": "The rendered first-party page displays 71% Democratic House control, returning from the separately observed 70% reading admitted at 22:53 UTC on Oct. 31, while Democratic Senate control remains 63%. The page still labels the edition Oct. 31 at 4:01 PM UTC, so the Nov. 1 14:15 UTC rendered retrieval is the prospective observation custody time. The 71% value and displayed timestamp were independently repeated twice during this check. The isolated browser returned ERR_CONNECTION_RESET, direct raw HTTP remained blocked by TLS transport failure, and the Firecrawl connector transport failed; none of those failures were treated as source values. Private rendered-observation receipt SHA256: de1e10c26a4bdcd88625d710ccf110b59d5a865c525070348531117c9497e274. Displayed favored and toss-up race counts are not a compatible expected full-chamber seat total."
+      "retrievedAtUtc": "2026-11-01T16:01:19.9605306Z",
+      "custodyReceiptSha256": "f5d5ac4b4857ca230fbea1a0b1cefa1539623904ee5a7c3d5432a51b612b1647",
+      "note": "The rendered first-party Nov. 1 4:01 PM UTC edition displays 70% Democratic House control and 64% Democratic Senate control, moving from the separately admitted 71% House and 63% Senate observation retrieved at 14:15 UTC. The update label and numerical fields were independently repeated after 16:01 UTC, so the prospective custody time is not backdated. Direct raw HTTP remained blocked by TLS transport failure and supplied no source values. Private rendered-observation receipt SHA256: f5d5ac4b4857ca230fbea1a0b1cefa1539623904ee5a7c3d5432a51b612b1647. Displayed favored and toss-up race counts are not compatible expected full-chamber seat totals."
     },
     {
       "provider": "Fred Cornell independent",
