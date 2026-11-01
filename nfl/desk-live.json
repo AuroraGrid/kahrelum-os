@@ -1,10 +1,10 @@
 {
   "schema": "KAHRELUM_NFL_DESK_LIVE_v1.0",
-  "generatedAtUtc": "2026-11-01T01:30:31Z",
+  "generatedAtUtc": "2026-11-01T05:50:06Z",
   "sourceStatus": {
     "schema": "KAHRELUM_REFRESH_STATUS_v1.1",
-    "lastAttemptAt": "2026-11-01T01:30:31Z",
-    "lastSuccessfulSourceCheckAt": "2026-11-01T01:30:31Z",
+    "lastAttemptAt": "2026-11-01T05:50:06Z",
+    "lastSuccessfulSourceCheckAt": "2026-11-01T05:50:06Z",
     "lastPublishedUpdateAt": "2026-10-31T13:13:05Z",
     "feedFreshness": "DEGRADED",
     "monitoringState": "DEADLINE_WINDOW_OPEN",
@@ -12,8 +12,8 @@
     "sourcesAttempted": 37,
     "sourcesSucceeded": 36,
     "sourcesFailed": 1,
-    "observationsNew": 14,
-    "reviewQueueCount": 227,
+    "observationsNew": 8,
+    "reviewQueueCount": 235,
     "materialAlerts": [
       {
         "observationId": "OBS-50323095a31bcf80e1ad",
@@ -40,7 +40,7 @@
       }
     ],
     "truthBoundary": "Source checks and publication are separate. lastSuccessfulSourceCheckAt means at least one source succeeded; lastFullySuccessfulSourceCheckAt requires every registered operational source to succeed.",
-    "lastCompletedCheckAt": "2026-11-01T01:30:31Z",
+    "lastCompletedCheckAt": "2026-11-01T05:50:06Z",
     "lastFullySuccessfulSourceCheckAt": "2026-10-31T22:48:20Z",
     "duplicatesSuppressed": 3,
     "sourceFailureAlerts": [
@@ -48,7 +48,7 @@
         "sourceIntegrationId": "NFL_TRANSACTIONS",
         "status": "MATERIAL_SOURCE_FAILURE",
         "reason": "ValueError: official transaction headings do not establish November 2026; fallback months are not complete records",
-        "observedAtUtc": "2026-11-01T01:30:31Z"
+        "observedAtUtc": "2026-11-01T05:50:06Z"
       }
     ],
     "reviewProposalCount": 29,
@@ -6544,6 +6544,102 @@
   },
   "activity": [
     {
+      "id": "OBS-e99610375d479dee9ae7",
+      "title": "John Lynch peels back the curtains on how NFL trades come about - NBC Sports Bay Area & California",
+      "sourceName": "Google News NFL trade discovery",
+      "originalUrl": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPNzFpNk1LXy1PSk1oaTZaTHJrcHJqNTFjeUJLUHA2a3RpNDU1aVJEbVNoZlY2WTFEakt3WEhGRXF6MHhQWGozeWVnVkdMZVllekgwcUVYWklkTXowaXRoeU5lOG12NTExMkFUazlsNHN3WVhqOEpRUGhLSmFUci1WYTlwQnlXOFUxMzBDZUN3ZXAteUhMdmlMcm5UUHVMM3pxMUd0SlZhbVh1bkhL0gG0AUFVX3lxTE1nMFFzXzNKTkVfNHp6dktUYWF4TVRIRmVsV3pXclVyRjlxNjFxWHdpMVNoZ19lbGNwUmg5SWZUajU2dXBXWE1YOXJSMHM1Y043aFlyUmpubGZDZlFRa0NKZVBKTnpveWtPZXNqZlQ0ZzlCSGFVbzR0aHFRRFRuMktMWF82SzhGM2hNanVNSDVEeDhoYkpzSmpPeVBnYk1pbkJRQ2pqRUxwV0NwTnJkNjQtV0RZaQ?oc=5",
+      "sourcePublishedAt": "2026-11-01T04:00:00Z",
+      "sourceDate": null,
+      "firstObservedAt": "2026-11-01T05:50:06Z",
+      "reviewStatus": "REVIEW_REQUIRED",
+      "claimType": "GENERAL_NFL_DISCOVERY",
+      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
+    },
+    {
+      "id": "OBS-dfcc19963c79dd25d13c",
+      "title": "Bears Could Make Another Major Trade After Jeffery Simmons Move - Yahoo Sports",
+      "sourceName": "Google News NFL trade discovery",
+      "originalUrl": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQakdDWVdUU2VyVk0zTnhDRDZLb3FfQ2hWSEdqSl90dkVUQXFTZjE0M0VCSUNFMUNhRXAtVE1EY2JGb2otVzdtNWVaRFE2bGxMd3dkVzlEUmZoR0tQM0ItYTV1WkM1elE2bXp4NGdoSFI5ekdoV1R0Skd5YWN5d1k5UU9aZ00wY00?oc=5",
+      "sourcePublishedAt": "2026-10-31T23:05:01Z",
+      "sourceDate": null,
+      "firstObservedAt": "2026-11-01T05:50:06Z",
+      "reviewStatus": "REVIEW_REQUIRED",
+      "claimType": "GENERAL_NFL_DISCOVERY",
+      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
+    },
+    {
+      "id": "OBS-8fa95ac3b38ecbaf1670",
+      "title": "Jonathan Taylor trade talks 'active and ongoing' as Colts now fielding calls on All-Pro running back: report - Fox News",
+      "sourceName": "Google News NFL trade discovery",
+      "originalUrl": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPY1B0ZXk4QTBydWFjOUxmd0FjT2JIZjdEYURtQ1RnTXNhRjcwbzFJN0tqNS1IMjdoZDBEWjVCTkxTXzdnRmFzWlBNbUZ3TFJoekJPWWp0VTNnczdKWlRhLVVCcjNCSy1jbW03NTNIekRkSm1yZGZUMXlwOFdVS3dRZ2E5UlR5dlhlZVU0VWtnUnRYSVd5Vm9nd1Y3VDNRMUNuVlFYaWJ0MEZ6MHJ6QnlLd0ZmMk1sZDhFcVI1Y2pOVHlqRFJzb0V4by1n?oc=5",
+      "sourcePublishedAt": "2026-10-31T22:27:36Z",
+      "sourceDate": null,
+      "firstObservedAt": "2026-11-01T05:50:06Z",
+      "reviewStatus": "REVIEW_REQUIRED",
+      "claimType": "POSSIBLE_REPORT_OF_MARKET_CONTACT",
+      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
+    },
+    {
+      "id": "OBS-7c0f599cb3df2d7d863f",
+      "title": "Jonathan Taylor Trade Rumors Make Fantasy Managers Nervous Now - Yahoo Sports",
+      "sourceName": "Google News NFL trade discovery",
+      "originalUrl": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQTUY2YnN5OC1CSDhwdUI2NXBieDBhQlVMR1VoR0lzMWJrdV92S1hfVXVRX3pDNEtPYmp2V1U1a281UFhXR0ZwNmFKenpoN3JsemNBRDhjSVZ0MG0yMENQbVM3cWRRUV9obFduX2ZTRk5BcC1aTHE0aERZS1ctVllqWkRvRlJnNkN3M3FjMkZB?oc=5",
+      "sourcePublishedAt": "2026-10-31T21:11:44Z",
+      "sourceDate": null,
+      "firstObservedAt": "2026-11-01T05:50:06Z",
+      "reviewStatus": "REVIEW_REQUIRED",
+      "claimType": "GENERAL_NFL_DISCOVERY",
+      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
+    },
+    {
+      "id": "OBS-58f73d7ea10db46e1102",
+      "title": "Nahshon Wright’s ‘frustrating’ Jets year could see him on the move at trade deadline",
+      "sourceName": "Yahoo Sports NFL RSS",
+      "originalUrl": "https://sports.yahoo.com/articles/nahshon-wright-frustrating-jets-could-004223466.html",
+      "sourcePublishedAt": "2026-11-01T00:42:23Z",
+      "sourceDate": null,
+      "firstObservedAt": "2026-11-01T05:50:06Z",
+      "reviewStatus": "REVIEW_REQUIRED",
+      "claimType": "GENERAL_NFL_DISCOVERY",
+      "linkCustody": "FEED_ATTRIBUTED_ARTICLE_URL"
+    },
+    {
+      "id": "OBS-11f357ae36405fd3f482",
+      "title": "CBS Sports Identifies Ravens' Biggest Need Ahead of NFL Trade Deadline - Yahoo Sports",
+      "sourceName": "Google News NFL trade discovery",
+      "originalUrl": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQTVNhRTlLUWlCLWNBdjJYT2pMQl94cTFhandzT1JXWmZJcnZ5Vm5US053OXFYbEpwbHB4ZlczODBZUnJKNXRyWWY2bXJuWG1QZzdpemtMa2xjYS1WUWRNaGNCT29JbzNoOVhWN1NONWlYUVJ1dS1MX25vd2xoMWtlR3lYWlFUVHJyS05kMmVn?oc=5",
+      "sourcePublishedAt": "2026-11-01T00:15:38Z",
+      "sourceDate": null,
+      "firstObservedAt": "2026-11-01T05:50:06Z",
+      "reviewStatus": "REVIEW_REQUIRED",
+      "claimType": "GENERAL_NFL_DISCOVERY",
+      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
+    },
+    {
+      "id": "OBS-0aefb68c8ba88cedafde",
+      "title": "NFL trade rumors might end Bengals, Jonathan Taylor idea - Bengals Wire",
+      "sourceName": "Google News NFL trade discovery",
+      "originalUrl": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQRllTcnA2SDI3Ml9OS3lBREdjdVB1T0tpN2J3SXR2TXRDYklCZTZkV1NPeXZrMUJWT2h4T0NXaVJFN3AwazNxVmZHV2xaQ2x4WnNkQ3ZmQ1VKSWh0TGNIS0VzZ0tqN1B0THJha2dLOHZYcnFVeG1pQ0tvc0pFdmw0VFpCb3FLRk95a1A0eGxsVHJjVmpxcW9XTFJwd3BwaG4tZWdmcXVjaENqUXJudnV4OFpVclJBV2M3b2J4X3BNTloxOC1qQWc?oc=5",
+      "sourcePublishedAt": "2026-10-31T14:43:00Z",
+      "sourceDate": null,
+      "firstObservedAt": "2026-11-01T05:50:06Z",
+      "reviewStatus": "REVIEW_REQUIRED",
+      "claimType": "GENERAL_NFL_DISCOVERY",
+      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
+    },
+    {
+      "id": "OBS-0317a1904104183823b3",
+      "title": "Chargers' Future Hall of Famer Named Among Most Likely Trade Targets for Jaguars - Yahoo Sports",
+      "sourceName": "Google News NFL trade discovery",
+      "originalUrl": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxObHRaYWZWdWRxX2FQWGVxSEtQenotN3VzWjdiRHphWWZ6dUhTaWNkczd0R1dBRTdJaXk0aVdsaWdLQ0ZCMWxNX1lJdkFCTHNvOXAzTzhYOTNib1RIUVN2S3l5eEhtU0MxU1lMcGFqOUktakVlUFhnTVozOXctd3JPNVhOeEVuWng4?oc=5",
+      "sourcePublishedAt": "2026-10-31T20:37:15Z",
+      "sourceDate": null,
+      "firstObservedAt": "2026-11-01T05:50:06Z",
+      "reviewStatus": "REVIEW_REQUIRED",
+      "claimType": "GENERAL_NFL_DISCOVERY",
+      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
+    },
+    {
       "id": "OBS-f90ae8413e11992f9898",
       "title": "Should the Vikings Trade for Jonathan Taylor?",
       "sourceName": "Yahoo Sports NFL RSS",
@@ -6801,102 +6897,6 @@
       "sourceName": "Google News NFL trade discovery",
       "originalUrl": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGSE1KUGcwT1lNWFlPYXotNFhfVk05emtVYlFMai1SNmRXXzZlazNWWENLRFFvLVdXZDBGbXZxalQ4ekJjTHNiN2JQRzFrYmpKWDNfdFRiT3BkU1VHRVk4YkM1WEhxYmFYX01kVm55YmZyc0ZSVXR1NUstX1VwLXc?oc=5",
       "sourcePublishedAt": "2026-10-31T20:34:42Z",
-      "sourceDate": null,
-      "firstObservedAt": "2026-10-31T22:48:20Z",
-      "reviewStatus": "REVIEW_REQUIRED",
-      "claimType": "GENERAL_NFL_DISCOVERY",
-      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
-    },
-    {
-      "id": "OBS-79679248f46a36cade07",
-      "title": "Could Seahawks Swing NFL Trade To Fix Glaring Offensive Issue? - roundtable.io",
-      "sourceName": "Google News NFL trade discovery",
-      "originalUrl": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNbkw4U1dUeXJBSGdLallhZGtWTmNyc3phbEYxUGFJbVRPTDVybmpSdElOUVdDa0kzZHB0UW5SV0pqR3lFOEk0LVJuUEdyRGRHaWpaTmFQQVAxSjZxQTk4Uk1CdVBGeXJJRlpmU2QxMVhFY1dqcExaRUdzVkJkN3RtMUFkb2NTVWhVR1NzaFVQaVdPTXh0Zkg5bm5Ec0lyLXFablc3aXRGLVI2bURP?oc=5",
-      "sourcePublishedAt": "2026-10-31T22:42:58Z",
-      "sourceDate": null,
-      "firstObservedAt": "2026-10-31T22:48:20Z",
-      "reviewStatus": "REVIEW_REQUIRED",
-      "claimType": "GENERAL_NFL_DISCOVERY",
-      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
-    },
-    {
-      "id": "OBS-6e3d8aee7a7e5a45dccf",
-      "title": "AFC Notes: Bills Trade Rumors, Aaron Glenn, Mason Taylor, Jets - NFLTradeRumors.co",
-      "sourceName": "Google News NFL trade discovery",
-      "originalUrl": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQX05LUXRFUFNUbzhFcG9BMzlUZTAybjctX0EtUlN2ZFdCRDd6S1FfQ1h4VVhEdEp6aUFsQW5jV3EtaXRPX2V6ejlHUWFZWUpBMk14Y0E3M0I1RDhnbERnSVZYWlFFeFFpcVFldTk0MFZmWWl3aTBCeFI0ajNHcC1rMDZpYWgwbHJQU3pWM2Vn?oc=5",
-      "sourcePublishedAt": "2026-10-31T21:27:30Z",
-      "sourceDate": null,
-      "firstObservedAt": "2026-10-31T22:48:20Z",
-      "reviewStatus": "REVIEW_REQUIRED",
-      "claimType": "GENERAL_NFL_DISCOVERY",
-      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
-    },
-    {
-      "id": "OBS-6d63e4574504089c317f",
-      "title": "Colts Urged To Target Rival’s $92 Million WR Before NFL Trade Deadline - Yahoo Sports",
-      "sourceName": "Google News NFL trade discovery",
-      "originalUrl": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPN2xqd2t0cmpfMS1Zd0s2eUFtZjRnaVhELS02aTRZbmU3WkVxNW5fazJYT1FzLUtEODV0SDBDbmxUN184SS1Rc3NwR2ZsM3VieFVuQXI2TDRpYk9tcnFBQVR6dzdXcnJZZTZEalNOZVlUY3ZYbUl4dUxuQ0d1REt5LXdn?oc=5",
-      "sourcePublishedAt": "2026-10-31T19:19:26Z",
-      "sourceDate": null,
-      "firstObservedAt": "2026-10-31T22:48:20Z",
-      "reviewStatus": "REVIEW_REQUIRED",
-      "claimType": "GENERAL_NFL_DISCOVERY",
-      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
-    },
-    {
-      "id": "OBS-5cc07ab77da4eb03180e",
-      "title": "Seahawks May Cut Ties With $50-Million 125-Game Starter by NFL Trade Deadline: Insider - Yahoo Sports",
-      "sourceName": "Google News NFL trade discovery",
-      "originalUrl": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1tVlJLeXRJclpxNk8yZG5zdEV1cGdHdjd6a25tbjhrcnZJVGl6SWpTeUt4OVRsQ0ktQkRpTGZKTTQ5akh2Y0dJM1VtWE9pdVA0bm1aN3dVR3dISjRpeTYtY1g3NDhfTUhKMklBcUt0VWRZTFdabF8zTW5LbzIydw?oc=5",
-      "sourcePublishedAt": "2026-10-31T19:38:50Z",
-      "sourceDate": null,
-      "firstObservedAt": "2026-10-31T22:48:20Z",
-      "reviewStatus": "REVIEW_REQUIRED",
-      "claimType": "GENERAL_NFL_DISCOVERY",
-      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
-    },
-    {
-      "id": "OBS-4efa00000b5aa3696928",
-      "title": "Minnesota Vikings Insider Hints at NFL Trade Deadline Upgrades - Yahoo Sports",
-      "sourceName": "Google News NFL trade discovery",
-      "originalUrl": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNS0hucWpTY2FZSld0T0dZODFnODhpdjJfSExtY1d1V2txLWxIRmxrcDdfOWJHNnZKTENUcnFka25lNmV1d2F3QW1DbENjN1lRUERBOHBpMWpMcTNjMm5HamNNdGg5bmxvQ2w5Q0dCWVNNWjRJbFVtd05oLWFsYVFEalc1Z2tCd0t3MGZCbg?oc=5",
-      "sourcePublishedAt": "2026-10-31T19:06:56Z",
-      "sourceDate": null,
-      "firstObservedAt": "2026-10-31T22:48:20Z",
-      "reviewStatus": "REVIEW_REQUIRED",
-      "claimType": "GENERAL_NFL_DISCOVERY",
-      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
-    },
-    {
-      "id": "OBS-4993bedc4901731c96c8",
-      "title": "NFL Insider Says the Browns Won't Trade Jerry Jeudy Now That the Playoffs Are Realistic - Yahoo Sports",
-      "sourceName": "Google News NFL trade discovery",
-      "originalUrl": "https://news.google.com/rss/articles/CBMigwFBVV95cUxORkVZMHIzSmtGdENQLTh2eFJGWDNUNFAwb0ljb0JRQ2dBVDdjcjdOZkJHTkRWWkZvcDB5NV9TTGpLSGNLOEFhRFpqRUZQVjBUakkxWmkzU0dlV1FsV04wckZadHBNT3kzZHgyUkpqWmRSSG1ZbC1Gd3VVMWR5NHhhTDVhdw?oc=5",
-      "sourcePublishedAt": "2026-10-31T20:44:11Z",
-      "sourceDate": null,
-      "firstObservedAt": "2026-10-31T22:48:20Z",
-      "reviewStatus": "REVIEW_REQUIRED",
-      "claimType": "GENERAL_NFL_DISCOVERY",
-      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
-    },
-    {
-      "id": "OBS-2c10bd1c93d446abe487",
-      "title": "Giants' Latest Trade Rumors Make One Thing Very Clear - Yahoo Sports",
-      "sourceName": "Google News NFL trade discovery",
-      "originalUrl": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOSENjYzVZOGdzdmdtVnhReHRpaFlLOGh0RXlSZV9saHFKS0hIRGFYY29sRjRsWDc1S19NN2lXVHZqNEFaYjc0amlVcDVlT3M2YXRSYVdKWldRLTFKVm5Ma3pOSUUwZkdWS3drb0s3QzY5clV1MG5HWGFsSHVoTHFyTDBhV0V5dw?oc=5",
-      "sourcePublishedAt": "2026-10-31T20:56:51Z",
-      "sourceDate": null,
-      "firstObservedAt": "2026-10-31T22:48:20Z",
-      "reviewStatus": "REVIEW_REQUIRED",
-      "claimType": "GENERAL_NFL_DISCOVERY",
-      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
-    },
-    {
-      "id": "OBS-12e1a6bc00b4aa7454db",
-      "title": "CBS Sports Identifies Ravens’ Biggest Need Ahead of NFL Trade Deadline - Athlon Sports",
-      "sourceName": "Google News NFL trade discovery",
-      "originalUrl": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPVHZlVl94VmphNU5mNWpLeDU2OGpRVnV4U05HRjJSWGRfamJMOUZUcW12VmtlT2lRMnd3S09HOXVidkVsMUZfLS0yMm45dnhxaHR3RUxEMlFkWFNubzRsWmlqdjJ1OVVJS2dpal93OGs2V0pBMDBOdTAyeU92X2U3RmFCM0Z0cnhYRER6RDJ3a1dIc0JHTFFJZW9CQkIxYTNQb1hj?oc=5",
-      "sourcePublishedAt": "2026-10-31T21:11:01Z",
       "sourceDate": null,
       "firstObservedAt": "2026-10-31T22:48:20Z",
       "reviewStatus": "REVIEW_REQUIRED",
