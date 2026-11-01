@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-11-01T04:17:42.5007750Z",
+  "checkedAtUtc": "2026-11-01T04:31:06.360Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -126,17 +126,17 @@
       "provider": "ElectIndex",
       "edition": "Main public model",
       "sourceUrl": "https://electindex.com/forecasts/",
-      "houseDemocraticControlPct": 91.7,
-      "senateDemocraticControlPct": 72.7,
+      "houseDemocraticControlPct": 91.8,
+      "senateDemocraticControlPct": 73.6,
       "houseDemocraticSeats": 247.5,
       "houseSeatType": "average",
-      "senateDemocraticSeats": 52.8,
+      "senateDemocraticSeats": 52.9,
       "senateSeatType": "average",
-      "sourceEdition": "Public chambers.csv commit ebb3619; locally retrieved Oct. 31 23:34 UTC",
+      "sourceEdition": "Public chambers.csv commit 7a09016; locally retrieved Nov. 1 04:31 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_DATA_FEED_VERIFIED",
-      "retrievedAtUtc": "2026-10-31T23:34:35.082Z",
-      "rawSha256": "ccbf4ab74f3dafed2e81deb649a14f0d884be70399f7814650bab2062649e531",
-      "note": "Values came from ElectIndex's first-party public GitHub chambers.csv at commit ebb3619d7d393664fb64176477df1ff24eaa7284. Relative to the prior admitted feed, Democratic House control moved from 92.3% to 91.7%, Democratic Senate control from 73.8% to 72.7%, and average Democratic House seats from 247.9 to 247.5; average Democratic Senate seats remained 52.8. Projected integer seats remained 244 House and 53 Senate. The source commit timestamp and HTTP Date were ahead of the local observer clock and are retained as source metadata, not used as retrieval custody."
+      "retrievedAtUtc": "2026-11-01T04:31:06.360Z",
+      "rawSha256": "5d54a00bb8ab7abb1b7aa13eca46aa68ca6524839e85bb2dc9ce9669770454a5",
+      "note": "Values came from ElectIndex's first-party public GitHub chambers.csv at commit 7a0901604964423a69d0d16bd19d54d94d964797. Relative to the prior admitted feed, Democratic House control moved from 91.7% to 91.8%, Democratic Senate control from 72.7% to 73.6%, and average Democratic Senate seats from 52.8 to 52.9; average Democratic House seats remained 247.5. Projected integer seats remained 244 House and 53 Senate. The source commit timestamp and HTTP Date were ahead of the local observer clock and are retained as source metadata, not used as retrieval custody."
     },
     {
       "provider": "Datum Signals",
