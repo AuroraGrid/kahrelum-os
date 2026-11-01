@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Scrutinel",
+  "sourceUrl": "https://scrutinel.com/",
+  "retrievedAtUtc": "2026-11-01T13:35:37.106Z",
+  "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED_WITH_INTERNAL_CONFLICT",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "custody": {
+    "representation": "FETCH_RETURNED_HTML_UTF8",
+    "sha256": "a3b8ad25e270fbbf67c72cf9ab3a3028f7b118f43c6639ed8912ef9a93664268",
+    "utf8Bytes": 1781017,
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false
+  },
+  "publisherEdition": "November 1, 2026, 5:23 AM EST",
+  "observations": {
+    "houseDemocraticControlPct": 92.0,
+    "houseDemocraticSeatsPrimaryCard": 237.0,
+    "houseDemocraticSeatsNarrativeCentralEstimate": 238.0,
+    "houseSeatType": "expected",
+    "senateDemocraticControlPctPrimaryCardAndNarrative": 69.0,
+    "senateDemocraticControlPctDistributionChart": 68.0,
+    "senateDemocraticSeats": 52.0,
+    "senateSeatType": "expected"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "senateDemocraticControlPctPrimaryCardAndNarrative": {"prior": 68.0, "current": 69.0},
+    "unchanged": ["houseDemocraticControlPct", "houseDemocraticSeatsPrimaryCard", "senateDemocraticSeats"]
+  },
+  "admissionNote": "The ledger uses the current primary chamber-control card and matching narrative value of 69%. The same source response separately displays 68% in its Senate distribution chart, so the conflict is preserved explicitly and is not averaged or silently resolved. The primary 237-seat House card and separate 238-seat narrative central estimate are likewise kept distinct."
+}
