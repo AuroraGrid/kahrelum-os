@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-10-31T23:34:35.082Z",
+  "checkedAtUtc": "2026-11-01T02:10:51.095Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -243,16 +243,16 @@
       "edition": "2026 Senate and House",
       "sourceUrl": "https://midtermforecast.com/",
       "houseDemocraticControlPct": 91.0,
-      "senateDemocraticControlPct": 71.0,
-      "houseDemocraticSeats": 235.0,
+      "senateDemocraticControlPct": 72.0,
+      "houseDemocraticSeats": 236.0,
       "houseSeatType": "median",
       "senateDemocraticSeats": 53.0,
       "senateSeatType": "median Democratic seats",
-      "sourceEdition": "Combined House and Senate page run Oct. 31, 7:39 PM ET; polls through Oct. 31; retrieved Oct. 31 23:33 UTC",
+      "sourceEdition": "Displayed combined House and Senate model run Oct. 31, 10:38 PM ET; polls through Oct. 31; retrieved Nov. 1 02:10 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "retrievedAtUtc": "2026-10-31T23:33:36.773Z",
-      "rawSha256": "49cd8e8b0eb3b696d8ea0d527f93cd644e0291deebf1ce84ea706d25df7a3634",
-      "note": "The Oct. 31 7:39 PM ET combined run retained 91% Democratic House control, 71% Democratic Senate control, a 235-seat Democratic House median and a 53-seat Democratic Senate median; the separate 1% chance of independents deciding Senate control remains distinct. House and Senate statistic types remain distinct from expected-seat measures."
+      "retrievedAtUtc": "2026-11-01T02:10:51.095Z",
+      "rawSha256": "ddadb59d68f99574522615f5736e04fe89955fa573c7f90e97897bd1988d1d3b",
+      "note": "The displayed Oct. 31 10:38 PM ET combined run retained 91% Democratic House control, increased Democratic Senate control from 71% to 72%, increased the Democratic House median from 235 to 236 seats, and retained a 53-seat Democratic Senate median. The separate 1% chance of independents deciding Senate control remains distinct. House and Senate statistic types remain distinct from expected-seat measures. The displayed source timestamp was ahead of the observer clock and is retained only as source metadata; the Nov. 1 02:10 UTC retrieval is the custody time."
     }
   ]
 }
