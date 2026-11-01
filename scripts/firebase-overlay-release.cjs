@@ -148,9 +148,9 @@ const REQUIRED_REWRITES = {
 const DIVISION_ROUTES = ['/assurance', '/investigations', '/forecasting', '/digital-id', '/one', '/os'];
 const RELEASE_PROFILES = {
   investigations: {
-    // Only the governed investigations document is replaced. Keep existing Firebase assets,
+    // Only the governed investigations document and its exact social card are replaced. Keep other assets,
     // APIs, forecast locks, CSS and homepage as currently deployed, even if local copies are stale.
-    overlayFiles: ['investigations.html'],
+    overlayFiles: ['investigations.html', 'assets/social/og-air01-v1.png'],
     // The existing live sitemap already lists this route. Preserve its exact hash.
     sitemapRoutes: [],
     includeHomepage: false,
@@ -528,7 +528,7 @@ async function buildOverlay(live, profileName) {
 
   const changedPaths = Object.keys(desired).filter((item) => live.fileMap[item] !== desired[item]).sort();
   if (profileName === 'investigations' &&
-      changedPaths.some((item) => item !== '/investigations.html')) {
+      changedPaths.some((item) => !['/investigations.html', '/assets/social/og-air01-v1.png'].includes(item))) {
     fail('Investigations release attempted to replace an unrelated live Firebase path.');
   }
   const removedPaths = Object.keys(live.fileMap).filter((item) => !(item in desired));

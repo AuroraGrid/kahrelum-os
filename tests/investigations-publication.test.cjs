@@ -42,11 +42,12 @@ test('scoped Firebase release cannot republish older elections, NFL, homepage or
   const wrapper = read('scripts/deploy-unified-firebase.ps1');
   const profile = script.match(/  investigations: \{([\s\S]*?)\n  \},/);
   assert.ok(profile, 'dedicated investigations release profile must exist');
-  assert.match(profile[1], /overlayFiles: \['investigations\.html'\]/);
+  assert.match(profile[1], /overlayFiles: \['investigations\.html', 'assets\/social\/og-air01-v1\.png'\]/);
   assert.match(profile[1], /sitemapRoutes: \[\]/);
   assert.match(profile[1], /includeHomepage: false/);
   assert.doesNotMatch(profile[1], /nfl\/|election\/|one\.html|forecasting\.html|index\.html|divisions\.css/);
-  assert.match(script, /changedPaths\.some\(\(item\) => item !== '\/investigations\.html'\)/);
+  assert.match(script, /changedPaths\.some/);
+  assert.match(script, /og-air01-v1\.png/);
   assert.match(wrapper, /ValidateSet\([^\n]*"investigations"\)/);
   assert.match(wrapper, /stale-directory deployment path has been removed/);
 });
@@ -76,7 +77,7 @@ test('investigations overlay preserves opaque live hashes and never fetches or r
   ] } };
   const result = await build(live, 'investigations');
   for (const [name, hash] of Object.entries(fileMap)) assert.equal(result.desired[name], hash);
-  assert.deepEqual(result.changedPaths, ['/investigations.html']);
+  assert.deepEqual(result.changedPaths, ['/assets/social/og-air01-v1.png', '/investigations.html']);
   assert.deepEqual(live.fileMap, fileMap);
 });
 
@@ -180,4 +181,18 @@ test('AIR-01 retains explicit uncertainty, sources and all original card bytes',
  const register=JSON.parse(read('research/investigations-2026/AIR-01/evidence-register-v1.json'));
  for(const source of register.sources.filter(s=>s.public)) assert.ok(card.includes(source.url));
  assert.equal(register.forecast,null);
+});
+
+test('AIR-01 social metadata uses the published versioned card with exact dimensions', () => {
+ const html=read('investigations.html');
+ const url='https://kahrelum.com/assets/social/og-air01-v1.png';
+ for(const prop of ['og:image','og:image:secure_url']) assert.ok(html.includes('property="'+prop+'" content="'+url+'"'));
+ assert.ok(html.includes('name="twitter:image" content="'+url+'"'));
+ assert.ok(html.includes('property="og:title" content="AIR-01: Learjet 60 N722BD Crash | KAHRELUM"'));
+ assert.ok(html.includes('CAUSE UNDETERMINED'));
+ const data=fs.readFileSync(path.join(root,'assets/social/og-air01-v1.png'));
+ assert.equal(data.readUInt32BE(16),1200);assert.equal(data.readUInt32BE(20),630);
+ const manifest=JSON.parse(read('assets/social-manifest.json')).cards.find(c=>c.route==='/investigations');
+ assert.equal(manifest.image,'assets/social/og-air01-v1.png');
+ assert.equal(manifest.sha256,require('node:crypto').createHash('sha256').update(data).digest('hex'));
 });
