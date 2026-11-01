@@ -151,7 +151,8 @@ const RELEASE_PROFILES = {
     // Only the governed investigations document is replaced. Keep existing Firebase assets,
     // APIs, forecast locks, CSS and homepage as currently deployed, even if local copies are stale.
     overlayFiles: ['investigations.html'],
-    sitemapRoutes: ['/investigations'],
+    // The existing live sitemap already lists this route. Preserve its exact hash.
+    sitemapRoutes: [],
     includeHomepage: false,
   },
   portraits: {
@@ -520,12 +521,14 @@ async function buildOverlay(live, profileName) {
     }
   }
 
-  const sitemap = (await verifiedLiveFile(live, '/sitemap.xml', '/sitemap.xml')).toString('utf8');
-  addBlob(desired, blobs, '/sitemap.xml', updateSitemap(sitemap, profile.sitemapRoutes));
+  if (profile.sitemapRoutes.length) {
+    const sitemap = (await verifiedLiveFile(live, '/sitemap.xml', '/sitemap.xml')).toString('utf8');
+    addBlob(desired, blobs, '/sitemap.xml', updateSitemap(sitemap, profile.sitemapRoutes));
+  }
 
   const changedPaths = Object.keys(desired).filter((item) => live.fileMap[item] !== desired[item]).sort();
   if (profileName === 'investigations' &&
-      changedPaths.some((item) => !['/investigations.html', '/sitemap.xml'].includes(item))) {
+      changedPaths.some((item) => item !== '/investigations.html')) {
     fail('Investigations release attempted to replace an unrelated live Firebase path.');
   }
   const removedPaths = Object.keys(live.fileMap).filter((item) => !(item in desired));

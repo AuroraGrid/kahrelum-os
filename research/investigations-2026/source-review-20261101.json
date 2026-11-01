@@ -1,0 +1,327 @@
+{
+  "schema": "KAHRELUM_INVESTIGATIONS_SOURCE_REVIEW_v1",
+  "checkedDate": "2026-11-01",
+  "release": "2026-11-01.2",
+  "historicCaseFamilies": 56,
+  "extensionLeads": 4,
+  "publicCaseRecords": 11,
+  "scope": "Targeted reconciliation; not an exhaustive recertification of all 56 historical families. Original master, two decision logs and forecast locks remain unchanged.",
+  "sources": [
+    {
+      "caseId": "CORP-04",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.419868/gov.uscourts.cand.419868.576.0.pdf",
+      "label": "Signed federal consent judgment, pp. 8–9 (public court-record copy)",
+      "displayedDateContext": "filed  2026-08-26 ",
+      "retrieval": {
+        "httpStatus": 200,
+        "finalUrl": "https://storage.courtlistener.com/recap/gov.uscourts.cand.419868/gov.uscourts.cand.419868.576.0.pdf",
+        "bytesReadUpTo1200000": 287168,
+        "contentType": "application/pdf"
+      },
+      "note": "Dates are labeled as published, filed, briefing, index or review in the HTML; an HTTP response alone does not authenticate publication date."
+    },
+    {
+      "caseId": "CORP-04",
+      "url": "https://apps.legislature.ky.gov/CommitteeDocuments/366/44471/09%2015%202026%206A.%20Duncan%20-%20Meta%20Settlement%20Legislative%20Briefing.pdf",
+      "label": "Kentucky AG legislative briefing on entered judgment",
+      "displayedDateContext": "briefing date  2026-09-15  (official filename; upload date unverified)",
+      "retrieval": {
+        "error": "HTTP Error 503: Service Unavailable"
+      },
+      "note": "Direct request restricted; official PDF text inspected using web extraction. September 15 briefing date is inferred from official filename; upload date unknown."
+    },
+    {
+      "caseId": "CORP-04",
+      "url": "https://www.tn.gov/attorneygeneral/news/2026/8/26/pr26-33.html",
+      "label": "Tennessee AG multistate announcement",
+      "displayedDateContext": " 2026-08-26  (automated retrieval restricted at recheck)",
+      "retrieval": {
+        "error": "HTTP Error 503: Service Unavailable"
+      },
+      "note": "Direct and open-page extraction restricted. Indexed official Tennessee announcement corroborates August 26, 2026, 08:35am and up to $17.1 billion. Historical lower-bound figure retained as the original register’s report, not a new cash-payment finding."
+    },
+    {
+      "caseId": "CORP-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm",
+      "label": "Meta SEC Exhibit 99.1",
+      "displayedDateContext": " 2026-10-21 ",
+      "retrieval": {
+        "httpStatus": 200,
+        "finalUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm",
+        "bytesReadUpTo1200000": 287676,
+        "contentType": "text/html"
+      },
+      "note": "Dates are labeled as published, filed, briefing, index or review in the HTML; an HTTP response alone does not authenticate publication date."
+    },
+    {
+      "caseId": "CYBER-02",
+      "url": "https://www.sonicwall.com/support/notices/product-notice-sma-1000-series-affected-by-multiple-vulnerabilities-snwlid-2026-0016/kA1VN000002AXmQ0AW",
+      "label": "SonicWall SNWLID-2026-0016",
+      "displayedDateContext": " 2026-09-01 ",
+      "retrieval": {
+        "httpStatus": 200,
+        "finalUrl": "https://www.sonicwall.com/support/notices/product-notice-sma-1000-series-affected-by-multiple-vulnerabilities-snwlid-2026-0016/kA1VN000002AXmQ0AW",
+        "bytesReadUpTo1200000": 1054,
+        "contentType": "text/html"
+      },
+      "note": "Direct request returns a JavaScript shell; full dated advisory and exploitation status independently inspected using web extraction."
+    },
+    {
+      "caseId": "CYBER-02",
+      "url": "https://www.sonicwall.com/support/notices/kA1VN000002QP3G0AW",
+      "label": "SonicWall SNWLID-2026-0017 (updated October 6)",
+      "displayedDateContext": " 2026-10-05 ",
+      "retrieval": {
+        "httpStatus": 200,
+        "finalUrl": "https://www.sonicwall.com/support/notices/kA1VN000002QP3G0AW",
+        "bytesReadUpTo1200000": 1053,
+        "contentType": "text/html"
+      },
+      "note": "Direct request returns a JavaScript shell; full dated advisory and exploitation status independently inspected using web extraction."
+    },
+    {
+      "caseId": "MKT-02",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+      "label": "Federal Reserve FOMC statement",
+      "displayedDateContext": " 2026-10-28 ",
+      "retrieval": {
+        "httpStatus": 200,
+        "finalUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+        "bytesReadUpTo1200000": 81941,
+        "contentType": "text/html"
+      },
+      "note": "Dates are labeled as published, filed, briefing, index or review in the HTML; an HTTP response alone does not authenticate publication date."
+    },
+    {
+      "caseId": "CORP-01",
+      "url": "https://www.nyc.gov/site/dca/workers/workersrights/doordash-delivery-workers.page",
+      "label": "NYC DCWP worker-payment instructions (October 29 update)",
+      "displayedDateContext": " 2026-10-29 ",
+      "retrieval": {
+        "httpStatus": 200,
+        "finalUrl": "https://www.nyc.gov/site/dca/workers/workersrights/doordash-delivery-workers.page",
+        "bytesReadUpTo1200000": 22176,
+        "contentType": "text/html;charset=UTF-8"
+      },
+      "note": "Dates are labeled as published, filed, briefing, index or review in the HTML; an HTTP response alone does not authenticate publication date."
+    },
+    {
+      "caseId": "CORP-01",
+      "url": "https://www.nyc.gov/site/dca/news/065-26/mayor-mamdani-wins-record-131-5-million-doordash-delivery-workers",
+      "label": "NYC settlement announcement",
+      "displayedDateContext": " 2026-09-22 ",
+      "retrieval": {
+        "httpStatus": 200,
+        "finalUrl": "https://www.nyc.gov/site/dca/news/065-26/mayor-mamdani-wins-record-131-5-million-doordash-delivery-workers",
+        "bytesReadUpTo1200000": 43662,
+        "contentType": "text/html;charset=UTF-8"
+      },
+      "note": "Dates are labeled as published, filed, briefing, index or review in the HTML; an HTTP response alone does not authenticate publication date."
+    },
+    {
+      "caseId": "CORP-01",
+      "url": "https://about.doordash.com/en-us/news/dcwp",
+      "label": "DoorDash's response and contrary intent assertion",
+      "displayedDateContext": " 2026-09-22 ",
+      "retrieval": {
+        "httpStatus": 200,
+        "finalUrl": "https://about.doordash.com/en-us/news/dcwp",
+        "bytesReadUpTo1200000": 400829,
+        "contentType": "text/html; charset=utf-8"
+      },
+      "note": "Dates are labeled as published, filed, briefing, index or review in the HTML; an HTTP response alone does not authenticate publication date."
+    },
+    {
+      "caseId": "CORP-02",
+      "url": "https://nmdoj.gov/press-release/the-new-mexico-department-of-justice-secures-another-landmark-victory-against-big-tech-with-historic-25-billion-penalty-against-facebook/",
+      "label": "New Mexico DOJ announced penalty",
+      "displayedDateContext": " 2026-10-21 ",
+      "retrieval": {
+        "httpStatus": 200,
+        "finalUrl": "https://nmdoj.gov/press-release/the-new-mexico-department-of-justice-secures-another-landmark-victory-against-big-tech-with-historic-25-billion-penalty-against-facebook/",
+        "bytesReadUpTo1200000": 160268,
+        "contentType": "text/html; charset=UTF-8"
+      },
+      "note": "Dates are labeled as published, filed, briefing, index or review in the HTML; an HTTP response alone does not authenticate publication date."
+    },
+    {
+      "caseId": "CORP-02",
+      "url": "https://nmcourts.gov/wp-content/uploads/2026/10/Findings-and-Conclusions-21-Oct-26-D101CV202100132.pdf",
+      "label": "New Mexico judiciary filed findings and judgment",
+      "displayedDateContext": " 2026-10-21 ",
+      "retrieval": {
+        "httpStatus": 200,
+        "finalUrl": "https://nmcourts.gov/wp-content/uploads/2026/10/Findings-and-Conclusions-21-Oct-26-D101CV202100132.pdf",
+        "bytesReadUpTo1200000": 1200000,
+        "contentType": "application/pdf"
+      },
+      "note": "Dates are labeled as published, filed, briefing, index or review in the HTML; an HTTP response alone does not authenticate publication date."
+    },
+    {
+      "caseId": "CORP-03",
+      "url": "https://nmdoj.gov/wp-content/uploads/D-101-CV-2023-02838-Meta-Judgement.pdf",
+      "label": "Filed youth-safety judgment, pp. 1, 4 and 45",
+      "displayedDateContext": "filed  2026-08-06 ",
+      "retrieval": {
+        "httpStatus": 200,
+        "finalUrl": "https://nmdoj.gov/wp-content/uploads/D-101-CV-2023-02838-Meta-Judgement.pdf",
+        "bytesReadUpTo1200000": 497028,
+        "contentType": "application/pdf"
+      },
+      "note": "Dates are labeled as published, filed, briefing, index or review in the HTML; an HTTP response alone does not authenticate publication date."
+    },
+    {
+      "caseId": "CORP-03",
+      "url": "https://nmdoj.gov/press-release/court-orders-meta-to-pay-942-million-and-overhaul-protections-for-children-on-facebook-and-instagram-in-landmark-new-mexico-ruling/",
+      "label": "New Mexico DOJ judgment announcement",
+      "displayedDateContext": "published  2026-08-07 ",
+      "retrieval": {
+        "httpStatus": 200,
+        "finalUrl": "https://nmdoj.gov/press-release/court-orders-meta-to-pay-942-million-and-overhaul-protections-for-children-on-facebook-and-instagram-in-landmark-new-mexico-ruling/",
+        "bytesReadUpTo1200000": 161533,
+        "contentType": "text/html; charset=UTF-8"
+      },
+      "note": "Dates are labeled as published, filed, briefing, index or review in the HTML; an HTTP response alone does not authenticate publication date."
+    },
+    {
+      "caseId": "COURT-05",
+      "url": "https://www.justice.gov/oip/available-documents-oip",
+      "label": "U.S. DOJ OIP FOIA Library, October 9 interim index",
+      "displayedDateContext": " 2026-10-09 ",
+      "retrieval": {
+        "httpStatus": 200,
+        "finalUrl": "https://www.justice.gov/oip/available-documents-oip",
+        "bytesReadUpTo1200000": 444567,
+        "contentType": "text/html; charset=UTF-8"
+      },
+      "note": "Dates are labeled as published, filed, briefing, index or review in the HTML; an HTTP response alone does not authenticate publication date."
+    },
+    {
+      "caseId": "COURT-01",
+      "url": "https://public.courts.in.gov/mycase/MVVM/ViewModels/Search/Search.tmpl.html",
+      "label": "Indiana official public case-search service (undated; checked October 31)",
+      "displayedDateContext": " 2026-10-31  (review/index date, not necessarily original publication)",
+      "retrieval": {
+        "httpStatus": 200,
+        "finalUrl": "https://public.courts.in.gov/mycase/MVVM/ViewModels/Search/Search.tmpl.html",
+        "bytesReadUpTo1200000": 25313,
+        "contentType": "text/html"
+      },
+      "note": "Dates are labeled as published, filed, briefing, index or review in the HTML; an HTTP response alone does not authenticate publication date."
+    },
+    {
+      "caseId": "CYBER-01",
+      "url": "https://www.atf.gov/news/press-releases/atf-responds-to-cybersecurity-incident",
+      "label": "ATF public incident announcement",
+      "displayedDateContext": " 2026-08-26 ",
+      "retrieval": {
+        "httpStatus": 200,
+        "finalUrl": "https://www.atf.gov/news/press-releases/atf-responds-to-cybersecurity-incident",
+        "bytesReadUpTo1200000": 135144,
+        "contentType": "text/html; charset=utf-8"
+      },
+      "note": "Dates are labeled as published, filed, briefing, index or review in the HTML; an HTTP response alone does not authenticate publication date."
+    },
+    {
+      "caseId": "AI-05",
+      "url": "https://www.neuralinktrials.com/trials/device-control",
+      "label": "Neuralink PRIME and CONVOY descriptions",
+      "displayedDateContext": "undated; checked  2026-11-01 ",
+      "retrieval": {
+        "httpStatus": 200,
+        "finalUrl": "https://www.neuralinktrials.com/trials/device-control",
+        "bytesReadUpTo1200000": 25703,
+        "contentType": "text/html; charset=utf-8"
+      },
+      "note": "Dates are labeled as published, filed, briefing, index or review in the HTML; an HTTP response alone does not authenticate publication date."
+    },
+    {
+      "caseId": "AI-05",
+      "url": "https://neuralink.com/updates/",
+      "label": "Neuralink dated research and engineering index",
+      "displayedDateContext": "live index checked  2026-11-01 ",
+      "retrieval": {
+        "httpStatus": 200,
+        "finalUrl": "https://neuralink.com/updates/",
+        "bytesReadUpTo1200000": 295747,
+        "contentType": "text/html"
+      },
+      "note": "Dates are labeled as published, filed, briefing, index or review in the HTML; an HTTP response alone does not authenticate publication date."
+    },
+    {
+      "caseId": "AI-05",
+      "url": "https://neuralink.com/updates/two-years-of-telepathy/",
+      "label": "Neuralink Two Years of Telepathy",
+      "displayedDateContext": " 2026-01-28 ",
+      "retrieval": {
+        "httpStatus": 200,
+        "finalUrl": "https://neuralink.com/updates/two-years-of-telepathy/",
+        "bytesReadUpTo1200000": 30229,
+        "contentType": "text/html"
+      },
+      "note": "Dates are labeled as published, filed, briefing, index or review in the HTML; an HTTP response alone does not authenticate publication date."
+    },
+    {
+      "caseId": "AI-05",
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT06429735",
+      "label": "PRIME registry data: no posted results; last update January 9, 2026",
+      "displayedDateContext": "checked  2026-11-01 ",
+      "retrieval": {
+        "httpStatus": 200,
+        "finalUrl": "https://clinicaltrials.gov/api/v2/studies/NCT06429735",
+        "bytesReadUpTo1200000": 6753,
+        "contentType": "application/json"
+      },
+      "note": "Official JSON retrieved directly and statusModule/hasResults inspected; web extractor unsupported. Review date is separate from registry last-update date."
+    },
+    {
+      "caseId": "AI-05",
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT06710626",
+      "label": "CONVOY registry data: no posted results; last update June 5, 2025",
+      "displayedDateContext": "checked  2026-11-01 ",
+      "retrieval": {
+        "httpStatus": 200,
+        "finalUrl": "https://clinicaltrials.gov/api/v2/studies/NCT06710626",
+        "bytesReadUpTo1200000": 5664,
+        "contentType": "application/json"
+      },
+      "note": "Official JSON retrieved directly and statusModule/hasResults inspected; web extractor unsupported. Review date is separate from registry last-update date."
+    },
+    {
+      "caseId": "AI-05",
+      "url": "https://clinicaltrials.gov/study/NCT06429735",
+      "label": "ClinicalTrials.gov PRIME study (live registry, checked November 1)",
+      "displayedDateContext": " 2026-11-01  (review/index date, not necessarily original publication)",
+      "retrieval": {
+        "httpStatus": 200,
+        "finalUrl": "https://clinicaltrials.gov/study/NCT06429735",
+        "bytesReadUpTo1200000": 94251,
+        "contentType": "text/html"
+      },
+      "note": "Dates are labeled as published, filed, briefing, index or review in the HTML; an HTTP response alone does not authenticate publication date."
+    },
+    {
+      "caseId": "GEO-01",
+      "url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4307858/poland-javelin-missile-systems",
+      "label": "DSCA Poland Javelin possible sale and correction",
+      "displayedDateContext": "published  2025-09-18  (indexed text checked; direct retrieval restricted)  Congressional Record, transmittal 25-62, p. S6725  ·  2025-09-18  (original contractor location differs from corrected DSCA notice)",
+      "retrieval": {
+        "error": "HTTP Error 403: Forbidden"
+      },
+      "note": "Direct retrieval 403; indexed official text inspected. Linked Congressional Record independently corroborates proposal, quantities and date; contractor-location correction retained separately."
+    },
+    {
+      "caseId": "GEO-01",
+      "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-18/pdf/CREC-2025-09-18-senate.pdf",
+      "label": "Congressional Record, transmittal 25-62, p. S6725",
+      "displayedDateContext": "published  2025-09-18  (indexed text checked; direct retrieval restricted)  Congressional Record, transmittal 25-62, p. S6725  ·  2025-09-18  (original contractor location differs from corrected DSCA notice)",
+      "retrieval": {
+        "httpStatus": 200,
+        "finalUrl": "https://www.govinfo.gov/content/pkg/CREC-2025-09-18/pdf/CREC-2025-09-18-senate.pdf",
+        "bytesReadUpTo1200000": 797319,
+        "contentType": "application/pdf"
+      },
+      "note": "Dates are labeled as published, filed, briefing, index or review in the HTML; an HTTP response alone does not authenticate publication date."
+    }
+  ]
+}
