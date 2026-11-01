@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#111e2c" />
+    <meta
+      name="description"
+      content="KAHRELUM Sports NFL GameCenter. Scores, plays, statistics and original forecasts, with clear source status."
+    />
+    <meta property="og:title" content="KAHRELUM Sports · NFL GameCenter" />
+    <meta
+      property="og:description"
+      content="One game. Scores, plays, stats, highlights and predictions."
+    />
+    <title>KAHRELUM Sports · NFL GameCenter</title>
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <script type="module" src="/assets/app.mjs"></script>
+  </head>
+  <body>
+    <a class="skip" href="#gamePanel">Skip to selected game</a>
+    <header class="masthead">
+      <a class="brand" href="/">KAHRELUM<span>SPORTS</span></a
+      ><span class="masthead-label">NFL GAMECENTER</span
+      ><button id="shareBoard" class="quiet">Share</button>
+    </header>
+    <main>
+      <section class="weekbar" aria-label="Game selection">
+        <div class="week-controls">
+          <select id="season" aria-label="Season">
+            <option>2026</option>
+            <option>2025</option></select
+          ><select id="seasonType" aria-label="Season type">
+            <option value="REG">Regular season</option>
+            <option value="PRE">Preseason</option>
+            <option value="PST">Postseason</option>
+          </select>
+          <div class="week-picker">
+            <button id="previousWeek" aria-label="Previous week">‹</button>
+            <h1 id="weekTitle">Week 8</h1>
+            <button id="nextWeek" aria-label="Next week">›</button>
+          </div>
+        </div>
+        <button id="refresh" class="quiet">Refresh</button>
+      </section>
+      <p id="feedStatus" class="feed-status" role="status">
+        Checking source availability…
+      </p>
+      <div class="workspace">
+        <aside class="scoreboard">
+          <div class="board-tools">
+            <input
+              id="search"
+              type="search"
+              placeholder="Find a team"
+              aria-label="Search teams"
+            /><button id="favoritesOnly" aria-pressed="false">Favorites</button>
+          </div>
+          <div id="gameList" class="game-list" aria-label="NFL games"></div>
+          <p id="boardNote" class="board-note"></p>
+        </aside>
+        <section
+          id="gamePanel"
+          class="game-panel"
+          aria-label="Selected game"
+          tabindex="-1"
+        >
+          <div id="gameHeader"></div>
+          <nav id="tabs" class="tabs" aria-label="Game sections">
+            <button data-tab="game" aria-current="page">Game</button
+            ><button data-tab="stats">Stats</button
+            ><button data-tab="highlights">Highlights</button
+            ><button data-tab="fantasy">Fantasy</button
+            ><button data-tab="predict">Predict</button>
+          </nav>
+          <div id="tabBody" class="tab-body">
+            <p class="empty">Select a game to begin.</p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      Independent sports analysis.
+      <span
+        >Source results, forecasts and fantasy scoring remain separate.</span
+      >
+    </footer>
+    <div id="toast" role="status" class="toast" hidden></div>
+    <dialog id="shareDialog">
+      <h2>Share this game</h2>
+      <p id="shareTitle"></p>
+      <input id="shareUrl" readonly aria-label="Direct game link" />
+      <div class="share-actions">
+        <button id="copyLink">Copy link</button
+        ><a id="whatsappLink" target="_blank" rel="noopener noreferrer"
+          >WhatsApp</a
+        ><button id="closeShare" class="quiet">Close</button>
+      </div>
+    </dialog>
+    <noscript
+      >This GameCenter needs JavaScript to switch games and retrieve source
+      data.</noscript
+    >
+  </body>
+</html>
