@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "edition": "KAH-US-2026-20261031T181057Z with challenger source checks through 2026-11-01T02:57:49Z",
+  "edition": "KAH-US-2026-20261031T181057Z with challenger source checks through 2026-11-01T04:17:42Z",
   "comparisonStatus": "DESCRIPTIVE_ONLY_UNMATCHED_CUTOFFS_AND_SEAT_TYPES",
-  "sourceObservationFileSha256": "5106c1925cbdf2c39c697aac4903e1fc9439b9f65f2fd66c1aff5f627e4f5b60",
+  "sourceObservationFileSha256": "953cad724826b06b0135018ae0c81977e04fe7e5e28be4178024cb4711d362f2",
   "house": {
     "totalSeats": 435,
     "democraticControlThreshold": 218,
@@ -19,7 +19,7 @@
       {"provider":"99chambers Horizon","democraticSeats":241.5,"seatType":"expected","edition":"Oct. 31 3:02 AM ET; retrieved 12:51 UTC","sourceUrl":"https://99chambers.app/updates/2026-10-31"},
       {"provider":"CalltheMap","democraticSeats":235.8,"seatType":"expected","edition":"Forecast Oct. 31; retrieved 14:12 UTC","sourceUrl":"https://www.callthemap.com/house"},
       {"provider":"COYNTOSS","democraticSeats":238.8,"seatType":"expected","edition":"Oct. 31 site; House model Oct. 31","sourceUrl":"https://chasecoyne.com/house"},
-      {"provider":"Scrutinel","democraticSeats":239,"seatType":"expected","edition":"Updated Oct. 31 11:24 PM EDT; retrieved Nov. 1 02:57 UTC","sourceUrl":"https://scrutinel.com/"},
+      {"provider":"Scrutinel","democraticSeats":237,"seatType":"expected","edition":"Updated Nov. 1 12:42 AM EDT; retrieved Nov. 1 04:17 UTC","sourceUrl":"https://scrutinel.com/"},
       {"provider":"Vote-Scope","democraticSeats":239,"seatType":"projected; median 246","edition":"Updated Oct. 31; retrieved 12:51 UTC","sourceUrl":"https://vote-scope.com/en/us/house/"},
       {"provider":"ElectIndex","democraticSeats":247.5,"seatType":"average","edition":"Public feed commit ebb3619; locally retrieved Oct. 31 23:34 UTC","sourceUrl":"https://electindex.com/forecasts/"},
       {"provider":"Fred Cornell","democraticSeats":250,"seatType":"median","edition":"Run Oct. 31; retrieved 12:51 UTC","sourceUrl":"https://fredcornell.com/us/house"},
@@ -46,7 +46,7 @@
       {"provider":"99chambers Horizon","democraticSeats":52.6,"seatType":"expected","edition":"Oct. 31 3:02 AM ET; retrieved 12:51 UTC","sourceUrl":"https://99chambers.app/updates/2026-10-31"},
       {"provider":"CalltheMap","democraticSeats":51.3,"seatType":"expected incl. aligned independents","edition":"Forecast Oct. 31; retrieved 15:00 UTC","sourceUrl":"https://www.callthemap.com/senate"},
       {"provider":"COYNTOSS","democraticSeats":51.581,"seatType":"expected caucus","edition":"Model inputs Oct. 31","sourceUrl":"https://chasecoyne.com/senate"},
-      {"provider":"Scrutinel","democraticSeats":52,"seatType":"expected","edition":"Updated Oct. 31 11:24 PM EDT; retrieved Nov. 1 02:57 UTC","sourceUrl":"https://scrutinel.com/"},
+      {"provider":"Scrutinel","democraticSeats":52,"seatType":"expected","edition":"Updated Nov. 1 12:42 AM EDT; retrieved Nov. 1 04:17 UTC","sourceUrl":"https://scrutinel.com/"},
       {"provider":"ElectIndex","democraticSeats":52.8,"seatType":"average","edition":"Public feed commit ebb3619; locally retrieved Oct. 31 23:34 UTC","sourceUrl":"https://electindex.com/forecasts/"},
       {"provider":"Fred Cornell","democraticSeats":52,"seatType":"expected party seats; plus 1 independent","edition":"Run Oct. 31; retrieved 12:51 UTC","sourceUrl":"https://fredcornell.com/us/senate"},
       {"provider":"Yale PLSC 2219","democraticSeats":50,"seatType":"class model","edition":"Snapshot Oct. 31; retrieved 18:02 UTC","sourceUrl":"https://kevinmdeluca.com/forecast/"},

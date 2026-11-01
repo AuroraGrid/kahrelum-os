@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-11-01T02:57:49.814Z",
+  "checkedAtUtc": "2026-11-01T04:17:42.5007750Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -94,17 +94,17 @@
       "provider": "Scrutinel",
       "edition": "Main",
       "sourceUrl": "https://scrutinel.com/",
-      "houseDemocraticControlPct": 93.0,
-      "senateDemocraticControlPct": 71.0,
-      "houseDemocraticSeats": 239.0,
+      "houseDemocraticControlPct": 92.0,
+      "senateDemocraticControlPct": 68.0,
+      "houseDemocraticSeats": 237.0,
       "houseSeatType": "expected",
       "senateDemocraticSeats": 52.0,
       "senateSeatType": "expected",
-      "sourceEdition": "Updated Oct. 31, 11:24 PM EDT; retrieved Nov. 1 02:57 UTC",
+      "sourceEdition": "Updated Nov. 1, 12:42 AM EDT; retrieved Nov. 1 04:17 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "retrievedAtUtc": "2026-11-01T02:57:49.814Z",
-      "rawSha256": "7b55dfcc3c2e966c295a62c7115be4e63f0cc76a98a948173d98f04d3466df09",
-      "note": "The displayed Oct. 31 11:24 PM EDT edition retained 93% Democratic House control, increased Democratic Senate control from 70% to 71%, increased expected Democratic House seats from 238 to 239, and retained 52 expected Democratic Senate seats. The displayed source timestamp was ahead of the observer clock and is retained only as source metadata; the Nov. 1 02:57 UTC retrieval is the custody time."
+      "retrievedAtUtc": "2026-11-01T04:17:42.5007750Z",
+      "rawSha256": "6eb456668a2a2397c570ad576fa259ae51888c44da515dcecd5c9b5c845daacd",
+      "note": "The displayed Nov. 1 12:42 AM EDT edition reduced Democratic House control from 93% to 92%, reduced Democratic Senate control from 71% to 68%, and reduced expected Democratic House seats from 239 to 237; expected Democratic Senate seats remained 52. The prospective Nov. 1 04:17 UTC retrieval is the custody time."
     },
     {
       "provider": "Vote-Scope",
