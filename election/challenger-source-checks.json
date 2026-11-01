@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-11-01T02:39:03.900Z",
+  "checkedAtUtc": "2026-11-01T02:57:49.814Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -95,16 +95,16 @@
       "edition": "Main",
       "sourceUrl": "https://scrutinel.com/",
       "houseDemocraticControlPct": 93.0,
-      "senateDemocraticControlPct": 70.0,
-      "houseDemocraticSeats": 238.0,
+      "senateDemocraticControlPct": 71.0,
+      "houseDemocraticSeats": 239.0,
       "houseSeatType": "expected",
       "senateDemocraticSeats": 52.0,
       "senateSeatType": "expected",
-      "sourceEdition": "Updated Oct. 30, 11:24 PM EDT; retrieved Oct. 31 03:22 UTC",
+      "sourceEdition": "Updated Oct. 31, 11:24 PM EDT; retrieved Nov. 1 02:57 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "retrievedAtUtc": "2026-10-31T03:22:45.434Z",
-      "rawSha256": "89842084b45a56e71064a6c63fd2ef90fa6d3220800f0b9003e1252918fda460",
-      "note": "Fresh first-party page check; House control remained 93%, Senate control increased from the previously recorded 69% to 70%, and the site separately describes a rounded 239-seat central House estimate."
+      "retrievedAtUtc": "2026-11-01T02:57:49.814Z",
+      "rawSha256": "7b55dfcc3c2e966c295a62c7115be4e63f0cc76a98a948173d98f04d3466df09",
+      "note": "The displayed Oct. 31 11:24 PM EDT edition retained 93% Democratic House control, increased Democratic Senate control from 70% to 71%, increased expected Democratic House seats from 238 to 239, and retained 52 expected Democratic Senate seats. The displayed source timestamp was ahead of the observer clock and is retained only as source metadata; the Nov. 1 02:57 UTC retrieval is the custody time."
     },
     {
       "provider": "Vote-Scope",
