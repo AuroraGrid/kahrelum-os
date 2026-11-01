@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Dave Manuel",
+  "sourceUrl": "https://www.davemanuel.com/2026-midterm-forecast.php",
+  "retrievedAtUtc": "2026-11-01T13:13:57.587Z",
+  "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "custody": {
+    "representation": "FETCH_RETURNED_HTML_UTF8",
+    "sha256": "96ead86c8e40f58eb3b3de81e0ea8e20c465f2f163ec31bba9ebba12d0a9822b",
+    "utf8Bytes": 272948,
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false
+  },
+  "publisherEdition": "November 1, 2026, 8:45 a.m. ET",
+  "observations": {
+    "houseDemocraticControlPct": 93.0,
+    "houseDemocraticSeats": 233.0,
+    "houseSeatType": "projected median",
+    "senateDemocraticControlPct": 70.0,
+    "senateRepublicanControlPct": 27.0,
+    "senateNeitherSideControlPct": 3.0,
+    "senateDemocraticSeats": 52.0,
+    "senateSeatType": "projected median including two aligned independents"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "senateDemocraticControlPct": {
+      "prior": 71.0,
+      "current": 70.0
+    },
+    "unchanged": [
+      "houseDemocraticControlPct",
+      "houseDemocraticSeats",
+      "senateDemocraticSeats"
+    ]
+  },
+  "admissionNote": "Control probability and seat statistics remain distinct. The 3% neither-side Senate outcome is preserved separately and is not silently assigned to either party."
+}
