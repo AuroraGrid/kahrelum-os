@@ -1,0 +1,32 @@
+# KAHRELUM NFL Trade Deadline | Nov 1, 2026 | Crosby and Barkley market exits
+
+CUSTODY: Append-only original-research admission on Nov 1, 2026. Event definition for each NEW forecast: Will player be traded before 2026-11-10, 16:00 America/New_York? Previous candidate entries K26-096 and K26-104 in the 2026-10-30 public snapshot were UNPRICED. Github publication commit time is earliest externally inspectable publication of the new numbers. None are retrospective predictions, historical scoreable locks, verified negotiations, accepted offers or resolved outcomes.
+
+## 1. Maxx Crosby | Las Vegas Raiders | EDGE | K26-096
+
+REPORT (Tier 1): Original bylined report, Adam Schefter for ESPN, Nov 1, 2026, syndicated verbatim at https://abc7.com/post/sources-raiders-not-planning-trading-maxx-crosby-wants-stay/20005567/ . Per league sources, neither the Raiders nor Crosby wants a deal, the team currently has no trade plans, and no Crosby trade discussions with other teams have occurred this season as of the report. This is attributed reporting, not a binding team guarantee. Original precise minute not independently established. SourceGrid discovered the syndicated report by 2026-11-01T12:25:14Z via observation OBS-4e27bf44f63bfccf90ff; feed publisher timestamp 2026-11-01T12:00:00Z is not verified first-reported minute.
+
+Secondary Nov 1 confirmation: https://www.nbcsports.com/fantasy/football/player-news/2026-11-01/schefter-raiders-have-no-plans-to-trade-crosby (attributes Schefter; not an independent source).
+FACT: No 2026 in-season Crosby trade is listed by NFL. Official transactions https://www.nfl.com/transactions/ and tracker https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season .
+STATUS: ORIGINAL_REPORT / OFF_MARKET_REPORTED, NOT CONFIRMED_TRADE. Inquiries, bids, offers, acquiring destination: none verified. Previously rumored Cowboys/Lions/Bills are analyst fits, not reported bidders. 2026 offseason aborted Ravens transaction is historical, not a current offer.
+FORECAST (new prospective manual judgment): 2% traded by Nov 10 deadline; prior numeric value: NULL (UNPRICED). Five-percentage-point change not computable. Subjective judgment reflecting lack of talks and team/player intention, not a calibrated statistical output.
+CONTESTED: Cowboys media Bryan Broaddus and Mike Fisher forecast possible Crosby deal, which is speculation, not documented talks: https://sports.yahoo.com/articles/cowboys-going-maxx-crosby-predicts-123216309.html .
+SALARY/CAP: No specific 2026 acquiring-club cap charge independently verified; no number asserted. EFFECT: hypothetical edge-rush buyers may have to look elsewhere. No individual fantasy or roster move.
+
+## 2. Saquon Barkley | Philadelphia Eagles | RB | K26-104
+
+REPORT (Tier 1): Nov 1, 2026 NFL Network original reporting by Ian Rapoport and Mike Garafolo, also bylined/linked at ESPN https://www.espn.com/nfl/story/_/id/50336880/sources-eagles-trade-star-rb-saquon-barkley . Reporting says Eagles do not intend to trade Barkley before the deadline and see him in their competitive 2027 plans. ESPN page was JavaScript/bot-blocked during this check; attributable original reporter statements reproduced in https://athlonsports.com/nfl/trending/eagles-make-saquon-barkley-decision-before-nfl-trade-deadline (published Nov 1 07:36 EST), and original reporter post index https://muckrack.com/trendingisraeli-couscous (Nov 1). Do not treat these as independent corroboration or a real offer.
+
+Secondary dated Nov 1: https://bleacherreport.com/articles/25527914-new-saquon-barkley-trade-rumors-eagles-decision-amid-jonathan-taylor-sweepstakes-deadline (explicitly attributes Rapoport/Garafolo). Earlier discussions of possible Eagles fire sale were analysis, not proof Barkley was offered.
+FACT: No Barkley trade in official NFL tracker as of review. STATUS: ORIGINAL_REPORT / OFF_MARKET_REPORTED, not CONFIRMED_TRADE. Inquiries/offer/destination: none newly verified.
+FORECAST (new prospective manual judgment): 1% traded by Nov 10 deadline; prior numeric value NULL (UNPRICED). No previous probability point change; subjective low-tail probability, not definitive zero or certified model score.
+CONTRACT: Oct 30 The Athletic analysis syndicated by NFL.com https://www.nfl.com/news/saquon-barkley-on-the-trade-block-what-an-eagles-sell-off-could-look-like gives contract through 2028, two-year $41.2m extension, estimated 2027 dead money if traded of $26.5m; scenario analysis NOT current acquiring-team cap accounting or an actual bid. New buyer cap 2026 not verified.
+EFFECT: Retaining Barkley prevents a hypothetical Eagles RB market exit, leaving Jonathan Taylor a comparatively prominent trade candidate; no individual fantasy start/sit call.
+
+## Shared custody, truth, and next checks
+
+NFL's official tracker https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season lists seven completed 2026 in-season deals as of this check, most recently Jeffery Simmons (October 29); no verified eighth trade. NFL transactions page https://www.nfl.com/transactions/ checked independently. The KAHRELUM source machine last reported a 2026-11-01T12:25:14Z sweep: 36/37 registered feeds succeeded, 17 new observations, 252 queued for review, NFL_TRANSACTIONS date validation failure; automated coverage does not equal exhaustive original-source review. Official-club feeds can parse zero items.
+
+Unchanged conversation-provisional forecast snapshots: Jonathan Taylor 30%, Josh Downs 58%, Brian Thomas Jr. 34%, Garrett Wilson 1%, Daron Payne 0.1%. Those figures are distinct from stale Oct 30 public-board research. No eligible binary proposition resolved in this review; do not compute Brier. Harrison/Nelson/Buckner historical figures lack independent pretrade custody, Simmons has no verified pretrade lock. Keep ESPN/Fowler model values and prediction-market prices separate.
+
+This append-only research note does NOT amend the public NFL trade-board JSON, its asOf, any current-forecasts file, Firebase deployed web site, nor authorizes X/podcast/email/public outreach or roster/account transactions. Recheck original club updates and reported offers, authentic destinations, verified finances, and league transactions; revise only on meaningful fresh evidence. No claim that every national insider, all 32 clubs, beat reporters or shows was personally inspected.
