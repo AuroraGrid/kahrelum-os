@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-11-01T16:54:22.6195166Z",
+  "checkedAtUtc": "2026-11-01T17:57:13.7925373Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -27,16 +27,18 @@
       "edition": "DDHQ 2026",
       "sourceUrl": "https://votes.decisiondeskhq.com/forecast/2026",
       "houseDemocraticControlPct": 83.0,
-      "senateDemocraticControlPct": 63.0,
+      "senateDemocraticControlPct": 62.0,
       "houseDemocraticSeats": 241.0,
       "houseSeatType": "projected",
       "senateDemocraticSeats": 52.0,
       "senateSeatType": "projected",
-      "sourceEdition": "Updated Oct. 31, 5:26 PM; retrieved Oct. 31 18:00 UTC",
-      "retrievalStatus": "FIRST_PARTY_PUBLIC_PARTIAL",
-      "retrievedAtUtc": "2026-10-31T18:00:28.475Z",
+      "sourceEdition": "Updated Nov. 1, 12:43 PM ET in live browser (5:43 PM web text extraction); retrieved Nov. 1 17:57 UTC",
+      "retrievalStatus": "FIRST_PARTY_PUBLIC_RENDERED_VERIFIED",
+      "retrievedAtUtc": "2026-11-01T17:57:13.7925373Z",
       "directHttpStatus": 429,
-      "note": "The rendered first-party page increased Democratic House control from 82% to 83%, Democratic Senate control from 62% to 63%, and projected Democratic House seats from 239 to 241. Projected Democratic Senate seats remained 52. Direct unattended HTTP returned 429, so this custody record is explicitly a rendered first-party-page check rather than raw HTTP-wire custody."
+      "custodyRepresentation": "LIVE_BROWSER_ACCESSIBILITY_TREE_SELECTED_FIELDS_NOT_RAW_HTML",
+      "custodyReceiptSha256": "1671fe67b883000fb233858b8492c068a29ba8d70326bb06653e40f7926709a7",
+      "note": "The Nov. 1 rendered first-party edition decreases Democratic Senate control from 63% to 62% while retaining 52 projected Democratic Senate seats, 83% Democratic House control and 241 projected Democratic House seats. Republican Senate control is 38%; the four displayed joint outcomes sum to 100%. The browser rendered the update as 12:43 PM in America/New_York while web text extraction exposed 5:43 PM, so both clock labels are preserved in the private receipt. Direct unattended HTTP returned 429 and a fresh Firecrawl attempt failed at transport before returning data; neither was used as numerical evidence."
     },
     {
       "provider": "99chambers",

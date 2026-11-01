@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "edition": "KAH-US-2026-20261031T181057Z with challenger source checks through 2026-11-01T16:54:22Z",
+  "edition": "KAH-US-2026-20261031T181057Z with challenger source checks through 2026-11-01T17:57:13Z",
   "comparisonStatus": "DESCRIPTIVE_ONLY_UNMATCHED_CUTOFFS_AND_SEAT_TYPES",
-  "sourceObservationFileSha256": "daf356af2836a756271f0974727062df111b26a229c724935eea3718721fe06a",
+  "sourceObservationFileSha256": "07b2e67d6f180c598740ddfa9996f87bf7cfaa64f5c35e9d2125485f3bd59f9a",
   "house": {
     "totalSeats": 435,
     "democraticControlThreshold": 218,
@@ -15,7 +15,7 @@
     },
     "observations": [
       {"provider":"KAHRELUM","democraticSeats":228.02,"seatType":"expected","edition":"Fresh run Oct. 31 18:10 UTC; ratings Oct. 23","sourceUrl":"/election-challenge"},
-      {"provider":"Decision Desk HQ","democraticSeats":241,"seatType":"projected","edition":"Updated Oct. 31 5:26 PM","sourceUrl":"https://votes.decisiondeskhq.com/forecast/2026"},
+      {"provider":"Decision Desk HQ","democraticSeats":241,"seatType":"projected","edition":"Updated Nov. 1 12:43 PM ET; retrieved Nov. 1 17:57 UTC","sourceUrl":"https://votes.decisiondeskhq.com/forecast/2026"},
       {"provider":"99chambers Horizon","democraticSeats":241.8,"seatType":"expected","edition":"Nov. 1 2:02 AM ET; retrieved Nov. 1 16:01 UTC","sourceUrl":"https://99chambers.app/updates/2026-11-01"},
       {"provider":"CalltheMap","democraticSeats":235.8,"seatType":"expected","edition":"Forecast Nov. 1; retrieved Nov. 1 15:28 UTC","sourceUrl":"https://www.callthemap.com/house"},
       {"provider":"COYNTOSS","democraticSeats":238.8,"seatType":"expected","edition":"Oct. 31 site; House model Oct. 31","sourceUrl":"https://chasecoyne.com/house"},
@@ -42,7 +42,7 @@
     },
     "observations": [
       {"provider":"KAHRELUM","democraticSeats":50.229989536494045,"seatType":"expected caucus","edition":"Fresh run Oct. 31 18:10 UTC; ratings Oct. 20","sourceUrl":"/election-challenge"},
-      {"provider":"Decision Desk HQ","democraticSeats":52,"seatType":"projected","edition":"Updated Oct. 31 5:26 PM","sourceUrl":"https://votes.decisiondeskhq.com/forecast/2026"},
+      {"provider":"Decision Desk HQ","democraticSeats":52,"seatType":"projected","edition":"Updated Nov. 1 12:43 PM ET; retrieved Nov. 1 17:57 UTC","sourceUrl":"https://votes.decisiondeskhq.com/forecast/2026"},
       {"provider":"99chambers Horizon","democraticSeats":52.6,"seatType":"expected","edition":"Nov. 1 2:02 AM ET; retrieved Nov. 1 16:01 UTC","sourceUrl":"https://99chambers.app/updates/2026-11-01"},
       {"provider":"CalltheMap","democraticSeats":51.3,"seatType":"expected incl. aligned independents","edition":"Forecast Nov. 1; retrieved Nov. 1 15:28 UTC","sourceUrl":"https://www.callthemap.com/senate"},
       {"provider":"COYNTOSS","democraticSeats":51.581,"seatType":"expected caucus","edition":"Model inputs Oct. 31","sourceUrl":"https://chasecoyne.com/senate"},
