@@ -3,8 +3,6 @@
 **New technical research:** [K-PREDICT v0.6: probabilistic election modeling and honest historical evaluation](./research/israel-2026-election/K_PREDICT_V06_2026-10-27.md). Retrospective evidence; overall PARTIAL; no established model superiority or KAHRELUM live 2026 election-outcome forecast.
 
 
-**Sports straight-bet policy (2026-11-01):** [Versioned betting policy](./sports/betting-policy.json) · [Price-aware tier classifier](./scripts/betting_tiers.py) · [Public tiers](https://kahrelum.com/sports#betting). FRIENDS 52.5%–54.9% is information only; STRONG OPTIONAL 55%–57.9% $25 and CERTIFIED 58%+ $50 are conditional caps only when the ticket price clears a ≥2 percentage-point break-even margin, ≥3% expected ROI and independent model review. At −110, 52.38095% breaks even. No parlays or automatic wagering. Example: `python3 scripts/betting_tiers.py --probability-percent 54.5 --odds=-110`.
-
 **NFL Sports Intelligence Desk v1.1:** [Public trade board source](./nfl/trades.html) · [Historical research snapshot](./nfl/trade-board.json) · [Operational SourceGrid](./nfl/sourcegrid.json) · [Per-source health](./nfl/source-health.json) · [Append-only forecast ledger](./nfl/forecast-ledger.json) · [Operations and publication boundary](./research/nfl-2026-trade-deadline/SPORTS_INTELLIGENCE_V1_OPERATIONS.md). The scheduled workflow records discovery and freshness in GitHub; the `/nfl/trades` Firebase route changes only after a verified guarded deployment and explicit promotion approval.
 
 **Evidence-to-decision control plane**
