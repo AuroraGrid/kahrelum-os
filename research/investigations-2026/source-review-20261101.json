@@ -1,10 +1,10 @@
 {
   "schema": "KAHRELUM_INVESTIGATIONS_SOURCE_REVIEW_v1",
   "checkedDate": "2026-11-01",
-  "release": "2026-11-01.2",
+  "release": "2026-11-01.3",
   "historicCaseFamilies": 56,
   "extensionLeads": 4,
-  "publicCaseRecords": 11,
+  "publicCaseRecords": 12,
   "scope": "Targeted reconciliation; not an exhaustive recertification of all 56 historical families. Original master, two decision logs and forecast locks remain unchanged.",
   "sources": [
     {
@@ -323,5 +323,6 @@
       },
       "note": "Dates are labeled as published, filed, briefing, index or review in the HTML; an HTTP response alone does not authenticate publication date."
     }
-  ]
+  ],
+  "air01EvidenceRegister": "AIR-01/evidence-register-v1.json"
 }

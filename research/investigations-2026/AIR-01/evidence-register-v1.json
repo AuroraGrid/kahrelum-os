@@ -1,0 +1,153 @@
+{
+  "schema": "KAHRELUM_AIR01_EVIDENCE_v1",
+  "caseId": "AIR-01",
+  "release": "2026-11-01.3",
+  "reviewDate": "2026-11-01",
+  "status": "ACTIVE / CAUSE UNDETERMINED",
+  "portfolio": "OPEN",
+  "incidentDate": "2026-11-01",
+  "forecast": null,
+  "sources": [
+    {
+      "id": "FAA-REG",
+      "url": "https://registry.faa.gov/AircraftInquiry/Search/NNumberResult?nNumberTxt=722BD",
+      "date": "Live registry; certificate issued 2023-01-04",
+      "public": true,
+      "classification": "FACT",
+      "finding": "Learjet INC model 60, serial 271, valid registration; registered owner LR60271 LLC. Registration does not establish operator or airworthiness.",
+      "capturedAt": "2026-11-01T22:28:20.911641+00:00",
+      "inspection": "Web extraction or indexed text; direct capture result below",
+      "capture": {
+        "httpStatus": 200,
+        "finalUrl": "https://registry.faa.gov/AircraftInquiry/Search/NNumberResult?nNumberTxt=722BD",
+        "file": "faa-reg.html",
+        "sha256": "657b529665baf25af187a531569c1f84e598a25460b0ea6e464bd937a36029a2",
+        "custodyLocation": "Local execution workspace air01-source-captures-v1; not republished in public Git repository"
+      }
+    },
+    {
+      "id": "FAA-INC",
+      "url": "https://www.faa.gov/newsroom/statements/accident_incidents",
+      "date": "2026-11-01",
+      "public": true,
+      "classification": "FACT",
+      "finding": "FAA reports Learjet 60, nine aboard, near Cresthaven around 12:50 local, Austin-Bergstrom to North Eleuthera; NTSB leads investigation.",
+      "quote": "The NTSB will be in charge of the investigation and will provide all updates.",
+      "capturedAt": "2026-11-01T22:28:22.674361+00:00",
+      "inspection": "Web extraction or indexed text; direct capture result below",
+      "capture": {
+        "httpStatus": 200,
+        "finalUrl": "https://www.faa.gov/newsroom/statements/accident_incidents",
+        "file": "faa-inc.html",
+        "sha256": "4635d367eaaa9a6aac6172db9112bf23ac2393d37aa3912bba7696d7129ba2f2",
+        "custodyLocation": "Local execution workspace air01-source-captures-v1; not republished in public Git repository"
+      }
+    },
+    {
+      "id": "FR24",
+      "url": "https://www.flightradar24.com/data/aircraft/n722bd",
+      "date": null,
+      "public": true,
+      "classification": "UNKNOWN",
+      "finding": "Tracking lead; raw incident flight track not authenticated.",
+      "capturedAt": "2026-11-01T22:28:24.704425+00:00",
+      "inspection": "Web extraction or indexed text; direct capture result below",
+      "capture": {
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    {
+      "id": "CAROL",
+      "url": "https://carol.ntsb.gov/",
+      "date": null,
+      "public": true,
+      "classification": "UNKNOWN",
+      "finding": "Redirects to my.ntsb.gov; no case-specific docket or preliminary report authenticated.",
+      "capturedAt": "2026-11-01T22:28:25.320488+00:00",
+      "inspection": "Web extraction or indexed text; direct capture result below",
+      "capture": {
+        "httpStatus": 200,
+        "finalUrl": "https://my.ntsb.gov/",
+        "file": "carol.html",
+        "sha256": "f1dfa14566f3da6eaa2c7ffb6a89da0d0ecf37e6fac3d3eba57e968eccb6a231",
+        "custodyLocation": "Local execution workspace air01-source-captures-v1; not republished in public Git repository"
+      }
+    },
+    {
+      "id": "AVIAPAGES",
+      "url": "https://aviapages.com/aircraft/n722bd/",
+      "date": "Aircraft listing updated 2025-08-12",
+      "public": true,
+      "classification": "ALLEGATION",
+      "finding": "Commercial listing associates aircraft with Aurora Aviation; does not establish operational control on incident flight.",
+      "capturedAt": "2026-11-01T22:28:28.246388+00:00",
+      "inspection": "Web extraction or indexed text; direct capture result below",
+      "capture": {
+        "httpStatus": 200,
+        "finalUrl": "https://aviapages.com/aircraft/n722bd/",
+        "file": "aviapages.html",
+        "sha256": "29c0f76fc07c0332afb4606f48e26168cee7dc663501efa1f05174d8e08152b4",
+        "custodyLocation": "Local execution workspace air01-source-captures-v1; not republished in public Git repository"
+      }
+    },
+    {
+      "id": "LOCAL10",
+      "url": "https://www.local10.com/news/local/2026/11/01/9-dead-after-learjet-60-crashes-in-palm-beach-on-way-to-bahamas-from-texas-feds-say/",
+      "date": "2026-11-01; displayed update 17:34",
+      "public": true,
+      "classification": "FACT",
+      "finding": "Indexed original reporting attributes nine fatalities to Sean Duffy and reproduces NTSB go-team announcement. Direct web extraction failed; original social posts not authenticated.",
+      "capturedAt": "2026-11-01T22:28:29.924502+00:00",
+      "inspection": "Web extraction or indexed text; direct capture result below",
+      "capture": {
+        "httpStatus": 200,
+        "finalUrl": "https://www.local10.com/news/local/2026/11/01/9-dead-after-learjet-60-crashes-in-palm-beach-on-way-to-bahamas-from-texas-feds-say/",
+        "file": "local10.html",
+        "sha256": "83a43ce6e0174bc45f39adca489c79febd4395c7fbebdd92b438ff45f6c5817b",
+        "custodyLocation": "Local execution workspace air01-source-captures-v1; not republished in public Git repository"
+      }
+    },
+    {
+      "id": "AP",
+      "url": "https://apnews.com/article/ffdee609e7916ff7fcd178d2b8e69b39",
+      "date": "2026-11-01; indexed publication 20:37:28 UTC",
+      "public": true,
+      "classification": "ALLEGATION",
+      "finding": "Original reporting describes weather and ATC/flight tracking; primary recording and raw surveillance data not recovered. No independent causal finding.",
+      "capturedAt": "2026-11-01T22:28:31.888616+00:00",
+      "inspection": "Web extraction or indexed text; direct capture result below",
+      "capture": {
+        "error": "<urlopen error [WinError 10054] An existing connection was forcibly closed by the remote host>"
+      }
+    },
+    {
+      "id": "NTSB",
+      "url": "https://www.ntsb.gov/Pages/home.aspx",
+      "date": null,
+      "public": false,
+      "classification": "UNKNOWN",
+      "finding": "Official landing page inspected; no case-specific report authenticated.",
+      "capturedAt": "2026-11-01T22:28:32.441669+00:00",
+      "inspection": "Web extraction or indexed text; direct capture result below",
+      "capture": {
+        "httpStatus": 200,
+        "finalUrl": "https://www.ntsb.gov/Pages/home.aspx",
+        "file": "ntsb.html",
+        "sha256": "2236e21ae89969b3055bbb30ee1423b86db391c328f78e9b79ac3023cf7bf60e",
+        "custodyLocation": "Local execution workspace air01-source-captures-v1; not republished in public Git repository"
+      }
+    }
+  ],
+  "corrections": [
+    {
+      "version": 1,
+      "date": "2026-11-01",
+      "change": "Initial bounded review. No prior ChatGPT claims admitted without new source review."
+    }
+  ],
+  "monitoring": {
+    "status": "INACTIVE",
+    "reason": "No existing investigations scheduler or authorized review runner found; NFL scheduler is unrelated.",
+    "configurationRequired": "Add an investigations-only scheduled runner with FAA/NTSB/CAROL/county source identifiers, immutable captures, content hashes, human evidence review, meaningful-change deduplication, and no automatic publication of unreviewed assertions."
+  }
+}

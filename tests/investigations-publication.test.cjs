@@ -7,12 +7,12 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const read = (p) => fs.readFileSync(path.join(root, p), 'utf8');
 
-test('eleven independently labeled public records preserve evidence and portfolio boundaries', () => {
+test('twelve independently labeled public records preserve evidence and portfolio boundaries', () => {
   const html = read('investigations.html');
-  const ids = ["CORP-04","CYBER-02","MKT-02","CORP-01","CORP-02","CORP-03","COURT-05","COURT-01","CYBER-01","AI-05","GEO-01"];
+  const ids = ["CORP-04","CYBER-02","MKT-02","CORP-01","CORP-02","CORP-03","COURT-05","COURT-01","CYBER-01","AI-05","GEO-01","AIR-01"];
   const found = [...html.matchAll(/data-case-id="([A-Z]+-[0-9]+)"/g)].map((m) => m[1]);
   assert.deepEqual(found, ids);
-  assert.equal(new Set(found).size, 11);
+  assert.equal(new Set(found).size, 12);
   for (const id of ids) {
     const beginning = html.indexOf('data-case-id="' + id + '"');
     const ending = html.indexOf('</article>', beginning);
@@ -24,11 +24,11 @@ test('eleven independently labeled public records preserve evidence and portfoli
     assert.match(card, /data-reviewed="2026-1[01]-[0-3][0-9]"/);
   }
   assert.match(html, /56 historical case families and four extension leads/);
-  assert.match(html, /not eleven completed investigations/);
+  assert.match(html, /not twelve completed investigations/);
   assert.match(html, /No sums across distinct Meta cases or presumed payments/);
   assert.match(html, /NEEDS REDACTION/);
   assert.match(html, /NOT SUITABLE/);
-  assert.match(html, /data-investigations-release="2026-11-01\.2"/);
+  assert.match(html, /data-investigations-release="2026-11-01\.3"/);
   const youth = html.slice(html.indexOf('data-case-id="CORP-03"'), html.indexOf('data-case-id="COURT-05"'));
   assert.match(youth, /D-101-CV-2023-02838/);
   assert.match(youth, /\$567 million/);
@@ -167,4 +167,17 @@ test('project-name aliases canonicalize to the verified project number without a
   assert.throws(() => canonical(expected.replace('806087933597', 'another-project'), live), /verified live project/);
   assert.throws(() => canonical(expected.replace('/sites/kahrelum-public-hosting/', '/sites/another-site/'), live), /verified live project/);
   assert.throws(() => canonical(expected + '/extra', live), /verified live project/);
+});
+
+test('AIR-01 retains explicit uncertainty, sources and all original card bytes', () => {
+ const html=read('investigations.html');
+ const card=html.match(/<article class="case-record"[^>]*data-case-id="AIR-01"[\s\S]*?<\/article>/)[0];
+ for(const value of ['ACTIVE / CAUSE UNDETERMINED','No authenticated evidence establishes a Trump or Mar-a-Lago connection','LR60271 LLC','North Eleuthera','UNKNOWN','Competing hypotheses','Correction and update trail','https://registry.faa.gov/AircraftInquiry/Search/NNumberResult?nNumberTxt=722BD','https://www.faa.gov/newsroom/statements/accident_incidents']) assert.ok(card.includes(value),value);
+ const crypto=require('node:crypto');
+ const prior=JSON.parse(read('tests/investigations-preserved-cards.json'));
+ for(const m of html.matchAll(/<article class="case-record"[^>]*data-case-id="([^"]+)"[\s\S]*?<\/article>/g)) if(prior[m[1]]) assert.equal(crypto.createHash('sha256').update(m[0].replace(/\r\n/g, '\n')).digest('hex'),prior[m[1]],m[1]);
+ assert.match(html, /<strong>12<\/strong><span>Public case records/);
+ const register=JSON.parse(read('research/investigations-2026/AIR-01/evidence-register-v1.json'));
+ for(const source of register.sources.filter(s=>s.public)) assert.ok(card.includes(source.url));
+ assert.equal(register.forecast,null);
 });
