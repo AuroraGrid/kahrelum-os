@@ -268,7 +268,7 @@ class PublishingSurfaceTests(unittest.TestCase):
         callthemap = next(row for row in challengers["records"] if row["provider"] == "CalltheMap")
         self.assertEqual((callthemap["houseDemocraticControlPct"], callthemap["senateDemocraticControlPct"], callthemap["senateDemocraticSeats"]), (83.0, 58.0, 51.3))
         coyntoss = next(row for row in challengers["records"] if row["provider"] == "COYNTOSS")
-        self.assertEqual((coyntoss["houseDemocraticControlPct"], coyntoss["senateDemocraticControlPct"], coyntoss["houseDemocraticSeats"], coyntoss["senateDemocraticSeats"]), (83.85, 69.82, 238.8, 51.581))
+        self.assertEqual((coyntoss["houseDemocraticControlPct"], coyntoss["senateDemocraticControlPct"], coyntoss["houseDemocraticSeats"], coyntoss["senateDemocraticSeats"]), (83.85, 70.11, 238.8, 51.603))
         electindex = next(row for row in challengers["records"] if row["provider"] == "ElectIndex")
         self.assertEqual((electindex["houseDemocraticControlPct"], electindex["senateDemocraticControlPct"], electindex["houseDemocraticSeats"], electindex["senateDemocraticSeats"]), (91.7, 72.9, 247.4, 52.8))
         new_numeric = {row["provider"]: row for row in challengers["records"] if row["provider"] in {"Dave Manuel", "On Point Politics", "VotePredictor", "Midterm Forecast"}}

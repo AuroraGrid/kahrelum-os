@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "edition": "KAH-US-2026-20261031T181057Z with challenger source checks through 2026-11-01T20:15:24Z",
+  "edition": "KAH-US-2026-20261031T181057Z with challenger source checks through 2026-11-01T21:05:10Z",
   "comparisonStatus": "DESCRIPTIVE_ONLY_UNMATCHED_CUTOFFS_AND_SEAT_TYPES",
-  "sourceObservationFileSha256": "0b7ff6dcd43312202c1268f0b6dbd559b7a2a800b7057bdeea65e65959f776a8",
+  "sourceObservationFileSha256": "21d803e572d9b26c02aaf1d87e4c86022adba2ad99ff751d0441b7c4a79a83dd",
   "house": {
     "totalSeats": 435,
     "democraticControlThreshold": 218,
@@ -45,7 +45,7 @@
       {"provider":"Decision Desk HQ","democraticSeats":52,"seatType":"projected","edition":"Updated Nov. 1 12:43 PM ET; retrieved Nov. 1 17:57 UTC","sourceUrl":"https://votes.decisiondeskhq.com/forecast/2026"},
       {"provider":"99chambers Horizon","democraticSeats":52.6,"seatType":"expected","edition":"Nov. 1 2:02 AM ET; retrieved Nov. 1 16:01 UTC","sourceUrl":"https://99chambers.app/updates/2026-11-01"},
       {"provider":"CalltheMap","democraticSeats":51.3,"seatType":"expected incl. aligned independents","edition":"Forecast Nov. 1; retrieved Nov. 1 15:28 UTC","sourceUrl":"https://www.callthemap.com/senate"},
-      {"provider":"COYNTOSS","democraticSeats":51.581,"seatType":"expected caucus","edition":"Model inputs Oct. 31","sourceUrl":"https://chasecoyne.com/senate"},
+      {"provider":"COYNTOSS","democraticSeats":51.603,"seatType":"expected caucus","edition":"Model inputs Nov. 1; RETRO-20261101-R03; retrieved Nov. 1 21:05 UTC","sourceUrl":"https://chasecoyne.com/senate"},
       {"provider":"Scrutinel","democraticSeats":52,"seatType":"expected","edition":"Updated Nov. 1 11:45 AM EST; retrieved Nov. 1 16:54 UTC","sourceUrl":"https://scrutinel.com/"},
       {"provider":"ElectIndex","democraticSeats":52.8,"seatType":"average","edition":"Public feed commit e5d7d30; retrieved Nov. 1 16:53 UTC; commit metadata future-dated 17:18 UTC","sourceUrl":"https://electindex.com/forecasts/"},
       {"provider":"Fred Cornell","democraticSeats":52,"seatType":"expected party seats; plus 1 independent","edition":"Run Nov. 1; retrieved Nov. 1 13:35 UTC","sourceUrl":"https://fredcornell.com/us/senate"},

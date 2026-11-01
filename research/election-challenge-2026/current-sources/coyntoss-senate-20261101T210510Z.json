@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "COYNTOSS",
+  "sourceUrl": "https://chasecoyne.com/senate",
+  "retrieval": {
+    "retrievedAtUtc": "2026-11-01T21:05:10.6334146Z",
+    "cachePolicy": "Fresh direct first-party HTTP retrieval",
+    "representation": "DIRECT_RESPONSE_BODY_REENCODED_UTF8_NOT_HTTP_WIRE_BYTES"
+  },
+  "publisherEdition": {
+    "displayedUpdate": "November 1, 2026",
+    "modelVersion": "v0.53.1",
+    "snapshotId": "RETRO-20261101-R03",
+    "modelInputsThrough": "November 1, 2026"
+  },
+  "observations": {
+    "senateDemocraticControlPct": 70.11,
+    "senateRepublicanControlPct": 29.89,
+    "senateDemocraticSeats": 51.603,
+    "senateDemocraticSeatsDisplayedRounded": 51.60,
+    "senateRepublicanSeatsDisplayedRounded": 48.40,
+    "senateSeatType": "expected caucus",
+    "senateMedianDemocraticSeats": 52,
+    "senateInterval80DemocraticSeats": [49, 54]
+  },
+  "selectedRenderedText": [
+    "Source URL: https://chasecoyne.com/senate",
+    "Page title: 2026 Senate Forecast | COYNTOSS",
+    "2026 SENATE FORECAST · v0.53.1",
+    "Updated November 1, 2026 · race estimates and control simulation refreshed; model inputs through November 1, 2026",
+    "Senate control · D / R 70.11% · 29.89%",
+    "Expected Senate seats D 51.60 · R 48.40 median 52; 10th–90th percentile 49–54",
+    "Frozen simulation exact expected Democratic seats: 51.603",
+    "Snapshot: RETRO-20261101-R03",
+    "Forecast update: Seven new Senate polls",
+    "Change from prior release: Democratic control 69.82% to 70.11%; expected Democratic seats 51.581 to 51.603"
+  ],
+  "custody": {
+    "directHttpStatus": 200,
+    "directResponseUtf8Bytes": 59650,
+    "directResponseSha256": "8675df20717e9215576389789178fc8f4ccc6d8c04e30ad51597306d4a397933",
+    "privateRawCapture": ".election-refresh/raw/challenger-coyntoss-senate-20261101T210509Z.html",
+    "selectedTextUtf8Bytes": 590,
+    "selectedTextSha256": "2ed1e61ff745fa9fe2b7cd593438ff7b339b7594815b957fb86ff60e21e61e14",
+    "hashConstruction": "selectedRenderedText joined with LF and no trailing LF"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "senateDemocraticControlPct": {
+      "from": 69.82,
+      "to": 70.11
+    },
+    "senateDemocraticSeats": {
+      "from": 51.581,
+      "to": 51.603
+    },
+    "house": "NO_NUMERICAL_TOP_LINE_CHANGE_ADMITTED"
+  },
+  "kahrelumInputReview": {
+    "housePublisherEdition": "October 23, 2026",
+    "senatePublisherEdition": "October 20, 2026",
+    "parsedHouseDistrictRatingInputsChanged": false,
+    "parsedSenateRaceRatingInputsChanged": false,
+    "expectedSeatAndControlOutputsChanged": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  },
+  "admissionNote": "The first-party Nov. 1 Senate release raises Democratic-caucus control from 69.82% to 70.11% and exact expected Democratic-caucus seats from 51.581 to 51.603 after seven new Senate polls. COYNTOSS House and Senate editions remain separate. KAHRELUM rating inputs did not change, so no new KAHRELUM probability edition was created."
+}
