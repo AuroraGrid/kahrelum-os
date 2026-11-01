@@ -147,6 +147,13 @@ const REQUIRED_REWRITES = {
 };
 const DIVISION_ROUTES = ['/assurance', '/investigations', '/forecasting', '/digital-id', '/one', '/os'];
 const RELEASE_PROFILES = {
+  investigations: {
+    // Only the governed investigations document is replaced. Keep existing Firebase assets,
+    // APIs, forecast locks, CSS and homepage as currently deployed, even if local copies are stale.
+    overlayFiles: ['investigations.html'],
+    sitemapRoutes: ['/investigations'],
+    includeHomepage: false,
+  },
   portraits: {
     overlayFiles: [
       'sports.html', 'sports/module-registry.json', ...NBA_DIRECTORY_FILES,
@@ -517,6 +524,10 @@ async function buildOverlay(live, profileName) {
   addBlob(desired, blobs, '/sitemap.xml', updateSitemap(sitemap, profile.sitemapRoutes));
 
   const changedPaths = Object.keys(desired).filter((item) => live.fileMap[item] !== desired[item]).sort();
+  if (profileName === 'investigations' &&
+      changedPaths.some((item) => !['/investigations.html', '/sitemap.xml'].includes(item))) {
+    fail('Investigations release attempted to replace an unrelated live Firebase path.');
+  }
   const removedPaths = Object.keys(live.fileMap).filter((item) => !(item in desired));
   if (removedPaths.length) fail(`Overlay attempted to remove live paths: ${removedPaths.join(', ')}`);
 

@@ -43,6 +43,18 @@ Use the guarded release wrapper from an authenticated deployment workstation:
 
 The former `-FirebaseRoot ... -Deploy` directory workflow is intentionally blocked because a stale local directory can delete production-only files. Preview receipts are local, ignored files under `.firebase-deploy/`; they contain file hashes and release metadata, not credentials.
 
+### Scoped Investigations update (without stale Firebase overlays)
+
+For an Investigations-only publication, **do not use** the broad `full` or `publishing` release profiles. Those include unrelated content that may be older than the deployed Firebase state. Use the dedicated `investigations` profile:
+
+```powershell
+.\scripts\deploy-unified-firebase.ps1 -Plan -Profile investigations
+.\scripts\deploy-unified-firebase.ps1 -Preview -Profile investigations
+.\scripts\deploy-unified-firebase.ps1 -Promote -Profile investigations
+```
+
+This profile overlays only `/investigations.html` (and its existing sitemap entry if necessary), keeps live assets/API files and Hosting configuration, verifies all routes and API hashes, and refuses promotion if the live Firebase version changed after preview. The case desk is based on the recovered Oct 30 historical register (56 families plus four leads) and bounded Oct 31/Nov 1 evidence logs; it does **not** claim 60 completed investigations or ten forecast wins.
+
 ## Research & investigations
 
 KAHRELUM now includes a public **AI accountability research portfolio** demonstrating documentary research, claim/evidence separation, counterevidence, uncertainty, falsifiers, and open reporting questions.
