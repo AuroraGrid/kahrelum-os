@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-11-01T18:41:45.0717888Z",
+  "checkedAtUtc": "2026-11-01T19:45:01.3529877Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -215,16 +215,20 @@
       "edition": "2026 Forecast",
       "sourceUrl": "https://onpointpolitics.us/forecast",
       "houseDemocraticControlPct": 98.0,
-      "senateDemocraticControlPct": 87.0,
+      "senateDemocraticControlPct": 88.0,
       "houseDemocraticSeats": 253.0,
       "houseSeatType": "average",
       "senateDemocraticSeats": 54.6,
       "senateSeatType": "average",
-      "sourceEdition": "Updated Oct. 31; retrieved Oct. 31 12:54 UTC",
+      "sourceEdition": "Updated Nov. 1; retrieved Nov. 1 19:45 UTC; precise source update time not exposed",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "retrievedAtUtc": "2026-10-31T12:54:15.891Z",
-      "rawSha256": "19df03abeab3de91f9380aed5da7e21cbe3debca0cf6d10adf8d1e593e7f54e2",
-      "note": "The first-party Oct. 31 page reports 2,000 simulations, 98% Democratic House control and 87% Democratic Senate control. Its forecast-in-brief text reports 253 average Democratic House seats, while the main summary separately displays 251 Democratic seats; the detailed Senate panel reports 54.6 average Democratic seats while rounded text displays 55. These distinct displays are preserved rather than conflated."
+      "retrievedAtUtc": "2026-11-01T19:45:01.3529877Z",
+      "custodyRepresentation": "FIRST_PARTY_HTTP_RESPONSE_UTF8_NOT_EXACT_WIRE_BYTES",
+      "custodyReceiptSha256": "86a9764e3036f7740422288335a6bd26e62b14960c7185507df51ced560d09fe",
+      "directHttpStatus": 200,
+      "directResponseUtf8Bytes": 958838,
+      "directResponseSha256": "16ee283f2479a1ee7ab895b2bad065098b8cc7014614e0693f353bac724d7cce",
+      "note": "The first-party Nov. 1 page raises Democratic Senate control from 87% to 88% while retaining 98% Democratic House control, 253 average Democratic House seats in the forecast-in-brief text and 54.6 average Democratic Senate seats in the detailed panel. The page separately displays 251 Democratic House seats in its summary, 246 favored Democratic House seats in its chamber card and a rounded 55 Democratic Senate seats; these distinct statistics remain explicit rather than conflated. The source exposes no precise update time, so the prospective Nov. 1 19:45 UTC retrieval is the custody time. The KAHRELUM rating inputs parsed by scripts/refresh-election-projections.py remain unchanged, so no new KAHRELUM probability edition was created."
     },
     {
       "provider": "VotePredictor",

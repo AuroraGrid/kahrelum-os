@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "On Point Politics",
+  "sourceUrl": "https://onpointpolitics.us/forecast",
+  "retrieval": {
+    "retrievedAtUtc": "2026-11-01T19:45:01.3529877Z",
+    "cachePolicy": "Fresh first-party HTTPS retrieval",
+    "representation": "FIRST_PARTY_HTTP_RESPONSE_UTF8_NOT_EXACT_WIRE_BYTES"
+  },
+  "publisherEdition": {
+    "displayedUpdate": "Nov. 1, 2026",
+    "preciseUpdateTimeExposed": false,
+    "httpDate": "Sun, 01 Nov 2026 20:21:32 GMT",
+    "httpDateUse": "PRESERVED_BUT_NOT_USED_AS_PUBLICATION_OR_RETRIEVAL_TIME"
+  },
+  "observations": {
+    "houseDemocraticControlPct": 98.0,
+    "houseDemocraticSeats": 253.0,
+    "houseSeatType": "average; forecast-in-brief",
+    "senateDemocraticControlPct": 88.0,
+    "senateDemocraticSeats": 54.6,
+    "senateSeatType": "average; detailed Senate panel"
+  },
+  "distinctDisplays": {
+    "houseForecastInBriefAverageDemocraticSeats": 253.0,
+    "houseSummaryDemocraticSeats": 251.0,
+    "houseFavoredSeatCardDemocraticSeats": 246.0,
+    "senateDetailedAverageDemocraticSeats": 54.6,
+    "senateRoundedTextDemocraticSeats": 55.0
+  },
+  "custody": {
+    "httpStatus": 200,
+    "utf8Bytes": 958838,
+    "sha256": "16ee283f2479a1ee7ab895b2bad065098b8cc7014614e0693f353bac724d7cce"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "houseDemocraticControlPct": "UNCHANGED",
+    "houseDemocraticSeats": "UNCHANGED",
+    "senateDemocraticControlPct": {
+      "from": 87.0,
+      "to": 88.0
+    },
+    "senateDemocraticSeats": "UNCHANGED"
+  },
+  "kahrelumInputReview": {
+    "housePublisherEdition": "October 23, 2026",
+    "senatePublisherEdition": "October 20, 2026",
+    "parsedHouseDistrictInputsChanged": false,
+    "parsedSenateRaceInputsChanged": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  },
+  "admissionNote": "The first-party Nov. 1 page raises Democratic Senate control from 87% to 88%. House control, the forecast-in-brief House average and the detailed Senate average remain unchanged. Distinct seat displays are preserved without conflation. The first-party page exposes no precise update time, so the prospective retrieval time is the custody time."
+}
