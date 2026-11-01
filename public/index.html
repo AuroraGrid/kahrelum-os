@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111923">
+  <meta name="description" content="Lineups & Lines: independent fantasy draft research, timestamped bookmaker odds comparison and price-aware straight-bet analysis.">
+  <title>Lineups &amp; Lines | Odds, Drafts &amp; Research</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Lineups and Lines homepage"><span class="brand-icon">L<span class="brand-slash">/</span>L</span><span class="brand-name">LINEUPS <span>&amp;</span> LINES<small>THE INDEPENDENT SPORTS DESK</small></span></a>
+      <div class="topbar-end"><span class="data-indicator" id="serviceStatus"><span class="indicator-dot"></span> Checking feeds</span><a class="text-link" href="#sources">Data sources</a></div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-copy"><p class="eyebrow">SPORTS INTELLIGENCE / V0.1</p><h1>Every line has<br><em>a price.</em></h1><p>US and international bookmaker snapshots, fantasy draft intelligence, and an edge calculator that checks the ticket price before it calls anything a bet.</p><div class="hero-tags"><span>NO PARLAYS</span><span>TIMESTAMPED SOURCES</span><span>NO INVENTED ODDS</span></div></div>
+        <div class="hero-aside"><span class="micro-label">THE RULEBOOK</span><div class="hero-stat"><strong>52.38<span>%</span></strong><span>Break-even at −110</span></div><div class="hero-rule"></div><div class="hero-stat lower"><strong>2<span> pp</span></strong><span>Minimum edge above the ticket's break-even probability</span></div><div class="aside-caption">Plus ≥3% modeled expected ROI and independent review for any nonzero stake cap.</div></div>
+      </section>
+      <nav class="desk-tabs" aria-label="Research tools">
+        <button class="tab active" type="button" data-view="odds" aria-selected="true">01 <span>Odds Board</span></button>
+        <button class="tab" type="button" data-view="drafts" aria-selected="false">02 <span>Fantasy Drafts</span></button>
+        <button class="tab" type="button" data-view="edge" aria-selected="false">03 <span>Edge Lab</span></button>
+        <button class="tab" type="button" data-view="sources" aria-selected="false">04 <span>Source Register</span></button>
+      </nav>
+      <section id="odds" class="panel view active-view" aria-label="Odds comparison board">
+        <div class="section-heading"><div><p class="eyebrow">MARKET MONITOR / QUOTE SNAPSHOTS</p><h2>Odds Board</h2><p>Compare reported prices. Free-tier requests are quota-limited and cached, not streaming.</p></div><span class="status-pill">READ-ONLY · NO WAGERS</span></div>
+        <form id="oddsForm" class="filters" autocomplete="off">
+          <label for="sportSelect">League<select id="sportSelect" name="sport"><option value="americanfootball_nfl">NFL</option><option value="americanfootball_ncaaf">NCAA Football</option><option value="basketball_nba">NBA</option><option value="basketball_ncaab">NCAA Basketball</option><option value="icehockey_nhl">NHL</option><option value="baseball_mlb">MLB</option><option value="soccer_epl">Premier League</option><option value="soccer_uefa_champs_league">Champions League</option><option value="soccer_spain_la_liga">La Liga</option><option value="soccer_germany_bundesliga">Bundesliga</option><option value="aussierules_afl">AFL</option><option value="rugby_league_nrl">NRL</option><option value="cricket_ipl">IPL</option></select></label>
+          <label for="regionSelect">Market region<select id="regionSelect" name="region"><option value="us">US</option><option value="us2">US additional</option><option value="uk">United Kingdom</option><option value="eu">Europe</option><option value="au">Australia</option><option value="ca">Canada</option><option value="fr">France</option><option value="se">Sweden</option><option value="fi">Finland</option><option value="us_dfs">US Daily Fantasy</option></select></label>
+          <label for="marketSelect">Market<select id="marketSelect" name="market"><option value="h2h">Moneyline</option><option value="spreads">Spread</option><option value="totals">Total</option></select></label>
+          <button id="refreshOdds" class="action-button" type="submit">Fetch verified quotes <span aria-hidden="true">↗</span></button>
+        </form>
+        <div class="observation-bar"><span id="oddsStatus" role="status">No odds loaded. Connect a provider key to request real quotes.</span><span id="oddsTime">No observation timestamp</span></div>
+        <div id="oddsResults" class="results"><div class="empty"><span class="empty-mark">∅</span><h3>No odds loaded</h3><p>The board never inserts example prices into a real-data view. Select a league, region and market to request a timestamped snapshot.</p></div></div>
+        <p class="small-note">Some sportsbooks and markets require a paid data tier. A game's scheduled start time does not prove a bookmaker's market is open. Lines may move between snapshots and ticket placement.</p>
+      </section>
+      <section id="drafts" class="panel view" aria-label="Fantasy drafts" hidden>
+        <div class="section-heading"><div><p class="eyebrow">FANTASY / READ-ONLY</p><h2>Fantasy Drafts</h2><p>Look up public Sleeper NFL league drafts and selections by league ID. No changes to rosters, waivers or drafts.</p></div><span class="status-pill">SLEEPER NONCOMMERCIAL API</span></div>
+        <form id="draftForm" class="filters draft-filter"><label for="leagueId">Sleeper league ID<input id="leagueId" name="league_id" inputmode="numeric" pattern="[0-9]{5,20}" maxlength="20" placeholder="Numeric league ID" required></label><button id="fetchDrafts" class="action-button" type="submit">Read draft records <span aria-hidden="true">↗</span></button></form>
+        <div class="observation-bar"><span id="draftStatus" role="status">Awaiting a Sleeper league ID.</span><span id="draftTime">Source: official Sleeper API</span></div>
+        <div id="draftResults" class="results"><div class="empty"><span class="empty-mark">#</span><h3>Draft records on request</h3><p>Available for public leagues through Sleeper's documented API. Yahoo requires application approval; ESPN is not connected.</p></div></div>
+      </section>
+      <section id="edge" class="panel view" aria-label="Expected value calculator" hidden>
+        <div class="section-heading"><div><p class="eyebrow">DECISION RULES / PRICE-ADJUSTED</p><h2>Edge Lab</h2><p>Model input plus an actual American price. Calculates theoretical edge, never executes a wager.</p></div><span class="status-pill">STRAIGHT BETS ONLY</span></div>
+        <div class="lab-grid"><form id="edgeForm" class="lab-form"><label for="probabilityInput">Your modeled win probability (%)<input id="probabilityInput" inputmode="decimal" type="number" step="0.01" min="0.01" max="100" value="55" required></label><label for="oddsInput">Exact ticket odds (American)<input id="oddsInput" inputmode="numeric" type="number" step="1" value="-110" required></label><button id="calculateEdge" class="action-button" type="submit">Analyze price <span aria-hidden="true">↗</span></button><p class="small-note">User-entered probabilities are not independently reviewed. Recommended stake remains $0 here until a documented external review is integrated.</p></form><div id="edgeResult" class="lab-result" aria-live="polite"><p class="micro-label">ANALYSIS</p><h3>Ready for a price check.</h3><p>Enter a forecast and the exact ticket price.</p></div></div>
+        <div class="tier-strip" aria-label="Policy tiers"><div><b>52.5–54.49%</b><span>FRIENDS / INFO</span></div><div><b>54.5–54.99%</b><span>FRIENDS · SLIGHT</span></div><div><b>55–57.99%</b><span>STRONG OPTIONAL · $25 CAP</span></div><div><b>58%+</b><span>CERTIFIED · $50 CAP</span></div></div>
+      </section>
+      <section id="sources" class="panel view" aria-label="Sources and licensing" hidden>
+        <div class="section-heading"><div><p class="eyebrow">PROVENANCE / SERVICE REGISTRY</p><h2>Source Register</h2><p>Provider support is not the same as active connectivity. No source is described as live until its returned timestamp has been read.</p></div><span class="status-pill">AUDIT FIRST</span></div>
+        <div class="sources-grid"><article><span class="source-code">01 / ODDS</span><h3>The Odds API</h3><p>US, US2, UK, EU, AU and other supported bookmaker regions. Free access is credit-limited. The registered key and regional entitlements determine real coverage.</p><p class="micro-detail">STATUS: <strong id="oddsProviderStatus">Not connected</strong></p><a href="https://the-odds-api.com/" target="_blank" rel="noopener noreferrer">Official API ↗</a></article><article><span class="source-code">02 / DRAFTS</span><h3>Sleeper</h3><p>Public read-only NFL league, drafts and picks data. Free noncommercial use. A commercial product requires a separate licensing discussion.</p><p class="micro-detail">STATUS: <strong>Public read-only</strong></p><a href="https://docs.sleeper.com/" target="_blank" rel="noopener noreferrer">Official docs ↗</a></article><article><span class="source-code">03 / LEAGUES</span><h3>Yahoo Fantasy</h3><p>Official league, roster and player access, contingent on Yahoo developer approval and per-user OAuth permissions.</p><p class="micro-detail">STATUS: <strong>Approval required</strong></p><a href="https://sports.yahoo.com/developer/" target="_blank" rel="noopener noreferrer">Developer portal ↗</a></article><article><span class="source-code">04 / OTHER</span><h3>Bookmaker direct feeds</h3><p>DraftKings, FanDuel, Pinnacle and international books are discovered via licensed aggregator coverage when available, not by scraping authentication-protected sites.</p><p class="micro-detail">STATUS: <strong>Provider-dependent</strong></p><a href="https://the-odds-api.com/sports-odds-data/bookmaker-apis.html" target="_blank" rel="noopener noreferrer">Bookmaker coverage ↗</a></article></div>
+        <div class="policy-note"><b>Data policy</b><p>No fabricated odds, no historical opening-line claims without a captured first observation, no backdated forecast locks, no ticket placement, and no raw-feed resale. A cheap-looking quote is not necessarily available in your jurisdiction or account.</p></div>
+      </section>
+    </main>
+    <footer><span>© 2026 Lineups &amp; Lines · Independent analysis</span><span>Informational research only · Check local law and final sportsbook terms · Not streaming · Not affiliated with bookmakers</span></footer>
+  </div>
+</body>
+</html>

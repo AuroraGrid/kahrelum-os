@@ -1,0 +1,12 @@
+{
+  "name": "lineups-and-lines",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Separate Cloudflare Pages sports odds and fantasy draft desk",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "check": "npm test && node --check functions/api/odds.js && node --check functions/api/drafts.js && node --check public/app.js"
+  },
+  "engines": {"node": ">=20"}
+}
