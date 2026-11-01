@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-11-01T16:01:19.9605306Z",
+  "checkedAtUtc": "2026-11-01T16:26:04.3694925Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -103,11 +103,11 @@
       "houseSeatType": "expected",
       "senateDemocraticSeats": 52.0,
       "senateSeatType": "expected",
-      "sourceEdition": "Updated Nov. 1, 10:26 AM EST; retrieved Nov. 1 15:28 UTC",
+      "sourceEdition": "Updated Nov. 1, 11:26 AM EST; retrieved Nov. 1 16:26 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "retrievedAtUtc": "2026-11-01T15:28:01.5575473Z",
-      "rawSha256": "a7fa4d69c4880c4a3f88d93334670a0ca4eee918a20075d4cecb319feb266f09",
-      "note": "The displayed Nov. 1 10:26 AM EST edition retains 92% Democratic House control, 237 expected Democratic House seats and 52 expected Democratic Senate seats, while Democratic Senate control moves from the previously admitted 69% to 68%. The new edition's Senate chamber card, narrative and distribution agree at 68%, resolving the prior edition's 69%/68% internal conflict. A separate narrative still reports a 238-seat Democratic House central estimate while the primary chamber card reports expected 237; those distinct House statistic types remain explicit."
+      "retrievedAtUtc": "2026-11-01T16:26:04.3694925Z",
+      "rawSha256": "74296f2c9d0cfa229a86099d4f2846463bf385434ad77ddb93ecf13f88ae09f9",
+      "note": "The displayed Nov. 1 11:26 AM EST edition retains 92% Democratic House control, 68% Democratic Senate control, 237 expected Democratic House seats and 52 expected Democratic Senate seats. The new edition is preserved without manufacturing a numerical change. A separate narrative still reports a 238-seat Democratic House central estimate while the primary chamber card reports expected 237; those distinct House statistic types remain explicit."
     },
     {
       "provider": "Vote-Scope",
@@ -145,17 +145,17 @@
       "provider": "Datum Signals",
       "edition": "Main",
       "sourceUrl": "https://datumsignals.com/",
-      "houseDemocraticControlPct": 70.0,
+      "houseDemocraticControlPct": 71.0,
       "senateDemocraticControlPct": 64.0,
       "houseDemocraticSeats": null,
       "houseSeatType": null,
       "senateDemocraticSeats": null,
       "senateSeatType": null,
-      "sourceEdition": "Updated Nov. 1, 4:01 PM UTC; rendered retrieval Nov. 1 16:01 UTC",
+      "sourceEdition": "Updated Nov. 1, 4:01 PM UTC; raw-markup verification Nov. 1 16:24 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "retrievedAtUtc": "2026-11-01T16:01:19.9605306Z",
-      "custodyReceiptSha256": "f5d5ac4b4857ca230fbea1a0b1cefa1539623904ee5a7c3d5432a51b612b1647",
-      "note": "The rendered first-party Nov. 1 4:01 PM UTC edition displays 70% Democratic House control and 64% Democratic Senate control, moving from the separately admitted 71% House and 63% Senate observation retrieved at 14:15 UTC. The update label and numerical fields were independently repeated after 16:01 UTC, so the prospective custody time is not backdated. Direct raw HTTP remained blocked by TLS transport failure and supplied no source values. Private rendered-observation receipt SHA256: f5d5ac4b4857ca230fbea1a0b1cefa1539623904ee5a7c3d5432a51b612b1647. Displayed favored and toss-up race counts are not compatible expected full-chamber seat totals."
+      "retrievedAtUtc": "2026-11-01T16:24:59.1611380Z",
+      "custodyReceiptSha256": "6d205181f3b4c4b362e81b30fed57ea42203a3d7de55320d336124117816519e",
+      "note": "A fresh first-party public retrieval and maxAge=0 raw-markup scrape verify 71% Democratic House control and 64% Democratic Senate control. The raw markup encodes these values as the House and Senate data-target attributes, resolving misleading unhydrated 0% placeholders. The separately preserved 16:01 UTC capture reported 70% House and 64% Senate; this prospective 16:24 UTC admission is not backdated. Direct unattended HTTP and interactive browser attempts reset the connection and supplied no values. Private selected-field custody receipt SHA256: 6d205181f3b4c4b362e81b30fed57ea42203a3d7de55320d336124117816519e. Displayed favored and toss-up race counts are not compatible expected full-chamber seat totals."
     },
     {
       "provider": "Fred Cornell independent",
