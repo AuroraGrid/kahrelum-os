@@ -118,6 +118,43 @@ test('version lifecycle passes project and site separately to the installed Fire
 });
 
 
+test('version lifecycle supports the two-argument Firebase CLI API installed by the guarded publisher', async () => {
+  const script = read('scripts/firebase-overlay-release.cjs');
+  const definitions = script.slice(0, script.lastIndexOf('\nmain().catch'));
+  const createPreview = new Function('require', '__dirname', 'process', 'fetch', 'Buffer',
+    definitions + '\nreturn createPreview;')(require, path.join(root, 'scripts'), process,
+      async () => { throw new Error('No network access in this lifecycle test'); }, Buffer);
+  const stop = new Error('Stop after observing finalization arguments');
+  const config = {cleanUrls: true};
+  const version = 'projects/806087933597/sites/kahrelum-public-hosting/versions/test';
+  const calls = [];
+  const hosting = {
+    async createVersion(site, body) {
+      calls.push(['create', site, body]);
+      return version;
+    },
+    async updateVersion(site, id, body) {
+      calls.push(['finalize', site, id, body]);
+      throw stop;
+    },
+  };
+  const client = { async post(url, body) {
+    assert.equal(url, '/' + version + ':populateFiles');
+    assert.deepEqual(body.files, {'/investigations.html': 'new-hash'});
+    return {body: {uploadRequiredHashes: []}};
+  } };
+  await assert.rejects(createPreview(hosting, client, {config, version: {name: 'projects/806087933597/sites/kahrelum-public-hosting/versions/base'}},
+    {desired: {'/investigations.html': 'new-hash'}, changedPaths: ['/investigations.html']},
+    'investigations', {commit: 'test', clean: true}), error => error === stop);
+  assert.deepEqual(calls, [
+    ['create', 'kahrelum-public-hosting', {
+      config, labels: {'deployment-tool': 'kahrelum-safe-overlay'},
+    }],
+    ['finalize', 'kahrelum-public-hosting', 'test', {status: 'FINALIZED'}],
+  ]);
+});
+
+
 test('project-name aliases canonicalize to the verified project number without accepting another project or site', () => {
   const script = read('scripts/firebase-overlay-release.cjs');
   const definitions = script.slice(0, script.lastIndexOf('\nmain().catch'));

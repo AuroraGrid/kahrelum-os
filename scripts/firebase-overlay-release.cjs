@@ -646,10 +646,22 @@ function canonicalVersionName(versionName, liveVersionName) {
   return `projects/${live[1]}/sites/${SITE}/versions/${candidate[3]}`;
 }
 
+function createHostingVersion(hosting, version) {
+  return hosting.createVersion.length >= 3
+    ? hosting.createVersion(SITE, SITE, version)
+    : hosting.createVersion(SITE, version);
+}
+
+function updateHostingVersion(hosting, versionId, version) {
+  return hosting.updateVersion.length >= 4
+    ? hosting.updateVersion(SITE, SITE, versionId, version)
+    : hosting.updateVersion(SITE, versionId, version);
+}
+
 async function createPreview(hosting, client, live, overlay, profileName, sourceState) {
   if (!overlay.changedPaths.length) fail('The overlay is already identical to production; no preview release is needed.');
   const channelId = `${CHANNEL_PREFIX}-${stableMapHash(overlay.desired).slice(0, 12)}`;
-  const versionName = canonicalVersionName(await hosting.createVersion(SITE, SITE, {
+  const versionName = canonicalVersionName(await createHostingVersion(hosting, {
     config: live.config,
     labels: { 'deployment-tool': 'kahrelum-safe-overlay' },
   }), live.version.name);
@@ -665,7 +677,7 @@ async function createPreview(hosting, client, live, overlay, profileName, source
   }
 
   const versionId = versionName.split('/').pop();
-  const finalized = await hosting.updateVersion(SITE, SITE, versionId, { status: 'FINALIZED' });
+  const finalized = await updateHostingVersion(hosting, versionId, { status: 'FINALIZED' });
   if (finalized.status !== 'FINALIZED') fail('Preview version did not finalize.');
   const finalizedFiles = await listVersionFiles(client, versionName);
   const finalizedMap = Object.fromEntries(finalizedFiles.map((item) => [item.path, item.hash]));
