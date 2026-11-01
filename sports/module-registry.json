@@ -81,6 +81,18 @@
       "forecastRecords": 0,
       "liveMonitoring": false,
       "policy": "Dated roster and photo directory only. NBA_TRADES remains a separate inactive forecasting/transaction module."
+    },
+    {
+      "id": "SPORTS_BETTING_DECISION_RULES",
+      "status": "POLICY_ONLY_NO_LIVE_ODDS",
+      "eventNamespace": "SPORTS-BET",
+      "publicRoute": "/sports#betting",
+      "dataFile": "sports/betting-policy.json",
+      "classifier": "scripts/betting_tiers.py",
+      "operationalSources": 0,
+      "publicRecords": 0,
+      "betsPlaced": 0,
+      "policy": "Straight bets only. FRIENDS informational; exact ticket price, two-point edge, three-percent ROI, and independent review before nonzero stake cap. No automatic betting."
     }
   ]
 }

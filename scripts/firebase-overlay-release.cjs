@@ -105,7 +105,7 @@ const OVERLAY_FILES = [
   'sports-desk.css',
   'sports-article.css',
   'sports.html',
-  'sports/module-registry.json',
+  'sports/module-registry.json', 'sports/betting-policy.json',
   'nfl/film-room.html',
   ...NBA_DIRECTORY_FILES,
   'sports/mlb.html',
@@ -149,7 +149,7 @@ const DIVISION_ROUTES = ['/assurance', '/investigations', '/forecasting', '/digi
 const RELEASE_PROFILES = {
   portraits: {
     overlayFiles: [
-      'sports.html', 'sports/module-registry.json', ...NBA_DIRECTORY_FILES,
+      'sports.html', 'sports/module-registry.json', 'sports/betting-policy.json', ...NBA_DIRECTORY_FILES,
       'nfl/trades.html', 'nfl/trades.js', 'nfl/trade-board.json',
       'nfl/desk-live.json', 'nfl/current-forecasts.json', 'nfl/player-portraits.json',
       'nfl/forecast-ledger.json', 'nfl/deadline-audit.json',
@@ -207,7 +207,7 @@ const RELEASE_PROFILES = {
       'nfl/review-queue.json', 'nfl/refresh-status.json', 'nfl/public-feed.json',
       'nfl/source-health.json',
       'nfl/forecast-ledger.json', 'nfl/deadline-audit.json', 'nfl/publishing.json',
-      'sports-desk.css', 'sports-article.css', 'sports.html', 'sports/module-registry.json', 'nfl/film-room.html',
+      'sports-desk.css', 'sports-article.css', 'sports.html', 'sports/module-registry.json', 'sports/betting-policy.json', 'nfl/film-room.html',
       ...NBA_DIRECTORY_FILES, 'sports/mlb.html', 'sports/nhl.html',
       'assets/social/og-sports.png', 'assets/social/og-nfl-trades.png',
       'assets/social/og-nfl-analysis.png', 'assets/social/og-nfl-film-room.png',
@@ -222,7 +222,7 @@ const RELEASE_PROFILES = {
   },
   publishing: {
     overlayFiles: [
-      'forecasting.html', 'investigations.html', 'election-challenge.html', 'sports-desk.css', 'sports-article.css', 'sports.html', 'sports/module-registry.json',
+      'forecasting.html', 'investigations.html', 'election-challenge.html', 'sports-desk.css', 'sports-article.css', 'sports.html', 'sports/module-registry.json', 'sports/betting-policy.json',
       'election/fresh-run-checkpoint.json',
       'nfl/trades.html', 'nfl/trades.js', 'nfl/desk-live.json', 'nfl/current-forecasts.json', 'nfl/player-portraits.json', 'nfl/analysis.html', 'nfl/film-room.html', ...NBA_DIRECTORY_FILES, 'sports/mlb.html',
       'sports/nhl.html', 'nfl/weekly-brief.html', 'insights.css', 'insights.html',
