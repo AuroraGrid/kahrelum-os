@@ -270,7 +270,7 @@ class PublishingSurfaceTests(unittest.TestCase):
         coyntoss = next(row for row in challengers["records"] if row["provider"] == "COYNTOSS")
         self.assertEqual((coyntoss["houseDemocraticControlPct"], coyntoss["senateDemocraticControlPct"], coyntoss["houseDemocraticSeats"], coyntoss["senateDemocraticSeats"]), (83.85, 69.82, 238.8, 51.581))
         electindex = next(row for row in challengers["records"] if row["provider"] == "ElectIndex")
-        self.assertEqual((electindex["houseDemocraticControlPct"], electindex["senateDemocraticControlPct"], electindex["houseDemocraticSeats"], electindex["senateDemocraticSeats"]), (92.1, 72.7, 247.6, 52.8))
+        self.assertEqual((electindex["houseDemocraticControlPct"], electindex["senateDemocraticControlPct"], electindex["houseDemocraticSeats"], electindex["senateDemocraticSeats"]), (91.7, 72.9, 247.4, 52.8))
         new_numeric = {row["provider"]: row for row in challengers["records"] if row["provider"] in {"Dave Manuel", "On Point Politics", "VotePredictor", "Midterm Forecast"}}
         self.assertEqual(set(new_numeric), {"Dave Manuel", "On Point Politics", "VotePredictor", "Midterm Forecast"})
         self.assertEqual((new_numeric["Dave Manuel"]["houseDemocraticControlPct"], new_numeric["Dave Manuel"]["senateDemocraticControlPct"]), (93.0, 70.0))
