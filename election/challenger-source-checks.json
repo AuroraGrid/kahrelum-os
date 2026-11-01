@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-11-01T17:57:13.7925373Z",
+  "checkedAtUtc": "2026-11-01T18:41:45.0717888Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -250,22 +250,23 @@
       "provider": "Midterm Forecast",
       "edition": "2026 Senate and House",
       "sourceUrl": "https://midtermforecast.com/",
-      "houseDemocraticControlPct": 90.0,
+      "houseDemocraticControlPct": 91.0,
       "senateDemocraticControlPct": 73.0,
       "houseDemocraticSeats": 236.0,
       "houseSeatType": "median",
       "senateDemocraticSeats": 53.0,
       "senateSeatType": "median Democratic seats",
-      "sourceEdition": "Displayed combined House and Senate model run Nov. 1, 10:39 AM ET; polls through Nov. 1; retrieved Nov. 1 15:14 UTC",
+      "sourceEdition": "Displayed House and Senate model run Nov. 1, 1:40 PM ET; polls through Nov. 1; retrieved Nov. 1 18:41 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "retrievedAtUtc": "2026-11-01T15:14:17.2256845Z",
-      "custodyRepresentation": "STRUCTURED_FIRST_PARTY_RENDERED_TEXT_AND_ARITHMETIC_NOT_RAW_HTML",
-      "custodySha256": "454f2b83d8223372e72b312505e91f05295692b264ce01964a109c2338a664eb",
-      "custodyUtf8Bytes": 1556,
+      "retrievedAtUtc": "2026-11-01T18:41:45.0717888Z",
+      "custodyRepresentation": "FIRST_PARTY_HTTP_RESPONSE_UTF8_NOT_EXACT_WIRE_BYTES",
+      "custodyReceiptSha256": "c9ed47165a29631d378fa00d148319ccf07758cce0714ed9fa54324dfcb03017",
       "directHttpStatus": 200,
-      "directResponseUtf8Bytes": 22971,
-      "directResponseSha256": "f314357abd3e9ad97f1203d7d0ec6ddcfe6ff85f8edb873aa2adfee0b3dd2713",
-      "note": "The displayed Nov. 1 10:39 AM ET combined run decreased Democratic House control from 91% to 90%, retained Democratic Senate control at 73%, and retained the 236-seat Democratic House median and 53-seat Democratic Senate median. House control is verified from the displayed joint outcomes: 72% Democrats win both plus 18% Democratic House and Republican Senate. Senate control is likewise 72% plus the 1% Republican House and Democratic Senate outcome. Independents count on the Democratic side in the Senate measure. House and Senate statistic types remain distinct from expected-seat measures. The displayed source time is retained as source metadata; the prospective Nov. 1 15:14 UTC retrieval is the custody time."
+      "houseResponseUtf8Bytes": 93835,
+      "houseResponseSha256": "bf2bea304f05af3cd675cdaa2de028fcc995ba5d7bcdf7510e1dfbfdb14dac00",
+      "senateResponseUtf8Bytes": 35820,
+      "senateResponseSha256": "c306800cd331293f5841e3f270a5372215e55e599b6dc0068aec20eca0a79f76",
+      "note": "The displayed Nov. 1 1:40 PM ET run raises Democratic House control from 90% to 91% while retaining the 236-seat Democratic House median. Democratic Senate control remains 73% and the Senate median remains 53 Democratic seats with independents included on the Democratic side for this edition. House and Senate statistic types remain distinct from expected-seat measures. Both pages were retrieved prospectively after the displayed run time; exact UTF-8 response hashes are preserved in the private receipt. No KAHRELUM source input changed, so no new KAHRELUM probability edition was created."
     }
   ]
 }

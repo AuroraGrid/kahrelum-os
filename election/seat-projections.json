@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "edition": "KAH-US-2026-20261031T181057Z with challenger source checks through 2026-11-01T17:57:13Z",
+  "edition": "KAH-US-2026-20261031T181057Z with challenger source checks through 2026-11-01T18:41:45Z",
   "comparisonStatus": "DESCRIPTIVE_ONLY_UNMATCHED_CUTOFFS_AND_SEAT_TYPES",
-  "sourceObservationFileSha256": "07b2e67d6f180c598740ddfa9996f87bf7cfaa64f5c35e9d2125485f3bd59f9a",
+  "sourceObservationFileSha256": "8fb77fec21d7545704b3941d19e5ec7d5d1ec0c3358e95dde18bc1fb565c8c60",
   "house": {
     "totalSeats": 435,
     "democraticControlThreshold": 218,
@@ -27,7 +27,7 @@
       {"provider":"Dave Manuel","democraticSeats":233,"seatType":"projected median","edition":"Updated Nov. 1 11:45 AM ET; retrieved Nov. 1 16:54 UTC","sourceUrl":"https://www.davemanuel.com/2026-midterm-forecast.php"},
       {"provider":"On Point Politics","democraticSeats":253,"seatType":"average; first-party forecast-in-brief","edition":"Updated Oct. 31; retrieved 12:54 UTC","sourceUrl":"https://onpointpolitics.us/forecast"},
       {"provider":"VotePredictor","democraticSeats":229.9,"seatType":"expected","edition":"Forecast updated Nov. 1; retrieved Nov. 1 13:55 UTC; precise page update time not exposed","sourceUrl":"https://votepredictor.com/house"},
-      {"provider":"Midterm Forecast","democraticSeats":236,"seatType":"median","edition":"Displayed run Nov. 1 10:39 AM ET; retrieved Nov. 1 15:14 UTC","sourceUrl":"https://midtermforecast.com/house/"}
+      {"provider":"Midterm Forecast","democraticSeats":236,"seatType":"median","edition":"Displayed run Nov. 1 1:40 PM ET; retrieved Nov. 1 18:41 UTC","sourceUrl":"https://midtermforecast.com/house/"}
     ]
   },
   "senate": {
@@ -52,7 +52,7 @@
       {"provider":"Yale PLSC 2219","democraticSeats":50,"seatType":"class model","edition":"Snapshot Oct. 31; retrieved 18:02 UTC","sourceUrl":"https://kevinmdeluca.com/forecast/"},
       {"provider":"Dave Manuel","democraticSeats":52,"seatType":"projected median incl. aligned independents","edition":"Updated Nov. 1 11:45 AM ET; retrieved Nov. 1 16:54 UTC","sourceUrl":"https://www.davemanuel.com/2026-midterm-forecast.php"},
       {"provider":"On Point Politics","democraticSeats":54.6,"seatType":"average; detailed first-party Senate panel","edition":"Updated Oct. 31; retrieved 12:54 UTC","sourceUrl":"https://onpointpolitics.us/forecast"},
-      {"provider":"Midterm Forecast","democraticSeats":53,"seatType":"median Democratic seats; independents counted on Democratic side in this edition","edition":"Displayed run Nov. 1 10:39 AM ET; retrieved Nov. 1 15:14 UTC","sourceUrl":"https://midtermforecast.com/senate/"}
+      {"provider":"Midterm Forecast","democraticSeats":53,"seatType":"median Democratic seats; independents counted on Democratic side in this edition","edition":"Displayed run Nov. 1 1:40 PM ET; retrieved Nov. 1 18:41 UTC","sourceUrl":"https://midtermforecast.com/senate/"}
     ]
   }
 }
