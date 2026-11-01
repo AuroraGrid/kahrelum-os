@@ -106,7 +106,7 @@ test('version lifecycle passes project and site separately to the installed Fire
     assert.deepEqual(body.files, {'/investigations.html': 'new-hash'});
     return {body: {uploadRequiredHashes: []}};
   } };
-  await assert.rejects(createPreview(hosting, client, {config},
+  await assert.rejects(createPreview(hosting, client, {config, version: {name: 'projects/806087933597/sites/kahrelum-public-hosting/versions/base'}},
     {desired: {'/investigations.html': 'new-hash'}, changedPaths: ['/investigations.html']},
     'investigations', {commit: 'test', clean: true}), error => error === stop);
   assert.deepEqual(calls, [
@@ -115,4 +115,19 @@ test('version lifecycle passes project and site separately to the installed Fire
     }],
     ['finalize', 'kahrelum-public-hosting', 'kahrelum-public-hosting', 'test', {status: 'FINALIZED'}],
   ]);
+});
+
+
+test('project-name aliases canonicalize to the verified project number without accepting another project or site', () => {
+  const script = read('scripts/firebase-overlay-release.cjs');
+  const definitions = script.slice(0, script.lastIndexOf('\nmain().catch'));
+  const canonical = new Function('require', '__dirname', 'process', 'Buffer',
+    definitions + '\nreturn canonicalVersionName;')(require, path.join(root, 'scripts'), process, Buffer);
+  const live = 'projects/806087933597/sites/kahrelum-public-hosting/versions/base';
+  const expected = 'projects/806087933597/sites/kahrelum-public-hosting/versions/19b135529a0ef046';
+  assert.equal(canonical('projects/kahrelum-public-hosting/sites/kahrelum-public-hosting/versions/19b135529a0ef046', live), expected);
+  assert.equal(canonical(expected, live), expected);
+  assert.throws(() => canonical(expected.replace('806087933597', 'another-project'), live), /verified live project/);
+  assert.throws(() => canonical(expected.replace('/sites/kahrelum-public-hosting/', '/sites/another-site/'), live), /verified live project/);
+  assert.throws(() => canonical(expected + '/extra', live), /verified live project/);
 });

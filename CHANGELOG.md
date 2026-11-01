@@ -5,7 +5,7 @@
 - Added a standalone, source-linked CORP-03 youth-safety record; 11 public records preserve 56 historical case families and four extension leads.
 - Clarified judgment, accounting charge, conditional settlement and actual payment; kept appeal, clinical-outcome and forecast-custody unknowns explicit.
 - Replaced duplicate case summaries with seven distinct operational lanes and added keyboard focus and skip navigation.
-- Corrected Firebase CLI version lifecycle calls to pass project and site separately.
+- Corrected Firebase CLI version lifecycle calls to pass project and site separately; canonicalize resource names against the verified live project number while rejecting other projects/sites.
 - Narrowed the guarded Firebase investigations release to its HTML only, preserving the already-listed live sitemap and all concurrent page/data hashes.
 
 ## 2026-09-30 — v2.3.4 public evidence synchronization

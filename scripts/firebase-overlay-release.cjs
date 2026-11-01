@@ -635,13 +635,24 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
   return { origin, routes: checks, internalTargets: internal.size, apiHashes };
 }
 
+function canonicalVersionName(versionName, liveVersionName) {
+  const pattern = /^projects\/([^/]+)\/sites\/([^/]+)\/versions\/([A-Za-z0-9_-]+)$/;
+  const live = pattern.exec(liveVersionName || '');
+  const candidate = pattern.exec(versionName || '');
+  if (!live || !candidate || live[2] !== SITE || candidate[2] !== SITE ||
+      ![SITE, live[1]].includes(candidate[1])) {
+    fail('Firebase version resource does not belong to the verified live project and site.');
+  }
+  return `projects/${live[1]}/sites/${SITE}/versions/${candidate[3]}`;
+}
+
 async function createPreview(hosting, client, live, overlay, profileName, sourceState) {
   if (!overlay.changedPaths.length) fail('The overlay is already identical to production; no preview release is needed.');
   const channelId = `${CHANNEL_PREFIX}-${stableMapHash(overlay.desired).slice(0, 12)}`;
-  const versionName = await hosting.createVersion(SITE, SITE, {
+  const versionName = canonicalVersionName(await hosting.createVersion(SITE, SITE, {
     config: live.config,
     labels: { 'deployment-tool': 'kahrelum-safe-overlay' },
-  });
+  }), live.version.name);
   const populated = (await client.post(`/${versionName}:populateFiles`, { files: overlay.desired })).body;
   for (const hash of populated.uploadRequiredHashes || []) {
     const body = overlay.blobs[hash];
