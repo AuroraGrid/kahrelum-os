@@ -1,16 +1,16 @@
 {
   "schema": "KAHRELUM_REFRESH_STATUS_v1.1",
-  "lastAttemptAt": "2026-10-31T22:48:20Z",
-  "lastSuccessfulSourceCheckAt": "2026-10-31T22:48:20Z",
+  "lastAttemptAt": "2026-11-01T01:30:31Z",
+  "lastSuccessfulSourceCheckAt": "2026-11-01T01:30:31Z",
   "lastPublishedUpdateAt": "2026-10-31T13:13:05Z",
-  "feedFreshness": "FRESH",
+  "feedFreshness": "DEGRADED",
   "monitoringState": "DEADLINE_WINDOW_OPEN",
   "deadlineUtc": "2026-11-10T21:00:00Z",
   "sourcesAttempted": 37,
-  "sourcesSucceeded": 37,
-  "sourcesFailed": 0,
-  "observationsNew": 21,
-  "reviewQueueCount": 213,
+  "sourcesSucceeded": 36,
+  "sourcesFailed": 1,
+  "observationsNew": 14,
+  "reviewQueueCount": 227,
   "materialAlerts": [
     {
       "observationId": "OBS-50323095a31bcf80e1ad",
@@ -28,12 +28,26 @@
       "originalScreenTipId": "OBS-7422769d896c947ccaaa"
     }
   ],
-  "errors": [],
+  "errors": [
+    {
+      "sourceIntegrationId": "NFL_TRANSACTIONS",
+      "httpStatus": null,
+      "attempts": 1,
+      "error": "ValueError: official transaction headings do not establish November 2026; fallback months are not complete records"
+    }
+  ],
   "truthBoundary": "Source checks and publication are separate. lastSuccessfulSourceCheckAt means at least one source succeeded; lastFullySuccessfulSourceCheckAt requires every registered operational source to succeed.",
-  "lastCompletedCheckAt": "2026-10-31T22:48:20Z",
+  "lastCompletedCheckAt": "2026-11-01T01:30:31Z",
   "lastFullySuccessfulSourceCheckAt": "2026-10-31T22:48:20Z",
-  "duplicatesSuppressed": 2,
-  "sourceFailureAlerts": [],
+  "duplicatesSuppressed": 3,
+  "sourceFailureAlerts": [
+    {
+      "sourceIntegrationId": "NFL_TRANSACTIONS",
+      "status": "MATERIAL_SOURCE_FAILURE",
+      "reason": "ValueError: official transaction headings do not establish November 2026; fallback months are not complete records",
+      "observedAtUtc": "2026-11-01T01:30:31Z"
+    }
+  ],
   "reviewProposalCount": 29,
   "lastManuallyVerifiedOriginalReportAtUtc": "2026-10-31T13:13:05Z",
   "originalReportManualVerificationNotice": "Manual original-report verification only; not a 37-feed SourceGrid run. lastSuccessfulSourceCheckAt/lastFullySuccessfulSourceCheckAt unchanged."

@@ -44,7 +44,7 @@
     {
       "id": "NFL_TRANSACTIONS",
       "name": "NFL official transactions",
-      "url": "https://www.nfl.com/transactions/league/trades/2026/10",
+      "url": "https://www.nfl.com/transactions/league/trades/2026/11",
       "type": "official_transactions",
       "role": "OFFICIAL_VERIFICATION_ENDPOINT",
       "operational": true
@@ -484,5 +484,6 @@
     "operational": 37,
     "watchlistOnly": 20,
     "teamsCovered": 32
-  }
+  },
+  "activeTransactionMonth": "2026-11"
 }
