@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-11-01T15:14:17.2256845Z",
+  "checkedAtUtc": "2026-11-01T15:28:48.3585864Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -64,13 +64,13 @@
       "houseSeatType": "expected",
       "senateDemocraticSeats": 51.3,
       "senateSeatType": "expected including aligned independents",
-      "sourceEdition": "House and Senate forecasts Oct. 31; House retrieved Oct. 31 14:12:52 UTC; Senate retrieved Oct. 31 15:00:15 UTC",
+      "sourceEdition": "House and Senate forecasts Nov. 1; House retrieved Nov. 1 15:28:42 UTC; Senate retrieved Nov. 1 15:28:46 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "retrievedAtUtc": "2026-10-31T15:00:15.755Z",
-      "retrievedHouseAtUtc": "2026-10-31T14:12:52.901Z",
-      "rawSha256House": "c305363457fe8aeff396d693984b98e730228c8f31b04b4910d290cab8014591",
-      "rawSha256Senate": "5ad458d7573e8faa1c4ed2fc829c7ca4a06886111ec65fd3a0b658a19280eeaf",
-      "note": "House and Senate first-party pages were checked separately. The Oct. 31 House edition moved Democratic control from 85% to 83% while expected Democratic seats remained 235.8. The Oct. 31 Senate edition moved Democratic control from 59% to 58%; 51.3 expected Democratic-aligned seats and 2.4 expected aligned independents remain unchanged. Source HTTP Date values were ahead of the local observer clock and are retained only in the private retrieval receipts."
+      "retrievedAtUtc": "2026-11-01T15:28:46.4722425Z",
+      "retrievedHouseAtUtc": "2026-11-01T15:28:42.9607923Z",
+      "rawSha256House": "15fa0213b9c2d33747ee6e400d5e579210c97fb52f9289e9649355c4d45d5242",
+      "rawSha256Senate": "770e9c0f99245a4789d9cdce01c5af8a9c035ad946121c2084dc6a4882ae5144",
+      "note": "House and Senate first-party pages were checked separately. The Nov. 1 edition retains 83% Democratic House control, 235.8 expected Democratic House seats, 58% Democratic Senate control, 51.3 expected Democratic-aligned Senate seats and 2.4 expected aligned independents. The new source date is preserved without manufacturing a numerical change."
     },
     {
       "provider": "COYNTOSS",
@@ -95,16 +95,16 @@
       "edition": "Main",
       "sourceUrl": "https://scrutinel.com/",
       "houseDemocraticControlPct": 92.0,
-      "senateDemocraticControlPct": 69.0,
+      "senateDemocraticControlPct": 68.0,
       "houseDemocraticSeats": 237.0,
       "houseSeatType": "expected",
       "senateDemocraticSeats": 52.0,
       "senateSeatType": "expected",
-      "sourceEdition": "Updated Nov. 1, 5:23 AM EST; retrieved Nov. 1 13:35 UTC",
-      "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED_WITH_INTERNAL_CONFLICT",
-      "retrievedAtUtc": "2026-11-01T13:35:37.106Z",
-      "rawSha256": "a3b8ad25e270fbbf67c72cf9ab3a3028f7b118f43c6639ed8912ef9a93664268",
-      "note": "The displayed Nov. 1 5:23 AM EST edition retains 92% Democratic House control, 237 expected Democratic House seats and 52 expected Democratic Senate seats. Its primary Senate chamber-control summary and narrative moved from 68% to 69%, while the separate Senate distribution chart still displays 68%; both conflicting first-party values are preserved in the retrieval artifact rather than silently conflated. A separate narrative also says 238 central-estimate Democratic House seats while the primary chamber card says expected 237."
+      "sourceEdition": "Updated Nov. 1, 10:26 AM EST; retrieved Nov. 1 15:28 UTC",
+      "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
+      "retrievedAtUtc": "2026-11-01T15:28:01.5575473Z",
+      "rawSha256": "a7fa4d69c4880c4a3f88d93334670a0ca4eee918a20075d4cecb319feb266f09",
+      "note": "The displayed Nov. 1 10:26 AM EST edition retains 92% Democratic House control, 237 expected Democratic House seats and 52 expected Democratic Senate seats, while Democratic Senate control moves from the previously admitted 69% to 68%. The new edition's Senate chamber card, narrative and distribution agree at 68%, resolving the prior edition's 69%/68% internal conflict. A separate narrative still reports a 238-seat Democratic House central estimate while the primary chamber card reports expected 237; those distinct House statistic types remain explicit."
     },
     {
       "provider": "Vote-Scope",
@@ -197,11 +197,11 @@
       "houseSeatType": "projected median",
       "senateDemocraticSeats": 52.0,
       "senateSeatType": "projected median including two aligned independents",
-      "sourceEdition": "Updated Nov. 1, 8:45 AM ET; retrieved Nov. 1 13:13 UTC",
+      "sourceEdition": "Updated Nov. 1, 10:45 AM ET; retrieved Nov. 1 15:28 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "retrievedAtUtc": "2026-11-01T13:13:57.587Z",
-      "rawSha256": "96ead86c8e40f58eb3b3de81e0ea8e20c465f2f163ec31bba9ebba12d0a9822b",
-      "note": "The 8:45 AM ET first-party edition retained 93% Democratic House control and a 233-seat projected Democratic House median, while Democratic Senate control moved from 71% to 70% with the projected Democratic-aligned Senate median unchanged at 52 seats. Republican Senate control is 27%; the separate 3% neither-side outcome remains distinct."
+      "retrievedAtUtc": "2026-11-01T15:28:48.3585864Z",
+      "rawSha256": "caf2e308393d5c13727ff9a18a75c0756552d01b305e360a5067706106b3067f",
+      "note": "The 10:45 AM ET first-party edition retains 93% Democratic House control, a 233-seat projected Democratic House median, 70% Democratic Senate control and a 52-seat projected Democratic-aligned Senate median. Republican Senate control is now 28%; the separate 2% neither-side outcome remains distinct."
     },
     {
       "provider": "On Point Politics",

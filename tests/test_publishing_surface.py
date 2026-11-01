@@ -260,7 +260,7 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertEqual((chambers["houseDemocraticControlPct"], chambers["senateDemocraticControlPct"]), (99.0, 80.0))
         self.assertEqual((chambers["houseDemocraticSeats"], chambers["senateDemocraticSeats"]), (241.5, 52.6))
         scrutinel = next(row for row in challengers["records"] if row["provider"] == "Scrutinel")
-        self.assertEqual((scrutinel["houseDemocraticControlPct"], scrutinel["senateDemocraticControlPct"]), (92.0, 69.0))
+        self.assertEqual((scrutinel["houseDemocraticControlPct"], scrutinel["senateDemocraticControlPct"]), (92.0, 68.0))
         self.assertEqual((scrutinel["houseDemocraticSeats"], scrutinel["senateDemocraticSeats"]), (237.0, 52.0))
         fred = next(row for row in challengers["records"] if row["provider"] == "Fred Cornell independent")
         self.assertEqual((fred["houseDemocraticControlPct"], fred["senateDemocraticControlPct"]), (99.0, 70.5))
