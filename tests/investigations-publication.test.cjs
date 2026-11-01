@@ -79,3 +79,40 @@ test('investigations overlay preserves opaque live hashes and never fetches or r
   assert.deepEqual(result.changedPaths, ['/investigations.html']);
   assert.deepEqual(live.fileMap, fileMap);
 });
+
+
+test('version lifecycle passes project and site separately to the installed Firebase CLI API', async () => {
+  const script = read('scripts/firebase-overlay-release.cjs');
+  const definitions = script.slice(0, script.lastIndexOf('\nmain().catch'));
+  const createPreview = new Function('require', '__dirname', 'process', 'fetch', 'Buffer',
+    definitions + '\nreturn createPreview;')(require, path.join(root, 'scripts'), process,
+      async () => { throw new Error('No network access in this lifecycle test'); }, Buffer);
+  const stop = new Error('Stop after observing finalization arguments');
+  const config = {cleanUrls: true};
+  const version = 'projects/806087933597/sites/kahrelum-public-hosting/versions/test';
+  const calls = [];
+  const hosting = {
+    async createVersion(project, site, body) {
+      calls.push(['create', project, site, body]);
+      return version;
+    },
+    async updateVersion(project, site, id, body) {
+      calls.push(['finalize', project, site, id, body]);
+      throw stop;
+    },
+  };
+  const client = { async post(url, body) {
+    assert.equal(url, '/' + version + ':populateFiles');
+    assert.deepEqual(body.files, {'/investigations.html': 'new-hash'});
+    return {body: {uploadRequiredHashes: []}};
+  } };
+  await assert.rejects(createPreview(hosting, client, {config},
+    {desired: {'/investigations.html': 'new-hash'}, changedPaths: ['/investigations.html']},
+    'investigations', {commit: 'test', clean: true}), error => error === stop);
+  assert.deepEqual(calls, [
+    ['create', 'kahrelum-public-hosting', 'kahrelum-public-hosting', {
+      config, labels: {'deployment-tool': 'kahrelum-safe-overlay'},
+    }],
+    ['finalize', 'kahrelum-public-hosting', 'kahrelum-public-hosting', 'test', {status: 'FINALIZED'}],
+  ]);
+});

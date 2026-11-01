@@ -638,7 +638,7 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
 async function createPreview(hosting, client, live, overlay, profileName, sourceState) {
   if (!overlay.changedPaths.length) fail('The overlay is already identical to production; no preview release is needed.');
   const channelId = `${CHANNEL_PREFIX}-${stableMapHash(overlay.desired).slice(0, 12)}`;
-  const versionName = await hosting.createVersion(SITE, {
+  const versionName = await hosting.createVersion(SITE, SITE, {
     config: live.config,
     labels: { 'deployment-tool': 'kahrelum-safe-overlay' },
   });
@@ -654,7 +654,7 @@ async function createPreview(hosting, client, live, overlay, profileName, source
   }
 
   const versionId = versionName.split('/').pop();
-  const finalized = await hosting.updateVersion(SITE, versionId, { status: 'FINALIZED' });
+  const finalized = await hosting.updateVersion(SITE, SITE, versionId, { status: 'FINALIZED' });
   if (finalized.status !== 'FINALIZED') fail('Preview version did not finalize.');
   const finalizedFiles = await listVersionFiles(client, versionName);
   const finalizedMap = Object.fromEntries(finalizedFiles.map((item) => [item.path, item.hash]));
