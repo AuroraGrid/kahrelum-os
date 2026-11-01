@@ -1,0 +1,13 @@
+# Editorial draft (NOT published) | Daron Payne's injury effectively closes one trade-deadline lane
+
+**Prepared November 1, 2026. Original injury reports dated October 30-31, 2026.** No external publication, X post, publisher email, billing or roster activity authorized by this draft.
+
+**FACT:** Washington reported a foot injury for defensive tackle Daron Payne on October 30. Its initial club statement marked him questionable for Philadelphia; updated game status ruled him out. The NFL's October 31 news roundup reported subsequent injury details *with attribution* to Adam Schefter, not as an independent club medical release. Sources: [Washington initial game-status release](https://www.commanders.com/news/game-status-commanders-eagles-week-8); [NFL Oct. 31 roundup](https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-oct-31).
+
+**REPORT:** Schefter said Payne sustained a season-ending Jones fracture in Friday practice. The identified [original October 31 X post](https://x.com/AdamSchefter/status/2116542167506170254) was not directly retrievable (403); [NBC Sports on October 31 at 11:30 a.m. ET](https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-daron-payne-out-for-season-with-jones-fracture) and [Reuters](https://www.reuters.com/sports/report-commanders-daron-payne-foot-out-season--flm-2026-10-31/) provide dated attribution. No official season-ending IR transaction was authenticated in this check.
+
+**INFERENCE:** The injury practically removes Payne from the November 10 trade market. Jacksonville, New York Giants and Tampa Bay were analyst fits, **not** verified bidders; no offer or asking price is established. Payne is reportedly in the final year of a four-year, $90 million extension, but acquiring-club cap consequences are unverified.
+
+**FORECAST:** KAHRELUM now puts the chance of a deadline trade for Payne at **0.1%**, down 0.9 percentage points from a later conversation-provisional 1%; its older public October 30 snapshot showed an unreconciled 61%. None are certified pre-event historical locks. Buyers needing interior pressure must investigate other names. No start/sit recommendation or fantasy account action follows. The full timestamp/custody correction is [here](./2026-11-01_DARON_PAYNE_MARKET_EXIT_DISCOVERY.md).
+
+**Verification boundary:** The NFL's [2026 in-season tracker](https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season) still shows seven transactions through October 29 in the independently reviewed listing. This report does not claim all 32 team/local-radio sources were checked.
