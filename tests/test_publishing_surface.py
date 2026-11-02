@@ -268,7 +268,7 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertEqual((fred["houseDemocraticControlPct"], fred["senateDemocraticControlPct"]), (99.0, 71.9))
         self.assertEqual((fred["houseDemocraticSeats"], fred["senateDemocraticSeats"]), (252.0, 52.0))
         callthemap = next(row for row in challengers["records"] if row["provider"] == "CalltheMap")
-        self.assertEqual((callthemap["houseDemocraticControlPct"], callthemap["senateDemocraticControlPct"], callthemap["senateDemocraticSeats"]), (83.0, 59.0, 51.3))
+        self.assertEqual((callthemap["houseDemocraticControlPct"], callthemap["senateDemocraticControlPct"], callthemap["houseDemocraticSeats"], callthemap["senateDemocraticSeats"]), (83.0, 59.0, 235.7, 51.3))
         coyntoss = next(row for row in challengers["records"] if row["provider"] == "COYNTOSS")
         self.assertEqual((coyntoss["houseDemocraticControlPct"], coyntoss["senateDemocraticControlPct"], coyntoss["houseDemocraticSeats"], coyntoss["senateDemocraticSeats"]), (82.95, 72.99, 238.57, 51.781))
         votescope = next(row for row in challengers["records"] if row["provider"] == "Vote-Scope")
