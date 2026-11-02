@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Scrutinel",
+  "sourceUrl": "https://scrutinel.com/",
+  "retrievedAtUtc": "2026-11-02T16:17:25.7620815Z",
+  "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
+  "publisherEdition": "November 2, 2026, 10:54 AM EST",
+  "publisherGeneratedAtUtc": "2026-11-02T15:54:27Z",
+  "observations": {
+    "houseDemocraticControlPctDisplayed": 95.0,
+    "houseDemocraticControlPctSerialized": 94.81,
+    "houseRepublicanControlPctSerialized": 5.17,
+    "houseNoMajorityPctSerialized": 0.02,
+    "houseMeanDemocraticSeats": 239.61,
+    "houseMedianDemocraticSeats": 239,
+    "houseInterval80DemocraticSeats": [222, 258],
+    "senateDemocraticControlPctDisplayed": 76.0,
+    "senateDemocraticControlPctSerialized": 76.26,
+    "senateRepublicanControlPctSerialized": 23.42,
+    "senateNoMajorityPctSerialized": 0.32,
+    "senateMeanDemocraticSeats": 52.36,
+    "senateMedianDemocraticSeats": 52,
+    "senateInterval80DemocraticSeats": [49, 56]
+  },
+  "jointOutcomePctSerialized": {
+    "democraticHouseAndSenate": 75.63,
+    "democraticHouseRepublicanSenate": 19.17,
+    "republicanHouseDemocraticSenate": 0.62,
+    "republicanHouseAndSenate": 4.57,
+    "splitCongress": 19.80
+  },
+  "custody": {
+    "httpStatus": 200,
+    "representation": "FETCH_RETURNED_HTML_UTF8",
+    "sha256": "df74d2a4f78afd9c9b09b9982b9358defa70733cb555446f1d8149fb8149d64e",
+    "utf8Bytes": 1789094,
+    "lastModified": "Mon, 02 Nov 2026 16:08:35 GMT",
+    "dateHeader": "Mon, 02 Nov 2026 16:17:27 GMT",
+    "headerStatus": "OBSERVED_NOT_USED_AS_PUBLICATION_TIME"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "houseDemocraticControlPctDisplayed": {"from": 95.0, "to": 95.0},
+    "houseDemocraticControlPctSerialized": {"from": 94.79, "to": 94.81},
+    "senateDemocraticControlPctDisplayed": {"from": 76.0, "to": 76.0},
+    "senateDemocraticControlPctSerialized": {"from": 76.20, "to": 76.26},
+    "houseMeanDemocraticSeats": {"from": 239.56, "to": 239.61},
+    "houseMedianDemocraticSeats": {"from": 239, "to": 239},
+    "senateMeanDemocraticSeats": {"from": 52.37, "to": 52.36},
+    "senateMedianDemocraticSeats": {"from": 52, "to": 52}
+  },
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "providerUsedByScript": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  }
+}
