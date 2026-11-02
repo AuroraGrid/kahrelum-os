@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Midterm Forecast",
+  "sourceUrls": {
+    "house": "https://midtermforecast.com/house/",
+    "senate": "https://midtermforecast.com/senate/"
+  },
+  "retrieval": {
+    "houseRetrievedAtUtc": "2026-11-02T18:44:22.0519244Z",
+    "senateRetrievedAtUtc": "2026-11-02T18:44:22.8903884Z",
+    "representation": "FIRST_PARTY_HTTP_RESPONSE_UTF8_NOT_EXACT_WIRE_BYTES"
+  },
+  "publisherEdition": {
+    "modelRun": "Nov. 2, 1:41 PM ET",
+    "pollsThrough": "Nov. 2, 2026"
+  },
+  "observations": {
+    "houseDemocraticControlPct": 92.0,
+    "houseRepublicanControlPct": 8.0,
+    "houseMedianDemocraticSeats": 237,
+    "houseInterval80DemocraticSeats": [219, 258],
+    "houseControlThreshold": 218,
+    "senateDemocraticControlPct": 75.0,
+    "senateRepublicanControlPct": 25.0,
+    "senateMedianDemocraticSeats": 53,
+    "senateInterval80DemocraticSeats": [48, 57],
+    "senateControlThreshold": 51,
+    "senateIndependentTreatment": "Independent candidates in Maine and Montana are counted on the Democratic side for control"
+  },
+  "custody": {
+    "houseHttpStatus": 200,
+    "houseResponseUtf8Bytes": 93940,
+    "houseResponseSha256": "afa18ca58e8db8e472d61155d634a4a1a2ca741cc429071e96a13889d03c47a6",
+    "senateHttpStatus": 200,
+    "senateResponseUtf8Bytes": 35852,
+    "senateResponseSha256": "4bc46af0e539235cbf4e60d93d1ede12bf11ea2dfc61d45647d9a5076e0fc449",
+    "selectedReceiptUtf8Bytes": 1180,
+    "selectedReceiptSha256": "d4d67685878474c7c6026b41bfe2e8633419211ba0a0403d6e0d05c514a6db19",
+    "selectedReceiptRepresentation": "PRIVATE_SELECTED_FIELD_RECEIPT_UTF8"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "houseDemocraticControlPct": "UNCHANGED",
+    "houseMedianDemocraticSeats": "UNCHANGED",
+    "houseInterval80DemocraticSeats": "UNCHANGED",
+    "senateDemocraticControlPct": {"from": 76.0, "to": 75.0},
+    "senateMedianDemocraticSeats": "UNCHANGED",
+    "senateInterval80DemocraticSeats": "UNCHANGED"
+  },
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "providerUsedByScript": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  }
+}
