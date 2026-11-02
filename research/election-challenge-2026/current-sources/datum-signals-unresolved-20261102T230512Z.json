@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Datum Signals",
+  "sourceUrl": "https://datumsignals.com/",
+  "observedAtUtc": "2026-11-02T23:02:08.248Z",
+  "publisherDisplayedUpdate": "November 2, 2026, 5:00 PM UTC",
+  "custodyRepresentation": "LIVE_RENDERED_FIRST_PARTY_PAGE_SELECTED_FIELDS_NOT_RAW_HTML",
+  "renderedObservation": {
+    "houseDemocraticControlPct": 70.0,
+    "senateDemocraticControlPct": 64.0
+  },
+  "verificationAttempts": {
+    "directHttp": {
+      "attemptCount": 6,
+      "endedAtUtc": "2026-11-02T23:05:12.8375548Z",
+      "result": "FAILED_SSL_OR_TRANSPORT_CONNECTION",
+      "rawResponsePreserved": false
+    },
+    "firecrawlMaxAgeZero": {
+      "attempted": true,
+      "result": "CONNECTOR_TRANSPORT_FAILURE",
+      "rawResponsePreserved": false
+    },
+    "previouslyConflictingEndpoints": {
+      "bothEndpointsVerifiedCurrent": false,
+      "result": "UNRESOLVED"
+    }
+  },
+  "priorFullyVerifiedResolution": {
+    "receiptPath": "research/election-challenge-2026/current-sources/datum-signals-resolution-20261102T191417Z.json",
+    "houseDemocraticControlPct": 71.0,
+    "senateDemocraticControlPct": 64.0,
+    "rawSha256": "444f2085c8e662f8e8c63838114a25dbeb64e6e08aa467a59d973f2a52ac40b9",
+    "preserved": true
+  },
+  "admissionDecision": {
+    "houseDemocraticControlPct": "UNVERIFIED_CURRENT_VALUE_EXCLUDED",
+    "senateDemocraticControlPct": "RETAINS_VERIFIED_64_PERCENT",
+    "reason": "A current rendered first-party observation conflicts with the last fully verified House value, but the known replica conflict could not be resolved across both endpoints. The House field therefore fails closed instead of promoting 70% or retaining 71% as uniquely current. Senate remains consistently 64%."
+  },
+  "kahrelumInputReview": {
+    "isRefreshElectionProjectionsInput": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  }
+}
