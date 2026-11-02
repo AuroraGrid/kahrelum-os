@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "edition": "KAH-US-2026-20261031T181057Z with challenger source checks through 2026-11-02T14:12:27Z",
+  "edition": "KAH-US-2026-20261031T181057Z with challenger source checks through 2026-11-02T14:42:17Z",
   "comparisonStatus": "DESCRIPTIVE_ONLY_UNMATCHED_CUTOFFS_AND_SEAT_TYPES",
-  "sourceObservationFileSha256": "4a695ca2d01ade1b222d150531e21179e5ccc313ad24480503d4aff4f33250b2",
+  "sourceObservationFileSha256": "5ff2b4f35e78a192f44c780a4ce105b4411d4b90f804510ce17fbe87c5b56242",
   "house": {
     "totalSeats": 435,
     "democraticControlThreshold": 218,
@@ -18,7 +18,7 @@
       {"provider":"Decision Desk HQ","democraticSeats":241,"seatType":"projected","edition":"Updated Nov. 1 10:39 PM ET; retrieved Nov. 2 03:21 UTC","sourceUrl":"https://votes.decisiondeskhq.com/forecast/2026"},
       {"provider":"99chambers Horizon","democraticSeats":241.8,"seatType":"expected","edition":"Nov. 1 2:02 AM ET; retrieved Nov. 1 16:01 UTC","sourceUrl":"https://99chambers.app/updates/2026-11-01"},
       {"provider":"CalltheMap","democraticSeats":235.8,"seatType":"expected","edition":"Forecast Nov. 1; retrieved Nov. 2 03:20 UTC","sourceUrl":"https://www.callthemap.com/house"},
-      {"provider":"COYNTOSS","democraticSeats":238.99,"seatType":"expected mean; displayed 239.0; median 237","edition":"Release 2026-11-01-02; retrieved Nov. 2 03:21 UTC","sourceUrl":"https://chasecoyne.com/house"},
+      {"provider":"COYNTOSS","democraticSeats":238.57,"seatType":"expected mean; displayed 238.6; median 237","edition":"Release 2026-11-02-01; retrieved Nov. 2 14:42 UTC","sourceUrl":"https://chasecoyne.com/house"},
       {"provider":"Scrutinel","democraticSeats":239.56,"seatType":"expected mean; separate median 239","edition":"Updated Nov. 2 4:23 AM EST; retrieved Nov. 2 09:53 UTC","sourceUrl":"https://scrutinel.com/"},
       {"provider":"Vote-Scope","democraticSeats":237,"seatType":"projected; median 244","edition":"Updated Nov. 1; retrieved Nov. 1 23:49 UTC; precise source time not exposed","sourceUrl":"https://vote-scope.com/en/us/house/"},
       {"provider":"ElectIndex","democraticSeats":248.5,"seatType":"average; projected 244","edition":"Public feed commit f27cf7b; retrieved Nov. 2 05:08 UTC; commit metadata future-dated 05:39 UTC","sourceUrl":"https://electindex.com/forecasts/"},
