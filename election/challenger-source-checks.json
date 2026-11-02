@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-11-02T03:21:37.5887131Z",
+  "checkedAtUtc": "2026-11-02T03:43:25.7907050Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -106,17 +106,17 @@
       "edition": "Main",
       "sourceUrl": "https://scrutinel.com/",
       "houseDemocraticControlPct": 95.0,
-      "senateDemocraticControlPct": 78.0,
-      "houseDemocraticSeats": 242.18,
-      "houseSeatType": "expected mean; separate median 241",
-      "senateDemocraticSeats": 52.57,
-      "senateSeatType": "expected mean; separate median 53",
-      "sourceEdition": "Updated Nov. 1, 10:24 PM EST; retrieved Nov. 2 03:21 UTC",
+      "senateDemocraticControlPct": 76.0,
+      "houseDemocraticSeats": 239.77,
+      "houseSeatType": "expected mean; separate median 239",
+      "senateDemocraticSeats": 52.35,
+      "senateSeatType": "expected mean; separate median 52",
+      "sourceEdition": "Updated Nov. 1, 11:08 PM EST; retrieved Nov. 2 03:42 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "retrievedAtUtc": "2026-11-02T03:21:02.8523108Z",
-      "rawSha256": "dcdfaf2989a0c3eda290a332640da3ce8418b4a8a9c18e27e3e942ee8f9e7be7",
-      "custodyReceiptSha256": "1898b103f2d00a9c4bd62c378dfb2f998e0c618c68e49ba5ca01240f28fcedd9",
-      "note": "The displayed Nov. 1 10:24 PM EST edition raises rounded Democratic House control from 92% to 95% and Democratic Senate control from 68% to 78%. Serialized values are 95.43% House and 77.61% Senate. Expected means rise to 242.18 Democratic House seats and 52.57 Democratic Senate seats; separate medians are 241 and 53. Future-dated Last-Modified and HTTP Date headers were preserved but not used as publication times. Scrutinel is not an input to scripts/refresh-election-projections.py, so no new KAHRELUM probability edition was created."
+      "retrievedAtUtc": "2026-11-02T03:42:56.9124678Z",
+      "rawSha256": "c20f65265c8808bc7e62e5b2503fdadbca92c005f9c0cbd76147b3cc15cf99b9",
+      "custodyReceiptSha256": "4152831a61c84dd0f8a26ab88ac75fe514aa3fadf13a53608d1c518bf506184d",
+      "note": "The displayed Nov. 1 11:08 PM EST edition retains rounded Democratic House control at 95% while Democratic Senate control falls from 78% to 76%. Serialized Democratic control moves from 95.43% to 94.69% House and from 77.61% to 75.90% Senate. Expected means fall from 242.18 to 239.77 Democratic House seats and from 52.57 to 52.35 Democratic Senate seats; separate medians move from 241 to 239 House and from 53 to 52 Senate. Future-dated Last-Modified and HTTP Date headers were preserved but not used as publication times. Scrutinel is not an input to scripts/refresh-election-projections.py, so no new KAHRELUM probability edition was created."
     },
     {
       "provider": "Vote-Scope",
@@ -281,18 +281,18 @@
       "houseSeatType": "median",
       "senateDemocraticSeats": 53.0,
       "senateSeatType": "median Democratic seats",
-      "sourceEdition": "Displayed House and Senate model run Nov. 1, 10:40 PM ET; polls through Nov. 1; retrieved Nov. 2 03:21 UTC",
+      "sourceEdition": "Displayed House and Senate model run Nov. 1, 11:07 PM ET; polls through Nov. 1; retrieved Nov. 2 03:43 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "retrievedAtUtc": "2026-11-02T03:21:07.8985326Z",
-      "retrievedHouseAtUtc": "2026-11-02T03:21:06.1767527Z",
+      "retrievedAtUtc": "2026-11-02T03:43:25.7907050Z",
+      "retrievedHouseAtUtc": "2026-11-02T03:43:23.7708752Z",
       "custodyRepresentation": "FIRST_PARTY_HTTP_RESPONSE_UTF8_NOT_EXACT_WIRE_BYTES",
-      "custodyReceiptSha256": "e9db6ec481bc4d40c0aef5b8b0b1c1fc98a13ec43963d33c8055903d0f847087",
+      "custodyReceiptSha256": "3f9daf93d82eb8cc74a68cf912f4e2f366a85ed5bdada9d17515277dd583dc16",
       "directHttpStatus": 200,
-      "houseResponseUtf8Bytes": 93821,
-      "houseResponseSha256": "421fbdb67d5160c79cee71f26c3aadea2e37962c1382a631a0b456e4cb12a903",
-      "senateResponseUtf8Bytes": 35824,
-      "senateResponseSha256": "36e71c6a959dcfa65fc5e2cd06df419ba5fc5b6a35be482a530b14c189d3f12b",
-      "note": "The displayed Nov. 1 10:40 PM ET run raises Democratic Senate control from 74% to 75% while Republican control falls to 25%. Democratic House control remains 91%, the Democratic House median remains 236 seats, and the Democratic Senate median remains 53 seats with independents included; the Senate 80% range is 48-57. Future-dated Last-Modified and HTTP Date headers were preserved but not used as publication times. Midterm Forecast is not an input to scripts/refresh-election-projections.py, so no new KAHRELUM probability edition was created."
+      "houseResponseUtf8Bytes": 93861,
+      "houseResponseSha256": "0eae2dae9ff7db61fc269ec1348d6eba841cc726740c34adcc5301310a51d006",
+      "senateResponseUtf8Bytes": 35828,
+      "senateResponseSha256": "6b6b915762ade2d225904b9b4038774b4b8e93d0e3a9dab6e5049834fb5d32db",
+      "note": "The displayed Nov. 1 11:07 PM ET run is a new first-party edition with unchanged chamber probabilities and medians: 91% Democratic House control with a 236-seat median, and 75% Democratic Senate control with a 53-seat median including independents. The House 80% interval is 218-257 and the Senate 80% interval is 48-57. Future-dated Last-Modified and HTTP Date headers were preserved but not used as publication times. Midterm Forecast is not an input to scripts/refresh-election-projections.py, so no new KAHRELUM probability edition was created."
     }
   ]
 }
