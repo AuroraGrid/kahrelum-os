@@ -28,7 +28,7 @@ test('twelve independently labeled public records preserve evidence and portfoli
   assert.match(html, /No sums across distinct Meta cases or presumed payments/);
   assert.match(html, /NEEDS REDACTION/);
   assert.match(html, /NOT SUITABLE/);
-  assert.match(html, /data-investigations-release="2026-11-01\.3"/);
+  assert.match(html, /data-investigations-release="2026-11-02\.1"/);
   const youth = html.slice(html.indexOf('data-case-id="CORP-03"'), html.indexOf('data-case-id="COURT-05"'));
   assert.match(youth, /D-101-CV-2023-02838/);
   assert.match(youth, /\$567 million/);
@@ -195,4 +195,16 @@ test('AIR-01 social metadata uses the published versioned card with exact dimens
  const manifest=JSON.parse(read('assets/social-manifest.json')).cards.find(c=>c.route==='/investigations');
  assert.equal(manifest.image,'assets/social/og-air01-v1.png');
  assert.equal(manifest.sha256,require('node:crypto').createHash('sha256').update(data).digest('hex'));
+});
+
+
+test('AIR-01 two-camera evidence and high-altitude leads remain explicitly bounded', () => {
+ const html=read('investigations.html');
+ const card=html.match(/<article class="case-record"[^>]*data-case-id="AIR-01"[\s\S]*?<\/article>/)[0];
+ for(const value of ['Two-camera evidence and high-altitude upset (November 2 update)','VIDEO-A / descent view','VIDEO-B / fireball-only view','VIDEO-C / additional roadway clip','https://x.com/ScopeReport_/status/2116977473703354580','https://x.com/KeryexNetwork/status/2116983354788815342/video/1','https://myradar.com/layers/metnotes/details/86','does NOT establish sabotage']) assert.ok(card.includes(value),value);
+ assert.match(card,/data-reviewed="2026-11-02"/);
+ const register=JSON.parse(read('research/investigations-2026/AIR-01/video-evidence-review-v2.json'));
+ assert.equal(register.caseId,'AIR-01');assert.equal(register.cause,'UNKNOWN');
+ assert.equal(register.videoSources.length,3);assert.equal(register.originalSourceFilesAuthenticated,false);
+ assert.equal((html.match(/data-case-id="AIR-01"/g)||[]).length,1);
 });
