@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "On Point Politics",
+  "sourceUrl": "https://onpointpolitics.us/forecast",
+  "retrieval": {
+    "startedAtUtc": "2026-11-02T21:14:59.1310009Z",
+    "retrievedAtUtc": "2026-11-02T21:15:00.3101185Z",
+    "cachePolicy": "Fresh first-party HTTPS retrieval with no-cache request headers",
+    "representation": "FIRST_PARTY_HTTP_RESPONSE_UTF8_NOT_EXACT_WIRE_BYTES"
+  },
+  "publisherEdition": {
+    "displayedUpdate": "Nov. 2, 2026",
+    "dateModified": "2026-11-02T08:00:00-04:00",
+    "editionDateChanged": false
+  },
+  "observations": {
+    "simulations": 2000,
+    "houseDemocraticControlPctDisplayed": 97.5,
+    "houseDemocraticControlPctExact": 97.52,
+    "houseAverageDemocraticSeatsDisplayed": 253.0,
+    "houseAverageDemocraticSeatsExact": 252.69,
+    "houseMedianDemocraticSeats": 251,
+    "houseInterval80DemocraticSeats": [227, 281],
+    "houseFavoredDemocraticSeats": 246,
+    "houseControlThreshold": 218,
+    "senateDemocraticControlPctDisplayed": 88.5,
+    "senateDemocraticControlPctExact": 88.54,
+    "senateAverageDemocraticSeatsDisplayed": 55.0,
+    "senateAverageDemocraticSeatsExact": 54.85,
+    "senateMedianDemocraticSeats": 55,
+    "senateInterval80DemocraticSeats": [50, 59],
+    "senateControlThreshold": 51
+  },
+  "custody": {
+    "httpStatus": 200,
+    "utf8Bytes": 951844,
+    "sha256": "e751e6b2782a924b2d280b4cfad184a4a61d09ce03e13c20e03762908eee54e5",
+    "selectedReceiptUtf8Bytes": 1367,
+    "selectedReceiptSha256": "8657e3e02787c139ffd123af807396b01addf48d99ada695c82573dd94840605",
+    "selectedReceiptRepresentation": "PRIVATE_SELECTED_FIELD_RECEIPT_UTF8"
+  },
+  "changeFromPriorAdmittedPresentation": {
+    "houseDemocraticControlPctDisplayed": {"fromWholePercent": 98.0, "toOneDecimal": 97.5},
+    "senateDemocraticControlPctDisplayed": {"fromWholePercent": 89.0, "toOneDecimal": 88.5},
+    "embeddedExactProbabilities": "UNCHANGED",
+    "seatStatistics": "UNCHANGED",
+    "publisherDateModified": "UNCHANGED"
+  },
+  "interpretation": "PRESENTATION_PRECISION_CHANGE_NOT_MODEL_PROBABILITY_CHANGE",
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "providerUsedByScript": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  }
+}
