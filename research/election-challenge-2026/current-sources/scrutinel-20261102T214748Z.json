@@ -1,0 +1,21 @@
+{
+  "provider": "Scrutinel",
+  "sourceUrl": "https://scrutinel.com/",
+  "retrievedAtUtc": "2026-11-02T21:47:48.7611796Z",
+  "sourceUpdateText": "Updated Nov 2, 2026, 4:25 PM EST",
+  "generatedAtUtc": "2026-11-02T21:25:29Z",
+  "directHttpStatus": 200,
+  "directResponseUtf8Bytes": 1795630,
+  "rawSha256": "c14957ab9e7813196487c4731fdc9f96afc62322d53207f02085ecab2b0eb164",
+  "fields": {
+    "houseDemocraticControlPctExact": 95.54,
+    "senateDemocraticControlPctExact": 78.71,
+    "houseDemocraticSeatsExpected": 240.66,
+    "senateDemocraticSeatsExpected": 52.52,
+    "houseDemocraticSeatsMedian": 240,
+    "senateDemocraticSeatsMedian": 53,
+    "houseDemocraticSeats80PctRange": [223, 259],
+    "senateDemocraticSeats80PctRange": [49, 56]
+  },
+  "admissionNote": "The current hero, analysis and serialized model state agree at rounded 96% House and 79% Senate control. A narrative paragraph still says 95% and 76%; it is retained as stale narrative copy and is not substituted for the current model fields."
+}
