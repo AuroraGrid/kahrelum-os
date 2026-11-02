@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Dave Manuel",
+  "sourceUrl": "https://www.davemanuel.com/2026-midterm-forecast.php",
+  "retrievedAtUtc": "2026-11-02T02:11:19.8332153Z",
+  "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "custody": {
+    "representation": "FETCH_RETURNED_HTML_UTF8",
+    "sha256": "e56cec5b50c448e9440c9fb78914e211e91584c2a605340f0595d3dc16bd2261",
+    "utf8Bytes": 273463,
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false
+  },
+  "publisherEdition": "November 1, 2026, 8:45 p.m. ET",
+  "observations": {
+    "houseDemocraticControlPct": 93.0,
+    "houseRepublicanControlPct": 8.0,
+    "houseDemocraticSeats": 233.0,
+    "houseSeatType": "projected median",
+    "senateDemocraticControlPct": 72.0,
+    "senateRepublicanControlPct": 26.0,
+    "senateNeitherSideControlPct": 2.0,
+    "senateDemocraticSeats": 52.0,
+    "senateSeatType": "projected median including two aligned independents"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "senateDemocraticControlPct": {
+      "prior": 70.0,
+      "current": 72.0
+    },
+    "senateRepublicanControlPct": {
+      "prior": 28.0,
+      "current": 26.0
+    },
+    "unchanged": [
+      "houseDemocraticControlPct",
+      "houseDemocraticSeats",
+      "senateDemocraticSeats",
+      "senateNeitherSideControlPct"
+    ]
+  },
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "daveManuelUsedByScript": false,
+    "parsedHouseDistrictRatingInputsChanged": false,
+    "parsedSenateRaceRatingInputsChanged": false,
+    "expectedSeatAndControlOutputsChanged": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  },
+  "admissionNote": "The prospective Nov. 2 retrieval preserves Dave Manuel's displayed Nov. 1 8:45 p.m. ET edition. Democratic Senate control increases from 70% to 72%, Republican Senate control decreases from 28% to 26%, and the distinct 2% neither-side outcome is unchanged. Democratic House control remains 93%, the projected Democratic House median remains 233 seats, and the projected Democratic-aligned Senate median remains 52 seats. Dave Manuel is not an input to scripts/refresh-election-projections.py, so no new KAHRELUM probability edition was created."
+}

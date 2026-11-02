@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-11-01T23:50:25.4692834Z",
+  "checkedAtUtc": "2026-11-02T02:11:19.8332153Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -210,16 +210,16 @@
       "edition": "2026 Midterm Forecast",
       "sourceUrl": "https://www.davemanuel.com/2026-midterm-forecast.php",
       "houseDemocraticControlPct": 93.0,
-      "senateDemocraticControlPct": 70.0,
+      "senateDemocraticControlPct": 72.0,
       "houseDemocraticSeats": 233.0,
       "houseSeatType": "projected median",
       "senateDemocraticSeats": 52.0,
       "senateSeatType": "projected median including two aligned independents",
-      "sourceEdition": "Updated Nov. 1, 6:45 PM ET; retrieved Nov. 1 23:50 UTC",
+      "sourceEdition": "Updated Nov. 1, 8:45 PM ET; retrieved Nov. 2 02:11 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "retrievedAtUtc": "2026-11-01T23:50:25.4692834Z",
-      "rawSha256": "d10c9d4bcd385d8c9665695ff9a4ef3eb06f9e90eca3c7560ba660e6d3591e70",
-      "note": "The hourly 6:45 PM ET first-party edition retains 93% Democratic House control, a 233-seat projected Democratic House median, 70% Democratic Senate control and a 52-seat projected Democratic-aligned Senate median. Republican Senate control remains 28%; the separate 2% neither-side outcome remains distinct. The timestamp-only advance is preserved without manufacturing a numerical change."
+      "retrievedAtUtc": "2026-11-02T02:11:19.8332153Z",
+      "rawSha256": "e56cec5b50c448e9440c9fb78914e211e91584c2a605340f0595d3dc16bd2261",
+      "note": "The hourly 8:45 PM ET first-party edition raises Democratic Senate control from 70% to 72% while Republican Senate control decreases from 28% to 26%; the distinct 2% neither-side outcome remains unchanged. Democratic House control remains 93%, the projected Democratic House median remains 233 seats and the projected Democratic-aligned Senate median remains 52 seats. Private custody receipt SHA256: 7429dabbfac86c8d128cf0a37749120127dc49cb9a6bfcba6ffb1a43c4a37e0d. Dave Manuel is not an input to scripts/refresh-election-projections.py, so no new KAHRELUM probability edition was created."
     },
     {
       "provider": "On Point Politics",
