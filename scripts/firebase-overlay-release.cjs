@@ -17,13 +17,13 @@ const PREVIEW_RECEIPT = path.join(STATE_DIR, 'preview-receipt.json');
 const PRODUCTION_RECEIPT = path.join(STATE_DIR, 'production-receipt.json');
 const FIREBASE_TOOLS_ROOT = process.env.FIREBASE_TOOLS_ROOT;
 
-// Local candidate portraits are public-domain source thumbnails. Only the exact
+// Local candidate portraits have recorded per-image reuse rights. Only the exact
 // identity/hash paths admitted by the portrait ledger may enter a release.
 const CANDIDATE_PORTRAIT_FILES = JSON.parse(fs.readFileSync(path.join(ROOT, 'election/candidate-portraits.json'), 'utf8')).records
   .filter((record) => typeof record.url === 'string' && record.url.startsWith('/assets/candidate-portraits/'))
   .map((record) => {
-    if (!/^[A-Z][0-9]{6}$/.test(record.bioguideId) || !/^[a-f0-9]{64}$/.test(record.imageSha256 || '') ||
-        record.url !== `/assets/candidate-portraits/${record.bioguideId}-${record.imageSha256.slice(0,16)}.jpg`) {
+    if (!require('../election-challenge-map.js').admittedPortrait({portrait: record}) ||
+        !/^[a-f0-9]{64}$/.test(record.imageSha256 || '')) {
       throw new Error('Candidate portrait path is not bound to its identity and hash.');
     }
     const file = record.url.slice(1);
@@ -147,6 +147,12 @@ const REQUIRED_REWRITES = {
 };
 const DIVISION_ROUTES = ['/assurance', '/investigations', '/forecasting', '/digital-id', '/one', '/os'];
 const RELEASE_PROFILES = {
+  'candidate-portraits': {
+    overlayFiles: ['election-challenge.html', 'election-challenge-map.js',
+      'election/candidate-portraits.json', ...CANDIDATE_PORTRAIT_FILES],
+    sitemapRoutes: [],
+    includeHomepage: false,
+  },
   investigations: {
     // Only the governed investigations document and its exact social card are replaced. Keep other assets,
     // APIs, forecast locks, CSS and homepage as currently deployed, even if local copies are stale.
@@ -527,6 +533,10 @@ async function buildOverlay(live, profileName) {
   }
 
   const changedPaths = Object.keys(desired).filter((item) => live.fileMap[item] !== desired[item]).sort();
+  if (profileName === 'candidate-portraits' && changedPaths.some((item) =>
+      !RELEASE_PROFILES['candidate-portraits'].overlayFiles.includes(item.slice(1)))) {
+    fail('Candidate portrait release attempted to replace an unrelated live path.');
+  }
   if (profileName === 'investigations' &&
       changedPaths.some((item) => !['/investigations.html', '/assets/social/og-air01-v1.png'].includes(item))) {
     fail('Investigations release attempted to replace an unrelated live Firebase path.');
@@ -555,7 +565,7 @@ function extractCanonical(html) {
 async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
   const checks = [];
   const internal = new Set();
-  const verifiedRoutes = profileName === 'sports-intelligence'
+  const verifiedRoutes = profileName === 'candidate-portraits' ? ['/election-challenge'] : profileName === 'sports-intelligence'
     ? HTML_ROUTES.filter((route) => route !== '/election-challenge')
     : HTML_ROUTES;
   for (const route of verifiedRoutes) {
@@ -568,6 +578,24 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     checks.push({ route, status: 200, sha256: sha256(bytes) });
   }
 
+  if (profileName === 'candidate-portraits') {
+    const map = require('../election-challenge-map.js');
+    const [portraits, current, house] = await Promise.all([
+      '/election/candidate-portraits.json', '/election/current-projections.json', '/election/house-forecast-lock.json'
+    ].map(async route => JSON.parse((await fetchBytes(origin + route)).toString('utf8'))));
+    const races = map.buildRaces(house, current);
+    const coverage = map.applyPortraitLedger(races, portraits);
+    if (coverage.matchedCards !== portraits.records.length || coverage.matchedCards !== portraits.coverage.admittedPortraits) {
+      fail('The deployed roster does not attach every admitted portrait.');
+    }
+    for (const record of portraits.records.filter(row => row.url.startsWith('/'))) {
+      if (sha256(await fetchBytes(origin + record.url)) !== record.imageSha256) fail('Deployed candidate image hash differs: ' + record.candidateName);
+    }
+    for (const route of internal) await fetchBytes(origin + route);
+    const apiHashes = await captureApiHashes(origin);
+    if (!util.isDeepStrictEqual(apiHashes, expectedApiHashes)) fail('Portrait release changed an existing API body.');
+    return {origin, routes: checks, coverage, localImages: portraits.records.filter(row => row.url.startsWith('/')).length, apiHashes};
+  }
   const nflData = JSON.parse((await fetchBytes(origin + '/nfl/trade-board.json')).toString('utf8'));
   if (!Array.isArray(nflData.candidates) || nflData.candidates.length < 124 ||
       !Array.isArray(nflData.deals) || nflData.deals.length < 7 ||
