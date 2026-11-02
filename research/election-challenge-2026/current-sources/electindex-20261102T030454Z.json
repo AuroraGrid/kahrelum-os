@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "ElectIndex",
+  "sourceUrls": {
+    "publicForecast": "https://electindex.com/forecasts/",
+    "repository": "https://github.com/ElectIndex/26_us_forecast_data",
+    "commitApi": "https://api.github.com/repos/ElectIndex/26_us_forecast_data/commits?path=output/chambers.csv&per_page=1",
+    "rawPinnedCsv": "https://raw.githubusercontent.com/ElectIndex/26_us_forecast_data/a76e790d39e5a72dfac9219e3ab6d52bdcbf82c4/output/chambers.csv"
+  },
+  "retrieval": {
+    "rawCsvRetrievedAtUtc": "2026-11-02T03:04:54.2334805Z",
+    "commitApiVerifiedAtUtc": "2026-11-02T03:06:32.1637911Z",
+    "representation": "FIRST_PARTY_GITHUB_RAW_EXACT_RESPONSE_BYTES"
+  },
+  "publisherEdition": {
+    "commitSha": "a76e790d39e5a72dfac9219e3ab6d52bdcbf82c4",
+    "commitMessage": "Add AtlasIntel national poll (10/28-11/1) by hand; forecast update 2026-11-01",
+    "commitMetadataUtc": "2026-11-02T03:12:11Z",
+    "commitMetadataStatus": "FUTURE_DATED_RELATIVE_TO_PROSPECTIVE_RETRIEVAL_NOT_USED_AS_PUBLICATION_TIME",
+    "rawHttpDate": "Mon, 02 Nov 2026 03:39:12 GMT",
+    "rawHttpDateStatus": "FUTURE_DATED_RELATIVE_TO_PROSPECTIVE_RETRIEVAL_NOT_USED_AS_PUBLICATION_TIME",
+    "commitApiHttpDate": "Mon, 02 Nov 2026 03:40:50 GMT",
+    "commitApiHttpDateStatus": "FUTURE_DATED_RELATIVE_TO_PROSPECTIVE_RETRIEVAL_NOT_USED_AS_PUBLICATION_TIME"
+  },
+  "observations": {
+    "houseDemocraticControlPct": 92.4,
+    "houseAverageDemocraticSeats": 248.3,
+    "houseProjectedDemocraticSeats": 245,
+    "houseControlThreshold": 218,
+    "houseRaces": 435,
+    "senateDemocraticControlPct": 75.0,
+    "senateAverageDemocraticSeats": 53.1,
+    "senateProjectedDemocraticSeats": 54,
+    "senateControlThreshold": 51,
+    "senateRaces": 35
+  },
+  "custody": {
+    "rawCsvHttpStatus": 200,
+    "rawCsvBytes": 229,
+    "rawCsvSha256": "99f73574a599f1e3a2e573aa2e92f6edbd15cea86c5cd63bc494ef2575c5e87a",
+    "commitApiHttpStatus": 200,
+    "commitApiBytes": 3569,
+    "commitApiSha256": "fc0816e5bee88ad4babadd6e941d6e3e0945289ef50d53c66961104aaec7d651"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "houseDemocraticControlPct": {
+      "from": 91.7,
+      "to": 92.4
+    },
+    "senateDemocraticControlPct": {
+      "from": 72.9,
+      "to": 75.0
+    },
+    "houseAverageDemocraticSeats": {
+      "from": 247.4,
+      "to": 248.3
+    },
+    "senateAverageDemocraticSeats": {
+      "from": 52.8,
+      "to": 53.1
+    },
+    "houseProjectedDemocraticSeats": {
+      "from": 244,
+      "to": 245
+    },
+    "senateProjectedDemocraticSeats": {
+      "from": 53,
+      "to": 54
+    }
+  },
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "electIndexUsedByScript": false,
+    "parsedHouseDistrictRatingInputsChanged": false,
+    "parsedSenateRaceRatingInputsChanged": false,
+    "expectedSeatAndControlOutputsChanged": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  },
+  "admissionNote": "ElectIndex's first-party public chambers.csv changed numerically at commit a76e790d39e5a72dfac9219e3ab6d52bdcbf82c4. The exact pinned CSV was retrieved prospectively at Nov. 2 03:04:54 UTC. Commit metadata reports 03:12:11 UTC and GitHub HTTP Date headers report still later times; these future-dated fields are preserved as provenance anomalies and are not used to backdate or anchor publication. ElectIndex is not an input to scripts/refresh-election-projections.py, so no new KAHRELUM probability edition was created."
+}

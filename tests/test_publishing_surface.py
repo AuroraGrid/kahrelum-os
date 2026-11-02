@@ -270,7 +270,9 @@ class PublishingSurfaceTests(unittest.TestCase):
         coyntoss = next(row for row in challengers["records"] if row["provider"] == "COYNTOSS")
         self.assertEqual((coyntoss["houseDemocraticControlPct"], coyntoss["senateDemocraticControlPct"], coyntoss["houseDemocraticSeats"], coyntoss["senateDemocraticSeats"]), (83.85, 70.11, 238.8, 51.603))
         electindex = next(row for row in challengers["records"] if row["provider"] == "ElectIndex")
-        self.assertEqual((electindex["houseDemocraticControlPct"], electindex["senateDemocraticControlPct"], electindex["houseDemocraticSeats"], electindex["senateDemocraticSeats"]), (91.7, 72.9, 247.4, 52.8))
+        self.assertEqual((electindex["houseDemocraticControlPct"], electindex["senateDemocraticControlPct"], electindex["houseDemocraticSeats"], electindex["senateDemocraticSeats"]), (92.4, 75.0, 248.3, 53.1))
+        self.assertEqual((electindex["houseProjectedDemocraticSeats"], electindex["senateProjectedDemocraticSeats"]), (245, 54))
+        self.assertEqual((electindex["houseControlThreshold"], electindex["senateControlThreshold"]), (218, 51))
         new_numeric = {row["provider"]: row for row in challengers["records"] if row["provider"] in {"Dave Manuel", "On Point Politics", "VotePredictor", "Midterm Forecast"}}
         self.assertEqual(set(new_numeric), {"Dave Manuel", "On Point Politics", "VotePredictor", "Midterm Forecast"})
         self.assertEqual((new_numeric["Dave Manuel"]["houseDemocraticControlPct"], new_numeric["Dave Manuel"]["senateDemocraticControlPct"]), (93.0, 72.0))
