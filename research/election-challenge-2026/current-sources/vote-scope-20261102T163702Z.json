@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Vote-Scope",
+  "sourceUrl": "https://vote-scope.com/en/us/house/",
+  "retrieval": {
+    "retrievedAtUtc": "2026-11-02T16:37:02.3347367Z",
+    "representation": "FIRST_PARTY_HTTP_RESPONSE_UTF8_NOT_EXACT_WIRE_BYTES"
+  },
+  "publisherEdition": {
+    "updated": "November 2, 2026",
+    "preciseSourceUpdateTimeExposed": false
+  },
+  "observations": {
+    "houseDemocraticControlPct": 98.0,
+    "houseRepublicanControlPct": 2.0,
+    "houseProjectedDemocraticSeats": 241,
+    "houseProjectedRepublicanSeats": 194,
+    "houseDemocraticSeatRange": [227, 269],
+    "houseRepublicanSeatRange": [166, 208],
+    "houseSimulationMedianDemocraticSeats": 246,
+    "houseSimulationMedianRepublicanSeats": 189,
+    "houseControlThreshold": 218,
+    "polls": 713,
+    "simulations": 50000,
+    "senateDemocraticControlPct": null,
+    "senateDemocraticSeats": null
+  },
+  "custody": {
+    "httpStatus": 200,
+    "responseUtf8Bytes": 1093568,
+    "responseSha256": "2f7c97c3f3d29846934f80f95fa5b316c492627051010ff506e3d22475dfc76b",
+    "selectedReceiptUtf8Bytes": 746,
+    "selectedReceiptSha256": "55c079c62cfc53c7bc940a08c8692f08bcbf03c309a593f3128686b000bd1dc1",
+    "selectedReceiptRepresentation": "PRIVATE_SELECTED_FIELD_RECEIPT_UTF8"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "houseDemocraticControlPct": {"from": 97.0, "to": 98.0},
+    "houseProjectedDemocraticSeats": {"from": 237, "to": 241},
+    "houseSimulationMedianDemocraticSeats": {"from": 244, "to": 246},
+    "houseDemocraticSeatRange": {"from": [225, 267], "to": [227, 269]}
+  },
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "providerUsedByScript": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  }
+}
