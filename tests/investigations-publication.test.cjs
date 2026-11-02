@@ -48,7 +48,9 @@ test('scoped Firebase release cannot republish older elections, NFL, homepage or
   assert.doesNotMatch(profile[1], /nfl\/|election\/|one\.html|forecasting\.html|index\.html|divisions\.css/);
   assert.match(script, /changedPaths\.some/);
   assert.match(script, /og-air01-v1\.png/);
-  assert.match(wrapper, /ValidateSet\([^\n]*"investigations"\)/);
+  const profileSet = wrapper.match(/ValidateSet\(([^\n]*)\)/)?.[1];
+  assert.ok(profileSet, 'Firebase wrapper must declare an explicit ValidateSet');
+  assert.ok(profileSet.split(', ').includes('"investigations"'), 'investigations profile stays available');
   assert.match(wrapper, /stale-directory deployment path has been removed/);
 });
 
