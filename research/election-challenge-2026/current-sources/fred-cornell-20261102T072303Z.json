@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Fred Cornell independent",
+  "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
+  "publisherEdition": "House and Senate runs November 2, 2026; polls retrieved November 2",
+  "sources": [
+    {
+      "scope": "combined",
+      "sourceUrl": "https://fredcornell.com/us",
+      "retrievedAtUtc": "2026-11-02T07:23:03.7804023Z",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "custody": {
+        "representation": "INVOKE_WEBREQUEST_RETURNED_HTML_UTF8",
+        "sha256": "435d64ba2197a932eee100f719340734fb6c984e3c821d73fe9a49b7f184e3ff",
+        "utf8Bytes": 166534,
+        "exactHttpWireBytes": false,
+        "fullSourcePublishedInRepository": false
+      }
+    },
+    {
+      "scope": "house",
+      "sourceUrl": "https://fredcornell.com/us/house",
+      "retrievedAtUtc": "2026-11-02T07:23:05.9985412Z",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "custody": {
+        "representation": "INVOKE_WEBREQUEST_RETURNED_HTML_UTF8",
+        "sha256": "32f84dbbe1e13821559f6606c7c01e0b1b808c8f87328556c9e78562dba6a2f8",
+        "utf8Bytes": 168969,
+        "exactHttpWireBytes": false,
+        "fullSourcePublishedInRepository": false
+      }
+    },
+    {
+      "scope": "senate",
+      "sourceUrl": "https://fredcornell.com/us/senate",
+      "retrievedAtUtc": "2026-11-02T07:23:07.3650617Z",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "custody": {
+        "representation": "INVOKE_WEBREQUEST_RETURNED_HTML_UTF8",
+        "sha256": "b532d91c215bbcf299eacf0af0dd01ff074798eada082f6d016364825ca89646",
+        "utf8Bytes": 182024,
+        "exactHttpWireBytes": false,
+        "fullSourcePublishedInRepository": false
+      }
+    }
+  ],
+  "observations": {
+    "houseDemocraticControlPct": 99.0,
+    "houseDemocraticSeats": 252.0,
+    "houseSeatType": "median",
+    "senateDemocratic51PlusPct": 71.9,
+    "senateHeadlineRoundedPct": 72.0,
+    "senateRepublican51PlusPct": 15.2,
+    "senateRepublicanExactly50Pct": 7.6,
+    "senateRepublicanControlPct": 22.8,
+    "senateIndependentBalancePct": 5.3,
+    "senateDemocraticSeats": 52.0,
+    "senateRepublicanSeats": 47.0,
+    "senateIndependentSeats": 1.0,
+    "senateSeatType": "expected party seats"
+  },
+  "validation": {
+    "senateOutcomePctSum": 100.0,
+    "senateOutcomePctSumPass": true,
+    "senateRepublicanControlPctRecomputed": 22.8,
+    "senateRepublicanControlComposition": "15.2% for 51+ seats plus 7.6% for exactly 50 with the Republican vice president"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "houseDemocraticSeats": {"prior": 251.0, "current": 252.0},
+    "senateDemocratic51PlusPct": {"prior": 70.5, "current": 71.9},
+    "senateHeadlineRoundedPct": {"prior": 70.0, "current": 72.0},
+    "senateRepublicanControlPct": {"prior": 24.2, "current": 22.8},
+    "senateDemocraticInterval": {"prior": "45-58", "current": "46-58"},
+    "unchanged": ["houseDemocraticControlPct", "senateExpectedPartySeats", "senateIndependentBalancePct"]
+  },
+  "admissionNote": "The exact 71.9% Democratic 51-seat outcome is retained separately from the rounded 72% headline. Republican control is the distinct 22.8% sum of 15.2% for 51+ seats and 7.6% for exactly 50 with the Republican vice president; the 5.3% independent-balance outcome remains separate."
+}

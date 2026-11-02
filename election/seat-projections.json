@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "edition": "KAH-US-2026-20261031T181057Z with challenger source checks through 2026-11-02T05:53:29Z",
+  "edition": "KAH-US-2026-20261031T181057Z with challenger source checks through 2026-11-02T07:23:07Z",
   "comparisonStatus": "DESCRIPTIVE_ONLY_UNMATCHED_CUTOFFS_AND_SEAT_TYPES",
-  "sourceObservationFileSha256": "3fb4f6c9568fa3dcb3fc7393c993c4a0a0aa67010cce63c887a6b2a95ead4662",
+  "sourceObservationFileSha256": "17a094eaab73544107ef0d81a2e6a7dc6683faa6a8dac452291951b704007be6",
   "house": {
     "totalSeats": 435,
     "democraticControlThreshold": 218,
@@ -22,7 +22,7 @@
       {"provider":"Scrutinel","democraticSeats":239.77,"seatType":"expected mean; separate median 239","edition":"Updated Nov. 1 11:08 PM EST; retrieved Nov. 2 03:42 UTC","sourceUrl":"https://scrutinel.com/"},
       {"provider":"Vote-Scope","democraticSeats":237,"seatType":"projected; median 244","edition":"Updated Nov. 1; retrieved Nov. 1 23:49 UTC; precise source time not exposed","sourceUrl":"https://vote-scope.com/en/us/house/"},
       {"provider":"ElectIndex","democraticSeats":248.5,"seatType":"average; projected 244","edition":"Public feed commit f27cf7b; retrieved Nov. 2 05:08 UTC; commit metadata future-dated 05:39 UTC","sourceUrl":"https://electindex.com/forecasts/"},
-      {"provider":"Fred Cornell","democraticSeats":251,"seatType":"median","edition":"Run Nov. 1; retrieved Nov. 1 13:35 UTC","sourceUrl":"https://fredcornell.com/us/house"},
+      {"provider":"Fred Cornell","democraticSeats":252,"seatType":"median","edition":"Run Nov. 2; retrieved Nov. 2 07:23 UTC","sourceUrl":"https://fredcornell.com/us/house"},
       {"provider":"Yale PLSC 2219","democraticSeats":237,"seatType":"class model","edition":"Snapshot Nov. 1; built 21:07 UTC; retrieved Nov. 2 03:21 UTC","sourceUrl":"https://kevinmdeluca.com/forecast/"},
       {"provider":"Dave Manuel","democraticSeats":233,"seatType":"projected median","edition":"Displayed Nov. 1 11:45 PM ET (future-dated); retrieved Nov. 2 04:32 UTC","sourceUrl":"https://www.davemanuel.com/2026-midterm-forecast.php"},
       {"provider":"On Point Politics","democraticSeats":253,"seatType":"average; first-party forecast-in-brief","edition":"Updated Nov. 1; retrieved Nov. 2 05:53 UTC; precise source time not exposed","sourceUrl":"https://onpointpolitics.us/forecast"},
@@ -48,7 +48,7 @@
       {"provider":"COYNTOSS","democraticSeats":51.706,"seatType":"expected caucus; separate median 52","edition":"Model inputs Nov. 1; retrieved Nov. 2 03:21 UTC","sourceUrl":"https://chasecoyne.com/senate"},
       {"provider":"Scrutinel","democraticSeats":52.35,"seatType":"expected mean; separate median 52","edition":"Updated Nov. 1 11:08 PM EST; retrieved Nov. 2 03:42 UTC","sourceUrl":"https://scrutinel.com/"},
       {"provider":"ElectIndex","democraticSeats":53.0,"seatType":"average; projected 54","edition":"Public feed commit f27cf7b; retrieved Nov. 2 05:08 UTC; commit metadata future-dated 05:39 UTC","sourceUrl":"https://electindex.com/forecasts/"},
-      {"provider":"Fred Cornell","democraticSeats":52,"seatType":"expected party seats; plus 1 independent","edition":"Run Nov. 1; retrieved Nov. 1 13:35 UTC","sourceUrl":"https://fredcornell.com/us/senate"},
+      {"provider":"Fred Cornell","democraticSeats":52,"seatType":"expected party seats; plus 1 independent","edition":"Run Nov. 2; retrieved Nov. 2 07:23 UTC","sourceUrl":"https://fredcornell.com/us/senate"},
       {"provider":"Yale PLSC 2219","democraticSeats":50,"seatType":"class model","edition":"Snapshot Nov. 1; built 21:07 UTC; retrieved Nov. 2 03:21 UTC","sourceUrl":"https://kevinmdeluca.com/forecast/"},
       {"provider":"Dave Manuel","democraticSeats":52,"seatType":"projected median incl. aligned independents","edition":"Displayed Nov. 1 11:45 PM ET (future-dated); retrieved Nov. 2 04:32 UTC","sourceUrl":"https://www.davemanuel.com/2026-midterm-forecast.php"},
       {"provider":"On Point Politics","democraticSeats":54.8,"seatType":"average; detailed first-party Senate panel","edition":"Updated Nov. 1; retrieved Nov. 2 05:53 UTC; precise source time not exposed","sourceUrl":"https://onpointpolitics.us/forecast"},
