@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "ElectIndex",
+  "sourceUrls": {
+    "publicForecast": "https://electindex.com/forecasts/",
+    "repository": "https://github.com/ElectIndex/26_us_forecast_data",
+    "commitApi": "https://api.github.com/repos/ElectIndex/26_us_forecast_data/commits?path=output/chambers.csv&per_page=1",
+    "rawPinnedCsv": "https://raw.githubusercontent.com/ElectIndex/26_us_forecast_data/d0be89c066a18a241a1493d4d39027bbf3ff9171/output/chambers.csv"
+  },
+  "retrieval": {
+    "commitApiRetrievedAtUtc": "2026-11-02T23:53:10.6212088Z",
+    "rawCsvRetrievedAtUtc": "2026-11-02T23:53:11.2858204Z",
+    "representation": "FIRST_PARTY_GITHUB_UTF8_RESPONSES_NOT_EXACT_WIRE_BYTES"
+  },
+  "publisherEdition": {
+    "commitSha": "d0be89c066a18a241a1493d4d39027bbf3ff9171",
+    "commitMessage": "Forecast update 2026-11-02 (evening: AtlasIntel NC/OH-SEN, Research Co. 8-state batch, Zogby GCB)",
+    "commitMetadataUtc": "2026-11-02T23:50:42Z"
+  },
+  "observations": {
+    "houseDemocraticControlPct": 93.0,
+    "houseAverageDemocraticSeats": 248.4,
+    "houseProjectedDemocraticSeats": 244,
+    "houseControlThreshold": 218,
+    "houseRaces": 435,
+    "senateDemocraticControlPct": 75.6,
+    "senateAverageDemocraticSeats": 53.1,
+    "senateProjectedDemocraticSeats": 54,
+    "senateControlThreshold": 51,
+    "senateRaces": 35
+  },
+  "custody": {
+    "rawCsvHttpStatus": 200,
+    "rawCsvUtf8Bytes": 229,
+    "rawCsvSha256": "62865b3e202baec1eaeb3a61f85d524e47eb99a8cc178b13a8c3da6330e0c68f",
+    "commitApiHttpStatus": 200,
+    "commitApiUtf8Bytes": 3530,
+    "commitApiSha256": "8f55d90b2032459819d2c6e30d87640915a237473b5f0014f79a8c53fc127a37"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "houseDemocraticControlPct": {"from": 92.9, "to": 93.0},
+    "senateDemocraticControlPct": {"from": 75.5, "to": 75.6},
+    "houseAverageDemocraticSeats": {"from": 248.5, "to": 248.4},
+    "senateAverageDemocraticSeats": {"from": 53.1, "to": 53.1},
+    "houseProjectedDemocraticSeats": {"from": 245, "to": 244},
+    "senateProjectedDemocraticSeats": {"from": 54, "to": 54}
+  },
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "providerUsedByScript": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  }
+}
