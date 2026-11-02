@@ -1,0 +1,8 @@
+# Captured source files are digest-bound; never alter their byte-level newlines.
+*.json text eol=lf
+*.html text eol=lf
+*.txt text eol=lf
+*.md text eol=lf
+# Retain original whitespace in SHA-pinned external markdown captures.
+licensed-2026-11-02/*.txt -whitespace
+review-2026-11-02/commons-*.md -whitespace

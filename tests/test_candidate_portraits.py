@@ -13,10 +13,10 @@ spec.loader.exec_module(portraits)
 class CandidatePortraitTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.catalog = json.loads(portraits.DEFAULT_CATALOG.read_text())
-        cls.supplement = json.loads(portraits.DEFAULT_SUPPLEMENT.read_text())
-        cls.current = json.loads((ROOT / "election/current-projections.json").read_text())
-        cls.ledger = json.loads((ROOT / "election/candidate-portraits.json").read_text())
+        cls.catalog = json.loads(portraits.DEFAULT_CATALOG.read_text(encoding="utf-8"))
+        cls.supplement = json.loads(portraits.DEFAULT_SUPPLEMENT.read_text(encoding="utf-8"))
+        cls.current = json.loads((ROOT / "election/current-projections.json").read_text(encoding="utf-8"))
+        cls.ledger = json.loads((ROOT / "election/candidate-portraits.json").read_text(encoding="utf-8"))
 
     def test_real_roster_coverage_and_exact_card_binding(self):
         rebuilt = portraits.build_ledger(self.current, self.catalog, self.supplement["retrievedAtUtc"], self.supplement)

@@ -197,6 +197,53 @@
           || portrait.imageCheck?.httpStatus !== 200 || !String(portrait.imageCheck?.contentType || '').startsWith('image/')) return null;
       return portrait;
     }
+    if (portrait.identityType === 'CREDITED_COMMONS_PHOTO') {
+      const digest = String(portrait.imageSha256 || '');
+      const lic = portrait.license;
+      const expectedLicense = lic === 'CC0' ? 'https://creativecommons.org/publicdomain/zero/1.0/'
+        : lic === 'CC BY-SA 4.0' ? 'https://creativecommons.org/licenses/by-sa/4.0' : null;
+      const creditFile = String(portrait.identityId || '');
+      if (!expectedLicense || portrait.licenseUrl !== expectedLicense
+          || portrait.bioguideId || portrait.chamber !== 'Senate'
+          || !/^[A-Z]{2}$/.test(portrait.state || '') || portrait.contestId !== portrait.state
+          || !/^File:[\w.%()\-]+\.jpe?g$/i.test(creditFile)
+          || portrait.sourceUrl !== 'https://commons.wikimedia.org/wiki/' + creditFile
+          || portrait.raceId !== 'S-' + portrait.state || portrait.raceSide !== 'left'
+          || portrait.sourceImageUrl !== 'https://midtermsforecast.com/img/cand/S-' + portrait.state + '_left.jpg'
+          || !Number.isSafeInteger(portrait.sourceCandidateId)
+          || !/^[a-f0-9]{64}$/.test(digest)
+          || portrait.url !== '/assets/candidate-portraits/' + portrait.sourceCandidateId + '-' + digest.slice(0,16) + '.jpg'
+          || portrait.imagePath !== portrait.url.slice(1) || !Number.isSafeInteger(portrait.imageBytes)
+          || portrait.imageBytes < 512 || portrait.width !== 96 || portrait.height !== 96
+          || !String(portrait.attribution || '').includes(' / Wikimedia Commons;')
+          || !String(portrait.rightsBasis || '').trim()
+          || !new RegExp('^S\\d' + portrait.state + '\\d{5}$').test(portrait.fecCandidateId || '')
+          || portrait.identitySourceUrl !== `https://www.fec.gov/data/candidate/${portrait.fecCandidateId}/?cycle=2026`
+          || !/^[a-f0-9]{64}$/.test(portrait.identitySourceSha256 || '')) return null;
+      return portrait;
+    }
+    if (portrait.identityType === 'FEC_LOCAL_COMMONS') {
+      const prefix = portrait.chamber === 'House' ? 'H' : portrait.chamber === 'Senate' ? 'S' : '';
+      const digest = String(portrait.imageSha256 || '');
+      const revisionUrl = `https://commons.wikimedia.org/w/index.php?oldid=${portrait.commonsRevisionId}`;
+      const cc = /^CC BY(-SA)? (2\.0|4\.0)$/.exec(portrait.license);
+      const licenseOkay = cc ? portrait.licenseUrl === `https://creativecommons.org/licenses/${cc[1] ? 'by-sa' : 'by'}/${cc[2]}/deed.en`
+        : portrait.license === 'Copyrighted free use' && portrait.state === 'IA'
+          && portrait.permissionTicket === '2010030210041811' && portrait.attribution === 'Iowa General Assembly'
+          && portrait.licenseUrl === revisionUrl + '#Licensing';
+      if (!prefix || !/^[A-Z]{2}$/.test(portrait.state || '') || portrait.bioguideId
+          || !new RegExp('^' + prefix + '\\d' + portrait.state + '\\d{5}$').test(portrait.identityId || '')
+          || portrait.fecCandidateId !== portrait.identityId
+          || portrait.identitySourceUrl !== `https://www.fec.gov/data/candidate/${portrait.identityId}/?cycle=2026`
+          || !/^[a-f0-9]{64}$/.test(portrait.identitySourceSha256 || '')
+          || !Number.isSafeInteger(portrait.commonsRevisionId) || portrait.commonsRevisionId <= 0 || portrait.sourceUrl !== revisionUrl
+          || !licenseOkay || !String(portrait.attribution || '').trim() || !portrait.rightsBasis
+          || !Number.isSafeInteger(portrait.sourceCandidateId) || !/^[a-f0-9]{64}$/.test(digest)
+          || portrait.url !== `/assets/candidate-portraits/${portrait.sourceCandidateId}-${digest.slice(0,16)}.jpg`
+          || !/^[a-f0-9]{64}$/.test(portrait.sourceCapture?.sha256 || '')
+          || portrait.width !== 250 || !(portrait.height > 0 && portrait.height <= 1000)) return null;
+      return portrait;
+    }
     if ((portrait.identityType && portrait.identityType !== 'BIOGUIDE') || !/^[A-Z][0-9]{6}$/.test(portrait.bioguideId || '')) return null;
     const localImage = /^[A-Z][0-9]{6}$/.test(portrait.bioguideId) && /^[a-f0-9]{64}$/.test(portrait.imageSha256 || '') && portrait.url === `/assets/candidate-portraits/${portrait.bioguideId}-${portrait.imageSha256.slice(0,16)}.jpg`;
     if (!httpsUrl(portrait.url) && !localImage) return null;
@@ -225,7 +272,7 @@
       if (!portrait || duplicates.has(id) || portrait.state !== race.state || portrait.party !== candidate.party || portrait.contestId !== race.contestId || portrait.chamber !== race.chamber || normalizePortraitName(portrait.candidateName) !== normalizePortraitName(candidate.name) || !admittedPortrait({portrait})) return;
       candidate.portrait = portrait;
       matchedCards += 1;
-      people.add(portrait.bioguideId || `FEC:${portrait.identityId}`);
+      people.add(portrait.bioguideId || `FEC:${portrait.fecCandidateId || portrait.identityId}`);
     }));
     return {matchedCards,uniquePeople:people.size,available:true};
   }
@@ -336,8 +383,8 @@
       const initials = candidate.name.split(/\s+/).map((part) => part[0]).join('').slice(0,2) || '?';
       const fallback = `<span class="nominee-avatar party-${escapeHtml(party.toLowerCase())}" aria-hidden="true">${escapeHtml(initials)}</span>`;
       const visual = `<span class="nominee-visual">${fallback}${portrait ? `<img class="nominee-photo" src="${escapeHtml(portrait.url)}" alt="${escapeHtml(candidate.name)}" width="56" height="56" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : ''}</span>`;
-      const creator = portrait?.identityType === 'FEC_CANDIDATE' ? `${escapeHtml(portrait.attribution)} · ` : '';
-      const custody = portrait ? `${creator}<a class="portrait-source" href="${escapeHtml(portrait.sourceUrl)}" title="${escapeHtml(portrait.attribution)}">Photo source</a> · <a class="portrait-source" href="${escapeHtml(portrait.licenseUrl)}">${escapeHtml(portrait.license)}</a>${portrait.identityType === 'FEC_CANDIDATE' ? ' · Source thumbnail; no additional edits' : ''}` : 'Photo not yet verified';
+      const creator = ['FEC_CANDIDATE','CREDITED_COMMONS_PHOTO','FEC_LOCAL_COMMONS'].includes(portrait?.identityType) ? `${escapeHtml(portrait.creditNote || portrait.attribution)} · ` : '';
+      const custody = portrait ? `${creator}<a class="portrait-source" href="${escapeHtml(portrait.sourceUrl)}" title="${escapeHtml(portrait.attribution)}">Photo source</a> · <a class="portrait-source" href="${escapeHtml(portrait.licenseUrl)}">${escapeHtml(portrait.license)}</a>${['FEC_CANDIDATE','FEC_LOCAL_COMMONS'].includes(portrait.identityType) ? ' · Source thumbnail; no additional edits' : portrait.identityType === 'CREDITED_COMMONS_PHOTO' ? ' · Previously cropped source thumbnail; no additional edits by KAHRELUM' : ''}` : 'Photo not yet verified';
       return `<div class="nominee">${visual}<div><strong>${escapeHtml(candidate.name)}</strong><small>${escapeHtml(label)}</small><small class="portrait-credit">${custody}</small></div></div>`;
     }).join('')}</div>`;
   }

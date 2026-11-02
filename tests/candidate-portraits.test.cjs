@@ -98,3 +98,52 @@ test('licensed-image creator credit and source/license links remain visible',()=
   const portrait=race.candidates.find(c=>c.portrait?.identityType==='FEC_CANDIDATE').portrait;
   assert.ok(html.includes(portrait.attribution.replace(/&/g,'&amp;')));
 });
+
+
+test('newly licensed Commons derivatives bind to their exact roster records and reject substitutions', () => {
+  const races = makeRaces();
+  assert.equal(map.applyPortraitLedger(races, ledger).matchedCards, admittedCount);
+  for (const name of ['Hallie Shoffner','Charles Booker','Annie Andrews']) {
+    const row = ledger.records.find(r => r.candidateName === name);
+    assert.ok(row && row.identityType === 'CREDITED_COMMONS_PHOTO',name);
+    assert.equal(map.admittedPortrait({portrait:row}),row,name);
+    const match = races.flatMap(r => r.candidates).find(c => c.sourceCandidateId === row.sourceCandidateId);
+    assert.equal(match?.portrait,row,name);
+    const race = races.find(r => r.candidates.includes(match));
+    const html = map.candidateCards(race);
+    assert.match(html,/Previously cropped source thumbnail; no additional edits by KAHRELUM/);
+    assert.ok(html.includes(row.attribution));
+    for (const patch of [
+      {identityType:'UNVERIFIED'},{license:'Fair use'},{licenseUrl:'https://example.org'},
+      {sourceUrl:'https://commons.wikimedia.org/wiki/File:Wrong_Person.jpg'},
+      {sourceImageUrl:'https://midtermsforecast.com/img/cand/S-AK_left.jpg'},
+      {url:'/assets/candidate-portraits/123-aaaa.jpg'},{imageSha256:'a'.repeat(64)},
+      {width:95},{attribution:''},{identityId:'File:Other_Person.jpg'}
+    ]) assert.equal(map.admittedPortrait({portrait:{...row,...patch}}),null,name + ' ' + JSON.stringify(patch));
+  }
+});
+
+test('local Commons photos require FEC evidence, scoped permissions and visible creator credit', () => {
+  const races=makeRaces(); map.applyPortraitLedger(races,ledger);
+  const rows=ledger.records.filter(r=>r.identityType==='FEC_LOCAL_COMMONS');
+  assert.equal(rows.length,5);
+  for(const row of rows){
+    assert.equal(map.admittedPortrait({portrait:row}),row);
+    const race=races.find(r=>r.candidates.some(c=>c.portrait===row));
+    assert.ok(race,row.candidateName);
+    const html=map.candidateCards(race);
+    assert.ok(html.includes(row.creditNote || row.attribution));
+    assert.match(html,/Source thumbnail; no additional edits/);
+    for(const patch of [{fecCandidateId:'S6XX00000'},{identitySourceSha256:''},
+      {identitySourceUrl:'https://example.org'},{url:'https://example.org/photo.jpg'},
+      {license:'Public domain'},{licenseUrl:'https://example.org/license'},
+      {sourceCapture:{sha256:''}},{attribution:''},{bioguideId:'F999999'}]){
+      assert.equal(map.admittedPortrait({portrait:{...row,...patch}}),null,row.candidateName+' '+JSON.stringify(patch));
+    }
+    for(const field of ['candidateName','state','party','chamber','contestId','sourceCandidateId']){
+      const changed=structuredClone(ledger);
+      changed.records.find(r=>r.sourceCandidateId===row.sourceCandidateId)[field]='wrong';
+      assert.equal(map.applyPortraitLedger(makeRaces(),changed).matchedCards,admittedCount-1,field);
+    }
+  }
+});
