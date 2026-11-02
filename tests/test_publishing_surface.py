@@ -290,7 +290,7 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertEqual(new_numeric["VotePredictor"]["houseDemocraticSeats"], 230.2)
         self.assertEqual((new_numeric["Midterm Forecast"]["houseDemocraticControlPct"], new_numeric["Midterm Forecast"]["senateDemocraticControlPct"]), (92.0, 75.0))
         self.assertEqual((new_numeric["Midterm Forecast"]["houseDemocraticSeats"], new_numeric["Midterm Forecast"]["senateDemocraticSeats"]), (237.0, 53.0))
-        self.assertIn("1:41 PM ET", new_numeric["Midterm Forecast"]["sourceEdition"])
+        self.assertIn("4:40 PM ET", new_numeric["Midterm Forecast"]["sourceEdition"])
         yale = next(row for row in challengers["records"] if row["provider"] == "Yale PLSC 2219 class model")
         self.assertEqual((yale["houseDemocraticControlPct"], yale["senateDemocraticControlPct"], yale["houseDemocraticSeats"], yale["senateDemocraticSeats"]), (95.0, 43.0, 237.0, 50.0))
         self.assertIn("Snapshot Nov. 1", yale["sourceEdition"])

@@ -1,0 +1,39 @@
+{
+  "provider": "Midterm Forecast",
+  "sourceUrl": "https://midtermforecast.com/",
+  "houseSourceUrl": "https://midtermforecast.com/house/",
+  "senateSourceUrl": "https://midtermforecast.com/senate/",
+  "retrievedAtUtc": "2026-11-02T22:14:11.0815256Z",
+  "sourceUpdateText": "Model run Nov. 2, 4:40 PM ET; polls through Nov. 2",
+  "custodyRepresentation": "FIRST_PARTY_HTTP_RESPONSES_UTF8_NOT_EXACT_WIRE_BYTES",
+  "responses": {
+    "overview": {
+      "directHttpStatus": 200,
+      "responseUtf8Bytes": 22972,
+      "rawSha256": "02278a43974e79f3cdaac707cf1b9cdcfb466eaf53585c44469375389a52b111"
+    },
+    "house": {
+      "directHttpStatus": 200,
+      "responseUtf8Bytes": 94029,
+      "rawSha256": "d7fab08c7300980261db0809e8be1ee4c44cbad775e1feeca4762eee2e5c8a6f"
+    },
+    "senate": {
+      "directHttpStatus": 200,
+      "responseUtf8Bytes": 35858,
+      "rawSha256": "a1e49216e2c7fea9744bceb8db3cef3051f2e39e2295726c2dcbc09ea59da89b"
+    }
+  },
+  "fields": {
+    "houseDemocraticControlPct": 92.0,
+    "houseDemocraticSeatsMedian": 237,
+    "houseDemocraticSeats80PctInterval": [219, 258],
+    "houseControlThreshold": 218,
+    "senateDemocraticControlPct": 75.0,
+    "senateDemocraticSeatsMedianIncludingIndependents": 53,
+    "senateDemocraticSeats80PctInterval": [48, 57],
+    "senateControlThreshold": 51,
+    "senateTieRule": "50-50 resolves Republican",
+    "overviewJointOutcomePcts": [75.0, 17.0, 8.0, 1.0]
+  },
+  "admissionNote": "The source edition advanced from 1:41 PM to 4:40 PM ET while the dedicated House and Senate control probabilities, medians, intervals and cutoffs remained unchanged. The overview joint outcomes are preserved as displayed and sum to 101% because of rounding. A separate rewind widget displays 76% Democratic Senate control, but the dedicated current Senate page and overview top line both display 75%; the dedicated current field remains the admitted statistic. Midterm Forecast is not an input to scripts/refresh-election-projections.py, so this source-edition change does not create a new KAHRELUM probability edition."
+}
