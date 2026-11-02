@@ -1,0 +1,19 @@
+{
+  "freeze_at_utc": "2026-11-02T22:08:45.857956+00:00",
+  "method_lock_commit": "26f0234ae97a6d40b4d4b48d7c9bb1e9945736c3",
+  "source_uris": [
+    "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
+    "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2026.parquet"
+  ],
+  "files": {
+    "KAHRELUM_Numerical_Engine_v0.1_Research_Package.zip": "1f6f1c7ac3c7e1271a99d788a690287737bc6ee185d1c2f1b0a7dea682aff3ce",
+    "games_2026_capture.csv": "b34511fa8aa98cab274cd41f86a33b82a3d7cbb555283befb6b41c8e1c421470",
+    "play_by_play_2026_capture.parquet": "8be07cb449d8996e69584339af9b8a504ba433921e189ed4c768a67d739423cb",
+    "REPLAY_PREDICTIONS_MARKET_BLIND.csv": "c40b2b3db5de07cf119e8b933b853dd8aa40c70aa50c8f3ec4802d3e63cee8a5",
+    "REPLAY_GRADED_AFTER_PREDICTION_LOCK.csv": "fa6b7fe34e3695072bcb033f7eb4e7afbafc456cad007b5d455dfe018aeaba33",
+    "REPLAY_SCOREBOARD.json": "30d80071f27400cc3c58a562347906950757cefbcb269058eaed4ed7312ce8e2"
+  },
+  "source_data_retrospective": true,
+  "original_snapshot_unchanged": true,
+  "status": "SHA256_MANIFEST;NOT_PREGAME_TIMESTAMPS;NO_ACTUAL_BETS"
+}
