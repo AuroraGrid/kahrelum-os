@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "On Point Politics",
+  "sourceUrl": "https://onpointpolitics.us/forecast",
+  "retrieval": {
+    "retrievedAtUtc": "2026-11-02T17:14:24.2638866Z",
+    "cachePolicy": "Fresh first-party HTTPS retrieval with no-cache request headers",
+    "representation": "FIRST_PARTY_HTTP_RESPONSE_UTF8_NOT_EXACT_WIRE_BYTES"
+  },
+  "publisherEdition": {
+    "displayedUpdate": "Nov. 2, 2026",
+    "dateModified": "2026-11-02T08:00:00-04:00"
+  },
+  "observations": {
+    "simulations": 2000,
+    "houseDemocraticControlPctDisplayed": 98.0,
+    "houseDemocraticControlPctExact": 97.52,
+    "houseAverageDemocraticSeatsDisplayed": 253.0,
+    "houseAverageDemocraticSeatsExact": 252.69,
+    "houseMedianDemocraticSeats": 251,
+    "houseInterval80DemocraticSeats": [227, 281],
+    "houseFavoredDemocraticSeats": 246,
+    "houseControlThreshold": 218,
+    "senateDemocraticControlPctDisplayed": 89.0,
+    "senateDemocraticControlPctExact": 88.54,
+    "senateAverageDemocraticSeatsDisplayed": 55.0,
+    "senateAverageDemocraticSeatsExact": 54.85,
+    "senateMedianDemocraticSeats": 55,
+    "senateInterval80DemocraticSeats": [50, 59],
+    "senateControlThreshold": 51
+  },
+  "custody": {
+    "httpStatus": 200,
+    "utf8Bytes": 959972,
+    "sha256": "eb21f35bc2a1a7329300735ae2ca04dab40daccbf6c1403c40f20764230d681c",
+    "selectedReceiptUtf8Bytes": 1035,
+    "selectedReceiptSha256": "07cc07ffd7fb6debc1d991dfb928a95bb14ade4acaefc2ca79b9906454de0a17",
+    "selectedReceiptRepresentation": "PRIVATE_SELECTED_FIELD_RECEIPT_UTF8"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "houseDemocraticControlPctDisplayed": "UNCHANGED",
+    "houseAverageDemocraticSeatsDisplayed": "UNCHANGED",
+    "senateDemocraticControlPctDisplayed": {"from": 88.0, "to": 89.0},
+    "senateAverageDemocraticSeats": {"fromOneDecimalDisplay": 54.8, "toExact": 54.85, "toRoundedDisplay": 55.0}
+  },
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "providerUsedByScript": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  }
+}
