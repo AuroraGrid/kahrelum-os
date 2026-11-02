@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Datum Signals",
+  "sourceUrl": "https://datumsignals.com/",
+  "verificationWindow": {
+    "startedAtUtc": "2026-11-02T13:34:16.5426857Z",
+    "endedAtUtc": "2026-11-02T13:34:34.0756274Z",
+    "requestCount": 8,
+    "cacheControl": "no-cache",
+    "resolvedRemoteIps": [
+      "104.21.51.52",
+      "172.67.178.17"
+    ],
+    "firstObservedAtUtc": "2026-11-02T13:34:18.5540950Z",
+    "lastObservedAtUtc": "2026-11-02T13:34:33.6608256Z"
+  },
+  "publisherEdition": {
+    "displayedUpdate": "November 1, 2026, 5:00 PM UTC"
+  },
+  "observations": {
+    "houseDemocraticControlPct": 71.0,
+    "senateDemocraticControlPct": 64.0,
+    "houseDemocraticSeats": null,
+    "senateDemocraticSeats": null,
+    "uniqueHouseVariants": [71.0],
+    "uniqueSenateVariants": [64.0],
+    "etag": "W/\"bd70-7fWUfI5CXSPyDRGFL0hMYtssblA\"",
+    "rawSha256": "dfaf7da422e0932801f9766377e1eb58f7a48138889fd7acbddfab9bdbe3754e"
+  },
+  "resolutionReceipt": {
+    "utf8Bytes": 468,
+    "sha256": "5488751cbddc716432f0f03c996ea9bfc09171559a43458c87c6f73a0985f958",
+    "hashConstruction": "selectedResolutionText joined with LF and no trailing LF"
+  },
+  "priorConflictEvidence": {
+    "path": "research/election-challenge-2026/current-sources/datum-signals-conflict-20261102T132353Z.json",
+    "receiptSha256": "41891a7ea70343ad970826e322f08315dddb81bbd796362f9dffdc11b7af025c",
+    "preserved": true
+  },
+  "admissionDecision": {
+    "houseDemocraticControlPct": "PROSPECTIVELY_ADMITTED_71_PERCENT",
+    "senateDemocraticControlPct": "ADMITTED_64_PERCENT",
+    "reason": "A controlled follow-up series returned one stable first-party representation across eight cache-bypassed requests alternating both observed Cloudflare endpoints. This resolves the current-value ambiguity prospectively without rewriting the earlier interleaved-replica evidence or backdating the edition."
+  },
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "datumSignalsUsedByScript": false,
+    "parsedHouseDistrictRatingInputsChanged": false,
+    "parsedSenateRaceRatingInputsChanged": false,
+    "expectedSeatAndControlOutputsChanged": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  }
+}
