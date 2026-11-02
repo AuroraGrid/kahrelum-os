@@ -1,0 +1,37 @@
+# KAHRELUM NFL 2026 Trade Deadline | Chiefs GM receiver-market remarks (CBS / Wolfson)
+
+**Record class:** Append-only original-source-chain addendum; NOT a replacement for `nfl/trade-board.json`, NOT Firebase deployment and NOT a new or revised probability lock.  
+**Research review window:** 2026-11-02 morning America/New_York; source pages inspected before the 2026-11-10 16:00 EST trade deadline. The precise per-page HTTP access instant is not independently timestamped. The first independent publication of THIS record is its resulting GitHub commit time, not this prose or the source article's timestamp.
+
+## FACT | official transaction control
+- The NFL's November 2026 trade register displayed **No Transactions Available** on this retrieval: https://www.nfl.com/transactions/league/trades/2026/11
+- The official 2026 in-season tracker still enumerated seven completed trades, ending with Chicago acquiring Jeffery Simmons October 29: https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season
+- Neither Brian Thomas Jr. nor Josh Downs was traded in these official records. No confirmed Kansas City receiver acquisition was established.
+- The earlier SourceGrid automated NFL transaction parser was reported as degraded; this manual retrieval does not demonstrate repair.
+
+## REPORT | identifiable original broadcast source, secondary transcription
+- **Underlying original source:** CBS Sports sideline reporter **Tracy Wolfson**, during the **2026-11-01 Kansas City at Denver** broadcast. Wolfson attributed to a firsthand conversation with Chiefs GM **Brett Veach** that Kansas City would explore the available WR market given Tyquan Thornton's absence and Rashee Rice's injury history. She indicated the team **intended to make calls in the coming week**. The names **Josh Downs** and **Brian Thomas Jr.** were mentioned in her broadcast remarks, but she did NOT say Veach had confirmed calling either specific player's team.
+- **Direct broadcast audio/video was NOT recovered or independently replayed in this check**, so status is **SECONDARY_TRANSCRIPTION_OF_FIRSTHAND_CBS_BROADCAST**, not independently authenticated original recording and not a formal Chiefs press release. The original broadcast event date is 2026-11-01; exact on-air minute unverified.
+- **Primary accessible quotation/transcript chain:** Ron Kopp Jr., Arrowhead Pride, **2026-11-02 11:15 UTC** (2026-11-02 06:15 EST), reproducing Wolfson's on-air attribution: https://www.arrowheadpride.com/kansas-city-chiefs-news/214884/chiefs-news-brett-veach-looking-receivers-before-trade-deadline .
+- **Secondary narrative:** theScore, Alex Chippin, dated 2026-11-02 on article search result, repeats that Veach spoke to Wolfson; source is the same CBS exchange, **NOT** an independent Chiefs offer verification: https://video.thescore.com/nfl/news/3642173/report-chiefs-steelers-commanders-interested-in-thomas .
+- **Previously preserved original independent report:** Mike Florio, NBC/PFT, **2026-11-01 23:02 EST**, reported Chiefs, Steelers and Commanders interest in Thomas and Chiefs preference for Thomas before fallback Downs: https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chiefs-steelers-commanders-have-interest-in-brian-thomas-jr . The earlier context, caveats and prospective forecast are immutable in `2026-11-02_FLORIO_BRIAN_THOMAS_BUYERS_AND_DOWNS_FALLBACK_FORECAST.md`.
+
+## Evidence classification and negative assertions
+- Chiefs club/GM overall WR-market stance: **ATTRIBUTED_FIRSTHAND_REMARK / ORIGINAL_BROADCAST_UNREPLAYED**; enhanced buyer-side evidence beyond speculative 'fit'.
+- BTJ / Downs specific Chiefs negotiation or offer: **UNVERIFIED**. Wolfson's naming players does not demonstrate that Veach named them or that their clubs received a call.
+- Formal bid, asking price, Jaguars/Colts willingness, guaranteed destination, agreed trade compensation: **NONE ESTABLISHED**.
+- Contract/cap: no new terms supplied by the broadcast. Prior BTJ Jacksonville cap number ($3,998,176 in 2026 per Over The Cap) is NOT the acquiring-team post-trade liability. Salary and remaining cap hit for any hypothetical receiving club are **UNVERIFIED**.
+- NFL/fantasy implication: a successful acquisition could alter Kansas City receiver usage and passing-game distribution, but there is **no current transaction-driven effect** and no individual start/sit determination in this research.
+
+## INFERENCE / FORECAST | unchanged, no pseudo-update
+- This substantiates Chiefs **intent to survey** the receiver market, which increases qualitative confidence in team-level buyer activity. It does not verify a completed call for either specific player and does not alone justify a mechanically invented 5pp+ *trade-anywhere* revision.
+- **Brian Thomas Jr. trade-anywhere by 2026-11-10 16:00 EST: 40%, unchanged**, earlier prospective uncalibrated estimate published in the Florio research commit (prior conversation-recovered provisional board: 34%). No new lock: retain previous GitHub timestamp and all versions.
+- **Josh Downs trade-anywhere by same deadline: 52%, unchanged** from separately preserved prior research; not a newly estimated or scored forecast.
+- Kansas City as destination for BTJ/Downs: **UNPRICED**, because there are no authenticated destination-specific probabilities or completed negotiations. Player team statuses remain **ORIGINAL_REPORT / REPORTED_INTEREST** for earlier Florio claim, not **CONFIRMED_TRADE** or **REPORTED_INQUIRY** on basis of Wolfson's future-call wording.
+- The source is **actionable as a new attributed GM-side planning statement**, not a scored probability change. No Brier result can exist until a valid pre-resolution lock and official outcome, with all eligible negatives retained.
+
+## SOURCEGRID / verification limitations
+Checked manually: official NFL November trade register, league in-season tracker, Arrowhead Pride's dated transcription, theScore's parallel CBS attribution, older original PFT report and existing GitHub BTJ/Steelers research notes. Did **not** independently replay CBS full broadcast, inspect an actual Chiefs outbound offer, or complete direct firsthand review of every team/agent/insider/podcast in all 32 markets. The automated NFL transaction-parser fix has not been confirmed. Next: locate CBS game recording or Wolfson verified original clip; assess whether any specific inquiry/offer and club response are authenticated; continue official transaction monitoring.
+
+## Original Sports Desk brief | UNPUBLISHED DRAFT
+**Chiefs publicly signal they will investigate receiver trades, but no bid is verified.** FACT: On the November 2 review the official NFL trade log listed no November transactions. REPORT: On CBS's November 1 Chiefs-Broncos broadcast, Tracy Wolfson said GM Brett Veach expected the team to explore receiver availability and make calls in the coming week, as transcribed by Arrowhead Pride November 2 at 11:15 UTC (link above). INFERENCE: The team-level buyer search is now more directly attributed, while Florio's already preserved report of interest in Brian Thomas Jr. and fallback Josh Downs still cannot establish a specific Chiefs inquiry. FORECAST: KAHRELUM keeps BTJ at 40% and Downs at 52% to be traded anywhere by Nov 10, with Kansas City-specific destination probabilities UNPRICED. No trade or fantasy change has been confirmed. **Do not externally distribute without separate authorization.**
