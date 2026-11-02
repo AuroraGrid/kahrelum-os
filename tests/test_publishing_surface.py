@@ -276,7 +276,7 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertEqual((electindex["houseControlThreshold"], electindex["senateControlThreshold"]), (218, 51))
         new_numeric = {row["provider"]: row for row in challengers["records"] if row["provider"] in {"Dave Manuel", "On Point Politics", "VotePredictor", "Midterm Forecast"}}
         self.assertEqual(set(new_numeric), {"Dave Manuel", "On Point Politics", "VotePredictor", "Midterm Forecast"})
-        self.assertEqual((new_numeric["Dave Manuel"]["houseDemocraticControlPct"], new_numeric["Dave Manuel"]["senateDemocraticControlPct"]), (92.0, 72.0))
+        self.assertEqual((new_numeric["Dave Manuel"]["houseDemocraticControlPct"], new_numeric["Dave Manuel"]["senateDemocraticControlPct"]), (92.0, 73.0))
         self.assertEqual((new_numeric["Dave Manuel"]["houseDemocraticSeats"], new_numeric["Dave Manuel"]["senateDemocraticSeats"]), (233.0, 52.0))
         self.assertEqual((new_numeric["On Point Politics"]["houseDemocraticControlPct"], new_numeric["On Point Politics"]["senateDemocraticControlPct"]), (98.0, 88.0))
         self.assertEqual((new_numeric["On Point Politics"]["houseDemocraticSeats"], new_numeric["On Point Politics"]["senateDemocraticSeats"]), (253.0, 54.6))

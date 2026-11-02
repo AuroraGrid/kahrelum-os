@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-11-02T03:43:25.7907050Z",
+  "checkedAtUtc": "2026-11-02T04:32:41.1537656Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -218,17 +218,17 @@
       "edition": "2026 Midterm Forecast",
       "sourceUrl": "https://www.davemanuel.com/2026-midterm-forecast.php",
       "houseDemocraticControlPct": 92.0,
-      "senateDemocraticControlPct": 72.0,
+      "senateDemocraticControlPct": 73.0,
       "houseDemocraticSeats": 233.0,
       "houseSeatType": "projected median",
       "senateDemocraticSeats": 52.0,
       "senateSeatType": "projected median including two aligned independents",
-      "sourceEdition": "Updated Nov. 1, 10:45 PM ET; retrieved Nov. 2 03:21 UTC",
+      "sourceEdition": "Displayed Nov. 1, 11:45 PM ET (future-dated relative to retrieval); retrieved Nov. 2 04:32 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "retrievedAtUtc": "2026-11-02T03:21:04.3193482Z",
-      "rawSha256": "fc5eb0f1b5ccde259365ac4895e5d7067107cc98b4422d285ad3c9979011f280",
-      "custodyReceiptSha256": "f78cb960f37bfb25158fec9b3f4f7ebb2bca5a2e93ee2b72ece79819a43ba042",
-      "note": "The hourly Nov. 1 10:45 PM ET edition lowers Democratic House control from 93% to 92%. Democratic Senate control remains 72%, the distinct neither-side outcome remains 2%, and projected medians remain 233 Democratic House seats and 52 Democratic-aligned Senate seats. The House 90% range is 215-256. The future-dated HTTP Date header was not used as a publication time. Dave Manuel is not an input to scripts/refresh-election-projections.py, so no new KAHRELUM probability edition was created."
+      "retrievedAtUtc": "2026-11-02T04:32:41.1537656Z",
+      "rawSha256": "8c58b39521c633dbe0e40ee7c1e9fa8835c4a0c63db915b3b01171450ebcc682",
+      "custodyReceiptSha256": "08e256e16232b6b46b25a1b5f4a5ef4544b9333974112fe592e037312ad5b24e",
+      "note": "A prospective Nov. 2 04:32 UTC first-party retrieval raises Democratic Senate control from 72% to 73% while Republican Senate control decreases from 26% to 25%; the distinct 2% neither-side outcome remains unchanged. Democratic House control remains 92%, and projected medians remain 233 Democratic House seats and 52 Democratic-aligned Senate seats. The displayed Nov. 1 11:45 PM ET edition time corresponds to 04:45 UTC and the HTTP Date header reports 05:06:59 UTC, both later than the independent retrieval; these future-dated provenance fields are preserved but are not used to backdate or anchor publication timing. Private custody receipt SHA256: 08e256e16232b6b46b25a1b5f4a5ef4544b9333974112fe592e037312ad5b24e. Dave Manuel is not an input to scripts/refresh-election-projections.py, so no new KAHRELUM probability edition was created."
     },
     {
       "provider": "On Point Politics",
