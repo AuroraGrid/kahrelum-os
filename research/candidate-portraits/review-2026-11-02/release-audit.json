@@ -301,5 +301,50 @@
       "identityVerifiedAtUtc": "2026-11-02T20:22:02Z"
     }
   ],
-  "productionStatus": "PREVIEW_PENDING"
+  "productionStatus": "BLOCKED_FIREBASE_HOSTING_STORAGE_QUOTA",
+  "sourceCommit": "b6c771c1b49e89bf06a4ca8b418aa9fb2d90b4df",
+  "pullRequest": "https://github.com/AuroraGrid/kahrelum-os/pull/26",
+  "branchPreview": {
+    "url": "https://kahrelum-apq07yges-hasan-kazmi-s-projects.vercel.app/election-challenge",
+    "provider": "Vercel automatic branch preview",
+    "admitted": 429,
+    "newImagesBrowserVerified": 8,
+    "evidence": "branch-preview-browser-audit.json",
+    "isFirebasePreview": false
+  },
+  "firebase": {
+    "authentication": "Dedicated existing publisher service account; no credentials changed",
+    "planPassed": true,
+    "baseVersion": "projects/806087933597/sites/kahrelum-public-hosting/versions/38ff517af8aad9a7",
+    "baseFileCount": 3240,
+    "desiredFileCount": 3248,
+    "newImageCount": 8,
+    "replacedExistingFileCount": 3,
+    "preservedExistingFileHashes": 3237,
+    "removedPaths": [],
+    "configPreserved": true,
+    "previewCreated": false,
+    "promoted": false,
+    "errorHttpStatus": 429,
+    "error": "You have exceeded the Hosting storage quota for your Firebase project, so you cannot deploy to your site right now.",
+    "storageAuditAtUtc": "2026-11-02T20:33:42.758Z",
+    "finalizedVersions": 125,
+    "finalizedVersionBytesSum": 10778889898,
+    "cleanupProposal": "storage-cleanup-proposal.json",
+    "cleanupPerformed": false
+  },
+  "productionReadback": {
+    "checkedAtUtc": "2026-11-02T20:35:34.674744+00:00",
+    "admitted": 421,
+    "unresolved": 519,
+    "ledgerSha256": "0b8bb6d3e150a429f00b89cb547b41402973012d149e08827ea0c44dc633b19f"
+  },
+  "validation": {
+    "pythonPortraitTests": 29,
+    "javascriptPortraitTests": 14,
+    "windowsJavascriptPortraitTests": 14,
+    "electionRegressionTests": 28,
+    "githubPublicSurfaceIntegrityRun": "https://github.com/AuroraGrid/kahrelum-os/actions/runs/41520065421",
+    "githubPublicSurfaceIntegrityResult": "success"
+  }
 }

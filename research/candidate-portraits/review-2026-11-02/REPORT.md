@@ -50,4 +50,22 @@ The [full unresolved CSV](unresolved-candidates.csv) retains all 511 candidates,
 
 The deterministic importer rebuild and `--check` passed. Twenty-nine Python portrait tests and fourteen JavaScript portrait/deployment-byte tests passed. Checks cover wrong names, parties, offices and House districts; undocumented aliases; substituted photos; altered source digests; missing or incorrect licenses; Iowa permission scope; duplicate/replacement records; visible credit; image-error initials; and byte-for-byte JPEG preservation. All 421 original JSON records were compared individually with the baseline and remain unchanged.
 
-The release uses the established Firebase live-file-map overlay, preview and exact-version promotion workflow with a narrow `candidate-portraits` profile. It preserves unrelated live files, Hosting configuration and API hashes, and checks that the deployed roster attaches all 429 portraits. Production publication is pending preview verification; the final deployment receipt will be recorded here after the operation.
+The release uses the established Firebase live-file-map overlay, preview and exact-version promotion workflow with a narrow `candidate-portraits` profile. It preserves unrelated live files, Hosting configuration and API hashes, and checks that the deployed roster attaches all 429 portraits. The authenticated plan passed: **8 new JPEGs + 3 replaced files**, **3,237 existing file hashes preserved**, **zero removals**, unchanged Hosting configuration. However, Firebase rejected version creation with HTTP 429 because the project exceeded its Hosting storage quota. No Firebase preview was created and no promotion occurred. A readback at **20:35:34 UTC** confirmed production still serves **421 admitted / 519 unresolved**, with the same baseline ledger SHA-256. This is a storage-capacity blocker, not missing authentication.
+
+The automatically generated [Vercel branch preview](https://kahrelum-apq07yges-hasan-kazmi-s-projects.vercel.app/election-challenge) reports 429 admitted portraits. All eight additions loaded in actual browser cards with their visible source and licensing credits ([browser audit](branch-preview-browser-audit.json), [screenshot](branch-preview.jpg)). Josh Turek's first observation preceded completion of its lazy image load; a second observation confirmed a loaded 250-pixel image. This branch preview verifies the UI but does **not** substitute for the required Firebase preview and promotion. GitHub's [Public Surface Integrity check](https://github.com/AuroraGrid/kahrelum-os/actions/runs/41520065421) passed.
+
+## Concrete storage cleanup proposal — approval required
+
+Read-only Firebase inspection found **125 finalized versions**, totaling **10,778,889,898 stored bytes**. The [cleanup proposal](storage-cleanup-proposal.json) identifies five older November 1 versions, totaling **414,733,426 bytes**, which are neither a current channel head nor among the latest ten distinct live releases:
+
+| Version | Created UTC | Stored bytes |
+|---|---|---:|
+| `39a23669d1ef54af` | November 1, 01:57 | 79,558,995 |
+| `19b135529a0ef046` | November 1, 08:49 | 82,038,690 |
+| `39f1339c5243f454` | November 1, 15:15 | 84,309,737 |
+| `74316b96d5ffcfb1` | November 1, 15:27 | 84,378,759 |
+| `aed095fa7baad015` | November 1, 15:39 | 84,447,245 |
+
+Deleting those five versions permanently removes those historical rollback copies. No deletion, retention-setting change or billing upgrade was performed. Before any approved cleanup, re-read the current channel heads and recent live releases and exclude any selected version that has become protected. Firebase documents that release-content deletion can take up to 24 hours to reclaim storage: https://firebase.google.com/docs/hosting/manage-hosting-resources. After capacity is reclaimed, rerun the portrait plan, Firebase preview, browser checks and exact-version promotion; do not bypass the stale-live-version guard.
+
+The source changes are recorded in [pull request #26](https://github.com/AuroraGrid/kahrelum-os/pull/26).
