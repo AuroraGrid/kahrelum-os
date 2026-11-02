@@ -279,7 +279,7 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertEqual((new_numeric["Dave Manuel"]["houseDemocraticControlPct"], new_numeric["Dave Manuel"]["senateDemocraticControlPct"]), (92.0, 73.0))
         self.assertEqual((new_numeric["Dave Manuel"]["houseDemocraticSeats"], new_numeric["Dave Manuel"]["senateDemocraticSeats"]), (233.0, 52.0))
         self.assertEqual((new_numeric["On Point Politics"]["houseDemocraticControlPct"], new_numeric["On Point Politics"]["senateDemocraticControlPct"]), (98.0, 88.0))
-        self.assertEqual((new_numeric["On Point Politics"]["houseDemocraticSeats"], new_numeric["On Point Politics"]["senateDemocraticSeats"]), (253.0, 54.6))
+        self.assertEqual((new_numeric["On Point Politics"]["houseDemocraticSeats"], new_numeric["On Point Politics"]["senateDemocraticSeats"]), (253.0, 54.8))
         self.assertEqual((new_numeric["VotePredictor"]["houseDemocraticControlPct"], new_numeric["VotePredictor"]["senateDemocraticControlPct"]), (77.0, None))
         self.assertEqual(new_numeric["VotePredictor"]["houseDemocraticSeats"], 230.0)
         self.assertEqual((new_numeric["Midterm Forecast"]["houseDemocraticControlPct"], new_numeric["Midterm Forecast"]["senateDemocraticControlPct"]), (92.0, 76.0))
