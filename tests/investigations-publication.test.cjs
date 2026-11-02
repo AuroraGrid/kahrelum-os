@@ -201,7 +201,7 @@ test('AIR-01 social metadata uses the published versioned card with exact dimens
 test('AIR-01 two-camera evidence and high-altitude leads remain explicitly bounded', () => {
  const html=read('investigations.html');
  const card=html.match(/<article class="case-record"[^>]*data-case-id="AIR-01"[\s\S]*?<\/article>/)[0];
- for(const value of ['Two-camera evidence and high-altitude upset (November 2 update)','VIDEO-A / descent view','VIDEO-B / fireball-only view','VIDEO-C / additional roadway clip','https://x.com/ScopeReport_/status/2116977473703354580','https://x.com/KeryexNetwork/status/2116983354788815342/video/1','https://myradar.com/layers/metnotes/details/86','does NOT establish sabotage']) assert.ok(card.includes(value),value);
+ for(const value of ['Two-camera evidence and high-altitude upset (November 2 update)','VIDEO-A / descent view','VIDEO-B / fireball-only view','VIDEO-C / additional roadway clip','https://x.com/ScopeReport_/status/2116977473703354580','https://x.com/KeryexNetwork/status/2116983354788815342/video/1','https://myradar.com/layers/metnotes/details/86','do NOT establish sabotage']) assert.ok(card.includes(value),value);
  assert.match(card,/data-reviewed="2026-11-02"/);
  const register=JSON.parse(read('research/investigations-2026/AIR-01/video-evidence-review-v2.json'));
  assert.equal(register.caseId,'AIR-01');assert.equal(register.cause,'UNKNOWN');
