@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-11-02T22:14:11.0815256Z",
+  "checkedAtUtc": "2026-11-02T22:22:44.6729762Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -233,14 +233,14 @@
       "houseSeatType": "projected median",
       "senateDemocraticSeats": 52.0,
       "senateSeatType": "projected median including two aligned independents",
-      "sourceEdition": "Updated Nov. 2, 3:45 PM ET; retrieved Nov. 2 21:47 UTC",
+      "sourceEdition": "Updated Nov. 2, 4:45 PM ET; prospectively corrected and retrieved Nov. 2 22:22 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "retrievedAtUtc": "2026-11-02T21:47:52.0884177Z",
+      "retrievedAtUtc": "2026-11-02T22:22:44.6729762Z",
       "rawSha256": "0e4b6512bb8617fb3f21e70474d5bd897c4e8d7c449ad9fb3ec9ac02d0f4be8b",
       "directHttpStatus": 200,
       "directResponseUtf8Bytes": 273523,
-      "custodyReceiptSha256": "729f2e3dcad937fb07d79daeba3d2ff5ce07b0dd63a41379bb8b1b7bf7d7db55",
-      "note": "The displayed first-party source time advances from Nov. 2 2:45 PM ET to 3:45 PM ET while Democratic House control remains 92%, Democratic Senate control remains 72%, and projected medians remain 233 Democratic House seats and 52 Democratic-aligned Senate seats. House and Senate 90% ranges remain 215–256 Democratic seats and 43–52 Republican seats, respectively. Dave Manuel is not an input to scripts/refresh-election-projections.py, so no new KAHRELUM probability edition was created."
+      "custodyReceiptSha256": "a095264874dbdeaec3e301f234969ba1ff75d2926fd944359f813d93e8020bd3",
+      "note": "A prospective Nov. 2 22:22 UTC retrieval shows the first-party body labeled 4:45 PM ET while its UTF-8 response hash is identical to the earlier receipt labeled 3:45 PM ET. The earlier receipt is retained unchanged; this successor receipt corrects the source label without claiming a byte-level or numerical change. Democratic House control remains 92%, Democratic Senate control remains 72%, and projected medians remain 233 Democratic House seats and 52 Democratic-aligned Senate seats. House and Senate 90% ranges remain 215–256 Democratic seats and 43–52 Republican seats, respectively. Dave Manuel is not an input to scripts/refresh-election-projections.py, so no new KAHRELUM probability edition was created."
     },
     {
       "provider": "On Point Politics",

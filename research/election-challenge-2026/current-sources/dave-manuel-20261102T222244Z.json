@@ -1,0 +1,22 @@
+{
+  "provider": "Dave Manuel",
+  "sourceUrl": "https://www.davemanuel.com/2026-midterm-forecast.php",
+  "retrievedAtUtc": "2026-11-02T22:22:44.6729762Z",
+  "sourceUpdateText": "last updated November 2, 2026, 4:45 p.m. ET",
+  "directHttpStatus": 200,
+  "directResponseUtf8Bytes": 273523,
+  "rawSha256": "0e4b6512bb8617fb3f21e70474d5bd897c4e8d7c449ad9fb3ec9ac02d0f4be8b",
+  "fields": {
+    "houseDemocraticControlPct": 92.0,
+    "senateDemocraticControlPct": 72.0,
+    "houseDemocraticSeatsProjectedMedian": 233,
+    "senateDemocraticSeatsProjectedMedianIncludingAlignedIndependents": 52
+  },
+  "custodyCorrection": {
+    "priorReceiptPath": "research/election-challenge-2026/current-sources/dave-manuel-20261102T214752Z.json",
+    "priorReceiptRawSha256": "0e4b6512bb8617fb3f21e70474d5bd897c4e8d7c449ad9fb3ec9ac02d0f4be8b",
+    "priorRecordedSourceUpdateText": "last updated November 2, 2026, 3:45 p.m. ET",
+    "classification": "PROSPECTIVE_SOURCE_LABEL_CORRECTION_NOT_A_NUMERICAL_MODEL_CHANGE"
+  },
+  "admissionNote": "The current first-party body displays 4:45 PM ET while its UTF-8 response hash is identical to the response hash preserved by the earlier receipt labeled 3:45 PM ET. The earlier receipt is retained unchanged for custody. This successor receipt corrects the admitted source label prospectively and does not claim a byte-level or numerical forecast change."
+}
