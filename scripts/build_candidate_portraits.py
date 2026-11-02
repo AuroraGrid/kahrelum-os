@@ -157,6 +157,141 @@ def plain_text(value: str) -> str:
     return " ".join(html.unescape(re.sub(r"<[^>]*>", " ", value)).split())
 
 
+def checked_capture(meta: dict) -> str:
+    """Read an immutable review capture; never follow a catalog path outside it."""
+    path = meta.get("path", "")
+    if not path.startswith("research/candidate-portraits/review-2026-11-02/") or ".." in Path(path).parts:
+        raise ValueError("Invalid review capture path")
+    raw = (ROOT / path).read_bytes()
+    if hashlib.sha256(raw).hexdigest() != meta.get("sha256"):
+        raise ValueError("Review capture digest mismatch")
+    return raw.decode("utf-8")
+
+
+def primary_identity(photo: dict) -> dict:
+    """Bind every November 2 addition to captured first-party FEC evidence.
+
+    A page-text capture is labeled as such, not represented as an HTTP archive.
+    Registration supplies identity/office evidence, never ballot certification.
+    """
+    path = ROOT / "research/candidate-portraits/primary-identities-2026-11-02.json"
+    catalog = json.loads(path.read_text(encoding="utf-8"))
+    if catalog.get("schema") != "KAHRELUM_PRIMARY_PORTRAIT_IDENTITIES_v1.0":
+        raise ValueError("Unknown primary identity catalog")
+    matches = [r for r in catalog["records"] if r["sourceCandidateId"] == photo["sourceCandidateId"]]
+    if len(matches) != 1:
+        raise ValueError("Missing or ambiguous first-party FEC identity")
+    identity = matches[0]
+    for key in ("sourceCandidateId", "candidateName", "state", "party", "chamber", "contestId"):
+        if identity.get(key) != photo.get(key):
+            raise ValueError("First-party candidate binding mismatch")
+    fec = identity["fecCandidateId"]
+    prefix = "H" if photo["chamber"] == "House" else "S" if photo["chamber"] == "Senate" else ""
+    if (not prefix or not re.fullmatch(prefix + r"\d" + photo["state"] + r"\d{5}", fec)
+            or identity.get("cycle") != 2026
+            or identity["sourceUrl"] != f"https://www.fec.gov/data/candidate/{fec}/?cycle=2026"
+            or identity["sourceParty"] != {"D": "DEMOCRATIC PARTY", "R": "REPUBLICAN PARTY"}.get(photo["party"])):
+        raise ValueError("First-party FEC office, state or party mismatch")
+    text = normalize_name(checked_capture(identity["capture"]))
+    for term in (identity["fecName"], identity["sourceParty"], identity["stateName"], fec,
+                 "Candidate for " + photo["chamber"], identity["sourceSeat"], "2026"):
+        if normalize_name(term) not in text:
+            raise ValueError("FEC capture does not substantiate the identity")
+    expected_seat = identity["stateName"] + " " + photo["chamber"]
+    if photo["chamber"] == "House":
+        district = photo["contestId"].split("-")[-1]
+        expected_seat += " District " + str(0 if district == "AL" else int(district))
+    elif photo["contestId"] not in (photo["state"], photo["state"] + "-special"):
+        raise ValueError("FEC Senate contest mismatch")
+    if identity["sourceSeat"] != expected_seat:
+        raise ValueError("FEC House district mismatch")
+    family, separator, given = identity["fecName"].partition(",")
+    words = photo["candidateName"].split()
+    exact = separator and normalize_name(words[0]) == normalize_name(given.split()[0]) and normalize_name(" ".join(words[1:])) == normalize_name(family)
+    alias = identity.get("documentedAliasCommittee", "")
+    if not exact and not (alias and normalize_name(alias) in text and normalize_name(photo["candidateName"]) in normalize_name(alias)):
+        raise ValueError("Undocumented first-party name alias")
+    legal_name = given.split()[0].title() + " " + family.title()
+    if photo.get("photoSubjectName") and normalize_name(photo["photoSubjectName"]) != normalize_name(legal_name):
+        raise ValueError("Photo subject is not the documented legal identity")
+    return {"fecCandidateId": fec, "identitySourceUrl": identity["sourceUrl"],
+            "identitySourceSha256": identity["capture"]["sha256"],
+            "identityEvidenceRepresentation": identity["captureRepresentation"],
+            "identityVerifiedAtUtc": catalog["reviewedAtUtc"]}
+
+
+def reviewed_local(current: dict, catalog: dict, admitted: list[dict]) -> list[dict]:
+    """Admit source-page-verified, unchanged local Commons thumbnails.
+
+    Separate from the API-based October 31 evidence class. Hashes bind the
+    captured page and downloaded thumbnail; no upstream original SHA is claimed.
+    """
+    if catalog.get("schema") != "KAHRELUM_FEC_LOCAL_COMMONS_v1.0":
+        raise ValueError("Unknown local Commons catalog")
+    candidates = {r["sourceCandidateId"]: r for r in candidate_rows(current)}
+    occupied = {r["sourceCandidateId"] for r in admitted}
+    out, seen, fec_ids = [], set(), {r.get("fecCandidateId", r.get("identityId")) for r in admitted}
+    for photo in catalog["records"]:
+        sid = photo["sourceCandidateId"]
+        if sid in occupied or sid in seen:
+            raise ValueError("Local supplement cannot replace or duplicate a portrait")
+        seen.add(sid)
+        row = candidates.get(sid, {})
+        for key in ("sourceCandidateId", "state", "party", "chamber", "contestId", "candidateName"):
+            if photo.get(key) != row.get("name" if key == "candidateName" else key):
+                raise ValueError("Local portrait roster binding mismatch")
+        identity = primary_identity(photo)
+        if photo.get("identityType") != "FEC_LOCAL_COMMONS" or photo.get("identityId") != identity["fecCandidateId"] or photo["identityId"] in fec_ids or photo.get("bioguideId"):
+            raise ValueError("Local portrait FEC identity mismatch or duplicate")
+        fec_ids.add(photo["identityId"])
+        capture = checked_capture(photo["sourceCapture"])
+        title = photo["commonsTitle"]
+        revision = photo["commonsRevisionId"]
+        if (not isinstance(revision, int) or revision <= 0 or f"oldid={revision}" not in capture
+                or photo["sourceUrl"] != f"https://commons.wikimedia.org/w/index.php?oldid={revision}"
+                or photo["sourcePageUrl"] != "https://commons.wikimedia.org/wiki/" + title.replace(" ", "_")
+                or title not in capture or photo["sourceThumbnailUrl"] not in capture
+                or urlsplit(photo["sourceThumbnailUrl"]).hostname not in {"thumb.wikimedia.org", "upload.wikimedia.org"}):
+            raise ValueError("Local photo page revision or source URL mismatch")
+        summary = capture.split("Licensing", 1)[-1] if "## Summary" not in capture else capture.split("## Summary", 1)[1]
+        subject = photo.get("photoSubjectName", photo["candidateName"])
+        if normalize_name(subject) not in normalize_name(title + " " + summary):
+            raise ValueError("Source page does not identify the exact photographic subject")
+        # Inspect the per-image Licensing section, never the website footer's license.
+        parts = re.split(r"(?m)^#{1,3} Licensing\s*$", capture)
+        if len(parts) != 2:
+            raise ValueError("Missing per-image licensing section")
+        licensing = re.split(r"(?m)^#{1,3} File history", parts[1])[0]
+        licensing = licensing.replace("(//creativecommons.org/", "(https://creativecommons.org/")
+        license_name, license_url = photo["license"], photo["licenseUrl"]
+        if license_name == "Copyrighted free use":
+            if (photo["state"] != "IA" or photo.get("permissionTicket") != "2010030210041811"
+                    or "2010030210041811" not in licensing or "Copyrighted free use" not in licensing
+                    or "www.legis.iowa.gov" not in summary or photo["attribution"] != "Iowa General Assembly"
+                    or "Iowa General Assembly" not in summary
+                    or "may be accessed and used by the general public without authorization of any kind" not in licensing
+                    or license_url != photo["sourceUrl"] + "#Licensing"):
+                raise ValueError("Iowa portrait permission is missing or outside its scope")
+        else:
+            match = re.fullmatch(r"CC BY(-SA)? (2\.0|4\.0)", license_name)
+            expected = f"https://creativecommons.org/licenses/{'by-sa' if match and match[1] else 'by'}/{match[2]}/deed.en" if match else None
+            if not expected or license_url != expected or license_url not in licensing:
+                raise ValueError("Source page lacks the specified reuse license")
+        if not photo.get("attribution") or photo["attribution"] not in summary or not photo.get("rightsBasis"):
+            raise ValueError("Source creator attribution is missing")
+        digest = photo["imageSha256"]
+        expected_path = f"assets/candidate-portraits/{sid}-{digest[:16]}.jpg"
+        if not re.fullmatch(r"[a-f0-9]{64}", digest) or photo["url"] != "/" + expected_path:
+            raise ValueError("Local image path is not identity/hash-bound")
+        image = (ROOT / expected_path).read_bytes()
+        if not image.startswith(b"\xff\xd8\xff") or hashlib.sha256(image).hexdigest() != digest or len(image) != photo["imageBytes"]:
+            raise ValueError("Local image bytes differ from the capture")
+        if photo["width"] != 250 or not 0 < photo["height"] <= 1000 or photo.get("status") != "ADMITTED" or not photo.get("reviewedAtUtc"):
+            raise ValueError("Local thumbnail dimensions or review are missing")
+        out.append({**photo, **identity})
+    return out
+
+
 def reviewed_noncongress(current: dict, catalog: dict, admitted: list[dict]) -> list[dict]:
     """Admit exact FEC identities and reviewed Commons reuse licenses.
 
@@ -291,7 +426,118 @@ def reviewed_noncongress(current: dict, catalog: dict, admitted: list[dict]) -> 
     return records
 
 
-def build_ledger(current: dict, catalog: dict, reviewed_at: str, supplement: dict | None = None, noncongress: dict | None = None) -> dict:
+def reviewed_licensed(current: dict, catalog: dict, admitted: list[dict]) -> list[dict]:
+    """Admit exact roster/credit/race matches backed by pinned bytes and CC reuse rights.
+
+    The independent site's 96px Commons derivative is kept byte-for-byte.
+    No claimed government-issued ID or official ballot certification is inferred.
+    """
+    if catalog.get("schema") != "KAHRELUM_LICENSED_CANDIDATE_PORTRAITS_v1.0":
+        raise ValueError("Unknown licensed photo schema")
+    base = "research/candidate-portraits/licensed-2026-11-02/"
+    evidence = {}
+    for key in ("creditPage", "raceFeed", "bindingEvidence"):
+        meta = catalog[key]
+        path = meta["path"]
+        if not path.startswith(base) or ".." in Path(path).parts:
+            raise ValueError("Untrusted licensed evidence path")
+        raw = (ROOT / path).read_bytes()
+        if hashlib.sha256(raw).hexdigest() != meta["sha256"]:
+            raise ValueError("Licensed evidence SHA mismatch")
+        evidence[key] = raw
+    if catalog["creditPage"]["url"] != "https://midtermsforecast.com/how-built":
+        raise ValueError("Wrong photo credit page")
+    if catalog["raceFeed"]["url"] != "https://midtermsforecast.com/data/forecast.json":
+        raise ValueError("Wrong race identity feed")
+    raw_credit = evidence["creditPage"].decode("utf-8")
+    race_data = json.loads(evidence["raceFeed"])
+    if race_data["schema"] != "mt26.forecast/1":
+        raise ValueError("Unknown race source schema")
+    race_by_id = {row["id"]: row for row in race_data["races"]}
+    binding_rows = json.loads(evidence["bindingEvidence"])["records"]
+    by_id = {row["sourceCandidateId"]: row for row in binding_rows}
+    if len(by_id) != len(binding_rows):
+        raise ValueError("Duplicate credit bindings")
+    source_candidates = {str(row["sourceCandidateId"]): row for row in candidate_rows(current)}
+    occupied = {str(row["sourceCandidateId"]) for row in admitted}
+    seen, out = set(), []
+    for photo in catalog["records"]:
+        sid = str(photo["sourceCandidateId"])
+        if sid in occupied or sid in seen:
+            raise ValueError("Cannot replace or duplicate an admitted candidate portrait")
+        seen.add(sid)
+        candidate = source_candidates.get(sid)
+        binding_fields = ("sourceCandidateId", "candidateName", "state", "party", "chamber", "contestId")
+        expected = ({k: candidate["name"] if k == "candidateName" else candidate[k] for k in binding_fields}
+                    if candidate else {})
+        if any(photo.get(k) != expected.get(k) for k in binding_fields):
+            raise ValueError("Roster binding mismatch for credited candidate")
+        if photo["chamber"] != "Senate" or photo["contestId"] != photo["state"]:
+            raise ValueError("Credited image is not a verified Senate contest")
+        capture = by_id.get(photo["sourceCandidateId"])
+        race_id = "S-" + photo["state"]
+        race = race_by_id.get(race_id)
+        if (capture is None or capture.get("sourceName") != photo["candidateName"]
+                or capture.get("state") != photo["state"] or capture.get("party") != photo["party"]
+                or capture.get("raceId") != race_id or capture.get("raceSide") != "left"
+                or photo.get("raceSide") != "left" or photo.get("raceId") != race_id
+                or race is None or race.get("state") != photo["state"]
+                or race.get("left", {}).get("name") != photo["candidateName"]
+                or race.get("left", {}).get("party") != photo["party"]):
+            raise ValueError("Independent race feed/credit cannot establish identity")
+        lic = photo.get("license")
+        lic_url = {
+            "CC BY-SA 4.0": "https://creativecommons.org/licenses/by-sa/4.0",
+            "CC0": "https://creativecommons.org/publicdomain/zero/1.0/",
+        }.get(lic)
+        if not lic_url or photo.get("licenseUrl") != lic_url:
+            raise ValueError("Missing approved Commons reuse license")
+        file_url = "https://commons.wikimedia.org/wiki/" + photo.get("identityId", "")
+        actual_credit = re.findall(
+            r"<li><b>" + re.escape(photo["candidateName"]) + r"</b>.*?</li>",
+            raw_credit, flags=re.S,
+        )
+        author = photo.get("attribution", "").split(" / Wikimedia Commons")[0]
+        if (len(actual_credit) != 1 or not author or not photo.get("rightsBasis")
+                or not photo.get("attribution", "").endswith("photo cropped and resized by midtermsforecast.com")
+                or file_url != photo.get("sourceUrl") or file_url != capture.get("commonsPageUrl")
+                or photo.get("identityType") != "CREDITED_COMMONS_PHOTO"
+                or file_url not in actual_credit[0] or author not in actual_credit[0]
+                or lic not in actual_credit[0] or author not in capture.get("credit", "")
+                or lic not in capture.get("credit", "")
+                or photo["candidateName"] not in capture.get("creditHTML", "")):
+            raise ValueError("Commons photo credit and identity evidence conflict")
+        snapshot = capture["commonsSnapshotPath"]
+        if not snapshot.startswith(base) or ".." in Path(snapshot).parts:
+            raise ValueError("Commons snapshot path invalid")
+        snapshot_bytes = (ROOT / snapshot).read_bytes()
+        if hashlib.sha256(snapshot_bytes).hexdigest() != capture["commonsSnapshotSha256"]:
+            raise ValueError("Commons image page capture was modified")
+        commons = snapshot_bytes.decode("utf-8")
+        if (photo["candidateName"].split()[-1].casefold() not in commons.casefold()
+                or ("CC0" not in commons and "CC Zero" not in commons) if lic == "CC0" else
+                (photo["candidateName"].split()[-1].casefold() not in commons.casefold()
+                 or ("CC BY-SA" not in commons and "Attribution-ShareAlike" not in commons))):
+            raise ValueError("Commons source does not substantiate the licensed subject")
+        image = photo.get("imagePath", "")
+        digest = photo.get("imageSha256", "")
+        expected_path = f"assets/candidate-portraits/{sid}-{digest[:16]}.jpg"
+        expected_url = f"https://midtermsforecast.com/img/cand/{race_id}_left.jpg"
+        if (not re.fullmatch(r"[a-f0-9]{64}", digest)
+                or image != expected_path or photo.get("url") != "/" + image
+                or photo.get("sourceImageUrl") != expected_url
+                or photo.get("width") != 96 or photo.get("height") != 96):
+            raise ValueError("Source photo binding, path, or dimensions invalid")
+        raw_image = (ROOT / image).read_bytes()
+        if (not raw_image.startswith(bytes.fromhex("ffd8ff"))
+                or hashlib.sha256(raw_image).hexdigest() != digest
+                or len(raw_image) != photo["imageBytes"]):
+            raise ValueError("Image bytes are not the reviewed capture")
+        out.append({**photo, **primary_identity(photo)})
+    return out
+
+
+def build_ledger(current: dict, catalog: dict, reviewed_at: str, supplement: dict | None = None, noncongress: dict | None = None, licensed: dict | None = None, local: dict | None = None) -> dict:
     if catalog.get("schema") != "KAHRELUM_CONGRESSIONAL_PORTRAIT_SOURCES_v1.0":
         raise ValueError("Unknown portrait source catalog schema")
     photo_source = catalog["photoSource"]
@@ -386,12 +632,24 @@ def build_ledger(current: dict, catalog: dict, reviewed_at: str, supplement: dic
         identity_count += sum(row["sourceCandidateId"] in added_ids and row["reason"] != "NO_REVIEWED_IMAGE" for row in unresolved)
         records.extend(additions)
         unresolved = [row for row in unresolved if row["sourceCandidateId"] not in added_ids]
+    if licensed:
+        new_photos = reviewed_licensed(current, licensed, records)
+        new_ids = {row["sourceCandidateId"] for row in new_photos}
+        identity_count += len(new_photos)
+        records.extend(new_photos)
+        unresolved = [row for row in unresolved if row["sourceCandidateId"] not in new_ids]
+    if local:
+        additions = reviewed_local(current, local, records)
+        added_ids = {r["sourceCandidateId"] for r in additions}
+        records.extend(additions)
+        identity_count += len(additions)
+        unresolved = [r for r in unresolved if r["sourceCandidateId"] not in added_ids]
     coverage = {
         "sourceListedCandidateRecords": len(candidates),
         "uniqueCandidateIds": len(set(ids)),
         "identityMatchedCandidates": identity_count,
         "admittedPortraits": len(records),
-        "uniquePeopleWithPortraits": len({record.get("bioguideId") or "FEC:" + record["identityId"] for record in records}),
+        "uniquePeopleWithPortraits": len({record.get("bioguideId") or "FEC:" + record.get("fecCandidateId", record["identityId"]) for record in records}),
         "candidateCardsWithPortraits": len(records),
         "candidateCardsWithoutPortraits": len(unresolved),
         "unresolvedReasons": dict(sorted(Counter(row["reason"] for row in unresolved).items())),
@@ -416,6 +674,16 @@ def build_ledger(current: dict, catalog: dict, reviewed_at: str, supplement: dic
         result["admissionRule"] += " Non-Congress candidates use an explicit FEC_CANDIDATE identity, exact source-candidate/contest binding and captured first-party name/state/party evidence; Commons public-domain, CC0, CC BY or CC BY-SA images require their exact revision, source hash, creator attribution and license. Existing 397 congressional portraits are preserved. FEC registration does not certify ballot eligibility."
         result["noncongressSourceCatalog"] = "research/candidate-portraits/noncongress-sources-2026-10-31.json"
         result["sources"]["noncongress"] = {"identityProvider": "Federal Election Commission", "photoProvider": "Wikimedia Commons", "capturedAtUtc": noncongress["reviewedAtUtc"], "evidenceFiles": noncongress["evidenceFiles"]}
+    if licensed:
+        result["admissionRule"] += " Additional candidate portraits use exact source-roster/race/Commons credit identity matches, captured CC reuse rights, and byte-verified self-hosted thumbnails. They do not certify ballot eligibility."
+        result["licensedSourceCatalog"] = "research/candidate-portraits/licensed-sources-2026-11-02.json"
+        result["sources"]["licensed"] = {"photoCreditPage": licensed["creditPage"], "raceFeed": licensed["raceFeed"], "capturedAtUtc": licensed["reviewedAtUtc"], "count": len(licensed["records"])}
+    if licensed or local:
+        result["primaryIdentityCatalog"] = "research/candidate-portraits/primary-identities-2026-11-02.json"
+        result["primaryIdentityCatalogSha256"] = hashlib.sha256((ROOT / result["primaryIdentityCatalog"]).read_bytes()).hexdigest()
+    if local:
+        result["localSourceCatalog"] = "research/candidate-portraits/local-sources-2026-11-02.json"
+        result["admissionRule"] += " November 2 additions also require first-party FEC name/state/party/office evidence. Local Commons source-page captures retain exact per-image licenses, creator and revision; Iowa legislative portraits retain their specific reviewed reuse permission. Source-page evidence is not represented as Commons API metadata."
     return result
 
 
@@ -424,28 +692,40 @@ def main() -> None:
     parser.add_argument("--catalog", type=Path, default=DEFAULT_CATALOG)
     parser.add_argument("--supplement", type=Path, default=DEFAULT_SUPPLEMENT)
     parser.add_argument("--noncongress", type=Path, default=DEFAULT_NONCONGRESS)
+    parser.add_argument("--licensed", type=Path, default=ROOT / "research/candidate-portraits/licensed-sources-2026-11-02.json")
+    parser.add_argument("--local", type=Path, default=ROOT / "research/candidate-portraits/local-sources-2026-11-02.json")
     parser.add_argument("--current", type=Path, default=ROOT / "election/current-projections.json")
     parser.add_argument("--output", type=Path, default=ROOT / "election/candidate-portraits.json")
     parser.add_argument("--reviewed-at", help="UTC review timestamp; defaults to the captured catalog timestamp")
     parser.add_argument("--check", action="store_true", help="Verify the checked-in ledger is reproducible without writing")
     args = parser.parse_args()
-    catalog = json.loads(args.catalog.read_text())
-    supplement = json.loads(args.supplement.read_text())
-    noncongress = json.loads(args.noncongress.read_text()) if args.noncongress.exists() else None
+    catalog = json.loads(args.catalog.read_text(encoding="utf-8"))
+    supplement = json.loads(args.supplement.read_text(encoding="utf-8"))
+    noncongress = json.loads(args.noncongress.read_text(encoding="utf-8")) if args.noncongress.exists() else None
+    licensed = json.loads(args.licensed.read_text(encoding="utf-8")) if args.licensed.exists() else None
+    local = json.loads(args.local.read_text(encoding="utf-8")) if args.local.exists() else None
     reviewed_at = args.reviewed_at or max(catalog["retrievedAtUtc"], supplement["retrievedAtUtc"], supplement.get("updatedAtUtc", supplement["retrievedAtUtc"]))
     if noncongress and not args.reviewed_at:
         reviewed_at = max(reviewed_at, noncongress["reviewedAtUtc"])
-    ledger = build_ledger(json.loads(args.current.read_text()), catalog, reviewed_at, supplement, noncongress)
+    if licensed and not args.reviewed_at:
+        reviewed_at = max(reviewed_at, licensed["reviewedAtUtc"])
+    if local and not args.reviewed_at:
+        reviewed_at = max(reviewed_at, local["reviewedAtUtc"])
+    ledger = build_ledger(json.loads(args.current.read_text(encoding="utf-8")), catalog, reviewed_at, supplement, noncongress, licensed, local)
     ledger["sourceCatalogSha256"] = hashlib.sha256(args.catalog.read_bytes()).hexdigest()
     ledger["supplementalSourceCatalogSha256"] = hashlib.sha256(args.supplement.read_bytes()).hexdigest()
     if noncongress:
         ledger["noncongressSourceCatalogSha256"] = hashlib.sha256(args.noncongress.read_bytes()).hexdigest()
+    if local:
+        ledger["localSourceCatalogSha256"] = hashlib.sha256(args.local.read_bytes()).hexdigest()
+    if licensed:
+        ledger["licensedSourceCatalogSha256"] = hashlib.sha256(args.licensed.read_bytes()).hexdigest()
     rendered = json.dumps(ledger, indent=2, ensure_ascii=False) + "\n"
     if args.check:
-        if not args.output.exists() or args.output.read_text() != rendered:
+        if not args.output.exists() or args.output.read_text(encoding="utf-8") != rendered:
             raise SystemExit("Candidate portrait ledger is stale; rebuild it from the reviewed catalog")
     else:
-        args.output.write_text(rendered)
+        args.output.write_text(rendered, encoding="utf-8", newline="\n")
     print(json.dumps(ledger["coverage"], indent=2))
 
 

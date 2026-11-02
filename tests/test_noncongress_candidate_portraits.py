@@ -17,17 +17,17 @@ spec.loader.exec_module(portraits)
 class NonCongressPortraitTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.current = json.loads((ROOT / "election/current-projections.json").read_text())
-        cls.catalog = json.loads(portraits.DEFAULT_NONCONGRESS.read_text())
-        cls.congressional = json.loads(portraits.DEFAULT_CATALOG.read_text())
-        cls.supplement = json.loads(portraits.DEFAULT_SUPPLEMENT.read_text())
+        cls.current = json.loads((ROOT / "election/current-projections.json").read_text(encoding="utf-8"))
+        cls.catalog = json.loads(portraits.DEFAULT_NONCONGRESS.read_text(encoding="utf-8"))
+        cls.congressional = json.loads(portraits.DEFAULT_CATALOG.read_text(encoding="utf-8"))
+        cls.supplement = json.loads(portraits.DEFAULT_SUPPLEMENT.read_text(encoding="utf-8"))
         cls.previous = portraits.build_ledger(cls.current, cls.congressional, cls.supplement["retrievedAtUtc"], cls.supplement)
 
     def test_all_397_prior_records_preserved_and_new_records_have_real_fec_ids(self):
         combined = portraits.build_ledger(self.current, self.congressional, self.catalog["reviewedAtUtc"], self.supplement, self.catalog)
         self.assertEqual(len(self.previous["records"]), 397)
         self.assertEqual(combined["records"][:397], self.previous["records"])
-        self.assertEqual(combined["records"], json.loads((ROOT / "election/candidate-portraits.json").read_text())["records"])
+        self.assertEqual(combined["records"], json.loads((ROOT / "election/candidate-portraits.json").read_text(encoding="utf-8"))["records"][:len(combined["records"])])
         self.assertEqual(combined["coverage"]["admittedPortraits"], 397 + len(self.catalog["records"]))
         self.assertEqual(combined["coverage"]["candidateCardsWithoutPortraits"], 543 - len(self.catalog["records"]))
         for record in combined["records"][397:]:
@@ -73,9 +73,9 @@ class NonCongressPortraitTests(unittest.TestCase):
                 shutil.copyfile(ROOT / evidence["path"], dest)
             evidence = catalog["evidenceFiles"][key]
             path = root / evidence["path"]
-            data = json.loads(path.read_text())
+            data = json.loads(path.read_text(encoding="utf-8"))
             mutate(data)
-            path.write_text(json.dumps(data))
+            path.write_text(json.dumps(data), encoding="utf-8")
             evidence["sha256"] = hashlib.sha256(path.read_bytes()).hexdigest()
             with patch.object(portraits, "ROOT", root), self.assertRaisesRegex(ValueError, expected):
                 portraits.reviewed_noncongress(self.current, catalog, [])

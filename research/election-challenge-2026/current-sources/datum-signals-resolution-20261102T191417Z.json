@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Datum Signals",
+  "sourceUrl": "https://datumsignals.com/",
+  "verificationWindow": {
+    "startedAtUtc": "2026-11-02T19:14:17.7430592Z",
+    "endedAtUtc": "2026-11-02T19:14:29.3658604Z",
+    "requestCount": 6,
+    "cacheControl": "no-cache",
+    "resolvedRemoteIps": ["104.21.51.52", "172.67.178.17"]
+  },
+  "publisherEdition": {
+    "displayedUpdate": "November 2, 2026, 5:00 PM UTC"
+  },
+  "observations": {
+    "houseDemocraticControlPct": 71.0,
+    "houseStatus": "VERIFIED_STABLE_ACROSS_ALL_ATTEMPTS",
+    "senateDemocraticControlPct": 64.0,
+    "senateStatus": "VERIFIED_STABLE_ACROSS_ALL_ATTEMPTS",
+    "houseDemocraticSeats": null,
+    "senateDemocraticSeats": null
+  },
+  "responses": [
+    {"attempt": 1, "resolvedRemoteIp": "104.21.51.52", "observedAtUtc": "2026-11-02T19:14:17.7430592Z", "houseDemocraticControlPct": 71.0, "senateDemocraticControlPct": 64.0, "rawUtf8Bytes": 48493, "rawSha256": "444f2085c8e662f8e8c63838114a25dbeb64e6e08aa467a59d973f2a52ac40b9"},
+    {"attempt": 2, "resolvedRemoteIp": "172.67.178.17", "observedAtUtc": "2026-11-02T19:14:20.5019433Z", "houseDemocraticControlPct": 71.0, "senateDemocraticControlPct": 64.0, "rawUtf8Bytes": 48493, "rawSha256": "444f2085c8e662f8e8c63838114a25dbeb64e6e08aa467a59d973f2a52ac40b9"},
+    {"attempt": 3, "resolvedRemoteIp": "104.21.51.52", "observedAtUtc": "2026-11-02T19:14:22.9914244Z", "houseDemocraticControlPct": 71.0, "senateDemocraticControlPct": 64.0, "rawUtf8Bytes": 48493, "rawSha256": "444f2085c8e662f8e8c63838114a25dbeb64e6e08aa467a59d973f2a52ac40b9"},
+    {"attempt": 4, "resolvedRemoteIp": "172.67.178.17", "observedAtUtc": "2026-11-02T19:14:25.0966219Z", "houseDemocraticControlPct": 71.0, "senateDemocraticControlPct": 64.0, "rawUtf8Bytes": 48493, "rawSha256": "444f2085c8e662f8e8c63838114a25dbeb64e6e08aa467a59d973f2a52ac40b9"},
+    {"attempt": 5, "resolvedRemoteIp": "104.21.51.52", "observedAtUtc": "2026-11-02T19:14:27.2413479Z", "houseDemocraticControlPct": 71.0, "senateDemocraticControlPct": 64.0, "rawUtf8Bytes": 48493, "rawSha256": "444f2085c8e662f8e8c63838114a25dbeb64e6e08aa467a59d973f2a52ac40b9"},
+    {"attempt": 6, "resolvedRemoteIp": "172.67.178.17", "observedAtUtc": "2026-11-02T19:14:29.3658604Z", "houseDemocraticControlPct": 71.0, "senateDemocraticControlPct": 64.0, "rawUtf8Bytes": 48493, "rawSha256": "444f2085c8e662f8e8c63838114a25dbeb64e6e08aa467a59d973f2a52ac40b9"}
+  ],
+  "resolutionReceipt": {
+    "utf8Bytes": 1424,
+    "sha256": "0719cb4bbc75a9809f6495c7afc40b5189e70263a65143f28b54adf88914dc0a"
+  },
+  "priorEvidence": {
+    "initialConflict": "research/election-challenge-2026/current-sources/datum-signals-conflict-20261102T132353Z.json",
+    "priorProspectiveResolution": "research/election-challenge-2026/current-sources/datum-signals-resolution-20261102T133416Z.json",
+    "conflictRecurrence": "research/election-challenge-2026/current-sources/datum-signals-conflict-recurrence-20261102T141209Z.json",
+    "preserved": true
+  },
+  "admissionDecision": {
+    "houseDemocraticControlPct": "ADMITTED_71_PERCENT_PROSPECTIVELY",
+    "senateDemocraticControlPct": "RETAINS_ADMITTED_64_PERCENT",
+    "reason": "The publisher advanced its edition label and six controlled requests across both previously conflicting endpoints returned byte-identical first-party responses."
+  },
+  "kahrelumInputReview": {
+    "isRefreshElectionProjectionsInput": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  }
+}
