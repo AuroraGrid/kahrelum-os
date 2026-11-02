@@ -4,7 +4,7 @@
   // Keep the projection shell and its data dependencies on one release generation.
   // The query token prevents an already-open production browser from pairing a new
   // HTML shell with an older cached map bundle or projection payload.
-  const ASSET_VERSION = '20261031-3';
+  const ASSET_VERSION = '20261102-portraits-1';
   const readJson = (assetPath) => fetch(`${assetPath}?v=${ASSET_VERSION}`, { cache: 'no-store' });
 
   const states = [
