@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Midterm Forecast",
+  "sourceUrls": {"house": "https://midtermforecast.com/house/", "senate": "https://midtermforecast.com/senate/"},
+  "retrieval": {"houseRetrievedAtUtc": "2026-11-02T03:21:06.1767527Z", "senateRetrievedAtUtc": "2026-11-02T03:21:07.8985326Z", "representation": "FIRST_PARTY_HTTP_RESPONSE_UTF8_NOT_EXACT_WIRE_BYTES"},
+  "publisherEdition": {"displayedRun": "Nov. 1, 2026, 10:40 PM ET", "pollsThrough": "Nov. 1, 2026"},
+  "observations": {"houseDemocraticControlPct": 91.0, "houseDemocraticSeats": 236.0, "houseSeatType": "median", "senateDemocraticControlPct": 75.0, "senateRepublicanControlPct": 25.0, "senateDemocraticSeats": 53.0, "senateSeatType": "median Democratic seats; independents included", "senateInterval80DemocraticSeats": [48, 57], "senateControlThreshold": 51},
+  "custody": {"houseHttpStatus": 200, "houseUtf8Bytes": 93821, "houseSha256": "421fbdb67d5160c79cee71f26c3aadea2e37962c1382a631a0b456e4cb12a903", "senateHttpStatus": 200, "senateUtf8Bytes": 35824, "senateSha256": "36e71c6a959dcfa65fc5e2cd06df419ba5fc5b6a35be482a530b14c189d3f12b", "houseLastModified": "Mon, 02 Nov 2026 03:41:06 GMT", "senateLastModified": "Mon, 02 Nov 2026 03:40:58 GMT", "headerStatus": "FUTURE_DATED_RELATIVE_TO_PROSPECTIVE_RETRIEVAL_NOT_USED_AS_PUBLICATION_TIME"},
+  "changeFromPriorAdmittedEdition": {"senateDemocraticControlPct": {"from": 74.0, "to": 75.0}, "senateRepublicanControlPct": {"from": 26.0, "to": 25.0}, "unchanged": ["houseDemocraticControlPct", "houseDemocraticSeats", "senateDemocraticSeats"]},
+  "kahrelumInputReview": {"script": "scripts/refresh-election-projections.py", "providerUsedByScript": false, "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"}
+}

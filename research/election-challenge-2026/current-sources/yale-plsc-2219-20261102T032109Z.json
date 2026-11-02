@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Yale PLSC 2219 class model",
+  "sourceUrl": "https://kevinmdeluca.com/forecast/",
+  "retrievedAtUtc": "2026-11-02T03:21:09.0923220Z",
+  "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
+  "publisherEdition": {"snapshotDate": "November 1, 2026", "builtAtUtc": "2026-11-01T21:07:05.156259Z"},
+  "observations": {"houseDemocraticControlPctDisplayed": 95.0, "houseDemocraticControlPctSerialized": 95.31, "houseDemocraticSeats": 237.0, "houseSeatType": "class-model seats", "senateDemocraticControlPctDisplayed": 43.0, "senateDemocraticControlPctSerialized": 42.84, "senateDemocraticSeats": 50.0, "senateSeatType": "class-model seats", "senateControlRule": "50 seats resolves Republican"},
+  "custody": {"httpStatus": 200, "representation": "FETCH_RETURNED_HTML_UTF8", "sha256": "e861fcfe87160028ba2d38902709180fdcf206ba3db3c6ab1c397509a7603cf2", "utf8Bytes": 699286, "lastModified": "Sun, 01 Nov 2026 21:08:45 GMT", "dateHeader": "Mon, 02 Nov 2026 03:55:26 GMT", "dateHeaderStatus": "FUTURE_DATED_RELATIVE_TO_PROSPECTIVE_RETRIEVAL_NOT_USED_AS_PUBLICATION_TIME"},
+  "changeFromPriorAdmittedEdition": {"edition": {"from": "October 31, 2026", "to": "November 1, 2026"}, "numericalTopLines": "UNCHANGED"},
+  "kahrelumInputReview": {"script": "scripts/refresh-election-projections.py", "providerUsedByScript": false, "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"}
+}
