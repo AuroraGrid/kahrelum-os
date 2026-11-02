@@ -1,0 +1,52 @@
+{
+  "createdAt": "2026-11-02T20:47:33.973Z",
+  "site": "kahrelum-public-hosting",
+  "releaseProfile": "candidate-portraits",
+  "sourceCommit": "71f9ca87c28a2db36c245adf52fba9aab13ecdc9",
+  "baseVersion": "projects/806087933597/sites/kahrelum-public-hosting/versions/38ff517af8aad9a7",
+  "baseConfigHash": "95300a9c21364142bc84c3880bfe71b06274402200b318b5eeef2bfa99e7aadc",
+  "previewChannel": "safe-overlay-162780b8856c",
+  "previewUrl": "https://kahrelum-public-hosting--safe-overlay-162780b8856c-b4awu3iw.web.app",
+  "previewVersion": "projects/806087933597/sites/kahrelum-public-hosting/versions/05a93f2a275fa68c",
+  "desiredMapHash": "162780b8856c5b06c04bae4ce6efcd7f33a1898ac88f2eb878aac0ba92c8a83f",
+  "changedPaths": [
+    "/assets/candidate-portraits/14433-8844382cdfc37739.jpg",
+    "/assets/candidate-portraits/16272-6e3f90cc817dfd52.jpg",
+    "/assets/candidate-portraits/17006-9d07ae88bc889c3b.jpg",
+    "/assets/candidate-portraits/18193-8839a143de1689d1.jpg",
+    "/assets/candidate-portraits/19269-5c20ff564f765c20.jpg",
+    "/assets/candidate-portraits/20159-0ce343f08588997b.jpg",
+    "/assets/candidate-portraits/20269-b9b59e17a3896c36.jpg",
+    "/assets/candidate-portraits/26438-1946ec1dbdc1820e.jpg",
+    "/election-challenge-map.js",
+    "/election-challenge.html",
+    "/election/candidate-portraits.json"
+  ],
+  "expectedApiHashes": {
+    "/api/v1": "b23654d1b5989f1b48823f72574bf6f69ff9f19c2b78fc1fea743d41fc1cb6c0",
+    "/api/v1/release": "cf8f22118f5b2d366ec984a2d882e4f522182462edff8d87abba91824b3502da",
+    "/api/v1/example": "c08436e548be07e62bd304b779034d12fe81d90ec7e3a57179547e079aa36c8a"
+  },
+  "verification": {
+    "origin": "https://kahrelum-public-hosting--safe-overlay-162780b8856c-b4awu3iw.web.app",
+    "routes": [
+      {
+        "route": "/election-challenge",
+        "status": 200,
+        "sha256": "a36bba5d8686352d6ba5051c4f15cb86556b80b9df3099ea965161a7ccc48f4e"
+      }
+    ],
+    "coverage": {
+      "matchedCards": 429,
+      "uniquePeople": 429,
+      "available": true
+    },
+    "localImages": 21,
+    "apiHashes": {
+      "/api/v1": "b23654d1b5989f1b48823f72574bf6f69ff9f19c2b78fc1fea743d41fc1cb6c0",
+      "/api/v1/release": "cf8f22118f5b2d366ec984a2d882e4f522182462edff8d87abba91824b3502da",
+      "/api/v1/example": "c08436e548be07e62bd304b779034d12fe81d90ec7e3a57179547e079aa36c8a"
+    }
+  },
+  "desiredFileCount": 3248
+}

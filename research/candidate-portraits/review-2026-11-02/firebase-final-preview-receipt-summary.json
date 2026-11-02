@@ -1,0 +1,42 @@
+{
+  "createdAt": "2026-11-02T20:52:45.099Z",
+  "site": "kahrelum-public-hosting",
+  "releaseProfile": "candidate-portraits",
+  "sourceCommit": "cec0b280d77cb928d0c421bf23b075cf7d43680b",
+  "baseVersion": "projects/806087933597/sites/kahrelum-public-hosting/versions/05a93f2a275fa68c",
+  "baseConfigHash": "95300a9c21364142bc84c3880bfe71b06274402200b318b5eeef2bfa99e7aadc",
+  "previewChannel": "safe-overlay-20eec14892b5",
+  "previewUrl": "https://kahrelum-public-hosting--safe-overlay-20eec14892b5-wxaw5txx.web.app",
+  "previewVersion": "projects/806087933597/sites/kahrelum-public-hosting/versions/b91f562a2ba5048c",
+  "desiredMapHash": "20eec14892b552ba082f909136170e9f69ee68d988b30d1ae5847bdfef097d41",
+  "changedPaths": [
+    "/election-challenge-map.js",
+    "/election-challenge.html"
+  ],
+  "expectedApiHashes": {
+    "/api/v1": "b23654d1b5989f1b48823f72574bf6f69ff9f19c2b78fc1fea743d41fc1cb6c0",
+    "/api/v1/release": "cf8f22118f5b2d366ec984a2d882e4f522182462edff8d87abba91824b3502da",
+    "/api/v1/example": "c08436e548be07e62bd304b779034d12fe81d90ec7e3a57179547e079aa36c8a"
+  },
+  "verification": {
+    "origin": "https://kahrelum-public-hosting--safe-overlay-20eec14892b5-wxaw5txx.web.app",
+    "routes": [
+      {
+        "route": "/election-challenge",
+        "status": 200,
+        "sha256": "263b3c480f632dcc45898743f83e66691ff251b920b6b4cee0eceae8349fd8f5"
+      }
+    ],
+    "coverage": {
+      "matchedCards": 429,
+      "uniquePeople": 429,
+      "available": true
+    },
+    "localImages": 21,
+    "apiHashes": {
+      "/api/v1": "b23654d1b5989f1b48823f72574bf6f69ff9f19c2b78fc1fea743d41fc1cb6c0",
+      "/api/v1/release": "cf8f22118f5b2d366ec984a2d882e4f522182462edff8d87abba91824b3502da",
+      "/api/v1/example": "c08436e548be07e62bd304b779034d12fe81d90ec7e3a57179547e079aa36c8a"
+    }
+  }
+}

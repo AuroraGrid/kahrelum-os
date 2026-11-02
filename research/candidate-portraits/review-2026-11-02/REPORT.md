@@ -1,5 +1,7 @@
 # Candidate portrait review — November 2, 2026
 
+**Production is published and browser-verified as of November 2, 2026, 20:54 UTC.** The [live election page](https://kahrelum.com/election-challenge) shows **429 admitted portraits**; all eight additions loaded in the returning production browser.
+
 The updated ledger contains **429 verified photographic identities out of 940 source-listed candidate records (45.6%)**, leaving **511 unresolved**. The original 421 admitted records remain identical. Identity verification does not certify nomination or ballot eligibility; the source roster and forecast locks have not been changed.
 
 ## What production displayed before this release
@@ -54,7 +56,7 @@ The release uses the established Firebase live-file-map overlay, preview and exa
 
 The automatically generated [Vercel branch preview](https://kahrelum-apq07yges-hasan-kazmi-s-projects.vercel.app/election-challenge) reports 429 admitted portraits. All eight additions loaded in actual browser cards with their visible source and licensing credits ([browser audit](branch-preview-browser-audit.json), [screenshot](branch-preview.jpg)). Josh Turek's first observation preceded completion of its lazy image load; a second observation confirmed a loaded 250-pixel image. This branch preview verifies the UI but does **not** substitute for the required Firebase preview and promotion. GitHub's [Public Surface Integrity check](https://github.com/AuroraGrid/kahrelum-os/actions/runs/41520065421) passed.
 
-## Concrete storage cleanup proposal — approval required
+## Storage cleanup proposal and subsequent approval
 
 Read-only Firebase inspection found **125 finalized versions**, totaling **10,778,889,898 stored bytes**. The [cleanup proposal](storage-cleanup-proposal.json) identifies five older November 1 versions, totaling **414,733,426 bytes**, which are neither a current channel head nor among the latest ten distinct live releases:
 
@@ -66,6 +68,26 @@ Read-only Firebase inspection found **125 finalized versions**, totaling **10,77
 | `74316b96d5ffcfb1` | November 1, 15:27 | 84,378,759 |
 | `aed095fa7baad015` | November 1, 15:39 | 84,447,245 |
 
-Deleting those five versions permanently removes those historical rollback copies. No deletion, retention-setting change or billing upgrade was performed. Before any approved cleanup, re-read the current channel heads and recent live releases and exclude any selected version that has become protected. Firebase documents that release-content deletion can take up to 24 hours to reclaim storage: https://firebase.google.com/docs/hosting/manage-hosting-resources. After capacity is reclaimed, rerun the portrait plan, Firebase preview, browser checks and exact-version promotion; do not bypass the stale-live-version guard.
+Deleting those five versions permanently removes those historical rollback copies. At the proposal stage, no deletion, retention-setting change or billing upgrade had been performed. Before any approved cleanup, re-read the current channel heads and recent live releases and exclude any selected version that has become protected. Firebase documents that release-content deletion can take up to 24 hours to reclaim storage: https://firebase.google.com/docs/hosting/manage-hosting-resources. After capacity is reclaimed, rerun the portrait plan, Firebase preview, browser checks and exact-version promotion; do not bypass the stale-live-version guard.
 
 The source changes are recorded in [pull request #26](https://github.com/AuroraGrid/kahrelum-os/pull/26).
+
+
+## Approved cleanup execution
+
+The user approved the five-version cleanup in this conversation. Each version was rechecked immediately before deletion against every current channel head, the latest ten distinct live versions and the original protected set. All five approved versions returned `DELETED`; no other version was selected. The deleted versions represented **414,733,426 stored bytes**. The live channel stayed on `38ff517af8aad9a7` throughout cleanup. The complete [cleanup receipt](storage-cleanup-receipt.json) retains the individual guards and confirmations.
+
+The first Firebase preview and exact-version promotion then succeeded at **20:49:34 UTC**, producing version `05a93f2a275fa68c` with 3,248 files and 429 attached portraits ([initial production receipt](firebase-initial-production-receipt.json)). All 21 local image hashes and all three existing API hashes passed. A returning-browser check exposed a stale cached October 31 map bundle: the HTML script version had not been advanced. The correction changes only the HTML script query version and the map's shared asset version to `20261102-portraits-1`. The 14 portrait and binary-integrity tests passed again. This correction passed a second Firebase preview and exact-version promotion. No direct production replacement was used.
+
+
+## Final production receipt
+
+The corrected preview was promoted at **2026-11-02 20:54:29 UTC**, to Firebase version `b91f562a2ba5048c`, from source commit `cec0b280d77cb928d0c421bf23b075cf7d43680b` ([merged PR #27](https://github.com/AuroraGrid/kahrelum-os/pull/27)). The final version contains **3,248 files**. Hosting configuration and all three API response hashes are unchanged. The second overlay changed only the two cache-version strings' files and preserved all other 3,246 live file hashes. Across the portrait release, the original 3,237 unrelated file hashes remain preserved and no live path was removed.
+
+- [Final Firebase preview receipt](firebase-final-preview-receipt-summary.json)
+- [Final production receipt](firebase-production-receipt.json)
+- [Production browser audit: all eight additions loaded](production-browser-audit.json)
+- [Production screenshot](production-portraits.jpg)
+- [Complete release audit, including ledger readback hash](release-audit.json)
+
+A normal reload of the returning production browser now fetches `/election-challenge-map.js?v=20261102-portraits-1` and displays **429 portraits admitted**. All eight added candidates' images have nonzero natural widths. The served ledger equals the repository ledger; its 421 original records remain identical. Remaining unresolved records stay at **511**, retaining their initials and verification boundary. No billing plan or retention setting changed.
