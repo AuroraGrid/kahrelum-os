@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "VotePredictor",
+  "sourceUrl": "https://votepredictor.com/house",
+  "retrieval": {
+    "retrievedAtUtc": "2026-11-02T18:54:34.0056803Z",
+    "cachePolicy": "Fresh first-party browser render",
+    "representation": "STRUCTURED_FIRST_PARTY_RENDERED_TEXT_NOT_RAW_HTML"
+  },
+  "publisherEdition": {
+    "controlStatusText": "unchanged since November 1",
+    "preciseUpdateTimeExposed": false
+  },
+  "observations": {
+    "houseDemocraticControlPct": 77.0,
+    "houseDemocraticSeats": 230.2,
+    "houseSeatType": "expected",
+    "houseSummaryRoundedSeats": 230,
+    "houseInterval80DemocraticSeats": [209, 252],
+    "houseControlThreshold": 218,
+    "senateDemocraticControlPct": null,
+    "senateDemocraticSeats": null
+  },
+  "selectedRenderedText": [
+    "Source URL: https://votepredictor.com/house",
+    "Page title: 2026 House Forecast — VotePredictor",
+    "Control status: unchanged since November 1",
+    "Chance of Democratic House control: 77%",
+    "Expected Democratic seats: 230.2",
+    "80% simulation interval: 209–252",
+    "House control threshold: 218",
+    "Separate summary display: House control 77%; Expected Dem seats (of 435) 230"
+  ],
+  "custody": {
+    "directUnattendedHttpStatus": 429,
+    "interactiveBrowserStatus": "RENDERED_FIRST_PARTY_PAGE_VERIFIED",
+    "selectedTextUtf8Bytes": 350,
+    "selectedTextSha256": "63a60116ac130fdc3674cea35ac095b9580b21dc32fd4e623a029cfbf294e2e0",
+    "hashConstruction": "selectedRenderedText joined with LF and no trailing LF",
+    "privateReceiptSha256": "3df4362be663072cb4eef99e3d654a3f9dc1a069bb79115584819a0d2209609f"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "houseDemocraticControlPct": "UNCHANGED",
+    "houseDemocraticSeats": {"from": 230.0, "to": 230.2},
+    "houseInterval80DemocraticSeats": "UNCHANGED",
+    "senate": "NO_NUMERICAL_TOP_LINE_ADMITTED"
+  },
+  "kahrelumInputReview": {
+    "isRefreshElectionProjectionsInput": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  },
+  "admissionNote": "The prospective Nov. 2 retrieval raises VotePredictor's exact expected Democratic House seats from 230.0 to 230.2. Democratic House control remains 77%, the 80% interval remains 209–252 and the separate summary display continues to round expected seats to 230. No Senate top line was admitted."
+}

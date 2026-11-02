@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "edition": "KAH-US-2026-20261031T181057Z with challenger source checks through 2026-11-02T18:44:22Z",
+  "edition": "KAH-US-2026-20261031T181057Z with challenger source checks through 2026-11-02T18:54:34Z",
   "comparisonStatus": "DESCRIPTIVE_ONLY_UNMATCHED_CUTOFFS_AND_SEAT_TYPES",
-  "sourceObservationFileSha256": "1736035d9ee725a2647ab2ba14cf972b49e318bf994dc68761f999c7dc923f73",
+  "sourceObservationFileSha256": "914d113a36af1b2ff417de3c68b01f68f4939f9bff7ddbd62af8fc91e9456168",
   "house": {
     "totalSeats": 435,
     "democraticControlThreshold": 218,
@@ -26,7 +26,7 @@
       {"provider":"Yale PLSC 2219","democraticSeats":237,"seatType":"class model","edition":"Snapshot Nov. 1; built 21:07 UTC; retrieved Nov. 2 03:21 UTC","sourceUrl":"https://kevinmdeluca.com/forecast/"},
       {"provider":"Dave Manuel","democraticSeats":233,"seatType":"projected median","edition":"Displayed Nov. 1 11:45 PM ET (future-dated); retrieved Nov. 2 04:32 UTC","sourceUrl":"https://www.davemanuel.com/2026-midterm-forecast.php"},
       {"provider":"On Point Politics","democraticSeats":253,"seatType":"average displayed; exact average 252.69; distinct median 251 and favored 246","edition":"Updated Nov. 2; dateModified 8:00 AM ET; retrieved Nov. 2 17:14 UTC","sourceUrl":"https://onpointpolitics.us/forecast"},
-      {"provider":"VotePredictor","democraticSeats":230.0,"seatType":"expected","edition":"Forecast updated Nov. 1; retrieved Nov. 1 20:15 UTC; precise page update time not exposed","sourceUrl":"https://votepredictor.com/house"},
+      {"provider":"VotePredictor","democraticSeats":230.2,"seatType":"expected; separate summary display rounds to 230","edition":"Control unchanged since Nov. 1; exact expected seats retrieved Nov. 2 18:54 UTC; precise source update time not exposed","sourceUrl":"https://votepredictor.com/house"},
       {"provider":"Midterm Forecast","democraticSeats":237,"seatType":"median","edition":"Model run Nov. 2 1:41 PM ET; retrieved Nov. 2 18:44 UTC","sourceUrl":"https://midtermforecast.com/house/"}
     ]
   },
