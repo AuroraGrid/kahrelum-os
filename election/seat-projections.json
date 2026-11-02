@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "edition": "KAH-US-2026-20261031T181057Z with challenger source checks through 2026-11-02T23:05:12Z",
+  "edition": "KAH-US-2026-20261031T181057Z with challenger source checks through 2026-11-02T23:13:11Z",
   "comparisonStatus": "DESCRIPTIVE_ONLY_UNMATCHED_CUTOFFS_AND_SEAT_TYPES",
-  "sourceObservationFileSha256": "a04cb4984451ef5379c58ad1c4e05b8bd7f6d2e0e6dd5c1a0ad1ee84f81ffb69",
+  "sourceObservationFileSha256": "528a897f09c2a02338c87db686fe9e1a7c0e0502f7da55eff9728d598e583526",
   "house": {
     "totalSeats": 435,
     "democraticControlThreshold": 218,
@@ -21,7 +21,7 @@
       {"provider":"COYNTOSS","democraticSeats":238.57,"seatType":"expected mean; displayed 238.6; median 237","edition":"Release 2026-11-02-01; retrieved Nov. 2 14:42 UTC","sourceUrl":"https://chasecoyne.com/house"},
       {"provider":"Scrutinel","democraticSeats":240.66,"seatType":"expected mean; separate median 240","edition":"Updated Nov. 2 4:25 PM EST; generated 21:25:29 UTC; retrieved Nov. 2 21:47 UTC","sourceUrl":"https://scrutinel.com/"},
       {"provider":"Vote-Scope","democraticSeats":241,"seatType":"projected; median 246","edition":"Updated Nov. 2; retrieved Nov. 2 16:37 UTC; precise source time not exposed","sourceUrl":"https://vote-scope.com/en/us/house/"},
-      {"provider":"ElectIndex","democraticSeats":248.0,"seatType":"average; projected 244","edition":"Public feed commit 9e323cc; commit metadata 17:23 UTC; retrieved Nov. 2 17:34 UTC","sourceUrl":"https://electindex.com/forecasts/"},
+      {"provider":"ElectIndex","democraticSeats":248.5,"seatType":"average; projected 245","edition":"Public feed commit ff6635e; commit metadata 22:45 UTC; retrieved Nov. 2 23:12 UTC","sourceUrl":"https://electindex.com/forecasts/"},
       {"provider":"Fred Cornell","democraticSeats":252,"seatType":"median","edition":"Run Nov. 2; retrieved Nov. 2 07:23 UTC","sourceUrl":"https://fredcornell.com/us/house"},
       {"provider":"Yale PLSC 2219","democraticSeats":237,"seatType":"class model","edition":"Snapshot Nov. 1; built 21:07 UTC; retrieved Nov. 2 03:21 UTC","sourceUrl":"https://kevinmdeluca.com/forecast/"},
       {"provider":"Dave Manuel","democraticSeats":233,"seatType":"projected median","edition":"Updated Nov. 2 4:45 PM ET; prospectively corrected and retrieved Nov. 2 22:22 UTC","sourceUrl":"https://www.davemanuel.com/2026-midterm-forecast.php"},
@@ -47,7 +47,7 @@
       {"provider":"CalltheMap","democraticSeats":51.4,"seatType":"expected incl. aligned independents","edition":"Forecast Nov. 2; direct response parsed Nov. 2 23:04 UTC","sourceUrl":"https://www.callthemap.com/senate"},
       {"provider":"COYNTOSS","democraticSeats":51.781,"seatType":"expected caucus; separate median 52","edition":"Release 2026-11-02-01; retrieved Nov. 2 16:35 UTC","sourceUrl":"https://chasecoyne.com/senate"},
       {"provider":"Scrutinel","democraticSeats":52.52,"seatType":"expected mean; separate median 53","edition":"Updated Nov. 2 4:25 PM EST; generated 21:25:29 UTC; retrieved Nov. 2 21:47 UTC","sourceUrl":"https://scrutinel.com/"},
-      {"provider":"ElectIndex","democraticSeats":53.0,"seatType":"average; projected 54","edition":"Public feed commit 9e323cc; commit metadata 17:23 UTC; retrieved Nov. 2 17:34 UTC","sourceUrl":"https://electindex.com/forecasts/"},
+      {"provider":"ElectIndex","democraticSeats":53.1,"seatType":"average; projected 54","edition":"Public feed commit ff6635e; commit metadata 22:45 UTC; retrieved Nov. 2 23:12 UTC","sourceUrl":"https://electindex.com/forecasts/"},
       {"provider":"Fred Cornell","democraticSeats":52,"seatType":"expected party seats; plus 1 independent","edition":"Run Nov. 2; retrieved Nov. 2 07:23 UTC","sourceUrl":"https://fredcornell.com/us/senate"},
       {"provider":"Yale PLSC 2219","democraticSeats":50,"seatType":"class model","edition":"Snapshot Nov. 1; built 21:07 UTC; retrieved Nov. 2 03:21 UTC","sourceUrl":"https://kevinmdeluca.com/forecast/"},
       {"provider":"Dave Manuel","democraticSeats":52,"seatType":"projected median incl. aligned independents","edition":"Updated Nov. 2 4:45 PM ET; prospectively corrected and retrieved Nov. 2 22:22 UTC","sourceUrl":"https://www.davemanuel.com/2026-midterm-forecast.php"},
