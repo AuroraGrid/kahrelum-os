@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-11-02T07:23:07.3650617Z",
+  "checkedAtUtc": "2026-11-02T09:53:12.3556977Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -107,16 +107,16 @@
       "sourceUrl": "https://scrutinel.com/",
       "houseDemocraticControlPct": 95.0,
       "senateDemocraticControlPct": 76.0,
-      "houseDemocraticSeats": 239.77,
+      "houseDemocraticSeats": 239.56,
       "houseSeatType": "expected mean; separate median 239",
-      "senateDemocraticSeats": 52.35,
+      "senateDemocraticSeats": 52.37,
       "senateSeatType": "expected mean; separate median 52",
-      "sourceEdition": "Updated Nov. 1, 11:08 PM EST; retrieved Nov. 2 03:42 UTC",
+      "sourceEdition": "Updated Nov. 2, 4:23 AM EST; retrieved Nov. 2 09:53 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "retrievedAtUtc": "2026-11-02T03:42:56.9124678Z",
-      "rawSha256": "c20f65265c8808bc7e62e5b2503fdadbca92c005f9c0cbd76147b3cc15cf99b9",
-      "custodyReceiptSha256": "4152831a61c84dd0f8a26ab88ac75fe514aa3fadf13a53608d1c518bf506184d",
-      "note": "The displayed Nov. 1 11:08 PM EST edition retains rounded Democratic House control at 95% while Democratic Senate control falls from 78% to 76%. Serialized Democratic control moves from 95.43% to 94.69% House and from 77.61% to 75.90% Senate. Expected means fall from 242.18 to 239.77 Democratic House seats and from 52.57 to 52.35 Democratic Senate seats; separate medians move from 241 to 239 House and from 53 to 52 Senate. Future-dated Last-Modified and HTTP Date headers were preserved but not used as publication times. Scrutinel is not an input to scripts/refresh-election-projections.py, so no new KAHRELUM probability edition was created."
+      "retrievedAtUtc": "2026-11-02T09:53:12.3556977Z",
+      "rawSha256": "48399661bab26328727897dbaff1c35504b74311051cbb53e3dc63d80d601009",
+      "custodyReceiptSha256": "acf2c3e1f675bf2663cd8ad0b211c301e3e8cf74ec877f270de044e0339755df",
+      "note": "The displayed Nov. 2 4:23 AM EST edition retains rounded Democratic House control at 95% and rounded Democratic Senate control at 76%. Serialized Democratic control rises from 94.69% to 94.79% House and from 75.90% to 76.20% Senate. Expected Democratic House seats fall from 239.77 to 239.56, while expected Democratic Senate seats rise from 52.35 to 52.37; separate medians remain 239 House and 52 Senate, and the 80% intervals remain 222–258 House and 49–56 Senate. Scrutinel is not an input to scripts/refresh-election-projections.py, so no new KAHRELUM probability edition was created."
     },
     {
       "provider": "Vote-Scope",
