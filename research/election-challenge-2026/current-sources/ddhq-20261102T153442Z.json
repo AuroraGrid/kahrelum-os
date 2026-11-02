@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Decision Desk HQ",
+  "sourceUrl": "https://votes.decisiondeskhq.com/forecast/2026",
+  "retrievedAtUtc": "2026-11-02T15:34:42.8559475Z",
+  "retrievalStatus": "FIRST_PARTY_PUBLIC_RENDERED_VERIFIED",
+  "custody": {
+    "representation": "LIVE_BROWSER_ACCESSIBILITY_TREE_SELECTED_FIELDS_NOT_RAW_HTML",
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false
+  },
+  "publisherEdition": {
+    "renderedBrowserLabel": "Last updated Nov 2, 10:03 AM",
+    "timezoneInterpretation": "America/New_York task timezone"
+  },
+  "observations": {
+    "houseDemocraticControlPct": 84.0,
+    "houseRepublicanControlPct": 16.0,
+    "houseDemocraticSeats": 241.0,
+    "houseSeatType": "projected",
+    "senateDemocraticControlPct": 65.0,
+    "senateRepublicanControlPct": 35.0,
+    "senateDemocraticSeats": 52.0,
+    "senateSeatType": "projected",
+    "jointOutcomePct": {
+      "democraticSenateAndDemocraticHouse": 63.0,
+      "democraticSenateAndRepublicanHouse": 2.0,
+      "republicanSenateAndDemocraticHouse": 21.0,
+      "republicanSenateAndRepublicanHouse": 15.0
+    }
+  },
+  "changeFromPriorAdmittedEdition": {
+    "senateDemocraticControlPct": {"from": 64.0, "to": 65.0},
+    "senateRepublicanControlPct": {"from": 36.0, "to": 35.0},
+    "democraticSenateAndDemocraticHousePct": {"from": 62.0, "to": 63.0},
+    "unchanged": [
+      "houseDemocraticControlPct",
+      "houseRepublicanControlPct",
+      "houseDemocraticSeats",
+      "senateDemocraticSeats",
+      "other three displayed joint outcomes"
+    ]
+  },
+  "displayConsistency": {
+    "houseControlComplementsSumPct": 100.0,
+    "senateControlComplementsSumPct": 100.0,
+    "displayedRoundedJointOutcomesSumPct": 101.0,
+    "note": "The four separately rounded joint-outcome labels sum to 101%; they are preserved as displayed and are not renormalized. The admitted Senate control probability comes from the dedicated Senate-control field."
+  },
+  "directHttpCheck": {
+    "retrievedAtUtc": "2026-11-02T15:33:47.0670754Z",
+    "httpStatus": 429,
+    "note": "Direct unattended HTTP remained rate-limited; the live rendered first-party page supplied the admitted numbers."
+  },
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "providerUsedByScript": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  },
+  "admissionNote": "The prospectively observed Nov. 2 10:03 AM ET rendered edition raises Democratic Senate control from 64% to 65% and lowers Republican Senate control from 36% to 35%. Democratic House control remains 84%; projected seats remain 241 House and 52 Senate."
+}

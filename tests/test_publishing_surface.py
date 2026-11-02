@@ -254,7 +254,7 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertEqual(challengers["records"], priced)
         self.assertEqual(unpriced, [])
         ddhq = next(row for row in challengers["records"] if row["provider"] == "Decision Desk HQ")
-        self.assertEqual((ddhq["houseDemocraticControlPct"], ddhq["senateDemocraticControlPct"]), (84.0, 64.0))
+        self.assertEqual((ddhq["houseDemocraticControlPct"], ddhq["senateDemocraticControlPct"]), (84.0, 65.0))
         self.assertEqual((ddhq["houseDemocraticSeats"], ddhq["senateDemocraticSeats"]), (241.0, 52.0))
         chambers = next(row for row in challengers["records"] if row["provider"] == "99chambers")
         self.assertEqual((chambers["houseDemocraticControlPct"], chambers["senateDemocraticControlPct"]), (99.0, 80.0))

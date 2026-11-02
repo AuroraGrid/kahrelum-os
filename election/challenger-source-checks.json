@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-11-02T14:42:17.3479041Z",
+  "checkedAtUtc": "2026-11-02T15:34:42.8559475Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -27,18 +27,18 @@
       "edition": "DDHQ 2026",
       "sourceUrl": "https://votes.decisiondeskhq.com/forecast/2026",
       "houseDemocraticControlPct": 84.0,
-      "senateDemocraticControlPct": 64.0,
+      "senateDemocraticControlPct": 65.0,
       "houseDemocraticSeats": 241.0,
       "houseSeatType": "projected",
       "senateDemocraticSeats": 52.0,
       "senateSeatType": "projected",
-      "sourceEdition": "Updated Nov. 1, 10:39 PM ET in live browser; retrieved Nov. 2 03:21 UTC",
+      "sourceEdition": "Updated Nov. 2, 10:03 AM ET in live browser; retrieved Nov. 2 15:34 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_RENDERED_VERIFIED",
-      "retrievedAtUtc": "2026-11-02T03:21:37.5887131Z",
+      "retrievedAtUtc": "2026-11-02T15:34:42.8559475Z",
       "directHttpStatus": 429,
       "custodyRepresentation": "LIVE_BROWSER_ACCESSIBILITY_TREE_SELECTED_FIELDS_NOT_RAW_HTML",
-      "custodyReceiptSha256": "fe15c6af6a593d35ed669278aa3f4abe13de8c670d0b35db402b09f166dfd64c",
-      "note": "The rendered first-party Nov. 1 10:39 PM ET edition raises Democratic House control from 83% to 84% and Democratic Senate control from 62% to 64%, while projected Democratic seats remain 241 House and 52 Senate. The four displayed joint outcomes are 62%, 2%, 21% and 15%, summing to 100%. Direct unattended HTTP remained rate-limited at 429, so the admitted numerical evidence is explicitly the live rendered page. Decision Desk HQ is not an input to scripts/refresh-election-projections.py, so no new KAHRELUM probability edition was created."
+      "custodyReceiptSha256": "d7059a9f4ea77f6af74b16414eca58227315dd6f5fa85aef32c12a667fba56fe",
+      "note": "The prospectively observed rendered first-party Nov. 2 10:03 AM ET edition raises Democratic Senate control from 64% to 65% and lowers Republican Senate control from 36% to 35%, while Democratic House control remains 84% and projected Democratic seats remain 241 House and 52 Senate. The displayed rounded joint outcomes are 63%, 2%, 21% and 15%; they sum to 101% and are preserved without renormalization, while the admitted 65% comes from the dedicated Senate-control field. Direct unattended HTTP remained rate-limited at 429, so the admitted numerical evidence is explicitly the live rendered page. Decision Desk HQ is not an input to scripts/refresh-election-projections.py, so no new KAHRELUM probability edition was created."
     },
     {
       "provider": "99chambers",
