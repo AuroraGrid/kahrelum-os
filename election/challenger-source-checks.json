@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-11-02T13:02:15.4358661Z",
+  "checkedAtUtc": "2026-11-02T13:24:06.3444242Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -163,20 +163,23 @@
       "provider": "Datum Signals",
       "edition": "Main",
       "sourceUrl": "https://datumsignals.com/",
-      "houseDemocraticControlPct": 71.0,
+      "houseDemocraticControlPct": null,
       "senateDemocraticControlPct": 64.0,
       "houseDemocraticSeats": null,
       "houseSeatType": null,
       "senateDemocraticSeats": null,
       "senateSeatType": null,
-      "sourceEdition": "Updated Nov. 1, 5:00 PM UTC; retrieved Nov. 2 13:02 UTC",
-      "retrievalStatus": "FIRST_PARTY_PUBLIC_RENDERED_VERIFIED",
-      "retrievedAtUtc": "2026-11-02T13:02:15.4358661Z",
-      "custodyRepresentation": "SELECTED_FIRST_PARTY_RENDERED_TEXT_NOT_RAW_HTML",
-      "custodyReceiptSha256": "dbb77a84bd3e3736da3258d628cf1af98d6c285ac86c493d979a51da2cef2695",
+      "sourceEdition": "Conflicting 70% and 71% House replicas under the same Nov. 1 5:00 PM UTC label; verified Nov. 2 13:23–13:24 UTC; Senate 64% on all attempts",
+      "retrievalStatus": "FIRST_PARTY_PUBLIC_CONFLICTING_REPLICAS",
+      "retrievedAtUtc": "2026-11-02T13:24:06.3444242Z",
+      "custodyRepresentation": "MULTI_RESPONSE_CONFLICT_RECEIPT_NOT_RAW_HTML",
+      "custodyReceiptSha256": "41891a7ea70343ad970826e322f08315dddb81bbd796362f9dffdc11b7af025c",
       "directHttpStatus": 200,
-      "rawSha256": "dfaf7da422e0932801f9766377e1eb58f7a48138889fd7acbddfab9bdbe3754e",
-      "note": "A prospective Nov. 2 13:02 UTC retrieval observed the still-labeled Nov. 1 5:00 PM UTC first-party page back at 71% Democratic House control after the admitted 70% observation; Democratic Senate control remains 64%. A fresh host-verified HTTPS retrieval returned HTTP 200 after resolving the first-party hostname to its Cloudflare endpoint, with TLS verification succeeding. Private selected-field custody receipt SHA256: dbb77a84bd3e3736da3258d628cf1af98d6c285ac86c493d979a51da2cef2695; raw response UTF-8 SHA256: dfaf7da422e0932801f9766377e1eb58f7a48138889fd7acbddfab9bdbe3754e. The selected-field and raw hashes intentionally match an earlier independently captured 71% representation; the new retrieval time preserves prospective custody of the reversion. The unchanged publisher timestamp is preserved rather than backdated. Displayed favored and toss-up race counts are not compatible expected full-chamber seat totals. Datum Signals is not an input to scripts/refresh-election-projections.py, so no new KAHRELUM probability edition was created."
+      "conflictingRawSha256": [
+        "dfaf7da422e0932801f9766377e1eb58f7a48138889fd7acbddfab9bdbe3754e",
+        "f3b7c17e09138fbe7450bdb593ef6d83fcad44c1c8cdc910e5b6be206c46fa0e"
+      ],
+      "note": "Eight cache-bypassed first-party HTTPS retrievals during Nov. 2 13:23:53–13:24:06 UTC alternated between 70% and 71% Democratic House control while preserving the same displayed Nov. 1 5:00 PM UTC update label. The two variants had stable, distinct ETags and raw hashes and were interleaved within seconds, demonstrating concurrently served replicas rather than a verified chronological update. The current House probability is therefore fail-closed as null/UNVERIFIED_CONFLICT. Democratic Senate control was 64% on all eight attempts and remains admitted. Private conflict receipt SHA256: 41891a7ea70343ad970826e322f08315dddb81bbd796362f9dffdc11b7af025c. Displayed favored and toss-up race counts are not compatible expected full-chamber seat totals. Datum Signals is not an input to scripts/refresh-election-projections.py, so no new KAHRELUM probability edition was created."
     },
     {
       "provider": "Fred Cornell independent",

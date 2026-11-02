@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Datum Signals",
+  "sourceUrl": "https://datumsignals.com/",
+  "verificationWindow": {
+    "startedAtUtc": "2026-11-02T13:23:53.3399487Z",
+    "endedAtUtc": "2026-11-02T13:24:06.3444242Z",
+    "requestCount": 8,
+    "cacheControl": "no-cache",
+    "resolvedRemoteIp": "104.21.51.52",
+    "tlsVerifyResult": 0
+  },
+  "publisherEdition": {
+    "displayedUpdate": "November 1, 2026, 5:00 PM UTC"
+  },
+  "observations": {
+    "houseDemocraticControlPct": null,
+    "houseStatus": "UNVERIFIED_CONFLICT",
+    "observedHouseVariants": [70.0, 71.0],
+    "senateDemocraticControlPct": 64.0,
+    "senateStatus": "VERIFIED_STABLE_ACROSS_ALL_ATTEMPTS",
+    "houseDemocraticSeats": null,
+    "senateDemocraticSeats": null
+  },
+  "responses": [
+    {"attempt": 1, "observedAtUtc": "2026-11-02T13:23:54.9117334Z", "houseDemocraticControlPct": 71.0, "senateDemocraticControlPct": 64.0, "httpStatus": 200, "etag": "W/\"bd70-7fWUfI5CXSPyDRGFL0hMYtssblA\"", "cacheStatus": "DYNAMIC", "rawUtf8Bytes": 48496, "rawSha256": "dfaf7da422e0932801f9766377e1eb58f7a48138889fd7acbddfab9bdbe3754e"},
+    {"attempt": 2, "observedAtUtc": "2026-11-02T13:23:56.6092990Z", "houseDemocraticControlPct": 70.0, "senateDemocraticControlPct": 64.0, "httpStatus": 200, "etag": "W/\"bd70-hTcTWSkr2OZQrOUeOmKJfcRy800\"", "cacheStatus": "DYNAMIC", "rawUtf8Bytes": 48496, "rawSha256": "f3b7c17e09138fbe7450bdb593ef6d83fcad44c1c8cdc910e5b6be206c46fa0e"},
+    {"attempt": 3, "observedAtUtc": "2026-11-02T13:23:58.1835215Z", "houseDemocraticControlPct": 71.0, "senateDemocraticControlPct": 64.0, "httpStatus": 200, "etag": "W/\"bd70-7fWUfI5CXSPyDRGFL0hMYtssblA\"", "cacheStatus": "DYNAMIC", "rawUtf8Bytes": 48496, "rawSha256": "dfaf7da422e0932801f9766377e1eb58f7a48138889fd7acbddfab9bdbe3754e"},
+    {"attempt": 4, "observedAtUtc": "2026-11-02T13:23:59.9400654Z", "houseDemocraticControlPct": 70.0, "senateDemocraticControlPct": 64.0, "httpStatus": 200, "etag": "W/\"bd70-hTcTWSkr2OZQrOUeOmKJfcRy800\"", "cacheStatus": "DYNAMIC", "rawUtf8Bytes": 48496, "rawSha256": "f3b7c17e09138fbe7450bdb593ef6d83fcad44c1c8cdc910e5b6be206c46fa0e"},
+    {"attempt": 5, "observedAtUtc": "2026-11-02T13:24:01.4554221Z", "houseDemocraticControlPct": 71.0, "senateDemocraticControlPct": 64.0, "httpStatus": 200, "etag": "W/\"bd70-7fWUfI5CXSPyDRGFL0hMYtssblA\"", "cacheStatus": "DYNAMIC", "rawUtf8Bytes": 48496, "rawSha256": "dfaf7da422e0932801f9766377e1eb58f7a48138889fd7acbddfab9bdbe3754e"},
+    {"attempt": 6, "observedAtUtc": "2026-11-02T13:24:03.2396770Z", "houseDemocraticControlPct": 71.0, "senateDemocraticControlPct": 64.0, "httpStatus": 200, "etag": "W/\"bd70-7fWUfI5CXSPyDRGFL0hMYtssblA\"", "cacheStatus": "DYNAMIC", "rawUtf8Bytes": 48496, "rawSha256": "dfaf7da422e0932801f9766377e1eb58f7a48138889fd7acbddfab9bdbe3754e"},
+    {"attempt": 7, "observedAtUtc": "2026-11-02T13:24:04.7925605Z", "houseDemocraticControlPct": 71.0, "senateDemocraticControlPct": 64.0, "httpStatus": 200, "etag": "W/\"bd70-7fWUfI5CXSPyDRGFL0hMYtssblA\"", "cacheStatus": "DYNAMIC", "rawUtf8Bytes": 48496, "rawSha256": "dfaf7da422e0932801f9766377e1eb58f7a48138889fd7acbddfab9bdbe3754e"},
+    {"attempt": 8, "observedAtUtc": "2026-11-02T13:24:06.3441533Z", "houseDemocraticControlPct": 70.0, "senateDemocraticControlPct": 64.0, "httpStatus": 200, "etag": "W/\"bd70-hTcTWSkr2OZQrOUeOmKJfcRy800\"", "cacheStatus": "DYNAMIC", "rawUtf8Bytes": 48496, "rawSha256": "f3b7c17e09138fbe7450bdb593ef6d83fcad44c1c8cdc910e5b6be206c46fa0e"}
+  ],
+  "selectedConflictReceipt": {
+    "utf8Bytes": 608,
+    "sha256": "41891a7ea70343ad970826e322f08315dddb81bbd796362f9dffdc11b7af025c",
+    "hashConstruction": "selectedConflictText joined with LF and no trailing LF"
+  },
+  "admissionDecision": {
+    "houseDemocraticControlPct": "EXCLUDED_CURRENT_VALUE_CONFLICT",
+    "senateDemocraticControlPct": "ADMITTED_64_PERCENT",
+    "reason": "The first-party endpoint interleaved stable 70% and 71% House representations within seconds under one unchanged publisher timestamp. Neither House value can be designated uniquely current without manufacturing chronology."
+  },
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "datumSignalsUsedByScript": false,
+    "parsedHouseDistrictRatingInputsChanged": false,
+    "parsedSenateRaceRatingInputsChanged": false,
+    "expectedSeatAndControlOutputsChanged": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  }
+}
