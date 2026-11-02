@@ -147,6 +147,12 @@ const REQUIRED_REWRITES = {
 };
 const DIVISION_ROUTES = ['/assurance', '/investigations', '/forecasting', '/digital-id', '/one', '/os'];
 const RELEASE_PROFILES = {
+  'lead-magnet': {
+    // Bounded landing-page release: existing Firebase files and unrelated routes stay unchanged.
+    overlayFiles: ['evidence-scorecard.html', 'evidence-scorecard.js'],
+    sitemapRoutes: ['/evidence-scorecard'],
+    includeHomepage: false,
+  },
   'candidate-portraits': {
     overlayFiles: ['election-challenge.html', 'election-challenge-map.js',
       'election/candidate-portraits.json', ...CANDIDATE_PORTRAIT_FILES],
@@ -541,6 +547,10 @@ async function buildOverlay(live, profileName) {
       changedPaths.some((item) => !['/investigations.html', '/assets/social/og-air01-v1.png'].includes(item))) {
     fail('Investigations release attempted to replace an unrelated live Firebase path.');
   }
+  if (profileName === 'lead-magnet' &&
+      changedPaths.some((item) => !['/evidence-scorecard.html', '/evidence-scorecard.js', '/sitemap.xml'].includes(item))) {
+    fail('Lead magnet release attempted to change unrelated live Firebase paths.');
+  }
   const removedPaths = Object.keys(live.fileMap).filter((item) => !(item in desired));
   if (removedPaths.length) fail(`Overlay attempted to remove live paths: ${removedPaths.join(', ')}`);
 
@@ -565,7 +575,9 @@ function extractCanonical(html) {
 async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
   const checks = [];
   const internal = new Set();
-  const verifiedRoutes = profileName === 'candidate-portraits' ? ['/election-challenge'] : profileName === 'sports-intelligence'
+  const verifiedRoutes = profileName === 'lead-magnet'
+    ? [...HTML_ROUTES, '/evidence-scorecard']
+    : profileName === 'candidate-portraits' ? ['/election-challenge'] : profileName === 'sports-intelligence'
     ? HTML_ROUTES.filter((route) => route !== '/election-challenge')
     : HTML_ROUTES;
   for (const route of verifiedRoutes) {
