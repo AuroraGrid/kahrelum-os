@@ -1,0 +1,34 @@
+{
+  "sourceCandidateId": 23036,
+  "query": "Dennis Hannon",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Dennis+Hannon%22",
+  "retrievedAtUtc": "2026-11-02T21:37:28Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 2
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Officers' Reports of the Town of Brimfield for the Year Ending December 31, 1916-The Journal Print, Palmer, Ma. 1917. (IA officersreportso1916unse).pdf",
+          "pageid": 96183007,
+          "size": 859,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-01-31T09:11:53Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Annual report, Keene, New Hampshire (IA annualreportkeen00keen 11).pdf",
+          "pageid": 195062327,
+          "size": 1008,
+          "wordcount": 21,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English determination method or standard: SHA-1",
+          "timestamp": "2026-08-04T17:33:58Z"
+        }
+      ]
+    }
+  }
+}

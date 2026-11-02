@@ -1,0 +1,34 @@
+{
+  "sourceCandidateId": 21002,
+  "query": "Robb Tucker",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Robb+Tucker%22",
+  "retrievedAtUtc": "2026-11-02T21:31:53Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 2
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Robb Tucker, 2025 (cropped).jpg",
+          "pageid": 193350195,
+          "size": 391,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2026-06-06T22:16:31Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Robb Tucker, 2025.jpg",
+          "pageid": 193350170,
+          "size": 402,
+          "wordcount": 20,
+          "snippet": "English Official portrait of Nevada County supervisor Robb Tucker. described at URL: https://www.nevadacountyca.gov/731/Board-of-Supervisors",
+          "timestamp": "2026-06-04T09:06:02Z"
+        }
+      ]
+    }
+  }
+}

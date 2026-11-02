@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 23489,
+  "query": "Daniel J. Sullivan",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Daniel+J.+Sullivan%22",
+  "retrievedAtUtc": "2026-11-02T21:41:55Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 71
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Town of Arlington annual report (IA townofarlingtona1915arli).pdf",
+          "pageid": 96201768,
+          "size": 937,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-01-25T12:03:31Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Journal of the New York Entomological Society (IA journalof787919701971newy).pdf",
+          "pageid": 92240344,
+          "size": 1159,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2022-11-20T02:25:37Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Arlington City Directory (IA arlingtoncitydir1912arli).pdf",
+          "pageid": 96127293,
+          "size": 923,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-08-03T04:47:57Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Proceedings of the American Federation of Labor 1930 (IA sim american-federation-of-labor-proceedings 1930).pdf",
+          "pageid": 98127474,
+          "size": 1619,
+          "wordcount": 14,
+          "snippet": "English determination method or standard: copyright not renewed determination method or standard: SHA-1",
+          "timestamp": "2026-07-25T12:41:00Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Annual report of the Charles River Basin Commission .. (IA annualreportofch1905char).pdf",
+          "pageid": 196243248,
+          "size": 1331,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2026-07-26T16:48:04Z"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 21351,
+  "query": "Eric Jones",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Eric+Jones%22",
+  "retrievedAtUtc": "2026-11-02T21:32:08Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 88388
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Eric Jones (solo climber).jpg",
+          "pageid": 82492079,
+          "size": 313,
+          "wordcount": 161,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-06-15T17:56:18Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Leo Dickinson and Eric Jones.jpg",
+          "pageid": 82491308,
+          "size": 438,
+          "wordcount": 161,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2024-10-02T22:52:37Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Craig bwlch y moch.jpg",
+          "pageid": 7641286,
+          "size": 700,
+          "wordcount": 200,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. Attribution: David Medcalf You are free: to share \u2013 to copy",
+          "timestamp": "2026-01-26T14:44:30Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:The Derelict Old Downe Hospital viewed from the Killough Road (geograph 4138457).jpg",
+          "pageid": 77913754,
+          "size": 857,
+          "wordcount": 205,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. Attribution: Eric Jones You are free: to share \u2013 to copy",
+          "timestamp": "2025-01-07T01:39:15Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Bypassed section of A499 - geograph.org.uk - 1842373.jpg",
+          "pageid": 102603586,
+          "size": 54,
+          "wordcount": 192,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. Attribution: Bypassed section of A499 by\u00a0Eric Jones You are",
+          "timestamp": "2024-10-10T09:53:56Z"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 19302,
+  "query": "Don Leonard",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Don+Leonard%22",
+  "retrievedAtUtc": "2026-11-02T21:37:59Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 11
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Leonard Warren as Don Carlo.jpg",
+          "pageid": 115312165,
+          "size": 482,
+          "wordcount": 14,
+          "snippet": "English determination method or standard: copyright not renewed determination method or standard: SHA-1",
+          "timestamp": "2025-08-10T21:41:53Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Proceedings of the international congress, (IA proceedingsofint00worl).pdf",
+          "pageid": 93943448,
+          "size": 946,
+          "wordcount": 0,
+          "snippet": "",
+          "timestamp": "2026-08-29T04:19:47Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Il Paese - giornale della Democrazia friulana n. 84 (1912) (IA IlPaese-84-1912).pdf",
+          "pageid": 108722586,
+          "size": 767,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2021-08-19T18:21:19Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:List of residents 20 years of age and over as of .. (IA listofresidents968bost 17).pdf",
+          "pageid": 197177288,
+          "size": 1081,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2026-08-10T16:34:55Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Full and unconditional pardons-5-names-pardon-warrant-7-19-jan-2025 1.pdf",
+          "pageid": 158281415,
+          "size": 1419,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-01-23T04:16:38Z"
+        }
+      ]
+    }
+  }
+}

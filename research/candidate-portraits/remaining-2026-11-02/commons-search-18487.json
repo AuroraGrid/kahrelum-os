@@ -1,0 +1,43 @@
+{
+  "sourceCandidateId": 18487,
+  "query": "Eric Hafner",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Eric+Hafner%22",
+  "retrievedAtUtc": "2026-11-02T21:30:30Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 3
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Eric Hafner (cropped 3x4).jpg",
+          "pageid": 201108324,
+          "size": 1020,
+          "wordcount": 15,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English",
+          "timestamp": "2026-10-27T09:37:23Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Eric Hafner's 2024 Alaska campaign announcement.jpg",
+          "pageid": 155374753,
+          "size": 949,
+          "wordcount": 51,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English \u201cEric Hafner, Democrat, running for US Congress",
+          "timestamp": "2026-10-27T09:37:32Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Eric Hafner.jpg",
+          "pageid": 193953617,
+          "size": 1035,
+          "wordcount": 21,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English determination method or standard: SHA-1",
+          "timestamp": "2026-10-27T09:37:44Z"
+        }
+      ]
+    }
+  }
+}

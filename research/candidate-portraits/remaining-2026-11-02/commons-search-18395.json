@@ -1,0 +1,42 @@
+{
+  "sourceCandidateId": 18395,
+  "query": "Anthony DiLorenzo",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Anthony+DiLorenzo%22",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 3
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Anthony DiLorenzo - PIX11 - NYC Trump court trial 2024-05-30 236 (cropped).jpg",
+          "pageid": 149098357,
+          "size": 532,
+          "wordcount": 127,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution 4.0 International",
+          "timestamp": "2025-07-10T20:10:06Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:NYC Trump court trial 2024-05-30 236.jpg",
+          "pageid": 149073541,
+          "size": 707,
+          "wordcount": 129,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution 4.0 International",
+          "timestamp": "2024-08-11T08:59:51Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:The Journal v. 25, no. 30, August 8, 2013 (IA journal 080813).pdf",
+          "pageid": 91685168,
+          "size": 1509,
+          "wordcount": 21,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English determination method or standard: SHA-1",
+          "timestamp": "2026-06-07T12:19:40Z"
+        }
+      ]
+    }
+  }
+}

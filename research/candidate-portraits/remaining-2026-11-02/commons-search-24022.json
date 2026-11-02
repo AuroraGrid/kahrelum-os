@@ -1,0 +1,64 @@
+{
+  "sourceCandidateId": 24022,
+  "query": "Dan Schwartz",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Dan+Schwartz%22",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 46
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Dan Schwartz.jpg",
+          "pageid": 75072566,
+          "size": 1015,
+          "wordcount": 188,
+          "snippet": "This video, screenshot or audio excerpt was released under the Creative Commons license option on YouTube before August 2025. (YouTube changed the license",
+          "timestamp": "2025-12-11T16:48:41Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Dan Schwartz (cropped).jpg",
+          "pageid": 179724967,
+          "size": 907,
+          "wordcount": 188,
+          "snippet": "This video, screenshot or audio excerpt was released under the Creative Commons license option on YouTube before August 2025. (YouTube changed the license",
+          "timestamp": "2026-02-12T21:51:31Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Lollapuzzoola 2023 - Express final 22.jpg",
+          "pageid": 136237449,
+          "size": 415,
+          "wordcount": 152,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-02-22T21:04:31Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:2015-08-22 Derny European Championship Radrennbahn Hannover 173334.jpg",
+          "pageid": 46044270,
+          "size": 1067,
+          "wordcount": 167,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2024-11-16T14:48:12Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:The Reflector (IA reflector1966lanc).pdf",
+          "pageid": 198175650,
+          "size": 1016,
+          "wordcount": 0,
+          "snippet": "",
+          "timestamp": "2026-08-26T02:48:07Z"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,485 @@
+{
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&titles=File%3AOverman+Full+HCFLGovnet.jpg%7CFile%3APatty+Garcia+with+Alderman+Andre+Vasquez+at+Fundraiser+Cropped.jpg%7CFile%3APia+Dandiya+WHF+%28cropped%29.png%7CFile%3ABale+Dalton.webp&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cmime%7Cextmetadata&iiurlwidth=250&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main",
+  "candidateIds": [
+    22771,
+    20251,
+    22973,
+    22979
+  ],
+  "retrievedAtUtc": "2026-11-02T21:34:13Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "pages": {
+        "191516442": {
+          "pageid": 191516442,
+          "ns": 6,
+          "title": "File:Bale Dalton.webp",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 882508,
+              "width": 4667,
+              "height": 5834,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Bale_Dalton.webp/250px-Bale_Dalton.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 313,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Bale_Dalton.webp/500px-Bale_Dalton.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Bale_Dalton.webp/250px-Bale_Dalton.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 313,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Bale_Dalton.webp/500px-Bale_Dalton.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Bale_Dalton.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Bale_Dalton.webp",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=191516442",
+              "sha1": "d0a53c158f452d0581b3f53c3a481046ffac3d71",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-05-07 23:38:30",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Bale Dalton",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD NASA|PD-USGov missing SDC copyright status|Files from NASA with known IDs|All media needing categories as of 2026|Media needing categories as of 7 May 2026",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Bale Dalton, former NASA Chief of Staff from January 2024 to 2025 official portrait.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "Circa. 2024 to 2025",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "This image or video was catalogued by NASA Headquarters of the United States <a href=\"https://en.wikipedia.org/wiki/NASA\" class=\"extiw\" title=\"w:NASA\">National Aeronautics and Space Administration</a> (NASA)\u00a0under <b>Photo\u00a0ID:</b> <a rel=\"nofollow\" class=\"external text\" href=\"https://images.nasa.gov/search?q=NHQ2021061700011&amp;page=1&amp;media=image,video,audio&amp;yearStart=1920&amp;yearEnd=2026\">NHQ2021061700011</a>.",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "NASA",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/webp"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1210271858,
+              "parentid": 1210271850,
+              "timestamp": "2026-05-07T23:38:31Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Bale Dalton, former NASA Chief of Staff from January 2024 to 2025 official portrait.}}\n|date=Circa. 2024 to 2025\n|source=https://www.nasa.gov/wp-content/uploads/2021/06/nhq2021061700011.jpg\n{{NASA-image|id=NHQ2021061700011|center=HQ}}\n|author=NASA\n|permission=\n|other versions=\n}}\n\n=={{int:license-header}}==\n{{PD-USGov-NASA}}\n\n{{Uncategorized|year=2026|month=May|day=7}}"
+                }
+              }
+            }
+          ]
+        },
+        "198924220": {
+          "pageid": 198924220,
+          "ns": 6,
+          "title": "File:Overman Full HCFLGovnet.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1244939,
+              "width": 1200,
+              "height": 1650,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Overman_Full_HCFLGovnet.jpg/250px-Overman_Full_HCFLGovnet.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 344,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Overman_Full_HCFLGovnet.jpg/500px-Overman_Full_HCFLGovnet.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Overman_Full_HCFLGovnet.jpg/250px-Overman_Full_HCFLGovnet.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 344,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Overman_Full_HCFLGovnet.jpg/500px-Overman_Full_HCFLGovnet.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Overman_Full_HCFLGovnet.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Overman_Full_HCFLGovnet.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=198924220",
+              "sha1": "23140ad5b96f8020b22243f47385ba67dab92ed3",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-09-05 16:25:36",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Overman Full HCFLGovnet",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD Florida|Unknown date|All media needing categories as of 2026|Media needing categories as of 5 September 2026",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Hillsborough County commissioner Kimberly Overman",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "Unknown date",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://web.archive.org/web/20211021202236/https://www.hillsboroughcounty.org/en/government/board-of-county-commissioners/kimberly-overman\">https://web.archive.org/web/20211021202236/https://www.hillsboroughcounty.org/en/government/board-of-county-commissioners/kimberly-overman</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Hillsborough County, Florida",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1272707003,
+              "parentid": 1272694055,
+              "timestamp": "2026-09-05T17:01:14Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Hillsborough County commissioner Kimberly Overman}}\n|date={{otherdate|?}}\n|source=https://web.archive.org/web/20211021202236/https://www.hillsboroughcounty.org/en/government/board-of-county-commissioners/kimberly-overman\n|author=Hillsborough County, Florida\n|permission=\n|other versions=\n}}\n\n=={{int:license-header}}==\n{{PD-FLGov}}\n\n{{Uncategorized|year=2026|month=September|day=5}}"
+                }
+              }
+            }
+          ]
+        },
+        "193287128": {
+          "pageid": 193287128,
+          "ns": 6,
+          "title": "File:Patty Garcia with Alderman Andre Vasquez at Fundraiser Cropped.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1002479,
+              "width": 1599,
+              "height": 2132,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Patty_Garcia_with_Alderman_Andre_Vasquez_at_Fundraiser_Cropped.jpg/250px-Patty_Garcia_with_Alderman_Andre_Vasquez_at_Fundraiser_Cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 333,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Patty_Garcia_with_Alderman_Andre_Vasquez_at_Fundraiser_Cropped.jpg/500px-Patty_Garcia_with_Alderman_Andre_Vasquez_at_Fundraiser_Cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Patty_Garcia_with_Alderman_Andre_Vasquez_at_Fundraiser_Cropped.jpg/250px-Patty_Garcia_with_Alderman_Andre_Vasquez_at_Fundraiser_Cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 333,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Patty_Garcia_with_Alderman_Andre_Vasquez_at_Fundraiser_Cropped.jpg/500px-Patty_Garcia_with_Alderman_Andre_Vasquez_at_Fundraiser_Cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Patty_Garcia_with_Alderman_Andre_Vasquez_at_Fundraiser_Cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Patty_Garcia_with_Alderman_Andre_Vasquez_at_Fundraiser_Cropped.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=193287128",
+              "sha1": "feef9ac1c388fdf8eb13ffa1f510f4ecc62210ee",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-06-03 01:12:11",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Patty Garcia with Alderman Andre Vasquez at Fundraiser Cropped",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Democrats from Illinois|Extracted images",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "A headshot of Patty Garcia",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2026-04-07 17:20:16",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "www.flickr.com/photos/pgoyette/55196421609/",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Paul Goyette",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1225002798,
+              "parentid": 1224992132,
+              "timestamp": "2026-06-03T03:12:49Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=A headshot of Patty Garcia}}\n|date=2026-04-07 17:20:16\n|source=www.flickr.com/photos/pgoyette/55196421609/\n|author=Paul Goyette\n|permission=\n|other_versions = {{Extracted from|Patty Garcia with Alderman Andre Vasquez at Fundraiser.jpg}}\n}}\n\n=={{int:license-header}}==\n{{cc-by-sa-4.0}}\n\n[[Category:Democrats from Illinois]]"
+                }
+              }
+            }
+          ]
+        },
+        "198713498": {
+          "pageid": 198713498,
+          "ns": 6,
+          "title": "File:Pia Dandiya WHF (cropped).png",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 29987,
+              "width": 125,
+              "height": 156,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Pia_Dandiya_WHF_%28cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 250,
+              "thumbheight": 312,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Pia_Dandiya_WHF_%28cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 312
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Pia_Dandiya_WHF_%28cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Pia_Dandiya_WHF_(cropped).png",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=198713498",
+              "sha1": "6a191402a7670eb57bf7ae4e2bb37ff72119551f",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-09-02 18:12:54",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Pia Dandiya WHF (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD US Government|Extracted images|CC-PD-Mark|PD-USGov missing SDC copyright status|All media needing categories as of 2025|Media needing categories as of 1 June 2025",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Pia-Dandiya_WHF",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2020",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "White House Fellows",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Executive Office of the President, White House Office, White House Fellows",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/png"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1294017580,
+              "parentid": 1271419257,
+              "timestamp": "2026-10-31T09:51:08Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Pia-Dandiya_WHF}}\n|date=2020\n|source=White House Fellows\n|author=Executive Office of the President, White House Office, White House Fellows\n|permission=\n|other versions={{Extracted from|1=Pia Dandiya WHF.png}}\n}}\n\n=={{int:license-header}}==\n{{PD-USGov}}\n\n{{Uncategorized|year=2025|month=June|day=1}}"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

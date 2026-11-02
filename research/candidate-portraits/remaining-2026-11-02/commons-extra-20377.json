@@ -1,0 +1,371 @@
+{
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&titles=File%3ARep.+Jeffrey+Hulum+III+%28cropped%29.jpg%7CFile%3APatrick+Halpin.jpg%7CFile%3ABrian+Bengs+Air+Force+%28cropped%29.jpg&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cmime%7Cextmetadata&iiurlwidth=250&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main",
+  "candidateIds": [
+    20377,
+    23018,
+    29056
+  ],
+  "retrievedAtUtc": "2026-11-02T21:39:38Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "pages": {
+        "193375547": {
+          "pageid": 193375547,
+          "ns": 6,
+          "title": "File:Brian Bengs Air Force (cropped).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 245942,
+              "width": 1257,
+              "height": 1776,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Brian_Bengs_Air_Force_%28cropped%29.jpg/250px-Brian_Bengs_Air_Force_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 353,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Brian_Bengs_Air_Force_%28cropped%29.jpg/500px-Brian_Bengs_Air_Force_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Brian_Bengs_Air_Force_%28cropped%29.jpg/250px-Brian_Bengs_Air_Force_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 353,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Brian_Bengs_Air_Force_%28cropped%29.jpg/500px-Brian_Bengs_Air_Force_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Brian_Bengs_Air_Force_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Brian_Bengs_Air_Force_(cropped).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=193375547",
+              "sha1": "1f94c9c2b1b8527dc9a775de8faba96e5473ed29",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-06-04 16:43:46",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Brian Bengs Air Force (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD US Air Force|Extracted images|Template Unknown (author)|All media needing categories as of 2026|Media needing categories as of 4 June 2026",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Official Air Force portrait of Brian Bengs",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "before 2004",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://bengsforsouthdakota.com/wp-content/uploads/2026/02/brian-bengs-gallery-7@2x.jpg\">https://bengsforsouthdakota.com/wp-content/uploads/2026/02/brian-bengs-gallery-7@2x.jpg</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Unknown author<span style=\"display: none;\">Unknown author</span>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1284362708,
+              "parentid": 1228518714,
+              "timestamp": "2026-10-07T23:58:45Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Official Air Force portrait of Brian Bengs}}\n|date=before 2004\n|source=https://bengsforsouthdakota.com/wp-content/uploads/2026/02/brian-bengs-gallery-7@2x.jpg\n|author={{Unknown|author}}\n|permission=\n|other versions={{Extracted from|1=Brian Bengs Air Force.jpg}}\n}}\n\n=={{int:license-header}}==\n{{PD-USGov-Military-Air Force}}\n\n{{Uncategorized|year=2026|month=June|day=4}}"
+                }
+              }
+            }
+          ]
+        },
+        "179262258": {
+          "pageid": 179262258,
+          "ns": 6,
+          "title": "File:Patrick Halpin.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 64365,
+              "width": 657,
+              "height": 550,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Patrick_Halpin.jpg/250px-Patrick_Halpin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 209,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Patrick_Halpin.jpg/500px-Patrick_Halpin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Patrick_Halpin.jpg/250px-Patrick_Halpin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 209,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Patrick_Halpin.jpg/500px-Patrick_Halpin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Patrick_Halpin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Patrick_Halpin.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=179262258",
+              "sha1": "a039c8b3e307830cfdff9fc5edf703d9e2fbb344",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-12-01 17:26:42",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Patrick Halpin",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Media from YouTube|PD US Government|Images with extracted images|Speakers|CC-PD-Mark|All media needing categories as of 2025|Media needing categories as of 1 December 2025",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Patrick Halpin speaks at a Suffolk County Water Authority press conference in 2021.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2021-04-23",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<bdi lang=\"en\" dir=\"ltr\"><a href=\"//commons.wikimedia.org/wiki/Commons:YouTube_files\" title=\"Commons:YouTube files\">YouTube</a>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.youtube.com/watch?v=qXV5-h3iuI0\"><bdi lang=\"\">https://www.youtube.com/watch?v=qXV5-h3iuI0</bdi></a> \u2013 View/save archived versions on <a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/*/https://www.youtube.com/watch?v=qXV5-h3iuI0\">archive.org</a></bdi>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Suffolk County Water Authority",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1270673296,
+              "parentid": 1150117612,
+              "timestamp": "2026-09-01T03:35:51Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Patrick Halpin speaks at a Suffolk County Water Authority press conference in 2021.}}\n|date=2021-04-23\n|source={{From YouTube|1=qXV5-h3iuI0|2=https://www.youtube.com/watch?v=qXV5-h3iuI0}}\n|author=Suffolk County Water Authority\n|permission=\n|other versions={{Image extracted|1=Patrick Halpin (cropped).jpg}}\n}}\n\n=={{int:license-header}}==\n{{PD-USGov}}\n\n{{Uncategorized|year=2025|month=December|day=1}}\n\n[[Category:Speakers]]"
+                }
+              }
+            }
+          ]
+        },
+        "156644790": {
+          "pageid": 156644790,
+          "ns": 6,
+          "title": "File:Rep. Jeffrey Hulum III (cropped).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1340853,
+              "width": 1147,
+              "height": 1532,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Rep._Jeffrey_Hulum_III_%28cropped%29.jpg/250px-Rep._Jeffrey_Hulum_III_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 334,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Rep._Jeffrey_Hulum_III_%28cropped%29.jpg/500px-Rep._Jeffrey_Hulum_III_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Rep._Jeffrey_Hulum_III_%28cropped%29.jpg/250px-Rep._Jeffrey_Hulum_III_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 334,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Rep._Jeffrey_Hulum_III_%28cropped%29.jpg/500px-Rep._Jeffrey_Hulum_III_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Rep._Jeffrey_Hulum_III_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Rep._Jeffrey_Hulum_III_(cropped).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=156644790",
+              "sha1": "a4e4de099333e1a11c966cce651206894431f616",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2024-12-13 19:24:13",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Rep. Jeffrey Hulum III (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Members of the Mississippi House of Representatives|Extracted images|National Black Caucus of State Legislators Prayer breakfast from MDGovpics",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Governor Moore speaks at the National Black Caucus of State Legislators Prayer Breakfast by Joe Andrucyk at Capital Hilton, 1001 16th St. NW, Washington DC 20036",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2024-12-05 10:11:51",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/mdgovpics/54185683734/\">https://www.flickr.com/photos/mdgovpics/54185683734/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Maryland GovPics",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 2.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 2.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/2.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-2.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1094092989,
+              "parentid": 1041177678,
+              "timestamp": "2025-10-02T13:02:43Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Governor Moore speaks at the National Black Caucus of State Legislators Prayer Breakfast by Joe Andrucyk at Capital Hilton, 1001 16th St. NW, Washington DC 20036}}\n|date=2024-12-05 10:11:51\n|source=https://www.flickr.com/photos/mdgovpics/54185683734/\n|author=Maryland GovPics\n|permission=\n|other versions={{Extracted from|1=National Black Caucus of State Legislators Prayer Breakfast (54185683734).jpg}}\n}}\n\n=={{int:license-header}}==\n{{cc-by-2.0}}\n\n[[Category:National Black Caucus of State Legislators Prayer breakfast from MDGovpics]]\n[[Category:Members of the Mississippi House of Representatives]]"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

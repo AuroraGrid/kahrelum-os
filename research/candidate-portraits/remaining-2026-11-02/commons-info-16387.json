@@ -1,0 +1,529 @@
+{
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&titles=File%3AState_Rep_Donavan_McKinney_Swearing_In_12.12.22_%2852565631658%29_%28cropped%29.jpg%7CFile%3AMattLittleGOTV.jpg%7CFile%3AMinnesota_State_Senator_Eric_Pratt.jpg%7CFile%3AChris_Stigall_2017_%28cropped%29.jpg&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cmime%7Cextmetadata&iiurlwidth=250&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main",
+  "retrievedAtUtc": "2026-11-02T21:31:59Z",
+  "candidateIds": [
+    16387,
+    20769,
+    20770,
+    26314
+  ],
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "normalized": [
+        {
+          "from": "File:State_Rep_Donavan_McKinney_Swearing_In_12.12.22_(52565631658)_(cropped).jpg",
+          "to": "File:State Rep Donavan McKinney Swearing In 12.12.22 (52565631658) (cropped).jpg"
+        },
+        {
+          "from": "File:Minnesota_State_Senator_Eric_Pratt.jpg",
+          "to": "File:Minnesota State Senator Eric Pratt.jpg"
+        },
+        {
+          "from": "File:Chris_Stigall_2017_(cropped).jpg",
+          "to": "File:Chris Stigall 2017 (cropped).jpg"
+        }
+      ],
+      "pages": {
+        "117910285": {
+          "pageid": 117910285,
+          "ns": 6,
+          "title": "File:Chris Stigall 2017 (cropped).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 62459,
+              "width": 779,
+              "height": 1039,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Chris_Stigall_2017_%28cropped%29.jpg/250px-Chris_Stigall_2017_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 333,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Chris_Stigall_2017_%28cropped%29.jpg/500px-Chris_Stigall_2017_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Chris_Stigall_2017_%28cropped%29.jpg/250px-Chris_Stigall_2017_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 333,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Chris_Stigall_2017_%28cropped%29.jpg/500px-Chris_Stigall_2017_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Chris_Stigall_2017_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Chris_Stigall_2017_(cropped).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=117910285",
+              "sha1": "5b18a9dfb03e79b1134163ddf0d22bc4e438c08a",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2022-05-11 22:38:40",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Chris Stigall 2017 (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "October 2017 in Washington, D.C.|Eisenhower Executive Office Building|Chris Stigall|2017 in radio|Images with extracted images|Extracted images|Files with coordinates missing SDC location of creation|Males with handheld microphones (left) in the United States",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "38.897600",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "-77.038700",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Philadelphia talk show host Chris Stigall interviews Vice President Mike Pence at the White House Executive Office Building.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2017-10-17",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Hartjared&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Hartjared (page does not exist)\">Jared Hart</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Attribution": {
+                  "value": "Jared Hart",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1282878130,
+              "parentid": 1282877142,
+              "timestamp": "2026-10-03T18:59:14Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Philadelphia talk show host Chris Stigall interviews Vice President Mike Pence at the White House Executive Office Building.}}\n|date=2017-10-17\n|source={{own}}\n|author=[[User:Hartjared|Jared Hart]]\n|permission=\n|other versions={{Image extracted|1=Chris Stigall 2017 (headshot).jpg|2=Chris Stigall 2017 (headshot).jpg}}{{Extracted from|1=Chris Stigall interviews Mike Pence.jpg}}\n}}\n{{Location|38.8976|-77.0387}}\nPhoto taken by me, owned by me when I produced this White House broadcast on behalf of CBS Radio.\n\n=={{int:license-header}}==\n{{cc-by-sa-4.0|Jared Hart}}\n\n[[Category:October 2017 in Washington, D.C.]]\n[[Category:2017 in radio]]\n[[Category:Males with handheld microphones (left) in the United States]]\n[[Category:Eisenhower Executive Office Building]]\n[[Category:Chris Stigall]]"
+                }
+              }
+            }
+          ]
+        },
+        "202431049": {
+          "pageid": 202431049,
+          "ns": 6,
+          "title": "File:MattLittleGOTV.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 2580777,
+              "width": 2800,
+              "height": 3900,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/MattLittleGOTV.jpg/250px-MattLittleGOTV.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 348,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/MattLittleGOTV.jpg/500px-MattLittleGOTV.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/MattLittleGOTV.jpg/250px-MattLittleGOTV.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 348,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/MattLittleGOTV.jpg/500px-MattLittleGOTV.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/MattLittleGOTV.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:MattLittleGOTV.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=202431049",
+              "sha1": "8c15914cb5f9567842fa999a4bf46429970da3c2",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-10-29 23:03:11",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "MattLittleGOTV",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Self-published work|Matt Little",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Congressional candidate Matt Little speaking at a Get Out The Vote Rally in Northfield, Minnesota, United States",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2026-10-29 14:40",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Travellers_%26_Tinkers\" title=\"User:Travellers &amp; Tinkers\">Travellers &amp; Tinkers</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1293414101,
+              "parentid": 1293333453,
+              "timestamp": "2026-10-30T02:03:39Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Congressional candidate Matt Little speaking at a Get Out The Vote Rally in Northfield, Minnesota, United States}}\n|date=2026-10-29 14:40\n|source={{own}}\n|author=[[User:Travellers & Tinkers|Travellers & Tinkers]]\n|permission=\n|other versions=\n}}\n\n=={{int:license-header}}==\n{{self|cc-by-sa-4.0}}\n\n[[Category:Matt Little]]"
+                }
+              }
+            }
+          ]
+        },
+        "83180242": {
+          "pageid": 83180242,
+          "ns": 6,
+          "title": "File:Minnesota State Senator Eric Pratt.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 190574,
+              "width": 668,
+              "height": 824,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Minnesota_State_Senator_Eric_Pratt.jpg/250px-Minnesota_State_Senator_Eric_Pratt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 308,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Minnesota_State_Senator_Eric_Pratt.jpg/500px-Minnesota_State_Senator_Eric_Pratt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Minnesota_State_Senator_Eric_Pratt.jpg/250px-Minnesota_State_Senator_Eric_Pratt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 308,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Minnesota_State_Senator_Eric_Pratt.jpg/500px-Minnesota_State_Senator_Eric_Pratt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Minnesota_State_Senator_Eric_Pratt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Minnesota_State_Senator_Eric_Pratt.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=83180242",
+              "sha1": "be7a98503b4902191a53d018a61c463e69436739",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2019-10-18 16:25:12",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Minnesota State Senator Eric Pratt",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Minnesota State Senators|Flickr images reviewed by FlickreviewR 2|Flickr images missing SDC published in",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Minnesota State Senator Eric Pratt (R-Prior Lake)",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2012-11-14 08:33:17",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/185048151@N02/48916583246\">Flickr</a>\u00a0<span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"//commons.wikimedia.org/wiki/File:Minnesota_State_Senator_Eric_Pratt.jpg#P7482\" title=\"Edit this at Structured Data on Commons\"><img alt=\"Edit this at Structured Data on Commons\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"https://en.wikipedia.org/wiki/en:Minnesota_Senate_Republican_Caucus\" class=\"extiw\" title=\"w:en:Minnesota Senate Republican Caucus\"><span title=\"Political group in the Minnesota Senate\">Minnesota Senate Republican Caucus</span></a>\u00a0<span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"//commons.wikimedia.org/wiki/File:Minnesota_State_Senator_Eric_Pratt.jpg#P170\" title=\"Edit this at Structured Data on Commons\"><img alt=\"Edit this at Structured Data on Commons\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 2.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 2.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/2.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-2.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1166970849,
+              "parentid": 1045983334,
+              "timestamp": "2026-02-16T13:22:43Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Minnesota State Senator Eric Pratt (R-Prior Lake)}}\n|date=2012-11-14 08:33:17\n|other versions=\n}}\n\n=={{int:license-header}}==\n{{FlickreviewR|status=passed|author=minnesotasenaterepublicans|sourceurl=https://flickr.com/photos/185048151@N02/48916583246|archive=https://web.archive.org/web/20200529213515/https://www.flickr.com/photos/185048151@N02/48916583246|reviewdate=2019-10-18 16:26:15|reviewlicense=cc-by-2.0|reviewer=FlickreviewR 2}}{{cc-by-2.0}}\n\n[[Category:Minnesota State Senators]]"
+                }
+              }
+            }
+          ]
+        },
+        "168206016": {
+          "pageid": 168206016,
+          "ns": 6,
+          "title": "File:State Rep Donavan McKinney Swearing In 12.12.22 (52565631658) (cropped).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 334475,
+              "width": 915,
+              "height": 1221,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/State_Rep_Donavan_McKinney_Swearing_In_12.12.22_%2852565631658%29_%28cropped%29.jpg/250px-State_Rep_Donavan_McKinney_Swearing_In_12.12.22_%2852565631658%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 334,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/State_Rep_Donavan_McKinney_Swearing_In_12.12.22_%2852565631658%29_%28cropped%29.jpg/500px-State_Rep_Donavan_McKinney_Swearing_In_12.12.22_%2852565631658%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/State_Rep_Donavan_McKinney_Swearing_In_12.12.22_%2852565631658%29_%28cropped%29.jpg/250px-State_Rep_Donavan_McKinney_Swearing_In_12.12.22_%2852565631658%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 334,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/State_Rep_Donavan_McKinney_Swearing_In_12.12.22_%2852565631658%29_%28cropped%29.jpg/500px-State_Rep_Donavan_McKinney_Swearing_In_12.12.22_%2852565631658%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/State_Rep_Donavan_McKinney_Swearing_In_12.12.22_%2852565631658%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:State_Rep_Donavan_McKinney_Swearing_In_12.12.22_(52565631658)_(cropped).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=168206016",
+              "sha1": "3c1984b9a54b235c71cd63864f287006fd7f3c42",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-06-21 19:22:06",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "State Rep Donavan McKinney Swearing In 12.12.22 (52565631658) (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Members of the Michigan House of Representatives|Extracted images|PD-author-FlickrPDM|Donavan McKinney",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Michigan State Representative Donavan McKinney at his swearing-in ceremony in Detroit on December 12, 2022.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2022-12-12 18:45:11",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/detroitcitygov/52565631658/\">https://www.flickr.com/photos/detroitcitygov/52565631658/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "City of Detroit",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1257243660,
+              "parentid": 1221505895,
+              "timestamp": "2026-08-06T03:52:42Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Michigan State Representative Donavan McKinney at his swearing-in ceremony in Detroit on December 12, 2022.}}\n|date=2022-12-12 18:45:11\n|source=https://www.flickr.com/photos/detroitcitygov/52565631658/\n|author=City of Detroit\n|permission=\n|other versions={{Extracted from|1=State Rep Donavan McKinney Swearing In 12.12.22 (52565631658).jpg}}\n}}\n\n=={{int:license-header}}==\n{{PD-author-FlickrPDM}}\n\n[[Category:Members of the Michigan House of Representatives]]\n[[Category:Donavan McKinney]]"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

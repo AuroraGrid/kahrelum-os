@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 16268,
+  "query": "William Lawrence",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22William+Lawrence%22",
+  "retrievedAtUtc": "2026-11-02T21:35:30Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 2380
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Wl-bragg.jpg",
+          "pageid": 6201237,
+          "size": 515,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2026-05-20T21:46:31Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Solvay conference 1954 g.jpg",
+          "pageid": 4174573,
+          "size": 1154,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2026-08-21T13:47:15Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Mother Ireland on her knees (52781074699).jpg",
+          "pageid": 130177719,
+          "size": 1275,
+          "wordcount": 49,
+          "snippet": "30 March 2023 English Flickr user ID: 47290943@N03 author name string: National Library of Ireland on The Commons URL: https://www.flickr.com/people/nlireland/",
+          "timestamp": "2024-10-18T12:25:44Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:William Lawrence (37549336270).jpg",
+          "pageid": 81478438,
+          "size": 1046,
+          "wordcount": 161,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-09-17T12:43:55Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Vintages devant la mer.jpg",
+          "pageid": 114943371,
+          "size": 434,
+          "wordcount": 194,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-10-27T00:07:01Z"
+        }
+      ]
+    }
+  }
+}

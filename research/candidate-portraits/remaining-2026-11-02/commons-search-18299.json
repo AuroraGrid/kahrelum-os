@@ -1,0 +1,33 @@
+{
+  "sourceCandidateId": 18299,
+  "query": "Andrew Sneed",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Andrew+Sneed%22",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 2
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Report of the adjutant general of the state of Illinois ... (1861-1866) (IA reportofadjutant06illi).pdf",
+          "pageid": 91812327,
+          "size": 2017,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-03-18T14:18:52Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Kenko Shimbun, Third Quarter, 2009 (IA 3rdQuarterJuly2009).pdf",
+          "pageid": 91629929,
+          "size": 914,
+          "wordcount": 33,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2024-08-18T11:19:42Z"
+        }
+      ]
+    }
+  }
+}

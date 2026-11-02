@@ -147,3 +147,19 @@ test('local Commons photos require FEC evidence, scoped permissions and visible 
     }
   }
 });
+
+test('bulk-reviewed portraits preserve exact FEC bindings, credits and immutable local files', () => {
+  const rows = ledger.records.filter(r => r.identityType === 'FEC_BULK_COMMONS');
+  assert.equal(rows.length, 112);
+  for (const portrait of rows) assert.equal(map.admittedPortrait({portrait}), portrait);
+  const base = rows[0];
+  for (const patch of [{identityId:'H6ZZ00000'}, {fecCandidateId:'wrong'}, {sourceCapture:{sha256:''}},
+    {license:'Fair use'}, {licenseUrl:'https://example.com/'}, {attribution:''},
+    {url:'/assets/candidate-portraits/another-person.jpg'}, {subjectReview:{decision:'GUESS'}}, {width:999}]) {
+    assert.equal(map.admittedPortrait({portrait:{...base,...patch}}), null);
+  }
+  const races = makeRaces(); map.applyPortraitLedger(races, ledger);
+  const html = map.candidateCards(races.find(r => r.candidates.some(c => c.portrait?.identityType === 'FEC_BULK_COMMONS')));
+  assert.match(html, /FEC identity record/);
+  assert.match(html, /Photo source/);
+});

@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20996,
+  "query": "John Nagel",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22John+Nagel%22",
+  "retrievedAtUtc": "2026-11-02T21:35:36Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 22
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Abendpost 1889-10-21- Iss 43 (IA sim abendpost-sonntagpost 1889-10-21 43).pdf",
+          "pageid": 97698322,
+          "size": 1334,
+          "wordcount": 21,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English determination method or standard: SHA-1",
+          "timestamp": "2026-07-25T09:44:21Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Illinois Medical Journal (IA illinoismedicalj36unse).pdf",
+          "pageid": 99294886,
+          "size": 971,
+          "wordcount": 0,
+          "snippet": "",
+          "timestamp": "2021-05-14T11:30:56Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:A copy of the poll list (IA copyofpolllist00ne).pdf",
+          "pageid": 92069422,
+          "size": 878,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-06-14T22:39:09Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Henry John Nagel - DPLA - bcfa60489f64836c520bfca0f0cc44c2.jpg",
+          "pageid": 155596859,
+          "size": 719,
+          "wordcount": 406,
+          "snippet": "English determination method or standard: determined by GLAM institution and stated at its website reference URL: https://dp.la/item/bcfa60489f64836c520bfca0f0cc44c2",
+          "timestamp": "2026-01-23T03:02:48Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Victoria Daily Times (1907-04-06) (IA victoriadailytimes19070406).pdf",
+          "pageid": 99795583,
+          "size": 819,
+          "wordcount": 0,
+          "snippet": "",
+          "timestamp": "2021-03-07T15:33:25Z"
+        }
+      ]
+    }
+  }
+}

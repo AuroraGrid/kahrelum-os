@@ -1,0 +1,42 @@
+{
+  "sourceCandidateId": 20871,
+  "query": "Tyler Bass",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Tyler+Bass%22",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 3
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Tyler Bass (51528385837) (cropped).jpg",
+          "pageid": 110538694,
+          "size": 943,
+          "wordcount": 165,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2025-12-02T18:13:15Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Washington Football Team at Buffalo Bills (26 September 2021) D50 1271 (51528385837).jpg",
+          "pageid": 110537849,
+          "size": 1124,
+          "wordcount": 177,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-06-09T14:30:05Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Azara (Libretto) Opera (IA azaralibrettoope00painrich).pdf",
+          "pageid": 94827076,
+          "size": 801,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-01-20T12:36:31Z"
+        }
+      ]
+    }
+  }
+}

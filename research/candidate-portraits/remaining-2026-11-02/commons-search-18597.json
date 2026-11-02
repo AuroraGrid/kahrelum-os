@@ -1,0 +1,52 @@
+{
+  "sourceCandidateId": 18597,
+  "query": "Raymond McKay",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Raymond+McKay%22",
+  "retrievedAtUtc": "2026-11-02T21:42:18Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 4
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:... Annual catalogue of Chauncy-Hall School (IA annualcatalogueo68chau).pdf",
+          "pageid": 196230630,
+          "size": 784,
+          "wordcount": 15,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English",
+          "timestamp": "2026-09-17T02:34:22Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:... Annual catalogue of Chauncy-Hall School (IA annualcatalogueo66chau).pdf",
+          "pageid": 196230505,
+          "size": 784,
+          "wordcount": 15,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English",
+          "timestamp": "2026-09-17T02:40:26Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:... Annual catalogue of Chauncy-Hall School (IA annualcatalogueo65chau).pdf",
+          "pageid": 196230450,
+          "size": 784,
+          "wordcount": 15,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English",
+          "timestamp": "2026-09-17T02:40:06Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:... Annual catalogue of Chauncy-Hall School (IA annualcatalogueo67chau).pdf",
+          "pageid": 196230565,
+          "size": 784,
+          "wordcount": 15,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English",
+          "timestamp": "2026-09-17T02:40:44Z"
+        }
+      ]
+    }
+  }
+}

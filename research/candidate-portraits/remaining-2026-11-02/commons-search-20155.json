@@ -1,0 +1,34 @@
+{
+  "sourceCandidateId": 20155,
+  "query": "Don Tracy",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Don+Tracy%22",
+  "retrievedAtUtc": "2026-11-02T21:42:03Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 2
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Catalog of Copyright Entries 1935 Books New Series Vol 32 Pt 1 For the Year 1935 (IA catalogofcopyri321libr).pdf",
+          "pageid": 91128110,
+          "size": 1199,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2026-07-10T16:57:59Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Abendpost 1899-03-25- Vol 11 Iss 71 (IA sim abendpost-sonntagpost 1899-03-25 11 71).pdf",
+          "pageid": 97759915,
+          "size": 1368,
+          "wordcount": 21,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English determination method or standard: SHA-1",
+          "timestamp": "2026-09-02T15:40:58Z"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "sourceCandidateId": 19258,
+  "query": "Bob Harvie",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Bob+Harvie%22",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 2
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Moderator commences Harvie-Simonelli candidate forum on April 27, 2026.jpg",
+          "pageid": 190605521,
+          "size": 329,
+          "wordcount": 166,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-08-09T08:51:03Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Radioceylon.jpg",
+          "pageid": 4738910,
+          "size": 242,
+          "wordcount": 22,
+          "snippet": "English author name string: Asiaradio22 Wikimedia username: Asiaradio22 URL: https://commons.wikimedia.org/wiki/user:Asiaradio22 determination method or",
+          "timestamp": "2026-03-09T22:48:09Z"
+        }
+      ]
+    }
+  }
+}

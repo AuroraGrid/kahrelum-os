@@ -1,0 +1,43 @@
+{
+  "sourceCandidateId": 20783,
+  "query": "Lauren Reinhold",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Lauren+Reinhold%22",
+  "retrievedAtUtc": "2026-11-02T21:34:51Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 3
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Lauren Reinhold KS 1 Acceptance Speech Cropped 2.jpg",
+          "pageid": 197381427,
+          "size": 309,
+          "wordcount": 44,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: English Lauren Reinhold KS 1 Acceptance Speech Cropped 2 object of",
+          "timestamp": "2026-08-13T21:23:07Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Lauren Reinhold KS 1 Acceptance Speech 3.jpg",
+          "pageid": 197381429,
+          "size": 362,
+          "wordcount": 47,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: English Lauren Reinhold KS 1 Acceptance Speech 1 object of statement",
+          "timestamp": "2026-08-13T21:21:28Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Lauren Reinhold KS 1 Acceptance Speech Cropped 1.jpg",
+          "pageid": 197381426,
+          "size": 309,
+          "wordcount": 44,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: English Lauren Reinhold KS 1 Acceptance Speech Cropped 1 object of",
+          "timestamp": "2026-08-13T21:23:31Z"
+        }
+      ]
+    }
+  }
+}

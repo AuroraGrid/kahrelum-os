@@ -1,0 +1,64 @@
+{
+  "sourceCandidateId": 18119,
+  "query": "Leticia Gutierrez",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Leticia+Gutierrez%22",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 33
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Traves\u00edas de XICO por Am\u00e9rica Latina 20160226 143308.jpg",
+          "pageid": 48669191,
+          "size": 1576,
+          "wordcount": 152,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-02-20T14:27:21Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:MEX ONH TERTULIA TODOS SOMOS MIGRANTES (15323700050).jpg",
+          "pageid": 66577957,
+          "size": 1211,
+          "wordcount": 171,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2024-12-06T20:48:55Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:MEX ONH TERTULIA TODOS SOMOS MIGRANTES (15510440975).jpg",
+          "pageid": 66577937,
+          "size": 1211,
+          "wordcount": 165,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-04-18T06:20:47Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:MEX ONH TERTULIA TODOS SOMOS MIGRANTES (15323734148).jpg",
+          "pageid": 66577923,
+          "size": 1210,
+          "wordcount": 171,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2025-11-04T15:47:46Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Padre Alejandro Solalinde close-up (cropped).jpg",
+          "pageid": 161525549,
+          "size": 980,
+          "wordcount": 129,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2025-11-23T17:30:38Z"
+        }
+      ]
+    }
+  }
+}

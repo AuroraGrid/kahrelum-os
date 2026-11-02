@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 21129,
+  "query": "Stephanie Vargas",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Stephanie+Vargas%22",
+  "retrievedAtUtc": "2026-11-02T21:32:00Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:160727-N-WC455-059 (28437730060).jpg",
+          "pageid": 51072574,
+          "size": 1461,
+          "wordcount": 48,
+          "snippet": "English Flickr user ID: 39955793@N07 author name string: U.S. Department of Defense Current Photos URL: https://www.flickr.com/people/39955793@N07/ publication",
+          "timestamp": "2025-01-19T04:43:50Z"
+        }
+      ]
+    }
+  }
+}

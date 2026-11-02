@@ -1,0 +1,34 @@
+{
+  "sourceCandidateId": 20265,
+  "query": "Jeff Walter",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Jeff+Walter%22",
+  "retrievedAtUtc": "2026-11-02T21:34:26Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 2
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Evaluation of EIS alternatives by the Science Integration Team (IA CAT10834002001).pdf",
+          "pageid": 92173775,
+          "size": 1515,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2024-08-18T06:40:30Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Robinson's Darke County, Ohio rural directory (1910) (14803401333).jpg",
+          "pageid": 44008428,
+          "size": 5241,
+          "wordcount": 56,
+          "snippet": "5 October 2015 English object of statement has role: photographer author name string: Internet Archive Book Images Flickr user ID: 126377022@N07 URL: https://www",
+          "timestamp": "2026-01-26T05:24:39Z"
+        }
+      ]
+    }
+  }
+}

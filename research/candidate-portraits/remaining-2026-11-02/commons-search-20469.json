@@ -1,0 +1,43 @@
+{
+  "sourceCandidateId": 20469,
+  "query": "Justin Early",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Justin+Early%22",
+  "retrievedAtUtc": "2026-11-02T21:40:30Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 3
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Harvard University bulletin (IA harvarduniversit02harvuoft).pdf",
+          "pageid": 202285801,
+          "size": 1044,
+          "wordcount": 21,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English determination method or standard: SHA-1",
+          "timestamp": "2026-10-30T20:40:57Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:The memorial history of Boston - including Suffolk County, Massachusetts. 1630-1880 (IA memorialhistoryo01wins).pdf",
+          "pageid": 197249600,
+          "size": 1147,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2026-08-11T17:12:17Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:The Belief of the First Three Centuries Concerning Christ's Mission to the Underworld (IA belieffirstthre00huidgoog).pdf",
+          "pageid": 98154880,
+          "size": 1371,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2024-05-06T22:34:10Z"
+        }
+      ]
+    }
+  }
+}

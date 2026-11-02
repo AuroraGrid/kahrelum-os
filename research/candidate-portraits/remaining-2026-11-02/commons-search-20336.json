@@ -1,0 +1,60 @@
+{
+  "sourceCandidateId": 20336,
+  "query": "JoAnna Mendoza",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22JoAnna+Mendoza%22",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 5
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Edgar Soto speaking at a political event.jpg",
+          "pageid": 199420229,
+          "size": 471,
+          "wordcount": 28,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: English Edgar Soto speaking at a political rally for Arizona congressional",
+          "timestamp": "2026-09-25T17:00:48Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:CLR-17 conducts morning training in remembrance of 9 11 (Image 3 of 5).jpg",
+          "pageid": 193549734,
+          "size": 892,
+          "wordcount": 18,
+          "snippet": "English described at URL: https://www.dvidshub.net/image/1015627/clr-17-conducts-morning-training-remembrance-9-11",
+          "timestamp": "2026-06-09T08:54:33Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:JoAnna Mendoza, 2013.jpg",
+          "pageid": 193549930,
+          "size": 941,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2026-06-09T08:54:38Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:JoAnna Mendoza.webp",
+          "pageid": 193548691,
+          "size": 419,
+          "wordcount": 32,
+          "snippet": "English JoAnna Mendoza conducting physical training in memory of 9/11 at Camp Pendleton, California described at URL: https://www.dvidshub.net/image/1",
+          "timestamp": "2026-06-08T10:53:47Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Edgar Soto speaking at a political event (cropped).png",
+          "pageid": 199420624,
+          "size": 428,
+          "wordcount": 40,
+          "snippet": "Modified version of Edgar Soto speaking at a political event.jpg I, the copyright holder of this work, hereby publish it under the following license: English",
+          "timestamp": "2026-09-13T15:39:50Z"
+        }
+      ]
+    }
+  }
+}

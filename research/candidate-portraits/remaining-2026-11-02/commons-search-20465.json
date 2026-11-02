@@ -1,0 +1,51 @@
+{
+  "sourceCandidateId": 20465,
+  "query": "Martha Fierro",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Martha+Fierro%22",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 4
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Martha Fierro Baquero.jpg",
+          "pageid": 10240874,
+          "size": 503,
+          "wordcount": 127,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution 3.0 Unported",
+          "timestamp": "2024-09-21T02:34:34Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:2026AcresHomeJuneteenthParade-63 Martha Fierro.jpg",
+          "pageid": 194110141,
+          "size": 854,
+          "wordcount": 154,
+          "snippet": "This file is licensed under the Creative Commons Attribution 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit the work",
+          "timestamp": "2026-06-19T10:33:55Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:2026AcresHomeJuneteenthParade-63 Martha Fierro (cropped).jpg",
+          "pageid": 194110180,
+          "size": 593,
+          "wordcount": 92,
+          "snippet": "This file is licensed under the Creative Commons Attribution 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit the work",
+          "timestamp": "2026-06-19T05:24:48Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Presidente de la Asamblea Nacional, Fernando Cordero Cueva, condecor\u00f3 a Martha Fierro, por su importante trayectoria en la pr\u00e1ctica de ajedrez femenino. (5187344817).jpg",
+          "pageid": 47909441,
+          "size": 766,
+          "wordcount": 169,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2024-07-11T06:52:46Z"
+        }
+      ]
+    }
+  }
+}

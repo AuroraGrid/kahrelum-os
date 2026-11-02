@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20634,
+  "query": "Edwin Rivera",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Edwin+Rivera%22",
+  "retrievedAtUtc": "2026-11-02T21:41:05Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 17
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Syzygium cumini 346322494.jpg",
+          "pageid": 156417099,
+          "size": 694,
+          "wordcount": 116,
+          "snippet": "This file is licensed under the Creative Commons Attribution 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit the work",
+          "timestamp": "2025-05-09T18:27:47Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:US Navy 100910-N-2218S-025 Staff Sgt. Calvin Chee, right, assigned to Marine Aviation Logistic Maintenance Squad (MALS) 36, explains how to set a p.jpg",
+          "pageid": 11476421,
+          "size": 925,
+          "wordcount": 33,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2026-07-03T08:31:47Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Syzygium cumini 346322535.jpg",
+          "pageid": 156417132,
+          "size": 694,
+          "wordcount": 122,
+          "snippet": "This file is licensed under the Creative Commons Attribution 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit the work",
+          "timestamp": "2026-03-16T03:48:35Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Syzygium cumini 346322554.jpg",
+          "pageid": 156417145,
+          "size": 760,
+          "wordcount": 116,
+          "snippet": "This file is licensed under the Creative Commons Attribution 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit the work",
+          "timestamp": "2026-09-27T05:23:07Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Syzygium cumini 346322546.jpg",
+          "pageid": 156417135,
+          "size": 694,
+          "wordcount": 122,
+          "snippet": "This file is licensed under the Creative Commons Attribution 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit the work",
+          "timestamp": "2025-11-10T07:42:28Z"
+        }
+      ]
+    }
+  }
+}

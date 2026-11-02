@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20511,
+  "query": "David Russ",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22David+Russ%22",
+  "retrievedAtUtc": "2026-11-02T21:38:37Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 8
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:List of Registered Voters in New York City, 1924 - Brooklyn Assembly District 05.djvu",
+          "pageid": 90530072,
+          "size": 14160,
+          "wordcount": 67,
+          "snippet": "English This is the list of all the registered voters in New York City in 1924. It was published by the City Record, a daily New York City government publication",
+          "timestamp": "2025-10-24T13:50:08Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Navy Day 27 October 1948 (IA NHOaklandNavyDay1948).pdf",
+          "pageid": 91646952,
+          "size": 880,
+          "wordcount": 33,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2024-08-17T19:17:19Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Squab culture (IA squabculture00wood).pdf",
+          "pageid": 93602346,
+          "size": 799,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2022-12-07T22:22:34Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Catalogue of the officers of government and instruction (IA age3834.0001.001.umich.edu).pdf",
+          "pageid": 94776389,
+          "size": 772,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-11-19T00:43:27Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:DavidRuss Official-2024.jpg",
+          "pageid": 148214625,
+          "size": 289,
+          "wordcount": 130,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution 4.0 International",
+          "timestamp": "2026-10-10T05:07:49Z"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&titles=File%3AMarquita+Bradshaw+at+Morristown+%28cropped%29.jpg&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cmime%7Cextmetadata&iiurlwidth=250&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main",
+  "candidateIds": [
+    23143
+  ],
+  "retrievedAtUtc": "2026-11-02T21:48:05Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "pages": {
+        "94155533": {
+          "pageid": 94155533,
+          "ns": 6,
+          "title": "File:Marquita Bradshaw at Morristown (cropped).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 116422,
+              "width": 584,
+              "height": 793,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Marquita_Bradshaw_at_Morristown_%28cropped%29.jpg/250px-Marquita_Bradshaw_at_Morristown_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 339,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Marquita_Bradshaw_at_Morristown_%28cropped%29.jpg/500px-Marquita_Bradshaw_at_Morristown_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Marquita_Bradshaw_at_Morristown_%28cropped%29.jpg/250px-Marquita_Bradshaw_at_Morristown_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 339,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Marquita_Bradshaw_at_Morristown_%28cropped%29.jpg/500px-Marquita_Bradshaw_at_Morristown_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Marquita_Bradshaw_at_Morristown_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Marquita_Bradshaw_at_Morristown_(cropped).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=94155533",
+              "sha1": "be9da8b054274ca8e6e5684f7fd23f36c86280f5",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2020-09-16 13:11:34",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Marquita Bradshaw at Morristown (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "American politicians wearing masks during the COVID-19 pandemic|Marquita Bradshaw|Morristown, Tennessee|Self-published work|Extracted images|September 2020 in Tennessee|Files with coordinates missing SDC location of creation|Females with handheld microphones (left) in the United States",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "36.208869",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "-83.302589",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Democratic senatorial candidate from Tennessee, Marquita Bradshaw, speaking during the COVID-19 Pandemic at the Hamblen County Democratic Party HQ in Morristown, Tennessee. Taken in September 2020.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2020-09-04 19:46:57",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:WKHR\" title=\"User:WKHR\">Walker Kinsler</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1148436997,
+              "parentid": 1017163218,
+              "timestamp": "2026-01-16T16:59:30Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Democratic senatorial candidate from Tennessee, Marquita Bradshaw, speaking during the COVID-19 Pandemic at the Hamblen County Democratic Party HQ in Morristown, Tennessee. Taken in September 2020.}}\n|date=2020-09-04 19:46:57\n|source={{own}}\n|author=[[User:WKHR|Walker Kinsler]]\n|permission=\n|other versions={{Extracted from|1=Marquita Bradshaw at Morristown.jpg}}\n}}\n{{Location|36.208869|-83.302589|heading:329.5003357958361}}\n\n=={{int:license-header}}==\n{{self|cc-by-sa-4.0}}\n\n[[Category:Morristown, Tennessee]]\n[[Category:September 2020 in Tennessee]]\n[[Category:American politicians wearing masks during the COVID-19 pandemic]]\n[[Category:Females with handheld microphones (left) in the United States]]\n[[Category:Marquita Bradshaw]]"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

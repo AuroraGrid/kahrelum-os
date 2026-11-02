@@ -4,7 +4,7 @@
   // Keep the projection shell and its data dependencies on one release generation.
   // The query token prevents an already-open production browser from pairing a new
   // HTML shell with an older cached map bundle or projection payload.
-  const ASSET_VERSION = '20261102-portraits-1';
+  const ASSET_VERSION = '20261102-portraits-2';
   const readJson = (assetPath) => fetch(`${assetPath}?v=${ASSET_VERSION}`, { cache: 'no-store' });
 
   const states = [
@@ -222,6 +222,28 @@
           || !/^[a-f0-9]{64}$/.test(portrait.identitySourceSha256 || '')) return null;
       return portrait;
     }
+    if (portrait.identityType === 'FEC_BULK_COMMONS') {
+      const prefix = portrait.chamber === 'House' ? 'H' : portrait.chamber === 'Senate' ? 'S' : '';
+      const digest = String(portrait.imageSha256 || '');
+      const revisionUrl = `https://commons.wikimedia.org/w/index.php?oldid=${portrait.commonsRevisionId}`;
+      const cc = /^CC BY(-SA)? (1\.0|2\.0|2\.5|3\.0|4\.0)$/.exec(portrait.license);
+      const expectedLicense = cc ? `https://creativecommons.org/licenses/${cc[1] ? 'by-sa' : 'by'}/${cc[2]}/`
+        : portrait.license === 'CC0' ? 'https://creativecommons.org/publicdomain/zero/1.0/'
+        : portrait.license === 'Public domain' ? revisionUrl + '#Licensing' : null;
+      if (!prefix || !/^[A-Z]{2}$/.test(portrait.state || '') || portrait.bioguideId
+          || !new RegExp('^' + prefix + '\\d' + portrait.state + '\\d{5}$').test(portrait.identityId || '')
+          || portrait.fecCandidateId !== portrait.identityId
+          || portrait.identitySourceUrl !== `https://www.fec.gov/data/candidate/${portrait.identityId}/?cycle=2026`
+          || !/^[a-f0-9]{64}$/.test(portrait.identitySourceSha256 || '')
+          || !Number.isSafeInteger(portrait.commonsRevisionId) || portrait.commonsRevisionId <= 0 || portrait.sourceUrl !== revisionUrl
+          || !expectedLicense || portrait.licenseUrl !== expectedLicense || !String(portrait.attribution || '').trim() || !portrait.rightsBasis
+          || !Number.isSafeInteger(portrait.sourceCandidateId) || !/^[a-f0-9]{64}$/.test(digest)
+          || !['jpg','png','webp'].some(ext => portrait.url === `/assets/candidate-portraits/${portrait.sourceCandidateId}-${digest.slice(0,16)}.${ext}`)
+          || !/^[a-f0-9]{64}$/.test(portrait.sourceCapture?.sha256 || '') || !/^[a-f0-9]{40}$/.test(portrait.sourceOriginalImageSha1 || '')
+          || portrait.subjectReview?.decision !== 'EXPLICIT_TEXT_IDENTITY_MATCH_NO_FACIAL_INFERENCE'
+          || !(portrait.width > 0 && portrait.width <= 250 && portrait.height > 0 && portrait.height <= 1000)) return null;
+      return portrait;
+    }
     if (portrait.identityType === 'FEC_LOCAL_COMMONS') {
       const prefix = portrait.chamber === 'House' ? 'H' : portrait.chamber === 'Senate' ? 'S' : '';
       const digest = String(portrait.imageSha256 || '');
@@ -383,8 +405,9 @@
       const initials = candidate.name.split(/\s+/).map((part) => part[0]).join('').slice(0,2) || '?';
       const fallback = `<span class="nominee-avatar party-${escapeHtml(party.toLowerCase())}" aria-hidden="true">${escapeHtml(initials)}</span>`;
       const visual = `<span class="nominee-visual">${fallback}${portrait ? `<img class="nominee-photo" src="${escapeHtml(portrait.url)}" alt="${escapeHtml(candidate.name)}" width="56" height="56" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : ''}</span>`;
-      const creator = ['FEC_CANDIDATE','CREDITED_COMMONS_PHOTO','FEC_LOCAL_COMMONS'].includes(portrait?.identityType) ? `${escapeHtml(portrait.creditNote || portrait.attribution)} · ` : '';
-      const custody = portrait ? `${creator}<a class="portrait-source" href="${escapeHtml(portrait.sourceUrl)}" title="${escapeHtml(portrait.attribution)}">Photo source</a> · <a class="portrait-source" href="${escapeHtml(portrait.licenseUrl)}">${escapeHtml(portrait.license)}</a>${['FEC_CANDIDATE','FEC_LOCAL_COMMONS'].includes(portrait.identityType) ? ' · Source thumbnail; no additional edits' : portrait.identityType === 'CREDITED_COMMONS_PHOTO' ? ' · Previously cropped source thumbnail; no additional edits by KAHRELUM' : ''}` : 'Photo not yet verified';
+      const creator = ['FEC_CANDIDATE','CREDITED_COMMONS_PHOTO','FEC_LOCAL_COMMONS','FEC_BULK_COMMONS'].includes(portrait?.identityType) ? `${escapeHtml(portrait.creditNote || portrait.attribution)} · ` : '';
+      const identityLink = portrait?.fecCandidateId ? ` · <a class="portrait-source" href="${escapeHtml(portrait.identitySourceUrl)}">FEC identity record</a>` : '';
+      const custody = portrait ? `${creator}<a class="portrait-source" href="${escapeHtml(portrait.sourceUrl)}" title="${escapeHtml(portrait.attribution)}">Photo source</a> · <a class="portrait-source" href="${escapeHtml(portrait.licenseUrl)}">${escapeHtml(portrait.license)}</a>${identityLink}${['FEC_CANDIDATE','FEC_LOCAL_COMMONS','FEC_BULK_COMMONS'].includes(portrait.identityType) ? ' · Source thumbnail; no additional edits' : portrait.identityType === 'CREDITED_COMMONS_PHOTO' ? ' · Previously cropped source thumbnail; no additional edits by KAHRELUM' : ''}` : 'Photo not yet verified';
       return `<div class="nominee">${visual}<div><strong>${escapeHtml(candidate.name)}</strong><small>${escapeHtml(label)}</small><small class="portrait-credit">${custody}</small></div></div>`;
     }).join('')}</div>`;
   }

@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 19308,
+  "query": "Kelly Thompson",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Kelly+Thompson%22",
+  "retrievedAtUtc": "2026-11-02T21:34:40Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 15
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:P. J. Thompson, Pajaro Valley, California.png",
+          "pageid": 173918471,
+          "size": 696,
+          "wordcount": 22,
+          "snippet": "English Peter J. Thompson (1857\u20131916), notable stockman from the Kelly\u2013Thompson Ranch, Pajaro Valley, California determination method or standard: SHA-1",
+          "timestamp": "2026-05-11T03:28:55Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Kelly Thompson 2019.1.jpg",
+          "pageid": 84904045,
+          "size": 614,
+          "wordcount": 155,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-02-28T02:34:15Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Kelly Thompson 2019.2.jpg",
+          "pageid": 84904046,
+          "size": 614,
+          "wordcount": 155,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2025-05-06T21:39:04Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Kelly Thompson 2019.3.jpg",
+          "pageid": 84904049,
+          "size": 614,
+          "wordcount": 155,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2025-05-06T21:39:09Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Kelly Thompson 2019.5.jpg",
+          "pageid": 84904053,
+          "size": 614,
+          "wordcount": 161,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2025-12-20T10:19:15Z"
+        }
+      ]
+    }
+  }
+}

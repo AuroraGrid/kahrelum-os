@@ -1,0 +1,33 @@
+{
+  "sourceCandidateId": 22973,
+  "query": "Pia Dandiya",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Pia+Dandiya%22",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 2
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Pia Dandiya WHF.png",
+          "pageid": 166573927,
+          "size": 365,
+          "wordcount": 36,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English Pia-Dandiya_WHF applies to jurisdiction:",
+          "timestamp": "2026-09-02T18:12:55Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Pia Dandiya WHF (cropped).png",
+          "pageid": 198713498,
+          "size": 354,
+          "wordcount": 21,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English determination method or standard: SHA-1",
+          "timestamp": "2026-10-31T09:51:08Z"
+        }
+      ]
+    }
+  }
+}

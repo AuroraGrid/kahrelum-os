@@ -1,0 +1,64 @@
+{
+  "sourceCandidateId": 20834,
+  "query": "Chris McGowan",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Chris+McGowan%22",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 6
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Speedygunz with Chris McGowan.jpeg",
+          "pageid": 30780280,
+          "size": 397,
+          "wordcount": 148,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-03-11T00:46:03Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Fightin\u2019 Fifth honors Women\u2019s History DVIDS550779.jpg",
+          "pageid": 38712944,
+          "size": 1065,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2025-11-21T23:22:36Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:USMC-100521-M-5728N-002.jpg",
+          "pageid": 23085347,
+          "size": 786,
+          "wordcount": 19,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States",
+          "timestamp": "2025-06-20T18:38:08Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:130614-Z-CH590-2730 (9043970531).jpg",
+          "pageid": 70892803,
+          "size": 1492,
+          "wordcount": 147,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2024-10-19T09:17:24Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Flag Day Event 130614-Z-CH590-153.jpg",
+          "pageid": 58048934,
+          "size": 1370,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2026-07-30T01:46:52Z"
+        }
+      ]
+    }
+  }
+}

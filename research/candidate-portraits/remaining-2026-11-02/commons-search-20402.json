@@ -1,0 +1,64 @@
+{
+  "sourceCandidateId": 20402,
+  "query": "Paul Barringer",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Paul+Barringer%22",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 64
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Paul Barringer.png",
+          "pageid": 92901412,
+          "size": 511,
+          "wordcount": 5,
+          "snippet": "English Portrait of Paul Barringer",
+          "timestamp": "2021-12-30T03:57:20Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:University of North Carolina at Chapel Hill (IA minutesofevangelic00evan).pdf",
+          "pageid": 95588633,
+          "size": 1136,
+          "wordcount": 0,
+          "snippet": "",
+          "timestamp": "2020-10-29T04:23:57Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Acts and proceedings of the Synod of the Potomac (IA actsproceedingso00refo 6).pdf",
+          "pageid": 194934479,
+          "size": 1074,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2026-07-01T07:15:26Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Acts and proceedings of the Synod of the Potomac (IA actsproceedingso00refo 2).pdf",
+          "pageid": 194934415,
+          "size": 1074,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2026-07-01T07:11:48Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Cabinet meeting in Charlotte (IA cabinetmeetingin00fore).pdf",
+          "pageid": 95358544,
+          "size": 922,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-11-06T14:58:04Z"
+        }
+      ]
+    }
+  }
+}

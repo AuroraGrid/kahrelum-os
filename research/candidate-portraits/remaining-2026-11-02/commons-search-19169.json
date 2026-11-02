@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 19169,
+  "query": "Ronald Russell",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Ronald+Russell%22",
+  "retrievedAtUtc": "2026-11-02T21:35:20Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 20
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Ronald King rugby.jpg",
+          "pageid": 70509547,
+          "size": 329,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-12-01T04:43:29Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Bruce Russell ONZM (cropped).jpg",
+          "pageid": 138128954,
+          "size": 778,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-05-27T21:12:58Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Bruce Russell ONZM investiture.jpg",
+          "pageid": 138128957,
+          "size": 920,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-05-27T21:12:58Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:1st MAW commanding general flies with F-35 squadron (8907579).jpg",
+          "pageid": 194858231,
+          "size": 1471,
+          "wordcount": 82,
+          "snippet": "English U.S. Marine Corps Lance Cpl. Ronald Russell, right, a fixed-wing aircraft mechanic with Marine Fighter Attack Squadron (VMFA) 121, Marine Aircraft",
+          "timestamp": "2026-06-30T04:06:07Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Southern Partnership Station (SPS 12)-HSV 2 Swift 120228-A-TF780-120.jpg",
+          "pageid": 39665829,
+          "size": 1242,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2026-06-13T12:10:46Z"
+        }
+      ]
+    }
+  }
+}

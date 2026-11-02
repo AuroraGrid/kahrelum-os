@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 19379,
+  "query": "James Hayes",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22James+Hayes%22",
+  "retrievedAtUtc": "2026-11-02T21:38:37Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 403
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Coat of arms of James Thomas Gibbons Hayes.svg",
+          "pageid": 127869196,
+          "size": 656,
+          "wordcount": 22,
+          "snippet": "English author name string: GiovanniYosh12 Wikimedia username: GiovanniYosh12 URL: https://commons.wikimedia.org/wiki/User:GiovanniYosh12 determination",
+          "timestamp": "2026-04-08T10:45:10Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Archbishop Hayes.png",
+          "pageid": 147391572,
+          "size": 545,
+          "wordcount": 14,
+          "snippet": "English Archbishop James T.G. Hayes, SJ, DD determination method or standard: SHA-1",
+          "timestamp": "2025-07-29T05:12:30Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Coat of arms of James Thomas Gibbons Hayes as Bishop of Cagayan de Oro.svg",
+          "pageid": 127869197,
+          "size": 791,
+          "wordcount": 22,
+          "snippet": "English author name string: GiovanniYosh12 Wikimedia username: GiovanniYosh12 URL: https://commons.wikimedia.org/wiki/User:GiovanniYosh12 determination",
+          "timestamp": "2026-08-10T02:02:54Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:James Hayes MLA.png",
+          "pageid": 107410980,
+          "size": 737,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2023-09-14T21:21:40Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Sharpen 13438810 988246884623125 1381227792729229784 n.jpg",
+          "pageid": 143811411,
+          "size": 353,
+          "wordcount": 30,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English Lieutenant colonel Sir James Hayes Sadler",
+          "timestamp": "2026-02-21T15:09:34Z"
+        }
+      ]
+    }
+  }
+}

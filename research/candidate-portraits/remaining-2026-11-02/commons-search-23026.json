@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 23026,
+  "query": "Jennifer Moore",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Jennifer+Moore%22",
+  "retrievedAtUtc": "2026-11-02T21:36:57Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 41
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Jen Kiggans 118th Congress.jpg",
+          "pageid": 127602093,
+          "size": 372,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2025-07-05T15:12:55Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Jen Kiggans Rally, Smithfield - 10-27-22.jpg",
+          "pageid": 137337894,
+          "size": 737,
+          "wordcount": 142,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2026-01-27T17:18:05Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Jen Kiggans October 2022 Rally (cropped).jpg",
+          "pageid": 125641948,
+          "size": 546,
+          "wordcount": 92,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2026-04-24T16:52:55Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Rep. Jen Kiggans official photo (cropped).jpg",
+          "pageid": 127403785,
+          "size": 461,
+          "wordcount": 19,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States",
+          "timestamp": "2026-08-26T23:52:30Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Launch Pad 0D Ribbon-Cutting with Rocket Lab, Wallops Island - 8-28-25 (25).jpg",
+          "pageid": 176198860,
+          "size": 1590,
+          "wordcount": 154,
+          "snippet": "This file is licensed under the Creative Commons Attribution 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit the work",
+          "timestamp": "2026-01-08T19:27:50Z"
+        }
+      ]
+    }
+  }
+}

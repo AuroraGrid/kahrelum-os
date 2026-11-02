@@ -1,0 +1,33 @@
+{
+  "sourceCandidateId": 20706,
+  "query": "Randy Villegas",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Randy+Villegas%22",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 2
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Randy Villegas at Vota Palooza in 2024 (cropped).jpg",
+          "pageid": 191536495,
+          "size": 483,
+          "wordcount": 92,
+          "snippet": "This file is licensed under the Creative Commons Attribution 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit the work",
+          "timestamp": "2026-05-08T06:20:35Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Randy Villegas at Vota Palooza in 2024.jpg",
+          "pageid": 190645990,
+          "size": 494,
+          "wordcount": 122,
+          "snippet": "This file is licensed under the Creative Commons Attribution 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit the work",
+          "timestamp": "2026-09-02T19:22:37Z"
+        }
+      ]
+    }
+  }
+}

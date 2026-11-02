@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 23011,
+  "query": "Dave Wallace",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Dave+Wallace%22",
+  "retrievedAtUtc": "2026-11-02T21:35:17Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 19
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Caleb Joseph (17265240453).jpg",
+          "pageid": 40370057,
+          "size": 783,
+          "wordcount": 194,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2025-11-07T13:13:04Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:FROM WARRIORS TO ENTREPRENEURS- BUSINESS OPPORTUNITIES FOR VETERANS (IA gov.gpo.fdsys.CHRG-113shrg86305).pdf",
+          "pageid": 91515290,
+          "size": 2138,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2026-06-28T05:33:43Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Catalog of Copyright Entries, 1919 Music First Half of 1919 New Series Vol 14 Part 3 (IA catalogofcopyrig143libr).pdf",
+          "pageid": 91120140,
+          "size": 1230,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2024-08-17T18:41:17Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:The boys of the old glee clvb (IA boysofoldgleeclv00rile).pdf",
+          "pageid": 93045874,
+          "size": 927,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-07-24T22:57:16Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Bodycam Shows Modesto Police Shoot Man After He Throws a Book at Officer.webm",
+          "pageid": 132139527,
+          "size": 4713,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-06-29T21:51:00Z"
+        }
+      ]
+    }
+  }
+}

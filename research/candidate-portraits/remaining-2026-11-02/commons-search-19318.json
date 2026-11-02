@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 19318,
+  "query": "Mary Allen",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Mary+Allen%22",
+  "retrievedAtUtc": "2026-11-02T21:34:50Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 590
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Mary Allen Wilkes Portrait.jpeg",
+          "pageid": 45104191,
+          "size": 388,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-11-15T16:14:45Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Mary Allen West (The Temperance Movement, 1888).png",
+          "pageid": 98187804,
+          "size": 686,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2025-10-29T22:30:00Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Mary Allen West (Women torch-bearers, 1924).png",
+          "pageid": 144311363,
+          "size": 711,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2025-10-29T22:30:00Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Mary Allen West (History of Knox county, Illinois, 1878).png",
+          "pageid": 138310160,
+          "size": 937,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2025-10-29T22:30:00Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:MARY ALLEN WEST A woman of the century (page 770 crop).jpg",
+          "pageid": 59897516,
+          "size": 845,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2025-08-16T05:47:34Z"
+        }
+      ]
+    }
+  }
+}

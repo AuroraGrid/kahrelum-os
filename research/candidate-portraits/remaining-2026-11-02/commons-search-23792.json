@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 23792,
+  "query": "6 Republicans",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%226+Republicans%22",
+  "retrievedAtUtc": "2026-11-02T21:35:08Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 32
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Letter from Rufus B. Bullock, of Georgia, to the Republican senators and representatives, in Congress who sustain the reconstruction acts. Dated Willard's hotel, May 21, 1870 (IA letterfromrufusb00bull).pdf",
+          "pageid": 91774784,
+          "size": 1169,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-08-16T11:14:34Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:ELECTRICITY COMPETITION-Volume 2 (IA gov.gpo.fdsys.CHRG-106hhrg57440).pdf",
+          "pageid": 91387563,
+          "size": 5668,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2025-11-06T20:34:33Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:26September2007.pdf",
+          "pageid": 190603623,
+          "size": 404,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2026-04-28T15:49:31Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Jeffersonian democracy in New England (IA jeffersoniandemo00robirich).pdf",
+          "pageid": 95565008,
+          "size": 859,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-06-19T07:40:05Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Congressional pictorial directory (IA congressionalpic00unit 1).pdf",
+          "pageid": 93679629,
+          "size": 1141,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2024-08-17T19:07:17Z"
+        }
+      ]
+    }
+  }
+}

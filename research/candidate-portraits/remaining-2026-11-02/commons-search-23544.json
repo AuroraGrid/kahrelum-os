@@ -1,0 +1,64 @@
+{
+  "sourceCandidateId": 23544,
+  "query": "Dennis Mahoney",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Dennis+Mahoney%22",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 84
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Dennis Mahoney.jpg",
+          "pageid": 90437677,
+          "size": 572,
+          "wordcount": 48,
+          "snippet": "19 May 2020 English Author Dennis Mahoney Flickr user ID: 76029043@N04 author name string: SarahNicole1975 URL: https://www.flickr.com/people/76029043@N04/",
+          "timestamp": "2025-12-10T17:52:07Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Annual Report of the town officers of the town of Palmer, Massachusetts (IA annualreportoft1905unse 0).pdf",
+          "pageid": 96116219,
+          "size": 998,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-07-09T23:40:35Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Annual report of the town of Quincy (IA annualreportofto1882quin).pdf",
+          "pageid": 96119900,
+          "size": 1608,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-07-10T05:42:37Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Annual message of the Governor of Ohio, to the fify-sixth general assembly, at the regular session .. (IA annualmessageofg00todd).pdf",
+          "pageid": 91627832,
+          "size": 835,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-07-10T00:24:12Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:University of Michigan (IA ahm0068.0001.001.umich.edu).pdf",
+          "pageid": 94783027,
+          "size": 1064,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2024-09-09T16:06:57Z"
+        }
+      ]
+    }
+  }
+}

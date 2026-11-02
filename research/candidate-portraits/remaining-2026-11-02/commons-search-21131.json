@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 21131,
+  "query": "Ritesh Tandon",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Ritesh+Tandon%22",
+  "retrievedAtUtc": "2026-11-02T21:31:24Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Tandon v. Newsom (2021) Supreme Court opinion.pdf",
+          "pageid": 162540149,
+          "size": 543,
+          "wordcount": 48,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English Supreme Court opinion applies to jurisdiction:",
+          "timestamp": "2025-03-21T05:40:43Z"
+        }
+      ]
+    }
+  }
+}

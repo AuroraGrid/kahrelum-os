@@ -1,0 +1,21 @@
+{
+  "sourceCandidateIds": [
+    18360,
+    18295,
+    18297,
+    18299,
+    18332
+  ],
+  "query": "\"Alabama\" (\"Clyde Jones\" OR \"Lee McInnis\" OR \"Amanda Pusczek\" OR \"Andrew Sneed\" OR \"Maurice Mercer\")",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=100&srsearch=%22Alabama%22+%28%22Clyde+Jones%22+OR+%22Lee+McInnis%22+OR+%22Amanda+Pusczek%22+OR+%22Andrew+Sneed%22+OR+%22Maurice+Mercer%22%29",
+  "retrievedAtUtc": "2026-11-02T21:49:19Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 0
+      },
+      "search": []
+    }
+  }
+}

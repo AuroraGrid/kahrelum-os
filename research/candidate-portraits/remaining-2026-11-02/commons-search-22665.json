@@ -1,0 +1,64 @@
+{
+  "sourceCandidateId": 22665,
+  "query": "Te Brown",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Te+Brown%22",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 51
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Anales de la Sociedad Cient\u00edfica Argentina - Tomo 70.djvu",
+          "pageid": 111178677,
+          "size": 775,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-02-01T10:55:21Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:History of Cerro Gordo County, Iowa. From materials in the public archives, the Iowa Historical Society's collection, the newspapers and data of personal interviews (IA historyofcerrogo01whee).pdf",
+          "pageid": 197953549,
+          "size": 1359,
+          "wordcount": 0,
+          "snippet": "",
+          "timestamp": "2026-10-16T22:49:04Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Teflic-acid-3D-spacefill.png",
+          "pageid": 15370436,
+          "size": 711,
+          "wordcount": 36,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: English author name string: Jynto Wikimedia username: Jynto URL: https://commons",
+          "timestamp": "2025-03-09T02:55:48Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Pan American Union Bulletin 1899-10- Vol 7 Iss 4 (IA sim bulletin-of-the-pan-american-union 1899-10 7 4).pdf",
+          "pageid": 98323746,
+          "size": 1582,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2026-07-27T11:07:22Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Rotterdamsche courant 27-07-1852 (IA ddd 010395948 mpeg21).pdf",
+          "pageid": 109383598,
+          "size": 1130,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English Rotterdamsche courant 27-07-1852 Dutch Rotterdamsche",
+          "timestamp": "2025-09-23T02:34:37Z"
+        }
+      ]
+    }
+  }
+}

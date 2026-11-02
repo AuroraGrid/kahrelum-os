@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 16324,
+  "query": "\"Justin Murphy\" New Jersey",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=15&srsearch=%22Justin+Murphy%22+New+Jersey",
+  "retrievedAtUtc": "2026-11-02T21:47:56Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Bell telephone magazine (IA belltelephonevol3132mag00amerrich).pdf",
+          "pageid": 97456411,
+          "size": 1310,
+          "wordcount": 14,
+          "snippet": "Telegraph Company. Information Dept Title Bell telephone magazine Publisher [<span class=\"searchmatch\">New</span> York, American Telephone and Telegraph Co., etc.] Description Vols. for 1922-",
+          "timestamp": "2025-07-02T23:46:41Z"
+        }
+      ]
+    }
+  }
+}

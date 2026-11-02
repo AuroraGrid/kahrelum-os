@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 19292,
+  "query": "\"Kristina Knickerbocker\" Ohio",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=15&srsearch=%22Kristina+Knickerbocker%22+Ohio",
+  "retrievedAtUtc": "2026-11-02T21:47:14Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Seal of Ohio (B&W).svg",
+          "pageid": 11810871,
+          "size": 3322,
+          "wordcount": 63,
+          "snippet": "duties <span class=\"searchmatch\">of</span> the secretary <span class=\"searchmatch\">of</span> <span class=\"searchmatch\">state</span>&quot; in (1901) [1803] Acts <span class=\"searchmatch\">of</span> the <span class=\"searchmatch\">State</span> <span class=\"searchmatch\">of</span> <span class=\"searchmatch\">Ohio</span>: first session <span class=\"searchmatch\">of</span> the General Assembly, held under the Constitution <span class=\"searchmatch\">of</span> the State",
+          "timestamp": "2026-03-06T10:13:46Z"
+        }
+      ]
+    }
+  }
+}

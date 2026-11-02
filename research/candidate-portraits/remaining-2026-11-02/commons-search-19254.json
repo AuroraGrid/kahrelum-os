@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 19254,
+  "query": "Bob Brooks",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Bob+Brooks%22",
+  "retrievedAtUtc": "2026-11-02T21:38:59Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 24
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:John Day River proposed management plan, Two Rivers and John Day resource management plan amendments and final environmental impact statement (IA johndayriverprop03unit).pdf",
+          "pageid": 92474569,
+          "size": 1332,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2026-04-06T01:49:36Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Obstacle detection and mapping system (IA obstacledetectio6213hong).pdf",
+          "pageid": 92529011,
+          "size": 898,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2025-02-12T04:49:02Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Bob Brooks USF.jpg",
+          "pageid": 195401134,
+          "size": 393,
+          "wordcount": 31,
+          "snippet": "English Portrait of former Florida State Representative and Secretary of Health Bob Brooks, circa 2009 described at URL: https://hscweb3.hsc.usf.edu/h",
+          "timestamp": "2026-08-05T13:48:38Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Street scene, Worthington, Ohio, August 1938 - Stoop Sitters crop.jpg",
+          "pageid": 149132352,
+          "size": 1185,
+          "wordcount": 27,
+          "snippet": "English Street scene, Worthington, Ohio, August 1938 - Stoop Sitters applies to jurisdiction: United States determination method or standard: work of the",
+          "timestamp": "2025-12-29T04:12:05Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Sandspur, Vol. 22 No. 09, December 11, 1920. (IA dp0008623).pdf",
+          "pageid": 98382994,
+          "size": 928,
+          "wordcount": 0,
+          "snippet": "",
+          "timestamp": "2021-01-02T19:31:18Z"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,521 @@
+{
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&titles=File%3ARichard_Ojeda_shirt.jpg%7CFile%3ALily_Tang_Williams_by_Gage_Skidmore.jpg%7CFile%3AAdam_Hamawy_in_2025.jpg%7CFile%3ARep._Tom_Kean_official_photo%2C_118th_Congress.jpg&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cmime%7Cextmetadata&iiurlwidth=250&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main",
+  "retrievedAtUtc": "2026-11-02T21:32:02Z",
+  "candidateIds": [
+    20394,
+    17469,
+    16306,
+    16266
+  ],
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "normalized": [
+        {
+          "from": "File:Richard_Ojeda_shirt.jpg",
+          "to": "File:Richard Ojeda shirt.jpg"
+        },
+        {
+          "from": "File:Lily_Tang_Williams_by_Gage_Skidmore.jpg",
+          "to": "File:Lily Tang Williams by Gage Skidmore.jpg"
+        },
+        {
+          "from": "File:Adam_Hamawy_in_2025.jpg",
+          "to": "File:Adam Hamawy in 2025.jpg"
+        },
+        {
+          "from": "File:Rep._Tom_Kean_official_photo,_118th_Congress.jpg",
+          "to": "File:Rep. Tom Kean official photo, 118th Congress.jpg"
+        }
+      ],
+      "pages": {
+        "194270365": {
+          "pageid": 194270365,
+          "ns": 6,
+          "title": "File:Adam Hamawy in 2025.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 29597,
+              "width": 280,
+              "height": 356,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Adam_Hamawy_in_2025.jpg/250px-Adam_Hamawy_in_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 318,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/1/11/Adam_Hamawy_in_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Adam_Hamawy_in_2025.jpg/250px-Adam_Hamawy_in_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 318,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/1/11/Adam_Hamawy_in_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Adam_Hamawy_in_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Adam_Hamawy_in_2025.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=194270365",
+              "sha1": "c12b4644268e762edaeb1ebe7a3cf6e9e06f3abc",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-06-21 13:55:29",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Adam Hamawy in 2025",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD US Congress|PD-USGov missing SDC copyright status|Adam Hamawy",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Adam Hamawy in 2025, during a conversation with Bonnie Watson Coleman",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-03-04",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.instagram.com/repbonnie/reel/DGyq4lBhTUZ/\">I had the chance to chat with Dr. Adam Hamawy, a US Army vet, surgeon, and humanitarian who volunteered his medical expertise in Gaza. We spoke about the conflict, the conditions in Gaza, and the state of US healthcare. I\u2019m honored he\u2019s agreed to join me for the Joint Address tonight.</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Office of Congresswoman Bonnie Watson Coleman",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1266265240,
+              "parentid": 1235571611,
+              "timestamp": "2026-08-23T18:40:57Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Adam Hamawy in 2025, during a conversation with Bonnie Watson Coleman}}\n|date=2025-03-04\n|source=[https://www.instagram.com/repbonnie/reel/DGyq4lBhTUZ/ I had the chance to chat with Dr. Adam Hamawy, a US Army vet, surgeon, and humanitarian who volunteered his medical expertise in Gaza. We spoke about the conflict, the conditions in Gaza, and the state of US healthcare. I\u2019m honored he\u2019s agreed to join me for the Joint Address tonight.]\n|author=Office of Congresswoman Bonnie Watson Coleman\n|permission=\n|other versions=\n}}\n\n=={{int:license-header}}==\n{{PD-USGov-Congress}}\n\n[[Category:Adam Hamawy]]"
+                }
+              }
+            }
+          ]
+        },
+        "198032834": {
+          "pageid": 198032834,
+          "ns": 6,
+          "title": "File:Lily Tang Williams by Gage Skidmore.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 3568059,
+              "width": 2189,
+              "height": 2925,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Lily_Tang_Williams_by_Gage_Skidmore.jpg/250px-Lily_Tang_Williams_by_Gage_Skidmore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 334,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Lily_Tang_Williams_by_Gage_Skidmore.jpg/500px-Lily_Tang_Williams_by_Gage_Skidmore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Lily_Tang_Williams_by_Gage_Skidmore.jpg/250px-Lily_Tang_Williams_by_Gage_Skidmore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 334,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Lily_Tang_Williams_by_Gage_Skidmore.jpg/500px-Lily_Tang_Williams_by_Gage_Skidmore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Lily_Tang_Williams_by_Gage_Skidmore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lily_Tang_Williams_by_Gage_Skidmore.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=198032834",
+              "sha1": "3fa810b228881ff0eb63849f58b9e65dc01c5eea",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-08-22 22:47:05",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Lily Tang Williams by Gage Skidmore",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Photographs by Gage Skidmore|Lily Tang Williams",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<a href=\"https://en.wikipedia.org/wiki/Lily_Tang_Williams\" class=\"extiw\" title=\"w:Lily Tang Williams\">Lily Tang Williams</a> speaking at a Young Americans for Liberty event in St. Louis, Missouri.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-04-12",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://flickr.com/gageskidmore\">Gage Skidmore</a>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "Must attribute to <b>Gage Skidmore</b> if used elsewhere, other than on Wikimedia and its projects.",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 3.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 3.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Attribution": {
+                  "value": "Gage Skidmore",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/3.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-3.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1265773224,
+              "parentid": 1265729458,
+              "timestamp": "2026-08-23T00:47:19Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "== {{int:filedesc}} ==\n{{Information\n|Description={{en|{{w|Lily Tang Williams}} speaking at a Young Americans for Liberty event in St. Louis, Missouri.}}\n|Source={{Own}}\n|Date=2025-04-12\n|Author=[https://flickr.com/gageskidmore Gage Skidmore]\n|Permission=Must attribute to '''Gage Skidmore''' if used elsewhere, other than on Wikimedia and its projects.\n|other_versions=\n}}\n\n== {{int:license-header}} ==\n{{cc-by-sa-3.0|Gage Skidmore}}\n\n[[Category:Lily Tang Williams]]\n[[Category:Photographs by Gage Skidmore]]"
+                }
+              }
+            }
+          ]
+        },
+        "127344313": {
+          "pageid": 127344313,
+          "ns": 6,
+          "title": "File:Rep. Tom Kean official photo, 118th Congress.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 4534791,
+              "width": 3360,
+              "height": 4200,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Rep._Tom_Kean_official_photo%2C_118th_Congress.jpg/250px-Rep._Tom_Kean_official_photo%2C_118th_Congress.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 313,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Rep._Tom_Kean_official_photo%2C_118th_Congress.jpg/500px-Rep._Tom_Kean_official_photo%2C_118th_Congress.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Rep._Tom_Kean_official_photo%2C_118th_Congress.jpg/250px-Rep._Tom_Kean_official_photo%2C_118th_Congress.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 313,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Rep._Tom_Kean_official_photo%2C_118th_Congress.jpg/500px-Rep._Tom_Kean_official_photo%2C_118th_Congress.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Rep._Tom_Kean_official_photo%2C_118th_Congress.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Rep._Tom_Kean_official_photo,_118th_Congress.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=127344313",
+              "sha1": "63b6541a0ce4b27d64ea7d5fddc86c270a845fb7",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2023-01-07 00:09:21",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Rep. Tom Kean official photo, 118th Congress",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Thomas Kean Jr.|PD US Congress|Images with extracted images|Official portraits of members of the 118th United States Congress|Photographs by Leah Herman",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Rep. Tom Kean official photo, 118th Congress",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2022-12-02",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://kean.house.gov/sites/evo-subsites/kean.house.gov/files/evo-media-image/2022-12-02_lh_kean_tom_0008_re_select.jpg\">https://kean.house.gov/sites/evo-subsites/kean.house.gov/files/evo-media-image/2022-12-02_lh_kean_tom_0008_re_select.jpg</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Office of Congressman Tom Kean",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1079776820,
+              "parentid": 913303917,
+              "timestamp": "2025-09-01T19:34:30Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Rep. Tom Kean official photo, 118th Congress}}\n|date=2022-12-02\n|source=https://kean.house.gov/sites/evo-subsites/kean.house.gov/files/evo-media-image/2022-12-02_lh_kean_tom_0008_re_select.jpg\n|author=Office of Congressman Tom Kean\n|permission=\n|other versions={{Image extracted|1=Rep. Tom Kean official photo, 118th Congress (cropped).jpg}}\n}}\n\n=={{int:license-header}}==\n{{PD-USGov-Congress}}\n\n[[Category:Thomas Kean Jr.]]\n[[Category:Official portraits of members of the 118th United States Congress|Kean, Tom]]\n[[Category:Photographs by Leah Herman]]"
+                }
+              }
+            }
+          ]
+        },
+        "195985867": {
+          "pageid": 195985867,
+          "ns": 6,
+          "title": "File:Richard Ojeda shirt.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 2777162,
+              "width": 3036,
+              "height": 3036,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Richard_Ojeda_shirt.jpg/250px-Richard_Ojeda_shirt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 250,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Richard_Ojeda_shirt.jpg/500px-Richard_Ojeda_shirt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Richard_Ojeda_shirt.jpg/250px-Richard_Ojeda_shirt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 250,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Richard_Ojeda_shirt.jpg/500px-Richard_Ojeda_shirt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Richard_Ojeda_shirt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Richard_Ojeda_shirt.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=195985867",
+              "sha1": "b2c9170b16e19aa558e0bdb1a543baf7c0501886",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-07-21 20:29:49",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Richard Ojeda shirt",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Richard Ojeda|Images with extracted images|Flickr images missing SDC inception|Flickr images reviewed by FlickreviewR 2",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Richard Ojeda in a U.S. Army shirt.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2026-05-27 09:51",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/204645179@N06/55297313861/\">RNOArmyshirt</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/204645179@N06\">Richard Ojeda</a>, campaign Flickr account",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1282546377,
+              "parentid": 1275916597,
+              "timestamp": "2026-10-02T15:42:59Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "== {{int:filedesc}} ==\n{{Information\n|Description=Richard Ojeda in a U.S. Army shirt.\n|Source=[https://www.flickr.com/photos/204645179@N06/55297313861/ RNOArmyshirt]\n|Date=2026-05-27 09:51\n|Author=[https://www.flickr.com/people/204645179@N06 Richard Ojeda], campaign Flickr account\n|Permission=\n|other_versions={{Image extracted|1=Richard Ojeda shirt (cropped).jpg}}\n}}\n\n=={{int:license-header}}==\n{{cc-by-sa-4.0}}\n{{FlickreviewR|status=passed|author=ojedafornc|sourceurl=https://flickr.com/photos/204645179@N06/55297313861|archive=|reviewdate=2026-07-21 20:31:07|reviewlicense=cc-by-sa-4.0|reviewer=FlickreviewR 2}}\n\n[[Category:Richard Ojeda]]"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

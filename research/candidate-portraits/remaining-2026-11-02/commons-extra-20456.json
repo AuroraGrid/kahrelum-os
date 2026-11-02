@@ -1,0 +1,266 @@
+{
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&titles=File%3AGreetings+from+Taqaddum-2+%28Kevin+Burge%29+%28cropped%29.png%7CFile%3AYolanda+Prince.jpg&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cmime%7Cextmetadata&iiurlwidth=250&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main",
+  "candidateIds": [
+    20456,
+    20411
+  ],
+  "retrievedAtUtc": "2026-11-02T21:41:16Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "pages": {
+        "200172694": {
+          "pageid": 200172694,
+          "ns": 6,
+          "title": "File:Greetings from Taqaddum-2 (Kevin Burge) (cropped).png",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 772605,
+              "width": 1533,
+              "height": 2044,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Greetings_from_Taqaddum-2_%28Kevin_Burge%29_%28cropped%29.png/250px-Greetings_from_Taqaddum-2_%28Kevin_Burge%29_%28cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 333,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Greetings_from_Taqaddum-2_%28Kevin_Burge%29_%28cropped%29.png/500px-Greetings_from_Taqaddum-2_%28Kevin_Burge%29_%28cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Greetings_from_Taqaddum-2_%28Kevin_Burge%29_%28cropped%29.png/250px-Greetings_from_Taqaddum-2_%28Kevin_Burge%29_%28cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 333,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Greetings_from_Taqaddum-2_%28Kevin_Burge%29_%28cropped%29.png/500px-Greetings_from_Taqaddum-2_%28Kevin_Burge%29_%28cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Greetings_from_Taqaddum-2_%28Kevin_Burge%29_%28cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Greetings_from_Taqaddum-2_(Kevin_Burge)_(cropped).png",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=200172694",
+              "sha1": "f14cb3760e23c0a5e908d6c2d2b51db20d6f5a9f",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-09-24 22:56:50",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Greetings from Taqaddum-2 (Kevin Burge) (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD US Military|Al Taqaddum Airbase|Extracted images|PD-USGov missing SDC copyright status",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "A screenshot of Kevin Burge wishing his father a Happy Father's Day from Camp Taqaddum in Iraq on",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2005-06-07",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.dvidshub.net/video/3361/greetings-taqaddum-2\">https://www.dvidshub.net/video/3361/greetings-taqaddum-2</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "2d Force Service Support Group Public Affairs Office",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/png"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1284976655,
+              "parentid": 1280312568,
+              "timestamp": "2026-10-09T13:51:31Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=A screenshot of Kevin Burge wishing his father a Happy Father's Day from Camp Taqaddum in Iraq on}}\n|date=2005-06-07\n|source=https://www.dvidshub.net/video/3361/greetings-taqaddum-2\n|author=2d Force Service Support Group Public Affairs Office\n|permission=\n|other versions={{Extracted from|1=Greetings from Taqaddum-2 (Kevin Burge).png}}\n}}\n\n=={{int:license-header}}==\n{{PD-USGov-Military}}\n\n[[Category:Al Taqaddum Airbase]]"
+                }
+              }
+            }
+          ]
+        },
+        "191521753": {
+          "pageid": 191521753,
+          "ns": 6,
+          "title": "File:Yolanda Prince.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 4560473,
+              "width": 4267,
+              "height": 5689,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Yolanda_Prince.jpg/250px-Yolanda_Prince.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 333,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Yolanda_Prince.jpg/500px-Yolanda_Prince.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Yolanda_Prince.jpg/250px-Yolanda_Prince.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 333,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Yolanda_Prince.jpg/500px-Yolanda_Prince.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Yolanda_Prince.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Yolanda_Prince.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=191521753",
+              "sha1": "a0eec0b34a5ea4962412a7d8e5b600edcb25950d",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-05-08 01:09:34",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Yolanda Prince",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Self-published work|Files with coordinates missing SDC location of creation|Yolanda Prince",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "32.351933",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "-95.300964",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "This photo depicts Yolanda Prince, a <a href=\"https://en.wikipedia.org/wiki/Democratic_Party_(United_States)\" class=\"extiw\" title=\"w:Democratic Party (United States)\">Democratic</a> politician from the state of <a href=\"https://en.wikipedia.org/wiki/Texas\" class=\"extiw\" title=\"w:Texas\">Texas</a>. This photo was taken before an interview on the <a href=\"https://en.wikipedia.org/wiki/KLTV\" class=\"extiw\" title=\"w:KLTV\">KLTV</a>/<a href=\"https://en.wikipedia.org/wiki/KTRE\" class=\"extiw\" title=\"w:KTRE\">KTRE</a> streaming news show <i>East Texas Now</i> on May 7, 2026, during her campagin for the Democratic nomination for <a href=\"https://en.wikipedia.org/wiki/Texas%27s_1st_congressional_district\" class=\"extiw\" title=\"w:Texas's 1st congressional district\">Texas's 1st congressional district</a> in the <a href=\"https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Texas\" class=\"extiw\" title=\"w:2026 United States House of Representatives elections in Texas\">2026 midterm elections</a>.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2026-05-07 13:34:03",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:WikiBunny2K1\" title=\"User:WikiBunny2K1\">WikiBunny2K1</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1219484344,
+              "parentid": 1210956659,
+              "timestamp": "2026-05-24T13:29:49Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=This photo depicts Yolanda Prince, a [[w:Democratic Party (United States)|Democratic]] politician from the state of [[w:Texas|Texas]]. This photo was taken before an interview on the [[w:KLTV|KLTV]]/[[w:KTRE|KTRE]] streaming news show ''East Texas Now'' on May 7, 2026, during her campagin for the Democratic nomination for [[w:Texas's 1st congressional district|Texas's 1st congressional district]] in the [[w:2026 United States House of Representatives elections in Texas|2026 midterm elections]].}}\n|date=2026-05-07 13:34:03\n|source={{own}}\n|author=[[User:WikiBunny2K1|WikiBunny2K1]]\n|permission=\n|other versions=\n}}\n{{Location|32.351933|-95.300964|heading:306.9460450497643}}\n\n=={{int:license-header}}==\n{{self|cc-zero}}\n\n[[Category:Yolanda Prince]]"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "sourceCandidateId": 23152,
+  "query": "Charlie Hatcher",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Charlie+Hatcher%22",
+  "retrievedAtUtc": "2026-11-02T21:39:37Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 2
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:06-23-1981 (case file 043454) - DPLA - c09cab19d814e780720672962ac348a0.pdf",
+          "pageid": 193708188,
+          "size": 41,
+          "wordcount": 500,
+          "snippet": "This file was uploaded by the Digital Public Library of America, and the following item metadata was created by the contributing institution&#039;s staff. Note:",
+          "timestamp": "2026-06-16T10:15:44Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:05-06-1981 (case file 043406) - DPLA - 4e3018e618906c9097d0ce724e18c1db.pdf",
+          "pageid": 193662214,
+          "size": 41,
+          "wordcount": 500,
+          "snippet": "This file was uploaded by the Digital Public Library of America, and the following item metadata was created by the contributing institution&#039;s staff. Note:",
+          "timestamp": "2026-06-14T03:11:17Z"
+        }
+      ]
+    }
+  }
+}

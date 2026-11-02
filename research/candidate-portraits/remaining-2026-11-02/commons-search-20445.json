@@ -1,0 +1,51 @@
+{
+  "sourceCandidateId": 20445,
+  "query": "Tom Sell",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Tom+Sell%22",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 4
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Graham's business shorthand; (IA grahamsbusiness00grah).pdf",
+          "pageid": 93197128,
+          "size": 998,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-09-15T10:54:56Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:The writings of Mark Twain (IA writingsmark14twairich).pdf",
+          "pageid": 97137622,
+          "size": 968,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2021-11-03T23:56:58Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Supplementary reading for primary schools (IA supplementaryrea00park).pdf",
+          "pageid": 95675109,
+          "size": 1046,
+          "wordcount": 0,
+          "snippet": "",
+          "timestamp": "2024-10-21T15:29:25Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Shakespeare's insomnia and the causes thereof (IA b24856824).pdf",
+          "pageid": 93354891,
+          "size": 1156,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2025-08-16T17:18:00Z"
+        }
+      ]
+    }
+  }
+}

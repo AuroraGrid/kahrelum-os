@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 19406,
+  "query": "Kevin Martin",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Kevin+Martin%22",
+  "retrievedAtUtc": "2026-11-02T21:34:13Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 124
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Kevin-martin DSC08049.jpg",
+          "pageid": 72415965,
+          "size": 399,
+          "wordcount": 155,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2024-08-04T13:35:36Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Kevin Martin (curler).JPG",
+          "pageid": 6260432,
+          "size": 495,
+          "wordcount": 164,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-04-10T21:50:59Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:20140101 Kevin Martin (7).JPG",
+          "pageid": 30641956,
+          "size": 352,
+          "wordcount": 164,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2023-12-03T22:18:25Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Kevin Martin 2010.jpg",
+          "pageid": 9583609,
+          "size": 547,
+          "wordcount": 134,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution 3.0 Unported",
+          "timestamp": "2025-11-12T11:53:22Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Alberta 2009 Brier.JPG",
+          "pageid": 6260383,
+          "size": 459,
+          "wordcount": 164,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-07-29T03:23:20Z"
+        }
+      ]
+    }
+  }
+}

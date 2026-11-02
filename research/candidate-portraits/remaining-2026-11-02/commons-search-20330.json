@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20330,
+  "query": "Sean McCann",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Sean+McCann%22",
+  "retrievedAtUtc": "2026-11-02T21:35:28Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 116
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Lt Gen McCann at CGSC HoF induction.jpg",
+          "pageid": 18313033,
+          "size": 875,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2026-03-08T12:24:43Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Chief of Staff visiting RDF Camp in Glen of Imall (4901981252).jpg",
+          "pageid": 36794825,
+          "size": 920,
+          "wordcount": 137,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2026-06-08T15:44:03Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Chief of Staff visiting RDF Camp in Glen of Imall (4901393867).jpg",
+          "pageid": 36794828,
+          "size": 919,
+          "wordcount": 147,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2026-06-08T15:44:10Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Chief of Staff visiting RDF Camp in Glen of Imall (4901407297).jpg",
+          "pageid": 36794798,
+          "size": 1313,
+          "wordcount": 147,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2026-06-08T15:42:45Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Chief of Staff visiting RDF Camp in Glen of Imall (4901414793).jpg",
+          "pageid": 36794788,
+          "size": 1330,
+          "wordcount": 147,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2026-06-08T15:42:09Z"
+        }
+      ]
+    }
+  }
+}

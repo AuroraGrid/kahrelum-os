@@ -1,0 +1,43 @@
+{
+  "sourceCandidateId": 21341,
+  "query": "Angelica Duenas",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Angelica+Duenas%22",
+  "retrievedAtUtc": "2026-11-02T21:31:46Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 3
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:AngelicaDuenas (cropped).jpg",
+          "pageid": 133552162,
+          "size": 632,
+          "wordcount": 170,
+          "snippet": "This video, screenshot or audio excerpt was released under the Creative Commons license option on YouTube before August 2025. (YouTube changed the license",
+          "timestamp": "2026-01-01T20:48:44Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Lump\u00e9rica, portadilla 1983.jpg",
+          "pageid": 150904594,
+          "size": 455,
+          "wordcount": 27,
+          "snippet": "English Spanish Portadilla de la primera edici\u00f3n de la novela Lump\u00e9rica de Diamela Eltit, publicada por Ediciones del Ornitorrinco en 1983 determination",
+          "timestamp": "2025-02-01T07:13:20Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:AngelicaDuenas.jpg",
+          "pageid": 112936587,
+          "size": 674,
+          "wordcount": 176,
+          "snippet": "This video, screenshot or audio excerpt was released under the Creative Commons license option on YouTube before August 2025. (YouTube changed the license",
+          "timestamp": "2026-01-01T20:48:45Z"
+        }
+      ]
+    }
+  }
+}

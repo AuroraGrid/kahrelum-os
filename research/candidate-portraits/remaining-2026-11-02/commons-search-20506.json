@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20506,
+  "query": "Maria Rodriguez",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Maria+Rodriguez%22",
+  "retrievedAtUtc": "2026-11-02T21:34:57Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 689
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Rodriguez de Losada.jpg",
+          "pageid": 12222981,
+          "size": 378,
+          "wordcount": 15,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English",
+          "timestamp": "2026-03-15T14:50:54Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Maria Rodr\u00edguez Soto, XIII Premis Gaud\u00ed (2021).jpg",
+          "pageid": 102125942,
+          "size": 503,
+          "wordcount": 158,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2025-10-08T14:22:06Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:El martirio de las santas Justa y Rufina, Jos\u00e9 Mar\u00eda Rodr\u00edguez de Losada.jpg",
+          "pageid": 113315331,
+          "size": 827,
+          "wordcount": 169,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-04-16T20:58:06Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Muerte de Col\u00f3n, Jos\u00e9 Mar\u00eda Rodr\u00edguez de los R\u00edos y Losada.jpg",
+          "pageid": 107926526,
+          "size": 646,
+          "wordcount": 169,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2022-12-07T13:50:39Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Jerez-IMG 20241005 103018.jpg",
+          "pageid": 153677300,
+          "size": 576,
+          "wordcount": 196,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2025-11-02T22:42:36Z"
+        }
+      ]
+    }
+  }
+}

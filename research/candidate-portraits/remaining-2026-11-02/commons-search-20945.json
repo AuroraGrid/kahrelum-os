@@ -1,0 +1,34 @@
+{
+  "sourceCandidateId": 20945,
+  "query": "L.J. Holloway",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22L.J.+Holloway%22",
+  "retrievedAtUtc": "2026-11-02T21:33:49Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 2
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:History of St. Joseph County, Indiana - (IA historyofstjosep00chap).pdf",
+          "pageid": 196742296,
+          "size": 939,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2026-08-03T17:30:15Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:History of St. Joseph County, Indiana; (IA historyofstjosep01chap).pdf",
+          "pageid": 92104322,
+          "size": 880,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-02-18T13:17:56Z"
+        }
+      ]
+    }
+  }
+}

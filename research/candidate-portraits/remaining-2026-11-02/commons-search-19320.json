@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 19320,
+  "query": "Brad Meyer",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Brad+Meyer%22",
+  "retrievedAtUtc": "2026-11-02T21:34:50Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Gazette d'Amsterdam = Amsterdamsche courant 13-08-1811 (IA ddd 010247173 mpeg21).pdf",
+          "pageid": 109260631,
+          "size": 1188,
+          "wordcount": 49,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English Gazette d&#039;Amsterdam = Amsterdamsche courant",
+          "timestamp": "2025-09-21T03:53:39Z"
+        }
+      ]
+    }
+  }
+}

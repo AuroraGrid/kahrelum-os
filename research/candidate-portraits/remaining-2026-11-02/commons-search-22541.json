@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 22541,
+  "query": "Andrew Beck",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Andrew+Beck%22",
+  "retrievedAtUtc": "2026-11-02T21:41:32Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 34
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Bishop Beck.jpg",
+          "pageid": 32761501,
+          "size": 285,
+          "wordcount": 143,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2023-11-24T20:10:48Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Archbishop George Andrew Beck 1904-1978.jpg",
+          "pageid": 149129861,
+          "size": 328,
+          "wordcount": 14,
+          "snippet": "English French Ev\u00eaque George Andrew Beck 1904-1978 determination method or standard: SHA-1",
+          "timestamp": "2025-09-01T04:50:01Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Andrew Beck (51650645013) (cropped).jpg",
+          "pageid": 112248725,
+          "size": 608,
+          "wordcount": 129,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2024-09-07T20:49:15Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Andrew Beck (6931654) (cropped).jpg",
+          "pageid": 112407540,
+          "size": 1224,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2025-07-08T05:07:53Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:WFT vs. Broncos (51650645013).jpg",
+          "pageid": 112248522,
+          "size": 879,
+          "wordcount": 161,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2024-11-01T16:07:15Z"
+        }
+      ]
+    }
+  }
+}

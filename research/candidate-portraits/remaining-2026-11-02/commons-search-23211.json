@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 23211,
+  "query": "John Peterson",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22John+Peterson%22",
+  "retrievedAtUtc": "2026-11-02T21:39:15Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 620
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:John Peterson.jpg",
+          "pageid": 97250827,
+          "size": 522,
+          "wordcount": 145,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2024-05-23T09:40:09Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:John Peterson (1841\u20131915).png",
+          "pageid": 128284634,
+          "size": 450,
+          "wordcount": 7,
+          "snippet": "English Portrait of John Peterson (1841\u20131915)",
+          "timestamp": "2024-11-17T00:01:36Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Mary John (Peterson's Magazine, 1896).png",
+          "pageid": 115394910,
+          "size": 570,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2025-10-29T22:31:40Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:OVERSIGHT HEARING ON STELLER SEA LIONS (IA gov.gpo.fdsys.CHRG-106hhrg58051).pdf",
+          "pageid": 91387933,
+          "size": 2621,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2026-07-10T04:59:01Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:1400 historical dates of the town and city of Bath, and town of Georgetown, from 1604 to 1874 (IA cu31924028809733).pdf",
+          "pageid": 97949416,
+          "size": 1217,
+          "wordcount": 21,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English determination method or standard: SHA-1",
+          "timestamp": "2026-08-31T12:17:44Z"
+        }
+      ]
+    }
+  }
+}

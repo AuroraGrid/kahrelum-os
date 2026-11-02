@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 22008,
+  "query": "Mitchell Jacob",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Mitchell+Jacob%22",
+  "retrievedAtUtc": "2026-11-02T21:38:21Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 48
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Kynewisbok (1921) (14775932782).jpg",
+          "pageid": 43515396,
+          "size": 5649,
+          "wordcount": 36,
+          "snippet": "22 September 2015 English author name string: University of Denver publication date: 29 July 2014 sourcing circumstances: circa operator: Flickr described",
+          "timestamp": "2025-09-18T16:30:08Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Minutes of the Georgia Annual Conference of the Methodist Episcopal Church, South (microform) (IA 28054834.1858.emory.edu).pdf",
+          "pageid": 97874124,
+          "size": 1218,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2024-10-03T19:37:13Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Secretary's report (IA secretarysrepor1901soci).pdf",
+          "pageid": 197408340,
+          "size": 1010,
+          "wordcount": 21,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English determination method or standard: SHA-1",
+          "timestamp": "2026-08-15T14:55:16Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:(New Jersey) Mitchell, Jacob - 23rd Infantry, Company B - DPLA - fd60e40cb734a2f89a89d925bbc2a0de.jpg",
+          "pageid": 97027823,
+          "size": 859,
+          "wordcount": 476,
+          "snippet": "English determination method or standard: determined by GLAM institution and stated at its website author name string: War Department. The Adjutant General&#039;s",
+          "timestamp": "2023-02-20T13:40:34Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Proceedings of the 250th anniversary of the ancient town of Redding, once including the territory now comprising the towns of Reading, Wakefield, and North Reading - with (IA proceedingsof2501644eato).pdf",
+          "pageid": 197279383,
+          "size": 1202,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2026-08-12T02:58:16Z"
+        }
+      ]
+    }
+  }
+}

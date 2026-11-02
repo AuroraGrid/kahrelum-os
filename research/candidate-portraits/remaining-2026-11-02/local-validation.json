@@ -1,0 +1,11 @@
+{
+  "testedAtUtc": "2026-11-02T21:56:37Z",
+  "pythonPortraitTests": 36,
+  "pythonFullRepositoryTests": 131,
+  "nodePortraitAndBinaryTests": 15,
+  "nodeFullRepositoryTests": 50,
+  "result": "PASS",
+  "ledgerRebuild": "python scripts/build_candidate_portraits.py --check",
+  "preservation": "All original 429 records match the canonical hash in baseline-preservation.json",
+  "visualReview": "All 112 new source images inspected for rendering and single-subject framing; no visual identification used. A pre-existing Commons crop was selected for Marquita Bradshaw; original selected full-body image retained as evidence only, not deployed."
+}

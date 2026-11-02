@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 20569,
+  "query": "\"Jessica Killin\" Colorado",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=15&srsearch=%22Jessica+Killin%22+Colorado",
+  "retrievedAtUtc": "2026-11-02T21:46:34Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Seal of Colorado.svg",
+          "pageid": 6813015,
+          "size": 960,
+          "wordcount": 31,
+          "snippet": "English Chinese French Sceau de l&#039;\u00e9tat du <span class=\"searchmatch\">Colorado</span>. Twi Chinese URL: https://commons.wikimedia.org/wiki/user:Svgalbertian Wikimedia username: Svgalbertian",
+          "timestamp": "2026-01-25T03:36:02Z"
+        }
+      ]
+    }
+  }
+}

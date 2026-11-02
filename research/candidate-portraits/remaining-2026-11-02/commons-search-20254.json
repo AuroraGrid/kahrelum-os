@@ -1,0 +1,64 @@
+{
+  "sourceCandidateId": 20254,
+  "query": "Tommy Hanson",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Tommy+Hanson%22",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 10
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Tommy Hanson.jpg",
+          "pageid": 7867479,
+          "size": 921,
+          "wordcount": 138,
+          "snippet": "Chrisjnelson at the English language Wikipedia, the copyright holder of this work, hereby publishes it under the following license: This file is licensed",
+          "timestamp": "2026-03-24T07:30:34Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:MG 4626 Tommy Hanson (re-cropped).jpg",
+          "pageid": 44909483,
+          "size": 949,
+          "wordcount": 153,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2025-01-09T22:05:39Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:2ND Tommy Hanson.jpg",
+          "pageid": 10266063,
+          "size": 884,
+          "wordcount": 98,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2024-07-23T09:16:17Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Tommy Hanson pitching for the Los Angeles Angels of Anaheim in 2013 (Cropped).jpg",
+          "pageid": 101762794,
+          "size": 574,
+          "wordcount": 159,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-04-04T23:52:11Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Tommy Hanson pitching for the Los Angeles Angels of Anaheim in 2013.jpg",
+          "pageid": 101762795,
+          "size": 737,
+          "wordcount": 162,
+          "snippet": "18 March 2021 This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute",
+          "timestamp": "2026-04-04T23:02:18Z"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 20473,
+  "query": "\"Eric Flores\" Texas",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=15&srsearch=%22Eric+Flores%22+Texas",
+  "retrievedAtUtc": "2026-11-02T21:47:22Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Eric Flores has my Complete and Total Endorsement to be the next U.S. Representative from Texas\u2019 34th Congressional District \u2014 HE WILL NEVER LET YOU DOWN!.webm",
+          "pageid": 199836101,
+          "size": 641,
+          "wordcount": 0,
+          "snippet": "Flores has my Complete and Total Endorsement to be the next <span class=\"searchmatch\">U.S</span>. Representative from <span class=\"searchmatch\">Texas</span>\u2019 34th Congressional District \u2014 HE WILL NEVER LET YOU DOWN!.webm",
+          "timestamp": "2026-09-25T01:04:15Z"
+        }
+      ]
+    }
+  }
+}

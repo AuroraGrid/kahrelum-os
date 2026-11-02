@@ -1,0 +1,64 @@
+{
+  "sourceCandidateId": 20787,
+  "query": "Eric Jenkins",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Eric+Jenkins%22",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 21
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Eric Jenkins 2016.jpg",
+          "pageid": 50526856,
+          "size": 484,
+          "wordcount": 132,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2026-06-15T17:55:40Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Paul Chelimo 2016b.jpg",
+          "pageid": 50525998,
+          "size": 612,
+          "wordcount": 132,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2025-08-08T06:08:51Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:USATF day 3 2018 (42256872474).jpg",
+          "pageid": 70262836,
+          "size": 764,
+          "wordcount": 146,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2025-01-11T04:16:12Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Paul Chelimo 2016.jpg",
+          "pageid": 50525999,
+          "size": 634,
+          "wordcount": 126,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2025-06-19T22:11:31Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:2019 Payton Jordan Invitational (47766094171).jpg",
+          "pageid": 78817225,
+          "size": 723,
+          "wordcount": 146,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2024-08-19T08:18:09Z"
+        }
+      ]
+    }
+  }
+}

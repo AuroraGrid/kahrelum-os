@@ -1,0 +1,60 @@
+{
+  "sourceCandidateId": 20473,
+  "query": "Eric Flores",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Eric+Flores%22",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 5
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Hugo Eric Flores.jpg",
+          "pageid": 48889910,
+          "size": 357,
+          "wordcount": 158,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2025-08-22T01:11:08Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Eric Flores has my Complete and Total Endorsement to be the next U.S. Representative from Texas\u2019 34th Congressional District \u2014 HE WILL NEVER LET YOU DOWN!.webm",
+          "pageid": 199836101,
+          "size": 641,
+          "wordcount": 0,
+          "snippet": "",
+          "timestamp": "2026-09-25T01:04:15Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Hugo Eric Flores (cropped).jpg",
+          "pageid": 137397637,
+          "size": 280,
+          "wordcount": 158,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-01-27T14:14:47Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Hugo Eric Flores (cropped).png",
+          "pageid": 106956976,
+          "size": 317,
+          "wordcount": 150,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-05-31T02:16:10Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Fire pit training (14006333408).jpg",
+          "pageid": 35065807,
+          "size": 1075,
+          "wordcount": 37,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States operator: Flickr described",
+          "timestamp": "2026-06-11T18:47:16Z"
+        }
+      ]
+    }
+  }
+}

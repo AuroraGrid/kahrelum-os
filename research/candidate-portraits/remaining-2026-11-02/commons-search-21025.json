@@ -1,0 +1,34 @@
+{
+  "sourceCandidateId": 21025,
+  "query": "April Verlato",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22April+Verlato%22",
+  "retrievedAtUtc": "2026-11-02T21:31:45Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 2
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:April Verlato Updated portrait - Copy (3).jpg",
+          "pageid": 142328556,
+          "size": 446,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-07-28T09:06:04Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:April Verlato Updated portrait - Copy (3) (cropped).jpg",
+          "pageid": 146113453,
+          "size": 439,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-07-28T09:06:05Z"
+        }
+      ]
+    }
+  }
+}

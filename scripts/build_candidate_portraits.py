@@ -9,6 +9,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import html
+import importlib.util
 import json
 import re
 import unicodedata
@@ -537,7 +538,21 @@ def reviewed_licensed(current: dict, catalog: dict, admitted: list[dict]) -> lis
     return out
 
 
-def build_ledger(current: dict, catalog: dict, reviewed_at: str, supplement: dict | None = None, noncongress: dict | None = None, licensed: dict | None = None, local: dict | None = None) -> dict:
+def reviewed_bulk(current: dict, catalog: dict, admitted: list[dict]) -> list[dict]:
+    spec = importlib.util.spec_from_file_location("portrait_bulk_evidence", ROOT / "scripts/portrait_bulk_evidence.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module.review(current, catalog, admitted)
+
+
+def reviewed_unresolved(catalog: dict, unresolved: list[dict]) -> list[dict]:
+    spec = importlib.util.spec_from_file_location("portrait_bulk_evidence", ROOT / "scripts/portrait_bulk_evidence.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module.unresolved_review(catalog, unresolved)
+
+
+def build_ledger(current: dict, catalog: dict, reviewed_at: str, supplement: dict | None = None, noncongress: dict | None = None, licensed: dict | None = None, local: dict | None = None, bulk: dict | None = None) -> dict:
     if catalog.get("schema") != "KAHRELUM_CONGRESSIONAL_PORTRAIT_SOURCES_v1.0":
         raise ValueError("Unknown portrait source catalog schema")
     photo_source = catalog["photoSource"]
@@ -644,6 +659,13 @@ def build_ledger(current: dict, catalog: dict, reviewed_at: str, supplement: dic
         records.extend(additions)
         identity_count += len(additions)
         unresolved = [r for r in unresolved if r["sourceCandidateId"] not in added_ids]
+    if bulk:
+        additions = reviewed_bulk(current, bulk, records)
+        added_ids = {r["sourceCandidateId"] for r in additions}
+        records.extend(additions)
+        identity_count += len(additions)
+        unresolved = [r for r in unresolved if r["sourceCandidateId"] not in added_ids]
+        unresolved = reviewed_unresolved(bulk, unresolved)
     coverage = {
         "sourceListedCandidateRecords": len(candidates),
         "uniqueCandidateIds": len(set(ids)),
@@ -684,6 +706,10 @@ def build_ledger(current: dict, catalog: dict, reviewed_at: str, supplement: dic
     if local:
         result["localSourceCatalog"] = "research/candidate-portraits/local-sources-2026-11-02.json"
         result["admissionRule"] += " November 2 additions also require first-party FEC name/state/party/office evidence. Local Commons source-page captures retain exact per-image licenses, creator and revision; Iowa legislative portraits retain their specific reviewed reuse permission. Source-page evidence is not represented as Commons API metadata."
+    if bulk:
+        result["bulkSourceCatalog"] = "research/candidate-portraits/remaining-2026-11-02/admitted-sources.json"
+        result["remainingCandidateReview"] = bulk["reviewAudit"]
+        result["admissionRule"] += " Additional reviewed Commons files use frozen first-party 2026 FEC candidate and committee records, exact recorded names or explicit committee aliases, independently reviewed photographic subject text, per-image reuse rights and unchanged locally stored source thumbnails. Discovery results alone cannot admit a photo."
     return result
 
 
@@ -694,6 +720,7 @@ def main() -> None:
     parser.add_argument("--noncongress", type=Path, default=DEFAULT_NONCONGRESS)
     parser.add_argument("--licensed", type=Path, default=ROOT / "research/candidate-portraits/licensed-sources-2026-11-02.json")
     parser.add_argument("--local", type=Path, default=ROOT / "research/candidate-portraits/local-sources-2026-11-02.json")
+    parser.add_argument("--bulk", type=Path, default=ROOT / "research/candidate-portraits/remaining-2026-11-02/admitted-sources.json")
     parser.add_argument("--current", type=Path, default=ROOT / "election/current-projections.json")
     parser.add_argument("--output", type=Path, default=ROOT / "election/candidate-portraits.json")
     parser.add_argument("--reviewed-at", help="UTC review timestamp; defaults to the captured catalog timestamp")
@@ -704,6 +731,7 @@ def main() -> None:
     noncongress = json.loads(args.noncongress.read_text(encoding="utf-8")) if args.noncongress.exists() else None
     licensed = json.loads(args.licensed.read_text(encoding="utf-8")) if args.licensed.exists() else None
     local = json.loads(args.local.read_text(encoding="utf-8")) if args.local.exists() else None
+    bulk = json.loads(args.bulk.read_text(encoding="utf-8")) if args.bulk.exists() else None
     reviewed_at = args.reviewed_at or max(catalog["retrievedAtUtc"], supplement["retrievedAtUtc"], supplement.get("updatedAtUtc", supplement["retrievedAtUtc"]))
     if noncongress and not args.reviewed_at:
         reviewed_at = max(reviewed_at, noncongress["reviewedAtUtc"])
@@ -711,7 +739,9 @@ def main() -> None:
         reviewed_at = max(reviewed_at, licensed["reviewedAtUtc"])
     if local and not args.reviewed_at:
         reviewed_at = max(reviewed_at, local["reviewedAtUtc"])
-    ledger = build_ledger(json.loads(args.current.read_text(encoding="utf-8")), catalog, reviewed_at, supplement, noncongress, licensed, local)
+    if bulk and not args.reviewed_at:
+        reviewed_at = max(reviewed_at, bulk["reviewedAtUtc"])
+    ledger = build_ledger(json.loads(args.current.read_text(encoding="utf-8")), catalog, reviewed_at, supplement, noncongress, licensed, local, bulk)
     ledger["sourceCatalogSha256"] = hashlib.sha256(args.catalog.read_bytes()).hexdigest()
     ledger["supplementalSourceCatalogSha256"] = hashlib.sha256(args.supplement.read_bytes()).hexdigest()
     if noncongress:
@@ -720,6 +750,8 @@ def main() -> None:
         ledger["localSourceCatalogSha256"] = hashlib.sha256(args.local.read_bytes()).hexdigest()
     if licensed:
         ledger["licensedSourceCatalogSha256"] = hashlib.sha256(args.licensed.read_bytes()).hexdigest()
+    if bulk:
+        ledger["bulkSourceCatalogSha256"] = hashlib.sha256(args.bulk.read_bytes()).hexdigest()
     rendered = json.dumps(ledger, indent=2, ensure_ascii=False) + "\n"
     if args.check:
         if not args.output.exists() or args.output.read_text(encoding="utf-8") != rendered:

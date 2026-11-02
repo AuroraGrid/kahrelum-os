@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20408,
+  "query": "Jamie Davis",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Jamie+Davis%22",
+  "retrievedAtUtc": "2026-11-02T21:42:03Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 18
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Brick paving systems in expeditionary environments- Field testing - USACE-p266001coll1-3538.pdf",
+          "pageid": 153134731,
+          "size": 1163,
+          "wordcount": 45,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States described at URL:",
+          "timestamp": "2026-05-05T22:03:21Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Measuring Air Force Contracting customer satisfaction (IA measuringairforc1094547929).pdf",
+          "pageid": 92504155,
+          "size": 2479,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2024-11-28T11:26:01Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Full-scale evaluation of DuraDeck\u00ae and MegaDeck matting systems - USACE-p266001coll1-4517.pdf",
+          "pageid": 153154306,
+          "size": 1074,
+          "wordcount": 45,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States described at URL:",
+          "timestamp": "2026-08-17T15:00:25Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Audi R8 - Jamie Davis, Johnny Herbert & Guy Smith at Ford Chicane at the 2004 Le Mans (50884457552).jpg",
+          "pageid": 99545208,
+          "size": 798,
+          "wordcount": 167,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2025-12-05T01:17:11Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:RIT yearbook 1987.pdf",
+          "pageid": 114898811,
+          "size": 845,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2024-05-14T04:21:07Z"
+        }
+      ]
+    }
+  }
+}

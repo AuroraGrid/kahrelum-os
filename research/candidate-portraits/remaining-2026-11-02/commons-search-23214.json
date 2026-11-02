@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 23214,
+  "query": "John Vincent",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22John+Vincent%22",
+  "retrievedAtUtc": "2026-11-02T21:39:22Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 581
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:John Hurt by Walterlan Papetti.jpg",
+          "pageid": 38024587,
+          "size": 452,
+          "wordcount": 169,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2025-09-11T08:08:55Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:John hurt dinard cropped.jpg",
+          "pageid": 17778217,
+          "size": 1353,
+          "wordcount": 80,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This image is a derivative work of the following images: File:John_hurt_dinard",
+          "timestamp": "2026-09-14T12:23:10Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:John Hurt 20080304 Fnac 1.jpg",
+          "pageid": 3688692,
+          "size": 608,
+          "wordcount": 176,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following licenses: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-03-04T09:31:49Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:John Hurt at the London premiere of Tinker Tailor Soldier Sp.png",
+          "pageid": 18099091,
+          "size": 726,
+          "wordcount": 142,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. Attribution: Sam Hughes You are free: to share \u2013 to copy, distribute",
+          "timestamp": "2024-07-05T06:44:46Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:John Hurt at the 2009 Tribeca Film Festival.jpg",
+          "pageid": 6645176,
+          "size": 710,
+          "wordcount": 112,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution 3.0 Unported",
+          "timestamp": "2026-06-16T07:40:00Z"
+        }
+      ]
+    }
+  }
+}

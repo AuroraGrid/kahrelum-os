@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 23794,
+  "query": "5 Republicans",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%225+Republicans%22",
+  "retrievedAtUtc": "2026-11-02T21:35:08Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 33
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:WHSF- Contested, 47-16 - DPLA - f05e24650d21a56703f836cc8883485a.pdf",
+          "pageid": 192807339,
+          "size": 41,
+          "wordcount": 524,
+          "snippet": "This file was uploaded by the Digital Public Library of America, and the following item metadata was created by the contributing institution&#039;s staff. Note:",
+          "timestamp": "2026-06-19T01:36:17Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Agricultural-food policy review. ERS AFPR (IA CAT77685448001).pdf",
+          "pageid": 91579471,
+          "size": 1099,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2026-06-28T13:54:16Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:RL30261 (IA RL30261-crs).pdf",
+          "pageid": 91360243,
+          "size": 711,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2024-10-27T20:03:15Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:WHSF- Contested, 47-17 - DPLA - e36146fd893385d6b66920ceae392de4.pdf",
+          "pageid": 192805226,
+          "size": 41,
+          "wordcount": 524,
+          "snippet": "This file was uploaded by the Digital Public Library of America, and the following item metadata was created by the contributing institution&#039;s staff. Note:",
+          "timestamp": "2026-06-19T00:05:03Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Knight's Landing News 1862-11-08 (IA cawoyca 000295).pdf",
+          "pageid": 98446201,
+          "size": 1273,
+          "wordcount": 21,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English determination method or standard: SHA-1",
+          "timestamp": "2026-09-05T16:49:49Z"
+        }
+      ]
+    }
+  }
+}

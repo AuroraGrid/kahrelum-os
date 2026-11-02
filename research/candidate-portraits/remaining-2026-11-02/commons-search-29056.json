@@ -1,0 +1,33 @@
+{
+  "sourceCandidateId": 29056,
+  "query": "Brian Bengs",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Brian+Bengs%22",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 2
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Brian Bengs Air Force (cropped).jpg",
+          "pageid": 193375547,
+          "size": 425,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-10-07T23:58:45Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Brian Bengs Air Force.jpg",
+          "pageid": 193375464,
+          "size": 436,
+          "wordcount": 25,
+          "snippet": "English Official Air Force portrait of Brian Bengs described at URL: https://bengsforsouthdakota.com/wp-content/uploads/2026/02/brian-bengs-gallery-7@2x",
+          "timestamp": "2026-07-04T02:40:55Z"
+        }
+      ]
+    }
+  }
+}

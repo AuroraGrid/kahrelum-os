@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 23161,
+  "query": "Brent Taylor",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Brent+Taylor%22",
+  "retrievedAtUtc": "2026-11-02T21:39:52Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 14
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Coast Guard Cutter Alex Haley, Navy crews install new radar on Kodiak Island, Alaska 140610-G-ZR723-001.jpg",
+          "pageid": 49846819,
+          "size": 1054,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2025-12-10T17:54:52Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Major Brent R. Taylor.jpg",
+          "pageid": 106288647,
+          "size": 435,
+          "wordcount": 45,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English Traditional Chinese Major Brent R. Taylor",
+          "timestamp": "2024-08-17T17:04:55Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:116th United States Congress H. R. 0000054 (1st session) - To designate the outstation of the Department of Veterans Affairs in North Ogden, Utah, as the Major Brent Taylor Vet Center Outstation.pdf",
+          "pageid": 76104041,
+          "size": 555,
+          "wordcount": 68,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English H.R.54 \u2014 116th Congress (2019-2020) To designate",
+          "timestamp": "2025-04-20T20:44:29Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:United States Statutes at Large Volume 133.pdf",
+          "pageid": 176472133,
+          "size": 390,
+          "wordcount": 30,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English described at URL: https://www.govinfo.g",
+          "timestamp": "2026-08-14T21:59:56Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Easement flight fall '09 002 (6634464007).jpg",
+          "pageid": 69208615,
+          "size": 1164,
+          "wordcount": 135,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2026-03-06T21:27:10Z"
+        }
+      ]
+    }
+  }
+}

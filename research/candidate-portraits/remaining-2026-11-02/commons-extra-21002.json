@@ -1,0 +1,489 @@
+{
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&titles=File%3ARobb+Tucker%2C+2025+%28cropped%29.jpg%7CFile%3AKyle+Kirkland%2C+2018+%28cropped%29.jpg%7CFile%3AChuong+Vo+%28cropped%29.jpg%7CFile%3AEric+Ching+%28closer+crop%29.png&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cmime%7Cextmetadata&iiurlwidth=250&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main",
+  "candidateIds": [
+    21002,
+    21053,
+    21135,
+    21027
+  ],
+  "retrievedAtUtc": "2026-11-02T21:34:09Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "pages": {
+        "193679718": {
+          "pageid": 193679718,
+          "ns": 6,
+          "title": "File:Chuong Vo (cropped).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 266184,
+              "width": 1052,
+              "height": 1403,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Chuong_Vo_%28cropped%29.jpg/250px-Chuong_Vo_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 333,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Chuong_Vo_%28cropped%29.jpg/500px-Chuong_Vo_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Chuong_Vo_%28cropped%29.jpg/250px-Chuong_Vo_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 333,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Chuong_Vo_%28cropped%29.jpg/500px-Chuong_Vo_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Chuong_Vo_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Chuong_Vo_(cropped).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=193679718",
+              "sha1": "df52106c877cf0619656aa46ddb3d07f6cb39f75",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-06-11 19:15:18",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Chuong Vo (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Self-published work|Extracted images|Chuong Vo",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Headshot of Chuong Vo",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-10-02",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Thalweg99244290&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Thalweg99244290 (page does not exist)\">Thalweg99244290</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1229729386,
+              "parentid": 1229504409,
+              "timestamp": "2026-06-12T06:33:59Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Headshot of Chuong Vo}}\n|date=2025-10-02\n|source={{own}}\n|author=[[User:Thalweg99244290|Thalweg99244290]]\n|permission=\n|other versions={{Extracted from|1=Chuong Vo.jpg}}\n}}\n\n=={{int:license-header}}==\n{{self|cc-zero}}\n\n[[Category:Chuong Vo]]"
+                }
+              }
+            }
+          ]
+        },
+        "146113813": {
+          "pageid": 146113813,
+          "ns": 6,
+          "title": "File:Eric Ching (closer crop).png",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 20028,
+              "width": 150,
+              "height": 187,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Eric_Ching_%28closer_crop%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 250,
+              "thumbheight": 312,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Eric_Ching_%28closer_crop%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 312
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Eric_Ching_%28closer_crop%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Eric_Ching_(closer_crop).png",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=146113813",
+              "sha1": "fbc779ed29c9921d522bf6c35e1594d76d019890",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2024-03-06 06:20:41",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Eric Ching (closer crop)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "People of Los Angeles County, California|Mayors of California|PD California|Walnut, California|Ching (surname)|Extracted images|Unknown date",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Walnut, CA mayor Eric Ching",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "Unknown date",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://web.archive.org/web/20211208094344/https://www.cityofwalnut.org/my-government/city-council-3488\">https://web.archive.org/web/20211208094344/https://www.cityofwalnut.org/my-government/city-council-3488</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Government of Walnut, CA",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/png"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1231906489,
+              "parentid": 859450322,
+              "timestamp": "2026-06-15T17:37:42Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Walnut, CA mayor Eric Ching}}\n|date={{other date|?}}\n|source=https://web.archive.org/web/20211208094344/https://www.cityofwalnut.org/my-government/city-council-3488\n|author=Government of Walnut, CA\n|permission=\n|other versions={{Extracted from|1=Eric Ching (cropped).png}}{{Extracted from|1=Eric Ching.png}}\n}}\n\n=={{int:license-header}}==\n\n{{PD-CAGov}}\n\n[[Category:Mayors of California]]\n[[Category:Ching (surname)]]\n[[Category:Walnut, California]]\n[[Category:People of Los Angeles County, California]]"
+                }
+              }
+            }
+          ]
+        },
+        "146632908": {
+          "pageid": 146632908,
+          "ns": 6,
+          "title": "File:Kyle Kirkland, 2018 (cropped).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 393172,
+              "width": 1206,
+              "height": 1510,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Kyle_Kirkland%2C_2018_%28cropped%29.jpg/250px-Kyle_Kirkland%2C_2018_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 313,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Kyle_Kirkland%2C_2018_%28cropped%29.jpg/500px-Kyle_Kirkland%2C_2018_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Kyle_Kirkland%2C_2018_%28cropped%29.jpg/250px-Kyle_Kirkland%2C_2018_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 313,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Kyle_Kirkland%2C_2018_%28cropped%29.jpg/500px-Kyle_Kirkland%2C_2018_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Kyle_Kirkland%2C_2018_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Kyle_Kirkland,_2018_(cropped).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=146632908",
+              "sha1": "4225f0c85f90361f7f3a7ed9e42bcdaaa4d0a000",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2024-03-21 18:39:35",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Kyle Kirkland, 2018 (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Media from YouTube|Politicians of California|License review needed|YouTube review needed|Extracted images",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Club One Casino President Kyle Kirkland talked about why Clib One is a great place to play in Central California.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2018-05-19",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.youtube.com/watch?v=_Uqq_hYcqvA&amp;t=104s\">WPTDS Tour De Fresno: Club One Casino</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "World Poker Tour",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 3.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 3.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/3.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-3.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 981324812,
+              "parentid": 866504222,
+              "timestamp": "2025-01-09T04:25:18Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Club One Casino President Kyle Kirkland talked about why Clib One is a great place to play in Central California.}}\n|date=2018-05-19\n|source=[https://www.youtube.com/watch?v=_Uqq_hYcqvA&t=104s  WPTDS Tour De Fresno: Club One Casino]\n|author=World Poker Tour\n|permission=\n|other versions={{Extracted from|1=Kyle Kirkland, 2018.jpg}}\n}}\n\n=={{int:license-header}}==\n\n{{YouTubeReview}}{{YouTube CC-BY}}\n\n[[Category:Politicians of California]]"
+                }
+              }
+            }
+          ]
+        },
+        "193350195": {
+          "pageid": 193350195,
+          "ns": 6,
+          "title": "File:Robb Tucker, 2025 (cropped).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 26852,
+              "width": 375,
+              "height": 500,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Robb_Tucker%2C_2025_%28cropped%29.jpg/250px-Robb_Tucker%2C_2025_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 333,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Robb_Tucker%2C_2025_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Robb_Tucker%2C_2025_%28cropped%29.jpg/250px-Robb_Tucker%2C_2025_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 333,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Robb_Tucker%2C_2025_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Robb_Tucker%2C_2025_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Robb_Tucker,_2025_(cropped).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=193350195",
+              "sha1": "c87a39e8f357470881a1bc93b65eec3a5a879db2",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-06-04 06:31:51",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Robb Tucker, 2025 (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Republicans from California|PD California|Extracted images",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Official portrait of Nevada County supervisor Robb Tucker.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.nevadacountyca.gov/731/Board-of-Supervisors\">https://www.nevadacountyca.gov/731/Board-of-Supervisors</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Nevada County Board of Supervisors",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1226973103,
+              "parentid": 1225671082,
+              "timestamp": "2026-06-06T22:16:31Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Official portrait of Nevada County supervisor Robb Tucker.}}\n|date=2025\n|source=https://www.nevadacountyca.gov/731/Board-of-Supervisors\n|author=Nevada County Board of Supervisors\n|permission=\n|other versions={{Extracted from|1=Robb Tucker, 2025.jpg}}\n}}\n\n=={{int:license-header}}==\n{{PD-CAGov}}\n\n[[Category:Republicans from California]]"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

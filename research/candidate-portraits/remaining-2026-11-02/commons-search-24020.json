@@ -1,0 +1,34 @@
+{
+  "sourceCandidateId": 24020,
+  "query": "Cheryl Riley",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Cheryl+Riley%22",
+  "retrievedAtUtc": "2026-11-02T21:35:20Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 2
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Sample ballot for U.S. elections in Montgomery County, Maryland (2024).pdf",
+          "pageid": 154759842,
+          "size": 409,
+          "wordcount": 13,
+          "snippet": "English Sample ballot for Maryland election (2022) determination method or standard: SHA-1",
+          "timestamp": "2025-03-09T01:35:37Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:M-Cooper 2023 World-History-I-(Drum)-by-Cheryl-Riley 07.jpg",
+          "pageid": 165618851,
+          "size": 417,
+          "wordcount": 132,
+          "snippet": "BROOKLYN MUSEUM WORLD HISTORY I, DRUM (2023) Permanent Collection Commission This file is licensed under the Creative Commons Attribution 4.0 International",
+          "timestamp": "2026-01-28T02:56:01Z"
+        }
+      ]
+    }
+  }
+}

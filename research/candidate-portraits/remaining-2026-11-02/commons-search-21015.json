@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 21015,
+  "query": "Shane Lewis",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Shane+Lewis%22",
+  "retrievedAtUtc": "2026-11-02T21:31:24Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 10
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:WR LMP-02 - Stephane Daoudi, Jean-Rene de Fournoux & Bastien Briere and Ferrari 360 Modena - Shane Lewis, Johnny Mowlem & Butch Leitzinger enters the Esses during the 2003 Le Mans (42171210761).jpg",
+          "pageid": 117037037,
+          "size": 1036,
+          "wordcount": 161,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-01-10T01:52:11Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Audi R8R - Emanuelle Pirro, Frank Biela & Didier Theys at Ford Chicane at the 1999 Le Mans (51909686586).jpg",
+          "pageid": 115657870,
+          "size": 804,
+          "wordcount": 206,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2025-12-05T01:09:19Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:24H Series 2023 Spa Nr. 85 (1).jpg",
+          "pageid": 131918699,
+          "size": 473,
+          "wordcount": 164,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2025-05-17T17:48:19Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:24H Series 2023 Spa Nr. 85 (2).jpg",
+          "pageid": 131918701,
+          "size": 473,
+          "wordcount": 164,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2025-05-17T17:48:21Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:24H Series 2022 Spa Nr. 85.jpg",
+          "pageid": 118352664,
+          "size": 439,
+          "wordcount": 164,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2025-05-17T17:46:07Z"
+        }
+      ]
+    }
+  }
+}

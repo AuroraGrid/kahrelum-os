@@ -1,0 +1,64 @@
+{
+  "sourceCandidateId": 20467,
+  "query": "Everett Jackson",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Everett+Jackson%22",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 149
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Senic Route late December - panoramio (51).jpg",
+          "pageid": 60140714,
+          "size": 1248,
+          "wordcount": 46,
+          "snippet": "English object of statement has role: photographer author name string: Ron Shawley URL: https://web.archive.org/web/20161101102125/http://www.panoramio",
+          "timestamp": "2026-01-15T20:42:00Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Senic clouds - panoramio (4).jpg",
+          "pageid": 60140105,
+          "size": 1247,
+          "wordcount": 46,
+          "snippet": "English object of statement has role: photographer author name string: Ron Shawley URL: https://web.archive.org/web/20161101062132/http://www.panoramio",
+          "timestamp": "2025-06-13T22:07:45Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Senic Route - panoramio (11).jpg",
+          "pageid": 60140225,
+          "size": 1247,
+          "wordcount": 52,
+          "snippet": "English object of statement has role: photographer author name string: Ron Shawley URL: https://web.archive.org/web/20161102045544/http://www.panoramio",
+          "timestamp": "2025-12-10T22:51:47Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Senic Route late December - panoramio (92).jpg",
+          "pageid": 60141103,
+          "size": 1259,
+          "wordcount": 46,
+          "snippet": "English object of statement has role: photographer author name string: Ron Shawley URL: https://web.archive.org/web/20161031053150/http://www.panoramio",
+          "timestamp": "2023-01-21T08:24:18Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Senic Route late December - panoramio (78).jpg",
+          "pageid": 60140968,
+          "size": 1266,
+          "wordcount": 46,
+          "snippet": "English object of statement has role: photographer author name string: Ron Shawley URL: https://web.archive.org/web/20161101102110/http://www.panoramio",
+          "timestamp": "2026-01-13T17:05:43Z"
+        }
+      ]
+    }
+  }
+}

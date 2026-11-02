@@ -1,0 +1,524 @@
+{
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&titles=File%3AVADM_Nancy_S._Lacore_%282%29.jpg%7CFile%3AUS_District_Attorney_Marty_Jackley.png%7CFile%3ABobby_Pulido_%28CROPPED%29.jpg%7CFile%3ASteveToth--EagleForum--TX2Debate--GraceChurch--SpringTX--08Jan2026_%28cropped%29.jpg&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cmime%7Cextmetadata&iiurlwidth=250&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main",
+  "retrievedAtUtc": "2026-11-02T21:32:10Z",
+  "candidateIds": [
+    23202,
+    19054,
+    20438,
+    20412
+  ],
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "normalized": [
+        {
+          "from": "File:VADM_Nancy_S._Lacore_(2).jpg",
+          "to": "File:VADM Nancy S. Lacore (2).jpg"
+        },
+        {
+          "from": "File:US_District_Attorney_Marty_Jackley.png",
+          "to": "File:US District Attorney Marty Jackley.png"
+        },
+        {
+          "from": "File:Bobby_Pulido_(CROPPED).jpg",
+          "to": "File:Bobby Pulido (CROPPED).jpg"
+        },
+        {
+          "from": "File:SteveToth--EagleForum--TX2Debate--GraceChurch--SpringTX--08Jan2026_(cropped).jpg",
+          "to": "File:SteveToth--EagleForum--TX2Debate--GraceChurch--SpringTX--08Jan2026 (cropped).jpg"
+        }
+      ],
+      "pages": {
+        "155289241": {
+          "pageid": 155289241,
+          "ns": 6,
+          "title": "File:Bobby Pulido (CROPPED).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 111008,
+              "width": 533,
+              "height": 683,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Bobby_Pulido_%28CROPPED%29.jpg/250px-Bobby_Pulido_%28CROPPED%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 320,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Bobby_Pulido_%28CROPPED%29.jpg/500px-Bobby_Pulido_%28CROPPED%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Bobby_Pulido_%28CROPPED%29.jpg/250px-Bobby_Pulido_%28CROPPED%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 320,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Bobby_Pulido_%28CROPPED%29.jpg/500px-Bobby_Pulido_%28CROPPED%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Bobby_Pulido_%28CROPPED%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Bobby_Pulido_(CROPPED).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=155289241",
+              "sha1": "21d907e5c83e575a11300cc73f16d56fbe2f3ba1",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2024-11-18 05:25:06",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Bobby Pulido (CROPPED)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Bobby Pulido|Extracted images",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Bobby Pulido at the Chicano Festival 2011 Houston Tx.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2024-11-17",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a class=\"external free\" href=\"https://commons.wikimedia.org/wiki/File:Bobby_Pulido.jpg\">https://commons.wikimedia.org/wiki/File:Bobby_Pulido.jpg</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Kim-bodia",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1090516257,
+              "parentid": 958476144,
+              "timestamp": "2025-09-25T01:33:09Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{es|1=Bobby Pulido at the Chicano Festival 2011 Houston Tx.}}\n|date=2024-11-17\n|source=https://commons.wikimedia.org/wiki/File:Bobby_Pulido.jpg\n|author=Kim-bodia\n|permission=\n|other versions={{Extracted from|1=Bobby Pulido.jpg}}\n}}\n\n=={{int:license-header}}==\n{{cc-by-4.0}}\n\n[[Category:Bobby Pulido]]"
+                }
+              }
+            }
+          ]
+        },
+        "185491661": {
+          "pageid": 185491661,
+          "ns": 6,
+          "title": "File:SteveToth--EagleForum--TX2Debate--GraceChurch--SpringTX--08Jan2026 (cropped).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 163427,
+              "width": 300,
+              "height": 401,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/SteveToth--EagleForum--TX2Debate--GraceChurch--SpringTX--08Jan2026_%28cropped%29.jpg/250px-SteveToth--EagleForum--TX2Debate--GraceChurch--SpringTX--08Jan2026_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 334,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/4/4e/SteveToth--EagleForum--TX2Debate--GraceChurch--SpringTX--08Jan2026_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/SteveToth--EagleForum--TX2Debate--GraceChurch--SpringTX--08Jan2026_%28cropped%29.jpg/250px-SteveToth--EagleForum--TX2Debate--GraceChurch--SpringTX--08Jan2026_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 334,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/4/4e/SteveToth--EagleForum--TX2Debate--GraceChurch--SpringTX--08Jan2026_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/SteveToth--EagleForum--TX2Debate--GraceChurch--SpringTX--08Jan2026_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:SteveToth--EagleForum--TX2Debate--GraceChurch--SpringTX--08Jan2026_(cropped).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=185491661",
+              "sha1": "3bf1e5994cc7e4e811025bd179279f695bce9566",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-03-04 16:12:14",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "SteveToth--EagleForum--TX2Debate--GraceChurch--SpringTX--08Jan2026 (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Texas in the 2020s|CC-Zero|Steve Toth|People of Montgomery County, Texas|Republicans from Texas|Politics of Texas|Self-published work|Extracted images|Files with coordinates missing SDC location of creation|2026 in Houston|Male politicians of Texas",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "30.117503",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "-95.438010",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Steve Toth speaking during an Eagle Forum debate at Grace Woodlands Church in Spring, Texas on January 8, 2026.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2026-01-11 06:16:53",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:LiwenAristodemos\" title=\"User:LiwenAristodemos\">LiwenAristodemos</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1254777940,
+              "parentid": 1224597066,
+              "timestamp": "2026-07-31T20:04:09Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Steve Toth speaking during an Eagle Forum debate at Grace Woodlands Church in Spring, Texas on January 8, 2026.}}\n{{es|1=Steve Toth hablando durante un debate de Eagle Forum en la iglesia Grace Woodlands Church en Spring, Texas, el 8 de enero de 2026.}}\n|date=2026-01-11 06:16:53\n|source={{own}}\n|author=[[User:LiwenAristodemos|LiwenAristodemos]]\n|permission=\n|other versions={{Extracted from|1=SteveToth--EagleForum--TX2Debate--GraceChurch--SpringTX--08Jan2026.jpg}}\n}}\n{{Location|30.117503|-95.43801}}\n\n30.117503205360947, -95.43801023556257\n\n=={{int:license-header}}==\n{{self|cc-zero}}\n\n[[Category:Steve Toth]]\n[[Category:2026 in Houston]]\n[[Category:Republicans from Texas]]\n[[Category:People of Montgomery County, Texas]]\n[[Category:Male politicians of Texas]]\n[[Category:Texas in the 2020s]]\n[[Category:Politics of Texas]]"
+                }
+              }
+            }
+          ]
+        },
+        "57125758": {
+          "pageid": 57125758,
+          "ns": 6,
+          "title": "File:US District Attorney Marty Jackley.png",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 732959,
+              "width": 510,
+              "height": 768,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/US_District_Attorney_Marty_Jackley.png/250px-US_District_Attorney_Marty_Jackley.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 376,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/US_District_Attorney_Marty_Jackley.png/500px-US_District_Attorney_Marty_Jackley.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/US_District_Attorney_Marty_Jackley.png/250px-US_District_Attorney_Marty_Jackley.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 376,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/US_District_Attorney_Marty_Jackley.png/500px-US_District_Attorney_Marty_Jackley.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/US_District_Attorney_Marty_Jackley.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:US_District_Attorney_Marty_Jackley.png",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=57125758",
+              "sha1": "28765216160a80faa9189ec4ff617a756d5e6963",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2017-03-15 20:49:03",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "US District Attorney Marty Jackley",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD US Government|Marty Jackley|Images with extracted images|CC-PD-Mark|Men wearing red neckties",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Portrait of then US District Attorney Marty Jackley",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2006",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" data-mw-original-href=\"http://www.justice.gov/usao/sd/\" href=\"https://www.justice.gov/usao/sd/\">http://www.justice.gov/usao/sd/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "US District of South Dakota",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/png"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1192220401,
+              "parentid": 980718768,
+              "timestamp": "2026-04-05T21:13:56Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "== {{int:filedesc}} ==\n{{Information\n|Description={{en|Portrait of then US District Attorney Marty Jackley}}\n|Source=http://www.justice.gov/usao/sd/\n|Date=2006\n|Author=US District of South Dakota\n|Permission=\n|other_versions={{Image extracted|1=US District Attorney Marty Jackley (3x4 crop).png}}\n}}\n\n== {{int:license-header}} ==\n{{PD-USGov}}\n\n== {{Original upload log}} ==\n{{original description|en.wikipedia|US+District+Attorney+Marty+Jackley.png}}\n{| class=\"wikitable\"\n! {{int:filehist-datetime}} !! {{int:filehist-dimensions}} !! {{int:filehist-user}} !! {{int:filehist-comment}}\n|-\n| 2014-12-14 17:37 || 510\u00d7768\u00d7 (732959 bytes) || [[:en:User:Koncurrentkat|Koncurrentkat]] || ''<nowiki>Uploading a public-domain item using [[Wikipedia:File_Upload_Wizard|File Upload Wizard]]</nowiki>''\n|}\n\n[[Category:Marty Jackley]]\n[[Category:Men wearing red neckties]]"
+                }
+              }
+            }
+          ]
+        },
+        "152820429": {
+          "pageid": 152820429,
+          "ns": 6,
+          "title": "File:VADM Nancy S. Lacore (2).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 2690729,
+              "width": 3561,
+              "height": 4451,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/VADM_Nancy_S._Lacore_%282%29.jpg/250px-VADM_Nancy_S._Lacore_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 312,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/VADM_Nancy_S._Lacore_%282%29.jpg/500px-VADM_Nancy_S._Lacore_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/VADM_Nancy_S._Lacore_%282%29.jpg/250px-VADM_Nancy_S._Lacore_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 312,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/VADM_Nancy_S._Lacore_%282%29.jpg/500px-VADM_Nancy_S._Lacore_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/VADM_Nancy_S._Lacore_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:VADM_Nancy_S._Lacore_(2).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=152820429",
+              "sha1": "627e2548fb85ab2b4c9fc0f4432eaa8cd323ca6c",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2024-09-18 15:34:35",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "VADM Nancy S. Lacore (2)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD US Government|Nancy S. Lacore|Images with extracted images|CC-PD-Mark",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "VADM Nancy S. Lacore, Chief of Navy Reserve, N095, Office of the Chief of Naval Operations",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2024-09-18",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.navy.mil/Leadership/Flag-Officer-Biographies/BioDisplay/Article/2236442/\">https://www.navy.mil/Leadership/Flag-Officer-Biographies/BioDisplay/Article/2236442/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "U.S. Navy",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1264269718,
+              "parentid": 925890264,
+              "timestamp": "2026-08-20T14:41:32Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=VADM Nancy S. Lacore, Chief of Navy Reserve, N095, Office of the Chief of Naval Operations}}\n|date=2024-09-18\n|source=https://www.navy.mil/Leadership/Flag-Officer-Biographies/BioDisplay/Article/2236442/\n|author=U.S. Navy\n|permission=\n|other versions={{Image extracted|1=VADM Nancy S. Lacore (2) (cropped).jpg}}\n}}\n\n=={{int:license-header}}==\n{{PD-USGov}}\n\n[[Category:Nancy S. Lacore]]"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

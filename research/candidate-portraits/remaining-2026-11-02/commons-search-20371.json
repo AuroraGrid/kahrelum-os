@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20371,
+  "query": "Cliff Johnson",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Cliff+Johnson%22",
+  "retrievedAtUtc": "2026-11-02T21:35:49Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 32
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Jake Roche (cropped).jpg",
+          "pageid": 76078222,
+          "size": 425,
+          "wordcount": 137,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2023-08-06T01:51:32Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:The business directory of New York City, and Newark City, N.J (IA businessdirector00amer).pdf",
+          "pageid": 196364720,
+          "size": 1013,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2026-07-28T13:16:04Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:The life of Samuel Johnson (IA lifeofsamueljoh02bosw).pdf",
+          "pageid": 95693189,
+          "size": 796,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2023-02-16T01:19:32Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Forest Service organizational directory FS-65 (IA SER74926648035).pdf",
+          "pageid": 92210942,
+          "size": 1086,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2026-10-05T11:24:55Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Carnation Cafe - Flickr - Cliff Johnson.jpg",
+          "pageid": 92227205,
+          "size": 1195,
+          "wordcount": 168,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2024-11-29T23:11:43Z"
+        }
+      ]
+    }
+  }
+}

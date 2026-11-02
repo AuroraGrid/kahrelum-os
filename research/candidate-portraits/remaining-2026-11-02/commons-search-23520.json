@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 23520,
+  "query": "Peter Crosby",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Peter+Crosby%22",
+  "retrievedAtUtc": "2026-11-02T21:40:54Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 23
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Plugg 2010 Peter Crosby (4423873633).jpg",
+          "pageid": 74076826,
+          "size": 987,
+          "wordcount": 146,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2024-07-28T23:46:23Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Biographical review of Calhoun County, Michigan - containing historical, biographical and genealogical sketches of many of the prominent citizens of to-day and also of the past (IA arx1021.0001.001.umich.edu).pdf",
+          "pageid": 94797288,
+          "size": 1003,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-02-26T03:17:21Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Report of the Joint special committee appointed to investigate the late insurrection in the city of Vicksburg, Warren County (IA reportofjointspe00miss).pdf",
+          "pageid": 91904280,
+          "size": 1024,
+          "wordcount": 0,
+          "snippet": "",
+          "timestamp": "2020-09-26T23:40:35Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Genealogy. Family of Aaron and Sarah Bradley, of Guilford, Conn (IA genealogyfamilyo00lloy).pdf",
+          "pageid": 196950234,
+          "size": 1017,
+          "wordcount": 21,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English determination method or standard: SHA-1",
+          "timestamp": "2026-08-30T04:28:31Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Plugg 2010 Peter Crosby (4424638368).jpg",
+          "pageid": 74076822,
+          "size": 986,
+          "wordcount": 146,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2026-01-28T21:29:44Z"
+        }
+      ]
+    }
+  }
+}

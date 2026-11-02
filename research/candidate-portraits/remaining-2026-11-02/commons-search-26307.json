@@ -1,0 +1,64 @@
+{
+  "sourceCandidateId": 26307,
+  "query": "Fred Wellman",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Fred+Wellman%22",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 10
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Fred Wellman, August 2025.png",
+          "pageid": 202046480,
+          "size": 475,
+          "wordcount": 196,
+          "snippet": "This video, screenshot, or audio excerpt was released on YouTube under the Creative Commons Attribution 4.0 license after July 2025. YouTube changed the",
+          "timestamp": "2026-10-20T06:15:12Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Seal of Missouri.svg",
+          "pageid": 4139202,
+          "size": 586,
+          "wordcount": 19,
+          "snippet": "English TOMA MIHAEL-GABRIEL French Sceau du Missouri. applies to jurisdiction: United States determination method or standard: SHA-1",
+          "timestamp": "2025-11-30T01:03:41Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:The Automobile club of Hartford.. (IA automobileclubof00auto).pdf",
+          "pageid": 93025411,
+          "size": 770,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2023-02-18T06:02:55Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Big Ten Basketball Captains, Dec. 1924.jpg",
+          "pageid": 158659193,
+          "size": 764,
+          "wordcount": 26,
+          "snippet": "English 1924 photographs of George Cameron, Ohio State Buckeyes men&#039;s basketball player, and Fred Wellman, Purdue Boilermakers men&#039;s basketball player",
+          "timestamp": "2025-09-16T16:46:34Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Forest and stream (IA foreststream861916newy).pdf",
+          "pageid": 91982649,
+          "size": 1413,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-07-24T19:54:33Z"
+        }
+      ]
+    }
+  }
+}

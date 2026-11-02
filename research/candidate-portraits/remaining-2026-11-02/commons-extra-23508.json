@@ -1,0 +1,497 @@
+{
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&titles=File%3AJeanine+Driscoll.jpg%7CFile%3AJoseph+chou+headshot+2.jpg%7CFile%3ADavidRuss+Official-2024.jpg%7CFile%3ACaroline+Shinkle+Selfie+%28cropped%29.jpg&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cmime%7Cextmetadata&iiurlwidth=250&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main",
+  "candidateIds": [
+    23508,
+    23056,
+    20511,
+    23196
+  ],
+  "retrievedAtUtc": "2026-11-02T21:39:38Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "pages": {
+        "200828384": {
+          "pageid": 200828384,
+          "ns": 6,
+          "title": "File:Caroline Shinkle Selfie (cropped).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 39582,
+              "width": 347,
+              "height": 463,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Caroline_Shinkle_Selfie_%28cropped%29.jpg/250px-Caroline_Shinkle_Selfie_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 334,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/2/20/Caroline_Shinkle_Selfie_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Caroline_Shinkle_Selfie_%28cropped%29.jpg/250px-Caroline_Shinkle_Selfie_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 334,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/2/20/Caroline_Shinkle_Selfie_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Caroline_Shinkle_Selfie_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Caroline_Shinkle_Selfie_(cropped).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=200828384",
+              "sha1": "412fe224f819a89fb3bba78d365ae7e26c31f060",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-10-02 14:08:51",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Caroline Shinkle Selfie (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Republicans|Republicans from New York (state)|Creative Commons CC0 1.0 Universal Public Domain Dedication missing SDC copyright license|Self-published work|Extracted images|Self-published work missing SDC copyright license",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Selfie photo with caroline shinkle, Republican nominee for NY-12 (Photo taken on iPhone 16 Pro)",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2026-09-28",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:AidansStuff\" title=\"User:AidansStuff\">AidansStuff</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1283077805,
+              "parentid": 1282803326,
+              "timestamp": "2026-10-04T12:00:59Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Selfie photo with caroline shinkle, Republican nominee for NY-12 (Photo taken on iPhone 16 Pro)}}\n|date=2026-09-28\n|source={{own}}\n|author=[[User:AidansStuff|AidansStuff]]\n|permission=\n|other versions={{Extracted from|1=Caroline Shinkle Selfie.jpg}}\n}}\n\n=={{int:license-header}}==\n{{self|cc-zero}}\n\n[[Category:Republicans]]\n[[Category:Republicans from New York (state)]]"
+                }
+              }
+            }
+          ]
+        },
+        "148214625": {
+          "pageid": 148214625,
+          "ns": 6,
+          "title": "File:DavidRuss Official-2024.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 32197,
+              "width": 300,
+              "height": 450,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/DavidRuss_Official-2024.jpg/250px-DavidRuss_Official-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 375,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/3/3c/DavidRuss_Official-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/DavidRuss_Official-2024.jpg/250px-DavidRuss_Official-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 375,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/3/3c/DavidRuss_Official-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/DavidRuss_Official-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:DavidRuss_Official-2024.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=148214625",
+              "sha1": "c29d0d032efb5dd21c4730545ca77ec981db4807",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2024-05-09 22:48:44",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "DavidRuss Official-2024",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Self-published work|Unidentified men",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "David Russ for Congress 2024\n<p>RussIsForUS.com\n</p>\n<ol><li>RussIsForUS</li></ol>",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2024-03-11",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:DFRUSS&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:DFRUSS (page does not exist)\">DFRUSS</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1285291919,
+              "parentid": 886732153,
+              "timestamp": "2026-10-10T05:07:49Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=David Russ for Congress 2024\nRussIsForUS.com\n#RussIsForUS}}\n|date=2024-03-11\n|source={{own}}\n|author=[[User:DFRUSS|DFRUSS]]\n|permission=\n|other versions=\n}}\n\n=={{int:license-header}}==\n{{self|cc-by-4.0}}\n\n[[Category:unidentified men]]"
+                }
+              }
+            }
+          ]
+        },
+        "202035582": {
+          "pageid": 202035582,
+          "ns": 6,
+          "title": "File:Jeanine Driscoll.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 11263,
+              "width": 200,
+              "height": 300,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/8/81/Jeanine_Driscoll.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 250,
+              "thumbheight": 375,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/8/81/Jeanine_Driscoll.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 375
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Jeanine_Driscoll.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Jeanine_Driscoll.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=202035582",
+              "sha1": "d0b95706ae9097f654417e8ad4f81d6d79bc255d",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-10-19 22:07:33",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Jeanine Driscoll",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Self-published work|All media needing categories as of 2026|Media needing categories as of 19 October 2026",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "2026 Republican Congressional Candidate NY-04; Town of Hempstead Receiver of Taxes",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2026-06-23",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:LongIslandWatch&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:LongIslandWatch (page does not exist)\">LongIslandWatch</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1289266450,
+              "parentid": 1289221632,
+              "timestamp": "2026-10-20T00:08:10Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=2026 Republican Congressional Candidate NY-04; Town of Hempstead Receiver of Taxes}}\n|date=2026-06-23\n|source={{own}}\n|author=[[User:LongIslandWatch|LongIslandWatch]]\n|permission=\n|other versions=\n}}\n\n=={{int:license-header}}==\n{{self|cc-zero}}\n\n{{Uncategorized|year=2026|month=October|day=19}}"
+                }
+              }
+            }
+          ]
+        },
+        "151623285": {
+          "pageid": 151623285,
+          "ns": 6,
+          "title": "File:Joseph chou headshot 2.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 562556,
+              "width": 1920,
+              "height": 1920,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Joseph_chou_headshot_2.jpg/250px-Joseph_chou_headshot_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 250,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Joseph_chou_headshot_2.jpg/500px-Joseph_chou_headshot_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Joseph_chou_headshot_2.jpg/250px-Joseph_chou_headshot_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 250,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Joseph_chou_headshot_2.jpg/500px-Joseph_chou_headshot_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Joseph_chou_headshot_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Joseph_chou_headshot_2.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=151623285",
+              "sha1": "814f71a47083a76c93762e90a08d0fa325f3cb02",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2024-08-19 23:23:50",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Joseph chou headshot 2",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Self-published work|All media needing categories as of 2024|Media needing categories as of 19 August 2024",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "head shot",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2024-08-09",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Joseph_J_Chou&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Joseph J Chou (page does not exist)\">Joseph J Chou</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1076088710,
+              "parentid": 912664621,
+              "timestamp": "2025-08-21T16:16:21Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "== {{int:filedesc}} ==\n{{Information\n|description={{en|1=head shot}}\n|date=2024-08-09\n|source={{own}}\n|author=[[User:Joseph J Chou|Joseph J Chou]]\n}}\n\n== {{int:license-header}} ==\n{{self|cc-by-sa-4.0}}\n\n{{Uncategorized|year=2024|month=August|day=19}}"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

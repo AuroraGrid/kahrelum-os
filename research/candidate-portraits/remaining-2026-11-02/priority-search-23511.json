@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 23511,
+  "query": "\"Anthony Constantino\" New York",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=15&srsearch=%22Anthony+Constantino%22+New+York",
+  "retrievedAtUtc": "2026-11-02T21:48:11Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Anthony Constantino has my Complete and Total Endorsement to be the next U.S. Representative from New York\u2019s 21st Congressional District \u2013 HE WILL NEVER LET YOU DOWN!.webm",
+          "pageid": 202436923,
+          "size": 695,
+          "wordcount": 0,
+          "snippet": "Constantino has my Complete and Total Endorsement to be <span class=\"searchmatch\">the</span> next U.S. Representative from <span class=\"searchmatch\">New</span> <span class=\"searchmatch\">York\u2019s</span> 21st Congressional District \u2013 HE WILL NEVER LET YOU DOWN",
+          "timestamp": "2026-10-30T01:16:08Z"
+        }
+      ]
+    }
+  }
+}

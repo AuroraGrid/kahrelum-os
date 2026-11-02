@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 21010,
+  "query": "Jamie Joyce",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Jamie+Joyce%22",
+  "retrievedAtUtc": "2026-11-02T21:31:09Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Wikitongues - 2021 - 990 Package.pdf",
+          "pageid": 112949674,
+          "size": 370,
+          "wordcount": 162,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2021-11-30T23:21:34Z"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 23162,
+  "query": "Justin Pearson",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Justin+Pearson%22",
+  "retrievedAtUtc": "2026-11-02T21:39:45Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 19
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:The Locust.jpg",
+          "pageid": 4019687,
+          "size": 599,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-01-29T06:59:57Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Justin J Pearson August 2023.jpg",
+          "pageid": 136344434,
+          "size": 314,
+          "wordcount": 152,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-08-23T03:45:45Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Justin Pearson at the White House on April 24, 2023 - P20230424AS-1247 (cropped).jpg",
+          "pageid": 132338504,
+          "size": 1120,
+          "wordcount": 29,
+          "snippet": "English Justin Pearson at the White House on April 24, 2023 applies to jurisdiction: United States determination method or standard: work of the federal",
+          "timestamp": "2026-07-09T08:25:00Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Kamala Harris with the Tennessee Three.jpg",
+          "pageid": 130474802,
+          "size": 870,
+          "wordcount": 19,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States",
+          "timestamp": "2024-08-20T09:41:49Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Justin-Pearson-Stunt-Coodinator-headshot-8.jpg",
+          "pageid": 125041041,
+          "size": 244,
+          "wordcount": 156,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-05-25T00:34:00Z"
+        }
+      ]
+    }
+  }
+}

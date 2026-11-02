@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 19402,
+  "query": "Jim Duffie",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Jim+Duffie%22",
+  "retrievedAtUtc": "2026-11-02T21:34:13Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Hornaday 1975 1982 (15249563474).jpg",
+          "pageid": 53249444,
+          "size": 1032,
+          "wordcount": 41,
+          "snippet": "19 November 2016 English object of statement has role: photographer author name string: Texas State Archives Flickr user ID: 47326604@N02 URL: https://www",
+          "timestamp": "2024-08-21T14:07:08Z"
+        }
+      ]
+    }
+  }
+}

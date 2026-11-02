@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 16324,
+  "query": "Justin Murphy",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Justin+Murphy%22",
+  "retrievedAtUtc": "2026-11-02T21:42:10Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 7
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Justin Murphy.jpg",
+          "pageid": 7592721,
+          "size": 630,
+          "wordcount": 160,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-08-02T09:59:53Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:New Milford, CT Public Library.jpg",
+          "pageid": 135843383,
+          "size": 385,
+          "wordcount": 158,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-02-18T01:09:09Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:New Milford Town Hall.jpg",
+          "pageid": 135843203,
+          "size": 332,
+          "wordcount": 152,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2025-06-24T09:59:06Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:New Milford, CT 2023 G.O.A.T Days Carnival.jpg",
+          "pageid": 135843296,
+          "size": 393,
+          "wordcount": 152,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2023-09-06T12:17:55Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:FASTCENT drills 140128-N-IZ292-312.jpg",
+          "pageid": 57342122,
+          "size": 1320,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2026-06-26T06:35:47Z"
+        }
+      ]
+    }
+  }
+}

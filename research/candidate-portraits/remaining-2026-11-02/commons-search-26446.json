@@ -1,0 +1,64 @@
+{
+  "sourceCandidateId": 26446,
+  "query": "Daniel Butierez",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Daniel+Butierez%22",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 28
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Abraham Hamadeh (53756421013).jpg",
+          "pageid": 148877686,
+          "size": 1100,
+          "wordcount": 166,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2024-10-12T00:47:39Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Blake Masters (53756636095).jpg",
+          "pageid": 148877761,
+          "size": 1103,
+          "wordcount": 166,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2025-09-19T23:33:34Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Blake Masters (53756422073).jpg",
+          "pageid": 148877752,
+          "size": 1103,
+          "wordcount": 166,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2025-09-19T23:33:28Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Blake Masters (53756544864).jpg",
+          "pageid": 148877743,
+          "size": 1103,
+          "wordcount": 166,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2025-09-19T23:33:31Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Abraham Hamadeh (53755311467).jpg",
+          "pageid": 148877677,
+          "size": 1100,
+          "wordcount": 166,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2025-03-02T23:06:49Z"
+        }
+      ]
+    }
+  }
+}

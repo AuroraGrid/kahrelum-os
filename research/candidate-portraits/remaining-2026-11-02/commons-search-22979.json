@@ -1,0 +1,42 @@
+{
+  "sourceCandidateId": 22979,
+  "query": "Bale Dalton",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Bale+Dalton%22",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 3
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Administrator Meets with Incoming JPL Director (NHQ202202150002).jpg",
+          "pageid": 130301614,
+          "size": 962,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2025-05-23T00:12:36Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Axiom Mission 1 Launch (NHQ202204080010).jpg",
+          "pageid": 116754085,
+          "size": 1280,
+          "wordcount": 75,
+          "snippet": "English NASA Deputy Chief of Staff Bale Dalton, left, and NASA Administrator Bill Nelson watch the launch of a SpaceX Falcon 9 rocket carrying the company&#039;s",
+          "timestamp": "2024-08-17T22:16:33Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Bale Dalton.webp",
+          "pageid": 191516442,
+          "size": 426,
+          "wordcount": 15,
+          "snippet": "English Bale Dalton, former NASA Chief of Staff from January 2024 to 2025 official portrait.",
+          "timestamp": "2026-05-07T23:38:31Z"
+        }
+      ]
+    }
+  }
+}

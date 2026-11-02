@@ -1,0 +1,43 @@
+{
+  "sourceCandidateId": 19389,
+  "query": "Tony Guy",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Tony+Guy%22",
+  "retrievedAtUtc": "2026-11-02T21:38:45Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 3
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Tony&Guy logo.gif",
+          "pageid": 42933608,
+          "size": 1266,
+          "wordcount": 65,
+          "snippet": "Transferred from de.wikipedia to Commons by Wdwdbot using script bot_filetrans.pl (r36M). The original description page was here. All following user names",
+          "timestamp": "2022-12-11T02:13:02Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:The Rhododendron (serial) (IA rhododendronseri1967appa).pdf",
+          "pageid": 95650728,
+          "size": 856,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-05-26T01:44:14Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Tony & Guy - Salon Quality Shampoo - 50888163047.jpg",
+          "pageid": 102145815,
+          "size": 870,
+          "wordcount": 147,
+          "snippet": "If used, attribution requested in the form of a link to creator https://www.geehair.com This file is licensed under the Creative Commons Attribution 2",
+          "timestamp": "2026-04-08T13:58:13Z"
+        }
+      ]
+    }
+  }
+}

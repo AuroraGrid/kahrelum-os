@@ -1,0 +1,43 @@
+{
+  "sourceCandidateId": 20998,
+  "query": "Doug Chapin",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Doug+Chapin%22",
+  "retrievedAtUtc": "2026-11-02T21:35:38Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 3
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:COMPILATION OF HEARINGS AND MARKUPS (IA gov.gpo.fdsys.CHRG-113shrg93918).pdf",
+          "pageid": 91519076,
+          "size": 2914,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2024-08-24T15:41:36Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:ENSURING THE CONTINUITY OF THE UNITED STATES GOVERNMENT- THE CONGRESS (IA gov.gpo.fdsys.CHRG-108shrg96926).pdf",
+          "pageid": 91450855,
+          "size": 2256,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2025-11-09T02:59:21Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Riley Ridge project - public concerns and scope of environmental impact statement (IA rileyridgeprojec00unse).pdf",
+          "pageid": 91750138,
+          "size": 806,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2026-03-16T20:15:46Z"
+        }
+      ]
+    }
+  }
+}

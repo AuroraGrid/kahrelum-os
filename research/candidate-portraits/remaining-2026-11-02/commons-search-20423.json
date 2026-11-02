@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20423,
+  "query": "Alexander Hale",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Alexander+Hale%22",
+  "retrievedAtUtc": "2026-11-02T21:40:46Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 19
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Alexander Hale Smith.jpg",
+          "pageid": 15636673,
+          "size": 866,
+          "wordcount": 12,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: SHA-1",
+          "timestamp": "2025-06-19T01:39:52Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Marines sacrifice at Recon Challenge for those who gave it all 130517-M-LD192-445.jpg",
+          "pageid": 39163970,
+          "size": 1044,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2025-09-29T23:41:49Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Catalogue and price list (IA cataloguepriceli1897cali).pdf",
+          "pageid": 91318544,
+          "size": 1227,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-06-09T21:09:53Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:The British architect, or, The builders treasury of stair-cases ... (IA gri 33125008736528).pdf",
+          "pageid": 95136660,
+          "size": 2181,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-04-05T00:19:57Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Pennsylvania archives- third series; (IA pennsylvaniaarch142egle).pdf",
+          "pageid": 197221247,
+          "size": 5020,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2026-08-11T08:26:25Z"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "sourceCandidateId": 16294,
+  "query": "Rachel Peace",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Rachel+Peace%22",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 9
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Jane Short 1914.jpg",
+          "pageid": 63937410,
+          "size": 718,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-11-11T12:57:42Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Jane Short (alias Rachel Peace) John Bull 7 February 1914.jpg",
+          "pageid": 189080820,
+          "size": 368,
+          "wordcount": 17,
+          "snippet": "English Caption: Cartoon from &#039;&#039;John Bull&#039;&#039; (7 February 1914) depicting &quot;Rachel Peace&quot; (Jane Short) in Holloway Prison.",
+          "timestamp": "2026-06-27T06:19:48Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Incomparable Bellairs (IA incomparablebell00castiala).pdf",
+          "pageid": 95509105,
+          "size": 944,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-02-08T14:21:05Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:The New York Times 1913-12-19- Vol 63 Iss 20418 (IA per new-york-times-magazine the-new-york-times 1913-12-19 63 20418).pdf",
+          "pageid": 196214376,
+          "size": 1696,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2026-07-31T07:24:04Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:A captive maiden in Damascus; a drama in five acts (IA captivemaiden00reajrich).pdf",
+          "pageid": 94892843,
+          "size": 744,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2023-06-28T07:40:39Z"
+        }
+      ]
+    }
+  }
+}

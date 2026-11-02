@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 22557,
+  "query": "Jennifer Jenkins",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Jennifer+Jenkins%22",
+  "retrievedAtUtc": "2026-11-02T21:33:57Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 25
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Jennifer Jenkins at the Grand Re-Opening of the Public Domain (31991458757).jpg",
+          "pageid": 76229087,
+          "size": 1906,
+          "wordcount": 154,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2025-11-27T11:38:53Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Wikimania 2021 Speaker Guidebook - Spanish.pdf",
+          "pageid": 107615043,
+          "size": 327,
+          "wordcount": 137,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2022-07-08T02:40:50Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Mickey, Disney, and the Public Domain - a 95-year Love Triangle.webm",
+          "pageid": 163082932,
+          "size": 509,
+          "wordcount": 137,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2025-06-05T16:58:21Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Napster@20- Reflections on the Internet\u2019s Most Controversial Music File Sharing Service.webm",
+          "pageid": 151307169,
+          "size": 1287,
+          "wordcount": 207,
+          "snippet": "This video, screenshot or audio excerpt was released under the Creative Commons license option on YouTube before August 2025. (YouTube changed the license",
+          "timestamp": "2025-11-01T12:53:21Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Wikimania 2021 Speaker Guidebook - French.pdf",
+          "pageid": 107615041,
+          "size": 329,
+          "wordcount": 143,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-07-31T18:08:13Z"
+        }
+      ]
+    }
+  }
+}

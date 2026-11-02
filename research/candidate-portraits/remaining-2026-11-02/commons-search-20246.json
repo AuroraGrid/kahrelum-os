@@ -1,0 +1,34 @@
+{
+  "sourceCandidateId": 20246,
+  "query": "Christian Maxwell",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Christian+Maxwell%22",
+  "retrievedAtUtc": "2026-11-02T21:34:23Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 2
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:The snow flake, a Christmas, New-Year, and birthday gift for (IA snowflakechristm1851phil).pdf",
+          "pageid": 196199157,
+          "size": 912,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2026-07-25T17:33:11Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Religious beliefs of scientists, including one hundred hitherto unpublished letters on science and religion from eminent men of science (IA religiousbeliefs00tabrrich).pdf",
+          "pageid": 96225654,
+          "size": 1035,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2022-02-13T23:26:07Z"
+        }
+      ]
+    }
+  }
+}

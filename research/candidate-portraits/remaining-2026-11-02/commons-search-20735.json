@@ -1,0 +1,51 @@
+{
+  "sourceCandidateId": 20735,
+  "query": "Chris Backemeyer",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Chris+Backemeyer%22",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 4
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Jon Wolfsthal (2015).png",
+          "pageid": 95773164,
+          "size": 1525,
+          "wordcount": 170,
+          "snippet": "This video, screenshot or audio excerpt was released under the Creative Commons license option on YouTube before August 2025. (YouTube changed the license",
+          "timestamp": "2022-10-29T00:57:31Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Christopher Backemyer DOS (cropped).jpg",
+          "pageid": 191883034,
+          "size": 573,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-08-16T01:19:59Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Christopher Backemyer DOS.jpg",
+          "pageid": 191883016,
+          "size": 584,
+          "wordcount": 36,
+          "snippet": "English Official portrait of Christopher Backemyer, Deputy Assistant Secretary for Assistance Coordination and Regional and Multilateral Affairs in the",
+          "timestamp": "2026-08-16T01:19:50Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Secretary Kerry Meets With a Group of Advisers Before Meeting With Iranian Foreign Minister Zarif at the United Nations in New York (25922731334).jpg",
+          "pageid": 48273975,
+          "size": 1642,
+          "wordcount": 47,
+          "snippet": "19 April 2016 English Flickr user ID: 9364837@N06 author name string: U.S. Department of State URL: https://www.flickr.com/people/statephotos/ publication",
+          "timestamp": "2025-09-13T15:09:39Z"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "sourceCandidateId": 21445,
+  "query": "\"Aaron Flint\" Montana",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=15&srsearch=%22Aaron+Flint%22+Montana",
+  "retrievedAtUtc": "2026-11-02T21:46:58Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 3
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Aaron Flint has my Complete and Total Endorsement to be the next U.S. Representative from Montana\u2019s 1st Congressional District \u2013 HE WILL NEVER LET YOU DOWN!.webm",
+          "pageid": 202436862,
+          "size": 684,
+          "wordcount": 0,
+          "snippet": "Complete and Total Endorsement to be the next U.S. Representative from <span class=\"searchmatch\">Montana\u2019s</span> 1st Congressional District \u2013 HE WILL NEVER LET YOU DOWN!.webm Aaron Flint",
+          "timestamp": "2026-10-30T01:14:47Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:The history of Canandaigua (IA historyofcananda00gran).pdf",
+          "pageid": 91847380,
+          "size": 953,
+          "wordcount": 1,
+          "snippet": "1, 1931. Public domain works must be out <span class=\"searchmatch\">of</span> copyright in both the United States and in the source <span class=\"searchmatch\">country</span> <span class=\"searchmatch\">of</span> the work in order to be hosted on the Commons",
+          "timestamp": "2026-08-07T12:26:42Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Catalogus senatus academici et omnium alicujus gradus laurea exornatorum in collegio Dartmuthensi, Hanoverae, in republica Neo-Hantoniensi (IA catalogussenatus00dart).pdf",
+          "pageid": 98861055,
+          "size": 1229,
+          "wordcount": 21,
+          "snippet": "This work is in the public domain in its <span class=\"searchmatch\">country</span> <span class=\"searchmatch\">of</span> origin and other <span class=\"searchmatch\">countries</span> and areas where the copyright term is the author&#039;s life plus 100 years",
+          "timestamp": "2025-05-24T02:54:19Z"
+        }
+      ]
+    }
+  }
+}

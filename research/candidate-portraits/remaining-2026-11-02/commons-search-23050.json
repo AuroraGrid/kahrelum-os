@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 23050,
+  "query": "Melvin Rivera",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Melvin+Rivera%22",
+  "retrievedAtUtc": "2026-11-02T21:37:43Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:SETAF-AF Soldiers build readiness through ruck march (9883843).jpg",
+          "pageid": 198083278,
+          "size": 1138,
+          "wordcount": 89,
+          "snippet": "English U.S. Army Staff Sgt. Melvin Rivera Hernandez, a mortuary affairs specialist assigned to U.S. Army Southern European Task Force, Africa (SETAF-AF)",
+          "timestamp": "2026-08-28T00:22:53Z"
+        }
+      ]
+    }
+  }
+}

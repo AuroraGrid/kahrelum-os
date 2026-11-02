@@ -1,0 +1,52 @@
+{
+  "sourceCandidateId": 22976,
+  "query": "\"Scott Singer\" Florida",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=15&srsearch=%22Scott+Singer%22+Florida",
+  "retrievedAtUtc": "2026-11-02T21:46:42Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 4
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Scott Singer (cropped).jpg",
+          "pageid": 197813945,
+          "size": 392,
+          "wordcount": 1,
+          "snippet": "<span class=\"searchmatch\">state</span>, county, and municipal government agencies) <span class=\"searchmatch\">of</span> <span class=\"searchmatch\">the</span> U.S. <span class=\"searchmatch\">state</span> <span class=\"searchmatch\">of</span> <span class=\"searchmatch\">Florida</span>. It is a public record that was not created by an agency which <span class=\"searchmatch\">state</span> law",
+          "timestamp": "2026-08-20T01:25:52Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Scott singer.png",
+          "pageid": 197851377,
+          "size": 335,
+          "wordcount": 23,
+          "snippet": "English Portrait <span class=\"searchmatch\">of</span> Boca Raton mayor Scott Singer described at URL: https://web.archive.org/web/20260316162741/https://www.myboca.us/772/Mayor",
+          "timestamp": "2026-08-20T05:19:57Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Boca Raton mayor and council.jpg",
+          "pageid": 197813901,
+          "size": 414,
+          "wordcount": 25,
+          "snippet": "<span class=\"searchmatch\">state</span>, county, and municipal government agencies) <span class=\"searchmatch\">of</span> <span class=\"searchmatch\">the</span> U.S. <span class=\"searchmatch\">state</span> <span class=\"searchmatch\">of</span> <span class=\"searchmatch\">Florida</span>. It is a public record that was not created by an agency which <span class=\"searchmatch\">state</span> law",
+          "timestamp": "2026-08-20T01:26:01Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:1973-V001-04-dem-left.pdf",
+          "pageid": 157358988,
+          "size": 420,
+          "wordcount": 36,
+          "snippet": "Flag <span class=\"searchmatch\">of</span> <span class=\"searchmatch\">the</span> United States",
+          "timestamp": "2025-10-18T12:22:07Z"
+        }
+      ]
+    }
+  }
+}

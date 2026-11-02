@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 21051,
+  "query": "Kevin Lincoln",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Kevin+Lincoln%22",
+  "retrievedAtUtc": "2026-11-02T21:31:09Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 6
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Winter sunset from the esplanade - geograph.org.uk - 549227.jpg",
+          "pageid": 13081437,
+          "size": 759,
+          "wordcount": 195,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. Attribution: Kevin Lincoln You are free: to share \u2013 to copy",
+          "timestamp": "2026-08-26T20:40:04Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:KevinLincoln.jpg",
+          "pageid": 110267717,
+          "size": 415,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2024-03-30T05:27:23Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Spinnaker Tower - geograph.org.uk - 540806.jpg",
+          "pageid": 13078758,
+          "size": 861,
+          "wordcount": 189,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. Attribution: Kevin Lincoln You are free: to share \u2013 to copy",
+          "timestamp": "2026-08-26T20:10:59Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:KevinLincoln (cropped).jpg",
+          "pageid": 146112762,
+          "size": 404,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-06-14T04:12:08Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:The old Lighthouse and buildings - geograph.org.uk - 549220.jpg",
+          "pageid": 13080041,
+          "size": 796,
+          "wordcount": 195,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. Attribution: Kevin Lincoln You are free: to share \u2013 to copy",
+          "timestamp": "2026-08-26T20:24:04Z"
+        }
+      ]
+    }
+  }
+}

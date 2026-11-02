@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20470,
+  "query": "Dan Barrios",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Dan+Barrios%22",
+  "retrievedAtUtc": "2026-11-02T21:40:34Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 23
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:CBP Surveys Isaac's Damage on Critical Infrastructure (7936749002).jpg",
+          "pageid": 167984211,
+          "size": 1090,
+          "wordcount": 85,
+          "snippet": "18 June 2025 English 090412: LaPlace, Louisiana - An Office of Air and Marine UH-60 Blackhawk helicopter conducts damage assessments over one of Hurricane",
+          "timestamp": "2025-10-26T03:24:25Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Air and Marine Operations (AMO) Joint Operations with Tucson Police Department SWAT (22525876476).jpg",
+          "pageid": 51175022,
+          "size": 917,
+          "wordcount": 66,
+          "snippet": "6 September 2016 English Flickr user ID: 54593278@N03 author name string: U.S. Customs and Border Protection URL: https://www.flickr.com/people/cbpphotos/",
+          "timestamp": "2025-06-08T18:38:58Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Air and Marine Operations (AMO) Joint Operations with Tucson Police Department SWAT (22538328922).jpg",
+          "pageid": 51175054,
+          "size": 879,
+          "wordcount": 28,
+          "snippet": "6 September 2016 English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination",
+          "timestamp": "2025-06-08T18:38:58Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:BORSTAR Divers Cargo Inspection Training (25040212901).jpg",
+          "pageid": 51174552,
+          "size": 804,
+          "wordcount": 76,
+          "snippet": "6 September 2016 English Flickr user ID: 54593278@N03 author name string: U.S. Customs and Border Protection URL: https://www.flickr.com/people/cbpphotos/",
+          "timestamp": "2025-06-08T18:40:06Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:BORSTAR Divers Cargo Inspection Training (24506647583).jpg",
+          "pageid": 51174502,
+          "size": 797,
+          "wordcount": 40,
+          "snippet": "6 September 2016 English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States operator:",
+          "timestamp": "2025-06-08T18:40:05Z"
+        }
+      ]
+    }
+  }
+}

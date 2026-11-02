@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20965,
+  "query": "Dan Green",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Dan+Green%22",
+  "retrievedAtUtc": "2026-11-02T21:33:57Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 39
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Dan Green (53609496933).jpg",
+          "pageid": 146863406,
+          "size": 891,
+          "wordcount": 166,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2024-07-08T14:56:05Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Colored pencils - painting brushes - watercolors - mechanical pencils - colored markers.jpg",
+          "pageid": 109699995,
+          "size": 601,
+          "wordcount": 178,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2024-04-21T07:45:59Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Record of Council of Defense, soldiers and sailors, Little River County, Arkansas, war period with Germany (IA recordofcouncilo1347litt).pdf",
+          "pageid": 198171418,
+          "size": 1766,
+          "wordcount": 0,
+          "snippet": "",
+          "timestamp": "2026-08-26T00:37:04Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:A Romance at a Post-House WDL11398.pdf",
+          "pageid": 31390991,
+          "size": 25087,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-02-09T06:19:36Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Inverness-shire Constabulary Portree 1950 (8377816189).jpg",
+          "pageid": 24833551,
+          "size": 5287,
+          "wordcount": 136,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2025-03-28T13:13:57Z"
+        }
+      ]
+    }
+  }
+}

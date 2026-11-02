@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20887,
+  "query": "Chris Chung",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Chris+Chung%22",
+  "retrievedAtUtc": "2026-11-02T21:41:13Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 18
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Giallo (146861443).jpeg",
+          "pageid": 73794153,
+          "size": 788,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-05-20T15:12:31Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Gold (146861943).jpeg",
+          "pageid": 73794154,
+          "size": 917,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2024-08-26T19:06:34Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Gt3 Rs (146861627).jpeg",
+          "pageid": 73794152,
+          "size": 741,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-10-13T02:00:58Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Victoria Drive Festival 2017 - Chris Chung and MC Elana (36535109995).jpg",
+          "pageid": 120494977,
+          "size": 770,
+          "wordcount": 168,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2025-03-01T16:37:36Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Dignataries pose with God of Wealth (16594545276).jpg",
+          "pageid": 179807034,
+          "size": 868,
+          "wordcount": 163,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2025-12-14T06:57:35Z"
+        }
+      ]
+    }
+  }
+}

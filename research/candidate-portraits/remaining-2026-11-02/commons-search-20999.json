@@ -1,0 +1,24 @@
+{
+  "sourceCandidateId": 20999,
+  "query": "Erik Osberg",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Erik+Osberg%22",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:US Navy 060624-N-1194D-002 Musician 3rd Class Erik Osberg, along with other members of the Seventh Fleet Band, performs during a community service project.jpg",
+          "pageid": 8245433,
+          "size": 970,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2026-08-04T18:53:24Z"
+        }
+      ]
+    }
+  }
+}

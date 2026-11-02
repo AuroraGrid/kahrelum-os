@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 23018,
+  "query": "Patrick Halpin",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Patrick+Halpin%22",
+  "retrievedAtUtc": "2026-11-02T21:37:13Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 14
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Patrick Halpin.jpg",
+          "pageid": 179262258,
+          "size": 478,
+          "wordcount": 41,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English Patrick Halpin speaks at a Suffolk County",
+          "timestamp": "2026-09-01T03:35:51Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:NY National Guard and USMC rehearses joint, combined live fire exercise in Morocco (8444237).jpg",
+          "pageid": 179313144,
+          "size": 1564,
+          "wordcount": 87,
+          "snippet": "English U.S. Army Col. Bradley Frank, commander of the 27th Infantry Brigade Combat Team, New York Army National Guard, Lt. Col. Frank Engle, commander",
+          "timestamp": "2025-12-02T16:47:56Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Blue book of Dorchester. (IA bluebookofdorche00unse).pdf",
+          "pageid": 92158855,
+          "size": 1002,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-08-28T13:59:13Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Annual report of the receipts and expenditures of the town of Rochester - together with the school committee's report for the fiscal year ending.. (IA annualreportofre00roch).pdf",
+          "pageid": 196269684,
+          "size": 1199,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2026-09-21T01:09:04Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Title page, Poems Ascribed to Robert Burns. 1801.jpg",
+          "pageid": 101955302,
+          "size": 546,
+          "wordcount": 28,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English Title page, Poems Ascribed to Robert Burns",
+          "timestamp": "2026-05-07T15:32:57Z"
+        }
+      ]
+    }
+  }
+}

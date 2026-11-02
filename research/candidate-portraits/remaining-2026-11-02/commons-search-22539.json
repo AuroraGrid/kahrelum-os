@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 22539,
+  "query": "Tim Rogers",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Tim+Rogers%22",
+  "retrievedAtUtc": "2026-11-02T21:41:32Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 63
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:TimRogers.jpg",
+          "pageid": 9433540,
+          "size": 848,
+          "wordcount": 216,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. Attribution: Flickr user Modtang You are free: to share \u2013 to copy, distribute",
+          "timestamp": "2024-12-01T02:55:55Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Tim Rogers (April 5, 2014).jpg",
+          "pageid": 52423440,
+          "size": 477,
+          "wordcount": 129,
+          "snippet": "22 October 2016 This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-04-08T03:33:53Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:You Am I @ Fly By Night Club (18 11 2010) (5210333871).jpg",
+          "pageid": 23472499,
+          "size": 627,
+          "wordcount": 142,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2025-08-02T22:15:37Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Tim Rogers, at the Big Red Bash 2022.jpg",
+          "pageid": 121770650,
+          "size": 436,
+          "wordcount": 162,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2025-06-07T02:25:50Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:You Am I @ Fly By Night Club (18 11 2010) (5210333707).jpg",
+          "pageid": 23472506,
+          "size": 627,
+          "wordcount": 136,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2024-05-07T15:07:25Z"
+        }
+      ]
+    }
+  }
+}

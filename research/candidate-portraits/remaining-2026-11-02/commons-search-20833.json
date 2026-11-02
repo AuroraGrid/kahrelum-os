@@ -1,0 +1,52 @@
+{
+  "sourceCandidateId": 20833,
+  "query": "Dave Dawson",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Dave+Dawson%22",
+  "retrievedAtUtc": "2026-11-02T21:34:23Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 4
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Catalog of Copyright Entries 1942 Books New Series Vol 39 Pt 1 For the Year 1942 (IA catalogofcopyrig391li).pdf",
+          "pageid": 90971523,
+          "size": 1158,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2024-08-16T19:50:51Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:USMC-10787.jpg",
+          "pageid": 23137581,
+          "size": 896,
+          "wordcount": 19,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States",
+          "timestamp": "2026-01-25T18:13:19Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Digital cinema 2001 conference proceedings- \"a new vision for movies\" (IA digitalcinema2006591feni).pdf",
+          "pageid": 92329775,
+          "size": 915,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2025-12-06T20:52:19Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Federal Election Commission investigation of Larry Chroman for Congress complaint.pdf",
+          "pageid": 26187435,
+          "size": 700,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2026-02-20T21:34:54Z"
+        }
+      ]
+    }
+  }
+}

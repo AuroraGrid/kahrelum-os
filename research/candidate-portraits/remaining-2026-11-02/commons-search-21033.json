@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 21033,
+  "query": "Pedro Casas",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Pedro+Casas%22",
+  "retrievedAtUtc": "2026-11-02T21:32:08Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 28
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:BA-Casas de Don Pedro 02.jpg",
+          "pageid": 67113696,
+          "size": 636,
+          "wordcount": 164,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2024-07-03T05:11:47Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:MTN25-0755c2-2003-Casas de Don Pedro.jpg",
+          "pageid": 76191839,
+          "size": 1781,
+          "wordcount": 133,
+          "snippet": "This file is licensed under the Creative Commons Attribution 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit the work",
+          "timestamp": "2026-06-24T15:32:54Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:MTN25-0755c2-1997-Casas de Don Pedro.jpg",
+          "pageid": 76191844,
+          "size": 1781,
+          "wordcount": 133,
+          "snippet": "This file is licensed under the Creative Commons Attribution 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit the work",
+          "timestamp": "2026-01-02T13:35:57Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:BA-Casas de Don Pedro 03.jpg",
+          "pageid": 67113695,
+          "size": 657,
+          "wordcount": 164,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2024-07-03T05:11:59Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Casas de Don Pedro 01.jpg",
+          "pageid": 85136288,
+          "size": 699,
+          "wordcount": 174,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. Attribution: Axel Cot\u00f3n Guti\u00e9rrez You are free: to",
+          "timestamp": "2024-06-21T19:20:00Z"
+        }
+      ]
+    }
+  }
+}

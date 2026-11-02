@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 16319,
+  "query": "Martin Zamora",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Martin+Zamora%22",
+  "retrievedAtUtc": "2026-11-02T21:36:50Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 7
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Documents about Martin Luther King, Jr., Executive Order 14176, 00548354 listdocuments requested f 104-10081-10025.pdf",
+          "pageid": 170514522,
+          "size": 947,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2026-05-03T12:49:32Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Documents about Martin Luther King, Jr., Executive Order 14176, 00547824 miscellaneous name and fi 104-10062-10005.pdf",
+          "pageid": 170558059,
+          "size": 947,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2026-01-30T15:18:56Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Documents about Martin Luther King, Jr., Executive Order 14176, 00547386 listnames olc memorandum 104-10052-10066.pdf",
+          "pageid": 170514478,
+          "size": 946,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2026-05-03T12:49:23Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Placa de la Calle de San Mart\u00edn, Zamora.jpg",
+          "pageid": 193896035,
+          "size": 283,
+          "wordcount": 17,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: English Spanish Placa.",
+          "timestamp": "2026-06-16T18:41:28Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:FEMA - 37210 - Crews prepare to deploy on the morning after Hurricane Dolly in Texas.jpg",
+          "pageid": 8068064,
+          "size": 775,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-09-12T07:50:49Z"
+        }
+      ]
+    }
+  }
+}

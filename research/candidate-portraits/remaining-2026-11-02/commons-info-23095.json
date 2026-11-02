@@ -1,0 +1,511 @@
+{
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&titles=File%3ADarializa_Avila_Chevalier_during_interview_on_Secretos_CEO.jpg%7CFile%3ACait_Conley.jpg%7CFile%3A%2805-12-25%29_NYS_Senator_Peter_Oberacker_%28cropped%29.jpg%7CFile%3AMike_LiPetri_%282024_Italian_Heritage_Street_Festival%29_%28cropped%29.jpg&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cmime%7Cextmetadata&iiurlwidth=250&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main",
+  "retrievedAtUtc": "2026-11-02T21:32:06Z",
+  "candidateIds": [
+    23095,
+    16363,
+    23510,
+    23090
+  ],
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "normalized": [
+        {
+          "from": "File:Darializa_Avila_Chevalier_during_interview_on_Secretos_CEO.jpg",
+          "to": "File:Darializa Avila Chevalier during interview on Secretos CEO.jpg"
+        },
+        {
+          "from": "File:Cait_Conley.jpg",
+          "to": "File:Cait Conley.jpg"
+        },
+        {
+          "from": "File:(05-12-25)_NYS_Senator_Peter_Oberacker_(cropped).jpg",
+          "to": "File:(05-12-25) NYS Senator Peter Oberacker (cropped).jpg"
+        },
+        {
+          "from": "File:Mike_LiPetri_(2024_Italian_Heritage_Street_Festival)_(cropped).jpg",
+          "to": "File:Mike LiPetri (2024 Italian Heritage Street Festival) (cropped).jpg"
+        }
+      ],
+      "pages": {
+        "194684538": {
+          "pageid": 194684538,
+          "ns": 6,
+          "title": "File:(05-12-25) NYS Senator Peter Oberacker (cropped).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 157602,
+              "width": 583,
+              "height": 779,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/%2805-12-25%29_NYS_Senator_Peter_Oberacker_%28cropped%29.jpg/250px-%2805-12-25%29_NYS_Senator_Peter_Oberacker_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 334,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/%2805-12-25%29_NYS_Senator_Peter_Oberacker_%28cropped%29.jpg/500px-%2805-12-25%29_NYS_Senator_Peter_Oberacker_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/%2805-12-25%29_NYS_Senator_Peter_Oberacker_%28cropped%29.jpg/250px-%2805-12-25%29_NYS_Senator_Peter_Oberacker_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 334,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/%2805-12-25%29_NYS_Senator_Peter_Oberacker_%28cropped%29.jpg/500px-%2805-12-25%29_NYS_Senator_Peter_Oberacker_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/%2805-12-25%29_NYS_Senator_Peter_Oberacker_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:(05-12-25)_NYS_Senator_Peter_Oberacker_(cropped).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=194684538",
+              "sha1": "cf26950902881c67409ae86913f8f5c0307c183a",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-06-27 20:34:25",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "(05-12-25) NYS Senator Peter Oberacker (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Images with extracted images|Extracted images|Peter Oberacker",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "show students from his district, the NYS Senate Chamber.\n<p>Capitol, Albany, NY \n</p>\nPhoto courtesy of NYS Senate Media Services",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-05-12 09:57:05",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/182869894@N06/54515420604/\">https://www.flickr.com/photos/182869894@N06/54515420604/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "NY Senate Photo",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 2.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 2.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/2.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-2.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1240138745,
+              "parentid": 1239658209,
+              "timestamp": "2026-06-28T13:16:38Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=show students from his district, the NYS Senate Chamber.\n\nCapitol, Albany, NY \n\nPhoto courtesy of NYS Senate Media Services}}\n|date=2025-05-12 09:57:05\n|source=https://www.flickr.com/photos/182869894@N06/54515420604/\n|author=NY Senate Photo\n|permission=\n|other versions={{Image extracted|1=(05-12-25) NYS Senator Peter Oberacker (3x4).jpg}}{{Extracted from|1=(05-12-25) NYS Senator Peter Oberacker.jpg}}\n}}\n\n=={{int:license-header}}==\n{{cc-by-2.0}}\n\n[[Category:Peter Oberacker]]"
+                }
+              }
+            }
+          ]
+        },
+        "195804515": {
+          "pageid": 195804515,
+          "ns": 6,
+          "title": "File:Cait Conley.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 27933,
+              "width": 250,
+              "height": 319,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Cait_Conley.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 250,
+              "thumbheight": 319,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Cait_Conley.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 319
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Cait_Conley.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Cait_Conley.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=195804515",
+              "sha1": "ac289de4342e09c6f28c52a0d6470c0d042614e3",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-07-17 15:02:53",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Cait Conley",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Politicians of the United States|PD US Government|CC-PD-Mark|PD-USGov missing SDC copyright status|Cait Conley",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Portrait of U.S. House candidate Cait Conley",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "March 2023",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://nationalpress.org/speaker/cait-conley/\">https://nationalpress.org/speaker/cait-conley/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Cybersecurity and Infrastructure Security Agency",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1270945618,
+              "parentid": 1265342134,
+              "timestamp": "2026-09-01T17:55:41Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Portrait of U.S. House candidate Cait Conley}}\n|date=March 2023\n|source=https://nationalpress.org/speaker/cait-conley/\n|author=Cybersecurity and Infrastructure Security Agency\n|permission=\n|other versions=\n}}\n\n=={{int:license-header}}==\n{{PD-USGov}}\n\n[[Category:Politicians of the United States]]\n[[Category:Cait Conley]]"
+                }
+              }
+            }
+          ]
+        },
+        "196292088": {
+          "pageid": 196292088,
+          "ns": 6,
+          "title": "File:Darializa Avila Chevalier during interview on Secretos CEO.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 148733,
+              "width": 736,
+              "height": 981,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Darializa_Avila_Chevalier_during_interview_on_Secretos_CEO.jpg/250px-Darializa_Avila_Chevalier_during_interview_on_Secretos_CEO.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 333,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Darializa_Avila_Chevalier_during_interview_on_Secretos_CEO.jpg/500px-Darializa_Avila_Chevalier_during_interview_on_Secretos_CEO.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Darializa_Avila_Chevalier_during_interview_on_Secretos_CEO.jpg/250px-Darializa_Avila_Chevalier_during_interview_on_Secretos_CEO.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 333,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Darializa_Avila_Chevalier_during_interview_on_Secretos_CEO.jpg/500px-Darializa_Avila_Chevalier_during_interview_on_Secretos_CEO.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Darializa_Avila_Chevalier_during_interview_on_Secretos_CEO.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Darializa_Avila_Chevalier_during_interview_on_Secretos_CEO.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=196292088",
+              "sha1": "48cec27d7ba66839479e0d9a615103c841dd0652",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-07-27 13:36:51",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Darializa Avila Chevalier during interview on Secretos CEO",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Media from YouTube|License review needed|New York (state) elections, 2026|Still images of YouTube videos|Darializa Avila Chevalier",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Darializa Avila Chevalier during an interview on Secretos CEO in July 2026",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2026-07-19",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<bdi lang=\"en\" dir=\"ltr\"><a href=\"//commons.wikimedia.org/wiki/Commons:YouTube_files\" title=\"Commons:YouTube files\">YouTube</a>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.youtube.com/watch?v=Iat5Hsjvr7Q&amp;t=2m49s\"><bdi lang=\"\">Gan\u00f3 las primarias contra todo pron\u00f3stico \u2014 esto es lo que pas\u00f3 | Darializa \u00c1vila</bdi></a> (Time: 2m49s) \u2013 View/save archived versions on <a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/*/https://www.youtube.com/watch?v=Iat5Hsjvr7Q\">archive.org</a></bdi>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<bdi><a rel=\"nofollow\" class=\"external text\" href=\"https://www.youtube.com/@HABLANDOCLAROLIVE\">A LO CLARO</a>  and  <a rel=\"nofollow\" class=\"external text\" href=\"https://www.youtube.com/@IndhiraBaez\">Indhira Baez</a></bdi>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1257260510,
+              "parentid": 1254168121,
+              "timestamp": "2026-08-06T05:05:00Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Darializa Avila Chevalier during an interview on Secretos CEO in July 2026}}\n|date=2026-07-19\n|source={{From YouTube|Iat5Hsjvr7Q|Gan\u00f3 las primarias contra todo pron\u00f3stico \u2014 esto es lo que pas\u00f3 {{!}} Darializa \u00c1vila|t=2m49s}}\n|author=<bdi>[https://www.youtube.com/@HABLANDOCLAROLIVE A LO CLARO] {{Conj-and}} [https://www.youtube.com/@IndhiraBaez Indhira Baez]</bdi>\n|permission=\n|other versions=\n}}\n\n=={{int:license-header}}==\n{{YouTube CC-BY 4.0}}{{License Review}}\n\n[[Category:Darializa Avila Chevalier]]\n[[Category:New York (state) elections, 2026]]"
+                }
+              }
+            }
+          ]
+        },
+        "154950424": {
+          "pageid": 154950424,
+          "ns": 6,
+          "title": "File:Mike LiPetri (2024 Italian Heritage Street Festival) (cropped).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 142698,
+              "width": 734,
+              "height": 978,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Mike_LiPetri_%282024_Italian_Heritage_Street_Festival%29_%28cropped%29.jpg/250px-Mike_LiPetri_%282024_Italian_Heritage_Street_Festival%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 333,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Mike_LiPetri_%282024_Italian_Heritage_Street_Festival%29_%28cropped%29.jpg/500px-Mike_LiPetri_%282024_Italian_Heritage_Street_Festival%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Mike_LiPetri_%282024_Italian_Heritage_Street_Festival%29_%28cropped%29.jpg/250px-Mike_LiPetri_%282024_Italian_Heritage_Street_Festival%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 333,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Mike_LiPetri_%282024_Italian_Heritage_Street_Festival%29_%28cropped%29.jpg/500px-Mike_LiPetri_%282024_Italian_Heritage_Street_Festival%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Mike_LiPetri_%282024_Italian_Heritage_Street_Festival%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Mike_LiPetri_(2024_Italian_Heritage_Street_Festival)_(cropped).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=154950424",
+              "sha1": "60d38ebd8a82c0b3a15c8cc6066bfa0b29573b1a",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2024-11-07 02:52:40",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Mike LiPetri (2024 Italian Heritage Street Festival) (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Whitestone, Queens|Self-published work|Images with extracted images|Extracted images|New York City photographs taken on 2024-10-20|October 2024 in Queens, New York City|Uploads by User:ComplexRational|Mike LiPetri",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Mike LiPetri at the 2024 Italian Heritage Street Festival in Whitestone, Queens.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2024-10-20",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:ComplexRational\" title=\"User:ComplexRational\">ComplexRational</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1275608724,
+              "parentid": 1201972538,
+              "timestamp": "2026-09-12T19:17:40Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Mike LiPetri at the 2024 Italian Heritage Street Festival in Whitestone, Queens.}}\n|date=2024-10-20\n|source={{own}}\n|author=[[User:ComplexRational|ComplexRational]]\n|permission=\n|other versions={{Image extracted|1=Mike LiPetri (2024 Italian Heritage Street Festival) (cropped) (cropped).jpg}}{{Extracted from|1=Mike LiPetri (2024 Italian Heritage Street Festival).jpg}}\n}}\n\n=={{int:license-header}}==\n{{self|cc-by-sa-4.0}}\n\n[[Category:October 2024 in Queens, New York City]]\n[[Category:Whitestone, Queens]]\n[[Category:Uploads by User:ComplexRational]]\n[[Category:Mike LiPetri]]\n[[Category:New York City photographs taken on 2024-10-20]]"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

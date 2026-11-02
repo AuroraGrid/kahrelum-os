@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 16311,
+  "query": "Nicole Gronli",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Nicole+Gronli%22",
+  "retrievedAtUtc": "2026-11-02T21:39:23Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:20241017-USDA-RD-ND-C F-0011 (54086451851).jpg",
+          "pageid": 184648093,
+          "size": 1108,
+          "wordcount": 57,
+          "snippet": "21 February 2026 English U.S. determination method or standard: work of the federal government of the United States applies to jurisdiction: United States",
+          "timestamp": "2026-10-09T07:36:48Z"
+        }
+      ]
+    }
+  }
+}

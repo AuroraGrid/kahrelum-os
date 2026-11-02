@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 19953,
+  "query": "Austin Rogers",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Austin+Rogers%22",
+  "retrievedAtUtc": "2026-11-02T21:33:27Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 34
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:The Record of the Presbyterian Church in the United States of America. (IA recordofpresbyte193pres).pdf",
+          "pageid": 98733830,
+          "size": 1213,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2021-01-10T23:45:52Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Fruit and tree nut germplasm resources inventory (IA fruittreenutgerm76fogl).pdf",
+          "pageid": 91618298,
+          "size": 1405,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2026-08-16T22:23:18Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Annual report of the town of Weymouth (IA annualreportofto1861weym).pdf",
+          "pageid": 96118280,
+          "size": 832,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-03-31T01:21:51Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Annual report of the town of Weymouth (IA annualreportofto1854weym).pdf",
+          "pageid": 96117979,
+          "size": 832,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-03-31T01:31:24Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Annual report of the town of Weymouth (IA annualreportofto1856weym).pdf",
+          "pageid": 96118046,
+          "size": 832,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-03-31T01:31:30Z"
+        }
+      ]
+    }
+  }
+}

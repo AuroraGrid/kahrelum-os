@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 29807,
+  "query": "Michael Goldstein",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Michael+Goldstein%22",
+  "retrievedAtUtc": "2026-11-02T21:33:04Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 25
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:AdamGoldsteinFeb07.jpg",
+          "pageid": 7681564,
+          "size": 475,
+          "wordcount": 116,
+          "snippet": "Chris Weeks, the copyright holder of this work, hereby publishes it under the following license: This file is licensed under the Creative Commons Attribution",
+          "timestamp": "2023-07-09T22:50:13Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:AdamGoldsteinDec08.jpg",
+          "pageid": 7681332,
+          "size": 445,
+          "wordcount": 116,
+          "snippet": "Alan Barry, the copyright holder of this work, hereby publishes it under the following license: This file is licensed under the Creative Commons Attribution",
+          "timestamp": "2023-07-09T22:50:12Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:AdamGoldsteinJun09.jpg",
+          "pageid": 7686096,
+          "size": 484,
+          "wordcount": 116,
+          "snippet": "Skyler Greene, the copyright holder of this work, hereby publishes it under the following license: This file is licensed under the Creative Commons Attribution",
+          "timestamp": "2025-01-03T09:26:18Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Jonathan Goldstein (Headshot).png",
+          "pageid": 158871785,
+          "size": 353,
+          "wordcount": 133,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. Attribution: Hopper Stone You are free: to share \u2013",
+          "timestamp": "2026-05-11T06:27:19Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Jonathan Goldstein at San Diego Comic Con 2026.jpg",
+          "pageid": 196331862,
+          "size": 465,
+          "wordcount": 163,
+          "snippet": "This photo was taken during San Diego Comic-Con 2026 as part of the WikiPortraits initiative. All photos from this event\u00a0\u00bb I, the copyright holder of this",
+          "timestamp": "2026-10-25T05:12:00Z"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 20430,
+  "query": "Claire Reynolds",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Claire+Reynolds%22",
+  "retrievedAtUtc": "2026-11-02T21:40:00Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:The Stethoscope Vol. 3 No. 1, 4 January 1945 (IA Stethoscope31450104).pdf",
+          "pageid": 91677773,
+          "size": 1127,
+          "wordcount": 33,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2024-08-17T22:42:16Z"
+        }
+      ]
+    }
+  }
+}

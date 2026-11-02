@@ -1,0 +1,64 @@
+{
+  "sourceCandidateId": 23219,
+  "query": "Carrie Buck",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Carrie+Buck%22",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 7
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Carrie Buck, 1924 (cropped).jpg",
+          "pageid": 104095922,
+          "size": 548,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2024-04-13T12:48:52Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Carrie and Emma Buck, 1924.jpg",
+          "pageid": 104095755,
+          "size": 627,
+          "wordcount": 12,
+          "snippet": "https://encyclopediavirginia.org/8318hpr-5c40e23c1f4cd1a/ English determination method or standard: SHA-1",
+          "timestamp": "2024-04-13T12:48:59Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Blood kin of Carrie Buck.jpg",
+          "pageid": 135484807,
+          "size": 442,
+          "wordcount": 44,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English Blood kin of Carrie Buck applies to jurisdiction:",
+          "timestamp": "2024-08-17T20:24:32Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Thurgood Marshall Rodriguez diagram.svg",
+          "pageid": 114181420,
+          "size": 3602,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2022-04-17T16:19:26Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Behar Herald 22-08-2022 & 31-08-2022.pdf",
+          "pageid": 148300646,
+          "size": 648,
+          "wordcount": 132,
+          "snippet": "\u00a0 This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. Attribution: Behar Herald You are free: to share",
+          "timestamp": "2025-09-10T09:32:41Z"
+        }
+      ]
+    }
+  }
+}

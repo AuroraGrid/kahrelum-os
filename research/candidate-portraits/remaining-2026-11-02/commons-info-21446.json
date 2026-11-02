@@ -1,0 +1,512 @@
+{
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&titles=File%3ASam_Forstag_Portrait_%28cropped%29.jpg%7CFile%3ALaurie_Buckhout.jpg%7CFile%3ARep._Jennifer_Balkcom.jpg%7CFile%3ARep._Raymond_E._Smith_Jr.jpg&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cmime%7Cextmetadata&iiurlwidth=250&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main",
+  "retrievedAtUtc": "2026-11-02T21:32:02Z",
+  "candidateIds": [
+    21446,
+    20051,
+    20397,
+    20382
+  ],
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "normalized": [
+        {
+          "from": "File:Sam_Forstag_Portrait_(cropped).jpg",
+          "to": "File:Sam Forstag Portrait (cropped).jpg"
+        },
+        {
+          "from": "File:Laurie_Buckhout.jpg",
+          "to": "File:Laurie Buckhout.jpg"
+        },
+        {
+          "from": "File:Rep._Jennifer_Balkcom.jpg",
+          "to": "File:Rep. Jennifer Balkcom.jpg"
+        },
+        {
+          "from": "File:Rep._Raymond_E._Smith_Jr.jpg",
+          "to": "File:Rep. Raymond E. Smith Jr.jpg"
+        }
+      ],
+      "pages": {
+        "163684695": {
+          "pageid": 163684695,
+          "ns": 6,
+          "title": "File:Laurie Buckhout.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 2130746,
+              "width": 3312,
+              "height": 4140,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Laurie_Buckhout.jpg/250px-Laurie_Buckhout.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 313,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Laurie_Buckhout.jpg/500px-Laurie_Buckhout.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Laurie_Buckhout.jpg/250px-Laurie_Buckhout.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 313,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Laurie_Buckhout.jpg/500px-Laurie_Buckhout.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Laurie_Buckhout.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Laurie_Buckhout.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=163684695",
+              "sha1": "6c808a94d4c5bba975acdb38531510e0490d6cb2",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-04-17 04:36:16",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Laurie Buckhout",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD US Government|Images with extracted images|CC-PD-Mark|Laurie Buckhout",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Laurie Buckhout, Performing the Duties of Assistant Secretary of Defense for Cyber Policy / Deputy Assistant Secretary of Defense for Cyber Policy",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-04-16",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.defense.gov/About/Biographies/Biography/Article/4156734/laurie-buckhout/\">https://www.defense.gov/About/Biographies/Biography/Article/4156734/laurie-buckhout/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "U.S. Department of Defense",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1275696618,
+              "parentid": 1223441861,
+              "timestamp": "2026-09-13T00:10:11Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Laurie Buckhout, Performing the Duties of Assistant Secretary of Defense for Cyber Policy / Deputy Assistant Secretary of Defense for Cyber Policy}}\n|date=2025-04-16\n|source=https://www.defense.gov/About/Biographies/Biography/Article/4156734/laurie-buckhout/\n|author=U.S. Department of Defense\n|permission=\n|other versions={{Image extracted|1=Laurie Buckhout (cropped).jpg|2=Laurie Buckhout (crop).jpg}}\n}}\n\n=={{int:license-header}}==\n{{PD-USGov}}\n\n[[Category:Laurie Buckhout]]"
+                }
+              }
+            }
+          ]
+        },
+        "138739318": {
+          "pageid": 138739318,
+          "ns": 6,
+          "title": "File:Rep. Jennifer Balkcom.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 24392,
+              "width": 386,
+              "height": 540,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Rep._Jennifer_Balkcom.jpg/250px-Rep._Jennifer_Balkcom.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 350,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Rep._Jennifer_Balkcom.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Rep._Jennifer_Balkcom.jpg/250px-Rep._Jennifer_Balkcom.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 350,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Rep._Jennifer_Balkcom.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Rep._Jennifer_Balkcom.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Rep._Jennifer_Balkcom.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=138739318",
+              "sha1": "66963a75d548523f205470e71fe47fe5d06ce7b8",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2023-10-11 23:49:42",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Rep. Jennifer Balkcom",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Jennifer Balkcom",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "North Carolina Rep. Jennifer Balcom",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "Feb 14 2023",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.ncleg.gov/Members/MemberImage/H/820/High\">https://www.ncleg.gov/Members/MemberImage/H/820/High</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "NC House",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "This work is an officially published photo of a House or Senate Member of the <a href=\"https://en.wikipedia.org/wiki/North_Carolina_General_Assembly\" class=\"extiw\" title=\"w:North Carolina General Assembly\">North Carolina General Assembly</a> and has been <a rel=\"nofollow\" class=\"external text\" href=\"https://www.ncleg.gov/Disclaimer\">released</a> into the <b><a href=\"https://en.wikipedia.org/wiki/public_domain\" class=\"extiw\" title=\"w:public domain\">public domain</a></b> in the United States.",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1267747605,
+              "parentid": 1105228301,
+              "timestamp": "2026-08-26T16:02:13Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "== {{int:filedesc}} ==\n{{Information\n|Description    ={{en|1=North Carolina Rep. Jennifer Balcom}}\n|Source         =https://www.ncleg.gov/Members/MemberImage/H/820/High\n|Author         =NC House\n|Date           =Feb 14 2023\n|Permission     ={{PD-NCGov-legislator photo}}\n|other_versions =\n}}\n\n[[Category:Jennifer Balkcom]]"
+                }
+              }
+            }
+          ]
+        },
+        "103023249": {
+          "pageid": 103023249,
+          "ns": 6,
+          "title": "File:Rep. Raymond E. Smith Jr.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1493440,
+              "width": 1200,
+              "height": 1800,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Rep._Raymond_E._Smith_Jr.jpg/250px-Rep._Raymond_E._Smith_Jr.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 375,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Rep._Raymond_E._Smith_Jr.jpg/500px-Rep._Raymond_E._Smith_Jr.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Rep._Raymond_E._Smith_Jr.jpg/250px-Rep._Raymond_E._Smith_Jr.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 375,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Rep._Raymond_E._Smith_Jr.jpg/500px-Rep._Raymond_E._Smith_Jr.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Rep._Raymond_E._Smith_Jr.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Rep._Raymond_E._Smith_Jr.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=103023249",
+              "sha1": "ffc762077066a6b5dcf6b313deb9be19383771cc",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2021-04-04 01:18:49",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Rep. Raymond E. Smith Jr",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD-author|Members of the North Carolina House of Representatives|Democrats from North Carolina",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "North Carolina State Representative Raymond E. Smith Jr.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2019-02-12 16:16:31",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.ncleg.gov/Members/Biography/H/757\">https://www.ncleg.gov/Members/Biography/H/757</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "NC General Assembly",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1275531267,
+              "parentid": 1217965342,
+              "timestamp": "2026-09-12T15:10:57Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=North Carolina State Representative Raymond E. Smith Jr.}}\n|date=2019-02-12 16:16:31\n|source=https://www.ncleg.gov/Members/Biography/H/757\n|author=NC General Assembly\n|permission=\n|other versions=\n}}\n\n=={{int:license-header}}==\n\n{{PD-author|[http://www.ncleg.net/Etc/Disclaimer.html North Carolina General Assembly]}}\n\n[[Category:Democrats from North Carolina]]\n[[Category:Members of the North Carolina House of Representatives]]"
+                }
+              }
+            }
+          ]
+        },
+        "194696290": {
+          "pageid": 194696290,
+          "ns": 6,
+          "title": "File:Sam Forstag Portrait (cropped).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 101861,
+              "width": 552,
+              "height": 643,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Sam_Forstag_Portrait_%28cropped%29.jpg/250px-Sam_Forstag_Portrait_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 291,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Sam_Forstag_Portrait_%28cropped%29.jpg/500px-Sam_Forstag_Portrait_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Sam_Forstag_Portrait_%28cropped%29.jpg/250px-Sam_Forstag_Portrait_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 291,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Sam_Forstag_Portrait_%28cropped%29.jpg/500px-Sam_Forstag_Portrait_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Sam_Forstag_Portrait_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Sam_Forstag_Portrait_(cropped).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=194696290",
+              "sha1": "713ef590f2e47b1d0e6698e1fc76e3d3f9f8b170",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-06-28 01:49:55",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Sam Forstag Portrait (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Self-published work|Extracted images|Sam Forstag",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "This is a photo of Sam Forstag in his smokejumper gear taken in front of a para-cargo loft.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "7/3/2023",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Conorhogan16&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Conorhogan16 (page does not exist)\">Conorhogan16</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1285862542,
+              "parentid": 1240768695,
+              "timestamp": "2026-10-11T17:07:30Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=This is a photo of Sam Forstag in his smokejumper gear taken in front of a para-cargo loft.}}\n|date=7/3/2023\n|source={{own}}\n|author=[[User:Conorhogan16|Conorhogan16]]\n|permission=\n|other versions={{Extracted from|1=Sam Forstag Portrait.jpg}}\n}}\n\n=={{int:license-header}}==\n{{self|cc-zero}}\n\n[[Category:Sam Forstag]]"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

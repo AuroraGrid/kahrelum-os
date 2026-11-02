@@ -6,3 +6,6 @@
 # Retain original whitespace in SHA-pinned external markdown captures.
 licensed-2026-11-02/*.txt -whitespace
 review-2026-11-02/commons-*.md -whitespace
+
+# Candidate review tables are portable text, not HTTP source archives.
+*.csv text eol=lf

@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20466,
+  "query": "Frederick Haynes",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Frederick+Haynes%22",
+  "retrievedAtUtc": "2026-11-02T21:40:30Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 94
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:American forests (17959287259).jpg",
+          "pageid": 43817166,
+          "size": 6016,
+          "wordcount": 56,
+          "snippet": "29 September 2015 English object of statement has role: photographer author name string: Internet Archive Book Images Flickr user ID: 126377022@N07 URL:",
+          "timestamp": "2024-07-30T18:02:45Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Water supply for irrigation (IA watersupplyforir00newerich).pdf",
+          "pageid": 97072398,
+          "size": 893,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2023-05-06T01:34:47Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Hawaii, its natural resources and opportunities for home-making (IA cu31924013815604).pdf",
+          "pageid": 97601904,
+          "size": 1353,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-11-01T17:21:20Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Irrigation in the United States (IA irrigationinunit00newerich).pdf",
+          "pageid": 95553218,
+          "size": 1050,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2024-05-11T00:44:00Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Irrigation in the United States (IA unitirrigationin00newerich).pdf",
+          "pageid": 96987877,
+          "size": 1030,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2024-05-12T04:44:35Z"
+        }
+      ]
+    }
+  }
+}

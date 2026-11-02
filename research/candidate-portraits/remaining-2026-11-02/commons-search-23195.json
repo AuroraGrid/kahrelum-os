@@ -1,0 +1,51 @@
+{
+  "sourceCandidateId": 23195,
+  "query": "Christopher Gallant",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Christopher+Gallant%22",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 4
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Gallant au Fairmount.jpg",
+          "pageid": 51236869,
+          "size": 531,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-05-02T19:45:17Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Gallant-Plaid-Suit-Yellow-Green.jpg",
+          "pageid": 150762107,
+          "size": 236,
+          "wordcount": 11,
+          "snippet": "English Gallant with plaid suit determination method or standard: SHA-1",
+          "timestamp": "2026-10-12T04:29:53Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:How the United States became a nation (IA howunitedstatesb00fisk).pdf",
+          "pageid": 93253315,
+          "size": 845,
+          "wordcount": 0,
+          "snippet": "",
+          "timestamp": "2024-05-03T00:11:28Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Christopher Gallant.jpg",
+          "pageid": 194466724,
+          "size": 279,
+          "wordcount": 39,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: English September 28, 2025 object of statement has role: photographer",
+          "timestamp": "2026-06-24T16:55:56Z"
+        }
+      ]
+    }
+  }
+}

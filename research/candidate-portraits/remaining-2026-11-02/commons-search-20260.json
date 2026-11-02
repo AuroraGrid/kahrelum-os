@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20260,
+  "query": "Jennifer Davis",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Jennifer+Davis%22",
+  "retrievedAtUtc": "2026-11-02T21:34:36Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 34
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:The National farmers' market directory (IA CAT10844804002).pdf",
+          "pageid": 92175906,
+          "size": 1007,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2026-03-18T15:00:51Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:USS Theodore Roosevelt Sailor works out 151001-N-CQ428-012.jpg",
+          "pageid": 51674003,
+          "size": 1116,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2026-07-10T08:28:17Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Oak leaves (electronic resource) (IA oakleaves1999bapt).pdf",
+          "pageid": 95605130,
+          "size": 1289,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2022-02-18T18:38:28Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:The Third Klamath Basin Watershed Restoration & Research Conference... Conference Abstracts Klamath Basin Ecosystem Restoration,... Department of the Interior... U.S. Depart (IA doi-report i-492k-66-2).pdf",
+          "pageid": 196434248,
+          "size": 1179,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2026-07-29T11:33:59Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:USACE call for FY23 FPMS interagency nonstructural flood risk management proposals - USACE-p16021coll2-7550.pdf",
+          "pageid": 153057581,
+          "size": 1224,
+          "wordcount": 45,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States described at URL:",
+          "timestamp": "2026-06-22T19:15:41Z"
+        }
+      ]
+    }
+  }
+}

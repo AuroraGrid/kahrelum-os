@@ -1,0 +1,64 @@
+{
+  "sourceCandidateId": 23054,
+  "query": "Chris Chaffee",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Chris+Chaffee%22",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 6
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:2022 United States Senate election in Maryland results map by county.svg",
+          "pageid": 125389856,
+          "size": 632,
+          "wordcount": 158,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-02-27T19:55:42Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:2022 United States Senate Republican primary election in Maryland results map by county.svg",
+          "pageid": 122329004,
+          "size": 527,
+          "wordcount": 171,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2025-01-26T01:09:05Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:2022 Dundalk 4th of July Parade 86.jpg",
+          "pageid": 120126581,
+          "size": 536,
+          "wordcount": 166,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-09-29T19:48:32Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Tawes Crab Feast - 52391627597.jpg",
+          "pageid": 125294666,
+          "size": 846,
+          "wordcount": 118,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2025-12-29T04:52:56Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Chris Chaffee.jpg",
+          "pageid": 125529784,
+          "size": 586,
+          "wordcount": 98,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2024-03-04T08:49:02Z"
+        }
+      ]
+    }
+  }
+}

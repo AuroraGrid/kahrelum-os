@@ -1,0 +1,33 @@
+{
+  "sourceCandidateId": 19294,
+  "query": "Mike Kirchner",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Mike+Kirchner%22",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 2
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Corporal Kirchner.jpeg",
+          "pageid": 121390415,
+          "size": 671,
+          "wordcount": 22,
+          "snippet": "Copyright was not registered according to a search of the US Copyright Office&#039;s public catalog English determination method or standard: SHA-1",
+          "timestamp": "2026-09-28T13:20:41Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Corporal Kirchner (cropped).jpeg",
+          "pageid": 164867351,
+          "size": 660,
+          "wordcount": 22,
+          "snippet": "Copyright was not registered according to a search of the US Copyright Office&#039;s public catalog English determination method or standard: SHA-1",
+          "timestamp": "2026-09-28T13:20:42Z"
+        }
+      ]
+    }
+  }
+}

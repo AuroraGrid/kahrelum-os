@@ -1,0 +1,43 @@
+{
+  "sourceCandidateId": 23516,
+  "query": "Jonny Larsen",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Jonny+Larsen%22",
+  "retrievedAtUtc": "2026-11-02T21:40:54Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 3
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Rhododendron sanctum.jpg",
+          "pageid": 3472126,
+          "size": 265,
+          "wordcount": 22,
+          "snippet": "English URL: https://commons.wikimedia.org/wiki/user:Ole_Jonny_Larsen Wikimedia username: Ole Jonny Larsen author name string: Ole Jonny Larsen",
+          "timestamp": "2025-05-27T19:59:14Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Rhododendron lapponicum.jpg",
+          "pageid": 3473242,
+          "size": 287,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-08-03T12:52:44Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Rhododendron ziyuanense.jpg",
+          "pageid": 86272126,
+          "size": 328,
+          "wordcount": 173,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2024-09-23T13:53:59Z"
+        }
+      ]
+    }
+  }
+}

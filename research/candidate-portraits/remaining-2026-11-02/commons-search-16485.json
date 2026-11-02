@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 16485,
+  "query": "Thomas Smith",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Thomas+Smith%22",
+  "retrievedAtUtc": "2026-11-02T21:35:31Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 5667
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:John-thomas-smith-engraved-by-willam-skelton-from-drawing-by-john-jackson-r-a.jpg",
+          "pageid": 11244571,
+          "size": 449,
+          "wordcount": 0,
+          "snippet": "",
+          "timestamp": "2017-03-21T08:01:36Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Thomas Smith (c.1720-1767) - The Cascade at Belton, Lincolnshire - 436153 - National Trust.jpg",
+          "pageid": 91955960,
+          "size": 216,
+          "wordcount": 18,
+          "snippet": "English described at URL: https://artuk.org/discover/artworks/the-cascade-at-belton-lincolnshire-176412 operator: Art UK",
+          "timestamp": "2025-06-25T00:19:52Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Sir Thomas Smith, 1st Baronet, of Stratford Place (1833\u20131909).png",
+          "pageid": 143615361,
+          "size": 670,
+          "wordcount": 16,
+          "snippet": "Unknown authorUnknown author English Portrait of Sir Thomas Smith, 1st Baronet, of Stratford Place (1833\u20131909)",
+          "timestamp": "2024-01-07T06:14:35Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Sir Thomas Smith, negative, 1907 (Bassano Ltd; NPG x30664) (cropped).png",
+          "pageid": 196955418,
+          "size": 718,
+          "wordcount": 15,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English",
+          "timestamp": "2026-08-07T10:13:01Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Sir Thomas Smith, negative, 1907 (Bassano Ltd; NPG x30664).png",
+          "pageid": 196955378,
+          "size": 729,
+          "wordcount": 20,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English Photograph of Sir Thomas Smith",
+          "timestamp": "2026-08-07T10:12:59Z"
+        }
+      ]
+    }
+  }
+}

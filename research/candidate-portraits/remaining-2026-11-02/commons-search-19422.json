@@ -1,0 +1,64 @@
+{
+  "sourceCandidateId": 19422,
+  "query": "Shawn Harris",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Shawn+Harris%22",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 57
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:The matches.jpg",
+          "pageid": 13421076,
+          "size": 872,
+          "wordcount": 221,
+          "snippet": "Laquena at English Wikipedia, the copyright holder of this work, hereby publishes it under the following licenses: This file is licensed under the Creative",
+          "timestamp": "2025-12-05T21:18:33Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Shawn A. Harris.jpg",
+          "pageid": 95963032,
+          "size": 643,
+          "wordcount": 19,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States",
+          "timestamp": "2026-09-21T08:18:01Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:P20220713AS-0199 (52324233982).jpg",
+          "pageid": 122941931,
+          "size": 1215,
+          "wordcount": 70,
+          "snippet": "12 September 2022 English object of statement has role: photographer author name string: The White House Flickr user ID: 191819781@N02 URL: https://www",
+          "timestamp": "2026-07-09T08:31:12Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:IDF during the arrival ceremony of US president Joe Biden to Israel, July 2022 II.jpeg",
+          "pageid": 120652867,
+          "size": 2023,
+          "wordcount": 127,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license. Attribution: IDF Spokesperson&#039;s Unit You are free: to share",
+          "timestamp": "2025-12-13T03:08:28Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Colonel Shawn Harris greets Major General John Harris.jpg",
+          "pageid": 145151113,
+          "size": 1632,
+          "wordcount": 52,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English Colonel Shawn Harris greets Major General",
+          "timestamp": "2026-06-10T19:54:16Z"
+        }
+      ]
+    }
+  }
+}

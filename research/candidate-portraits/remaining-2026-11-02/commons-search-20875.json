@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20875,
+  "query": "Mary Silva",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Mary+Silva%22",
+  "retrievedAtUtc": "2026-11-02T21:41:13Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 37
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Selected speeches and news releases - United States Department of Agriculture, Office of Public Affairs. (IA CAT10655231059).pdf",
+          "pageid": 92002989,
+          "size": 1285,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2026-01-29T15:52:46Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Silva Primaeva, Radicubus ac Funibus Obsepta, prope Jacaratiba, in Prov. Sebastianopolitana, da Cole\u00e7\u00e3o Brasiliana Iconogr\u00e1fica.jpg",
+          "pageid": 75758200,
+          "size": 395,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-07-09T16:02:17Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Twentieth century agricultural science (IA CAT84808504).pdf",
+          "pageid": 91689628,
+          "size": 1114,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2026-07-15T08:49:34Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Agricultural libraries information notes (IA CAT75654148114).pdf",
+          "pageid": 91685242,
+          "size": 1246,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2024-08-24T16:52:35Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:List of residents 20 years of age and over as of .. (IA listofresidents219618bost).pdf",
+          "pageid": 197159141,
+          "size": 1067,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2026-08-10T11:09:16Z"
+        }
+      ]
+    }
+  }
+}

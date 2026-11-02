@@ -1,0 +1,43 @@
+{
+  "sourceCandidateId": 21141,
+  "query": "Melissa Hernandez",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Melissa+Hernandez%22",
+  "retrievedAtUtc": "2026-11-02T21:31:16Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 3
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Puppy finds a new home 160911-Z-WI994-002.jpg",
+          "pageid": 56908695,
+          "size": 1908,
+          "wordcount": 19,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States",
+          "timestamp": "2026-06-13T08:52:50Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Melissa Hernandez, 2020.jpg",
+          "pageid": 194126379,
+          "size": 574,
+          "wordcount": 22,
+          "snippet": "English Official portrait of Dublin City Councilmember Melissa Hernandez. operator: Facebook described at URL: https://www.facebook.com/photo.php?fbid=888213476671527",
+          "timestamp": "2026-06-19T14:07:26Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Bear finds a new home 160911-Z-WI994-001.jpg",
+          "pageid": 56908685,
+          "size": 1862,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2026-06-13T08:51:42Z"
+        }
+      ]
+    }
+  }
+}

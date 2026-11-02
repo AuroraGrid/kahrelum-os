@@ -1,0 +1,493 @@
+{
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&titles=File%3AJoint+Base+Commander+visits+the+US+Air+Force+Honor+Guard+-+Jace+Yarbrough+%28cropped%29.jpg%7CFile%3AEvan+hunt.png%7CFile%3AJustin+Pearson+at+the+White+House+on+April+24%2C+2023+-+P20230424AS-1247+%28cropped%29.jpg%7CFile%3AGerald+Malloy+for+US+Senate+Vermont+%28cropped1%29.jpg&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cmime%7Cextmetadata&iiurlwidth=250&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main",
+  "candidateIds": [
+    20471,
+    20415,
+    23162,
+    29676
+  ],
+  "retrievedAtUtc": "2026-11-02T21:41:09Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "pages": {
+        "195345623": {
+          "pageid": 195345623,
+          "ns": 6,
+          "title": "File:Evan hunt.png",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 2288898,
+              "width": 1200,
+              "height": 1600,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Evan_hunt.png/250px-Evan_hunt.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 333,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Evan_hunt.png/500px-Evan_hunt.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Evan_hunt.png/250px-Evan_hunt.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 333,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Evan_hunt.png/500px-Evan_hunt.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Evan_hunt.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Evan_hunt.png",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=195345623",
+              "sha1": "ba1b3d5e9c4083db0f99d8e94a59632b7b214f53",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-07-08 13:32:27",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Evan hunt",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Creative Commons CC0 1.0 Universal Public Domain Dedication missing SDC copyright license|Self-published work|Self-published work missing SDC copyright license|All media needing categories as of 2026|Media needing categories as of 8 July 2026",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Evan Hunt as appearing for an event during a game at Riders Field with the Collin County Democratic Party",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2026-06-05",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Vannahchf12&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Vannahchf12 (page does not exist)\">Vannahchf12</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/png"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1250218792,
+              "parentid": 1245192786,
+              "timestamp": "2026-07-21T13:32:13Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Evan Hunt as appearing for an event during a game at Riders Field with the Collin County Democratic Party}}\n|date=2026-06-05\n|source={{own}}\n|author=[[User:Vannahchf12|Vannahchf12]]\n|permission=\n|other versions=\n}}\n\n=={{int:license-header}}==\n{{self|cc-zero}}\n\n{{Uncategorized|year=2026|month=July|day=8}}"
+                }
+              }
+            }
+          ]
+        },
+        "193512054": {
+          "pageid": 193512054,
+          "ns": 6,
+          "title": "File:Gerald Malloy for US Senate Vermont (cropped1).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 482100,
+              "width": 1112,
+              "height": 1484,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Gerald_Malloy_for_US_Senate_Vermont_%28cropped1%29.jpg/250px-Gerald_Malloy_for_US_Senate_Vermont_%28cropped1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 334,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Gerald_Malloy_for_US_Senate_Vermont_%28cropped1%29.jpg/500px-Gerald_Malloy_for_US_Senate_Vermont_%28cropped1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Gerald_Malloy_for_US_Senate_Vermont_%28cropped1%29.jpg/250px-Gerald_Malloy_for_US_Senate_Vermont_%28cropped1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 334,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Gerald_Malloy_for_US_Senate_Vermont_%28cropped1%29.jpg/500px-Gerald_Malloy_for_US_Senate_Vermont_%28cropped1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Gerald_Malloy_for_US_Senate_Vermont_%28cropped1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Gerald_Malloy_for_US_Senate_Vermont_(cropped1).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=193512054",
+              "sha1": "2db12f9449294bd09fabf75b8d4c58cbdd6b0051",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-06-07 11:13:03",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Gerald Malloy for US Senate Vermont (cropped1)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Self-published work|Extracted images|Gerald Malloy (Vermont)",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Republican Candidate Gerald Malloy for US Senate Vermont",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2022-04-28",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:VolunteerMalloy&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:VolunteerMalloy (page does not exist)\">VolunteerMalloy</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1252251613,
+              "parentid": 1227258617,
+              "timestamp": "2026-07-26T09:12:46Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "== {{int:filedesc}} ==\n{{Information\n|description={{en|1=Republican Candidate Gerald Malloy for US Senate Vermont}}\n|date=2022-04-28\n|source={{own}}\n|author=[[User:VolunteerMalloy|VolunteerMalloy]]\n}}\n{{Extracted from|1=Gerald Malloy for US Senate Vermont.jpg}}\n\n== {{int:license-header}} ==\n{{self|cc-by-sa-4.0}}\n\n[[Category:Gerald Malloy (Vermont)]]"
+                }
+              }
+            }
+          ]
+        },
+        "200173514": {
+          "pageid": 200173514,
+          "ns": 6,
+          "title": "File:Joint Base Commander visits the US Air Force Honor Guard - Jace Yarbrough (cropped).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 646008,
+              "width": 700,
+              "height": 933,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Joint_Base_Commander_visits_the_US_Air_Force_Honor_Guard_-_Jace_Yarbrough_%28cropped%29.jpg/250px-Joint_Base_Commander_visits_the_US_Air_Force_Honor_Guard_-_Jace_Yarbrough_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 333,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Joint_Base_Commander_visits_the_US_Air_Force_Honor_Guard_-_Jace_Yarbrough_%28cropped%29.jpg/500px-Joint_Base_Commander_visits_the_US_Air_Force_Honor_Guard_-_Jace_Yarbrough_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Joint_Base_Commander_visits_the_US_Air_Force_Honor_Guard_-_Jace_Yarbrough_%28cropped%29.jpg/250px-Joint_Base_Commander_visits_the_US_Air_Force_Honor_Guard_-_Jace_Yarbrough_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 333,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Joint_Base_Commander_visits_the_US_Air_Force_Honor_Guard_-_Jace_Yarbrough_%28cropped%29.jpg/500px-Joint_Base_Commander_visits_the_US_Air_Force_Honor_Guard_-_Jace_Yarbrough_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Joint_Base_Commander_visits_the_US_Air_Force_Honor_Guard_-_Jace_Yarbrough_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Joint_Base_Commander_visits_the_US_Air_Force_Honor_Guard_-_Jace_Yarbrough_(cropped).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=200173514",
+              "sha1": "2be8de27cbea1c9c0cc16fb78c0c9f8c1736423c",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-09-24 23:12:46",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Joint Base Commander visits the US Air Force Honor Guard - Jace Yarbrough (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "United States Air Force|PD US Military|Extracted images|PD-USGov missing SDC copyright status",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Colors Element Flight Commander 1st Lt. Jace Yarbrough of Tuscola, Texas, salutes as the officer-in-charge during a rehearsal and demonstration of an Air Force full honors funeral.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2014-09-30",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.dvidshub.net/image/1630303/joint-base-commander-visits-us-air-force-honor-guard\">https://www.dvidshub.net/image/1630303/joint-base-commander-visits-us-air-force-honor-guard</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Lt.Cmdr. Jim Remington",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1280379937,
+              "parentid": 1280337464,
+              "timestamp": "2026-09-25T14:07:39Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Colors Element Flight Commander 1st Lt. Jace Yarbrough of Tuscola, Texas, salutes as the officer-in-charge during a rehearsal and demonstration of an Air Force full honors funeral.}}\n|date=2014-09-30\n|source=https://www.dvidshub.net/image/1630303/joint-base-commander-visits-us-air-force-honor-guard\n|author=Lt.Cmdr. Jim Remington\n|permission=\n|other versions={{Extracted from|1=Joint Base Commander visits the US Air Force Honor Guard - Jace Yarbrough.jpg}}\n}}\n\n=={{int:license-header}}==\n{{PD-USGov-Military}}\n\n[[Category:United States Air Force]]"
+                }
+              }
+            }
+          ]
+        },
+        "132338504": {
+          "pageid": 132338504,
+          "ns": 6,
+          "title": "File:Justin Pearson at the White House on April 24, 2023 - P20230424AS-1247 (cropped).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 357052,
+              "width": 882,
+              "height": 1176,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Justin_Pearson_at_the_White_House_on_April_24%2C_2023_-_P20230424AS-1247_%28cropped%29.jpg/250px-Justin_Pearson_at_the_White_House_on_April_24%2C_2023_-_P20230424AS-1247_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 333,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Justin_Pearson_at_the_White_House_on_April_24%2C_2023_-_P20230424AS-1247_%28cropped%29.jpg/500px-Justin_Pearson_at_the_White_House_on_April_24%2C_2023_-_P20230424AS-1247_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Justin_Pearson_at_the_White_House_on_April_24%2C_2023_-_P20230424AS-1247_%28cropped%29.jpg/250px-Justin_Pearson_at_the_White_House_on_April_24%2C_2023_-_P20230424AS-1247_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 333,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Justin_Pearson_at_the_White_House_on_April_24%2C_2023_-_P20230424AS-1247_%28cropped%29.jpg/500px-Justin_Pearson_at_the_White_House_on_April_24%2C_2023_-_P20230424AS-1247_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Justin_Pearson_at_the_White_House_on_April_24%2C_2023_-_P20230424AS-1247_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Justin_Pearson_at_the_White_House_on_April_24,_2023_-_P20230424AS-1247_(cropped).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=132338504",
+              "sha1": "d49d658c6af9543122c4840980d747cba089f20d",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2023-05-26 05:30:39",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Justin Pearson at the White House on April 24, 2023 - P20230424AS-1247 (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Taken with Sony ILCE-1|Executive Office of the President files|Justin J. Pearson|Extracted images|White House in April 2023|United States photographs taken on 2023-04-24|Photographs by Adam Schultz",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "President Joe Biden and Vice President Kamala Harris meet with the \u201cTennessee Three\u201d, democratic Tennessee State legislators Justin Pearson, Gloria Johnson, and Justin Jones, Monday, April 24, 2023, in the Oval Office of the White House. Pearson and Jones were expelled from Tennessee\u2019s House of Representatives after the three participated in gun control demonstrations on the House Floor, but were later reinstated. (Official White House Photo by Adam Schultz)",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2023-04-24 15:38:32",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/191819781@N02/52922678944/\">https://www.flickr.com/photos/191819781@N02/52922678944/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "The White House",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1245515870,
+              "parentid": 1149919066,
+              "timestamp": "2026-07-09T08:25:00Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=President Joe Biden and Vice President Kamala Harris meet with the \u201cTennessee Three\u201d, democratic Tennessee State legislators Justin Pearson, Gloria Johnson, and Justin Jones, Monday, April 24, 2023, in the Oval Office of the White House. Pearson and Jones were expelled from Tennessee\u2019s House of Representatives after the three participated in gun control demonstrations on the House Floor, but were later reinstated. (Official White House Photo by Adam Schultz)}}\n|date=2023-04-24 15:38:32\n|source=https://www.flickr.com/photos/191819781@N02/52922678944/\n|author=The White House\n|permission=\n|other versions={{Extracted from|1=President Joe Biden meets Democratic Tennessee State legislator Justin Pearson, one of the \u201cTennessee Three\u201d at the White House on April 24, 2023 - P20230424AS-1247.jpg}}\n}}\n\n=={{int:license-header}}==\n{{PD-USGov-POTUS}}\n\n[[Category:Justin J. Pearson]]\n[[Category:White House in April 2023]]\n[[Category:United States photographs taken on 2023-04-24]]\n[[Category:Photographs by Adam Schultz]]\n[[Category:Taken with Sony ILCE-1]]"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

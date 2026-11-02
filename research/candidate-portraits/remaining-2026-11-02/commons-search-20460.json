@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20460,
+  "query": "Steven Shook",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Steven+Shook%22",
+  "retrievedAtUtc": "2026-11-02T21:40:27Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 12
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Bridge across Palouse River at Winona, Washington, circa 1909 - DPLA - ea9f05398ac6066d3485a74b08520984.jpg",
+          "pageid": 121906802,
+          "size": 195,
+          "wordcount": 675,
+          "snippet": "This file was uploaded by the Digital Public Library of America, and the following item metadata was created by the contributing institution&#039;s staff. Note:",
+          "timestamp": "2026-07-04T16:59:58Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Ewan school, Ewan, Washington, 1913 - DPLA - f75b1fec9e5e33f5a70064d3377b587e.jpg",
+          "pageid": 122001098,
+          "size": 95,
+          "wordcount": 661,
+          "snippet": "This file was uploaded by the Digital Public Library of America, and the following item metadata was created by the contributing institution&#039;s staff. Note:",
+          "timestamp": "2026-07-04T17:24:47Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Olympian passenger train, Malden, Washington, 1911 - DPLA - 99d217074cb33094b95fa366892909c6.jpg",
+          "pageid": 121909323,
+          "size": 322,
+          "wordcount": 726,
+          "snippet": "This file was uploaded by the Digital Public Library of America, and the following item metadata was created by the contributing institution&#039;s staff. Note:",
+          "timestamp": "2026-07-04T18:13:46Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Garfield Train, Spokane & Inland Railway, 1906 - DPLA - 70cd8e503ce4dd6a548d406c6b91b3bf.jpg",
+          "pageid": 121913965,
+          "size": 96,
+          "wordcount": 665,
+          "snippet": "This file was uploaded by the Digital Public Library of America, and the following item metadata was created by the contributing institution&#039;s staff. Note:",
+          "timestamp": "2026-08-19T21:26:15Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Blunder's mystery companions (IA blundersmysteryc00pett).pdf",
+          "pageid": 93641004,
+          "size": 828,
+          "wordcount": 14,
+          "snippet": "English determination method or standard: copyright not renewed determination method or standard: SHA-1",
+          "timestamp": "2026-05-30T19:31:01Z"
+        }
+      ]
+    }
+  }
+}

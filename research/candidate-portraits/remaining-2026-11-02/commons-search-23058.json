@@ -1,0 +1,52 @@
+{
+  "sourceCandidateId": 23058,
+  "query": "Virginia McIntyre",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Virginia+McIntyre%22",
+  "retrievedAtUtc": "2026-11-02T21:37:28Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 4
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Census of Iowa for the year 1895 (IA censusofiowafory02iowa).pdf",
+          "pageid": 196376061,
+          "size": 975,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2026-07-28T16:28:30Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Mrs. Otto E. McIntyre with children Randall, Angus and Sally Virginia McIntyre - DPLA - 0ca8c7128d4ebfb67fd03b43d8031984.jpg",
+          "pageid": 173774576,
+          "size": 899,
+          "wordcount": 12,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: SHA-1",
+          "timestamp": "2026-06-04T05:22:21Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Virginia's bandit (IA virginiasbandit00sing).pdf",
+          "pageid": 198663686,
+          "size": 924,
+          "wordcount": 15,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English",
+          "timestamp": "2026-09-16T05:16:10Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Pennsylvania- FAYETTE County, Enumeration District 25, Sheet No. 5B - DPLA - 0f94a0d53850e082c3ffb5d96651ced3.jpg",
+          "pageid": 96720055,
+          "size": 3184,
+          "wordcount": 578,
+          "snippet": "English determination method or standard: determined by GLAM institution and stated at its website author name string: Department of Commerce and Labor",
+          "timestamp": "2024-10-03T21:08:51Z"
+        }
+      ]
+    }
+  }
+}

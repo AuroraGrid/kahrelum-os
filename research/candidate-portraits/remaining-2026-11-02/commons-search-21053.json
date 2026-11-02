@@ -1,0 +1,52 @@
+{
+  "sourceCandidateId": 21053,
+  "query": "Kyle Kirkland",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Kyle+Kirkland%22",
+  "retrievedAtUtc": "2026-11-02T21:31:32Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 4
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:F-22 Raptor Arrival 160922-F-LI975-185.jpg",
+          "pageid": 57396690,
+          "size": 1364,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2025-09-29T15:19:36Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:F-22 Raptor Arrival 160922-F-LI975-017.jpg",
+          "pageid": 57396608,
+          "size": 1364,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2026-06-25T18:43:32Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Kyle Kirkland, 2018.jpg",
+          "pageid": 146603585,
+          "size": 504,
+          "wordcount": 170,
+          "snippet": "This video, screenshot or audio excerpt was released under the Creative Commons license option on YouTube before August 2025. (YouTube changed the license",
+          "timestamp": "2026-02-16T19:06:32Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Kyle Kirkland, 2018 (cropped).jpg",
+          "pageid": 146632908,
+          "size": 493,
+          "wordcount": 170,
+          "snippet": "This video, screenshot or audio excerpt was released under the Creative Commons license option on YouTube before August 2025. (YouTube changed the license",
+          "timestamp": "2025-01-09T04:25:18Z"
+        }
+      ]
+    }
+  }
+}

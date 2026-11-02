@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 23758,
+  "query": "Michael Katz",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Michael+Katz%22",
+  "retrievedAtUtc": "2026-11-02T21:42:02Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 27
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Michael Katz.jpg",
+          "pageid": 24915728,
+          "size": 393,
+          "wordcount": 39,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: English author name string: Michael Katz Wikimedia username: Michael",
+          "timestamp": "2026-01-31T09:00:56Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Michael Katz Krefeld.jpg",
+          "pageid": 52800742,
+          "size": 531,
+          "wordcount": 17,
+          "snippet": "English author name string: Mogens Engelund URL: https://commons.wikimedia.org/wiki/user:Moeng Wikimedia username: Moeng",
+          "timestamp": "2022-05-12T20:20:09Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Michael Katz portrait.jpg",
+          "pageid": 27038345,
+          "size": 425,
+          "wordcount": 128,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license. Attribution: Shiran Carmel / \u05e9\u05d9\u05e8\u05df \u05db\u05e8\u05de\u05dc You are free: to",
+          "timestamp": "2026-05-13T18:28:46Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Michael Katz in 2022.jpg",
+          "pageid": 127764562,
+          "size": 292,
+          "wordcount": 179,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-05-13T18:28:55Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Nicholas Katz.jpg",
+          "pageid": 12343348,
+          "size": 543,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2024-07-27T21:22:59Z"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 20155,
+  "query": "\"Don Tracy\" Illinois",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=15&srsearch=%22Don+Tracy%22+Illinois",
+  "retrievedAtUtc": "2026-11-02T21:47:46Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Abendpost 1899-03-25- Vol 11 Iss 71 (IA sim abendpost-sonntagpost 1899-03-25 11 71).pdf",
+          "pageid": 97759915,
+          "size": 1368,
+          "wordcount": 21,
+          "snippet": "This work is in <span class=\"searchmatch\">the</span> public domain in its country <span class=\"searchmatch\">of</span> origin and other countries and areas where <span class=\"searchmatch\">the</span> copyright term is <span class=\"searchmatch\">the</span> author&#039;s life plus 100 years or",
+          "timestamp": "2026-09-02T15:40:58Z"
+        }
+      ]
+    }
+  }
+}

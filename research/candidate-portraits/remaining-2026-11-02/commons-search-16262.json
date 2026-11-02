@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 16262,
+  "query": "Rebecca Bennett",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Rebecca+Bennett%22",
+  "retrievedAtUtc": "2026-11-02T21:36:35Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 49
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Twenty-fourth Annual Report of the Massachusetts Homeopathic Hospital and of the Ladies' Aid Association, for the Year Ending December 31, 1893 (IA twentyfourthannu24bost).pdf",
+          "pageid": 96206418,
+          "size": 967,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2022-01-22T19:18:58Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Certain comeoverers (IA cu31924092514821).pdf",
+          "pageid": 98253495,
+          "size": 1243,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-08-31T13:31:05Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Annual report of the receipts and expenditures of the town of Brighton (IA annualreportofre1855brig).pdf",
+          "pageid": 99074095,
+          "size": 1441,
+          "wordcount": 21,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English determination method or standard: SHA-1",
+          "timestamp": "2025-07-10T05:37:15Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Treasure case 2012 T191, addenda Roman coins (86) and pottery fragments from Doncaster, South Yorkshire (FindID 493812-388469).jpg",
+          "pageid": 56015988,
+          "size": 40554,
+          "wordcount": 140,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. Attribution: The Portable Antiquities Scheme/ The Trustees",
+          "timestamp": "2024-04-12T04:33:36Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Publications (IA publications12suss).pdf",
+          "pageid": 198155714,
+          "size": 1007,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2026-09-01T23:39:55Z"
+        }
+      ]
+    }
+  }
+}

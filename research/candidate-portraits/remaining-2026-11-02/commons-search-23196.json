@@ -1,0 +1,34 @@
+{
+  "sourceCandidateId": 23196,
+  "query": "Caroline Shinkle",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Caroline+Shinkle%22",
+  "retrievedAtUtc": "2026-11-02T21:36:58Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 2
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Caroline Shinkle Selfie (cropped).jpg",
+          "pageid": 200828384,
+          "size": 425,
+          "wordcount": 15,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: English",
+          "timestamp": "2026-10-04T12:00:59Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Caroline Shinkle Selfie.jpg",
+          "pageid": 200828120,
+          "size": 436,
+          "wordcount": 31,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: English Selfie photo with caroline shinkle, Republican nominee for",
+          "timestamp": "2026-10-04T12:18:09Z"
+        }
+      ]
+    }
+  }
+}

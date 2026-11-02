@@ -1,0 +1,523 @@
+{
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&titles=File%3AMark+Lamb+%2855021585752%29.jpg%7CFile%3AGay+Valimont+candidacy+photo+%28cropped%29.jpg%7CFile%3ASteve+Manos.png%7CFile%3ADwayne+Romero.JPG&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cmime%7Cextmetadata&iiurlwidth=250&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main",
+  "candidateIds": [
+    26443,
+    22766,
+    21035,
+    20677
+  ],
+  "retrievedAtUtc": "2026-11-02T21:34:09Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "pages": {
+        "185847834": {
+          "pageid": 185847834,
+          "ns": 6,
+          "title": "File:Dwayne Romero.JPG",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 585656,
+              "width": 854,
+              "height": 990,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Dwayne_Romero.JPG/250px-Dwayne_Romero.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 290,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Dwayne_Romero.JPG/500px-Dwayne_Romero.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Dwayne_Romero.JPG/250px-Dwayne_Romero.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 290,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Dwayne_Romero.JPG/500px-Dwayne_Romero.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Dwayne_Romero.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Dwayne_Romero.JPG",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=185847834",
+              "sha1": "4cfc8df84571ca006dcb3b2188a25040564a1ddf",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-03-10 14:16:17",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Dwayne Romero",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Land developers|Democrats from Colorado|People of Pitkin County, Colorado|City councillors of Colorado|Self-published work|Taken on missing SDC inception|Files with coordinates missing SDC location of creation|Photographs by Jeffrey Beall|Taken with Canon EOS R8|United States photographs taken on 2026-03-09|March 2026 in Colorado|United States Army people of the Gulf War (1990\u20131991)",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "37.625917",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "-104.779975",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Dwayne Romero, a politician and real estate developer from Snowmass Village, Colorado.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "Taken on\u00a09 March 2026",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Jeffrey_Beall\" title=\"User:Jeffrey Beall\">Jeffrey Beall</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1247873212,
+              "parentid": 1179148203,
+              "timestamp": "2026-07-14T23:48:08Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "== {{int:filedesc}} ==\n{{Information\n|Description=Dwayne Romero, a politician and real estate developer from Snowmass Village, Colorado.\n|Source={{own}}\n|Date={{taken on|2026-03-09|location=United States}}\n|Author= [[User:Jeffrey Beall|Jeffrey Beall]]\n|Permission=\n|other_versions=\n}}\n{{Location|37|37|33.3|N|104|46|47.91|W}}\n\n[[Category:Democrats from Colorado]]\n[[Category:People of Pitkin County, Colorado]]\n[[Category:Land developers]]\n[[Category:City councillors of Colorado]]\n[[Category:United States Army people of the Gulf War (1990\u20131991)]]\n[[Category:March 2026 in Colorado]]\n[[Category:Taken with Canon EOS R8]]\n[[Category:Photographs by Jeffrey Beall]]\n== {{int:license-header}} ==\n{{self|cc-by-4.0}}"
+                }
+              }
+            }
+          ]
+        },
+        "163068330": {
+          "pageid": 163068330,
+          "ns": 6,
+          "title": "File:Gay Valimont candidacy photo (cropped).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 20876,
+              "width": 406,
+              "height": 528,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Gay_Valimont_candidacy_photo_%28cropped%29.jpg/250px-Gay_Valimont_candidacy_photo_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 325,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/5/54/Gay_Valimont_candidacy_photo_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Gay_Valimont_candidacy_photo_%28cropped%29.jpg/250px-Gay_Valimont_candidacy_photo_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 325,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/5/54/Gay_Valimont_candidacy_photo_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Gay_Valimont_candidacy_photo_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Gay_Valimont_candidacy_photo_(cropped).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=163068330",
+              "sha1": "929a0b4521a9870bbef3817cb8ebc4a15315a3b7",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-04-01 15:45:59",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Gay Valimont candidacy photo (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Extracted images|Template Unknown (author)|Gay Valimont",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Gay Valimont candidacy photo",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2024-10-31",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.nwfdailynews.com/story/news/politics/2024/10/31/meet-gay-valimont-the-democrat-challenging-gop-firebrand-matt-gaetz/75918143007/\">https://www.nwfdailynews.com/story/news/politics/2024/10/31/meet-gay-valimont-the-democrat-challenging-gop-firebrand-matt-gaetz/75918143007/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Unknown author<span style=\"display: none;\">Unknown author</span>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1268400782,
+              "parentid": 1210215376,
+              "timestamp": "2026-08-27T18:17:52Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Gay Valimont candidacy photo}}\n{{de|1=Gay Valimont Kandidaturfoto}}\n|date=2024-10-31\n|source=https://www.nwfdailynews.com/story/news/politics/2024/10/31/meet-gay-valimont-the-democrat-challenging-gop-firebrand-matt-gaetz/75918143007/\n|author={{Unknown|author}}\n|permission=\n|other versions={{Extracted from|1=Gay Valimont candidacy photo.jpg}}\n}}\n\n=={{int:license-header}}==\n{{cc-by-sa-4.0}}\n[[Category:Gay Valimont]]"
+                }
+              }
+            }
+          ]
+        },
+        "181297489": {
+          "pageid": 181297489,
+          "ns": 6,
+          "title": "File:Mark Lamb (55021585752).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 19659413,
+              "width": 8192,
+              "height": 5464,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Mark_Lamb_%2855021585752%29.jpg/250px-Mark_Lamb_%2855021585752%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 167,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Mark_Lamb_%2855021585752%29.jpg/500px-Mark_Lamb_%2855021585752%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Mark_Lamb_%2855021585752%29.jpg/250px-Mark_Lamb_%2855021585752%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 167,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Mark_Lamb_%2855021585752%29.jpg/500px-Mark_Lamb_%2855021585752%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Mark_Lamb_%2855021585752%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Mark_Lamb_(55021585752).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=181297489",
+              "sha1": "57c071d73f57a060e5c4a96011935af427af12b9",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-01-05 16:50:54",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Mark Lamb (55021585752)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Mark Lamb|Photographs by Gage Skidmore|Files with coordinates missing SDC location of creation|Flickr images reviewed by FlickreviewR 2|Files uploaded by RandomUserGuy1738|Flickr images missing SDC published in|AmericaFest 2025",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "33.449645",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "-112.068840",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Former Pinal County Sheriff Mark Lamb speaking with attendees at the 2025 AmericaFest at the Phoenix Convention Center in Phoenix, Arizona.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-12-21 08:38",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/gageskidmore/55021585752/\">Mark Lamb</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/22007612@N05\">Gage Skidmore</a> from Surprise, AZ, United States of America",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1187971959,
+              "parentid": 1187971902,
+              "timestamp": "2026-03-28T05:34:26Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "== {{int:filedesc}} ==\n{{Information\n| Description = Former Pinal County Sheriff Mark Lamb speaking with attendees at the 2025 AmericaFest at the Phoenix Convention Center in Phoenix, Arizona.\n| Source      = [https://www.flickr.com/photos/gageskidmore/55021585752/ Mark Lamb]\n| Date        = 2025-12-21 08:38\n| Author      = [https://www.flickr.com/people/22007612@N05 Gage Skidmore] from Surprise, AZ, United States of America\n| Permission  = \n| other_versions=\n}}\n{{Location dec|33.449645|-112.068840|source:Flickr}}\n\n=={{int:license-header}}==\n{{cc-by-sa-4.0}}\n{{FlickreviewR|status=passed|author=Gage Skidmore|sourceurl=https://flickr.com/photos/22007612@N05/55021585752|archive=|reviewdate=2026-01-05 16:58:46|reviewlicense=cc-by-sa-4.0|reviewer=FlickreviewR 2}}\n\n[[Category:AmericaFest 2025]]\n[[Category:Photographs by Gage Skidmore]]\n[[Category:Files uploaded by RandomUserGuy1738]]\n[[Category:Mark Lamb]]"
+                }
+              }
+            }
+          ]
+        },
+        "194910057": {
+          "pageid": 194910057,
+          "ns": 6,
+          "title": "File:Steve Manos.png",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 835665,
+              "width": 600,
+              "height": 900,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Steve_Manos.png/250px-Steve_Manos.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 375,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Steve_Manos.png/500px-Steve_Manos.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Steve_Manos.png/250px-Steve_Manos.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 375,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Steve_Manos.png/500px-Steve_Manos.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Steve_Manos.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Steve_Manos.png",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=194910057",
+              "sha1": "419628075951706141cde7b2c22d9799c65772ff",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-06-30 22:32:59",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Steve Manos",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Steve (given name)|PD California|Unknown date",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Lake Elsinore city councilor Steve Manos",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "Unknown date",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.lake-elsinore.org/216/City-Council\">https://www.lake-elsinore.org/216/City-Council</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "City of Lake Elsinore",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/png"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1246141389,
+              "parentid": 1241792371,
+              "timestamp": "2026-07-10T18:39:49Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Lake Elsinore city councilor Steve Manos}}\n|date={{otherdate|?}}\n|source=https://www.lake-elsinore.org/216/City-Council\n|author=City of Lake Elsinore\n|permission=\n|other versions=\n}}\n\n=={{int:license-header}}==\n{{PD-CAGov}}\n\n[[Category:Steve (given name)]]"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 19119,
+  "query": "Chris Beck",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Chris+Beck%22",
+  "retrievedAtUtc": "2026-11-02T21:38:22Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 183
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Chris Beck, Navy SEAL.jpg",
+          "pageid": 26617679,
+          "size": 463,
+          "wordcount": 129,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2025-12-01T17:55:25Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Master class with Christophe Beck (by Canadian File Centre) 2.jpg",
+          "pageid": 31128412,
+          "size": 656,
+          "wordcount": 119,
+          "snippet": "12 February 2014 This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-06-05T09:42:38Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Master class with Christophe Beck (by Canadian File Centre).jpg",
+          "pageid": 22605479,
+          "size": 734,
+          "wordcount": 126,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2026-01-23T16:59:46Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Christophe Beck SDCC 2014 (14782713903).jpg",
+          "pageid": 34239063,
+          "size": 632,
+          "wordcount": 177,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-04-05T23:03:20Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Christophe Beck (Master Class).jpg",
+          "pageid": 37486402,
+          "size": 655,
+          "wordcount": 106,
+          "snippet": "24 December 2014 This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-06-17T12:50:17Z"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 23508,
+  "query": "Jeanine Driscoll",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Jeanine+Driscoll%22",
+  "retrievedAtUtc": "2026-11-02T21:37:35Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Jeanine Driscoll.jpg",
+          "pageid": 202035582,
+          "size": 349,
+          "wordcount": 40,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: English 2026 Republican Congressional Candidate NY-04; Town of Hempstead",
+          "timestamp": "2026-10-20T00:08:10Z"
+        }
+      ]
+    }
+  }
+}

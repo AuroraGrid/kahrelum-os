@@ -1,0 +1,43 @@
+{
+  "sourceCandidateId": 20390,
+  "query": "Kim Hardy",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Kim+Hardy%22",
+  "retrievedAtUtc": "2026-11-02T21:36:12Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 3
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Will-areaf-000.jpg",
+          "pageid": 94198242,
+          "size": 278,
+          "wordcount": 126,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2022-02-19T11:08:12Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Yuri Buzzi.jpg",
+          "pageid": 184561368,
+          "size": 249,
+          "wordcount": 104,
+          "snippet": "This file is licensed under the Creative Commons Attribution 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit the work",
+          "timestamp": "2026-08-02T03:47:05Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Victoria Golembiovskaya. Image courtesy of Colnaghi. Photographed by Kim Hardy.jpg",
+          "pageid": 100216918,
+          "size": 383,
+          "wordcount": 154,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2025-05-29T11:12:44Z"
+        }
+      ]
+    }
+  }
+}

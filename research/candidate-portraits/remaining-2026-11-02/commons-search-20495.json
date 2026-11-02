@@ -1,0 +1,33 @@
+{
+  "sourceCandidateId": 20495,
+  "query": "Zach Dembo",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Zach+Dembo%22",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 2
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Zach Dembo.jpg",
+          "pageid": 201924869,
+          "size": 411,
+          "wordcount": 26,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English Navy portrait of Zach Dembo described at",
+          "timestamp": "2026-10-30T06:39:22Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Zach Dembo (cropped).jpg",
+          "pageid": 202448165,
+          "size": 409,
+          "wordcount": 15,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English",
+          "timestamp": "2026-10-30T19:02:14Z"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 21022,
+  "query": "Jason Gibbs",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Jason+Gibbs%22",
+  "retrievedAtUtc": "2026-11-02T21:31:45Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 28
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Lasioglossum sequoiae, F, Side, WA, San Juan County 2014-07-14-18.45 (34011235742).jpg",
+          "pageid": 60551579,
+          "size": 3198,
+          "wordcount": 66,
+          "snippet": "1 July 2017 English Flickr user ID: 54563451@N08 author name string: USGS Bee Inventory and Monitoring Lab URL: https://www.flickr.com/people/usgsbiml/",
+          "timestamp": "2024-11-11T21:26:04Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Hylaeus pictipes, m, back, Crawford Co., PA 2016-11-11-16.36 (30894109081).jpg",
+          "pageid": 53367736,
+          "size": 3272,
+          "wordcount": 73,
+          "snippet": "English Flickr user ID: 54563451@N08 author name string: USGS Bee Inventory and Monitoring Lab URL: https://www.flickr.com/people/usgsbiml/ publication",
+          "timestamp": "2025-06-03T16:16:58Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Psyche (IA psyche2010camb).pdf",
+          "pageid": 92046186,
+          "size": 972,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2021-12-17T20:49:45Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Lasioglossum prasinogaster, F, Back, WY, Lincoln County 2014-04-25-14.40.33 ZS PMax (14092438982).jpg",
+          "pageid": 33079621,
+          "size": 1210,
+          "wordcount": 143,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2024-11-10T12:43:51Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Photograph of intertegular distance for Andrena wilkella Kirby (Andrenidae) - pone.0151482.g001 (cropped).png",
+          "pageid": 129634025,
+          "size": 1202,
+          "wordcount": 92,
+          "snippet": "This file is licensed under the Creative Commons Attribution 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit the work",
+          "timestamp": "2025-07-04T06:20:02Z"
+        }
+      ]
+    }
+  }
+}

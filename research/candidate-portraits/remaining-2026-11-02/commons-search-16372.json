@@ -1,0 +1,42 @@
+{
+  "sourceCandidateId": 16372,
+  "query": "Callie Barr",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Callie+Barr%22",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 3
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:2024MIUSHouse Holds and Gains.svg",
+          "pageid": 154998073,
+          "size": 391,
+          "wordcount": 140,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution 4.0 International",
+          "timestamp": "2025-12-31T20:33:10Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Callie Barr.jpg",
+          "pageid": 152929199,
+          "size": 444,
+          "wordcount": 40,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: English author name string: WavyPhoton Wikimedia username: WavyPhoton",
+          "timestamp": "2025-11-08T01:49:19Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Callie Barr (cropped).jpg",
+          "pageid": 152930552,
+          "size": 433,
+          "wordcount": 40,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: English author name string: WavyPhoton Wikimedia username: WavyPhoton",
+          "timestamp": "2024-09-21T10:46:38Z"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "sourceCandidateId": 19398,
+  "query": "Matt Day",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Matt+Day%22",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 73
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Matt Day (7739403594).jpg",
+          "pageid": 24790713,
+          "size": 664,
+          "wordcount": 157,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-01-30T22:28:32Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Matt Day (7739402588).jpg",
+          "pageid": 24790712,
+          "size": 3609,
+          "wordcount": 167,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-01-30T22:28:31Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:FEDLINK - United States Federal Collection (IA CAT10716895).pdf",
+          "pageid": 91522397,
+          "size": 1320,
+          "wordcount": 21,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English determination method or standard: SHA-1",
+          "timestamp": "2026-06-26T18:22:06Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Todd Lasance (8284173208).jpg",
+          "pageid": 24788698,
+          "size": 6375,
+          "wordcount": 167,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-01-30T21:57:06Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Phillipe Witana (8284167240).jpg",
+          "pageid": 24788709,
+          "size": 6450,
+          "wordcount": 157,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-01-30T21:57:18Z"
+        }
+      ]
+    }
+  }
+}

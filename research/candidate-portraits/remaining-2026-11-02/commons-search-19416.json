@@ -1,0 +1,64 @@
+{
+  "sourceCandidateId": 19416,
+  "query": "John Cowan",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22John+Cowan%22",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 319
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Image-John Hartford playing at Merlefest, North Carolina (2000)-fls.jpg",
+          "pageid": 3848896,
+          "size": 717,
+          "wordcount": 51,
+          "snippet": "The original description page was here. All following user names refer to en.wikipedia. 2007-12-11 18:37 Filberthockey 751\u00d7556\u00d78 (412224 bytes) John Hartford",
+          "timestamp": "2024-08-09T04:23:44Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:John Cowan at Piedmont Land Conservancy Benefit, Greensboro, NC 2012 October 19, 2012.jpg",
+          "pageid": 22853823,
+          "size": 473,
+          "wordcount": 160,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following licenses: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-10-09T20:36:34Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:N\u00e1v\u0161t\u011bva Johna Cowana 17. 5. 2023.jpg",
+          "pageid": 164741685,
+          "size": 371,
+          "wordcount": 6,
+          "snippet": "\u00a0 English John Cowan Czech John Cowan",
+          "timestamp": "2025-06-18T03:34:19Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:New Grass Revival in Norway.jpg",
+          "pageid": 145006530,
+          "size": 460,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-01-24T03:41:13Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Helix, v.4, no.2, Jul. 18, 1968 - DPLA - 451625779b905df3f6c596ed3f34bf66 (page 9).jpg",
+          "pageid": 135600441,
+          "size": 421,
+          "wordcount": 1020,
+          "snippet": "This file was uploaded by the Digital Public Library of America, and the following item metadata was created by the contributing institution&#039;s staff. Note:",
+          "timestamp": "2026-07-10T17:10:08Z"
+        }
+      ]
+    }
+  }
+}

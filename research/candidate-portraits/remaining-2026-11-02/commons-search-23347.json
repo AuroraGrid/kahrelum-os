@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 23347,
+  "query": "Chuck Gray",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Chuck+Gray%22",
+  "retrievedAtUtc": "2026-11-02T21:41:47Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 39
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Chuck Gray in 2025.jpg",
+          "pageid": 163259245,
+          "size": 901,
+          "wordcount": 209,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-08-21T11:44:41Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Chuck Gray by Gage Skidmore.jpg",
+          "pageid": 155933542,
+          "size": 519,
+          "wordcount": 132,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license. Attribution: Gage Skidmore You are free: to share \u2013 to copy",
+          "timestamp": "2025-12-02T18:42:21Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Chuck Gray (54183951374).jpg",
+          "pageid": 156264276,
+          "size": 1066,
+          "wordcount": 175,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2025-03-30T13:47:37Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Chuck Gray.jpg",
+          "pageid": 121788635,
+          "size": 934,
+          "wordcount": 208,
+          "snippet": "Firesondiego, the copyright holder of this work, hereby publishes it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2024-05-13T03:30:39Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Richard Esparza, Glenn Jacobs & Chuck Gray (54185901204).jpg",
+          "pageid": 156322756,
+          "size": 1220,
+          "wordcount": 161,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-01-01T06:37:07Z"
+        }
+      ]
+    }
+  }
+}

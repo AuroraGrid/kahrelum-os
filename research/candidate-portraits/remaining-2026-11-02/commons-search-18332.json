@@ -1,0 +1,43 @@
+{
+  "sourceCandidateId": 18332,
+  "query": "Maurice Mercer",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Maurice+Mercer%22",
+  "retrievedAtUtc": "2026-11-02T21:30:38Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 3
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:The forum, or, Forty years full practice at the Philadelphia bar (IA cu31924018827810).pdf",
+          "pageid": 97682550,
+          "size": 1291,
+          "wordcount": 15,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English",
+          "timestamp": "2026-09-17T18:00:09Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Norman Maurice; or, The man of the people (IA cu31924022164713).pdf",
+          "pageid": 97784977,
+          "size": 1324,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2026-09-17T21:18:01Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Poems- descriptive, dramatic, legendary, and contemplative (IA poemsdescriptive01simmrich).pdf",
+          "pageid": 96107058,
+          "size": 926,
+          "wordcount": 0,
+          "snippet": "",
+          "timestamp": "2025-01-25T21:09:00Z"
+        }
+      ]
+    }
+  }
+}

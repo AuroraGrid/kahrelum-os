@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20360,
+  "query": "Chris Jones",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Chris+Jones%22",
+  "retrievedAtUtc": "2026-11-02T21:30:45Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 171
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Chris Jones (defensive tackle, born 1994).JPG",
+          "pageid": 65219314,
+          "size": 481,
+          "wordcount": 128,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution 4.0 International",
+          "timestamp": "2025-12-01T18:28:40Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Chris Jones at the White House (964941048258173) 01.png",
+          "pageid": 148031544,
+          "size": 812,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2025-12-01T18:28:45Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Joe Biden & Chris Jones P20230605AS-1323 (cropped).jpg",
+          "pageid": 133072055,
+          "size": 1097,
+          "wordcount": 19,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States",
+          "timestamp": "2026-07-09T08:24:29Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:The Kansas City Chiefs' Chris Jones took a moment to share what it means to celebrate Super Bowl LVII at the White House (964941048258173).webm",
+          "pageid": 133113375,
+          "size": 867,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2025-02-07T14:41:28Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Chris Jones.jpg",
+          "pageid": 57300600,
+          "size": 334,
+          "wordcount": 156,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2025-09-13T17:51:26Z"
+        }
+      ]
+    }
+  }
+}

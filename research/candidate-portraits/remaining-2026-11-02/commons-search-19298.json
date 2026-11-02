@@ -1,0 +1,43 @@
+{
+  "sourceCandidateId": 19298,
+  "query": "Carey Coleman",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Carey+Coleman%22",
+  "retrievedAtUtc": "2026-11-02T21:37:51Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 3
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Socialism, \"the creed of despair\"; (IA socialismthecree00hugo).pdf",
+          "pageid": 93580784,
+          "size": 906,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-04-07T00:47:04Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:American missionary register (IA americanmissiona6718unit).pdf",
+          "pageid": 193588498,
+          "size": 1082,
+          "wordcount": 15,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English",
+          "timestamp": "2026-06-09T14:58:55Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Journal of the Alabama House of Representatives, November 1859 through February 1860 (IA alabama-house-journal-1859-1860).pdf",
+          "pageid": 99068706,
+          "size": 1101,
+          "wordcount": 21,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English determination method or standard: SHA-1",
+          "timestamp": "2025-05-02T06:39:36Z"
+        }
+      ]
+    }
+  }
+}

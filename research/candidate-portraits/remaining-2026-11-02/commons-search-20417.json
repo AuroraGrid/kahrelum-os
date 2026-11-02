@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20417,
+  "query": "James Pearce",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22James+Pearce%22",
+  "retrievedAtUtc": "2026-11-02T21:40:40Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 133
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:James Alfred Pearce, standing.jpg",
+          "pageid": 217947,
+          "size": 381,
+          "wordcount": 35,
+          "snippet": "U.S. Senator and Congressman James Alfred Pearce of Maryland by Mathew Brady&#039;s studio, 1844-1860. http://memory.loc.gov/service/pnp/cph/3c00000/3c09000/3c09900/3c09962v",
+          "timestamp": "2025-05-30T11:43:34Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Autograph Collection - Pearce, James Alfred, 1805-1862 - DPLA - 18c8a091a52afdc09488c3405a401b9c.jpg",
+          "pageid": 117239190,
+          "size": 118,
+          "wordcount": 596,
+          "snippet": "This file was uploaded by the Digital Public Library of America, and the following item metadata was created by the contributing institution&#039;s staff. Note:",
+          "timestamp": "2026-07-02T04:37:38Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Pierce - NARA - 528740.jpg",
+          "pageid": 17097291,
+          "size": 1498,
+          "wordcount": 531,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English determination method or standard: determined",
+          "timestamp": "2026-03-22T21:13:27Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Signature of James Alfred Pearce (1805\u20131862).png",
+          "pageid": 118275248,
+          "size": 572,
+          "wordcount": 14,
+          "snippet": "English Signature of James Alfred Pearce (1805\u20131862) determination method or standard: SHA-1",
+          "timestamp": "2026-01-26T04:25:55Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:James Pearce Jr Tennessee.png",
+          "pageid": 158233733,
+          "size": 480,
+          "wordcount": 184,
+          "snippet": "This video, screenshot or audio excerpt was released under the Creative Commons license option on YouTube before August 2025. (YouTube changed the license",
+          "timestamp": "2025-10-15T15:53:05Z"
+        }
+      ]
+    }
+  }
+}

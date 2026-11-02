@@ -1,0 +1,405 @@
+{
+  "url": "https://en.wikipedia.org/w/api.php",
+  "requestedNames": [
+    "Peter Oberacker",
+    "Patrick Halpin",
+    "Ralph Ambrosio",
+    "Anthony Constantino",
+    "Blake Gendebien",
+    "Kailee Buller",
+    "Aaron Gies",
+    "Alissa Ellman",
+    "Virginia McIntyre",
+    "Dennis Hannon",
+    "Michael LiPetri",
+    "Jeanine Driscoll",
+    "George Marsh",
+    "Joseph Chou",
+    "Melvin Rivera",
+    "Claire Valdez",
+    "Lewis Mizrahi",
+    "Joel Azumah",
+    "Eric Conroy",
+    "Kristina Knickerbocker",
+    "Mike Kirchner",
+    "Jerrad Christian",
+    "Carey Coleman",
+    "Maria Jukic",
+    "Don Leonard",
+    "Jen Mazzuckelli",
+    "Cleophus Dulaney",
+    "Joshua Kolasinski",
+    "Brian Shaver",
+    "Elizabeth Kirtley",
+    "Brian Poindexter",
+    "Vanessa Enoch",
+    "John Croisant",
+    "Mark Tedford",
+    "Brandon Wade",
+    "Suzie Byrd",
+    "Mitchell Jacob",
+    "Jena Nelson",
+    "Barbara Kahl",
+    "Chris Beck"
+  ],
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "redirects": [
+        {
+          "from": "Michael LiPetri",
+          "to": "Mike LiPetri"
+        },
+        {
+          "from": "Mike Kirchner",
+          "to": "Corporal Kirchner"
+        },
+        {
+          "from": "Blake Gendebien",
+          "to": "2026 United States House of Representatives elections in New York",
+          "tofragment": "District 21"
+        },
+        {
+          "from": "John Croisant",
+          "to": "2026 United States House of Representatives elections in Oklahoma",
+          "tofragment": "District 1"
+        },
+        {
+          "from": "Brian Poindexter",
+          "to": "2026 United States House of Representatives elections in Ohio",
+          "tofragment": "District 7"
+        },
+        {
+          "from": "Eric Conroy",
+          "to": "2026 United States House of Representatives elections in Ohio",
+          "tofragment": "District 1"
+        },
+        {
+          "from": "Kristina Knickerbocker",
+          "to": "2026 United States House of Representatives elections in Ohio",
+          "tofragment": "District 10"
+        },
+        {
+          "from": "Jena Nelson",
+          "to": "2026 United States House of Representatives elections in Oklahoma",
+          "tofragment": "District 5"
+        }
+      ],
+      "pages": {
+        "-1": {
+          "ns": 0,
+          "title": "Ralph Ambrosio",
+          "missing": ""
+        },
+        "-2": {
+          "ns": 0,
+          "title": "Kailee Buller",
+          "missing": ""
+        },
+        "-3": {
+          "ns": 0,
+          "title": "Aaron Gies",
+          "missing": ""
+        },
+        "-4": {
+          "ns": 0,
+          "title": "Alissa Ellman",
+          "missing": ""
+        },
+        "-5": {
+          "ns": 0,
+          "title": "Virginia McIntyre",
+          "missing": ""
+        },
+        "-6": {
+          "ns": 0,
+          "title": "Dennis Hannon",
+          "missing": ""
+        },
+        "-7": {
+          "ns": 0,
+          "title": "Jeanine Driscoll",
+          "missing": ""
+        },
+        "-8": {
+          "ns": 0,
+          "title": "Joseph Chou",
+          "missing": ""
+        },
+        "-9": {
+          "ns": 0,
+          "title": "Melvin Rivera",
+          "missing": ""
+        },
+        "-10": {
+          "ns": 0,
+          "title": "Lewis Mizrahi",
+          "missing": ""
+        },
+        "-11": {
+          "ns": 0,
+          "title": "Joel Azumah",
+          "missing": ""
+        },
+        "-12": {
+          "ns": 0,
+          "title": "Jerrad Christian",
+          "missing": ""
+        },
+        "-13": {
+          "ns": 0,
+          "title": "Carey Coleman",
+          "missing": ""
+        },
+        "-14": {
+          "ns": 0,
+          "title": "Maria Jukic",
+          "missing": ""
+        },
+        "-15": {
+          "ns": 0,
+          "title": "Jen Mazzuckelli",
+          "missing": ""
+        },
+        "-16": {
+          "ns": 0,
+          "title": "Cleophus Dulaney",
+          "missing": ""
+        },
+        "-17": {
+          "ns": 0,
+          "title": "Joshua Kolasinski",
+          "missing": ""
+        },
+        "-18": {
+          "ns": 0,
+          "title": "Brian Shaver",
+          "missing": ""
+        },
+        "-19": {
+          "ns": 0,
+          "title": "Elizabeth Kirtley",
+          "missing": ""
+        },
+        "-20": {
+          "ns": 0,
+          "title": "Vanessa Enoch",
+          "missing": ""
+        },
+        "-21": {
+          "ns": 0,
+          "title": "Suzie Byrd",
+          "missing": ""
+        },
+        "-22": {
+          "ns": 0,
+          "title": "Mitchell Jacob",
+          "missing": ""
+        },
+        "-23": {
+          "ns": 0,
+          "title": "Barbara Kahl",
+          "missing": ""
+        },
+        "80744502": {
+          "pageid": 80744502,
+          "ns": 0,
+          "title": "Anthony Constantino",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Anthony_Constantino_in_August_2025.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 695,
+            "height": 1067
+          },
+          "pageprops": {
+            "defaultsort": "Constantino, Anthony",
+            "page_image_free": "Anthony_Constantino_in_August_2025.png",
+            "wikibase-shortdesc": "Filipino model, influencer, and actor (born 2002)",
+            "wikibase_item": "Q136024026"
+          }
+        },
+        "38093118": {
+          "pageid": 38093118,
+          "ns": 0,
+          "title": "Brandon Wade",
+          "pageprops": {
+            "defaultsort": "Wade, Brandon",
+            "wikibase-shortdesc": "American businessman (born 1970)",
+            "wikibase_item": "Q4957126"
+          }
+        },
+        "3133872": {
+          "pageid": 3133872,
+          "ns": 0,
+          "title": "Chris Beck",
+          "pageprops": {
+            "disambiguation": "",
+            "expectshortpage": "",
+            "wikibase-shortdesc": "Topics referred to by the same term",
+            "wikibase_item": "Q20815026"
+          }
+        },
+        "77497969": {
+          "pageid": 77497969,
+          "ns": 0,
+          "title": "Claire Valdez",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Queens_Bus_Network_Redesign_Claire_Valdez_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 2008,
+            "height": 2678
+          },
+          "pageprops": {
+            "defaultsort": "Valdez, Claire",
+            "page_image_free": "Queens_Bus_Network_Redesign_Claire_Valdez_(cropped).jpg",
+            "wikibase-shortdesc": "American politician (born 1989)",
+            "wikibase_item": "Q126911137"
+          }
+        },
+        "28090542": {
+          "pageid": 28090542,
+          "ns": 0,
+          "title": "Don Leonard",
+          "pageprops": {
+            "defaultsort": "Leonard, Don",
+            "wikibase-shortdesc": "South African actor (1925\u20132002)",
+            "wikibase_item": "Q5292999"
+          }
+        },
+        "11706375": {
+          "pageid": 11706375,
+          "ns": 0,
+          "title": "George Marsh",
+          "pageprops": {
+            "disambiguation": "",
+            "expectshortpage": "",
+            "wikibase-shortdesc": "Topics referred to by the same term",
+            "wikibase_item": "Q5542158"
+          }
+        },
+        "70619828": {
+          "pageid": 70619828,
+          "ns": 0,
+          "title": "Mark Tedford",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tedford_Mark_OKHouse.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 3438,
+            "height": 4298
+          },
+          "pageprops": {
+            "defaultsort": "Tedford, Mark",
+            "page_image_free": "Tedford_Mark_OKHouse.jpg",
+            "wikibase-shortdesc": "American politician",
+            "wikibase_item": "Q111709692"
+          }
+        },
+        "31096799": {
+          "pageid": 31096799,
+          "ns": 0,
+          "title": "Patrick Halpin",
+          "pageprops": {
+            "disambiguation": "",
+            "expectshortpage": "",
+            "wikibase-shortdesc": "Topics referred to by the same term",
+            "wikibase_item": "Q7146641"
+          }
+        },
+        "67132376": {
+          "pageid": 67132376,
+          "ns": 0,
+          "title": "Peter Oberacker",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/b/bd/%2805-12-25%29_NYS_Senator_Peter_Oberacker_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 583,
+            "height": 779
+          },
+          "pageprops": {
+            "defaultsort": "Oberacker, Peter",
+            "page_image_free": "(05-12-25)_NYS_Senator_Peter_Oberacker_(cropped).jpg",
+            "wikibase-shortdesc": "New York state senator",
+            "wikibase_item": "Q105996915"
+          }
+        },
+        "78594668": {
+          "pageid": 78594668,
+          "ns": 0,
+          "title": "2026 United States House of Representatives elections in New York",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/2/22/Seal_of_New_York_%28state%29.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 379,
+            "height": 379
+          },
+          "pageprops": {
+            "page_image_free": "Seal_of_New_York_(state).svg",
+            "toc": "",
+            "wikibase-shortdesc": "",
+            "wikibase_item": "Q131578574"
+          }
+        },
+        "78902423": {
+          "pageid": 78902423,
+          "ns": 0,
+          "title": "2026 United States House of Representatives elections in Ohio",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Seal_of_Ohio_%28B%26W%29.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 608,
+            "height": 608
+          },
+          "pageprops": {
+            "page_image_free": "Seal_of_Ohio_(B&W).svg",
+            "toc": "",
+            "wikibase-shortdesc": "",
+            "wikibase_item": "Q131985929"
+          }
+        },
+        "79250550": {
+          "pageid": 79250550,
+          "ns": 0,
+          "title": "2026 United States House of Representatives elections in Oklahoma",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/3/39/Seal_of_Oklahoma.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 959,
+            "height": 966
+          },
+          "pageprops": {
+            "defaultsort": "2026 United States House of Representatives elections in Oklahoma",
+            "page_image_free": "Seal_of_Oklahoma.svg",
+            "toc": "",
+            "wikibase-shortdesc": "",
+            "wikibase_item": "Q132891387"
+          }
+        },
+        "30857783": {
+          "pageid": 30857783,
+          "ns": 0,
+          "title": "Corporal Kirchner",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Corporal_Kirchner_%28cropped%29.jpeg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 524,
+            "height": 707
+          },
+          "pageprops": {
+            "defaultsort": "Kirchner, Corporal",
+            "page_image_free": "Corporal_Kirchner_(cropped).jpeg",
+            "wikibase-shortdesc": "American professional wrestler (1957\u20132021)",
+            "wikibase_item": "Q3710414"
+          }
+        },
+        "59678908": {
+          "pageid": 59678908,
+          "ns": 0,
+          "title": "Mike LiPetri",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/3/35/Mike_LiPetri_%282024_Italian_Heritage_Street_Festival%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 734,
+            "height": 978
+          },
+          "pageprops": {
+            "defaultsort": "LiPetri, Michael",
+            "page_image_free": "Mike_LiPetri_(2024_Italian_Heritage_Street_Festival)_(cropped).jpg",
+            "wikibase-shortdesc": "American attorney (born 1990)",
+            "wikibase_item": "Q60771939"
+          }
+        }
+      }
+    }
+  }
+}

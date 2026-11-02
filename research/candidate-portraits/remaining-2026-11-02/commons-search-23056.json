@@ -1,0 +1,34 @@
+{
+  "sourceCandidateId": 23056,
+  "query": "Joseph Chou",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Joseph+Chou%22",
+  "retrievedAtUtc": "2026-11-02T21:37:36Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 2
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Joseph chou head shot.jpg",
+          "pageid": 151623267,
+          "size": 251,
+          "wordcount": 164,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2024-12-13T16:33:08Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Joseph chou headshot 2.jpg",
+          "pageid": 151623285,
+          "size": 250,
+          "wordcount": 164,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2025-08-21T16:16:21Z"
+        }
+      ]
+    }
+  }
+}

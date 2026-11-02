@@ -1,0 +1,33 @@
+{
+  "sourceCandidateId": 22658,
+  "query": "Joe Strada",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Joe+Strada%22",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 2
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Epoca 1887-01-17, nr. 343.pdf",
+          "pageid": 24482433,
+          "size": 375,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-07-23T15:17:31Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Epoca, seria 2 1897-04-06, nr. 420.pdf",
+          "pageid": 24484857,
+          "size": 464,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-10-23T02:46:23Z"
+        }
+      ]
+    }
+  }
+}

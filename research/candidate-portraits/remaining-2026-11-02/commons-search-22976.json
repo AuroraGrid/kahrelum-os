@@ -1,0 +1,64 @@
+{
+  "sourceCandidateId": 22976,
+  "query": "Scott Singer",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Scott+Singer%22",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 69
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Ray Scott Performing In Destin, FL, Aug 2014.jpg",
+          "pageid": 35390617,
+          "size": 488,
+          "wordcount": 160,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following licenses: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-04-21T05:36:28Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Ray Scott at Maverick Saloon.jpg",
+          "pageid": 12709368,
+          "size": 1092,
+          "wordcount": 213,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.5 Generic license. Attribution: Dwight McCann/www.DwightMcCann.com You are free:",
+          "timestamp": "2026-02-28T00:36:17Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Lady Antebellum 2008.jpg",
+          "pageid": 5155195,
+          "size": 427,
+          "wordcount": 123,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2024-10-02T22:24:24Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Lady A - Charlotte 12-27-12-42.jpg",
+          "pageid": 24544211,
+          "size": 533,
+          "wordcount": 92,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2026-01-29T23:46:52Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Lady A - Charlotte 12-27-12-1.jpg",
+          "pageid": 24544166,
+          "size": 513,
+          "wordcount": 98,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2026-05-01T12:06:05Z"
+        }
+      ]
+    }
+  }
+}

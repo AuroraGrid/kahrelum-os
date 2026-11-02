@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 26305,
+  "query": "Paul Berry",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Paul+Berry%22",
+  "retrievedAtUtc": "2026-11-02T21:35:38Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 51
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Paul Berry, Greymouth, QSM (cropped).jpg",
+          "pageid": 121752986,
+          "size": 1468,
+          "wordcount": 98,
+          "snippet": "This file is licensed under the Creative Commons Attribution 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit the work",
+          "timestamp": "2026-02-16T08:18:36Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Paul Berry, Greymouth, QSM.jpg",
+          "pageid": 121752494,
+          "size": 1472,
+          "wordcount": 92,
+          "snippet": "This file is licensed under the Creative Commons Attribution 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit the work",
+          "timestamp": "2026-02-16T08:18:36Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Simon Berry.jpg",
+          "pageid": 62314870,
+          "size": 598,
+          "wordcount": 129,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2025-12-15T11:23:11Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Determining Intelligence, Surveillance and Reconnaissance (ISR) system effectiveness, and integration as part of force protection and system survivability (IA determiningintel1094537721).pdf",
+          "pageid": 92324336,
+          "size": 2690,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2026-04-24T01:59:14Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:The Nautilus. Vol. 032, 1918-1919 (IA nautilus32amer).pdf",
+          "pageid": 96013538,
+          "size": 1256,
+          "wordcount": 0,
+          "snippet": "",
+          "timestamp": "2024-04-17T03:15:41Z"
+        }
+      ]
+    }
+  }
+}

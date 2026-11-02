@@ -1,0 +1,34 @@
+{
+  "sourceCandidateId": 20482,
+  "query": "\"Carlos De La Cruz\" Texas",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=15&srsearch=%22Carlos+De+La+Cruz%22+Texas",
+  "retrievedAtUtc": "2026-11-02T21:47:22Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 2
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Carlos De La Cruz has my Complete and Total Endorsement to be the next U.S. Representative from Texas\u2019 35th Congressional District \u2014 HE WILL NEVER LET YOU DOWN!.webm",
+          "pageid": 199835844,
+          "size": 730,
+          "wordcount": 0,
+          "snippet": "La Cruz has my Complete and Total Endorsement to be the next <span class=\"searchmatch\">U.S</span>. Representative from <span class=\"searchmatch\">Texas</span>\u2019 35th Congressional District \u2014 HE WILL NEVER LET YOU DOWN!.webm",
+          "timestamp": "2026-09-25T01:04:05Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Carlos De La Cruz.jpg",
+          "pageid": 199418178,
+          "size": 370,
+          "wordcount": 17,
+          "snippet": "English Military picture <span class=\"searchmatch\">of</span> Carlos De La Cruz described at URL: https://x.com/CarlosFor<span class=\"searchmatch\">Texas</span>/status/2075276891578093831",
+          "timestamp": "2026-09-22T21:44:59Z"
+        }
+      ]
+    }
+  }
+}

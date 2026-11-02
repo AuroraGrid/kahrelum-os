@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 21133,
+  "query": "Brian Burley",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Brian+Burley%22",
+  "retrievedAtUtc": "2026-11-02T21:32:16Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:BrianBurley.jpg",
+          "pageid": 113072089,
+          "size": 414,
+          "wordcount": 170,
+          "snippet": "This video, screenshot or audio excerpt was released under the Creative Commons license option on YouTube before August 2025. (YouTube changed the license",
+          "timestamp": "2025-02-19T03:57:31Z"
+        }
+      ]
+    }
+  }
+}

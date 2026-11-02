@@ -1,0 +1,33 @@
+{
+  "sourceCandidateId": 21442,
+  "query": "Alani Bankhead",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Alani+Bankhead%22",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 2
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Great Seal of Montana.svg",
+          "pageid": 14801181,
+          "size": 850,
+          "wordcount": 33,
+          "snippet": "English French Sceau de l&#039;\u00e9tat du Montana, \u00c9tats-Unis. applies to jurisdiction: United States determination method or standard: work of the federal government",
+          "timestamp": "2026-03-19T04:25:21Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Alani Bankhead USAF 2021.png",
+          "pageid": 197569077,
+          "size": 808,
+          "wordcount": 0,
+          "snippet": "",
+          "timestamp": "2026-08-16T06:10:57Z"
+        }
+      ]
+    }
+  }
+}

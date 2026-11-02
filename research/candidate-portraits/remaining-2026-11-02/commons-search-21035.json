@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 21035,
+  "query": "Steve Manos",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Steve+Manos%22",
+  "retrievedAtUtc": "2026-11-02T21:32:08Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Steve Manos.png",
+          "pageid": 194910057,
+          "size": 311,
+          "wordcount": 18,
+          "snippet": "English Lake Elsinore city councilor Steve Manos described at URL: https://www.lake-elsinore.org/216/City-Council",
+          "timestamp": "2026-07-10T18:39:49Z"
+        }
+      ]
+    }
+  }
+}

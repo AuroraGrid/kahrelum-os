@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 22663,
+  "query": "James Martin",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22James+Martin%22",
+  "retrievedAtUtc": "2026-11-02T21:33:34Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 2482
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Justice James Martin.jpg",
+          "pageid": 5316281,
+          "size": 1008,
+          "wordcount": 73,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse The original description page was here. All following",
+          "timestamp": "2026-04-09T19:56:13Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:James Martin SLNSW 446763.jpg",
+          "pageid": 137022654,
+          "size": 488,
+          "wordcount": 29,
+          "snippet": "English Photographic portrait of James Martin (from an album of portraits collected by John William Richard Clarke, ca.1866-1909); collection of the State",
+          "timestamp": "2023-09-23T01:59:33Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Dr James Martin.jpg",
+          "pageid": 26886185,
+          "size": 294,
+          "wordcount": 156,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-05-11T12:00:34Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:20190129 james martin-195 39966437023 o 2.jpg",
+          "pageid": 178079397,
+          "size": 344,
+          "wordcount": 40,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: English Fr. James Martin SJ in 2019 object of statement has role:",
+          "timestamp": "2026-07-05T08:13:38Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Fr. James Martin SJ Portrait.jpg",
+          "pageid": 178079005,
+          "size": 327,
+          "wordcount": 47,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: English Fr. James Martin SJ photographed in his NYC office on November",
+          "timestamp": "2026-08-10T14:53:01Z"
+        }
+      ]
+    }
+  }
+}

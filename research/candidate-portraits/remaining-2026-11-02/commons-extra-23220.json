@@ -1,0 +1,481 @@
+{
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&titles=File%3ADavid+Flippo.png%7CFile%3AChristopher+Gallant.jpg%7CFile%3AChristopher+Backemyer+DOS+%28cropped%29.jpg%7CFile%3AEric+Hafner+%28cropped+3x4%29.jpg&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cmime%7Cextmetadata&iiurlwidth=250&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main",
+  "candidateIds": [
+    23220,
+    23195,
+    20735,
+    18487
+  ],
+  "retrievedAtUtc": "2026-11-02T21:36:47Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "pages": {
+        "191883034": {
+          "pageid": 191883034,
+          "ns": 6,
+          "title": "File:Christopher Backemyer DOS (cropped).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 22119,
+              "width": 217,
+              "height": 290,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Christopher_Backemyer_DOS_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 250,
+              "thumbheight": 334,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Christopher_Backemyer_DOS_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 334
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Christopher_Backemyer_DOS_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Christopher_Backemyer_DOS_(cropped).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=191883034",
+              "sha1": "6b571c3ef23340bdd188062a5a63520915586073",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-05-13 02:30:54",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Christopher Backemyer DOS (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD US DOS|Extracted images|Official portrait photographs of the United States Department of State",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Official portrait of Christopher Backemyer, Deputy Assistant Secretary for Assistance Coordination and Regional and Multilateral Affairs in the State Department\u2019s Bureau of Near Eastern Affairs.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2022-12-22",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.state.gov/biographies/chris-backemeyer\">https://www.state.gov/biographies/chris-backemeyer</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "US Department of State",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1261885489,
+              "parentid": 1252782028,
+              "timestamp": "2026-08-16T01:19:59Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Official portrait of Christopher Backemyer, Deputy Assistant Secretary for Assistance Coordination and Regional and Multilateral Affairs in the State Department\u2019s Bureau of Near Eastern Affairs.}}\n|date=2022-12-22\n|source=https://www.state.gov/biographies/chris-backemeyer\n|author=US Department of State\n|permission=\n|other versions={{Extracted from|1=Christopher Backemyer DOS.jpg}}\n}}\n\n=={{int:license-header}}==\n{{PD-USGov-DOS}}\n\n[[Category:Official portrait photographs of the United States Department of State]]"
+                }
+              }
+            }
+          ]
+        },
+        "194466724": {
+          "pageid": 194466724,
+          "ns": 6,
+          "title": "File:Christopher Gallant.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1825811,
+              "width": 1798,
+              "height": 2037,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Christopher_Gallant.jpg/250px-Christopher_Gallant.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 283,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Christopher_Gallant.jpg/500px-Christopher_Gallant.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Christopher_Gallant.jpg/250px-Christopher_Gallant.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 283,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Christopher_Gallant.jpg/500px-Christopher_Gallant.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Christopher_Gallant.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Christopher_Gallant.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=194466724",
+              "sha1": "6603eac72299898ff648a66a12ce1a54b1b1cede",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-06-24 15:55:35",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Christopher Gallant",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Self-published work|All media needing categories as of 2026|Media needing categories as of 24 June 2026",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "September 28, 2025",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-09-28 21:08:14",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Jimgerbig\" title=\"User:Jimgerbig\">Jimgerbig</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1237692181,
+              "parentid": 1237660453,
+              "timestamp": "2026-06-24T16:55:56Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=September 28, 2025}}\n|date=2025-09-28 21:08:14\n|source={{own}}\n|author=[[User:Jimgerbig|Jimgerbig]]\n|permission=\n|other versions=\n}}\n\n=={{int:license-header}}==\n{{self|cc-zero}}\n\n{{Uncategorized|year=2026|month=June|day=24}}"
+                }
+              }
+            }
+          ]
+        },
+        "193574852": {
+          "pageid": 193574852,
+          "ns": 6,
+          "title": "File:David Flippo.png",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 464054,
+              "width": 468,
+              "height": 642,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/David_Flippo.png/250px-David_Flippo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 343,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/9/94/David_Flippo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/David_Flippo.png/250px-David_Flippo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 343,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/9/94/David_Flippo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/9/94/David_Flippo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:David_Flippo.png",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=193574852",
+              "sha1": "b6e121521a7930b93f88b0e546477ce8d54134e6",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-06-09 02:06:34",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "David Flippo",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "David (given name)|PD US Air Force|PD-USGov missing SDC copyright status",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Military picture of Lt. Col David Flippo",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "between 1985 and 2009",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.facebook.com/photo.php?fbid=257169393958324&amp;set=pb.100089957967352.-2207520000&amp;type=3\">https://www.facebook.com/photo.php?fbid=257169393958324&amp;set=pb.100089957967352.-2207520000&amp;type=3</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "U.S. Department of Defense",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/png"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1241320453,
+              "parentid": 1228300780,
+              "timestamp": "2026-06-30T04:50:43Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Military picture of Lt. Col David Flippo}}\n|date={{other date|between|1985|2009}}\n|source=https://www.facebook.com/photo.php?fbid=257169393958324&set=pb.100089957967352.-2207520000&type=3\n|author=U.S. Department of Defense\n|permission=\n|other versions=\n}}\n\n=={{int:license-header}}==\n{{PD-USGov-Military-Air Force}}\n\n[[Category:David (given name)]]"
+                }
+              }
+            }
+          ]
+        },
+        "201108324": {
+          "pageid": 201108324,
+          "ns": 6,
+          "title": "File:Eric Hafner (cropped 3x4).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 10928,
+              "width": 158,
+              "height": 211,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Eric_Hafner_%28cropped_3x4%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 250,
+              "thumbheight": 334,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Eric_Hafner_%28cropped_3x4%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 334
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Eric_Hafner_%28cropped_3x4%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Eric_Hafner_(cropped_3x4).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=201108324",
+              "sha1": "816e7f513b42eac0b008778984f18e8fe66a0688",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-10-05 22:03:46",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Eric Hafner (cropped 3x4)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD US Government|Federal Bureau of Prisons|Perennial candidates|Extracted images|CC-PD-Mark|PD-USGov missing SDC copyright status|Candidates to the United States House of Representatives|United States House of Representatives elections in Alaska, 2026|Eric Hafner",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Eric Hafner's campaign announcement for the 2024 Alaska US House primary, as mailed to KRBD community radio of Ketchikan Alaska. \u201cEric Hafner, Democrat, running for US Congress in Alaska from federal prison!\u201d",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2024-09-03",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.krbd.org/2024/09/03/eric-hafner-advances-to-the-ak-us-house-ballot-from-federal-prison/\">Eric Hafner advances to the AK US House ballot from federal prison</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "United States Department of Justice, Federal Bureau of Prisons (photo card), Eric Hafner (handwritten block print text)",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1292330996,
+              "parentid": 1283615953,
+              "timestamp": "2026-10-27T09:37:23Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Eric Hafner's campaign announcement for the 2024 Alaska US House primary, as mailed to KRBD community radio of Ketchikan Alaska. \u201cEric Hafner, Democrat, running for US Congress in Alaska from federal prison!\u201d}}\n|date=2024-09-03\n|source=[https://www.krbd.org/2024/09/03/eric-hafner-advances-to-the-ak-us-house-ballot-from-federal-prison/ Eric Hafner advances to the AK US House ballot from federal prison]\n|author=United States Department of Justice, Federal Bureau of Prisons (photo card), Eric Hafner (handwritten block print text)\n|permission=\n|other versions={{Extracted from|1=Eric Hafner.jpg}}{{Extracted from|1=Eric Hafner's 2024 Alaska campaign announcement.jpg}}\n}}\n\n=={{int:license-header}}==\n{{PD-USGov}}\n\n[[Category:Federal Bureau of Prisons]]\n[[Category:Perennial candidates]]\n[[Category:Candidates to the United States House of Representatives]]\n[[Category:Eric Hafner]]\n[[Category:United States House of Representatives elections in Alaska, 2026]]"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

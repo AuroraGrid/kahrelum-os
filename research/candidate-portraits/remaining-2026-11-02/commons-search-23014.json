@@ -1,0 +1,64 @@
+{
+  "sourceCandidateId": 23014,
+  "query": "George McDermott",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22George+McDermott%22",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 19
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:George Thomas McDermott.jpg",
+          "pageid": 69661052,
+          "size": 583,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2026-03-16T08:10:31Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Annual reports of the town officials of the town of Oakham, Massachusetts (IA annualreportsoft1909oakh).pdf",
+          "pageid": 96124795,
+          "size": 1031,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-07-10T06:01:33Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:The Wakefield High School debater (IA wakefieldhighsch1915unse 0).pdf",
+          "pageid": 96208223,
+          "size": 881,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2022-01-22T23:11:33Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Combined report of Expenditures for the fiscal year 1908 ... Appropriations for the fiscal year 1909 ... and Expenditures proposed for the fiscal year ..1910 (IA CAT11088213002).pdf",
+          "pageid": 93132494,
+          "size": 1201,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2024-08-17T19:13:32Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Annual report of the Woburn city government, for the year .. (IA annualreportofwo00wobu 2).pdf",
+          "pageid": 98056539,
+          "size": 1209,
+          "wordcount": 21,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English determination method or standard: SHA-1",
+          "timestamp": "2025-01-04T09:43:10Z"
+        }
+      ]
+    }
+  }
+}

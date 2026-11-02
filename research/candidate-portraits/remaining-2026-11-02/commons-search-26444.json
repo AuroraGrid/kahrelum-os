@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 26444,
+  "query": "Elizabeth Lee",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Elizabeth+Lee%22",
+  "retrievedAtUtc": "2026-11-02T21:31:01Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 663
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Elizabeth Lee MLA (cropped).jpg",
+          "pageid": 91618153,
+          "size": 330,
+          "wordcount": 158,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-06-08T14:50:36Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Elizabeth Lee MLA.jpg",
+          "pageid": 53043355,
+          "size": 382,
+          "wordcount": 158,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-06-08T14:50:35Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Elizabeth Lee Member for Kurrajong.jpg",
+          "pageid": 53039658,
+          "size": 293,
+          "wordcount": 158,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-03-09T10:23:46Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Elizabeth Lee Hazen.jpg",
+          "pageid": 41247868,
+          "size": 1585,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-10-11T15:38:13Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Elizabeth Lee Hazen Rachel Fuller Brown 1950s.jpg",
+          "pageid": 18386483,
+          "size": 1612,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-08-28T06:10:17Z"
+        }
+      ]
+    }
+  }
+}

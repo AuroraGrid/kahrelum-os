@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 19273,
+  "query": "Rachel Wallace",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Rachel+Wallace%22",
+  "retrievedAtUtc": "2026-11-02T21:39:00Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 11
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Dedham historical register (IA dedhamhistoricalv5dedh).pdf",
+          "pageid": 196508207,
+          "size": 1084,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2026-07-30T11:08:33Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Hush money (IA hushmoney00park 1).pdf",
+          "pageid": 92462659,
+          "size": 874,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2025-10-10T07:50:49Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:The Genealogical advertiser (1899) (IA genealogicaladve00gree).pdf",
+          "pageid": 92243792,
+          "size": 873,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-04-11T04:59:17Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Diphthera festiva range map.png",
+          "pageid": 37013524,
+          "size": 291,
+          "wordcount": 151,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-04-30T12:14:07Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Potshot (IA potshot00park 1).pdf",
+          "pageid": 92540686,
+          "size": 777,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2025-12-08T18:51:07Z"
+        }
+      ]
+    }
+  }
+}

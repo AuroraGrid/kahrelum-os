@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20636,
+  "query": "Robert Murray",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Robert+Murray%22",
+  "retrievedAtUtc": "2026-11-02T21:41:05Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 6029
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Robert Murray Gibson.jpg",
+          "pageid": 123515039,
+          "size": 391,
+          "wordcount": 23,
+          "snippet": "English Judge Robert Murray Gibson applies to jurisdiction: United States determination method or standard: work of the federal government of the United",
+          "timestamp": "2024-08-17T13:19:06Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Sir Robert Murray Keith (1730-1795).jpg",
+          "pageid": 2242306,
+          "size": 743,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2026-03-15T05:53:55Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Nimbus-Gumby-colored, oversized, exploded garbage dumpster.jpg",
+          "pageid": 165248739,
+          "size": 358,
+          "wordcount": 54,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: English Public arts sculpture by Robert Murray outside of the Alaska",
+          "timestamp": "2025-10-21T20:32:27Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:The Memnonium or Rameseiom, Thebes MET DP-2597-142.jpg",
+          "pageid": 60278228,
+          "size": 4973,
+          "wordcount": 55,
+          "snippet": "English verso of The Memnonium or Rameseiom, Thebes - photograph by Robert Murray (MET, 2015.777.1) determination method or standard: Metropolitan Museum",
+          "timestamp": "2025-09-19T23:08:06Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Robert Murray (1818-1878) 1919 7.jpeg",
+          "pageid": 131940066,
+          "size": 266,
+          "wordcount": 2,
+          "snippet": "== Licensing == English",
+          "timestamp": "2025-03-15T01:36:48Z"
+        }
+      ]
+    }
+  }
+}

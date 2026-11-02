@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 23793,
+  "query": "3 Democrats",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%223+Democrats%22",
+  "retrievedAtUtc": "2026-11-02T21:35:05Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 44
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:The cowards' convention (IA 04824035.4908.emory.edu).pdf",
+          "pageid": 97824277,
+          "size": 1424,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2024-10-03T14:28:25Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Bridgeport Chronicle-Union 1888-11-24 (IA cammlsmh 000341).pdf",
+          "pageid": 98405467,
+          "size": 1311,
+          "wordcount": 21,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English determination method or standard: SHA-1",
+          "timestamp": "2026-07-10T09:07:02Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Congressional pictorial directory (IA congressionalpic00unit 2).pdf",
+          "pageid": 93679659,
+          "size": 1141,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2024-08-17T17:02:44Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:The cowards' convention (IA cowardsconventio00bris).pdf",
+          "pageid": 91643568,
+          "size": 807,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-02-10T21:51:23Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:WHSF- Contested, 45-30 - DPLA - ec35e068e49b4a1c3c7430e10f397795.pdf",
+          "pageid": 192806759,
+          "size": 41,
+          "wordcount": 524,
+          "snippet": "This file was uploaded by the Digital Public Library of America, and the following item metadata was created by the contributing institution&#039;s staff. Note:",
+          "timestamp": "2026-06-19T01:04:58Z"
+        }
+      ]
+    }
+  }
+}

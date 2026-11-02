@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 19285,
+  "query": "Elizabeth Kirtley",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Elizabeth+Kirtley%22",
+  "retrievedAtUtc": "2026-11-02T21:38:07Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Wills and inventories illustrative of the history, manners, language, statistics, etc., of the northern counties of England (IA willsinventories1424unse).pdf",
+          "pageid": 95711820,
+          "size": 1276,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-12-18T14:46:29Z"
+        }
+      ]
+    }
+  }
+}

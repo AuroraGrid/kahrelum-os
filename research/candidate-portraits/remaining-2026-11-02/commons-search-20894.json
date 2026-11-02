@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 20894,
+  "query": "Paul Wikstrom",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Paul+Wikstrom%22",
+  "retrievedAtUtc": "2026-11-02T21:35:35Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Mannek\u00e4ng visar festmode NMA.0100398.jpg",
+          "pageid": 129371754,
+          "size": 694,
+          "wordcount": 146,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2025-03-16T05:04:29Z"
+        }
+      ]
+    }
+  }
+}

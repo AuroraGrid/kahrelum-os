@@ -1,0 +1,43 @@
+{
+  "sourceCandidateId": 29809,
+  "query": "Chris Shea",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Chris+Shea%22",
+  "retrievedAtUtc": "2026-11-02T21:33:04Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 3
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:U and I (1979) (14579426070).jpg",
+          "pageid": 43236302,
+          "size": 4475,
+          "wordcount": 42,
+          "snippet": "16 September 2015 English object of statement has role: photographer author name string: Internet Archive Book Images Flickr user ID: 126377022@N07 URL:",
+          "timestamp": "2024-07-17T11:12:35Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:OPEN FORUM ON HUMAN RIGHTS ISSUES (IA gov.gpo.fdsys.CHRG-107hhrg81645).pdf",
+          "pageid": 91405643,
+          "size": 1404,
+          "wordcount": 19,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States",
+          "timestamp": "2024-08-24T16:27:55Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:U and I (IA ui1979univ).pdf",
+          "pageid": 97851107,
+          "size": 933,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2024-11-06T05:08:48Z"
+        }
+      ]
+    }
+  }
+}

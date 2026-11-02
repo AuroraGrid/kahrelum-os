@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 18295,
+  "query": "Lee McInnis",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Lee+McInnis%22",
+  "retrievedAtUtc": "2026-11-02T21:30:37Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:The Oak (serial) (IA oakserial1961loui).pdf",
+          "pageid": 95605576,
+          "size": 890,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2022-10-29T03:53:43Z"
+        }
+      ]
+    }
+  }
+}

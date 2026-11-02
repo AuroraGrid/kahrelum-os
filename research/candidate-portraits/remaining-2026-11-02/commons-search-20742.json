@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 20742,
+  "query": "Rachel Fetty Anderson",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Rachel+Fetty+Anderson%22",
+  "retrievedAtUtc": "2026-11-02T21:42:18Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:69e7dda5dd1f9.image.webp",
+          "pageid": 202411961,
+          "size": 379,
+          "wordcount": 105,
+          "snippet": "This file is licensed under the Creative Commons Attribution 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit the work",
+          "timestamp": "2026-10-29T15:00:04Z"
+        }
+      ]
+    }
+  }
+}

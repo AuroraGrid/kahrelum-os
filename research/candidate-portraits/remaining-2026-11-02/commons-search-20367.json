@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20367,
+  "query": "James Russell",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22James+Russell%22",
+  "retrievedAtUtc": "2026-11-02T21:30:53Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 6930
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Dr James Russell and a Grey-faced Petrel 02.jpg",
+          "pageid": 139108518,
+          "size": 772,
+          "wordcount": 118,
+          "snippet": "This file is licensed under the Creative Commons Attribution 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit the work",
+          "timestamp": "2025-05-10T13:24:51Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:James Russell Lowell - 1855.jpg",
+          "pageid": 325273,
+          "size": 1149,
+          "wordcount": 21,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English determination method or standard: SHA-1",
+          "timestamp": "2024-10-07T11:07:04Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Dr James Russell and a Grey-faced Petrel 01.jpg",
+          "pageid": 139108520,
+          "size": 772,
+          "wordcount": 118,
+          "snippet": "This file is licensed under the Creative Commons Attribution 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit the work",
+          "timestamp": "2025-12-13T09:47:39Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Dr James Russell and a Grey-faced Petrel 03.jpg",
+          "pageid": 139108519,
+          "size": 772,
+          "wordcount": 118,
+          "snippet": "This file is licensed under the Creative Commons Attribution 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit the work",
+          "timestamp": "2025-05-08T18:19:32Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:James Russell Lowell, Brady-Handy Photograph Collection.jpg",
+          "pageid": 3494667,
+          "size": 1053,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2022-04-27T19:23:38Z"
+        }
+      ]
+    }
+  }
+}

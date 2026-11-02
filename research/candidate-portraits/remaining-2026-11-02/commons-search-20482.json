@@ -1,0 +1,64 @@
+{
+  "sourceCandidateId": 20482,
+  "query": "Carlos De La Cruz",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Carlos+De+La+Cruz%22",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 12
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Carlos DA CRUZ.jpg",
+          "pageid": 7476121,
+          "size": 379,
+          "wordcount": 179,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following licenses: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2024-02-03T17:08:07Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Carlos DA CRUZ (cropped).jpg",
+          "pageid": 55804951,
+          "size": 368,
+          "wordcount": 179,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following licenses: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2024-02-03T17:08:08Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Carlos Da Cruz 2006.JPG",
+          "pageid": 10692632,
+          "size": 629,
+          "wordcount": 177,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following licenses: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-08-16T11:06:43Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:El sex\u00f3logo Carlos de la Cruz Mart\u00edn-Romo.jpg",
+          "pageid": 151732614,
+          "size": 339,
+          "wordcount": 51,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: English Spanish El sex\u00f3logo Carlos de la Cruz Mart\u00edn-Romo author name",
+          "timestamp": "2026-10-11T01:10:56Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Caleb Durbin and Carlos de la Cruz (54591820730).jpg",
+          "pageid": 167805586,
+          "size": 949,
+          "wordcount": 137,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2025-11-07T13:11:24Z"
+        }
+      ]
+    }
+  }
+}

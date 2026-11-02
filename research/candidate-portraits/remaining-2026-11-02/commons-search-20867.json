@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20867,
+  "query": "Brent Anderson",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Brent+Anderson%22",
+  "retrievedAtUtc": "2026-11-02T21:33:34Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 14
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Brent-Anderson-in-2018.jpg",
+          "pageid": 66449452,
+          "size": 610,
+          "wordcount": 22,
+          "snippet": "English URL: https://commons.wikimedia.org/wiki/user:Gazebo author name string: Gazebo Wikimedia username: Gazebo determination method or standard: SHA-1",
+          "timestamp": "2024-07-29T21:02:04Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Mayor Brent Anderson, West Valley City.jpg",
+          "pageid": 29303024,
+          "size": 423,
+          "wordcount": 150,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-05-06T04:24:35Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Everglades report - USACE-p16021coll8-2544.pdf",
+          "pageid": 153111927,
+          "size": 940,
+          "wordcount": 45,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States described at URL:",
+          "timestamp": "2026-06-23T03:06:22Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Field on the law of private corporations (IA fieldonlawofpriv00fiel).pdf",
+          "pageid": 95208852,
+          "size": 910,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-05-07T12:18:22Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:SSC-20240718-s00803.jpg",
+          "pageid": 151539575,
+          "size": 1647,
+          "wordcount": 85,
+          "snippet": "English NASA Stennis breaks ground with officials from Hancock County on July 18 for the Stennis Wastewater Conveyance Project at the Northern Wastewater",
+          "timestamp": "2025-04-19T12:46:58Z"
+        }
+      ]
+    }
+  }
+}

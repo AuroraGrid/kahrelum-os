@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 19268,
+  "query": "Marty Young",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Marty+Young%22",
+  "retrievedAtUtc": "2026-11-02T21:38:59Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 7
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:RIT NandE Vol13Num27 1981 Sep10 Complete.pdf",
+          "pageid": 115288793,
+          "size": 1102,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-05-01T11:22:04Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:RIT NandE Vol13Num12 1981 Mar26 Complete.pdf",
+          "pageid": 115288805,
+          "size": 510,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-10-11T11:41:26Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:RIT NandE Vol13Num26 1981 Aug20 Complete.pdf",
+          "pageid": 115288797,
+          "size": 690,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2022-02-28T06:26:33Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:RIT NandE Vol13Num14 1981 Apr9 Complete.pdf",
+          "pageid": 115288808,
+          "size": 798,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2022-11-03T21:39:09Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Navy & Marine Corps Medical News 96-48 (IA Med96048).pdf",
+          "pageid": 91643214,
+          "size": 1411,
+          "wordcount": 33,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2024-08-17T19:26:03Z"
+        }
+      ]
+    }
+  }
+}

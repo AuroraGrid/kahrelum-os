@@ -1,0 +1,524 @@
+{
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&titles=File%3A2026AcresHomeJuneteenthParade-63+Martha+Fierro+%28cropped%29.jpg%7CFile%3AChuck+Gray+by+Gage+Skidmore.jpg%7CFile%3AMichael+Alfonso+%2855022726199%29+%28cropped%29.jpg%7CFile%3A69e7dda5dd1f9.image.webp&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cmime%7Cextmetadata&iiurlwidth=250&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main",
+  "candidateIds": [
+    20465,
+    23347,
+    20525,
+    20742
+  ],
+  "retrievedAtUtc": "2026-11-02T21:46:31Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "pages": {
+        "194110180": {
+          "pageid": 194110180,
+          "ns": 6,
+          "title": "File:2026AcresHomeJuneteenthParade-63 Martha Fierro (cropped).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 98945,
+              "width": 528,
+              "height": 704,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/2026AcresHomeJuneteenthParade-63_Martha_Fierro_%28cropped%29.jpg/250px-2026AcresHomeJuneteenthParade-63_Martha_Fierro_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 333,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/2026AcresHomeJuneteenthParade-63_Martha_Fierro_%28cropped%29.jpg/500px-2026AcresHomeJuneteenthParade-63_Martha_Fierro_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/2026AcresHomeJuneteenthParade-63_Martha_Fierro_%28cropped%29.jpg/250px-2026AcresHomeJuneteenthParade-63_Martha_Fierro_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 333,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/2026AcresHomeJuneteenthParade-63_Martha_Fierro_%28cropped%29.jpg/500px-2026AcresHomeJuneteenthParade-63_Martha_Fierro_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/2026AcresHomeJuneteenthParade-63_Martha_Fierro_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:2026AcresHomeJuneteenthParade-63_Martha_Fierro_(cropped).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=194110180",
+              "sha1": "3b6f77eb02d13f9d54b81b891b636492d8e9c91a",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-06-18 23:05:58",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "2026AcresHomeJuneteenthParade-63 Martha Fierro (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Acres Homes, Houston|Extracted images",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "2026 Acres Homes Juneteenth Parade\n<p>Acres Homes also known as the \u201c44\u201d on Houston\u2019s northside (nawf)\nHouston, TX\n6-13-26\n</p>\n<ol><li>juneteenth</li>\n<li>june19th</li>\n<li>texasjuneteenth</li>\n<li>acreshomes</li></ol>\nMartha Fierro, Republican candidate for US Congress District 29",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2026-06-12 22:27:23",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/2cheap2keep/55342205191/\">https://www.flickr.com/photos/2cheap2keep/55342205191/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "2C2K Photography",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1233864689,
+              "parentid": 1233757389,
+              "timestamp": "2026-06-19T05:24:48Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=2026 Acres Homes Juneteenth Parade\nAcres Homes also known as the \u201c44\u201d on Houston\u2019s northside (nawf)\nHouston, TX\n6-13-26\n#juneteenth\n#june19th\n#texasjuneteenth\n#acreshomes\n\nMartha Fierro, Republican candidate for US Congress District 29}}\n|date=2026-06-12 22:27:23\n|source=https://www.flickr.com/photos/2cheap2keep/55342205191/\n|author=2C2K Photography\n|permission=\n|other versions={{Extracted from|1=2026AcresHomeJuneteenthParade-63 Martha Fierro.jpg}}\n}}\n\n=={{int:license-header}}==\n{{cc-by-4.0}}\n\n[[Category:Acres Homes, Houston]]"
+                }
+              }
+            }
+          ]
+        },
+        "202411961": {
+          "pageid": 202411961,
+          "ns": 6,
+          "title": "File:69e7dda5dd1f9.image.webp",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 7164,
+              "width": 400,
+              "height": 302,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/69e7dda5dd1f9.image.webp/250px-69e7dda5dd1f9.image.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 189,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/a/a6/69e7dda5dd1f9.image.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/69e7dda5dd1f9.image.webp/250px-69e7dda5dd1f9.image.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 189,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/a/a6/69e7dda5dd1f9.image.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/69e7dda5dd1f9.image.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:69e7dda5dd1f9.image.webp",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=202411961",
+              "sha1": "e83194658615a6dcb6f2dbc79633771dad33ab9e",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-10-29 15:00:03",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "69e7dda5dd1f9.image",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Creative Commons Attribution 4.0 missing SDC copyright license|Creative Commons Attribution missing SDC copyright status|All media needing categories as of 2026|Media needing categories as of 29 October 2026|Permission pending as of 29 October 2026",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Rachel Fetty Anderson Portrait",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2026",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.fettyandersonforsenate.com/press-kit\">https://www.fettyandersonforsenate.com/press-kit</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Elect Fetty Anderson Senate Campaign",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/webp"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1293160044,
+              "parentid": 1293160038,
+              "timestamp": "2026-10-29T15:00:04Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Rachel Fetty Anderson Portrait}}\n|date=2026\n|source=https://www.fettyandersonforsenate.com/press-kit\n|author= Elect Fetty Anderson Senate Campaign\n|permission=\n|other versions=\n}}\n\n=={{int:license-header}}==\n{{Permission pending|year=2026|month=October|day=29}}{{cc-by-4.0}}\n\n{{Uncategorized|year=2026|month=October|day=29}}"
+                }
+              }
+            }
+          ]
+        },
+        "155933542": {
+          "pageid": 155933542,
+          "ns": 6,
+          "title": "File:Chuck Gray by Gage Skidmore.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 2078463,
+              "width": 1788,
+              "height": 2206,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Chuck_Gray_by_Gage_Skidmore.jpg/250px-Chuck_Gray_by_Gage_Skidmore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 308,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Chuck_Gray_by_Gage_Skidmore.jpg/500px-Chuck_Gray_by_Gage_Skidmore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Chuck_Gray_by_Gage_Skidmore.jpg/250px-Chuck_Gray_by_Gage_Skidmore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 308,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Chuck_Gray_by_Gage_Skidmore.jpg/500px-Chuck_Gray_by_Gage_Skidmore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Chuck_Gray_by_Gage_Skidmore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Chuck_Gray_by_Gage_Skidmore.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=155933542",
+              "sha1": "4b032f3aa7b5ed7239d80a6ef0940cd59a0d8864",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2024-11-28 23:52:33",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Chuck Gray by Gage Skidmore",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Photographs by Gage Skidmore|2024 Hazlitt Summit|Chuck Gray (Wyoming politician)",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<a href=\"https://en.wikipedia.org/wiki/Chuck_Gray_(Wyoming_politician)\" class=\"extiw\" title=\"w:Chuck Gray (Wyoming politician)\">Chuck Gray</a> speaking at an event in Nashville, Tennessee.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2024-11-24",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Gage Skidmore",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "Must attribute to <b>Gage Skidmore</b> if used elsewhere, other than on Wikimedia and its projects.",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 3.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 3.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Attribution": {
+                  "value": "Gage Skidmore",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/3.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-3.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1124599823,
+              "parentid": 963128910,
+              "timestamp": "2025-12-02T18:42:21Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "== {{int:filedesc}} ==\n{{Information\n|Description={{en|{{w|Chuck Gray (Wyoming politician)|Chuck Gray}} speaking at an event in Nashville, Tennessee.}}\n|Source={{Own}}\n|Date=2024-11-24\n|Author=Gage Skidmore\n|Permission=Must attribute to '''Gage Skidmore''' if used elsewhere, other than on Wikimedia and its projects.\n|other_versions=\n}}\n\n== {{int:license-header}} ==\n{{cc-by-sa-3.0|Gage Skidmore}}\n\n[[Category:Chuck Gray (Wyoming politician)]]\n[[Category:Photographs by Gage Skidmore]]\n[[Category:2024 Hazlitt Summit]]"
+                }
+              }
+            }
+          ]
+        },
+        "195950838": {
+          "pageid": 195950838,
+          "ns": 6,
+          "title": "File:Michael Alfonso (55022726199) (cropped).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 8893729,
+              "width": 3611,
+              "height": 4371,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Michael_Alfonso_%2855022726199%29_%28cropped%29.jpg/250px-Michael_Alfonso_%2855022726199%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 303,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Michael_Alfonso_%2855022726199%29_%28cropped%29.jpg/500px-Michael_Alfonso_%2855022726199%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Michael_Alfonso_%2855022726199%29_%28cropped%29.jpg/250px-Michael_Alfonso_%2855022726199%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 303,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Michael_Alfonso_%2855022726199%29_%28cropped%29.jpg/500px-Michael_Alfonso_%2855022726199%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Michael_Alfonso_%2855022726199%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Michael_Alfonso_(55022726199)_(cropped).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=195950838",
+              "sha1": "4b39b0778575a7de85ac4d9edf0656312a932f2c",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-07-20 21:22:26",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Michael Alfonso (55022726199) (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Extracted images|Photographs by Gage Skidmore|Files with coordinates missing SDC location of creation|Files uploaded by RandomUserGuy1738|AmericaFest 2025|Michael Alfonso",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "33.449645",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "-112.068840",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Michael Alfonso speaking with attendees at the 2025 AmericaFest at the Phoenix Convention Center in Phoenix, Arizona.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-12-21 08:38",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/gageskidmore/55022726199/\">Michael Alfonso</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/22007612@N05\">Gage Skidmore</a> from Surprise, AZ, United States of America",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1251325774,
+              "parentid": 1250509141,
+              "timestamp": "2026-07-24T12:08:36Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "== {{int:filedesc}} ==\n{{Information\n| Description = Michael Alfonso speaking with attendees at the 2025 AmericaFest at the Phoenix Convention Center in Phoenix, Arizona.\n| Source      = [https://www.flickr.com/photos/gageskidmore/55022726199/ Michael Alfonso]\n| Date        = 2025-12-21 08:38\n| Author      = [https://www.flickr.com/people/22007612@N05 Gage Skidmore] from Surprise, AZ, United States of America\n| Permission  = \n| other_versions={{Extracted from|1=Michael Alfonso (55022726199).jpg}}\n}}\n{{Location dec|33.449645|-112.068840|source:Flickr}}\n\n=={{int:license-header}}==\n{{cc-by-sa-4.0}}\n\n[[Category:AmericaFest 2025]]\n[[Category:Photographs by Gage Skidmore]]\n[[Category:Files uploaded by RandomUserGuy1738]]\n[[Category:Michael Alfonso]]"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

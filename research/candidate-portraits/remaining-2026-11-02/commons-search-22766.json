@@ -1,0 +1,64 @@
+{
+  "sourceCandidateId": 22766,
+  "query": "Gay Valimont",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Gay+Valimont%22",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 6
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Florida's 1st congressional district (since 2023).svg",
+          "pageid": 128367127,
+          "size": 724,
+          "wordcount": 158,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-08-04T04:58:50Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Gay Valimont candidacy photo.jpg",
+          "pageid": 163017920,
+          "size": 562,
+          "wordcount": 161,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-03-23T03:34:25Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Gay Valimont bad image.jpg",
+          "pageid": 162924993,
+          "size": 297,
+          "wordcount": 160,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-08-27T18:17:51Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Gay Valimont candidacy photo (cropped).jpg",
+          "pageid": 163068330,
+          "size": 472,
+          "wordcount": 129,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-08-27T18:17:52Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Gay Valimont.jpg",
+          "pageid": 160802928,
+          "size": 474,
+          "wordcount": 158,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-08-27T18:17:50Z"
+        }
+      ]
+    }
+  }
+}

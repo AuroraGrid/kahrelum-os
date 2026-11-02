@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 23746,
+  "query": "Robert Burke",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Robert+Burke%22",
+  "retrievedAtUtc": "2026-11-02T21:35:14Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 197
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Vice Adm. Robert P. Burke.jpg",
+          "pageid": 62669262,
+          "size": 378,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2026-03-31T10:20:55Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Adm. Robert P. Burke.jpg",
+          "pageid": 79745912,
+          "size": 424,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2026-02-26T20:44:35Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:2022 U.S. Naval Forces Europe-Africa & JFC Naples Change of Command 220627-M-VB498-0019.jpg",
+          "pageid": 119879816,
+          "size": 931,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2026-02-26T20:45:32Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:US Navy 080718-N-8467N-004 Capt. Kenneth M. Perry, left, and Captain Robert P. Burke share a laugh during remarks by Rear Adm. Bruce E. Groom at the Submarine Development Squadron 12 change of command ceremony.jpg",
+          "pageid": 8188929,
+          "size": 976,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2026-03-27T13:34:12Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Burke takes Helm of U.S. Naval Forces Europe-Africa and Joint Force Command Naples 200717-N-NO090-1002.jpg",
+          "pageid": 105088672,
+          "size": 1761,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2024-10-05T18:02:57Z"
+        }
+      ]
+    }
+  }
+}

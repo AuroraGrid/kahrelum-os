@@ -1,0 +1,60 @@
+{
+  "sourceCandidateId": 20292,
+  "query": "James Marter",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22James+Marter%22",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 5
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:2024 United States House of Representatives elections in Illinois results map.svg",
+          "pageid": 155796851,
+          "size": 564,
+          "wordcount": 177,
+          "snippet": "Any autoconfirmed user can overwrite this file from the same source. Please ensure that overwrites comply with the guideline. I, the copyright holder of",
+          "timestamp": "2026-07-17T20:03:31Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Sixteenth Annual Report of the Civil Service Commission of Canada for the year ended December 31, 1924. (IA 1925v61i4p24 1769).pdf",
+          "pageid": 94305434,
+          "size": 891,
+          "wordcount": 0,
+          "snippet": "",
+          "timestamp": "2020-09-21T21:00:19Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Marter for Congress 01.png",
+          "pageid": 70699707,
+          "size": 396,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-05-27T08:53:18Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:James Marter signature.png",
+          "pageid": 70699708,
+          "size": 404,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2026-08-24T06:39:06Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:James Marter for Congress.jpg",
+          "pageid": 70699768,
+          "size": 461,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2026-06-05T13:39:57Z"
+        }
+      ]
+    }
+  }
+}

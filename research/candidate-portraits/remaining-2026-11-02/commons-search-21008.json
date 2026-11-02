@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 21008,
+  "query": "John McBride",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22John+McBride%22",
+  "retrievedAtUtc": "2026-11-02T21:32:46Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 154
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Mcbride-john-1894.jpg",
+          "pageid": 49783046,
+          "size": 995,
+          "wordcount": 21,
+          "snippet": "The original description page was here. All following user names refer to en.wikipedia. English determination method or standard: SHA-1",
+          "timestamp": "2024-07-04T19:41:41Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Bust of John MacBride, South Mall, Westport , Co. Mayo Apr 1989.jpg",
+          "pageid": 174178168,
+          "size": 669,
+          "wordcount": 182,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2025-09-22T10:41:50Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:John MacBride, 1901.jpg",
+          "pageid": 175913514,
+          "size": 499,
+          "wordcount": 32,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English Photograph of Irish nationalist and soldier",
+          "timestamp": "2025-10-03T09:34:50Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Tree plaque, Belfast - geograph.org.uk - 1640681.jpg",
+          "pageid": 14401377,
+          "size": 1205,
+          "wordcount": 191,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. Attribution: Albert Bridge You are free: to share \u2013 to copy",
+          "timestamp": "2025-12-11T02:07:41Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Pennsylvania archives .. (IA pennsylvaniaarch30penn).pdf",
+          "pageid": 91890116,
+          "size": 1375,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-02-05T00:19:46Z"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20480,
+  "query": "Patrick Gillespie",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Patrick+Gillespie%22",
+  "retrievedAtUtc": "2026-11-02T21:40:34Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 110
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Patrick Gillespie 1887.png",
+          "pageid": 29322887,
+          "size": 275,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-05-03T14:26:43Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Peter Patrick Gillespie, Left Field, New York, from the Old Judge series (N172) for Old Judge Cigarettes MET DP825903.jpg",
+          "pageid": 115780264,
+          "size": 1183,
+          "wordcount": 80,
+          "snippet": "English Peter Patrick Gillespie, Left Field, New York, from the Old Judge series (N172) for Old Judge Cigarettes - baseball card, issued by Goodwin &amp; Company",
+          "timestamp": "2024-05-26T06:00:56Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Peter Patrick Gillespie, Left Field, New York, from the Old Judge series (N172) for Old Judge Cigarettes MET DP825902.jpg",
+          "pageid": 115780271,
+          "size": 1183,
+          "wordcount": 86,
+          "snippet": "English Peter Patrick Gillespie, Left Field, New York, from the Old Judge series (N172) for Old Judge Cigarettes - baseball card, issued by Goodwin &amp; Company",
+          "timestamp": "2024-12-03T03:29:43Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Peter Patrick Gillespie, Left Field, New York, from the Old Judge series (N172) for Old Judge Cigarettes MET DP825904.jpg",
+          "pageid": 115780255,
+          "size": 1183,
+          "wordcount": 86,
+          "snippet": "English Peter Patrick Gillespie, Left Field, New York, from the Old Judge series (N172) for Old Judge Cigarettes - baseball card, issued by Goodwin &amp; Company",
+          "timestamp": "2025-12-10T05:36:47Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Hand.Anatomy.9.21.21.png",
+          "pageid": 110296729,
+          "size": 442,
+          "wordcount": 13,
+          "snippet": "English diagram displaying anatomy of the hand determination method or standard: SHA-1",
+          "timestamp": "2026-10-25T16:12:40Z"
+        }
+      ]
+    }
+  }
+}

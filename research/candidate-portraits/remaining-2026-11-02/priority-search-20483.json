@@ -1,0 +1,34 @@
+{
+  "sourceCandidateId": 20483,
+  "query": "\"Johnny Garcia\" Texas",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=15&srsearch=%22Johnny+Garcia%22+Texas",
+  "retrievedAtUtc": "2026-11-02T21:47:30Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 2
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Iraqi police training in Mosul DVIDS169305.jpg",
+          "pageid": 39733484,
+          "size": 817,
+          "wordcount": 25,
+          "snippet": "applies to jurisdiction: <span class=\"searchmatch\">United</span> <span class=\"searchmatch\">States</span> determination method or standard: work <span class=\"searchmatch\">of</span> the federal government <span class=\"searchmatch\">of</span> the <span class=\"searchmatch\">United</span> <span class=\"searchmatch\">States</span> determination method or standard:",
+          "timestamp": "2026-05-10T22:28:27Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Iraqi police training in Mosul DVIDS169300.jpg",
+          "pageid": 39694646,
+          "size": 758,
+          "wordcount": 25,
+          "snippet": "applies to jurisdiction: <span class=\"searchmatch\">United</span> <span class=\"searchmatch\">States</span> determination method or standard: work <span class=\"searchmatch\">of</span> the federal government <span class=\"searchmatch\">of</span> the <span class=\"searchmatch\">United</span> <span class=\"searchmatch\">States</span> determination method or standard:",
+          "timestamp": "2026-05-10T22:28:20Z"
+        }
+      ]
+    }
+  }
+}

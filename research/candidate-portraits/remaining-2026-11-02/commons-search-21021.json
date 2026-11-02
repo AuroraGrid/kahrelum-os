@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 21021,
+  "query": "Bob Smith",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Bob+Smith%22",
+  "retrievedAtUtc": "2026-11-02T21:31:37Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 946
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Robert C Smith.jpg",
+          "pageid": 9889036,
+          "size": 709,
+          "wordcount": 61,
+          "snippet": "The original description page was here. All following user names refer to en.wikipedia. 2006-05-01 22:28 Assawyer 177\u00d7225\u00d7 (20994 bytes) From the [http://bioguide",
+          "timestamp": "2024-08-25T06:39:12Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Sen. Bob Smith on the Comprehensive Nuclear-Test-Ban Treaty.ogg",
+          "pageid": 136546043,
+          "size": 586,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2023-11-15T19:00:35Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Buffalo Bob Howdy Doody Flub a Dub circa 1949.JPG",
+          "pageid": 18905785,
+          "size": 904,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2024-10-06T19:07:20Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Howdy Doody Girl Scouts 38th Anniversary 1950.JPG",
+          "pageid": 18907645,
+          "size": 1298,
+          "wordcount": 18,
+          "snippet": "English determination method or standard: no copyright due to missing copyright notice determination method or standard: SHA-1",
+          "timestamp": "2025-11-16T00:06:17Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Ron Howard Bob Smith Howdy Doody Happy Days 1975.JPG",
+          "pageid": 18434547,
+          "size": 1477,
+          "wordcount": 89,
+          "snippet": "Most of the ABC logo has been torn or cut from the photo&#039;s back. Some of their New York Avenue of the Americas address can be seen and one of the newspaper",
+          "timestamp": "2025-07-12T12:21:09Z"
+        }
+      ]
+    }
+  }
+}

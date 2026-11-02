@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 23344,
+  "query": "James Byrd",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22James+Byrd%22",
+  "retrievedAtUtc": "2026-11-02T21:42:25Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 59
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Rockin robin bobby day 1981 US reissue.webp",
+          "pageid": 192963152,
+          "size": 597,
+          "wordcount": 12,
+          "snippet": "English 1981 US reissue described at URL: https://ebay.us/m/qFQpQN",
+          "timestamp": "2026-08-19T19:58:00Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Rockin robin bobby day 1981 US reissue.png",
+          "pageid": 192963151,
+          "size": 597,
+          "wordcount": 24,
+          "snippet": "English 1981 US reissue Spanish &quot;Rockin&#039; Robin&quot; de Bobby Day. Vinilo de 1958 reeditado en 1981 described at URL: https://ebay.us/m/qFQpQN",
+          "timestamp": "2026-09-26T12:33:55Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Rockin robin bobby day 1981 US reissue.tif",
+          "pageid": 192963153,
+          "size": 597,
+          "wordcount": 12,
+          "snippet": "English 1981 US reissue described at URL: https://ebay.us/m/qFQpQN",
+          "timestamp": "2026-08-19T19:57:53Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Campell College Course Catolog (IA campellcollegeco19051913).pdf",
+          "pageid": 95360230,
+          "size": 1082,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-08-08T00:23:20Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:History and genealogy of the Byrd family, (IA historygenealogy01byrd).pdf",
+          "pageid": 95869588,
+          "size": 825,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2022-01-01T01:50:59Z"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 21047,
+  "query": "Ricardo Cabrera",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Ricardo+Cabrera%22",
+  "retrievedAtUtc": "2026-11-02T21:32:39Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 10
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Ricardo Cabrera, Estadio, 1960-07-07 (893).jpg",
+          "pageid": 152924111,
+          "size": 327,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2025-03-21T14:34:43Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Ricardo Cabrera, Estadio, 1962-08-23 (1004).jpg",
+          "pageid": 153035066,
+          "size": 330,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2026-03-14T19:42:27Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Castro, Borello, Cabrera, Cort\u00e9s y Vivanco, Estadio, 1960-10-06 (906).jpg",
+          "pageid": 152918521,
+          "size": 500,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-06-05T21:01:35Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Ricardo Cabrera.JPG",
+          "pageid": 7768279,
+          "size": 494,
+          "wordcount": 196,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following licenses: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2025-05-01T13:48:31Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Enrico Caruso, a biography (IA cu31924022205326).pdf",
+          "pageid": 97788510,
+          "size": 1188,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-09-16T12:06:53Z"
+        }
+      ]
+    }
+  }
+}

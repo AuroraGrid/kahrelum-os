@@ -1,0 +1,17 @@
+{
+  "sourceCandidateIds": [
+    18334
+  ],
+  "query": "\"Alabama\" (\"Ammie Akin\")",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=100&srsearch=%22Alabama%22+%28%22Ammie+Akin%22%29",
+  "retrievedAtUtc": "2026-11-02T21:49:19Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 0
+      },
+      "search": []
+    }
+  }
+}

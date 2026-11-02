@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 20671,
+  "query": "Christy Peterson",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Christy+Peterson%22",
+  "retrievedAtUtc": "2026-11-02T21:32:46Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:8th AF commander visits during BTF (5248677).jpg",
+          "pageid": 158206293,
+          "size": 1463,
+          "wordcount": 71,
+          "snippet": "English Maj. Gen. James Dawkins Jr., Eighth Air Force and Joint-Global Strike Operations Center commander, shakes hands with Chief Master Sgt. determination",
+          "timestamp": "2025-02-02T22:00:04Z"
+        }
+      ]
+    }
+  }
+}

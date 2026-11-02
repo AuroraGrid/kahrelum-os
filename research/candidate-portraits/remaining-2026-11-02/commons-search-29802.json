@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 29802,
+  "query": "George Austin",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22George+Austin%22",
+  "retrievedAtUtc": "2026-11-02T21:32:55Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 510
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:John Moultrie III and Family.jpg",
+          "pageid": 116716520,
+          "size": 952,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2025-06-14T10:12:58Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:GeorgeAustinMcHenryHouse, circa 1905.jpg",
+          "pageid": 28104014,
+          "size": 736,
+          "wordcount": 12,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: SHA-1",
+          "timestamp": "2026-01-08T23:52:23Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:George A. McHenry House 2013.jpg",
+          "pageid": 24296982,
+          "size": 621,
+          "wordcount": 166,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following licenses: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-09-02T05:33:08Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Keep on singing by austin roberts Canadian single side-A.tif",
+          "pageid": 128724394,
+          "size": 426,
+          "wordcount": 14,
+          "snippet": "Logo: English Side A of the Canadian single determination method or standard: SHA-1",
+          "timestamp": "2024-10-17T20:04:05Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Keep on singing by austin roberts Canadian single side-A.webp",
+          "pageid": 128724392,
+          "size": 426,
+          "wordcount": 14,
+          "snippet": "Logo: English Side A of the Canadian single determination method or standard: SHA-1",
+          "timestamp": "2026-05-30T21:59:30Z"
+        }
+      ]
+    }
+  }
+}

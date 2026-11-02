@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20373,
+  "query": "Ron Eller",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Ron+Eller%22",
+  "retrievedAtUtc": "2026-11-02T21:35:53Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 41
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:OJ L 202500089 of 2025 - SV Swedish.pdf",
+          "pageid": 177117744,
+          "size": 1896,
+          "wordcount": 59,
+          "snippet": "English Official Journal of the European Union - L_202500089 of 21 January 2025 - Swedish edition operator: Publications Office of the European Union described",
+          "timestamp": "2026-09-16T05:31:35Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:OJ L 141 of 2021 - SV Swedish.pdf",
+          "pageid": 168906359,
+          "size": 1798,
+          "wordcount": 63,
+          "snippet": "English Official Journal of the European Union - L 141 of 26 April 2021 - Swedish edition operator: Publications Office of the European Union described",
+          "timestamp": "2026-08-25T19:26:38Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:OJ L 103 of 2020 - SV Swedish.pdf",
+          "pageid": 168722391,
+          "size": 1755,
+          "wordcount": 57,
+          "snippet": "English Official Journal of the European Union - L 103 of 3 April 2020 - Swedish edition operator: Publications Office of the European Union described",
+          "timestamp": "2026-08-23T17:59:21Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:OJ L 202500691 of 2025 - SV Swedish.pdf",
+          "pageid": 177674740,
+          "size": 1896,
+          "wordcount": 53,
+          "snippet": "English Official Journal of the European Union - L_202500691 of 10 April 2025 - Swedish edition operator: Publications Office of the European Union described",
+          "timestamp": "2026-09-18T12:00:01Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:OJ L 6 of 2023 - SV Swedish.pdf",
+          "pageid": 169252407,
+          "size": 1750,
+          "wordcount": 63,
+          "snippet": "English Official Journal of the European Union - L 6 of 9 January 2023 - Swedish edition operator: Publications Office of the European Union described",
+          "timestamp": "2026-08-27T17:30:54Z"
+        }
+      ]
+    }
+  }
+}

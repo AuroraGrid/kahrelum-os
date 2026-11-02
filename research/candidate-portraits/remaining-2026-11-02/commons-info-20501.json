@@ -1,0 +1,521 @@
+{
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&titles=File%3ARalph_Alvarado_by_Gage_Skidmore.jpg%7CFile%3ADaniel_Koh%2C_White_House_Deputy_Cabinet_Secretary.jpg%7CFile%3AJohnny_Olszewski_119th_congress.jpg%7CFile%3AAdrian_Boafo_Feb2023.jpg&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cmime%7Cextmetadata&iiurlwidth=250&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main",
+  "retrievedAtUtc": "2026-11-02T21:31:56Z",
+  "candidateIds": [
+    20501,
+    23747,
+    23012,
+    23053
+  ],
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "normalized": [
+        {
+          "from": "File:Ralph_Alvarado_by_Gage_Skidmore.jpg",
+          "to": "File:Ralph Alvarado by Gage Skidmore.jpg"
+        },
+        {
+          "from": "File:Daniel_Koh,_White_House_Deputy_Cabinet_Secretary.jpg",
+          "to": "File:Daniel Koh, White House Deputy Cabinet Secretary.jpg"
+        },
+        {
+          "from": "File:Johnny_Olszewski_119th_congress.jpg",
+          "to": "File:Johnny Olszewski 119th congress.jpg"
+        },
+        {
+          "from": "File:Adrian_Boafo_Feb2023.jpg",
+          "to": "File:Adrian Boafo Feb2023.jpg"
+        }
+      ],
+      "pages": {
+        "128779433": {
+          "pageid": 128779433,
+          "ns": 6,
+          "title": "File:Adrian Boafo Feb2023.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1615331,
+              "width": 1070,
+              "height": 1426,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Adrian_Boafo_Feb2023.jpg/250px-Adrian_Boafo_Feb2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 333,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Adrian_Boafo_Feb2023.jpg/500px-Adrian_Boafo_Feb2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Adrian_Boafo_Feb2023.jpg/250px-Adrian_Boafo_Feb2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 333,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Adrian_Boafo_Feb2023.jpg/500px-Adrian_Boafo_Feb2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Adrian_Boafo_Feb2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Adrian_Boafo_Feb2023.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=128779433",
+              "sha1": "ee5d97416885a75b3ff3b3075c2359aa1c4f46cc",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2023-02-16 18:21:00",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Adrian Boafo Feb2023",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Extracted images|Adrian Boafo",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Governor Moore hosts a Breakfast Reception for the Legislative Black Caucus. by Joe Andrucyk at Government House, 110 State Circle, Annapolis MD 21401",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2023-02-16 00:00",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/mdgovpics/52692735561/\">Legislative Black Caucus Breakfast</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/64018555@N03\">Maryland GovPics</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 2.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 2.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/2.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-2.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 889793279,
+              "parentid": 888468390,
+              "timestamp": "2024-06-28T22:16:34Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "== {{int:filedesc}} ==\n{{Information\n| Description = Governor Moore hosts a Breakfast Reception for the Legislative Black Caucus. by Joe Andrucyk at Government House, 110 State Circle, Annapolis MD 21401\n| Source      = [https://www.flickr.com/photos/mdgovpics/52692735561/ Legislative Black Caucus Breakfast]\n| Date        = 2023-02-16 00:00\n| Author      = [https://www.flickr.com/people/64018555@N03 Maryland GovPics]\n| Permission  = \n| other_versions={{Extracted from|1=Legislative Black Caucus Breakfast (52692735561).jpg}}\n}}\n\n=={{int:license-header}}==\n{{cc-by-2.0}}\n[[Category:Adrian Boafo]]"
+                }
+              }
+            }
+          ]
+        },
+        "122554594": {
+          "pageid": 122554594,
+          "ns": 6,
+          "title": "File:Daniel Koh, White House Deputy Cabinet Secretary.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 98399,
+              "width": 800,
+              "height": 800,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Daniel_Koh%2C_White_House_Deputy_Cabinet_Secretary.jpg/250px-Daniel_Koh%2C_White_House_Deputy_Cabinet_Secretary.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 250,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Daniel_Koh%2C_White_House_Deputy_Cabinet_Secretary.jpg/500px-Daniel_Koh%2C_White_House_Deputy_Cabinet_Secretary.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Daniel_Koh%2C_White_House_Deputy_Cabinet_Secretary.jpg/250px-Daniel_Koh%2C_White_House_Deputy_Cabinet_Secretary.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 250,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Daniel_Koh%2C_White_House_Deputy_Cabinet_Secretary.jpg/500px-Daniel_Koh%2C_White_House_Deputy_Cabinet_Secretary.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Daniel_Koh%2C_White_House_Deputy_Cabinet_Secretary.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Daniel_Koh,_White_House_Deputy_Cabinet_Secretary.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=122554594",
+              "sha1": "2cd5ed33b63d8e498f0403a5cf8791e53b6eb5e7",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2022-09-02 07:15:48",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Daniel Koh, White House Deputy Cabinet Secretary",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Executive Office of the President files|Images with extracted images|Portrait photographs of male politicians of the United States|Daniel Koh",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Portrait of Daniel Koh, White House Deputy Cabinet Secretary under President Biden.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2022",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.linkedin.com/in/danielakoh/\">https://www.linkedin.com/in/danielakoh/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Executive Office of the President of the United States",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1274243555,
+              "parentid": 1274243392,
+              "timestamp": "2026-09-09T06:31:04Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Portrait of Daniel Koh, White House Deputy Cabinet Secretary under President Biden.}}\n|date=2022\n|source=https://www.linkedin.com/in/danielakoh/\n|author=Executive Office of the President of the United States\n|permission=\n|other versions={{Image extracted|1=Daniel Koh, White House Deputy Cabinet Secretary (cropped).jpg}}\n}}\n\n=={{int:license-header}}==\n{{PD-USGov-POTUS}}\n\n[[Category:Portrait photographs of male politicians of the United States]]\n[[Category:Daniel Koh]]"
+                }
+              }
+            }
+          ]
+        },
+        "157490430": {
+          "pageid": 157490430,
+          "ns": 6,
+          "title": "File:Johnny Olszewski 119th congress.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1010950,
+              "width": 1000,
+              "height": 1250,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Johnny_Olszewski_119th_congress.jpg/250px-Johnny_Olszewski_119th_congress.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 313,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Johnny_Olszewski_119th_congress.jpg/500px-Johnny_Olszewski_119th_congress.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Johnny_Olszewski_119th_congress.jpg/250px-Johnny_Olszewski_119th_congress.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 313,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Johnny_Olszewski_119th_congress.jpg/500px-Johnny_Olszewski_119th_congress.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Johnny_Olszewski_119th_congress.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Johnny_Olszewski_119th_congress.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=157490430",
+              "sha1": "4813fc68f7ab4179c3190c427fdb257a58925f8a",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-01-09 05:45:42",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Johnny Olszewski 119th congress",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD US Congress|Images with extracted images|Johnny Olszewski in 2025|Official portraits of members of the 119th United States Congress",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Official congressional photo of congressman Johnny Olszewski.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-01-03",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://olszewski.house.gov/about\">https://olszewski.house.gov/about</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "House Creative Services",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1270975136,
+              "parentid": 991299014,
+              "timestamp": "2026-09-01T19:20:49Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Official congressional photo of congressman Johnny Olszewski.}}\n|date=2025-01-03\n|source=https://olszewski.house.gov/about\n|author=House Creative Services\n|permission=\n|other versions={{Image extracted|1=Johnny Olszewski 119th congress (cropped).jpg|2=Johnny Olszewski 119th congress (cropped 2).jpg}}\n}}\n\n=={{int:license-header}}==\n{{PD-USGov-Congress}}\n\n[[Category:Johnny Olszewski in 2025]]\n[[Category:Official portraits of members of the 119th United States Congress|Olszewski, Johnny]]"
+                }
+              }
+            }
+          ]
+        },
+        "83407011": {
+          "pageid": 83407011,
+          "ns": 6,
+          "title": "File:Ralph Alvarado by Gage Skidmore.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 2371710,
+              "width": 1984,
+              "height": 2920,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Ralph_Alvarado_by_Gage_Skidmore.jpg/250px-Ralph_Alvarado_by_Gage_Skidmore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 368,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Ralph_Alvarado_by_Gage_Skidmore.jpg/500px-Ralph_Alvarado_by_Gage_Skidmore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Ralph_Alvarado_by_Gage_Skidmore.jpg/250px-Ralph_Alvarado_by_Gage_Skidmore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 368,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Ralph_Alvarado_by_Gage_Skidmore.jpg/500px-Ralph_Alvarado_by_Gage_Skidmore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Ralph_Alvarado_by_Gage_Skidmore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Ralph_Alvarado_by_Gage_Skidmore.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=83407011",
+              "sha1": "36ddcc154689ddb63759a793d86bebb3772fac6a",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2019-10-27 00:40:57",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Ralph Alvarado by Gage Skidmore",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Ralph Alvarado|Images with extracted images|Photographs by Gage Skidmore",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<a href=\"https://en.wikipedia.org/wiki/Ralph_Alvarado\" class=\"extiw\" title=\"w:Ralph Alvarado\">Ralph Alvarado</a> speaking at an event in Louisville, Kentucky.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2015-04-07",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Gage Skidmore",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "Must attribute to <b>Gage Skidmore</b> if used elsewhere, other than on Wikimedia and its projects.",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 3.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 3.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Attribution": {
+                  "value": "Gage Skidmore",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/3.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-3.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1115617875,
+              "parentid": 1105455284,
+              "timestamp": "2025-11-14T20:33:09Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "== {{int:filedesc}} ==\n{{Information\n|Description={{en|{{w|Ralph Alvarado}} speaking at an event in Louisville, Kentucky.}}\n|Source={{own}}\n|Date=2015-04-07\n|Author=Gage Skidmore\n|Permission=Must attribute to '''Gage Skidmore''' if used elsewhere, other than on Wikimedia and its projects.\n|other_versions={{Image extracted|1=Ralph Alvarado by Gage Skidmore (cropped).jpg}}\n}}\n\n== {{int:license-header}} ==\n{{cc-by-sa-3.0|Gage Skidmore}}\n\n[[Category:Photographs by Gage Skidmore]]\n[[Category:Ralph Alvarado]]"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

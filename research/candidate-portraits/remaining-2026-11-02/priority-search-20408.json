@@ -1,0 +1,34 @@
+{
+  "sourceCandidateId": 20408,
+  "query": "\"Jamie Davis\" Louisiana",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=15&srsearch=%22Jamie+Davis%22+Louisiana",
+  "retrievedAtUtc": "2026-11-02T21:47:46Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 2
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Jamiedavisdemocrat.jpg",
+          "pageid": 202683078,
+          "size": 399,
+          "wordcount": 19,
+          "snippet": "\u00a0 English Photo <span class=\"searchmatch\">of</span> Jamie Davis, <span class=\"searchmatch\">Louisiana</span> Democratic Party described at URL: https://louisianadems.org/team-members/jamie-davis-jr/",
+          "timestamp": "2026-11-02T19:01:28Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Jamiedavisdemocrat-354x472.jpg",
+          "pageid": 202683639,
+          "size": 422,
+          "wordcount": 14,
+          "snippet": "English: Jamie Davis is the 2026 Democratic nominee for U.S. Senate in <span class=\"searchmatch\">Louisiana</span> Date 2 November 2026 Source https://louisianadems.org/team-members/jamie-davis-jr/",
+          "timestamp": "2026-11-02T17:27:15Z"
+        }
+      ]
+    }
+  }
+}

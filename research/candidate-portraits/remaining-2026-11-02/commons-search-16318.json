@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 16318,
+  "query": "Teresa Fernandez",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Teresa+Fernandez%22",
+  "retrievedAtUtc": "2026-11-02T21:36:50Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 276
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Carmena - \u201cLas mujeres estamos transformando el mundo y eso es una aventura extraordinaria\u201d 01.jpg",
+          "pageid": 76650644,
+          "size": 1432,
+          "wordcount": 98,
+          "snippet": "This file is licensed under the Creative Commons Attribution 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit the work",
+          "timestamp": "2024-02-04T01:01:03Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Segundo Gobierno de Jos\u00e9 Luis Rodr\u00edguez Zapatero (2009).jpg",
+          "pageid": 64598331,
+          "size": 1506,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2022-09-05T23:14:16Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:De la Vega1.JPG",
+          "pageid": 7541123,
+          "size": 1277,
+          "wordcount": 98,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.5 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2025-09-07T01:17:03Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Congreso Mundial de Bio\u00e9tica 2016.jpg",
+          "pageid": 52802008,
+          "size": 426,
+          "wordcount": 159,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2025-09-20T07:08:46Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Fern\u00e1ndez de la Vega preside la comisi\u00f3n general de secretarios de Estado y subsecretarios. Pool Moncloa. 28 de noviembre de 2006.jpeg",
+          "pageid": 64941247,
+          "size": 1792,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-07-24T13:28:44Z"
+        }
+      ]
+    }
+  }
+}

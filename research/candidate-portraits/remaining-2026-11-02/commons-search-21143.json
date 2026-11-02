@@ -1,0 +1,64 @@
+{
+  "sourceCandidateId": 21143,
+  "query": "Scott Meyers",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Scott+Meyers%22",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 9
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Scott Meyers.jpg",
+          "pageid": 27460170,
+          "size": 473,
+          "wordcount": 174,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following licenses: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-09-04T17:38:07Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Code inspection for NPSNET (IA codeinspectionfo1094531511).pdf",
+          "pageid": 92287325,
+          "size": 2628,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2024-08-17T19:05:53Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Self storage indoor.jpg",
+          "pageid": 98440485,
+          "size": 510,
+          "wordcount": 131,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2026-09-01T00:40:42Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Storage Mini Warehouse.jpg",
+          "pageid": 98440428,
+          "size": 522,
+          "wordcount": 147,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2025-11-18T08:31:35Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Vapor pressure, latent heat of vaporization, and triple-point temperature of N2O (IA jresv34n3p281).pdf",
+          "pageid": 93850614,
+          "size": 1244,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2024-12-04T18:09:23Z"
+        }
+      ]
+    }
+  }
+}

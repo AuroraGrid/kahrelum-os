@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 20881,
+  "query": "Teresa Fox",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Teresa+Fox%22",
+  "retrievedAtUtc": "2026-11-02T21:41:17Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:FDA inspection.jpg",
+          "pageid": 6609318,
+          "size": 709,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2026-06-26T15:45:55Z"
+        }
+      ]
+    }
+  }
+}

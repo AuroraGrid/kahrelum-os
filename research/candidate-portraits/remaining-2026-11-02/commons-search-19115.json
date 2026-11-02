@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 19115,
+  "query": "David Smith",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22David+Smith%22",
+  "retrievedAtUtc": "2026-11-02T21:42:18Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 50050
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:David Smith - Sep 1921 EH.jpg",
+          "pageid": 61372638,
+          "size": 451,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2024-10-01T23:32:57Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:David Smith02.jpg",
+          "pageid": 2088601,
+          "size": 726,
+          "wordcount": 148,
+          "snippet": "Photo: This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the",
+          "timestamp": "2026-02-15T04:41:46Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Saw Head (1933) by David Smith (5899787866).jpg",
+          "pageid": 24268897,
+          "size": 924,
+          "wordcount": 163,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-07-04T10:05:20Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Signature plaque on 'Hirebecca' by David Smith, 1961.JPG",
+          "pageid": 44787673,
+          "size": 470,
+          "wordcount": 36,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: English author name string: Hiart Wikimedia username: Hiart URL: https://commons",
+          "timestamp": "2024-12-27T15:06:05Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Home of the welder Tate Modern L01025 n01.jpg",
+          "pageid": 19666279,
+          "size": 814,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-07-26T08:28:14Z"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "sourceCandidateId": 21125,
+  "query": "Joe Males",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Joe+Males%22",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 3
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Joe Males (cropped).jpg",
+          "pageid": 194908046,
+          "size": 358,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-08-27T09:19:21Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Joe Males.jpg",
+          "pageid": 194907971,
+          "size": 369,
+          "wordcount": 21,
+          "snippet": "English Hemet city councilor Joe Males described at URL: https://www.hemetca.gov/1011/Mayor-Pro-Tem-Joe-Males-District-4",
+          "timestamp": "2026-07-05T11:14:50Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Systematic Memory (Maclaren).djvu",
+          "pageid": 162048755,
+          "size": 393,
+          "wordcount": 24,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English English text describing a system of Mnemonics",
+          "timestamp": "2025-03-17T14:25:51Z"
+        }
+      ]
+    }
+  }
+}

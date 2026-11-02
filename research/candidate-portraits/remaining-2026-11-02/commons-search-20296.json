@@ -1,0 +1,24 @@
+{
+  "sourceCandidateId": 20296,
+  "query": "Paul Nolley",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Paul+Nolley%22",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:2026 Illinois 9th Congressional district D primary results.svg",
+          "pageid": 186409452,
+          "size": 362,
+          "wordcount": 26,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: English 2026 IL-09 D primary determination method or standard: SHA-1",
+          "timestamp": "2026-08-05T00:18:18Z"
+        }
+      ]
+    }
+  }
+}

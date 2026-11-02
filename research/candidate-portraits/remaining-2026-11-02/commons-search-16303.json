@@ -1,0 +1,24 @@
+{
+  "sourceCandidateId": 16303,
+  "query": "Joe Hathaway",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Joe+Hathaway%22",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Joe Hathaway Running For Congress.png",
+          "pageid": 186948267,
+          "size": 302,
+          "wordcount": 30,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: English Joe Hathaway running for New Jersey&#039;s 11th Congressional District",
+          "timestamp": "2026-04-20T21:49:14Z"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20566,
+  "query": "Tim Bennett",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Tim+Bennett%22",
+  "retrievedAtUtc": "2026-11-02T21:32:55Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 13
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:BodianusBennettiTimBennett.jpg",
+          "pageid": 85270384,
+          "size": 391,
+          "wordcount": 165,
+          "snippet": "This file is licensed under the Creative Commons Attribution 3.0 Unported license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2023-12-03T12:06:32Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Poems of childhood (IA poemsofchildhoodfiel).pdf",
+          "pageid": 95623936,
+          "size": 974,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2024-11-26T15:14:38Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Farm broadcasters letter (IA CAT82764458166).pdf",
+          "pageid": 91890745,
+          "size": 1307,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2026-07-19T14:49:05Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:4.tiaw (jvdl).jpg",
+          "pageid": 68395099,
+          "size": 416,
+          "wordcount": 129,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2024-12-21T13:50:34Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Federal Register 1980-08-20- Vol 45 Iss 163 (IA sim federal-register-find 1980-08-20 45 163 3).pdf",
+          "pageid": 98564461,
+          "size": 1567,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2026-09-02T18:49:46Z"
+        }
+      ]
+    }
+  }
+}

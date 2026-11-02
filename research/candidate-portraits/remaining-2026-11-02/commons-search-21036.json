@@ -1,0 +1,34 @@
+{
+  "sourceCandidateId": 21036,
+  "query": "Mitch Clemmons",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Mitch+Clemmons%22",
+  "retrievedAtUtc": "2026-11-02T21:32:15Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 2
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Mitch Clemmons on AI News.jpg",
+          "pageid": 122512637,
+          "size": 466,
+          "wordcount": 173,
+          "snippet": "This video, screenshot or audio excerpt was released under the Creative Commons license option on YouTube before August 2025. (YouTube changed the license",
+          "timestamp": "2026-04-01T04:44:15Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Mitch Clemmons on AI News (cropped).jpg",
+          "pageid": 122512711,
+          "size": 455,
+          "wordcount": 167,
+          "snippet": "This video, screenshot or audio excerpt was released under the Creative Commons license option on YouTube before August 2025. (YouTube changed the license",
+          "timestamp": "2025-02-19T02:26:28Z"
+        }
+      ]
+    }
+  }
+}

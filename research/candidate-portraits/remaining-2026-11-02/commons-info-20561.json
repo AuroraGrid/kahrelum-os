@@ -1,0 +1,528 @@
+{
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&titles=File%3AConroydebate.png%7CFile%3AScott_Colom_2_%28cropped%29.png%7CFile%3ASeth_Bodnar_-_President_at_University_of_Montana_%28cropped%29.jpg%7CFile%3AMarquita_Bradshaw_at_Morristown.jpg&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cmime%7Cextmetadata&iiurlwidth=250&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main",
+  "retrievedAtUtc": "2026-11-02T21:32:13Z",
+  "candidateIds": [
+    20561,
+    20369,
+    21441,
+    23143
+  ],
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "normalized": [
+        {
+          "from": "File:Scott_Colom_2_(cropped).png",
+          "to": "File:Scott Colom 2 (cropped).png"
+        },
+        {
+          "from": "File:Seth_Bodnar_-_President_at_University_of_Montana_(cropped).jpg",
+          "to": "File:Seth Bodnar - President at University of Montana (cropped).jpg"
+        },
+        {
+          "from": "File:Marquita_Bradshaw_at_Morristown.jpg",
+          "to": "File:Marquita Bradshaw at Morristown.jpg"
+        }
+      ],
+      "pages": {
+        "185932638": {
+          "pageid": 185932638,
+          "ns": 6,
+          "title": "File:Conroydebate.png",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 344494,
+              "width": 528,
+              "height": 684,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Conroydebate.png/250px-Conroydebate.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 324,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Conroydebate.png/500px-Conroydebate.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Conroydebate.png/250px-Conroydebate.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 324,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Conroydebate.png/500px-Conroydebate.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Conroydebate.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Conroydebate.png",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=185932638",
+              "sha1": "02ac5707553eb250272b0eac6776a6af6cfa1936",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-03-11 19:48:38",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Conroydebate",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Carmela Conroy",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Carmela Conroy in a debate against Congressman Michael Baumgartner in Spokane.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2024-10-11",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.youtube.com/watch?v=kpiaWoc0dNI\">https://www.youtube.com/watch?v=kpiaWoc0dNI</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "The Spokesman-Review",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/png"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1247182942,
+              "parentid": 1233856933,
+              "timestamp": "2026-07-13T04:55:08Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Carmela Conroy in a debate against Congressman Michael Baumgartner in Spokane.}}\n|date=2024-10-11\n|source=https://www.youtube.com/watch?v=kpiaWoc0dNI\n|author=The Spokesman-Review\n|permission=\n|other versions=\n}}\n\n=={{int:license-header}}==\n{{cc-by-4.0}}\n\n[[Category:Carmela Conroy]]"
+                }
+              }
+            }
+          ]
+        },
+        "93931333": {
+          "pageid": 93931333,
+          "ns": 6,
+          "title": "File:Marquita Bradshaw at Morristown.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1590090,
+              "width": 2738,
+              "height": 3650,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Marquita_Bradshaw_at_Morristown.jpg/250px-Marquita_Bradshaw_at_Morristown.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 333,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Marquita_Bradshaw_at_Morristown.jpg/500px-Marquita_Bradshaw_at_Morristown.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Marquita_Bradshaw_at_Morristown.jpg/250px-Marquita_Bradshaw_at_Morristown.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 333,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Marquita_Bradshaw_at_Morristown.jpg/500px-Marquita_Bradshaw_at_Morristown.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Marquita_Bradshaw_at_Morristown.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Marquita_Bradshaw_at_Morristown.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=93931333",
+              "sha1": "69ab773cb3c4d0072c090405b83b9e7d009cee91",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2020-09-07 22:15:41",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Marquita Bradshaw at Morristown",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "American politicians wearing masks during the COVID-19 pandemic|Marquita Bradshaw|Morristown, Tennessee|Self-published work|Images with extracted images|September 2020 in Tennessee|Files with coordinates missing SDC location of creation|Females with handheld microphones (left) in the United States",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "36.208869",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "-83.302589",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Democratic senatorial candidate from Tennessee, Marquita Bradshaw, speaking during the COVID-19 Pandemic at the Hamblen County Democratic Party HQ in Morristown, Tennessee. Taken in September 2020.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2020-09-04 19:46:57",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:WKHR\" title=\"User:WKHR\">Walker Kinsler</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1148436995,
+              "parentid": 1103825932,
+              "timestamp": "2026-01-16T16:59:30Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Democratic senatorial candidate from Tennessee, Marquita Bradshaw, speaking during the COVID-19 Pandemic at the Hamblen County Democratic Party HQ in Morristown, Tennessee. Taken in September 2020.}}\n|date=2020-09-04 19:46:57\n|source={{own}}\n|author=[[User:WKHR|Walker Kinsler]]\n|permission=\n|other versions={{Image extracted|1=Marquita Bradshaw at Morristown (cropped).jpg}}\n}}\n{{Location|36.208869|-83.302589|heading:329.5003357958361}}\n\n=={{int:license-header}}==\n{{self|cc-by-sa-4.0}}\n\n[[Category:Morristown, Tennessee]]\n\n[[Category:September 2020 in Tennessee]]\n[[Category:American politicians wearing masks during the COVID-19 pandemic]] [[Category:Females with handheld microphones (left) in the United States]]\n[[Category:Marquita Bradshaw]]"
+                }
+              }
+            }
+          ]
+        },
+        "202675278": {
+          "pageid": 202675278,
+          "ns": 6,
+          "title": "File:Scott Colom 2 (cropped).png",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 302585,
+              "width": 502,
+              "height": 684,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Scott_Colom_2_%28cropped%29.png/250px-Scott_Colom_2_%28cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 341,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Scott_Colom_2_%28cropped%29.png/500px-Scott_Colom_2_%28cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Scott_Colom_2_%28cropped%29.png/250px-Scott_Colom_2_%28cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 341,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Scott_Colom_2_%28cropped%29.png/500px-Scott_Colom_2_%28cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Scott_Colom_2_%28cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Scott_Colom_2_(cropped).png",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=202675278",
+              "sha1": "c9098a9eeb9b5c219459d69d7565c521f193cb83",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-11-02 13:51:24",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Scott Colom 2 (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Extracted images|Creative Commons Attribution 4.0 missing SDC copyright license|Creative Commons Attribution missing SDC copyright status|Still images of YouTube videos|Scott Colom",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Scott Colom is the 2026 Democratic nominee for U.S. Senate in Mississippi",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2026-10-12",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.youtube.com/watch?v=gROCRLioWLk\">Can a Democrat win in Mississippi? (w/ Scott Colom)</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.youtube.com/@ContrarianNews\">The Contrarian</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/png"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1295113646,
+              "parentid": 1295107246,
+              "timestamp": "2026-11-02T13:51:24Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "== {{int:filedesc}} ==\n=={{int:filedesc}}==\n{{Information\n|description={{en|1=Scott Colom is the 2026 Democratic nominee for U.S. Senate in Mississippi}}\n|date=2026-10-12\n|source=[https://www.youtube.com/watch?v=gROCRLioWLk Can a Democrat win in Mississippi? (w/ Scott Colom)]\n|author=[https://www.youtube.com/@ContrarianNews The Contrarian]\n|permission=\n|other versions={{Extracted from|1=Scott Colom 2.png}}\n}} \n\n=={{int:license-header}}==\n{{YouTube CC-BY 4.0}}\n\n[[Category:Scott Colom]]"
+                }
+              }
+            }
+          ]
+        },
+        "182572762": {
+          "pageid": 182572762,
+          "ns": 6,
+          "title": "File:Seth Bodnar - President at University of Montana (cropped).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 515541,
+              "width": 1651,
+              "height": 2233,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Seth_Bodnar_-_President_at_University_of_Montana_%28cropped%29.jpg/250px-Seth_Bodnar_-_President_at_University_of_Montana_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 338,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Seth_Bodnar_-_President_at_University_of_Montana_%28cropped%29.jpg/500px-Seth_Bodnar_-_President_at_University_of_Montana_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Seth_Bodnar_-_President_at_University_of_Montana_%28cropped%29.jpg/250px-Seth_Bodnar_-_President_at_University_of_Montana_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 338,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Seth_Bodnar_-_President_at_University_of_Montana_%28cropped%29.jpg/500px-Seth_Bodnar_-_President_at_University_of_Montana_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Seth_Bodnar_-_President_at_University_of_Montana_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Seth_Bodnar_-_President_at_University_of_Montana_(cropped).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=182572762",
+              "sha1": "037ac1fc8b1c8542316f01107491cbde07c6c951",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-01-27 22:08:47",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Seth Bodnar - President at University of Montana (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "University of Montana|Extracted images",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "This is a photo of President Seth Bodnar, seated on the steps of Main Hall, which was captured by University of Montana photographer Todd Goodrich during the spring semester of 2019.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2019-04-10",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "This is a photo of President Seth Bodnar, seated on the steps of Main Hall, which was captured by University of Montana photographer Todd Goodrich during the spring semester of 2019.",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Todd Goodrich",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1224501986,
+              "parentid": 1219803562,
+              "timestamp": "2026-06-02T06:06:09Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=This is a photo of President Seth Bodnar, seated on the steps of Main Hall, which was captured by University of Montana photographer Todd Goodrich during the spring semester of 2019.}}\n|date=2019-04-10\n|source=This is a photo of President Seth Bodnar, seated on the steps of Main Hall, which was captured by University of Montana photographer Todd Goodrich during the spring semester of 2019. \n|author=Todd Goodrich\n|permission=\n|other versions={{Extracted from|1=Seth Bodnar - President at University of Montana.jpg}}\n}}\n\n=={{int:license-header}}==\n{{cc-by-sa-4.0}}\n\n[[Category:University of Montana]]"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

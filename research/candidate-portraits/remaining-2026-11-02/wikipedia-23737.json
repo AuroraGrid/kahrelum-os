@@ -1,0 +1,529 @@
+{
+  "url": "https://en.wikipedia.org/w/api.php",
+  "requestedNames": [
+    "Nadia Milleron",
+    "Gary Grossi",
+    "Tom Stalcup",
+    "Micah Jones",
+    "Dan Koh",
+    "Robert Burke",
+    "Tyler MacAllister",
+    "Dan Schwartz",
+    "John Olszewski",
+    "Dave Wallace",
+    "Berney Flowers",
+    "George McDermott",
+    "Adrian Boafo",
+    "Chris Chaffee",
+    "Robin Ficker",
+    "Scott Collier",
+    "Cheryl Riley",
+    "Ronald Russell",
+    "Matthew Dunlap",
+    "Callie Barr",
+    "Michael Bouchard",
+    "Christina Hines",
+    "Ethan Baker",
+    "Jeremy Moss",
+    "James Hooper",
+    "Donavan McKinney",
+    "T.P. Nykoriak",
+    "Ben Ambrose",
+    "Terri DeBoer",
+    "Sean McCann",
+    "Christian Vukasovich",
+    "Heather Smiley",
+    "William Lawrence",
+    "Thomas Smith",
+    "Ray Pooley",
+    "Jake Johnson",
+    "Matt Little",
+    "Eric Pratt",
+    "Tyler Bass",
+    "Paul Wikstrom"
+  ],
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "redirects": [
+        {
+          "from": "Dave Wallace",
+          "to": "David Wallace"
+        },
+        {
+          "from": "Michael Bouchard",
+          "to": "Mike Bouchard"
+        },
+        {
+          "from": "George McDermott",
+          "to": "George Thomas McDermott"
+        },
+        {
+          "from": "John Olszewski",
+          "to": "Johnny Olszewski"
+        },
+        {
+          "from": "Chris Chaffee",
+          "to": "2022 United States Senate election in Maryland",
+          "tofragment": "Candidates 2"
+        },
+        {
+          "from": "Callie Barr",
+          "to": "2024 United States House of Representatives elections in Michigan",
+          "tofragment": "District 1"
+        },
+        {
+          "from": "Christina Hines",
+          "to": "2026 United States House of Representatives elections in Michigan",
+          "tofragment": "District 10"
+        }
+      ],
+      "pages": {
+        "-1": {
+          "ns": 0,
+          "title": "Gary Grossi",
+          "missing": ""
+        },
+        "-2": {
+          "ns": 0,
+          "title": "Tom Stalcup",
+          "missing": ""
+        },
+        "-3": {
+          "ns": 0,
+          "title": "Micah Jones",
+          "missing": ""
+        },
+        "-4": {
+          "ns": 0,
+          "title": "Tyler MacAllister",
+          "missing": ""
+        },
+        "-5": {
+          "ns": 0,
+          "title": "Berney Flowers",
+          "missing": ""
+        },
+        "-6": {
+          "ns": 0,
+          "title": "Scott Collier",
+          "missing": ""
+        },
+        "-7": {
+          "ns": 0,
+          "title": "Ethan Baker",
+          "missing": ""
+        },
+        "-8": {
+          "ns": 0,
+          "title": "T.P. Nykoriak",
+          "missing": ""
+        },
+        "-9": {
+          "ns": 0,
+          "title": "Ben Ambrose",
+          "missing": ""
+        },
+        "-10": {
+          "ns": 0,
+          "title": "Terri DeBoer",
+          "missing": ""
+        },
+        "-11": {
+          "ns": 0,
+          "title": "Christian Vukasovich",
+          "missing": ""
+        },
+        "-12": {
+          "ns": 0,
+          "title": "Heather Smiley",
+          "missing": ""
+        },
+        "-13": {
+          "ns": 0,
+          "title": "Ray Pooley",
+          "missing": ""
+        },
+        "-14": {
+          "ns": 0,
+          "title": "Paul Wikstrom",
+          "missing": ""
+        },
+        "72598227": {
+          "pageid": 72598227,
+          "ns": 0,
+          "title": "Adrian Boafo",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/0/09/Adrian_Boafo_Feb2023.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 1070,
+            "height": 1426
+          },
+          "pageprops": {
+            "defaultsort": "Boafo, Adrian",
+            "page_image_free": "Adrian_Boafo_Feb2023.jpg",
+            "toc": "",
+            "wikibase-shortdesc": "American politician (born 1994)",
+            "wikibase_item": "Q115916258"
+          }
+        },
+        "50410089": {
+          "pageid": 50410089,
+          "ns": 0,
+          "title": "Cheryl Riley",
+          "pageprops": {
+            "disambiguation": "",
+            "expectshortpage": "",
+            "wikibase-shortdesc": "Topics referred to by the same term",
+            "wikibase_item": "Q96754572"
+          }
+        },
+        "74635933": {
+          "pageid": 74635933,
+          "ns": 0,
+          "title": "Dan Koh",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/9/96/Daniel_Koh%2C_White_House_Deputy_Cabinet_Secretary.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 800,
+            "height": 800
+          },
+          "pageprops": {
+            "defaultsort": "Koh, Daniel",
+            "page_image_free": "Daniel_Koh,_White_House_Deputy_Cabinet_Secretary.jpg",
+            "wikibase-shortdesc": "American politician (born 1985)",
+            "wikibase_item": "Q115558843"
+          }
+        },
+        "52396867": {
+          "pageid": 52396867,
+          "ns": 0,
+          "title": "Dan Schwartz",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/4/44/Dan_Schwartz.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 314,
+            "height": 360
+          },
+          "pageprops": {
+            "defaultsort": "Schwartz, Dan",
+            "page_image_free": "Dan_Schwartz.jpg",
+            "wikibase-shortdesc": "American politician (born 1950)",
+            "wikibase_item": "Q27947609"
+          }
+        },
+        "75375313": {
+          "pageid": 75375313,
+          "ns": 0,
+          "title": "Donavan McKinney",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/5/5e/State_Rep_Donavan_McKinney_Swearing_In_12.12.22_%2852565631658%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 915,
+            "height": 1221
+          },
+          "pageprops": {
+            "defaultsort": "McKinney, Donavan",
+            "page_image_free": "State_Rep_Donavan_McKinney_Swearing_In_12.12.22_(52565631658)_(cropped).jpg",
+            "wikibase-shortdesc": "American politician (born 1992)",
+            "wikibase_item": "Q123507667"
+          }
+        },
+        "39355208": {
+          "pageid": 39355208,
+          "ns": 0,
+          "title": "Eric Pratt",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Minnesota_State_Senator_Eric_Pratt.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 668,
+            "height": 824
+          },
+          "pageprops": {
+            "defaultsort": "Pratt, Eric",
+            "page_image_free": "Minnesota_State_Senator_Eric_Pratt.jpg",
+            "wikibase-shortdesc": "American politician",
+            "wikibase_item": "Q16195754"
+          }
+        },
+        "33250824": {
+          "pageid": 33250824,
+          "ns": 0,
+          "title": "Jake Johnson",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Jake_Johnson_-_Maximum_Pleasure_Guaranteed.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 1600,
+            "height": 2000
+          },
+          "pageprops": {
+            "defaultsort": "Johnson, Jake",
+            "page_image_free": "Jake_Johnson_-_Maximum_Pleasure_Guaranteed.jpg",
+            "wikibase-shortdesc": "American actor (born 1978)",
+            "wikibase_item": "Q171525"
+          }
+        },
+        "76816545": {
+          "pageid": 76816545,
+          "ns": 0,
+          "title": "James Hooper",
+          "pageprops": {
+            "disambiguation": "",
+            "expectshortpage": "",
+            "wikibase-shortdesc": "Topics referred to by the same term",
+            "wikibase_item": "Q125772911"
+          }
+        },
+        "47122427": {
+          "pageid": 47122427,
+          "ns": 0,
+          "title": "Jeremy Moss",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/2/22/Michigan_Senator_Jeremy_Moss_2019.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 836,
+            "height": 1280
+          },
+          "pageprops": {
+            "defaultsort": "Moss, Jeremy",
+            "page_image_free": "Michigan_Senator_Jeremy_Moss_2019.jpg",
+            "wikibase-shortdesc": "American politician (born 1986)",
+            "wikibase_item": "Q20630393"
+          }
+        },
+        "52620781": {
+          "pageid": 52620781,
+          "ns": 0,
+          "title": "Matt Little",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/a/a6/MattLittleGOTV.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 2800,
+            "height": 3900
+          },
+          "pageprops": {
+            "defaultsort": "Little, Matt",
+            "page_image_free": "MattLittleGOTV.jpg",
+            "wikibase-shortdesc": "American attorney and politician (born 1984)",
+            "wikibase_item": "Q16731557"
+          }
+        },
+        "15784952": {
+          "pageid": 15784952,
+          "ns": 0,
+          "title": "Matthew Dunlap",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/7/70/Matt_Dunlap_%28cropped_headshot%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 279,
+            "height": 424
+          },
+          "pageprops": {
+            "defaultsort": "Dunlap, Matthew",
+            "page_image_free": "Matt_Dunlap_(cropped_headshot).jpg",
+            "wikibase-shortdesc": "American politician from Maine (born 1964)",
+            "wikibase_item": "Q6790437"
+          }
+        },
+        "77682253": {
+          "pageid": 77682253,
+          "ns": 0,
+          "title": "Nadia Milleron",
+          "pageprops": {
+            "defaultsort": "Milleron, Nadia",
+            "wikibase-shortdesc": "American aviation safety advocate",
+            "wikibase_item": "Q129544779"
+          }
+        },
+        "38360785": {
+          "pageid": 38360785,
+          "ns": 0,
+          "title": "Robert Burke",
+          "pageprops": {
+            "disambiguation": "",
+            "expectshortpage": "",
+            "wikibase-shortdesc": "Topics referred to by the same term",
+            "wikibase_item": "Q2156650"
+          }
+        },
+        "6491697": {
+          "pageid": 6491697,
+          "ns": 0,
+          "title": "Robin Ficker",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/0/09/Robin_Ficker_%2835598540490%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 1130,
+            "height": 1507
+          },
+          "pageprops": {
+            "defaultsort": "Ficker, Robin",
+            "page_image_free": "Robin_Ficker_(35598540490).jpg",
+            "wikibase-shortdesc": "American political activist and candidate (born 1943)",
+            "wikibase_item": "Q16106255"
+          }
+        },
+        "75878330": {
+          "pageid": 75878330,
+          "ns": 0,
+          "title": "Ronald Russell",
+          "pageprops": {
+            "disambiguation": "",
+            "expectshortpage": "",
+            "wikibase-shortdesc": "Topics referred to by the same term",
+            "wikibase_item": "Q124333164"
+          }
+        },
+        "1236414": {
+          "pageid": 1236414,
+          "ns": 0,
+          "title": "Sean McCann",
+          "pageprops": {
+            "disambiguation": "",
+            "expectshortpage": "",
+            "wikibase-shortdesc": "Topics referred to by the same term",
+            "wikibase_item": "Q3476750"
+          }
+        },
+        "907176": {
+          "pageid": 907176,
+          "ns": 0,
+          "title": "Thomas Smith",
+          "pageprops": {
+            "disambiguation": "",
+            "expectshortpage": "",
+            "toc": "",
+            "wikibase-shortdesc": "Topics referred to by the same term",
+            "wikibase_item": "Q423054"
+          }
+        },
+        "63404455": {
+          "pageid": 63404455,
+          "ns": 0,
+          "title": "Tyler Bass",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/9/93/Tyler_Bass_%2851528385837%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 2180,
+            "height": 2730
+          },
+          "pageprops": {
+            "defaultsort": "Bass, Tyler",
+            "page_image_free": "Tyler_Bass_(51528385837)_(cropped).jpg",
+            "wikibase-shortdesc": "American football player (born 1997)",
+            "wikibase_item": "Q87847659"
+          }
+        },
+        "1949084": {
+          "pageid": 1949084,
+          "ns": 0,
+          "title": "William Lawrence",
+          "pageprops": {
+            "disambiguation": "",
+            "expectshortpage": "",
+            "toc": "",
+            "wikibase-shortdesc": "Topics referred to by the same term",
+            "wikibase_item": "Q862252"
+          }
+        },
+        "59492938": {
+          "pageid": 59492938,
+          "ns": 0,
+          "title": "2022 United States Senate election in Maryland",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/b/be/2022_United_States_Senate_election_in_Maryland_results_map_by_county.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 810,
+            "height": 433
+          },
+          "pageprops": {
+            "page_image_free": "2022_United_States_Senate_election_in_Maryland_results_map_by_county.svg",
+            "wikibase-shortdesc": "",
+            "wikibase_item": "Q105038154"
+          }
+        },
+        "72275804": {
+          "pageid": 72275804,
+          "ns": 0,
+          "title": "2024 United States House of Representatives elections in Michigan",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/1/1c/2024MIUSHouse_Holds_and_Gains.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 810,
+            "height": 810
+          },
+          "pageprops": {
+            "page_image_free": "2024MIUSHouse_Holds_and_Gains.svg",
+            "toc": "",
+            "wikibase-shortdesc": "",
+            "wikibase_item": "Q116635734"
+          }
+        },
+        "78594645": {
+          "pageid": 78594645,
+          "ns": 0,
+          "title": "2026 United States House of Representatives elections in Michigan",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Seal_of_Michigan.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 500,
+            "height": 500
+          },
+          "pageprops": {
+            "page_image_free": "Seal_of_Michigan.svg",
+            "toc": "",
+            "wikibase-shortdesc": "",
+            "wikibase_item": "Q131578572"
+          }
+        },
+        "2032142": {
+          "pageid": 2032142,
+          "ns": 0,
+          "title": "David Wallace",
+          "pageprops": {
+            "disambiguation": "",
+            "expectshortpage": "",
+            "toc": "",
+            "wikibase-shortdesc": "Topics referred to by the same term",
+            "wikibase_item": "Q1177053"
+          }
+        },
+        "21825975": {
+          "pageid": 21825975,
+          "ns": 0,
+          "title": "George Thomas McDermott",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/0/02/George_Thomas_McDermott.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 187,
+            "height": 300
+          },
+          "pageprops": {
+            "defaultsort": "McDermott, George Thomas",
+            "page_image_free": "George_Thomas_McDermott.jpg",
+            "wikibase-shortdesc": "American judge (1886\u20131937)",
+            "wikibase_item": "Q5545158"
+          }
+        },
+        "12128417": {
+          "pageid": 12128417,
+          "ns": 0,
+          "title": "Johnny Olszewski",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/6/66/Johnny_Olszewski_119th_congress.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 1000,
+            "height": 1250
+          },
+          "pageprops": {
+            "defaultsort": "Olszewski, John A. Jr.",
+            "page_image_free": "Johnny_Olszewski_119th_congress.jpg",
+            "wikibase-badge-Q17437798": "",
+            "wikibase-shortdesc": "American politician (born 1982)",
+            "wikibase_item": "Q6217866"
+          }
+        },
+        "3379336": {
+          "pageid": 3379336,
+          "ns": 0,
+          "title": "Mike Bouchard",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Mike_Bouchard_2006.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 1426,
+            "height": 2130
+          },
+          "pageprops": {
+            "defaultsort": "Bouchard, Mike",
+            "page_image_free": "Mike_Bouchard_2006.jpg",
+            "wikibase-shortdesc": "American politician",
+            "wikibase_item": "Q6846094"
+          }
+        }
+      }
+    }
+  }
+}

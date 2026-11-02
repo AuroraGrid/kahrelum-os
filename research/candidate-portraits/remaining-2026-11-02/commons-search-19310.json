@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 19310,
+  "query": "David Cox",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22David+Cox%22",
+  "retrievedAtUtc": "2026-11-02T21:34:43Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 1503
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:David Cox by William Radclyffe.jpg",
+          "pageid": 6363952,
+          "size": 793,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-02-15T00:09:35Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:David Cox - Shrewsbury Battlefield.jpg",
+          "pageid": 101194077,
+          "size": 546,
+          "wordcount": 158,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2024-10-23T20:21:36Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:David Cox the elder (1783-1859) - All Saints' Church, Hastings - 1885P2509 - Birmingham Museums Trust.jpg",
+          "pageid": 97453453,
+          "size": 206,
+          "wordcount": 23,
+          "snippet": "English described at URL: https://artuk.org/discover/artworks/all-saints-church-hastings-33403 operator: Art UK determination method or standard: SHA-1",
+          "timestamp": "2026-07-21T06:15:57Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:David Cox the elder (1783-1859) - All Saints' Church, Hastings - 1885P2485 - Birmingham Museums Trust.jpg",
+          "pageid": 97453674,
+          "size": 206,
+          "wordcount": 23,
+          "snippet": "English described at URL: https://artuk.org/discover/artworks/all-saints-church-hastings-33421 operator: Art UK determination method or standard: SHA-1",
+          "timestamp": "2026-07-21T06:15:57Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Nci-vol-8182-300 david cox.jpg",
+          "pageid": 10570802,
+          "size": 864,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2024-08-24T15:20:20Z"
+        }
+      ]
+    }
+  }
+}

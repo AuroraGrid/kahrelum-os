@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 20411,
+  "query": "Yolanda Prince",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Yolanda+Prince%22",
+  "retrievedAtUtc": "2026-11-02T21:39:53Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Yolanda Prince.jpg",
+          "pageid": 191521753,
+          "size": 808,
+          "wordcount": 40,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: English object of statement has role: photographer author name string:",
+          "timestamp": "2026-05-24T13:29:49Z"
+        }
+      ]
+    }
+  }
+}

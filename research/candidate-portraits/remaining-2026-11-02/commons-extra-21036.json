@@ -1,0 +1,502 @@
+{
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&titles=File%3AMitch+Clemmons+on+AI+News+%28cropped%29.jpg%7CFile%3AHead+Shot+1+Genevieve+Angel+CA+CD44+2026+Election.jpg%7CFile%3ABrianBurley.jpg%7CFile%3AJoe+Males+%28cropped%29.jpg&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cmime%7Cextmetadata&iiurlwidth=250&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main",
+  "candidateIds": [
+    21036,
+    21039,
+    21133,
+    21125
+  ],
+  "retrievedAtUtc": "2026-11-02T21:34:06Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "pages": {
+        "113072089": {
+          "pageid": 113072089,
+          "ns": 6,
+          "title": "File:BrianBurley.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 29881,
+              "width": 405,
+              "height": 495,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/BrianBurley.jpg/250px-BrianBurley.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 306,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/5/5e/BrianBurley.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/BrianBurley.jpg/250px-BrianBurley.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 306,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/5/5e/BrianBurley.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/BrianBurley.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:BrianBurley.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=113072089",
+              "sha1": "f154d6a4163378c1e9fe971d59eaf7054f9e522e",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2021-12-05 04:55:48",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "BrianBurley",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Media from YouTube|Republicans from California|Files from external sources with reviewed licenses",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "California politician Brian Burley",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2019-04-16",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<bdi lang=\"en\" dir=\"ltr\"><a href=\"//commons.wikimedia.org/wiki/Commons:YouTube_files\" title=\"Commons:YouTube files\">YouTube</a>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.youtube.com/watch?v=IW3b2oTjBU0\"><bdi lang=\"\">https://www.youtube.com/watch?v=IW3b2oTjBU0&amp;t=29s</bdi></a> \u2013 View/save archived versions on <a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/*/https://www.youtube.com/watch?v=IW3b2oTjBU0\">archive.org</a></bdi>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Jonathan Hawkins",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 3.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 3.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/3.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-3.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1000077251,
+              "parentid": 808828179,
+              "timestamp": "2025-02-19T03:57:31Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=California politician Brian Burley}}\n|date=2019-04-16\n|source={{From YouTube|1=IW3b2oTjBU0|2=https://www.youtube.com/watch?v=IW3b2oTjBU0&t=29s}}\n|author=Jonathan Hawkins\n|permission=\n|other versions=\n}}\n\n=={{int:license-header}}==\n{{YouTube}}{{YouTubeReview|id=IW3b2oTjBU0&t=29s|date=2022-08-11|reviewer=Skyshifter}}\n\n\n[[Category:Republicans from California]]"
+                }
+              }
+            }
+          ]
+        },
+        "202086682": {
+          "pageid": 202086682,
+          "ns": 6,
+          "title": "File:Head Shot 1 Genevieve Angel CA CD44 2026 Election.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 431233,
+              "width": 1365,
+              "height": 2048,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Head_Shot_1_Genevieve_Angel_CA_CD44_2026_Election.jpg/250px-Head_Shot_1_Genevieve_Angel_CA_CD44_2026_Election.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 375,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Head_Shot_1_Genevieve_Angel_CA_CD44_2026_Election.jpg/500px-Head_Shot_1_Genevieve_Angel_CA_CD44_2026_Election.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Head_Shot_1_Genevieve_Angel_CA_CD44_2026_Election.jpg/250px-Head_Shot_1_Genevieve_Angel_CA_CD44_2026_Election.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 375,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Head_Shot_1_Genevieve_Angel_CA_CD44_2026_Election.jpg/500px-Head_Shot_1_Genevieve_Angel_CA_CD44_2026_Election.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Head_Shot_1_Genevieve_Angel_CA_CD44_2026_Election.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Head_Shot_1_Genevieve_Angel_CA_CD44_2026_Election.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=202086682",
+              "sha1": "297d7616eea77e3dfceed410289275c968858509",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-10-21 06:29:08",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Head Shot 1 Genevieve Angel CA CD44 2026 Election",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Creative Commons CC0 1.0 Universal Public Domain Dedication missing SDC copyright license|Self-published work|Self-published work missing SDC copyright license|American politicians of Filipino descent",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Genevieve Angel Official Portrait",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2026-02-02",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Yvette112571&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Yvette112571 (page does not exist)\">Yvette112571</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1295020517,
+              "parentid": 1290371953,
+              "timestamp": "2026-11-02T09:28:59Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Genevieve Angel Official Portrait}}\n|date=2026-02-02\n|source={{own}}\n|author=[[User:Yvette112571|Yvette112571]]\n|permission=\n|other versions=\n}}\n\n=={{int:license-header}}==\n{{self|cc-zero}}\n\n[[Category:American politicians of Filipino descent]]"
+                }
+              }
+            }
+          ]
+        },
+        "194908046": {
+          "pageid": 194908046,
+          "ns": 6,
+          "title": "File:Joe Males (cropped).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 214237,
+              "width": 1179,
+              "height": 1595,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Joe_Males_%28cropped%29.jpg/250px-Joe_Males_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 338,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Joe_Males_%28cropped%29.jpg/500px-Joe_Males_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Joe_Males_%28cropped%29.jpg/250px-Joe_Males_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 338,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Joe_Males_%28cropped%29.jpg/500px-Joe_Males_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Joe_Males_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Joe_Males_(cropped).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=194908046",
+              "sha1": "0747bb940b48e61b9e20cf9314116c5caf297360",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-06-30 22:03:48",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Joe Males (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD California|Extracted images|Unknown date|All media needing categories as of 2026|Media needing categories as of 30 June 2026",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Hemet city councilor Joe Males",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "Unknown date",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.hemetca.gov/1011/Mayor-Pro-Tem-Joe-Males-District-4\">https://www.hemetca.gov/1011/Mayor-Pro-Tem-Joe-Males-District-4</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "City of Hemet",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1268191079,
+              "parentid": 1243433368,
+              "timestamp": "2026-08-27T09:19:21Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Hemet city councilor Joe Males}}\n|date={{otherdate|?}}\n|source=https://www.hemetca.gov/1011/Mayor-Pro-Tem-Joe-Males-District-4\n|author=City of Hemet\n|permission=\n|other versions={{Extracted from|1=Joe Males.jpg}}\n}}\n\n=={{int:license-header}}==\n{{PD-CAGov}}\n\n{{Uncategorized|year=2026|month=June|day=30}}"
+                }
+              }
+            }
+          ]
+        },
+        "122512711": {
+          "pageid": 122512711,
+          "ns": 6,
+          "title": "File:Mitch Clemmons on AI News (cropped).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 33373,
+              "width": 501,
+              "height": 626,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Mitch_Clemmons_on_AI_News_%28cropped%29.jpg/250px-Mitch_Clemmons_on_AI_News_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 312,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Mitch_Clemmons_on_AI_News_%28cropped%29.jpg/500px-Mitch_Clemmons_on_AI_News_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Mitch_Clemmons_on_AI_News_%28cropped%29.jpg/250px-Mitch_Clemmons_on_AI_News_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 312,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Mitch_Clemmons_on_AI_News_%28cropped%29.jpg/500px-Mitch_Clemmons_on_AI_News_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Mitch_Clemmons_on_AI_News_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Mitch_Clemmons_on_AI_News_(cropped).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=122512711",
+              "sha1": "a28f7f80151e402ac81e0be107cfeb6ee4676429",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2022-08-31 20:53:30",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Mitch Clemmons on AI News (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Media from YouTube|California elections, 2022|Republicans from California|Clemmons (surname)|Extracted images",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Mitch Clemmons on AI News",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2022-08-12",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<bdi lang=\"en\" dir=\"ltr\"><a href=\"//commons.wikimedia.org/wiki/Commons:YouTube_files\" title=\"Commons:YouTube files\">YouTube</a>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.youtube.com/watch?v=J6_LFYUM5HE\"><bdi lang=\"\">https://www.youtube.com/watch?v=J6_LFYUM5HE&amp;t=18m14s</bdi></a> \u2013 View/save archived versions on <a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/*/https://www.youtube.com/watch?v=J6_LFYUM5HE\">archive.org</a></bdi>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "AI News",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 3.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 3.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Attribution": {
+                  "value": "AI News",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/3.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-3.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1000051573,
+              "parentid": 986557520,
+              "timestamp": "2025-02-19T02:26:28Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Mitch Clemmons on AI News}}\n|date=2022-08-12\n|source={{From YouTube|1=J6_LFYUM5HE|2=https://www.youtube.com/watch?v=J6_LFYUM5HE&t=18m14s}}\n|author=AI News\n|permission=\n|other versions={{Extracted from|1=Mitch Clemmons on AI News.jpg}}\n}}\n\n=={{int:license-header}}==\n {{YouTube|AI News}}\n\n[[Category:Republicans from California]]\n[[Category:Clemmons (surname)]]\n[[Category:California elections, 2022]]"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

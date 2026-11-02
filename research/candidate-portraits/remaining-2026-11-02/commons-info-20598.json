@@ -1,0 +1,529 @@
+{
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&titles=File%3ARichard_Pan_2010.jpg%7CFile%3ASacramento_City_Councilmember_Mai_Vang.jpg%7CFile%3AMelat_Kiros_Portrait.jpg%7CFile%3AEileen_H._Laubacher_%283%29.jpg&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cmime%7Cextmetadata&iiurlwidth=250&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main",
+  "retrievedAtUtc": "2026-11-02T21:31:49Z",
+  "candidateIds": [
+    20598,
+    20709,
+    20670,
+    20552
+  ],
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "normalized": [
+        {
+          "from": "File:Richard_Pan_2010.jpg",
+          "to": "File:Richard Pan 2010.jpg"
+        },
+        {
+          "from": "File:Sacramento_City_Councilmember_Mai_Vang.jpg",
+          "to": "File:Sacramento City Councilmember Mai Vang.jpg"
+        },
+        {
+          "from": "File:Melat_Kiros_Portrait.jpg",
+          "to": "File:Melat Kiros Portrait.jpg"
+        },
+        {
+          "from": "File:Eileen_H._Laubacher_(3).jpg",
+          "to": "File:Eileen H. Laubacher (3).jpg"
+        }
+      ],
+      "pages": {
+        "159566580": {
+          "pageid": 159566580,
+          "ns": 6,
+          "title": "File:Eileen H. Laubacher (3).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 671537,
+              "width": 2400,
+              "height": 3000,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Eileen_H._Laubacher_%283%29.jpg/250px-Eileen_H._Laubacher_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 313,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Eileen_H._Laubacher_%283%29.jpg/500px-Eileen_H._Laubacher_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Eileen_H._Laubacher_%283%29.jpg/250px-Eileen_H._Laubacher_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 313,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Eileen_H._Laubacher_%283%29.jpg/500px-Eileen_H._Laubacher_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Eileen_H._Laubacher_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Eileen_H._Laubacher_(3).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=159566580",
+              "sha1": "64ded82fa510f3cefe77f680357e9fc85b296e0a",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-02-11 14:29:48",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Eileen H. Laubacher (3)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Eileen H. Laubacher|PD US Navy|Images with extracted images|Files created by the United States Navy with known IDs|CC-PD-Mark|ID-USMil missing SDC VIRIN",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Rear Admiral Eileen Laubacher, Special Assistant to the President and Senior Director for South Asia, National Security Council",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2024-12-19",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.navy.mil/Leadership/Flag-Officer-Biographies/BioDisplay/Article/2236454/rear-admiral-eileen-laubacher/\">Rear Admiral Eileen Laubacher</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "U.S. Navy",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1242814170,
+              "parentid": 1242808674,
+              "timestamp": "2026-07-03T02:12:04Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Rear Admiral Eileen Laubacher, Special Assistant to the President and Senior Director for South Asia, National Security Council}}\n|date=2024-12-19\n|source=[https://www.navy.mil/Leadership/Flag-Officer-Biographies/BioDisplay/Article/2236454/rear-admiral-eileen-laubacher/ Rear Admiral Eileen Laubacher]\n|author=U.S. Navy\n|permission=\n|other versions={{Image extracted|1=Eileen H. Laubacher (3) (cropped).jpg|2=Eileen H. Laubacher (3) (cropped 2).jpg|3=Eileen H. Laubacher (3) (cropped 3).jpg}}\n}}\n\n=={{int:license-header}}==\n{{PD-USGov-Military-Navy}}{{ID-USMil|241219-N-N0101-001|Navy|url=https://media.defense.gov/2024/Dec/19/2003616424/-1/-1/0/241219-N-N0101-001.JPG}}\n\n[[Category:Eileen H. Laubacher]]"
+                }
+              }
+            }
+          ]
+        },
+        "194042469": {
+          "pageid": 194042469,
+          "ns": 6,
+          "title": "File:Melat Kiros Portrait.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 524274,
+              "width": 2531,
+              "height": 3166,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Melat_Kiros_Portrait.jpg/250px-Melat_Kiros_Portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 313,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Melat_Kiros_Portrait.jpg/500px-Melat_Kiros_Portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Melat_Kiros_Portrait.jpg/250px-Melat_Kiros_Portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 313,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Melat_Kiros_Portrait.jpg/500px-Melat_Kiros_Portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Melat_Kiros_Portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Melat_Kiros_Portrait.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=194042469",
+              "sha1": "f59a327b026cbcce2450b613fde67657ad0c27b7",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-06-17 17:19:50",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Melat Kiros Portrait",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Items with VRTS permission confirmed|Images with extracted images|Files with PermissionTicket template but without P6305 SDC statement|Files with coordinates missing SDC location of creation|Melat Kiros",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "39.732222",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "-104.965056",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Portrait of Melat Kiros at the Cheesman Park Pavilion in Denver, Colorado by Andra Turner",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2026-05-22",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "I contacted the photographer directly and received the image and CC-BY-SA licensing via written permission.",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Andra Turner",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "<p><span class=\"layouttemplateargs\" style=\"display:none;speak:none;\" title=\"template=PermissionTicket 1%3Dhttps%3A%2F%2Fticket.wikimedia.org%2Fotrs%2Findex.pl%3FAction%3DAgentTicketZoom%26TicketNumber%3D2026061710011834 2%3D2026061710011834\">\u00a0</span>\n</p>\n<style data-mw-deduplicate=\"TemplateStyles:r1254222110\">.mw-parser-output .messagebox{margin:4px 0;width:auto;border-collapse:collapse;border:2px solid var(--border-color-progressive,#6485d1);background-color:var(--background-color-neutral-subtle,#fbfcff);color:var(--color-base,#202122);box-sizing:border-box;border-inline-start-width:8px}.mw-parser-output .messagebox.mbox-small{font-size:88%;line-height:1.25em}.mw-parser-output .mbox-warning,.mw-parser-output .mbox-speedy{border:2px solid var(--border-color-error,#b22222);background:var(--background-color-error-subtle,#ffdbdb);border-inline-start-width:8px}.mw-parser-output .mbox-serious,.mw-parser-output .mbox-delete,.mw-parser-output .mbox-stop{border:2px solid var(--border-color-error,#b22222);border-inline-start-width:8px}.mw-parser-output .mbox-issue,.mw-parser-output .mbox-content{border:2px solid #f28500;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-query,.mw-parser-output .mbox-style{border:2px solid #f4c430;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-shit{border:2px solid #960;border-inline-start-width:8px}.mw-parser-output .mbox-license{border:2px solid #88a;border-inline-start-width:initial}.mw-parser-output .mbox-legal{border:2px solid var(--border-color-notice,#666);background:var(--background-color-base,#fff);border-inline-start-width:8px}.mw-parser-output .mbox-honor{border:2px solid #ca3;background:var(--background-color-warning-subtle,#fcf4db);border-inline-start-width:8px}.mw-parser-output .mbox-growth{border:2px solid #8d4;background:var(--background-color-success-subtle,#d5fdf4);border-inline-start-width:8px}.mw-parser-output .mbox-move{border:2px solid #93c;border-inline-start-width:8px}.mw-parser-output .mbox-protection,.mw-parser-output .mbox-message{border:2px solid var(--border-color-base,#aaa);border-inline-start-width:8px}.mw-parser-output .messagebox .mbox-text{border:none;padding:0.25em 0.9em;width:100%}.mw-parser-output .messagebox .mbox-image{border:none;padding-top:2px;padding-bottom:2px;padding-inline-start:0.9em;padding-inline-end:0;text-align:center}.mw-parser-output .messagebox .mbox-imageright{border:none;padding-top:2px;padding-bottom:2px;padding-inline-start:0;padding-inline-end:0.9em;text-align:center}.mw-parser-output .messagebox .mbox-empty-cell{border:none;padding:0;width:1px}.mw-parser-output .messagebox .mbox-invalid-type{text-align:center}@media(min-width:720px){.mw-parser-output .messagebox{margin:4px 10%}.mw-parser-output .messagebox.mbox-small{clear:right;float:right;margin:4px 0 4px 1em;width:238px}}body.skin--responsive .mw-parser-output table.messagebox img{max-width:none!important}</style><table class=\"plainlinks messagebox mbox-notice layouttemplate\" role=\"presentation\" style=\"margin:0.3em 0;width:100%;\"><tbody><tr><td class=\"mbox-image\"><span typeof=\"mw:File\"><span title=\"VRT Wikimedia\"><img alt=\"VRT Wikimedia\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Permission_logo_2021.svg/120px-Permission_logo_2021.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"75\" height=\"48\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Permission_logo_2021.svg/250px-Permission_logo_2021.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"935\" data-file-height=\"600\"></span></span></td><td class=\"mbox-text\">This work is <a href=\"https://freedomdefined.org/Definition\" class=\"extiw\" title=\"freedomdefined:Definition\">free</a> and may be used by anyone for any purpose. If you wish to <b><a href=\"//commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia\" title=\"Commons:Reusing content outside Wikimedia\">use this content</a></b>, you do not need to request permission as long as you follow any licensing requirements mentioned on this page.\n<p>The Wikimedia Foundation has received an e-mail confirming that the copyright holder has approved publication under the terms mentioned on this page. This correspondence has been <b><span style=\"background:transparent;color:#0f7f1f;font-weight:400;\" title=\"transparent\">reviewed</span></b> by a <a href=\"//commons.wikimedia.org/wiki/Template:PermissionTicket/Users\" title=\"Template:PermissionTicket/Users\">Volunteer Response Team (VRT) member</a> and stored in our <a href=\"//commons.wikimedia.org/wiki/Commons:Volunteer_Response_Team\" title=\"Commons:Volunteer Response Team\">permission archive</a>. The correspondence is available to trusted volunteers as <b><a href=\"https://ticket.wikimedia.org/otrs/index.pl?Action=AgentTicketZoom&amp;TicketNumber=2026061710011834\" class=\"extiw\" title=\"ticket:2026061710011834\">ticket #2026061710011834</a></b>.\n</p><p><small>If you have questions about the archived correspondence, please use the <a href=\"//commons.wikimedia.org/wiki/Commons:Volunteer_Response_Team/Noticeboard\" title=\"Commons:Volunteer Response Team/Noticeboard\">VRT noticeboard</a>.</small>\n<small>Ticket link: <a class=\"external free\" href=\"https://ticket.wikimedia.org/otrs/index.pl?Action=AgentTicketZoom&amp;TicketNumber=2026061710011834\">https://ticket.wikimedia.org/otrs/index.pl?Action=AgentTicketZoom&amp;TicketNumber=2026061710011834</a></small>\n<br><small>Find other files from the same ticket:</small> <span typeof=\"mw:File\"><a href=\"https://wcqs-beta.wmflabs.org/#%23defaultView%3AImageGrid%09%0ASELECT%20%3Fimage%20%20%20%7B%0A%20%20%3Ffile%20wdt%3AP6305%20%222026061710011834%22%20.%0A%20%20%3Ffile%20schema%3Aurl%20%3Fimage.%0A%7D%20%0A\" title=\"SDC query (SPARQL)\" rel=\"nofollow\"><img alt=\"SDC query (SPARQL)\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Wikimedia_Commons_Query_Service_Logo.svg/20px-Wikimedia_Commons_Query_Service_Logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"15\" height=\"20\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Wikimedia_Commons_Query_Service_Logo.svg/40px-Wikimedia_Commons_Query_Service_Logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"512\" data-file-height=\"688\"></a></span>\n</p>\n<span id=\"field-otrs\" title=\"https://ticket.wikimedia.org/otrs/index.pl?Action=AgentTicketZoom&amp;TicketNumber=2026061710011834\"></span></td></tr></tbody></table>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1254582069,
+              "parentid": 1241924265,
+              "timestamp": "2026-07-31T10:04:28Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Portrait of Melat Kiros at the Cheesman Park Pavilion in Denver, Colorado by Andra Turner}}\n|date=2026-05-22\n|source=I contacted the photographer directly and received the image and CC-BY-SA licensing via written permission.\n|author=Andra Turner\n|permission={{PermissionTicket|id=2026061710011834}}\n|other versions={{Image extracted|1=Melat Kiros Portrait (cropped).jpg}}\n}}\n{{Location|39.732222|-104.965056}}\n\nPhoto by Andra Turner: createdbyandra.com\n\n=={{int:license-header}}==\n\n{{cc-by-sa-4.0}}\n\n[[Category:Melat Kiros]]"
+                }
+              }
+            }
+          ]
+        },
+        "26041358": {
+          "pageid": 26041358,
+          "ns": 6,
+          "title": "File:Richard Pan 2010.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 18227025,
+              "width": 3744,
+              "height": 5616,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Richard_Pan_2010.jpg/250px-Richard_Pan_2010.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 375,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Richard_Pan_2010.jpg/500px-Richard_Pan_2010.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Richard_Pan_2010.jpg/250px-Richard_Pan_2010.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 375,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Richard_Pan_2010.jpg/500px-Richard_Pan_2010.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Richard_Pan_2010.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Richard_Pan_2010.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=26041358",
+              "sha1": "63ecf95715d5ff039a09eec6c1729e35fc7e5e70",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2013-05-12 04:12:20",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Richard Pan 2010",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Taken with Canon EOS 5D Mark II|1965 births|Flickr images reviewed by FlickreviewR|Richard Pan",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "California State Assemblyman <a href=\"https://en.wikipedia.org/wiki/Richard_Pan\" class=\"extiw\" title=\"w:Richard Pan\">Richard Pan</a>.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2010-03-22 17:36",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/panforassembly/5056928859/\">Dr. Richard Pan for Assembly</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/49307181@N06\">Dr. Richard Pan</a> from Sacramento, CA, USA",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 2.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 2.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/2.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-2.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1159679374,
+              "parentid": 1092918412,
+              "timestamp": "2026-02-04T23:52:49Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "== {{int:filedesc}} ==\n{{Information\n|Description=California State Assemblyman {{w|Richard Pan}}.\n|Source=[https://www.flickr.com/photos/panforassembly/5056928859/ Dr. Richard Pan for Assembly]\n|Date=2010-03-22 17:36\n|Author=[https://www.flickr.com/people/49307181@N06 Dr. Richard Pan] from Sacramento, CA, USA\n|Permission=\n|other_versions=\n}}\n\n== {{int:license-header}} ==\n{{cc-by-sa-2.0}}\n{{User:FlickreviewR/reviewed-pass|Dr. Richard Pan, Assemblymember|https://www.flickr.com/photos/49307181@N06/5056928859|2013-05-12 20:59:30|cc-by-sa-2.0|}}\n\n\n[[Category:1965 births]]\n[[Category:Richard Pan]]\n[[Category:Taken with Canon EOS 5D Mark II]]"
+                }
+              }
+            }
+          ]
+        },
+        "176392121": {
+          "pageid": 176392121,
+          "ns": 6,
+          "title": "File:Sacramento City Councilmember Mai Vang.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 153089,
+              "width": 500,
+              "height": 500,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Sacramento_City_Councilmember_Mai_Vang.jpg/250px-Sacramento_City_Councilmember_Mai_Vang.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 250,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/6/61/Sacramento_City_Councilmember_Mai_Vang.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Sacramento_City_Councilmember_Mai_Vang.jpg/250px-Sacramento_City_Councilmember_Mai_Vang.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 250,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/6/61/Sacramento_City_Councilmember_Mai_Vang.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Sacramento_City_Councilmember_Mai_Vang.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Sacramento_City_Councilmember_Mai_Vang.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=176392121",
+              "sha1": "8a048ddb629337b5cd8a59c4988e941a5e04b8cc",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-10-09 17:42:40",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Sacramento City Councilmember Mai Vang",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD California|Images with extracted images|Mai Vang",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Official portrait of Sacramento City Councilmember Mai Vang.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-10-09",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.cityofsacramento.gov/mayor-council/district-8/biography\">https://www.cityofsacramento.gov/mayor-council/district-8/biography</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Sacramento City Council",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1288526876,
+              "parentid": 1267911934,
+              "timestamp": "2026-10-18T14:51:58Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Official portrait of Sacramento City Councilmember Mai Vang.}}\n|date=2025-10-09\n|source=https://www.cityofsacramento.gov/mayor-council/district-8/biography\n|author=Sacramento City Council\n|permission=\n|other versions={{Image extracted|1=Sacramento City Councilmember Mai Vang (cropped).jpg}}\n}}\n\n=={{int:license-header}}==\n{{PD-CAGov}}\n\n[[Category:Mai Vang]]"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

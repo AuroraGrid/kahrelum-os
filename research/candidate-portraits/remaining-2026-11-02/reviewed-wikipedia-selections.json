@@ -1,0 +1,1830 @@
+{
+  "purpose": "Discovery only. Explicitly reviewed person-page selections. Requires independent first-party identity and per-image rights before admission.",
+  "excludedNamesakeIds": [
+    19258,
+    19294,
+    19387,
+    19398,
+    19416,
+    19422,
+    20254,
+    20327,
+    20402,
+    20451,
+    20465,
+    20467,
+    20482,
+    20503,
+    20787,
+    20871,
+    21143,
+    21345,
+    22534,
+    23014,
+    23195,
+    23219,
+    23511,
+    23544,
+    24022,
+    25245,
+    29676
+  ],
+  "selections": {
+    "17069": {
+      "candidate": {
+        "sourceCandidateId": 17069,
+        "candidateName": "Rhett Marques",
+        "state": "AL",
+        "party": "R",
+        "contestId": "AL-2",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 70050414,
+        "ns": 0,
+        "title": "Rhett Marques",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Rhett_Marques.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 192,
+          "height": 294
+        },
+        "pageprops": {
+          "defaultsort": "Marques, Rhett",
+          "page_image_free": "Rhett_Marques.png",
+          "wikibase-shortdesc": "American politician",
+          "wikibase_item": "Q64010211"
+        }
+      },
+      "capture": "wikipedia-18487.json"
+    },
+    "19129": {
+      "candidate": {
+        "sourceCandidateId": 19129,
+        "candidateName": "Jay Feely",
+        "state": "AZ",
+        "party": "R",
+        "contestId": "AZ-1",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 1126535,
+        "ns": 0,
+        "title": "Jay Feely",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Jay_Feely_by_Gage_Skidmore.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 2808,
+          "height": 3584
+        },
+        "pageprops": {
+          "defaultsort": "Feely, Jay",
+          "page_image_free": "Jay_Feely_by_Gage_Skidmore.jpg",
+          "wikibase-shortdesc": "American football player and sportscaster (born 1976)",
+          "wikibase_item": "Q3807503"
+        }
+      },
+      "capture": "wikipedia-18487.json"
+    },
+    "21055": {
+      "candidate": {
+        "sourceCandidateId": 21055,
+        "candidateName": "Jacqui Irwin",
+        "state": "CA",
+        "party": "D",
+        "contestId": "CA-26",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 44559350,
+        "ns": 0,
+        "title": "Jacqui Irwin",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/6/62/Jacqui_Irwin_%28cropped%29_150302-Z-WQ610-_%2816698067641%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 1492,
+          "height": 1706
+        },
+        "pageprops": {
+          "defaultsort": "Irwin, Jacqui",
+          "page_image_free": "Jacqui_Irwin_(cropped)_150302-Z-WQ610-_(16698067641).jpg",
+          "wikibase-shortdesc": "American politician (born 1962)",
+          "wikibase_item": "Q18687938"
+        }
+      },
+      "capture": "wikipedia-21055.json"
+    },
+    "20488": {
+      "candidate": {
+        "sourceCandidateId": 20488,
+        "candidateName": "Jim Desmond",
+        "state": "CA",
+        "party": "R",
+        "contestId": "CA-48",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 29921701,
+        "ns": 0,
+        "title": "Jim Desmond",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Jim_Desmond_Official_Portrait.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 600,
+          "height": 900
+        },
+        "pageprops": {
+          "defaultsort": "Desmond, Jim",
+          "page_image_free": "Jim_Desmond_Official_Portrait.jpg",
+          "wikibase-shortdesc": "American politician",
+          "wikibase_item": "Q16728515"
+        }
+      },
+      "capture": "wikipedia-21055.json"
+    },
+    "20598": {
+      "candidate": {
+        "sourceCandidateId": 20598,
+        "candidateName": "Richard Pan",
+        "state": "CA",
+        "party": "D",
+        "contestId": "CA-6",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 30014520,
+        "ns": 0,
+        "title": "Richard Pan",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Richard_Pan_2010.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 3744,
+          "height": 5616
+        },
+        "pageprops": {
+          "defaultsort": "Pan, Richard",
+          "page_image_free": "Richard_Pan_2010.jpg",
+          "wikibase-shortdesc": "American politician (born 1965)",
+          "wikibase_item": "Q7328265"
+        }
+      },
+      "capture": "wikipedia-21055.json"
+    },
+    "20709": {
+      "candidate": {
+        "sourceCandidateId": 20709,
+        "candidateName": "Mai Vang",
+        "state": "CA",
+        "party": "D",
+        "contestId": "CA-7",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 81301319,
+        "ns": 0,
+        "title": "Mai Vang",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/6/61/Sacramento_City_Councilmember_Mai_Vang.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 500,
+          "height": 500
+        },
+        "pageprops": {
+          "defaultsort": "Vang, Mai",
+          "page_image_free": "Sacramento_City_Councilmember_Mai_Vang.jpg",
+          "wikibase-shortdesc": "American politician (born 1985)",
+          "wikibase_item": "Q138199857"
+        }
+      },
+      "capture": "wikipedia-21055.json"
+    },
+    "20670": {
+      "candidate": {
+        "sourceCandidateId": 20670,
+        "candidateName": "Melat Kiros",
+        "state": "CO",
+        "party": "D",
+        "contestId": "CO-1",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 83588580,
+        "ns": 0,
+        "title": "Melat Kiros",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/6/69/Melat_Kiros_Portrait.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 2531,
+          "height": 3166
+        },
+        "pageprops": {
+          "defaultsort": "Kiros, Melat",
+          "page_image_free": "Melat_Kiros_Portrait.jpg",
+          "wikibase-shortdesc": "American political candidate (born 1997)",
+          "wikibase_item": "Q140389773"
+        }
+      },
+      "capture": "wikipedia-21055.json"
+    },
+    "20552": {
+      "candidate": {
+        "sourceCandidateId": 20552,
+        "candidateName": "Eileen Laubacher",
+        "state": "CO",
+        "party": "D",
+        "contestId": "CO-4",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 79996992,
+        "ns": 0,
+        "title": "Eileen Laubacher",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Eileen_H._Laubacher_%283%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 2400,
+          "height": 3000
+        },
+        "pageprops": {
+          "defaultsort": "Laubacher, Eileen",
+          "page_image_free": "Eileen_H._Laubacher_(3).jpg",
+          "wikibase-shortdesc": "American naval officer",
+          "wikibase_item": "Q58822141"
+        }
+      },
+      "capture": "wikipedia-21055.json"
+    },
+    "29268": {
+      "candidate": {
+        "sourceCandidateId": 29268,
+        "candidateName": "Luke Bronin",
+        "state": "CT",
+        "party": "D",
+        "contestId": "CT-1",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 48453611,
+        "ns": 0,
+        "title": "Luke Bronin",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Luke_Bronin_%2842831415392%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 441,
+          "height": 589
+        },
+        "pageprops": {
+          "defaultsort": "Bronin, Luke",
+          "page_image_free": "Luke_Bronin_(42831415392).jpg",
+          "wikibase-shortdesc": "American politician and lawyer (born 1979)",
+          "wikibase_item": "Q21572863"
+        }
+      },
+      "capture": "wikipedia-20554.json"
+    },
+    "20340": {
+      "candidate": {
+        "sourceCandidateId": 20340,
+        "candidateName": "Mike Beltran",
+        "state": "FL",
+        "party": "R",
+        "contestId": "FL-14",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 59335208,
+        "ns": 0,
+        "title": "Mike Beltran",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Mike_Beltran.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 150,
+          "height": 200
+        },
+        "pageprops": {
+          "defaultsort": "Beltran, Mike",
+          "page_image_free": "Mike_Beltran.jpg",
+          "wikibase-shortdesc": "American politician from Florida",
+          "wikibase_item": "Q60735806"
+        }
+      },
+      "capture": "wikipedia-20554.json"
+    },
+    "20948": {
+      "candidate": {
+        "sourceCandidateId": 20948,
+        "candidateName": "Oliver Gilbert",
+        "state": "FL",
+        "party": "D",
+        "contestId": "FL-24",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 66102754,
+        "ns": 0,
+        "title": "Oliver Gilbert",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/5/59/OG3_High_Res_headshot.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 2623,
+          "height": 3935
+        },
+        "pageprops": {
+          "defaultsort": "Gilbert, Oliver",
+          "page_image_free": "OG3_High_Res_headshot.jpg",
+          "wikibase-shortdesc": "American politician",
+          "wikibase_item": "Q104520524"
+        }
+      },
+      "capture": "wikipedia-20554.json"
+    },
+    "19413": {
+      "candidate": {
+        "sourceCandidateId": 19413,
+        "candidateName": "Houston Gaines",
+        "state": "GA",
+        "party": "R",
+        "contestId": "GA-10",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 66177750,
+        "ns": 0,
+        "title": "Houston Gaines",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Official_headshot_of_Houston_Gaines.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 2529,
+          "height": 3224
+        },
+        "pageprops": {
+          "defaultsort": "Gaines, Houston",
+          "page_image_free": "Official_headshot_of_Houston_Gaines.jpg",
+          "wikibase-shortdesc": "American politician (born 1995)",
+          "wikibase_item": "Q104433053"
+        }
+      },
+      "capture": "wikipedia-20959.json"
+    },
+    "19420": {
+      "candidate": {
+        "sourceCandidateId": 19420,
+        "candidateName": "Jasmine Clark",
+        "state": "GA",
+        "party": "D",
+        "contestId": "GA-13",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 59020753,
+        "ns": 0,
+        "title": "Jasmine Clark",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/2/21/Member_of_the_Georgia_House_of_Representatives_Jasmine_Michelle_Clark.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 1688,
+          "height": 2283
+        },
+        "pageprops": {
+          "defaultsort": "Clark, Jasmine",
+          "page_image_free": "Member_of_the_Georgia_House_of_Representatives_Jasmine_Michelle_Clark.jpg",
+          "wikibase-shortdesc": "American scientist and politician (born 1982)",
+          "wikibase_item": "Q59209397"
+        }
+      },
+      "capture": "wikipedia-20959.json"
+    },
+    "24780": {
+      "candidate": {
+        "sourceCandidateId": 24780,
+        "candidateName": "Brenton Awa",
+        "state": "HI",
+        "party": "R",
+        "contestId": "HI-2",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 72813178,
+        "ns": 0,
+        "title": "Brenton Awa",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/9/92/Senator_Awa_Visits_Marine_Corps_Base_Hawaii_%288%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 1083,
+          "height": 1444
+        },
+        "pageprops": {
+          "defaultsort": "Awa, Brenton",
+          "page_image_free": "Senator_Awa_Visits_Marine_Corps_Base_Hawaii_(8)_(cropped).jpg",
+          "wikibase-shortdesc": "American politician",
+          "wikibase_item": "Q116286920"
+        }
+      },
+      "capture": "wikipedia-20959.json"
+    },
+    "20332": {
+      "candidate": {
+        "sourceCandidateId": 20332,
+        "candidateName": "Sarah Trone Garriott",
+        "state": "IA",
+        "party": "D",
+        "contestId": "IA-3",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 67606542,
+        "ns": 0,
+        "title": "Sarah Trone Garriott",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/7/78/Sarah_Trone_Garriott_2023_%28cropped_2%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 1367,
+          "height": 1698
+        },
+        "pageprops": {
+          "defaultsort": "Garriott, Sarah Trone",
+          "page_image_free": "Sarah_Trone_Garriott_2023_(cropped_2).jpg",
+          "wikibase-shortdesc": "Iowa politician",
+          "wikibase_item": "Q106762645"
+        }
+      },
+      "capture": "wikipedia-20959.json"
+    },
+    "20247": {
+      "candidate": {
+        "sourceCandidateId": 20247,
+        "candidateName": "Donna Miller",
+        "state": "IL",
+        "party": "D",
+        "contestId": "IL-2",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 65787097,
+        "ns": 0,
+        "title": "Donna Miller",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Cook_County_Commissioner_Donna_Miller_at_May_Day_2025.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 765,
+          "height": 1020
+        },
+        "pageprops": {
+          "defaultsort": "Miller, Donna",
+          "page_image_free": "Cook_County_Commissioner_Donna_Miller_at_May_Day_2025.jpg",
+          "wikibase-shortdesc": "American politician (born 1965)",
+          "wikibase_item": "Q101318343"
+        }
+      },
+      "capture": "wikipedia-20959.json"
+    },
+    "20257": {
+      "candidate": {
+        "sourceCandidateId": 20257,
+        "candidateName": "La Shawn Ford",
+        "state": "IL",
+        "party": "D",
+        "contestId": "IL-7",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 9744876,
+        "ns": 0,
+        "title": "La Shawn Ford",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/a/a3/La_Shawn_K._Ford_on_11_December_2023_-_8_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 684,
+          "height": 869
+        },
+        "pageprops": {
+          "defaultsort": "Ford, La Shawn",
+          "page_image_free": "La_Shawn_K._Ford_on_11_December_2023_-_8_(cropped).jpg",
+          "wikibase-shortdesc": "American politician (born 1972)",
+          "wikibase_item": "Q6465272"
+        }
+      },
+      "capture": "wikipedia-20248.json"
+    },
+    "20045": {
+      "candidate": {
+        "sourceCandidateId": 20045,
+        "candidateName": "Daniel Biss",
+        "state": "IL",
+        "party": "D",
+        "contestId": "IL-9",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 29462016,
+        "ns": 0,
+        "title": "Daniel Biss",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Biss_2026.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 874,
+          "height": 1187
+        },
+        "pageprops": {
+          "defaultsort": "Biss, Daniel",
+          "page_image_free": "Biss_2026.jpg",
+          "wikibase-shortdesc": "American mathematician and politician (born 1977)",
+          "wikibase_item": "Q3013758"
+        }
+      },
+      "capture": "wikipedia-20248.json"
+    },
+    "19312": {
+      "candidate": {
+        "sourceCandidateId": 19312,
+        "candidateName": "J.D. Ford",
+        "state": "IN",
+        "party": "D",
+        "contestId": "IN-5",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 59049057,
+        "ns": 0,
+        "title": "J. D. Ford",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Jd-ford-statehouse-official.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 600,
+          "height": 900
+        },
+        "pageprops": {
+          "defaultsort": "Ford, J.D.",
+          "page_image_free": "Jd-ford-statehouse-official.jpg",
+          "wikibase-shortdesc": "American politician",
+          "wikibase_item": "Q58755278"
+        }
+      },
+      "capture": "wikipedia-20248.json"
+    },
+    "20172": {
+      "candidate": {
+        "sourceCandidateId": 20172,
+        "candidateName": "Ed Gallrein",
+        "state": "KY",
+        "party": "R",
+        "contestId": "KY-4",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 83223682,
+        "ns": 0,
+        "title": "Ed Gallrein",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/2/20/Ed_Gallrein_%2855505179851%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 2985,
+          "height": 4371
+        },
+        "pageprops": {
+          "defaultsort": "Gallrein, Ed",
+          "page_image_free": "Ed_Gallrein_(55505179851)_(cropped).jpg",
+          "wikibase-shortdesc": "American politician (born 1958)",
+          "wikibase_item": "Q136563388"
+        }
+      },
+      "capture": "wikipedia-20248.json"
+    },
+    "20501": {
+      "candidate": {
+        "sourceCandidateId": 20501,
+        "candidateName": "Ralph Alvarado",
+        "state": "KY",
+        "party": "R",
+        "contestId": "KY-6",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 45559107,
+        "ns": 0,
+        "title": "Ralph Alvarado",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/1/10/Ralph_Alvarado_by_Gage_Skidmore.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 1984,
+          "height": 2920
+        },
+        "pageprops": {
+          "defaultsort": "Alvarado, Ralph",
+          "page_image_free": "Ralph_Alvarado_by_Gage_Skidmore.jpg",
+          "wikibase-shortdesc": "American physician and politician",
+          "wikibase_item": "Q19519302"
+        }
+      },
+      "capture": "wikipedia-20248.json"
+    },
+    "23747": {
+      "candidate": {
+        "sourceCandidateId": 23747,
+        "candidateName": "Dan Koh",
+        "state": "MA",
+        "party": "D",
+        "contestId": "MA-6",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 74635933,
+        "ns": 0,
+        "title": "Dan Koh",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/9/96/Daniel_Koh%2C_White_House_Deputy_Cabinet_Secretary.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 800,
+          "height": 800
+        },
+        "pageprops": {
+          "defaultsort": "Koh, Daniel",
+          "page_image_free": "Daniel_Koh,_White_House_Deputy_Cabinet_Secretary.jpg",
+          "wikibase-shortdesc": "American politician (born 1985)",
+          "wikibase_item": "Q115558843"
+        }
+      },
+      "capture": "wikipedia-23737.json"
+    },
+    "23012": {
+      "candidate": {
+        "sourceCandidateId": 23012,
+        "candidateName": "John Olszewski",
+        "state": "MD",
+        "party": "D",
+        "contestId": "MD-2",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 12128417,
+        "ns": 0,
+        "title": "Johnny Olszewski",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/6/66/Johnny_Olszewski_119th_congress.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 1000,
+          "height": 1250
+        },
+        "pageprops": {
+          "defaultsort": "Olszewski, John A. Jr.",
+          "page_image_free": "Johnny_Olszewski_119th_congress.jpg",
+          "wikibase-badge-Q17437798": "",
+          "wikibase-shortdesc": "American politician (born 1982)",
+          "wikibase_item": "Q6217866"
+        }
+      },
+      "capture": "wikipedia-23737.json"
+    },
+    "23053": {
+      "candidate": {
+        "sourceCandidateId": 23053,
+        "candidateName": "Adrian Boafo",
+        "state": "MD",
+        "party": "D",
+        "contestId": "MD-5",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 72598227,
+        "ns": 0,
+        "title": "Adrian Boafo",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/0/09/Adrian_Boafo_Feb2023.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 1070,
+          "height": 1426
+        },
+        "pageprops": {
+          "defaultsort": "Boafo, Adrian",
+          "page_image_free": "Adrian_Boafo_Feb2023.jpg",
+          "toc": "",
+          "wikibase-shortdesc": "American politician (born 1994)",
+          "wikibase_item": "Q115916258"
+        }
+      },
+      "capture": "wikipedia-23737.json"
+    },
+    "24018": {
+      "candidate": {
+        "sourceCandidateId": 24018,
+        "candidateName": "Robin Ficker",
+        "state": "MD",
+        "party": "R",
+        "contestId": "MD-6",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 6491697,
+        "ns": 0,
+        "title": "Robin Ficker",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/0/09/Robin_Ficker_%2835598540490%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 1130,
+          "height": 1507
+        },
+        "pageprops": {
+          "defaultsort": "Ficker, Robin",
+          "page_image_free": "Robin_Ficker_(35598540490).jpg",
+          "wikibase-shortdesc": "American political activist and candidate (born 1943)",
+          "wikibase_item": "Q16106255"
+        }
+      },
+      "capture": "wikipedia-23737.json"
+    },
+    "19166": {
+      "candidate": {
+        "sourceCandidateId": 19166,
+        "candidateName": "Matthew Dunlap",
+        "state": "ME",
+        "party": "D",
+        "contestId": "ME-2",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 15784952,
+        "ns": 0,
+        "title": "Matthew Dunlap",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/7/70/Matt_Dunlap_%28cropped_headshot%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 279,
+          "height": 424
+        },
+        "pageprops": {
+          "defaultsort": "Dunlap, Matthew",
+          "page_image_free": "Matt_Dunlap_(cropped_headshot).jpg",
+          "wikibase-shortdesc": "American politician from Maine (born 1964)",
+          "wikibase_item": "Q6790437"
+        }
+      },
+      "capture": "wikipedia-23737.json"
+    },
+    "16066": {
+      "candidate": {
+        "sourceCandidateId": 16066,
+        "candidateName": "Michael Bouchard",
+        "state": "MI",
+        "party": "R",
+        "contestId": "MI-10",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 3379336,
+        "ns": 0,
+        "title": "Mike Bouchard",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Mike_Bouchard_2006.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 1426,
+          "height": 2130
+        },
+        "pageprops": {
+          "defaultsort": "Bouchard, Mike",
+          "page_image_free": "Mike_Bouchard_2006.jpg",
+          "wikibase-shortdesc": "American politician",
+          "wikibase_item": "Q6846094"
+        }
+      },
+      "capture": "wikipedia-23737.json"
+    },
+    "16383": {
+      "candidate": {
+        "sourceCandidateId": 16383,
+        "candidateName": "Jeremy Moss",
+        "state": "MI",
+        "party": "D",
+        "contestId": "MI-11",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 47122427,
+        "ns": 0,
+        "title": "Jeremy Moss",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/2/22/Michigan_Senator_Jeremy_Moss_2019.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 836,
+          "height": 1280
+        },
+        "pageprops": {
+          "defaultsort": "Moss, Jeremy",
+          "page_image_free": "Michigan_Senator_Jeremy_Moss_2019.jpg",
+          "wikibase-shortdesc": "American politician (born 1986)",
+          "wikibase_item": "Q20630393"
+        }
+      },
+      "capture": "wikipedia-23737.json"
+    },
+    "16387": {
+      "candidate": {
+        "sourceCandidateId": 16387,
+        "candidateName": "Donavan McKinney",
+        "state": "MI",
+        "party": "D",
+        "contestId": "MI-13",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 75375313,
+        "ns": 0,
+        "title": "Donavan McKinney",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/5/5e/State_Rep_Donavan_McKinney_Swearing_In_12.12.22_%2852565631658%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 915,
+          "height": 1221
+        },
+        "pageprops": {
+          "defaultsort": "McKinney, Donavan",
+          "page_image_free": "State_Rep_Donavan_McKinney_Swearing_In_12.12.22_(52565631658)_(cropped).jpg",
+          "wikibase-shortdesc": "American politician (born 1992)",
+          "wikibase_item": "Q123507667"
+        }
+      },
+      "capture": "wikipedia-23737.json"
+    },
+    "20769": {
+      "candidate": {
+        "sourceCandidateId": 20769,
+        "candidateName": "Matt Little",
+        "state": "MN",
+        "party": "D",
+        "contestId": "MN-2",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 52620781,
+        "ns": 0,
+        "title": "Matt Little",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/a/a6/MattLittleGOTV.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 2800,
+          "height": 3900
+        },
+        "pageprops": {
+          "defaultsort": "Little, Matt",
+          "page_image_free": "MattLittleGOTV.jpg",
+          "wikibase-shortdesc": "American attorney and politician (born 1984)",
+          "wikibase_item": "Q16731557"
+        }
+      },
+      "capture": "wikipedia-23737.json"
+    },
+    "20770": {
+      "candidate": {
+        "sourceCandidateId": 20770,
+        "candidateName": "Eric Pratt",
+        "state": "MN",
+        "party": "R",
+        "contestId": "MN-2",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 39355208,
+        "ns": 0,
+        "title": "Eric Pratt",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Minnesota_State_Senator_Eric_Pratt.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 668,
+          "height": 824
+        },
+        "pageprops": {
+          "defaultsort": "Pratt, Eric",
+          "page_image_free": "Minnesota_State_Senator_Eric_Pratt.jpg",
+          "wikibase-shortdesc": "American politician",
+          "wikibase_item": "Q16195754"
+        }
+      },
+      "capture": "wikipedia-23737.json"
+    },
+    "26314": {
+      "candidate": {
+        "sourceCandidateId": 26314,
+        "candidateName": "Chris Stigall",
+        "state": "MO",
+        "party": "R",
+        "contestId": "MO-6",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 26668167,
+        "ns": 0,
+        "title": "Chris Stigall",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Chris_Stigall_2017_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 779,
+          "height": 1039
+        },
+        "pageprops": {
+          "defaultsort": "Stigall, Chris",
+          "page_image_free": "Chris_Stigall_2017_(cropped).jpg",
+          "wikibase-shortdesc": "American radio talk show host (born 1977)",
+          "wikibase_item": "Q5108165"
+        }
+      },
+      "capture": "wikipedia-20996.json"
+    },
+    "21446": {
+      "candidate": {
+        "sourceCandidateId": 21446,
+        "candidateName": "Sam Forstag",
+        "state": "MT",
+        "party": "D",
+        "contestId": "MT-1",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 82103136,
+        "ns": 0,
+        "title": "Sam Forstag",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Sam_Forstag_Portrait_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 552,
+          "height": 643
+        },
+        "pageprops": {
+          "defaultsort": "Forstag, Sam",
+          "page_image_free": "Sam_Forstag_Portrait_(cropped).jpg",
+          "wikibase-shortdesc": "American political candidate and smokejumper (born 1994)",
+          "wikibase_item": "Q139374662"
+        }
+      },
+      "capture": "wikipedia-20996.json"
+    },
+    "20051": {
+      "candidate": {
+        "sourceCandidateId": 20051,
+        "candidateName": "Laurie Buckhout",
+        "state": "NC",
+        "party": "R",
+        "contestId": "NC-1",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 76271713,
+        "ns": 0,
+        "title": "Laurie Buckhout",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Laurie_Buckhout.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 3312,
+          "height": 4140
+        },
+        "pageprops": {
+          "defaultsort": "Buckhout, Laurie",
+          "page_image_free": "Laurie_Buckhout.jpg",
+          "wikibase-shortdesc": "American politician (born 1961)",
+          "wikibase_item": "Q124749721"
+        }
+      },
+      "capture": "wikipedia-20996.json"
+    },
+    "20397": {
+      "candidate": {
+        "sourceCandidateId": 20397,
+        "candidateName": "Jennifer Balkcom",
+        "state": "NC",
+        "party": "R",
+        "contestId": "NC-11",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 76194303,
+        "ns": 0,
+        "title": "Jennifer Balkcom",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Rep._Jennifer_Balkcom.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 386,
+          "height": 540
+        },
+        "pageprops": {
+          "defaultsort": "Balkcom, Jennifer",
+          "page_image_free": "Rep._Jennifer_Balkcom.jpg",
+          "wikibase-shortdesc": "American politician",
+          "wikibase_item": "Q124668538"
+        }
+      },
+      "capture": "wikipedia-20996.json"
+    },
+    "20382": {
+      "candidate": {
+        "sourceCandidateId": 20382,
+        "candidateName": "Raymond Smith Jr.",
+        "state": "NC",
+        "party": "D",
+        "contestId": "NC-3",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 59015397,
+        "ns": 0,
+        "title": "Raymond Smith Jr.",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/7/71/Rep._Raymond_E._Smith_Jr.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 1200,
+          "height": 1800
+        },
+        "pageprops": {
+          "defaultsort": "Smith, Raymond Jr.",
+          "page_image_free": "Rep._Raymond_E._Smith_Jr.jpg",
+          "wikibase-shortdesc": "American politician from North Carolina",
+          "wikibase_item": "Q58494746"
+        }
+      },
+      "capture": "wikipedia-20996.json"
+    },
+    "20394": {
+      "candidate": {
+        "sourceCandidateId": 20394,
+        "candidateName": "Richard Ojeda",
+        "state": "NC",
+        "party": "D",
+        "contestId": "NC-9",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 54217799,
+        "ns": 0,
+        "title": "Richard Ojeda",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Richard_Ojeda_shirt.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 3036,
+          "height": 3036
+        },
+        "pageprops": {
+          "defaultsort": "Ojeda, Richard",
+          "page_image_free": "Richard_Ojeda_shirt.jpg",
+          "wikibase-shortdesc": "American politician and military officer (born 1970)",
+          "wikibase_item": "Q30121703"
+        }
+      },
+      "capture": "wikipedia-20996.json"
+    },
+    "17469": {
+      "candidate": {
+        "sourceCandidateId": 17469,
+        "candidateName": "Lily Tang Williams",
+        "state": "NH",
+        "party": "R",
+        "contestId": "NH-2",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 77843426,
+        "ns": 0,
+        "title": "Lily Tang Williams",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Lily_Tang_Williams_by_Gage_Skidmore.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 2189,
+          "height": 2925
+        },
+        "pageprops": {
+          "defaultsort": "Tang Williams, Lily",
+          "page_image_free": "Lily_Tang_Williams_by_Gage_Skidmore.jpg",
+          "wikibase-shortdesc": "American perennial candidate (born 1964)",
+          "wikibase_item": "Q130280879"
+        }
+      },
+      "capture": "wikipedia-18395.json"
+    },
+    "16306": {
+      "candidate": {
+        "sourceCandidateId": 16306,
+        "candidateName": "Adam Hamawy",
+        "state": "NJ",
+        "party": "D",
+        "contestId": "NJ-12",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 82840548,
+        "ns": 0,
+        "title": "Adam Hamawy",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/1/11/Adam_Hamawy_in_2025.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 280,
+          "height": 356
+        },
+        "pageprops": {
+          "defaultsort": "Hamawy, Adam",
+          "page_image_free": "Adam_Hamawy_in_2025.jpg",
+          "wikibase-shortdesc": "American political candidate (born 1969/1970)",
+          "wikibase_item": "Q138845735"
+        }
+      },
+      "capture": "wikipedia-18395.json"
+    },
+    "16266": {
+      "candidate": {
+        "sourceCandidateId": 16266,
+        "candidateName": "Tom Kean Jr.",
+        "state": "NJ",
+        "party": "R",
+        "contestId": "NJ-7",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 1606565,
+        "ns": 0,
+        "title": "Thomas Kean Jr.",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/d/de/Rep._Tom_Kean_official_photo%2C_118th_Congress.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 3360,
+          "height": 4200
+        },
+        "pageprops": {
+          "defaultsort": "Kean, Thomas Jr.",
+          "page_image_free": "Rep._Tom_Kean_official_photo,_118th_Congress.jpg",
+          "wikibase-shortdesc": "American politician (born 1968)",
+          "wikibase_item": "Q7791445"
+        }
+      },
+      "capture": "wikipedia-18395.json"
+    },
+    "23221": {
+      "candidate": {
+        "sourceCandidateId": 23221,
+        "candidateName": "Martin O'Donnell",
+        "state": "NV",
+        "party": "R",
+        "contestId": "NV-3",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 3307684,
+        "ns": 0,
+        "title": "Martin O'Donnell",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/8/82/Marty_O%27Donnell_by_Gage_Skidmore.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 2560,
+          "height": 3328
+        },
+        "pageprops": {
+          "defaultsort": "Odonnell, Martin",
+          "page_image_free": "Marty_O'Donnell_by_Gage_Skidmore.jpg",
+          "wikibase-badge-Q17437798": "",
+          "wikibase-shortdesc": "American video game composer (born 1955)",
+          "wikibase_item": "Q2484073"
+        }
+      },
+      "capture": "wikipedia-18395.json"
+    },
+    "23094": {
+      "candidate": {
+        "sourceCandidateId": 23094,
+        "candidateName": "Nicholas LaLota",
+        "state": "NY",
+        "party": "R",
+        "contestId": "NY-1",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 72061478,
+        "ns": 0,
+        "title": "Nick LaLota",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Nick_lalota_portrait.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 3360,
+          "height": 4200
+        },
+        "pageprops": {
+          "defaultsort": "Lalota, Nick",
+          "page_image_free": "Nick_lalota_portrait.jpg",
+          "wikibase-shortdesc": "American politician and businessman (born 1978)",
+          "wikibase_item": "Q115168182"
+        }
+      },
+      "capture": "wikipedia-18395.json"
+    },
+    "16163": {
+      "candidate": {
+        "sourceCandidateId": 16163,
+        "candidateName": "Brad Lander",
+        "state": "NY",
+        "party": "D",
+        "contestId": "NY-10",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 23841541,
+        "ns": 0,
+        "title": "Brad Lander",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/2/26/Brad_Lander.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 4280,
+          "height": 5350
+        },
+        "pageprops": {
+          "defaultsort": "Lander, Brad",
+          "page_image_free": "Brad_Lander.jpg",
+          "wikibase-shortdesc": "American politician (born 1969)",
+          "wikibase_item": "Q15109509"
+        }
+      },
+      "capture": "wikipedia-18395.json"
+    },
+    "16052": {
+      "candidate": {
+        "sourceCandidateId": 16052,
+        "candidateName": "Micah Lasher",
+        "state": "NY",
+        "party": "D",
+        "contestId": "NY-12",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 77448255,
+        "ns": 0,
+        "title": "Micah Lasher",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/5/5b/FWNY25%3B_U.S._Marines_and_Sailors_hold_wreath_laying_ceremony_Micah_Lasher_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 1384,
+          "height": 1846
+        },
+        "pageprops": {
+          "defaultsort": "Lasher, Micah",
+          "page_image_free": "FWNY25;_U.S._Marines_and_Sailors_hold_wreath_laying_ceremony_Micah_Lasher_(cropped).jpg",
+          "wikibase-shortdesc": "American politician (born 1981)",
+          "wikibase_item": "Q127978568"
+        }
+      },
+      "capture": "wikipedia-18395.json"
+    },
+    "23095": {
+      "candidate": {
+        "sourceCandidateId": 23095,
+        "candidateName": "Darializa Chevalier",
+        "state": "NY",
+        "party": "D",
+        "contestId": "NY-13",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 83503726,
+        "ns": 0,
+        "title": "Darializa Avila Chevalier",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/9/93/Darializa_Avila_Chevalier_during_interview_on_Secretos_CEO.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 736,
+          "height": 981
+        },
+        "pageprops": {
+          "defaultsort": "Chevalier, Darializa Avila",
+          "page_image_free": "Darializa_Avila_Chevalier_during_interview_on_Secretos_CEO.jpg",
+          "wikibase-shortdesc": "American political candidate (born 1993/94)",
+          "wikibase_item": "Q140033138"
+        }
+      },
+      "capture": "wikipedia-18395.json"
+    },
+    "16363": {
+      "candidate": {
+        "sourceCandidateId": 16363,
+        "candidateName": "Cait Conley",
+        "state": "NY",
+        "party": "D",
+        "contestId": "NY-17",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 84086457,
+        "ns": 0,
+        "title": "Cait Conley",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Cait_Conley.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 250,
+          "height": 319
+        },
+        "pageprops": {
+          "defaultsort": "Conley, Cait",
+          "page_image_free": "Cait_Conley.jpg",
+          "wikibase-shortdesc": "American politician",
+          "wikibase_item": "Q141205753"
+        }
+      },
+      "capture": "wikipedia-18395.json"
+    },
+    "23510": {
+      "candidate": {
+        "sourceCandidateId": 23510,
+        "candidateName": "Peter Oberacker",
+        "state": "NY",
+        "party": "R",
+        "contestId": "NY-19",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 67132376,
+        "ns": 0,
+        "title": "Peter Oberacker",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/b/bd/%2805-12-25%29_NYS_Senator_Peter_Oberacker_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 583,
+          "height": 779
+        },
+        "pageprops": {
+          "defaultsort": "Oberacker, Peter",
+          "page_image_free": "(05-12-25)_NYS_Senator_Peter_Oberacker_(cropped).jpg",
+          "wikibase-shortdesc": "New York state senator",
+          "wikibase_item": "Q105996915"
+        }
+      },
+      "capture": "wikipedia-23510.json"
+    },
+    "23090": {
+      "candidate": {
+        "sourceCandidateId": 23090,
+        "candidateName": "Michael LiPetri",
+        "state": "NY",
+        "party": "R",
+        "contestId": "NY-3",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 59678908,
+        "ns": 0,
+        "title": "Mike LiPetri",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/3/35/Mike_LiPetri_%282024_Italian_Heritage_Street_Festival%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 734,
+          "height": 978
+        },
+        "pageprops": {
+          "defaultsort": "LiPetri, Michael",
+          "page_image_free": "Mike_LiPetri_(2024_Italian_Heritage_Street_Festival)_(cropped).jpg",
+          "wikibase-shortdesc": "American attorney (born 1990)",
+          "wikibase_item": "Q60771939"
+        }
+      },
+      "capture": "wikipedia-23510.json"
+    },
+    "16059": {
+      "candidate": {
+        "sourceCandidateId": 16059,
+        "candidateName": "Claire Valdez",
+        "state": "NY",
+        "party": "D",
+        "contestId": "NY-7",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 77497969,
+        "ns": 0,
+        "title": "Claire Valdez",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Queens_Bus_Network_Redesign_Claire_Valdez_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 2008,
+          "height": 2678
+        },
+        "pageprops": {
+          "defaultsort": "Valdez, Claire",
+          "page_image_free": "Queens_Bus_Network_Redesign_Claire_Valdez_(cropped).jpg",
+          "wikibase-shortdesc": "American politician (born 1989)",
+          "wikibase_item": "Q126911137"
+        }
+      },
+      "capture": "wikipedia-23510.json"
+    },
+    "22001": {
+      "candidate": {
+        "sourceCandidateId": 22001,
+        "candidateName": "Mark Tedford",
+        "state": "OK",
+        "party": "R",
+        "contestId": "OK-1",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 70619828,
+        "ns": 0,
+        "title": "Mark Tedford",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tedford_Mark_OKHouse.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 3438,
+          "height": 4298
+        },
+        "pageprops": {
+          "defaultsort": "Tedford, Mark",
+          "page_image_free": "Tedford_Mark_OKHouse.jpg",
+          "wikibase-shortdesc": "American politician",
+          "wikibase_item": "Q111709692"
+        }
+      },
+      "capture": "wikipedia-23510.json"
+    },
+    "19375": {
+      "candidate": {
+        "sourceCandidateId": 19375,
+        "candidateName": "Janelle Stelson",
+        "state": "PA",
+        "party": "D",
+        "contestId": "PA-10",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 76721287,
+        "ns": 0,
+        "title": "Janelle Stelson",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Janelle_Stelson_08-29-2026_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 736,
+          "height": 967
+        },
+        "pageprops": {
+          "defaultsort": "Stelson, Janelle",
+          "page_image_free": "Janelle_Stelson_08-29-2026_(cropped).jpg",
+          "wikibase-shortdesc": "American television news anchor",
+          "wikibase_item": "Q136368691"
+        }
+      },
+      "capture": "wikipedia-19121.json"
+    },
+    "19262": {
+      "candidate": {
+        "sourceCandidateId": 19262,
+        "candidateName": "Chris Rabb",
+        "state": "PA",
+        "party": "D",
+        "contestId": "PA-3",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 57076495,
+        "ns": 0,
+        "title": "Chris Rabb",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/2/24/Rep._Chris_Rabb_speaks_at_a_fundraiser.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 1080,
+          "height": 1350
+        },
+        "pageprops": {
+          "defaultsort": "Rabb, Chris",
+          "page_image_free": "Rep._Chris_Rabb_speaks_at_a_fundraiser.jpg",
+          "wikibase-shortdesc": "American politician (born 1970)",
+          "wikibase_item": "Q51754940"
+        }
+      },
+      "capture": "wikipedia-19121.json"
+    },
+    "23202": {
+      "candidate": {
+        "sourceCandidateId": 23202,
+        "candidateName": "Nancy Lacore",
+        "state": "SC",
+        "party": "D",
+        "contestId": "SC-1",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 60123984,
+        "ns": 0,
+        "title": "Nancy Lacore",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/4/4f/VADM_Nancy_S._Lacore_%282%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 3561,
+          "height": 4451
+        },
+        "pageprops": {
+          "defaultsort": "Lacore, Nancy S.",
+          "page_image_free": "VADM_Nancy_S._Lacore_(2).jpg",
+          "wikibase-shortdesc": "U.S. Navy vice admiral and political candidate",
+          "wikibase_item": "Q61953884"
+        }
+      },
+      "capture": "wikipedia-19121.json"
+    },
+    "19054": {
+      "candidate": {
+        "sourceCandidateId": 19054,
+        "candidateName": "Marty Jackley",
+        "state": "SD",
+        "party": "R",
+        "contestId": "SD-AL",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 41595336,
+        "ns": 0,
+        "title": "Marty Jackley",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/6/69/US_District_Attorney_Marty_Jackley.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 510,
+          "height": 768
+        },
+        "pageprops": {
+          "defaultsort": "Jackley, Marty",
+          "page_image_free": "US_District_Attorney_Marty_Jackley.png",
+          "wikibase-shortdesc": "American lawyer (born 1970)",
+          "wikibase_item": "Q16730101"
+        }
+      },
+      "capture": "wikipedia-19121.json"
+    },
+    "20438": {
+      "candidate": {
+        "sourceCandidateId": 20438,
+        "candidateName": "Bobby Pulido",
+        "state": "TX",
+        "party": "D",
+        "contestId": "TX-15",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 546023,
+        "ns": 0,
+        "title": "Bobby Pulido",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/3/31/Bobby_Pulido_%28CROPPED%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 533,
+          "height": 683
+        },
+        "pageprops": {
+          "defaultsort": "Pulido, Bobby",
+          "page_image_free": "Bobby_Pulido_(CROPPED).jpg",
+          "wikibase-badge-Q17437798": "",
+          "wikibase-shortdesc": "American singer (born 1973)",
+          "wikibase_item": "Q3297865"
+        }
+      },
+      "capture": "wikipedia-23155.json"
+    },
+    "20412": {
+      "candidate": {
+        "sourceCandidateId": 20412,
+        "candidateName": "Steve Toth",
+        "state": "TX",
+        "party": "R",
+        "contestId": "TX-2",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 42034270,
+        "ns": 0,
+        "title": "Steve Toth",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/4/4e/SteveToth--EagleForum--TX2Debate--GraceChurch--SpringTX--08Jan2026_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 300,
+          "height": 401
+        },
+        "pageprops": {
+          "defaultsort": "Toth, Steve",
+          "page_image_free": "SteveToth--EagleForum--TX2Debate--GraceChurch--SpringTX--08Jan2026_(cropped).jpg",
+          "wikibase-shortdesc": "American businessman and politician (born 1960)",
+          "wikibase_item": "Q16193904"
+        }
+      },
+      "capture": "wikipedia-23155.json"
+    },
+    "20449": {
+      "candidate": {
+        "sourceCandidateId": 20449,
+        "candidateName": "Mark Teixeira",
+        "state": "TX",
+        "party": "R",
+        "contestId": "TX-21",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 2071367,
+        "ns": 0,
+        "title": "Mark Teixeira",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Mark_Teixeira_basepaths_2011.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 2707,
+          "height": 3319
+        },
+        "pageprops": {
+          "defaultsort": "Teixeira, Mark",
+          "page_image_free": "Mark_Teixeira_basepaths_2011.jpg",
+          "wikibase-shortdesc": "American baseball player and politician (born 1980)",
+          "wikibase_item": "Q928196"
+        }
+      },
+      "capture": "wikipedia-23155.json"
+    },
+    "20453": {
+      "candidate": {
+        "sourceCandidateId": 20453,
+        "candidateName": "Brandon Herrera",
+        "state": "TX",
+        "party": "R",
+        "contestId": "TX-23",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 78312187,
+        "ns": 0,
+        "title": "Brandon Herrera",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Brandon_Herrera_with_attendees_%2855457704523%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 1455,
+          "height": 1939
+        },
+        "pageprops": {
+          "defaultsort": "Herrera, Brandon",
+          "page_image_free": "Brandon_Herrera_with_attendees_(55457704523)_(cropped).jpg",
+          "wikibase-shortdesc": "American YouTuber and political candidate (born 1995)",
+          "wikibase_item": "Q131549488"
+        }
+      },
+      "capture": "wikipedia-23155.json"
+    },
+    "20640": {
+      "candidate": {
+        "sourceCandidateId": 20640,
+        "candidateName": "Beth Macy",
+        "state": "VA",
+        "party": "D",
+        "contestId": "VA-6",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 56788700,
+        "ns": 0,
+        "title": "Beth Macy",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Beth_Macy.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 1543,
+          "height": 2060
+        },
+        "pageprops": {
+          "defaultsort": "Macy, Beth",
+          "page_image_free": "Beth_Macy.jpg",
+          "wikibase-shortdesc": "American journalist and writer",
+          "wikibase_item": "Q32860509"
+        }
+      },
+      "capture": "wikipedia-20480.json"
+    },
+    "20564": {
+      "candidate": {
+        "sourceCandidateId": 20564,
+        "candidateName": "John Braun",
+        "state": "WA",
+        "party": "R",
+        "contestId": "WA-3",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 38008473,
+        "ns": 0,
+        "title": "John Braun",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/f/fd/JohnBraun.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 272,
+          "height": 365
+        },
+        "pageprops": {
+          "defaultsort": "Braun, John E.",
+          "page_image_free": "JohnBraun.png",
+          "wikibase-shortdesc": "American politician from Washington",
+          "wikibase_item": "Q6230670"
+        }
+      },
+      "capture": "wikipedia-20480.json"
+    },
+    "20561": {
+      "candidate": {
+        "sourceCandidateId": 20561,
+        "candidateName": "Carmela Conroy",
+        "state": "WA",
+        "party": "D",
+        "contestId": "WA-5",
+        "chamber": "House",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 81626642,
+        "ns": 0,
+        "title": "Carmela Conroy",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Conroydebate.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 528,
+          "height": 684
+        },
+        "pageprops": {
+          "defaultsort": "Conroy, Carmela",
+          "page_image_free": "Conroydebate.png",
+          "wikibase-shortdesc": "American diplomat (born 1962)",
+          "wikibase_item": "Q137216375"
+        }
+      },
+      "capture": "wikipedia-20480.json"
+    },
+    "20369": {
+      "candidate": {
+        "sourceCandidateId": 20369,
+        "candidateName": "Scott Colom",
+        "state": "MS",
+        "party": "D",
+        "contestId": "MS",
+        "chamber": "Senate",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 72007761,
+        "ns": 0,
+        "title": "Scott Colom",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Scott_Colom_2_%28cropped%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 502,
+          "height": 684
+        },
+        "pageprops": {
+          "defaultsort": "Colom, Scott",
+          "page_image_free": "Scott_Colom_2_(cropped).png",
+          "wikibase-shortdesc": "American lawyer (born 1982)",
+          "wikibase_item": "Q115492489"
+        }
+      },
+      "capture": "wikipedia-20897.json"
+    },
+    "21441": {
+      "candidate": {
+        "sourceCandidateId": 21441,
+        "candidateName": "Seth Bodnar",
+        "state": "MT",
+        "party": "I",
+        "contestId": "MT",
+        "chamber": "Senate",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 79485308,
+        "ns": 0,
+        "title": "Seth Bodnar",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/3/31/Seth_Bodnar_-_President_at_University_of_Montana_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 1651,
+          "height": 2233
+        },
+        "pageprops": {
+          "defaultsort": "Bodnar, Seth",
+          "page_image_free": "Seth_Bodnar_-_President_at_University_of_Montana_(cropped).jpg",
+          "wikibase-shortdesc": "American academic administrator (born 1979)",
+          "wikibase_item": "Q125651096"
+        }
+      },
+      "capture": "wikipedia-20897.json"
+    },
+    "23143": {
+      "candidate": {
+        "sourceCandidateId": 23143,
+        "candidateName": "Marquita Bradshaw",
+        "state": "TN",
+        "party": "D",
+        "contestId": "TN",
+        "chamber": "Senate",
+        "reason": "IDENTITY_NOT_VERIFIED"
+      },
+      "page": {
+        "pageid": 64775743,
+        "ns": 0,
+        "title": "Marquita Bradshaw",
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Marquita_Bradshaw_at_Morristown.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 2738,
+          "height": 3650
+        },
+        "pageprops": {
+          "defaultsort": "Bradshaw, Marquita",
+          "page_image_free": "Marquita_Bradshaw_at_Morristown.jpg",
+          "wikibase-shortdesc": "American environmentalist and political candidate (born 1974)",
+          "wikibase_item": "Q98125045"
+        }
+      },
+      "capture": "wikipedia-20897.json"
+    }
+  }
+}

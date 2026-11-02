@@ -1,0 +1,43 @@
+{
+  "sourceCandidateId": 20327,
+  "query": "\"Jake Johnson\" Minnesota",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=15&srsearch=%22Jake+Johnson%22+Minnesota",
+  "retrievedAtUtc": "2026-11-02T21:46:58Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 3
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Notices of judgment under the food and drug act (IA CAT11088278141).pdf",
+          "pageid": 93136088,
+          "size": 1882,
+          "wordcount": 33,
+          "snippet": "Mark 1.0falsefalse English applies to jurisdiction: United States determination method or standard: work <span class=\"searchmatch\">of</span> the federal government <span class=\"searchmatch\">of</span> the United States",
+          "timestamp": "2024-08-18T06:57:54Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Arkansas Survey - 1924-09-20.pdf",
+          "pageid": 170012791,
+          "size": 416,
+          "wordcount": 13,
+          "snippet": "DescriptionArkansas Survey - 1924-09-20.pdf English: Arkansas Survey volume 2 issue 14 Date 20 September 1920 Source Library <span class=\"searchmatch\">of</span> Congress Author Arkansas Survey",
+          "timestamp": "2025-11-29T23:36:15Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:The national parts return program (IA nationalpartsret00bedd 2).pdf",
+          "pageid": 91632438,
+          "size": 1113,
+          "wordcount": 39,
+          "snippet": "jurisdiction: United States determination method or standard: work <span class=\"searchmatch\">of</span> the federal government <span class=\"searchmatch\">of</span> the United States determination method or standard: SHA-1",
+          "timestamp": "2026-09-13T09:55:15Z"
+        }
+      ]
+    }
+  }
+}

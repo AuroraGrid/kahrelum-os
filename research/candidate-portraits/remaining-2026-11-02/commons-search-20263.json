@@ -1,0 +1,61 @@
+{
+  "sourceCandidateId": 20263,
+  "query": "Carl Lambrecht",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Carl+Lambrecht%22",
+  "retrievedAtUtc": "2026-11-02T21:34:26Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 5
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Weimar, Schlossmuseum, Carl Lambrecht, Sommerlandschaft mit Weidenb\u00e4umen.JPG",
+          "pageid": 74118787,
+          "size": 540,
+          "wordcount": 121,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution 4.0 International",
+          "timestamp": "2026-03-10T04:52:23Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:1850er Album Apothekerfamilie Portwich Hannover, Carl Lambrecht, Mann mit Spitzbart, Adressseite Berliner Kunst-Atelier Hansa Hermann Schadrack.jpg",
+          "pageid": 41539653,
+          "size": 1313,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2024-10-22T12:33:29Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Carl Lambrecht Herbst in Weimar \u00d6l auf Leinwand.jpg",
+          "pageid": 177512961,
+          "size": 552,
+          "wordcount": 21,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English determination method or standard: SHA-1",
+          "timestamp": "2025-11-12T22:21:56Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:1850er Album Apothekerfamilie Portwich Hannover, Carl Lambrecht, Mann mit Spitzbart, Bildseite.jpg",
+          "pageid": 41539670,
+          "size": 1000,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2024-10-22T12:33:30Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Weimar, Schlossmuseum, Carl Lambrecht, blauer Berg.JPG",
+          "pageid": 74158291,
+          "size": 489,
+          "wordcount": 127,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution 4.0 International",
+          "timestamp": "2025-05-26T11:41:42Z"
+        }
+      ]
+    }
+  }
+}

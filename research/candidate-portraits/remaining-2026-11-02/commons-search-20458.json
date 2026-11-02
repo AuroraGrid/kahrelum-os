@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 20458,
+  "query": "Dione Sims",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Dione+Sims%22",
+  "retrievedAtUtc": "2026-11-02T21:40:27Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:787th Ordnance Co. shows capabilities in RC-South 140910-Z-MA638-026.jpg",
+          "pageid": 39462741,
+          "size": 1043,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2024-10-05T13:50:04Z"
+        }
+      ]
+    }
+  }
+}

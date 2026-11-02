@@ -1,0 +1,515 @@
+{
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&titles=File%3AQueens_Bus_Network_Redesign_Claire_Valdez_%28cropped%29.jpg%7CFile%3ATedford_Mark_OKHouse.jpg%7CFile%3AJanelle_Stelson_08-29-2026_%28cropped%29.jpg%7CFile%3ARep._Chris_Rabb_speaks_at_a_fundraiser.jpg&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cmime%7Cextmetadata&iiurlwidth=250&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main",
+  "retrievedAtUtc": "2026-11-02T21:32:10Z",
+  "candidateIds": [
+    16059,
+    22001,
+    19375,
+    19262
+  ],
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "normalized": [
+        {
+          "from": "File:Queens_Bus_Network_Redesign_Claire_Valdez_(cropped).jpg",
+          "to": "File:Queens Bus Network Redesign Claire Valdez (cropped).jpg"
+        },
+        {
+          "from": "File:Tedford_Mark_OKHouse.jpg",
+          "to": "File:Tedford Mark OKHouse.jpg"
+        },
+        {
+          "from": "File:Janelle_Stelson_08-29-2026_(cropped).jpg",
+          "to": "File:Janelle Stelson 08-29-2026 (cropped).jpg"
+        },
+        {
+          "from": "File:Rep._Chris_Rabb_speaks_at_a_fundraiser.jpg",
+          "to": "File:Rep. Chris Rabb speaks at a fundraiser.jpg"
+        }
+      ],
+      "pages": {
+        "200818809": {
+          "pageid": 200818809,
+          "ns": 6,
+          "title": "File:Janelle Stelson 08-29-2026 (cropped).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 178527,
+              "width": 736,
+              "height": 967,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Janelle_Stelson_08-29-2026_%28cropped%29.jpg/250px-Janelle_Stelson_08-29-2026_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 328,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Janelle_Stelson_08-29-2026_%28cropped%29.jpg/500px-Janelle_Stelson_08-29-2026_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Janelle_Stelson_08-29-2026_%28cropped%29.jpg/250px-Janelle_Stelson_08-29-2026_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 328,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Janelle_Stelson_08-29-2026_%28cropped%29.jpg/500px-Janelle_Stelson_08-29-2026_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Janelle_Stelson_08-29-2026_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Janelle_Stelson_08-29-2026_(cropped).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=200818809",
+              "sha1": "4caaf8a6f325b693e38d4a2443ee62fd516a890d",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-10-02 11:11:51",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Janelle Stelson 08-29-2026 (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Extracted images|Janelle Stelson",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Janelle Stelson during a canvassing event outside of Harrisburg",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2026-08-29",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "Sent to me by James Newton for use on Wikipedia through Bluesky direct messaging",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "James Newton / jnewt-maps on Bluesky",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1290818674,
+              "parentid": 1285436932,
+              "timestamp": "2026-10-23T20:24:07Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Janelle Stelson during a canvassing event outside of Harrisburg}}\n|date=2026-08-29\n|source=Sent to me by James Newton for use on Wikipedia through Bluesky direct messaging\n|author=James Newton / jnewt-maps on Bluesky\n|permission=\n|other versions={{Extracted from|1=Janelle Stelson 08-29-2026.jpg}}\n}}\n\n=={{int:license-header}}==\n{{cc-by-sa-4.0}}\n\n[[Category:Janelle Stelson]]"
+                }
+              }
+            }
+          ]
+        },
+        "168589589": {
+          "pageid": 168589589,
+          "ns": 6,
+          "title": "File:Queens Bus Network Redesign Claire Valdez (cropped).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1372128,
+              "width": 2008,
+              "height": 2678,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Queens_Bus_Network_Redesign_Claire_Valdez_%28cropped%29.jpg/250px-Queens_Bus_Network_Redesign_Claire_Valdez_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 333,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Queens_Bus_Network_Redesign_Claire_Valdez_%28cropped%29.jpg/500px-Queens_Bus_Network_Redesign_Claire_Valdez_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Queens_Bus_Network_Redesign_Claire_Valdez_%28cropped%29.jpg/250px-Queens_Bus_Network_Redesign_Claire_Valdez_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 333,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Queens_Bus_Network_Redesign_Claire_Valdez_%28cropped%29.jpg/500px-Queens_Bus_Network_Redesign_Claire_Valdez_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Queens_Bus_Network_Redesign_Claire_Valdez_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Queens_Bus_Network_Redesign_Claire_Valdez_(cropped).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=168589589",
+              "sha1": "8adde28d59241f3a23616e41de64b3cc6800424d",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-06-26 18:26:31",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Queens Bus Network Redesign Claire Valdez (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Extracted images|Flickr images taken by the Metropolitan Transportation Authority (New York)|2025 in Kew Gardens, Queens|MTA Regional Bus Operations in 2025|New York City photographs taken on 2025-06-26|June 2025 in Queens, New York City|Queens Boulevard and Union Turnpike, Queens|Queens Bus Redesign|Claire Valdez",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "MTA Chair &amp; CEO Janno Lieber announces Phase 1 of the Queens Bus Network Redesign will launch on June 29 during a media availability at Queens Blvd. and 78th Cres. on Thursday, Jun 26, 2025.\n<p>Assembly Member Claire Valdez.\n</p>\n(Marc A. Hermann / MTA)",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-06-26 12:37:57",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/mtaphotos/54615667901/\">https://www.flickr.com/photos/mtaphotos/54615667901/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Metropolitan Transportation Authority",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1205801670,
+              "parentid": 1179040991,
+              "timestamp": "2026-04-29T23:30:18Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=MTA Chair & CEO Janno Lieber announces Phase 1 of the Queens Bus Network Redesign will launch on June 29 during a media availability at Queens Blvd. and 78th Cres. on Thursday, Jun 26, 2025.\n\nAssembly Member Claire Valdez.\n\n(Marc A. Hermann / MTA)}}\n|date=2025-06-26 12:37:57\n|source=https://www.flickr.com/photos/mtaphotos/54615667901/\n|author=Metropolitan Transportation Authority\n|permission=\n|other versions={{Extracted from|1=Queens Bus Network Redesign Claire Valdez.jpg}}\n}}\n\n=={{int:license-header}}==\n{{CC BY 4.0}}\n\n[[Category:Claire Valdez]]\n[[Category:Queens Bus Redesign]]\n[[Category:Queens Boulevard and Union Turnpike, Queens]]\n[[Category:2025 in Kew Gardens, Queens]]\n[[Category:June 2025 in Queens, New York City]]\n[[Category:New York City photographs taken on 2025-06-26]]\n[[Category:MTA Regional Bus Operations in 2025]]\n[[Category:Flickr images taken by the Metropolitan Transportation Authority (New York)]]"
+                }
+              }
+            }
+          ]
+        },
+        "193537758": {
+          "pageid": 193537758,
+          "ns": 6,
+          "title": "File:Rep. Chris Rabb speaks at a fundraiser.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 214758,
+              "width": 1080,
+              "height": 1350,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Rep._Chris_Rabb_speaks_at_a_fundraiser.jpg/250px-Rep._Chris_Rabb_speaks_at_a_fundraiser.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 313,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Rep._Chris_Rabb_speaks_at_a_fundraiser.jpg/500px-Rep._Chris_Rabb_speaks_at_a_fundraiser.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Rep._Chris_Rabb_speaks_at_a_fundraiser.jpg/250px-Rep._Chris_Rabb_speaks_at_a_fundraiser.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 313,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Rep._Chris_Rabb_speaks_at_a_fundraiser.jpg/500px-Rep._Chris_Rabb_speaks_at_a_fundraiser.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Rep._Chris_Rabb_speaks_at_a_fundraiser.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Rep._Chris_Rabb_speaks_at_a_fundraiser.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=193537758",
+              "sha1": "b101d566f586339a747d63905d186032c2c0ad5d",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-06-07 21:52:03",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Rep. Chris Rabb speaks at a fundraiser",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Chris Rabb",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Rep. Chris Rabb speaks to the crowd at a fundraiser in DC",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-12-09",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "It was commissioned for the fundraiser.",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Yolanda Cheers",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1294942391,
+              "parentid": 1234384365,
+              "timestamp": "2026-11-02T05:18:12Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Rep. Chris Rabb speaks to the crowd at a fundraiser in DC}}\n|date=2025-12-09\n|source=It was commissioned for the fundraiser.\n|author=Yolanda Cheers\n|permission=\n|other versions=\n}}\n\n=={{int:license-header}}==\n{{cc-zero}}\n\n[[Category:Chris Rabb]]"
+                }
+              }
+            }
+          ]
+        },
+        "129309264": {
+          "pageid": 129309264,
+          "ns": 6,
+          "title": "File:Tedford Mark OKHouse.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1055650,
+              "width": 3438,
+              "height": 4298,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Tedford_Mark_OKHouse.jpg/250px-Tedford_Mark_OKHouse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 313,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Tedford_Mark_OKHouse.jpg/500px-Tedford_Mark_OKHouse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Tedford_Mark_OKHouse.jpg/250px-Tedford_Mark_OKHouse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 313,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Tedford_Mark_OKHouse.jpg/500px-Tedford_Mark_OKHouse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tedford_Mark_OKHouse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Tedford_Mark_OKHouse.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=129309264",
+              "sha1": "4e2f24256b2933bb9edc1438602843dbc0872424",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2023-03-06 06:43:13",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Tedford Mark OKHouse",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Members of the Oklahoma House of Representatives|Tedford (surname)|Items with VRTS permission confirmed",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Photo of Oklahoma House Representative Mark Tedford after his election in 2022.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2023-03-06",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.okhouse.gov/representatives/mark-tedford\">https://www.okhouse.gov/representatives/mark-tedford</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "State of Oklahoma\u2019s Legislative Service Bureau, Photo Division",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 865481913,
+              "parentid": 865368885,
+              "timestamp": "2024-04-03T02:18:13Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Photo of Oklahoma House Representative Mark Tedford after his election in 2022.}}\n|date=2023-03-06\n|source=https://www.okhouse.gov/representatives/mark-tedford\n|author=State of Oklahoma\u2019s Legislative Service Bureau, Photo Division\n|permission=\n|other versions=\n}}\n\n=={{int:license-header}}==\n\n{{PD-OK-LSBPD}}\n\n[[Category:Members of the Oklahoma House of Representatives]]\n[[Category:Tedford (surname)]]"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

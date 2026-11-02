@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 16292,
+  "query": "Michael McGuire",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Michael+McGuire%22",
+  "retrievedAtUtc": "2026-11-02T21:36:27Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 66
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Michael McGuire (51335191593).jpg",
+          "pageid": 107879761,
+          "size": 1064,
+          "wordcount": 149,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-08-27T14:10:30Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Michael McGuire (52227713893).jpg",
+          "pageid": 120783099,
+          "size": 1104,
+          "wordcount": 177,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-03-23T08:31:01Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Annual report of the selectmen and school committee to the inhabitants of the town of Montague .. (IA annualreportofse1912mont).pdf",
+          "pageid": 98065976,
+          "size": 1050,
+          "wordcount": 21,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English determination method or standard: SHA-1",
+          "timestamp": "2024-12-18T15:04:21Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Michael McGuire (51620852754).jpg",
+          "pageid": 112606570,
+          "size": 993,
+          "wordcount": 177,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-05-20T02:51:28Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Michael McGuire.jpg",
+          "pageid": 50711504,
+          "size": 522,
+          "wordcount": 165,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-02-20T22:25:05Z"
+        }
+      ]
+    }
+  }
+}

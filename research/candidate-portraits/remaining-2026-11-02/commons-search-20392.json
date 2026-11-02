@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 20392,
+  "query": "Colby Watson",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Colby+Watson%22",
+  "retrievedAtUtc": "2026-11-02T21:36:12Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Annual report, Grafton, New Hampshire (IA annualreportgraf00gra vsb).pdf",
+          "pageid": 195055639,
+          "size": 1014,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2026-07-03T16:21:52Z"
+        }
+      ]
+    }
+  }
+}

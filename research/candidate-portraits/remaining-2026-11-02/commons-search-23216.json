@@ -1,0 +1,43 @@
+{
+  "sourceCandidateId": 23216,
+  "query": "Trygve Hammer",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Trygve+Hammer%22",
+  "retrievedAtUtc": "2026-11-02T21:36:19Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 3
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Exhibition of modern art by contemporary artists- April twenty-fifth to May sixteenth, nineteen hundred twenty. (IA exhibitionofmode00worc).pdf",
+          "pageid": 96153605,
+          "size": 1201,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-05-16T05:30:47Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Teddy Roosevelt monument.jpg",
+          "pageid": 176138753,
+          "size": 1565,
+          "wordcount": 143,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-01-22T19:23:27Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Teddy Roosevelt Conservaton Monument.jpg",
+          "pageid": 82750752,
+          "size": 1069,
+          "wordcount": 169,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2025-11-17T06:16:03Z"
+        }
+      ]
+    }
+  }
+}

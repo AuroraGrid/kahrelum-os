@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 23348,
+  "query": "Lisa Kinney",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Lisa+Kinney%22",
+  "retrievedAtUtc": "2026-11-02T21:41:55Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Wagon Trails 1977.pdf",
+          "pageid": 137766411,
+          "size": 1052,
+          "wordcount": 0,
+          "snippet": "",
+          "timestamp": "2025-09-24T05:51:02Z"
+        }
+      ]
+    }
+  }
+}

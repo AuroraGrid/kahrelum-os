@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20396,
+  "query": "Ashley Bell",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Ashley+Bell%22",
+  "retrievedAtUtc": "2026-11-02T21:35:56Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 139
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Ashley Bell on Dulce Osuna.jpg",
+          "pageid": 89115372,
+          "size": 637,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2023-09-26T15:42:33Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Laura Bell Bundy - \ube0c\ub85c\ub4dc\uc6e8\uc774 \uc9c4\ucd9c\ud55c LG \ub4dc\ub7fc\uc138\ud0c1\uae30.jpg",
+          "pageid": 31403555,
+          "size": 481,
+          "wordcount": 32,
+          "snippet": "English Flickr user ID: 32985045@N08 URL: https://www.flickr.com/people/32985045@N08 URL: https://www.flickr.com/photos/lge/ author name string: LG\uc804\uc790 object",
+          "timestamp": "2025-12-09T14:42:14Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Laurabundy.jpg",
+          "pageid": 3363265,
+          "size": 327,
+          "wordcount": 177,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following licenses: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-03-30T09:56:20Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Laura Bell Bundy in Almost Royal 2015.jpg",
+          "pageid": 155589315,
+          "size": 405,
+          "wordcount": 106,
+          "snippet": "This file is licensed under the Creative Commons Attribution 3.0 Unported license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2024-11-28T18:43:02Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Laura Bell Bundy Apr 2010.jpg",
+          "pageid": 10363466,
+          "size": 618,
+          "wordcount": 148,
+          "snippet": "Keith Hinkle, the copyright holder of this work, hereby publishes it under the following license: This file is licensed under the Creative Commons Attribution",
+          "timestamp": "2026-03-11T02:14:20Z"
+        }
+      ]
+    }
+  }
+}

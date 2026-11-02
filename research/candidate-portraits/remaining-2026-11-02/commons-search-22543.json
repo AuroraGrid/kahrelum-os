@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 22543,
+  "query": "Brad Smith",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Brad+Smith%22",
+  "retrievedAtUtc": "2026-11-02T21:41:40Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 466
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Brad Smith 2012.jpg",
+          "pageid": 33380607,
+          "size": 713,
+          "wordcount": 141,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2024-07-23T21:43:10Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Training at Fenway US Tour 2012 (20).jpg",
+          "pageid": 20443798,
+          "size": 597,
+          "wordcount": 135,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-01-21T23:53:28Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Brad Smith - Microsoft - 01.jpg",
+          "pageid": 67508028,
+          "size": 573,
+          "wordcount": 102,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2026-03-24T19:18:09Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:2019 - Centre Stage - Day 2 CG1 9594 (49023344726).jpg",
+          "pageid": 83761228,
+          "size": 869,
+          "wordcount": 146,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2026-03-24T20:28:28Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Web Summit 2018 - Centre Stage - Day 2, November 7 SMX 1277 (45768838691).jpg",
+          "pageid": 74255061,
+          "size": 947,
+          "wordcount": 136,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2026-03-24T19:54:14Z"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 20641,
+  "query": "Doug Ollivant",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Doug+Ollivant%22",
+  "retrievedAtUtc": "2026-11-02T21:41:06Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:H.A.S.C. No. 110-78) A THIRD WAY- ALTERNATIVES FOR IRAQ'S FUTURE (PART 3 OF 4 (IA gov.gpo.fdsys.CHRG-110hhrg38758).pdf",
+          "pageid": 91489361,
+          "size": 1960,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2026-05-19T13:32:40Z"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 21353,
+  "query": "Peter Soule",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Peter+Soule%22",
+  "retrievedAtUtc": "2026-11-02T21:31:16Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Conciliation (IA conciliation00baco).pdf",
+          "pageid": 91642013,
+          "size": 803,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-12-15T17:43:19Z"
+        }
+      ]
+    }
+  }
+}

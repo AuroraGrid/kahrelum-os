@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 20261,
+  "query": "John Elleson",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22John+Elleson%22",
+  "retrievedAtUtc": "2026-11-02T21:34:36Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Early census making in Massachusetts, 1643-1765, with a reproduction of the lost census of 1765 (recently found) and documents relating thereto; (IA earlycensusmakin00bent).pdf",
+          "pageid": 197872791,
+          "size": 1329,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2026-10-29T14:42:43Z"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 21029,
+  "query": "Larry Thompson",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Larry+Thompson%22",
+  "retrievedAtUtc": "2026-11-02T21:31:53Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 68
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Larry Thompson from White House.jpg",
+          "pageid": 15349713,
+          "size": 974,
+          "wordcount": 66,
+          "snippet": "The original description page was here. All following user names refer to en.wikipedia. 2004-11-10 14:04 Quadell 224\u00d7298\u00d7 (22893 bytes) From http://www",
+          "timestamp": "2026-03-15T11:58:24Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Larry Thompson at Work.jpg",
+          "pageid": 41731833,
+          "size": 557,
+          "wordcount": 134,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. Attribution: Bob East, Miami Herald You are free: to",
+          "timestamp": "2024-09-22T08:20:16Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Larry Thompson 2017 (cropped).jpg",
+          "pageid": 123308863,
+          "size": 478,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2026-08-30T23:19:07Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:President George W. Bush and Larry Thompson.jpg",
+          "pageid": 92183056,
+          "size": 864,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2026-02-15T05:17:23Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Security Patrol in Sangin 120521-M-VH365-062.jpg",
+          "pageid": 39662285,
+          "size": 1033,
+          "wordcount": 19,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States",
+          "timestamp": "2025-09-29T22:06:25Z"
+        }
+      ]
+    }
+  }
+}

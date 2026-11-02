@@ -1,0 +1,34 @@
+{
+  "sourceCandidateId": 21005,
+  "query": "Michael Masuda",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Michael+Masuda%22",
+  "retrievedAtUtc": "2026-11-02T21:32:31Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 2
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Defense.gov photo essay 101208-F-4684K-229.jpg",
+          "pageid": 21422529,
+          "size": 874,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2026-04-18T02:16:39Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Defense.gov photo essay 101208-F-4684K-144.jpg",
+          "pageid": 21422542,
+          "size": 893,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2025-11-30T19:00:48Z"
+        }
+      ]
+    }
+  }
+}

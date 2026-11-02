@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 16483,
+  "query": "Ben Ambrose",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Ben+Ambrose%22",
+  "retrievedAtUtc": "2026-11-02T21:35:24Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:History of the town of Goshen, Hampshire County, Massachusetts (electronic resource) - from its first settlement in 1761 to 1881 - with family sketches (IA historyoftownofg00barrrich).pdf",
+          "pageid": 95465382,
+          "size": 1014,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-11-14T16:35:01Z"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "sourceCandidateId": 19258,
+  "query": "\"Bob Harvie\" Pennsylvania",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=15&srsearch=%22Bob+Harvie%22+Pennsylvania",
+  "retrievedAtUtc": "2026-11-02T21:47:18Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 0
+      },
+      "search": []
+    }
+  }
+}

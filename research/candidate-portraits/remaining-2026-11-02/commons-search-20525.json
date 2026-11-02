@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20525,
+  "query": "Michael Alfonso",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Michael+Alfonso%22",
+  "retrievedAtUtc": "2026-11-02T21:41:40Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 24
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Michael Alfonso (FBI).png",
+          "pageid": 155028707,
+          "size": 429,
+          "wordcount": 31,
+          "snippet": "English Michael Alfonso FBI most Wanted Poster described at URL: https://www.fbi.gov/wanted/topten/topten-history/hires_images/FBI-476-MichaelAlfonso.jpg/view",
+          "timestamp": "2025-12-27T15:00:15Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Michael Alfonso (55022726199) (cropped).jpg",
+          "pageid": 195950838,
+          "size": 753,
+          "wordcount": 123,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-07-24T12:08:36Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Tyler Bowyer, Amanda McKinney, Mark Lamb, Joe Mitchell & Michael Alfonso (55022792985).jpg",
+          "pageid": 181297510,
+          "size": 1151,
+          "wordcount": 125,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-03-27T02:43:45Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Michael Alfonso (55022726199).jpg",
+          "pageid": 181297461,
+          "size": 968,
+          "wordcount": 166,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-07-20T21:22:27Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Michael Alfonso (55022725259).jpg",
+          "pageid": 181297416,
+          "size": 903,
+          "wordcount": 166,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-03-27T02:25:20Z"
+        }
+      ]
+    }
+  }
+}

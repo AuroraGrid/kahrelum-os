@@ -1,0 +1,24 @@
+{
+  "sourceCandidateId": 26317,
+  "query": "Missi Hesketh",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Missi+Hesketh%22",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Seal of Missouri.svg",
+          "pageid": 4139202,
+          "size": 586,
+          "wordcount": 19,
+          "snippet": "English TOMA MIHAEL-GABRIEL French Sceau du Missouri. applies to jurisdiction: United States determination method or standard: SHA-1",
+          "timestamp": "2025-11-30T01:03:41Z"
+        }
+      ]
+    }
+  }
+}

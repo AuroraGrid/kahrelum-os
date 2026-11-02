@@ -1,0 +1,25 @@
+{
+  "sourceCandidateId": 22771,
+  "query": "Kimberly Overman",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Kimberly+Overman%22",
+  "retrievedAtUtc": "2026-11-02T21:33:12Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Overman Full HCFLGovnet.jpg",
+          "pageid": 198924220,
+          "size": 437,
+          "wordcount": 27,
+          "snippet": "English Hillsborough County commissioner Kimberly Overman described at URL: https://web.archive.org/web/20211021202236/https://www.hillsboroughcounty.",
+          "timestamp": "2026-09-05T17:01:14Z"
+        }
+      ]
+    }
+  }
+}

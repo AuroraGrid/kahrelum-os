@@ -1,0 +1,433 @@
+{
+  "url": "https://en.wikipedia.org/w/api.php",
+  "requestedNames": [
+    "Eric Hafner",
+    "Bill Hill",
+    "Jim McDermott",
+    "Clyde Jones",
+    "Rhett Marques",
+    "Lee McInnis",
+    "Amanda Pusczek",
+    "Andrew Sneed",
+    "Maurice Mercer",
+    "Ammie Akin",
+    "Terri Green",
+    "Chris Jones",
+    "Robb Ryerse",
+    "James Russell",
+    "Jay Feely",
+    "Nicholas Glenn",
+    "Zhudi Jasser",
+    "Mark Lamb",
+    "Elizabeth Lee",
+    "JoAnna Mendoza",
+    "Daniel Butierez",
+    "Bernadette Greene-Placentia",
+    "Danielle Sterbinsky",
+    "Jeff Frese",
+    "Jamie Joyce",
+    "Kevin Lincoln",
+    "Melissa Hernandez",
+    "Charles Hoelter",
+    "Peter Soule",
+    "Ritesh Tandon",
+    "Shane Lewis",
+    "Peter Coe Verbica",
+    "Robin Littau",
+    "Sandra Van Scotter",
+    "Kyle Kirkland",
+    "Randy Villegas",
+    "Tessa Hodge",
+    "Bob Smith",
+    "Joe Males",
+    "Sam Gallucci"
+  ],
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "redirects": [
+        {
+          "from": "Bob Smith",
+          "to": "Robert Smith"
+        },
+        {
+          "from": "Chris Jones",
+          "to": "Christopher Jones"
+        },
+        {
+          "from": "Melissa Hernandez",
+          "to": "Melissa Hern\u00e1ndez"
+        },
+        {
+          "from": "Bill Hill",
+          "to": "William Hill"
+        },
+        {
+          "from": "Daniel Butierez",
+          "to": "2024 United States House of Representatives elections in Arizona",
+          "tofragment": "District 7"
+        },
+        {
+          "from": "Eric Hafner",
+          "to": "Carol and Eric Hafner",
+          "tofragment": "Eric Hafner"
+        },
+        {
+          "from": "Amanda Pusczek",
+          "to": "2026 United States House of Representatives elections in Alabama",
+          "tofragment": "District 5"
+        },
+        {
+          "from": "Andrew Sneed",
+          "to": "2026 United States House of Representatives elections in Alabama",
+          "tofragment": "District 5"
+        },
+        {
+          "from": "JoAnna Mendoza",
+          "to": "2026 United States House of Representatives elections in Arizona",
+          "tofragment": "District 6"
+        },
+        {
+          "from": "Bernadette Greene-Placentia",
+          "to": "2026 United States House of Representatives elections in Arizona",
+          "tofragment": "District 8"
+        },
+        {
+          "from": "Randy Villegas",
+          "to": "2026 United States House of Representatives elections in California (districts 1\u201326)",
+          "tofragment": "District 22"
+        },
+        {
+          "from": "Joe Males",
+          "to": "2026 United States House of Representatives elections in California (districts 1\u201326)",
+          "tofragment": "District 25"
+        }
+      ],
+      "pages": {
+        "-1": {
+          "ns": 0,
+          "title": "Clyde Jones",
+          "missing": ""
+        },
+        "-2": {
+          "ns": 0,
+          "title": "Lee McInnis",
+          "missing": ""
+        },
+        "-3": {
+          "ns": 0,
+          "title": "Maurice Mercer",
+          "missing": ""
+        },
+        "-4": {
+          "ns": 0,
+          "title": "Ammie Akin",
+          "missing": ""
+        },
+        "-5": {
+          "ns": 0,
+          "title": "Terri Green",
+          "missing": ""
+        },
+        "-6": {
+          "ns": 0,
+          "title": "Robb Ryerse",
+          "missing": ""
+        },
+        "-7": {
+          "ns": 0,
+          "title": "Nicholas Glenn",
+          "missing": ""
+        },
+        "-8": {
+          "ns": 0,
+          "title": "Zhudi Jasser",
+          "missing": ""
+        },
+        "-9": {
+          "ns": 0,
+          "title": "Danielle Sterbinsky",
+          "missing": ""
+        },
+        "-10": {
+          "ns": 0,
+          "title": "Jeff Frese",
+          "missing": ""
+        },
+        "-11": {
+          "ns": 0,
+          "title": "Jamie Joyce",
+          "missing": ""
+        },
+        "-12": {
+          "ns": 0,
+          "title": "Charles Hoelter",
+          "missing": ""
+        },
+        "-13": {
+          "ns": 0,
+          "title": "Peter Soule",
+          "missing": ""
+        },
+        "-14": {
+          "ns": 0,
+          "title": "Ritesh Tandon",
+          "missing": ""
+        },
+        "-15": {
+          "ns": 0,
+          "title": "Peter Coe Verbica",
+          "missing": ""
+        },
+        "-16": {
+          "ns": 0,
+          "title": "Robin Littau",
+          "missing": ""
+        },
+        "-17": {
+          "ns": 0,
+          "title": "Sandra Van Scotter",
+          "missing": ""
+        },
+        "-18": {
+          "ns": 0,
+          "title": "Kyle Kirkland",
+          "missing": ""
+        },
+        "-19": {
+          "ns": 0,
+          "title": "Tessa Hodge",
+          "missing": ""
+        },
+        "-20": {
+          "ns": 0,
+          "title": "Sam Gallucci",
+          "missing": ""
+        },
+        "29833993": {
+          "pageid": 29833993,
+          "ns": 0,
+          "title": "Elizabeth Lee",
+          "pageprops": {
+            "disambiguation": "",
+            "expectshortpage": "",
+            "wikibase-shortdesc": "Topics referred to by the same term",
+            "wikibase_item": "Q5363108"
+          }
+        },
+        "9772397": {
+          "pageid": 9772397,
+          "ns": 0,
+          "title": "James Russell",
+          "pageprops": {
+            "disambiguation": "",
+            "expectshortpage": "",
+            "toc": "",
+            "wikibase-shortdesc": "Topics referred to by the same term",
+            "wikibase_item": "Q6142521"
+          }
+        },
+        "1126535": {
+          "pageid": 1126535,
+          "ns": 0,
+          "title": "Jay Feely",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Jay_Feely_by_Gage_Skidmore.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 2808,
+            "height": 3584
+          },
+          "pageprops": {
+            "defaultsort": "Feely, Jay",
+            "page_image_free": "Jay_Feely_by_Gage_Skidmore.jpg",
+            "wikibase-shortdesc": "American football player and sportscaster (born 1976)",
+            "wikibase_item": "Q3807503"
+          }
+        },
+        "404992": {
+          "pageid": 404992,
+          "ns": 0,
+          "title": "Jim McDermott",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Jim_mcdermott.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 554,
+            "height": 700
+          },
+          "pageprops": {
+            "defaultsort": "Mcdermott, Jim",
+            "page_image_free": "Jim_mcdermott.jpg",
+            "toc": "",
+            "wikibase-shortdesc": "American politician (born 1936)",
+            "wikibase_item": "Q321457"
+          }
+        },
+        "80597079": {
+          "pageid": 80597079,
+          "ns": 0,
+          "title": "Kevin Lincoln",
+          "pageprops": {
+            "disambiguation": "",
+            "expectshortpage": "",
+            "wikibase-shortdesc": "Topics referred to by the same term",
+            "wikibase_item": "Q135553496"
+          }
+        },
+        "20518097": {
+          "pageid": 20518097,
+          "ns": 0,
+          "title": "Mark Lamb",
+          "pageprops": {
+            "defaultsort": "Lamb, Mark",
+            "wikibase-shortdesc": "Canadian ice hockey player",
+            "wikibase_item": "Q1900193"
+          }
+        },
+        "70050414": {
+          "pageid": 70050414,
+          "ns": 0,
+          "title": "Rhett Marques",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Rhett_Marques.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 192,
+            "height": 294
+          },
+          "pageprops": {
+            "defaultsort": "Marques, Rhett",
+            "page_image_free": "Rhett_Marques.png",
+            "wikibase-shortdesc": "American politician",
+            "wikibase_item": "Q64010211"
+          }
+        },
+        "37707288": {
+          "pageid": 37707288,
+          "ns": 0,
+          "title": "Shane Lewis",
+          "pageprops": {
+            "disambiguation": "",
+            "expectshortpage": "",
+            "wikibase-shortdesc": "Topics referred to by the same term",
+            "wikibase_item": "Q7488135"
+          }
+        },
+        "72275756": {
+          "pageid": 72275756,
+          "ns": 0,
+          "title": "2024 United States House of Representatives elections in Arizona",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/4/47/2024_United_States_House_of_Representatives_elections_in_Arizona_results_map.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 810,
+            "height": 810
+          },
+          "pageprops": {
+            "page_image_free": "2024_United_States_House_of_Representatives_elections_in_Arizona_results_map.svg",
+            "toc": "",
+            "wikibase-shortdesc": "",
+            "wikibase_item": "Q116205350"
+          }
+        },
+        "79421718": {
+          "pageid": 79421718,
+          "ns": 0,
+          "title": "2026 United States House of Representatives elections in Alabama",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Seal_of_Alabama.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 368,
+            "height": 368
+          },
+          "pageprops": {
+            "page_image_free": "Seal_of_Alabama.svg",
+            "toc": "",
+            "wikibase-shortdesc": "",
+            "wikibase_item": "Q133521423"
+          }
+        },
+        "78505911": {
+          "pageid": 78505911,
+          "ns": 0,
+          "title": "2026 United States House of Representatives elections in Arizona",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/0/09/State_Seal_of_Arizona.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 708,
+            "height": 712
+          },
+          "pageprops": {
+            "page_image_free": "State_Seal_of_Arizona.svg",
+            "toc": "",
+            "wikibase-shortdesc": "",
+            "wikibase_item": "Q131459898"
+          }
+        },
+        "84281645": {
+          "pageid": 84281645,
+          "ns": 0,
+          "title": "2026 United States House of Representatives elections in California (districts 1\u201326)",
+          "original": {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Great_Seal_of_the_State_of_California_Colored.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+            "width": 1430,
+            "height": 1430
+          },
+          "pageprops": {
+            "page_image_free": "Great_Seal_of_the_State_of_California_Colored.svg",
+            "toc": "",
+            "wikibase-shortdesc": "",
+            "wikibase_item": "Q141658613"
+          }
+        },
+        "78288779": {
+          "pageid": 78288779,
+          "ns": 0,
+          "title": "Carol and Eric Hafner",
+          "pageprops": {
+            "wikibase-shortdesc": "American political activists",
+            "wikibase_item": "Q131322406"
+          }
+        },
+        "4062665": {
+          "pageid": 4062665,
+          "ns": 0,
+          "title": "Christopher Jones",
+          "pageprops": {
+            "disambiguation": "",
+            "expectshortpage": "",
+            "toc": "",
+            "wikibase-shortdesc": "Topics referred to by the same term",
+            "wikibase_item": "Q350189"
+          }
+        },
+        "8621286": {
+          "pageid": 8621286,
+          "ns": 0,
+          "title": "Melissa Hern\u00e1ndez",
+          "pageprops": {
+            "defaultsort": "Hern\u00e1ndez, Melissa",
+            "wikibase-shortdesc": "Puerto Rican boxer (born 1980)",
+            "wikibase_item": "Q6812732"
+          }
+        },
+        "504917": {
+          "pageid": 504917,
+          "ns": 0,
+          "title": "Robert Smith",
+          "pageprops": {
+            "disambiguation": "",
+            "expectshortpage": "",
+            "toc": "",
+            "wikibase-shortdesc": "Topics referred to by the same term",
+            "wikibase_item": "Q294776"
+          }
+        },
+        "3645835": {
+          "pageid": 3645835,
+          "ns": 0,
+          "title": "William Hill",
+          "pageprops": {
+            "disambiguation": "",
+            "expectshortpage": "",
+            "toc": "",
+            "wikibase-shortdesc": "Topics referred to by the same term",
+            "wikibase_item": "Q2579287"
+          }
+        }
+      }
+    }
+  }
+}

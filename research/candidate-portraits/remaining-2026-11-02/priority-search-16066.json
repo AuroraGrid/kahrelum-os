@@ -1,0 +1,43 @@
+{
+  "sourceCandidateId": 16066,
+  "query": "\"Michael Bouchard\" Michigan",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=15&srsearch=%22Michael+Bouchard%22+Michigan",
+  "retrievedAtUtc": "2026-11-02T21:48:12Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 3
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Mike Bouchard 2006.jpg",
+          "pageid": 13659547,
+          "size": 564,
+          "wordcount": 134,
+          "snippet": "DescriptionMike Bouchard 2006.jpg English: Mike Bouchard, Sheriff <span class=\"searchmatch\">of</span> Oakland County, <span class=\"searchmatch\">Michigan</span> Date 25 August 2006, 17:43 Source Mike Bouchard Author Mike Bouchard",
+          "timestamp": "2026-01-05T15:54:03Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:BUREAU OF ALCOHOL, TOBACCO, FIREARMS AND EXPLOSIVES (BATFE)- GUN SHOW ENFORCEMENT (PART I AND II) (IA gov.gpo.fdsys.CHRG-109hhrg26053).pdf",
+          "pageid": 91456136,
+          "size": 1880,
+          "wordcount": 25,
+          "snippet": "jurisdiction: United States determination method or standard: work <span class=\"searchmatch\">of</span> the federal government <span class=\"searchmatch\">of</span> the United States determination method or standard: SHA-1",
+          "timestamp": "2024-08-20T21:04:06Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:16May2006.pdf",
+          "pageid": 187664971,
+          "size": 388,
+          "wordcount": 7,
+          "snippet": "(or includes) one or more <span class=\"searchmatch\">of</span> the official logos or designs used by the Wikimedia Foundation or by one <span class=\"searchmatch\">of</span> its projects. Use <span class=\"searchmatch\">of</span> the Wikimedia logos and trademarks",
+          "timestamp": "2026-04-04T04:15:58Z"
+        }
+      ]
+    }
+  }
+}

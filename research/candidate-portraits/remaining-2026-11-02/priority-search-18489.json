@@ -1,0 +1,34 @@
+{
+  "sourceCandidateId": 18489,
+  "query": "\"Gerald Heikes\" Alaska",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=15&srsearch=%22Gerald+Heikes%22+Alaska",
+  "retrievedAtUtc": "2026-11-02T21:47:38Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 2
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:2016 Alaska's at-large congressional district results by county-equivalent.svg",
+          "pageid": 141922531,
+          "size": 360,
+          "wordcount": 28,
+          "snippet": "I, <span class=\"searchmatch\">the</span> copyright holder <span class=\"searchmatch\">of</span> this work, hereby publish it under <span class=\"searchmatch\">the</span> following license: English author name string: PrusBis6187 Wikimedia username: PrusBis6187",
+          "timestamp": "2024-11-18T23:06:45Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Don Young, official 115th Congress photo portrait.jpg",
+          "pageid": 57696485,
+          "size": 580,
+          "wordcount": 25,
+          "snippet": "applies to jurisdiction: <span class=\"searchmatch\">United</span> <span class=\"searchmatch\">States</span> determination method or standard: work <span class=\"searchmatch\">of</span> <span class=\"searchmatch\">the</span> federal government <span class=\"searchmatch\">of</span> <span class=\"searchmatch\">the</span> <span class=\"searchmatch\">United</span> <span class=\"searchmatch\">States</span> determination method or standard:",
+          "timestamp": "2025-12-23T03:53:07Z"
+        }
+      ]
+    }
+  }
+}

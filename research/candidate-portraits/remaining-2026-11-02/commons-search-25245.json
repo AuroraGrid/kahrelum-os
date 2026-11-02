@@ -1,0 +1,64 @@
+{
+  "sourceCandidateId": 25245,
+  "query": "Jim McDermott",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Jim+McDermott%22",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 964
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Jim mcdermott.jpg",
+          "pageid": 2479841,
+          "size": 447,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2025-09-05T03:08:48Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Rep. Jim McDermott Speaks on Political Opportunism Towards Universal Health Care.ogg",
+          "pageid": 143764809,
+          "size": 497,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2024-11-05T22:43:03Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Outstanding Students for the World meeting with Jim McDermott, Tabloid Diplomasi 50 2012, p12.jpg",
+          "pageid": 186380825,
+          "size": 508,
+          "wordcount": 8,
+          "snippet": "English Indonesian Interactive Session dengan Sen. Jim McDermott",
+          "timestamp": "2026-03-18T01:34:37Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Jim McDermott with Firdaus of the Directorate of Public Diplomacy, Tabloid Diplomasi 50 2012, p12.jpg",
+          "pageid": 186380822,
+          "size": 589,
+          "wordcount": 0,
+          "snippet": "",
+          "timestamp": "2026-03-18T01:34:30Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Jimmcdermott.jpg",
+          "pageid": 14671238,
+          "size": 448,
+          "wordcount": 19,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States",
+          "timestamp": "2026-10-16T18:16:52Z"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 19951,
+  "query": "Amanda Green",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Amanda+Green%22",
+  "retrievedAtUtc": "2026-11-02T21:33:27Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 12
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:U.S. Census Bureau Staff Roster.pdf",
+          "pageid": 131304379,
+          "size": 236,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2024-11-07T12:27:37Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:The court in session (IA courtinsession00para).pdf",
+          "pageid": 92069892,
+          "size": 799,
+          "wordcount": 0,
+          "snippet": "",
+          "timestamp": "2020-08-30T23:39:57Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Minutes of the ... annual session of the Wake Baptist Association and the ... annual session of the Woman's Auxiliary (IA minutesofannuals1884wake).pdf",
+          "pageid": 98634698,
+          "size": 1653,
+          "wordcount": 21,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English determination method or standard: SHA-1",
+          "timestamp": "2025-09-23T10:49:37Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Phi Psi Cli (electronic resource) (IA phipsicli2007elon).pdf",
+          "pageid": 95621557,
+          "size": 1210,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2024-07-01T03:33:08Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Hands on a Hardbody Production photo.jpg",
+          "pageid": 41968853,
+          "size": 446,
+          "wordcount": 129,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2025-11-04T16:54:09Z"
+        }
+      ]
+    }
+  }
+}

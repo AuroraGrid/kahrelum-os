@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 22662,
+  "query": "Victor Arias",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Victor+Arias%22",
+  "retrievedAtUtc": "2026-11-02T21:33:26Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 9
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:AJ Jimenez (4536662703) (cropped).jpg",
+          "pageid": 72050594,
+          "size": 763,
+          "wordcount": 142,
+          "snippet": "This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit the work to",
+          "timestamp": "2024-11-26T05:10:46Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:A. J. Jim\u00e9nez 2012 Blue Jays Spring Training (1).jpg",
+          "pageid": 91875108,
+          "size": 769,
+          "wordcount": 199,
+          "snippet": "4 July 2020 This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute",
+          "timestamp": "2026-10-01T15:28:08Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:AJ Jimenez (4536662703).jpg",
+          "pageid": 72050273,
+          "size": 1059,
+          "wordcount": 145,
+          "snippet": "27 August 2018 This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2025-03-13T20:48:29Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:A. J. Jim\u00e9nez 2012 Blue Jays Spring Training (2).jpg",
+          "pageid": 91875150,
+          "size": 712,
+          "wordcount": 203,
+          "snippet": "4 July 2020 This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share \u2013 to copy, distribute",
+          "timestamp": "2026-10-01T13:43:14Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Sierras de Abdalaj\u00eds y La Encantada Sur.jpg",
+          "pageid": 48550096,
+          "size": 1077,
+          "wordcount": 154,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-05-18T13:52:39Z"
+        }
+      ]
+    }
+  }
+}

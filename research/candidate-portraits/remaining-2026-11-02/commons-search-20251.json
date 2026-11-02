@@ -1,0 +1,64 @@
+{
+  "sourceCandidateId": 20251,
+  "query": "Patty Garcia",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Patty+Garcia%22",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 6
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:2026 Illinois 9th Congressional district D primary results.svg",
+          "pageid": 186409452,
+          "size": 362,
+          "wordcount": 26,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: English 2026 IL-09 D primary determination method or standard: SHA-1",
+          "timestamp": "2026-08-05T00:18:18Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Patty Garcia with Alderman Andre Vasquez at Fundraiser.jpg",
+          "pageid": 193287130,
+          "size": 643,
+          "wordcount": 133,
+          "snippet": "This file is licensed under the Creative Commons Attribution 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit the work",
+          "timestamp": "2026-06-03T11:21:53Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Patty Garcia with Alderman Andre Vasquez at Fundraiser Cropped.jpg",
+          "pageid": 193287128,
+          "size": 377,
+          "wordcount": 128,
+          "snippet": "This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit",
+          "timestamp": "2026-06-03T03:12:49Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:RIT yearbook 1984.pdf",
+          "pageid": 114898814,
+          "size": 821,
+          "wordcount": 0,
+          "snippet": "",
+          "timestamp": "2024-05-14T03:55:31Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Chicago International Women's Day March - 2026 - 20.jpg",
+          "pageid": 187541171,
+          "size": 678,
+          "wordcount": 135,
+          "snippet": "This file is licensed under the Creative Commons Attribution 4.0 International license. You are free: to share \u2013 to copy, distribute and transmit the work",
+          "timestamp": "2026-04-01T13:42:16Z"
+        }
+      ]
+    }
+  }
+}

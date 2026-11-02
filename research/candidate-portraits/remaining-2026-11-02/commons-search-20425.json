@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20425,
+  "query": "Laura Jones",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Laura+Jones%22",
+  "retrievedAtUtc": "2026-11-02T21:40:46Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 131
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:An illustrated record of the retrospective exhibition held at South Kensington, 1896 (IA gri 33125001330675).pdf",
+          "pageid": 95072457,
+          "size": 1069,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2024-08-20T04:25:21Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Sights and Insights (IA sightsinsights1908sale).pdf",
+          "pageid": 95663259,
+          "size": 890,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-05-27T03:55:42Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Central North Cup 1903 1.jpg",
+          "pageid": 97486214,
+          "size": 251,
+          "wordcount": 158,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-01-22T16:48:07Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:The Glendale Evening News 1918-03-06 (IA cgl 003406).pdf",
+          "pageid": 98523951,
+          "size": 1097,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2023-02-18T14:59:31Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Park's floral guide for 1898 (IA CAT31283384).pdf",
+          "pageid": 91315647,
+          "size": 1205,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-06-27T15:11:46Z"
+        }
+      ]
+    }
+  }
+}

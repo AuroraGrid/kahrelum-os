@@ -1,0 +1,43 @@
+{
+  "sourceCandidateId": 22972,
+  "query": "Curtis Gibson",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Curtis+Gibson%22",
+  "retrievedAtUtc": "2026-11-02T21:33:19Z",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 3
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Bunker Bean (IA theseeker00wilsrich).pdf",
+          "pageid": 96793237,
+          "size": 814,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-10-18T08:02:49Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:The auditors 6th-10th, 12th-15th report of the receipts and expenditures of the town of Roxbury (IA auditors3940roxb).pdf",
+          "pageid": 100016339,
+          "size": 971,
+          "wordcount": 21,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English determination method or standard: SHA-1",
+          "timestamp": "2026-07-11T22:57:53Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:The seeker (IA cu31924021730233).pdf",
+          "pageid": 97747071,
+          "size": 1123,
+          "wordcount": 1,
+          "snippet": "English",
+          "timestamp": "2026-10-09T23:57:28Z"
+        }
+      ]
+    }
+  }
+}

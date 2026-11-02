@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 18360,
+  "query": "Clyde Jones",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Clyde+Jones%22",
+  "retrievedAtUtc": "2026-11-02T21:30:30Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 58
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:BobbyJones2 (cropped).jpg",
+          "pageid": 136454621,
+          "size": 401,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2024-09-24T22:53:52Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:BobbyJones2.jpg",
+          "pageid": 122542154,
+          "size": 412,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2024-04-14T06:53:09Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Sergel's comic dialogues; selections for amateur and parlor theatricals and school exhibitions .. (IA sergelscomicdial00serg).pdf",
+          "pageid": 93566867,
+          "size": 848,
+          "wordcount": 0,
+          "snippet": "",
+          "timestamp": "2020-08-27T11:40:48Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:WORKPLACE SAFETY- WHY DO MILLIONS OF WORKERS REMAIN WITHOUT OSHA COVERAGE? (IA gov.gpo.fdsys.CHRG-110hhrg35345).pdf",
+          "pageid": 91485153,
+          "size": 2011,
+          "wordcount": 25,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: work of the federal government of the United States determination method",
+          "timestamp": "2025-01-12T01:18:04Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Engineering News-Record and American Railway Journal 1898-06-02- Vol 39 Iss 22 (IA sim enr engineering-news-record- 1898-06-02 39 22).pdf",
+          "pageid": 195597016,
+          "size": 1581,
+          "wordcount": 15,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English",
+          "timestamp": "2026-07-25T11:58:48Z"
+        }
+      ]
+    }
+  }
+}

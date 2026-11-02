@@ -1,0 +1,528 @@
+{
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&titles=File%3ALa_Shawn_K._Ford_on_11_December_2023_-_8_%28cropped%29.jpg%7CFile%3ABiss_2026.jpg%7CFile%3AJd-ford-statehouse-official.jpg%7CFile%3AEd_Gallrein_%2855505179851%29_%28cropped%29.jpg&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cmime%7Cextmetadata&iiurlwidth=250&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main",
+  "retrievedAtUtc": "2026-11-02T21:31:56Z",
+  "candidateIds": [
+    20257,
+    20045,
+    19312,
+    20172
+  ],
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "normalized": [
+        {
+          "from": "File:La_Shawn_K._Ford_on_11_December_2023_-_8_(cropped).jpg",
+          "to": "File:La Shawn K. Ford on 11 December 2023 - 8 (cropped).jpg"
+        },
+        {
+          "from": "File:Biss_2026.jpg",
+          "to": "File:Biss 2026.jpg"
+        },
+        {
+          "from": "File:Ed_Gallrein_(55505179851)_(cropped).jpg",
+          "to": "File:Ed Gallrein (55505179851) (cropped).jpg"
+        }
+      ],
+      "pages": {
+        "186380351": {
+          "pageid": 186380351,
+          "ns": 6,
+          "title": "File:Biss 2026.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 439549,
+              "width": 874,
+              "height": 1187,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Biss_2026.jpg/250px-Biss_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 340,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Biss_2026.jpg/500px-Biss_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Biss_2026.jpg/250px-Biss_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 340,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Biss_2026.jpg/500px-Biss_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Biss_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Biss_2026.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=186380351",
+              "sha1": "82a46e56ec429b795999c4f21b5c6e401900f208",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-03-18 01:13:21",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Biss 2026",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Daniel Biss|Extracted images",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Robert Peters, Anthony Driver, Daniel Biss, and Junaid Ahmed pose with their yard signs after a press conference about AIPAC spending in their respective primary elections",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2026-02-17 10:38:06",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "This image has been <b>extracted</b> from another file",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Paul Goyette",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1240931528,
+              "parentid": 1232935042,
+              "timestamp": "2026-06-29T17:51:40Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Robert Peters, Anthony Driver, Daniel Biss, and Junaid Ahmed pose with their yard signs after a press conference about AIPAC spending in their respective primary elections}}\n|date=2026-2-17 10:38:06\n|source={{Extracted from|File:Peters Driver Biss and Ahmed Pose After Press Conference 2026.jpg}}\n|author=Paul Goyette\n|permission=\n|other versions=\n}}\n\n=={{int:license-header}}==\n{{cc-by-4.0}}\n\n[[Category:Daniel Biss]]"
+                }
+              }
+            }
+          ]
+        },
+        "199212047": {
+          "pageid": 199212047,
+          "ns": 6,
+          "title": "File:Ed Gallrein (55505179851) (cropped).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 8843781,
+              "width": 2985,
+              "height": 4371,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Ed_Gallrein_%2855505179851%29_%28cropped%29.jpg/250px-Ed_Gallrein_%2855505179851%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 366,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Ed_Gallrein_%2855505179851%29_%28cropped%29.jpg/500px-Ed_Gallrein_%2855505179851%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Ed_Gallrein_%2855505179851%29_%28cropped%29.jpg/250px-Ed_Gallrein_%2855505179851%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 366,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Ed_Gallrein_%2855505179851%29_%28cropped%29.jpg/500px-Ed_Gallrein_%2855505179851%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Ed_Gallrein_%2855505179851%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Ed_Gallrein_(55505179851)_(cropped).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=199212047",
+              "sha1": "fd2cb6d4955a5700fe9da20ce27af781f7c63eb3",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-09-09 18:14:49",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Ed Gallrein (55505179851) (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Images with extracted images|Extracted images|Photographs by Gage Skidmore|Files uploaded by RandomUserGuy1738|Ed Gallrein|2026 Republican Jewish Coalition's Annual Leadership Summit",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "36.121782",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "-115.169348",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<p>U.S. Congressional candidate Ed Gallrein speaking with attendees at the Republican Jewish Coalition's 2026 Annual Leadership Summit at the Venetian Convention &amp; Expo Center in Las Vegas, Nevada.\n</p>\nPlease attribute to Gage Skidmore if used elsewhere.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2026-08-30 18:06:05",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/gageskidmore/55505179851\">Ed Gallrein</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/gageskidmore/\">Gage Skidmore</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1278129027,
+              "parentid": 1278111633,
+              "timestamp": "2026-09-18T10:14:46Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "== {{int:filedesc}} ==\n{{Information\n| Description = U.S. Congressional candidate Ed Gallrein speaking with attendees at the Republican Jewish Coalition's 2026 Annual Leadership Summit at the Venetian Convention &amp; Expo Center in Las Vegas, Nevada.\n\nPlease attribute to Gage Skidmore if used elsewhere.\n| Source      = [https://www.flickr.com/photos/gageskidmore/55505179851 Ed Gallrein]\n| Date        = 2026-08-30 18:06:05\n| Author      = [https://www.flickr.com/people/gageskidmore/ Gage Skidmore]\n| Permission  = \n| other_versions={{Image extracted|1=Ed Gallrein (55505179851) (cropped 3x4).jpg}}{{Extracted from|1=Ed Gallrein (55505179851).jpg}}\n}}\n{{Location dec|36.121782|-115.169348|source:Flickr}}\n\n=={{int:license-header}}==\n{{Cc-by-sa-4.0}}\n\n[[Category:2026 Republican Jewish Coalition's Annual Leadership Summit]]\n[[Category:Ed Gallrein]]\n[[Category:Photographs by Gage Skidmore]]\n[[Category:Files uploaded by RandomUserGuy1738]]"
+                }
+              }
+            }
+          ]
+        },
+        "202356993": {
+          "pageid": 202356993,
+          "ns": 6,
+          "title": "File:Jd-ford-statehouse-official.jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 125372,
+              "width": 600,
+              "height": 900,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Jd-ford-statehouse-official.jpg/250px-Jd-ford-statehouse-official.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 375,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Jd-ford-statehouse-official.jpg/500px-Jd-ford-statehouse-official.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Jd-ford-statehouse-official.jpg/250px-Jd-ford-statehouse-official.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 375,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Jd-ford-statehouse-official.jpg/500px-Jd-ford-statehouse-official.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Jd-ford-statehouse-official.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Jd-ford-statehouse-official.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=202356993",
+              "sha1": "c67f362108452877a06a09edb1ccd7ae9bc58f12",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-10-28 02:04:27",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Jd-ford-statehouse-official",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Template Unknown (author)|All media needing categories as of 2026|Media needing categories as of 28 October 2026",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "J.D. Ford's official State Senate portrait.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-12-01",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://iga.in.gov/legislative/2026/legislators/legislator_jd_ford_1\">https://iga.in.gov/legislative/2026/legislators/legislator_jd_ford_1</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Unknown author<span style=\"display: none;\">Unknown author</span>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1293326055,
+              "parentid": 1292608257,
+              "timestamp": "2026-10-29T22:39:08Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=J.D. Ford's official State Senate portrait.}}\n|date=2025-12-01\n|source=https://iga.in.gov/legislative/2026/legislators/legislator_jd_ford_1\n|author={{Unknown|author}}\n|permission=\n|other versions=\n}}\n\n=={{int:license-header}}==\n{{cc-zero}}\n\n{{Uncategorized|year=2026|month=October|day=28}}"
+                }
+              }
+            }
+          ]
+        },
+        "146157742": {
+          "pageid": 146157742,
+          "ns": 6,
+          "title": "File:La Shawn K. Ford on 11 December 2023 - 8 (cropped).jpg",
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 162155,
+              "width": 684,
+              "height": 869,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/La_Shawn_K._Ford_on_11_December_2023_-_8_%28cropped%29.jpg/250px-La_Shawn_K._Ford_on_11_December_2023_-_8_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 250,
+              "thumbheight": 318,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/La_Shawn_K._Ford_on_11_December_2023_-_8_%28cropped%29.jpg/500px-La_Shawn_K._Ford_on_11_December_2023_-_8_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/La_Shawn_K._Ford_on_11_December_2023_-_8_%28cropped%29.jpg/250px-La_Shawn_K._Ford_on_11_December_2023_-_8_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 250,
+                "height": 318,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/La_Shawn_K._Ford_on_11_December_2023_-_8_%28cropped%29.jpg/500px-La_Shawn_K._Ford_on_11_December_2023_-_8_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/La_Shawn_K._Ford_on_11_December_2023_-_8_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:La_Shawn_K._Ford_on_11_December_2023_-_8_(cropped).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=146157742",
+              "sha1": "661ceae896fd5a12db0f4bc99ceebe4492769f60",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2024-03-07 18:04:30",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "La Shawn K. Ford on 11 December 2023 - 8 (cropped)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "La Shawn K. Ford|Extracted images|United States photographs taken on 2023-12-11",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Secretary of Education Miguel Cardona meets with the leadership from the National Conference of State Legislatures (NCSL) on 11 December 2023",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2023-12-11 18:41:29",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/48445211@N06/53392089072/\">https://www.flickr.com/photos/48445211@N06/53392089072/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "US Department of Education",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 2.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 2.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/2.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-2.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ],
+          "revisions": [
+            {
+              "revid": 1180206824,
+              "parentid": 859492465,
+              "timestamp": "2026-03-13T04:31:07Z",
+              "slots": {
+                "main": {
+                  "contentmodel": "wikitext",
+                  "contentformat": "text/x-wiki",
+                  "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Secretary of Education Miguel Cardona meets with the leadership from the National Conference of State Legislatures (NCSL) on 11 December 2023}}\n|date=2023-12-11 18:41:29\n|source=https://www.flickr.com/photos/48445211@N06/53392089072/\n|author=US Department of Education\n|permission=\n|other versions={{Extracted from|1=Secretary of Education Miguel Cardona meets with the leadership from the National Conference of State Legislatures (NCSL) on 11 December 2023 - 8.jpg}}\n}}\n\n=={{int:license-header}}==\n{{cc-by-2.0}}\n\n[[Category:United States photographs taken on 2023-12-11]]\n[[Category:La Shawn K. Ford]]"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20363,
+  "query": "Terri Green",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Terri+Green%22",
+  "retrievedAtUtc": "2026-11-02T21:30:45Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 11
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Terri Bjerre Terri B! 15 March 2015 in Sakhalinsk.JPG",
+          "pageid": 38922434,
+          "size": 370,
+          "wordcount": 158,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-05-25T09:50:25Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:TERRI BJERRE AKA TERRI B!.JPG",
+          "pageid": 41273126,
+          "size": 300,
+          "wordcount": 156,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-07-29T19:35:38Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Terri B.jpg",
+          "pageid": 41341611,
+          "size": 256,
+          "wordcount": 158,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2025-12-26T08:29:56Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Terri B \u043d\u0430 Europa Plus TV. Hit Non Stop \u0432 \u0412\u0438\u0442\u0435\u0431\u0441\u043a\u0435 2016.jpg",
+          "pageid": 51633830,
+          "size": 411,
+          "wordcount": 152,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-07-05T07:14:03Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:20200823-USDA-OC-PSD-0199 Agriculture in the United States.jpg",
+          "pageid": 171368937,
+          "size": 3120,
+          "wordcount": 37,
+          "snippet": "2 August 2025 English author name string: USDAgov publication date: 23 July 2025 applies to jurisdiction: United States operator: Flickr described at URL:",
+          "timestamp": "2025-11-08T06:41:50Z"
+        }
+      ]
+    }
+  }
+}

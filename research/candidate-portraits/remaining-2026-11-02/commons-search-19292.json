@@ -1,0 +1,24 @@
+{
+  "sourceCandidateId": 19292,
+  "query": "Kristina Knickerbocker",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Kristina+Knickerbocker%22",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Seal of Ohio (B&W).svg",
+          "pageid": 11810871,
+          "size": 3322,
+          "wordcount": 63,
+          "snippet": "&quot;An act designating the duties of the secretary of state&quot; in (1901) [1803] Acts of the State of Ohio: first session of the General Assembly, held under",
+          "timestamp": "2026-03-06T10:13:46Z"
+        }
+      ]
+    }
+  }
+}

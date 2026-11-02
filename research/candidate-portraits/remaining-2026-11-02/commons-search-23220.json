@@ -1,0 +1,24 @@
+{
+  "sourceCandidateId": 23220,
+  "query": "David Flippo",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22David+Flippo%22",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "searchinfo": {
+        "totalhits": 1
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:David Flippo.png",
+          "pageid": 193574852,
+          "size": 403,
+          "wordcount": 27,
+          "snippet": "English Military picture of Lt. Col David Flippo operator: Facebook described at URL: https://www.facebook.com/photo.php?fbid=257169393958324&amp;set=pb.100089957967352",
+          "timestamp": "2026-06-30T04:50:43Z"
+        }
+      ]
+    }
+  }
+}

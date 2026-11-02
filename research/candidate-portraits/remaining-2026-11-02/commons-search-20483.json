@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 20483,
+  "query": "Johnny Garcia",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Johnny+Garcia%22",
+  "retrievedAtUtc": "2026-11-02T21:40:34Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 264
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:USS Bulkeley (DDG 84) pulls into Augusta Bay, Italy, April 16, 2026 (9694800).jpg",
+          "pageid": 192621840,
+          "size": 1313,
+          "wordcount": 88,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English AUGUSTA BAY, Italy \u2013 (April 16, 2026) Quartermaster",
+          "timestamp": "2026-09-07T19:12:06Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:US Navy 070715-N-7317W-100 Aviation Systems Warfare Operator 2nd Class Johnny Garcia fires an M-240 machine gun from the cabin of an SH-60F Seahawk, attached to the Dusty Dogs of Helicopter Anti-submarine Squadron (HS) 7, while.jpg",
+          "pageid": 8213413,
+          "size": 1201,
+          "wordcount": 39,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English applies to jurisdiction: United States determination",
+          "timestamp": "2025-12-26T01:55:53Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:USS Bulkeley (DDG 84) departs Largs, Scottland (9485379).jpg",
+          "pageid": 186292399,
+          "size": 1303,
+          "wordcount": 100,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English NORTH ATLANTIC OCEAN \u2013 (Jan. 13, 2026) U",
+          "timestamp": "2026-08-12T00:15:10Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Zone Inspections on USS Paul Ignatius (DDG 117) (9188789).jpg",
+          "pageid": 181261921,
+          "size": 1143,
+          "wordcount": 21,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English determination method or standard: SHA-1",
+          "timestamp": "2026-04-24T10:43:19Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:USS Bulkeley (DDG 84) departs from Souda Bay, Greece, April 9, 2026 (9625140).jpg",
+          "pageid": 192049922,
+          "size": 1285,
+          "wordcount": 105,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse English SOUDA BAY, Greece \u2013 (April 9, 2026) U.S",
+          "timestamp": "2026-10-14T05:17:44Z"
+        }
+      ]
+    }
+  }
+}

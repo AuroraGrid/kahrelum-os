@@ -1,0 +1,65 @@
+{
+  "sourceCandidateId": 18483,
+  "query": "Bill Hill",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=5&srsearch=%22Bill+Hill%22",
+  "retrievedAtUtc": "2026-11-02T21:30:30Z",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 151
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:Books from the Library of Congress (IA historyofcoljame00gool).pdf",
+          "pageid": 92265533,
+          "size": 1138,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2026-03-10T21:55:14Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:An introductory Latin book - intended as an elementary drill-book, on the inflections and principles of the language, and as an introduction to the author's grammar, reader (IA AnIntroductoryLatinBook).pdf",
+          "pageid": 199281509,
+          "size": 1502,
+          "wordcount": 14,
+          "snippet": "https://creativecommons.org/publicdomain/mark/1.0/PDMCreative Commons Public Domain Mark 1.0falsefalse",
+          "timestamp": "2026-09-10T23:38:39Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Fellow citizens of Pennsylvania! (IA fellowcitizensof00np).pdf",
+          "pageid": 91478884,
+          "size": 818,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2025-08-12T09:50:21Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:KSC-20181219-PH KLS01 0016 (44569448040).jpg",
+          "pageid": 104789980,
+          "size": 1500,
+          "wordcount": 69,
+          "snippet": "English Flickr user ID: 108488366@N07 author name string: NASA Kennedy URL: https://www.flickr.com/people/nasakennedy/ publication date: 19 December 2018",
+          "timestamp": "2024-11-12T04:58:57Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Davis' little treasure; (IA davislittletreas00davi).pdf",
+          "pageid": 93109391,
+          "size": 760,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2024-06-22T15:18:11Z"
+        }
+      ]
+    }
+  }
+}

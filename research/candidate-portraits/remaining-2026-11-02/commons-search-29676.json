@@ -1,0 +1,64 @@
+{
+  "sourceCandidateId": 29676,
+  "query": "Gerald Malloy",
+  "sourceUrl": "https://commons.wikimedia.org/w/api.php?format=json&action=query&list=search&srnamespace=6&srlimit=5&srsearch=%22Gerald+Malloy%22",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "sroffset": 5,
+      "continue": "-||"
+    },
+    "query": {
+      "searchinfo": {
+        "totalhits": 8
+      },
+      "search": [
+        {
+          "ns": 6,
+          "title": "File:State Senator Malloy.jpg",
+          "pageid": 7668431,
+          "size": 512,
+          "wordcount": 7,
+          "snippet": "English determination method or standard: SHA-1",
+          "timestamp": "2024-08-15T20:31:42Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Gerald Malloy and Wife at Readiness Center Ground Breaking Ceremony.jpg",
+          "pageid": 197465830,
+          "size": 1212,
+          "wordcount": 55,
+          "snippet": "14 August 2026 English Gerald Malloy and Wife at Readiness Center Ground Breaking Ceremony author name string: SC National Guard URL: https://www.flickr",
+          "timestamp": "2026-09-03T04:01:17Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Gerald Malloy at Readiness Center Ground Breaking Ceremony (cropped).jpg",
+          "pageid": 197466052,
+          "size": 979,
+          "wordcount": 12,
+          "snippet": "English applies to jurisdiction: United States determination method or standard: SHA-1",
+          "timestamp": "2026-09-03T04:01:18Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Gerald Malloy for US Senate Vermont (cropped1).jpg",
+          "pageid": 193512054,
+          "size": 351,
+          "wordcount": 143,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-07-26T09:12:46Z"
+        },
+        {
+          "ns": 6,
+          "title": "File:Gerald Malloy for US Senate Vermont.jpg",
+          "pageid": 117881461,
+          "size": 415,
+          "wordcount": 156,
+          "snippet": "I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share",
+          "timestamp": "2026-06-07T11:13:04Z"
+        }
+      ]
+    }
+  }
+}
