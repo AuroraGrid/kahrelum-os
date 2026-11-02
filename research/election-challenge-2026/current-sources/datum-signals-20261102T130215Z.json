@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Datum Signals",
+  "sourceUrl": "https://datumsignals.com/",
+  "retrieval": {
+    "retrievedAtUtc": "2026-11-02T13:02:15.4358661Z",
+    "cachePolicy": "Fresh first-party HTTPS retrieval with host-preserving resolution override",
+    "representation": "SELECTED_FIRST_PARTY_RENDERED_TEXT_NOT_RAW_HTML"
+  },
+  "publisherEdition": {
+    "displayedUpdate": "November 1, 2026, 5:00 PM UTC"
+  },
+  "observations": {
+    "houseDemocraticControlPct": 71.0,
+    "senateDemocraticControlPct": 64.0,
+    "houseDemocraticSeats": null,
+    "senateDemocraticSeats": null
+  },
+  "selectedRenderedText": [
+    "Source URL: https://datumsignals.com/",
+    "Updated November 1, 2026, 5:00 PM UTC",
+    "71% Democrats control the House",
+    "64% Democrats control the Senate",
+    "House summary: D 209, Toss-up 3, R 188, 218 needed",
+    "Senate summary: D 48, R 46 including seats not up, 51 to win"
+  ],
+  "custody": {
+    "directHttpStatus": 200,
+    "directTlsVerifyResult": 0,
+    "resolvedRemoteIp": "104.21.51.52",
+    "rawUtf8Bytes": 48496,
+    "rawSha256": "dfaf7da422e0932801f9766377e1eb58f7a48138889fd7acbddfab9bdbe3754e",
+    "selectedTextUtf8Bytes": 252,
+    "selectedTextSha256": "dbb77a84bd3e3736da3258d628cf1af98d6c285ac86c493d979a51da2cef2695",
+    "hashConstruction": "selectedRenderedText joined with LF and no trailing LF",
+    "matchesPriorSelectedAndRawReceipt": true
+  },
+  "changeFromPriorAdmittedEdition": {
+    "houseDemocraticControlPct": {
+      "from": 70.0,
+      "to": 71.0
+    },
+    "senateDemocraticControlPct": {
+      "from": 64.0,
+      "to": 64.0
+    }
+  },
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "datumSignalsUsedByScript": false,
+    "parsedHouseDistrictRatingInputsChanged": false,
+    "parsedSenateRaceRatingInputsChanged": false,
+    "expectedSeatAndControlOutputsChanged": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  },
+  "admissionNote": "A prospective retrieval at 13:02 UTC observed the still-labeled Nov. 1 5:00 PM UTC first-party page back at 71% Democratic House control after the admitted 70% observation; Democratic Senate control remains 64%. The unchanged displayed publisher timestamp is preserved rather than backdated. The selected-field and raw hashes match an earlier independently captured 71% representation, while this new retrieval time preserves prospective custody of the reversion. The source does not publish compatible full-chamber expected seat totals on this card. Datum Signals is not an input to scripts/refresh-election-projections.py, so no new KAHRELUM probability edition was created."
+}

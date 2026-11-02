@@ -289,7 +289,7 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertEqual((yale["houseDemocraticControlPct"], yale["senateDemocraticControlPct"], yale["houseDemocraticSeats"], yale["senateDemocraticSeats"]), (95.0, 43.0, 237.0, 50.0))
         self.assertIn("Snapshot Nov. 1", yale["sourceEdition"])
         datum = next(row for row in challengers["records"] if row["provider"] == "Datum Signals")
-        self.assertEqual((datum["houseDemocraticControlPct"], datum["senateDemocraticControlPct"]), (70.0, 64.0))
+        self.assertEqual((datum["houseDemocraticControlPct"], datum["senateDemocraticControlPct"]), (71.0, 64.0))
         self.assertFalse({"The Economist", "Silver Bulletin", "Sam Brown", "Jon Elder"} & {row["provider"] for row in challengers["records"]})
         self.assertEqual(geography["schema"], "KAHRELUM_US_STATES_MAP_v1.0")
         self.assertEqual(geography["license"], "Unlicense / public domain dedication")
