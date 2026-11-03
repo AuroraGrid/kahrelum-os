@@ -147,3 +147,32 @@ test('local Commons photos require FEC evidence, scoped permissions and visible 
     }
   }
 });
+
+test('November 3 byte-verified Commons batch attaches 26 exact FEC-bound candidate pictures', () => {
+  const photos = ledger.records.filter(p => p.identityType === 'FEC_ENWIKI_SHARED_COMMONS');
+  assert.equal(photos.length, 26);
+  const races = makeRaces();
+  assert.equal(map.applyPortraitLedger(races,ledger).matchedCards,admittedCount);
+  for (const portrait of photos) {
+    assert.equal(map.admittedPortrait({portrait}),portrait,portrait.candidateName);
+    const match = races.flatMap(r=>r.candidates).find(c=>c.sourceCandidateId===portrait.sourceCandidateId);
+    assert.equal(match?.portrait,portrait,portrait.candidateName);
+    const race=races.find(r=>r.candidates.includes(match));
+    const html=map.candidateCards(race);
+    assert.ok(html.includes(portrait.attribution.replace(/&/g,'&amp;')),portrait.candidateName);
+    assert.ok(html.includes('Source thumbnail; no additional edits'),portrait.candidateName);
+    for(const bad of [
+      {identityType:'UNVERIFIED'},
+      {fecCandidateId:'H6ZZ00000'},
+      {identitySourceUrl:'https://example.com/'},
+      {license:'Fair use'},
+      {licenseUrl:'https://example.com/wrong'},
+      {imageSha256:'0'.repeat(64)},
+      {url:'/assets/candidate-portraits/123-bad.jpg'},
+      {rightsBasis:''},
+      {attribution:''},
+      {commonsImageSha1:''}
+    ]) assert.equal(map.admittedPortrait({portrait:{...portrait,...bad}}),null,
+                    portrait.candidateName+' '+JSON.stringify(bad));
+  }
+});
