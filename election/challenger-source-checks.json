@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAtUtc": "2026-11-03T04:48:55.3246559Z",
+  "checkedAtUtc": "2026-11-03T05:02:47.4182914Z",
   "status": "VERIFIED_NUMERICAL_PROVIDERS_ONLY",
   "providersChecked": 15,
   "challengersChecked": 14,
@@ -118,14 +118,14 @@
       "houseSeatType": "expected mean; separate median 238",
       "senateDemocraticSeats": 52.46,
       "senateSeatType": "expected mean; separate median 53",
-      "sourceEdition": "Updated Nov. 2, 10:25 PM EST; generated Nov. 3 03:25:40 UTC; retrieved Nov. 3 03:30 UTC",
+      "sourceEdition": "Final forecast frozen at midnight Eastern Nov. 3; underlying run updated Nov. 2 10:25 PM EST and generated Nov. 3 03:25:40 UTC; final-stage page retrieved Nov. 3 05:02 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "retrievedAtUtc": "2026-11-03T03:30:13.1143210Z",
-      "rawSha256": "886812bd62f6dd499f5fe6a7f19bb9b64a5932f3f5914351bae220b3deddfe4b",
+      "retrievedAtUtc": "2026-11-03T05:02:47.4182914Z",
+      "rawSha256": "2650967279e9be2ec479177a366ce737c992ea1192673b3b688b59f226616673",
       "directHttpStatus": 200,
-      "directResponseUtf8Bytes": 2102551,
-      "custodyReceiptSha256": "151cf0df39ca0c089b7ded43e9cd3d6ec57a47a88a7fe8adc2362fd689bc2db7",
-      "note": "The Nov. 2 10:25 PM EST run lowers current rounded Democratic House control from 96% to 95% and Democratic Senate control from 79% to 78%; serialized probabilities move from 95.54% to 94.6% House and from 78.71% to 77.76% Senate. Expected Democratic House seats fall from 240.66 to 239.31 and expected Democratic Senate seats from 52.52 to 52.46; the separate House median falls from 240 to 238 while the Senate median remains 53, and the House 80% interval moves from 223–259 to 222–258 while the Senate interval remains 49–56. Current rounded hero values agree with the serialized probabilities. Scrutinel is not an input to scripts/refresh-election-projections.py, so no new KAHRELUM probability edition was created."
+      "directResponseUtf8Bytes": 2102584,
+      "custodyReceiptSha256": "891ac0351a247a81dd12864b0187f918b7d3f70dbae2b7dfe51914a9bc45279e",
+      "note": "Scrutinel now labels the preserved Nov. 2 10:25 PM EST run as its final forecast, frozen at midnight Eastern on Nov. 3. The numerical projections are unchanged from the prior admitted run: rounded Democratic control remains 95% House and 78% Senate; exact probabilities remain 94.6% and 77.76%; expected Democratic seats remain 239.31 House and 52.46 Senate; the separate medians remain 238 and 53; and the 80% intervals remain 222–258 and 49–56. This is a verified final-stage change, not a fabricated probability revision. Scrutinel is not an input to scripts/refresh-election-projections.py, so no new KAHRELUM probability edition was created."
     },
     {
       "provider": "Vote-Scope",

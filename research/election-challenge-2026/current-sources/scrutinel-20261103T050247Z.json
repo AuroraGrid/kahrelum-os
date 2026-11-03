@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Scrutinel",
+  "sourceUrl": "https://scrutinel.com/",
+  "retrieval": {
+    "retrievedAtUtc": "2026-11-03T05:02:47.4182914Z",
+    "requestStartedAtUtc": "2026-11-03T05:02:45.6851028Z",
+    "status": "FIRST_PARTY_PUBLIC_VERIFIED",
+    "representation": "FIRST_PARTY_HTTP_RESPONSE_UTF8_NOT_EXACT_WIRE_BYTES"
+  },
+  "publisherEdition": {
+    "stageText": "Our final forecast - frozen at midnight Eastern, 3 November",
+    "sourceUpdateText": "Updated Nov 2, 2026, 10:25 PM EST",
+    "generatedAtUtc": "2026-11-03T03:25:40Z",
+    "simulations": 200000
+  },
+  "observations": {
+    "houseDemocraticControlPctDisplayed": 95.0,
+    "houseDemocraticControlPctExact": 94.6,
+    "houseRepublicanControlPctExact": 5.37,
+    "houseNoMajorityPctExact": 0.03,
+    "houseMeanDemocraticSeats": 239.31,
+    "houseMedianDemocraticSeats": 238,
+    "houseInterval80DemocraticSeats": [222, 258],
+    "senateDemocraticControlPctDisplayed": 78.0,
+    "senateDemocraticControlPctExact": 77.76,
+    "senateRepublicanControlPctExact": 21.94,
+    "senateNoMajorityPctExact": 0.3,
+    "senateMeanDemocraticSeats": 52.46,
+    "senateMedianDemocraticSeats": 53,
+    "senateInterval80DemocraticSeats": [49, 56]
+  },
+  "custody": {
+    "httpStatus": 200,
+    "utf8Bytes": 2102584,
+    "sha256": "2650967279e9be2ec479177a366ce737c992ea1192673b3b688b59f226616673",
+    "lastModified": "Tue, 03 Nov 2026 05:02:28 GMT",
+    "dateHeader": "Tue, 03 Nov 2026 05:02:46 GMT",
+    "headerStatus": "OBSERVED_NOT_USED_AS_PUBLICATION_TIME"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "priorReceiptPath": "research/election-challenge-2026/current-sources/scrutinel-20261103T033013Z.json",
+    "stage": "LATEST_RUN -> FINAL_FORECAST_FROZEN_AT_MIDNIGHT_EASTERN",
+    "underlyingModelRun": "UNCHANGED",
+    "numericalTopLines": "UNCHANGED"
+  },
+  "interpretation": "VERIFIED_FINAL_FORECAST_STAGE_CHANGE_WITH_UNCHANGED_NUMERICAL_PROJECTIONS",
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "providerUsedByScript": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  }
+}

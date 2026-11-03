@@ -264,6 +264,7 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertEqual((scrutinel["houseDemocraticControlExactPct"], scrutinel["senateDemocraticControlExactPct"]), (94.6, 77.76))
         self.assertEqual((scrutinel["houseDemocraticSeats"], scrutinel["senateDemocraticSeats"]), (239.31, 52.46))
         self.assertIn("10:25 PM EST", scrutinel["sourceEdition"])
+        self.assertIn("Final forecast frozen at midnight Eastern Nov. 3", scrutinel["sourceEdition"])
         fred = next(row for row in challengers["records"] if row["provider"] == "Fred Cornell independent")
         self.assertEqual((fred["houseDemocraticControlPct"], fred["senateDemocraticControlPct"]), (99.0, 71.9))
         self.assertEqual((fred["houseDemocraticSeats"], fred["senateDemocraticSeats"]), (252.0, 52.0))
