@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Vote-Scope",
+  "sourceUrl": "https://vote-scope.com/en/us/house/",
+  "retrieval": {
+    "retrievedAtUtc": "2026-11-03T02:02:00.535347Z",
+    "representation": "FIRST_PARTY_HTTP_RESPONSE_UTF8_NOT_EXACT_WIRE_BYTES"
+  },
+  "publisherEdition": {
+    "updated": "November 2, 2026",
+    "preciseSourceUpdateTimeExposed": false
+  },
+  "observations": {
+    "houseDemocraticControlPct": 97.0,
+    "houseRepublicanControlPct": 3.0,
+    "houseProjectedDemocraticSeats": 238,
+    "houseProjectedRepublicanSeats": 197,
+    "houseDemocraticSeatRange": [226, 267],
+    "houseRepublicanSeatRange": [168, 209],
+    "houseSimulationMedianDemocraticSeats": 245,
+    "houseSimulationMedianRepublicanSeats": 190,
+    "houseControlThreshold": 218,
+    "polls": 718,
+    "simulations": 50000,
+    "senateDemocraticControlPct": null,
+    "senateDemocraticSeats": null
+  },
+  "custody": {
+    "httpStatus": 200,
+    "responseUtf8Bytes": 1094647,
+    "responseSha256": "8a18cd907fbe1b314fa02c0f484f80a6289186cff9f5db5125dd0bee3707bd6c"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "houseDemocraticControlPct": {"from": 98.0, "to": 97.0},
+    "houseProjectedDemocraticSeats": {"from": 241, "to": 238},
+    "houseSimulationMedianDemocraticSeats": {"from": 246, "to": 245},
+    "houseDemocraticSeatRange": {"from": [227, 269], "to": [226, 267]},
+    "polls": {"from": 713, "to": 718}
+  },
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "providerUsedByScript": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  },
+  "admissionNote": "The page exposes only a November 2 edition date, so the changed fields are admitted prospectively at the November 3 02:02 UTC retrieval time and are not backdated. Vote-Scope reports no numerical Senate top line on this page."
+}
