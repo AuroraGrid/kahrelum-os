@@ -302,18 +302,18 @@
       "houseSeatType": "median",
       "senateDemocraticSeats": 53.0,
       "senateSeatType": "median Democratic seats",
-      "sourceEdition": "Displayed House and Senate model run Nov. 3, 1:41 AM ET; polls through Nov. 3; retrieved Nov. 3 07:03 UTC",
+      "sourceEdition": "Displayed House and Senate model run Nov. 3, 4:48 AM ET; polls through Nov. 3; retrieved Nov. 3 09:54 UTC",
       "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
-      "retrievedAtUtc": "2026-11-03T07:03:33.0847835Z",
-      "retrievedHouseAtUtc": "2026-11-03T07:03:32.8141387Z",
+      "retrievedAtUtc": "2026-11-03T09:54:33.0561328Z",
+      "retrievedHouseAtUtc": "2026-11-03T09:54:32.1286620Z",
       "custodyRepresentation": "FIRST_PARTY_HTTP_RESPONSE_UTF8_NOT_EXACT_WIRE_BYTES",
-      "custodyReceiptSha256": "b33d63a376596c53a862b2f603946712d1f190e1223c9d2d2153610c7e3f09d8",
+      "custodyReceiptSha256": "9b1c9069fcf3efa0b05d9f1aa6cb3c38d78472061fbad4d3cc877f847e5dbfae",
       "directHttpStatus": 200,
-      "houseResponseUtf8Bytes": 94015,
-      "houseResponseSha256": "e492deb68ea613d4af112b6d7b6c1a67b19d083244e6cc2dfaa16cd69e2039dd",
-      "senateResponseUtf8Bytes": 35876,
-      "senateResponseSha256": "f1101f5ca782319ae0937489b9fcefdb73d839a347428830ea70f8a1c5772603",
-      "note": "A prospective Nov. 3 07:03 UTC retrieval found a new Nov. 3 1:41 AM ET first-party run. Democratic House control remains 91%, its median remains 236 and its 80% interval remains 218–257. Democratic Senate control remains 76%, its median remains 53 including independents, and its 48–57 interval remains unchanged. The displayed generic ballot moves from D+9.0 to D+8.9 and the model poll count from 947 to 952. House and Senate pages were retrieved and hashed separately, preserving their distinct statistics and the 218/51 control cutoffs; a 50–50 Senate resolves Republican through the vice president. Midterm Forecast is not an input to scripts/refresh-election-projections.py, so no new KAHRELUM probability edition was created."
+      "houseResponseUtf8Bytes": 94034,
+      "houseResponseSha256": "600daba23d65085739ee9bbdda2d2fbcd270d49cbd3530ba526fabe864e66077",
+      "senateResponseUtf8Bytes": 35845,
+      "senateResponseSha256": "45494bcb0c9dac995baaf04837f397e9b52bb23fbc092a7579f718c522c2569a",
+      "note": "A prospective Nov. 3 09:54 UTC retrieval found a new Nov. 3 4:48 AM ET first-party run. Democratic House control remains 91%, its median remains 236 and its 80% interval remains 218–257. Democratic Senate control remains 76%, its median remains 53 including independents, and its 48–57 interval remains unchanged. The displayed generic ballot moves from D+8.9 to D+9.0 and the model poll count from 952 to 966. House and Senate pages were retrieved and hashed separately, preserving their distinct statistics and the 218/51 control cutoffs; a 50–50 Senate resolves Republican through the vice president. Midterm Forecast is not an input to scripts/refresh-election-projections.py, so no new KAHRELUM probability edition was created."
     }
   ]
 }
