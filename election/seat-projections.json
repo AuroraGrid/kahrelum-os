@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "edition": "KAH-US-2026-20261031T181057Z with challenger source checks through 2026-11-03T00:48:04Z",
+  "edition": "KAH-US-2026-20261031T181057Z with challenger source checks through 2026-11-03T01:47:55Z",
   "comparisonStatus": "DESCRIPTIVE_ONLY_UNMATCHED_CUTOFFS_AND_SEAT_TYPES",
-  "sourceObservationFileSha256": "29cd6ceaa60a4d7f548135cbaa42090d4bdecccbfd2c9c61fcf4b6ec2238352e",
+  "sourceObservationFileSha256": "6319daf93a99eaa2494524c56d8ab0700bad346c9054f65f308f5eb709d645b4",
   "house": {
     "totalSeats": 435,
     "democraticControlThreshold": 218,
@@ -24,7 +24,7 @@
       {"provider":"ElectIndex","democraticSeats":248.4,"seatType":"average; projected 244","edition":"Public feed commit d0be89c; commit metadata 23:50 UTC; retrieved Nov. 2 23:53 UTC","sourceUrl":"https://electindex.com/forecasts/"},
       {"provider":"Fred Cornell","democraticSeats":252,"seatType":"median","edition":"Run Nov. 2; retrieved Nov. 2 07:23 UTC","sourceUrl":"https://fredcornell.com/us/house"},
       {"provider":"Yale PLSC 2219","democraticSeats":237,"seatType":"class model","edition":"Snapshot Nov. 1; built 21:07 UTC; retrieved Nov. 2 03:21 UTC","sourceUrl":"https://kevinmdeluca.com/forecast/"},
-      {"provider":"Dave Manuel","democraticSeats":235,"seatType":"projected median","edition":"Updated Nov. 2 7:45 PM ET; retrieved Nov. 3 00:48 UTC","sourceUrl":"https://www.davemanuel.com/2026-midterm-forecast.php"},
+      {"provider":"Dave Manuel","democraticSeats":235,"seatType":"projected median","edition":"Updated Nov. 2 8:45 PM ET; retrieved Nov. 3 01:47 UTC","sourceUrl":"https://www.davemanuel.com/2026-midterm-forecast.php"},
       {"provider":"On Point Politics","democraticSeats":255.12,"seatType":"average exact; displayed rounded 255; distinct median 254","edition":"Updated Nov. 2; changed fields retrieved prospectively Nov. 3 00:37 UTC; dateModified remained 8:00 AM ET","sourceUrl":"https://onpointpolitics.us/forecast"},
       {"provider":"VotePredictor","democraticSeats":230.2,"seatType":"expected; separate summary display rounds to 230","edition":"Control unchanged since Nov. 1; exact expected seats retrieved Nov. 2 18:54 UTC; precise source update time not exposed","sourceUrl":"https://votepredictor.com/house"},
       {"provider":"Midterm Forecast","democraticSeats":236,"seatType":"median","edition":"Model run Nov. 2 7:41 PM ET; retrieved Nov. 3 00:48 UTC","sourceUrl":"https://midtermforecast.com/house/"}
@@ -50,7 +50,7 @@
       {"provider":"ElectIndex","democraticSeats":53.1,"seatType":"average; projected 54","edition":"Public feed commit d0be89c; commit metadata 23:50 UTC; retrieved Nov. 2 23:53 UTC","sourceUrl":"https://electindex.com/forecasts/"},
       {"provider":"Fred Cornell","democraticSeats":52,"seatType":"expected party seats; plus 1 independent","edition":"Run Nov. 2; retrieved Nov. 2 07:23 UTC","sourceUrl":"https://fredcornell.com/us/senate"},
       {"provider":"Yale PLSC 2219","democraticSeats":50,"seatType":"class model","edition":"Snapshot Nov. 1; built 21:07 UTC; retrieved Nov. 2 03:21 UTC","sourceUrl":"https://kevinmdeluca.com/forecast/"},
-      {"provider":"Dave Manuel","democraticSeats":52,"seatType":"projected median incl. aligned independents","edition":"Updated Nov. 2 7:45 PM ET; retrieved Nov. 3 00:48 UTC","sourceUrl":"https://www.davemanuel.com/2026-midterm-forecast.php"},
+      {"provider":"Dave Manuel","democraticSeats":53,"seatType":"projected median incl. aligned independents","edition":"Updated Nov. 2 8:45 PM ET; retrieved Nov. 3 01:47 UTC","sourceUrl":"https://www.davemanuel.com/2026-midterm-forecast.php"},
       {"provider":"On Point Politics","democraticSeats":54.54,"seatType":"average exact; displayed rounded 55; median 55","edition":"Updated Nov. 2; changed fields retrieved prospectively Nov. 3 00:37 UTC; dateModified remained 8:00 AM ET","sourceUrl":"https://onpointpolitics.us/forecast"},
       {"provider":"Midterm Forecast","democraticSeats":53,"seatType":"median Democratic seats; independents counted on Democratic side in this edition","edition":"Model run Nov. 2 7:41 PM ET; retrieved Nov. 3 00:48 UTC","sourceUrl":"https://midtermforecast.com/senate/"}
     ]
