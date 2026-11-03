@@ -1,8 +1,8 @@
 {
   "schema": "KAHRELUM_CANDIDATE_PORTRAITS_v1.0",
   "status": "PARTIAL_VERIFIED_COVERAGE",
-  "updatedAtUtc": "2026-11-02T20:22:02Z",
-  "admissionRule": "One exact documented name or explicit source alias, the same state and party, a unique Bioguide identity, an existing pinned image blob, and an explicit corpus public-domain declaration. No fuzzy name or facial matching. Photo identity does not certify nomination or ballot eligibility. Reviewed supplements may add exact identities from the same pinned historical CSV and official public-domain images captured from Wikimedia Commons; local image bytes and source revisions are verified before admission. Existing photos are never replaced by a supplement. Non-Congress candidates use an explicit FEC_CANDIDATE identity, exact source-candidate/contest binding and captured first-party name/state/party evidence; Commons public-domain, CC0, CC BY or CC BY-SA images require their exact revision, source hash, creator attribution and license. Existing 397 congressional portraits are preserved. FEC registration does not certify ballot eligibility. Additional candidate portraits use exact source-roster/race/Commons credit identity matches, captured CC reuse rights, and byte-verified self-hosted thumbnails. They do not certify ballot eligibility. November 2 additions also require first-party FEC name/state/party/office evidence. Local Commons source-page captures retain exact per-image licenses, creator and revision; Iowa legislative portraits retain their specific reviewed reuse permission. Source-page evidence is not represented as Commons API metadata.",
+  "updatedAtUtc": "2026-11-03T06:32:01Z",
+  "admissionRule": "One exact documented name or explicit source alias, the same state and party, a unique Bioguide identity, an existing pinned image blob, and an explicit corpus public-domain declaration. No fuzzy name or facial matching. Photo identity does not certify nomination or ballot eligibility. Reviewed supplements may add exact identities from the same pinned historical CSV and official public-domain images captured from Wikimedia Commons; local image bytes and source revisions are verified before admission. Existing photos are never replaced by a supplement. Non-Congress candidates use an explicit FEC_CANDIDATE identity, exact source-candidate/contest binding and captured first-party name/state/party evidence; Commons public-domain, CC0, CC BY or CC BY-SA images require their exact revision, source hash, creator attribution and license. Existing 397 congressional portraits are preserved. FEC registration does not certify ballot eligibility. Additional candidate portraits use exact source-roster/race/Commons credit identity matches, captured CC reuse rights, and byte-verified self-hosted thumbnails. They do not certify ballot eligibility. November 2 additions also require first-party FEC name/state/party/office evidence. Local Commons source-page captures retain exact per-image licenses, creator and revision; Iowa legislative portraits retain their specific reviewed reuse permission. Source-page evidence is not represented as Commons API metadata. Exact first-party name aliases may bind a previously unresolved candidate to an existing pinned congressional Bioguide portrait only after unique state, party, chamber, district, document and source capture checks. Ambiguous homonyms remain unresolved.",
   "sourceCatalog": "research/candidate-portraits/congressional-sources-2026-10-31.json",
   "sources": {
     "identity": {
@@ -79,13 +79,13 @@
   "coverage": {
     "sourceListedCandidateRecords": 940,
     "uniqueCandidateIds": 940,
-    "identityMatchedCandidates": 429,
-    "admittedPortraits": 429,
-    "uniquePeopleWithPortraits": 429,
-    "candidateCardsWithPortraits": 429,
-    "candidateCardsWithoutPortraits": 511,
+    "identityMatchedCandidates": 432,
+    "admittedPortraits": 432,
+    "uniquePeopleWithPortraits": 432,
+    "candidateCardsWithPortraits": 432,
+    "candidateCardsWithoutPortraits": 508,
     "unresolvedReasons": {
-      "IDENTITY_NOT_VERIFIED": 511
+      "IDENTITY_NOT_VERIFIED": 508
     }
   },
   "records": [
@@ -14044,6 +14044,120 @@
       "identitySourceSha256": "2add889693d1a5cca809a47339fee1c1336d046c2d5ae17e2de2d21e79ec2df5",
       "identityEvidenceRepresentation": "Text extracted from fetched FEC HTML; scripts/styles omitted",
       "identityVerifiedAtUtc": "2026-11-02T20:22:02Z"
+    },
+    {
+      "sourceCandidateId": 16266,
+      "candidateName": "Tom Kean Jr.",
+      "state": "NJ",
+      "party": "R",
+      "chamber": "House",
+      "contestId": "NJ-7",
+      "status": "ADMITTED",
+      "bioguideId": "K000398",
+      "matchedName": "Thomas H. Kean, Jr.",
+      "matchMethod": "EXACT_REVIEWED_FIRST_PARTY_ALIAS_STATE_PARTY_DISTRICT",
+      "matchedSourceField": "documented_alias_capture_2026_11_03",
+      "identitySourceUrl": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-current.csv",
+      "identityRole": {
+        "chamber": "House",
+        "state": "NJ",
+        "party": "Republican",
+        "district": "7"
+      },
+      "url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/K000398.jpg",
+      "width": 225,
+      "height": 275,
+      "imageBlobSha": "691649c444b84a5d345f22588154e9b5e7bf2b3a",
+      "sourceUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/metadata/K000398.yaml",
+      "originalSourceUrl": "https://pictorial.gpo.gov",
+      "originalSourceName": "GPO Member Guide",
+      "license": "Public domain",
+      "licenseUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+      "rightsBasis": "Public-domain declaration of the pinned congressional image corpus",
+      "attribution": "U.S. Congress / unitedstates/images",
+      "reviewedAtUtc": "2026-11-03T06:32:01Z",
+      "aliasEvidence": {
+        "firstPartySourceUrl": "https://kean.house.gov/about",
+        "capturePath": "research/candidate-portraits/alias-captures-2026-11-03/kean.txt",
+        "captureSha256": "a5c679bfd2800e2c30f2f714a0264b7fd208969f5d632672bfa69dfc2984068b",
+        "sourceHtmlSha256": "4b0eb13c8ca46ddbebb310803a32976c79931ef854e5d8db8d40e3a33c4ea36b"
+      }
+    },
+    {
+      "sourceCandidateId": 23012,
+      "candidateName": "John Olszewski",
+      "state": "MD",
+      "party": "D",
+      "chamber": "House",
+      "contestId": "MD-2",
+      "status": "ADMITTED",
+      "bioguideId": "O000176",
+      "matchedName": "Johnny Olszewski, Jr.",
+      "matchMethod": "EXACT_REVIEWED_FIRST_PARTY_ALIAS_STATE_PARTY_DISTRICT",
+      "matchedSourceField": "documented_alias_capture_2026_11_03",
+      "identitySourceUrl": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-current.csv",
+      "identityRole": {
+        "chamber": "House",
+        "state": "MD",
+        "party": "Democrat",
+        "district": "2"
+      },
+      "url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/O000176.jpg",
+      "width": 225,
+      "height": 275,
+      "imageBlobSha": "757d4bad6e397f3c514c81805c2bbed5e0fba73e",
+      "sourceUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/metadata/O000176.yaml",
+      "originalSourceUrl": "https://memberguide.gpo.gov",
+      "originalSourceName": "GPO Member Guide",
+      "license": "Public domain",
+      "licenseUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+      "rightsBasis": "Public-domain declaration of the pinned congressional image corpus",
+      "attribution": "U.S. Congress / unitedstates/images",
+      "reviewedAtUtc": "2026-11-03T06:32:01Z",
+      "aliasEvidence": {
+        "firstPartySourceUrl": "https://www.elections.maryland.gov/elections/2026/general_candidates/2026_GG_statewide_candidatelist.html",
+        "capturePath": "research/candidate-portraits/alias-captures-2026-11-03/olszewski.txt",
+        "captureSha256": "dd0d64a0f90c6a1475a6aa4e910243c43a35b81486ba67277d834c20dc06b2b5",
+        "sourceHtmlSha256": "0dfe58f720a75171bf0340b507c5a9a82e811b1f5f6ec59b40f8f7507f9a76db"
+      }
+    },
+    {
+      "sourceCandidateId": 23094,
+      "candidateName": "Nicholas LaLota",
+      "state": "NY",
+      "party": "R",
+      "chamber": "House",
+      "contestId": "NY-1",
+      "status": "ADMITTED",
+      "bioguideId": "L000598",
+      "matchedName": "Nick LaLota",
+      "matchMethod": "EXACT_REVIEWED_FIRST_PARTY_ALIAS_STATE_PARTY_DISTRICT",
+      "matchedSourceField": "documented_alias_capture_2026_11_03",
+      "identitySourceUrl": "https://raw.githubusercontent.com/unitedstates/congress-legislators/577ca04282d14688cb14f6559eb27b52bdc50dfc/legislators-current.csv",
+      "identityRole": {
+        "chamber": "House",
+        "state": "NY",
+        "party": "Republican",
+        "district": "1"
+      },
+      "url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/L000598.jpg",
+      "width": 225,
+      "height": 275,
+      "imageBlobSha": "1cd7e1b129f3807fc4f77f95d5345e2a0b02386f",
+      "sourceUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/metadata/L000598.yaml",
+      "originalSourceUrl": "https://memberguide.gpo.gov",
+      "originalSourceName": "GPO Member Guide",
+      "license": "Public domain",
+      "licenseUrl": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+      "rightsBasis": "Public-domain declaration of the pinned congressional image corpus",
+      "attribution": "U.S. Congress / unitedstates/images",
+      "reviewedAtUtc": "2026-11-03T06:32:01Z",
+      "aliasEvidence": {
+        "firstPartySourceUrl": "https://usna.edu/Notables/Bios/2000lalota.php",
+        "capturePath": "research/candidate-portraits/alias-captures-2026-11-03/lalota.txt",
+        "captureSha256": "e7fe27e587cea40441e8ce0f728faeca462f6d31334ead8064deb597a78de8c1",
+        "sourceHtmlSha256": "a82ed13181db484fe30fff0e4318f704c4208f9569a22759d19ac30d380502a4"
+      }
     }
   ],
   "unresolved": [
@@ -15920,15 +16034,6 @@
       "reason": "IDENTITY_NOT_VERIFIED"
     },
     {
-      "sourceCandidateId": 23012,
-      "candidateName": "John Olszewski",
-      "state": "MD",
-      "party": "D",
-      "contestId": "MD-2",
-      "chamber": "House",
-      "reason": "IDENTITY_NOT_VERIFIED"
-    },
-    {
       "sourceCandidateId": 23011,
       "candidateName": "Dave Wallace",
       "state": "MD",
@@ -16694,15 +16799,6 @@
       "reason": "IDENTITY_NOT_VERIFIED"
     },
     {
-      "sourceCandidateId": 16266,
-      "candidateName": "Tom Kean Jr.",
-      "state": "NJ",
-      "party": "R",
-      "contestId": "NJ-7",
-      "chamber": "House",
-      "reason": "IDENTITY_NOT_VERIFIED"
-    },
-    {
       "sourceCandidateId": 16201,
       "candidateName": "Aristotle Eliopoulos",
       "state": "NJ",
@@ -16806,15 +16902,6 @@
       "candidateName": "Christopher Gallant",
       "state": "NY",
       "party": "D",
-      "contestId": "NY-1",
-      "chamber": "House",
-      "reason": "IDENTITY_NOT_VERIFIED"
-    },
-    {
-      "sourceCandidateId": 23094,
-      "candidateName": "Nicholas LaLota",
-      "state": "NY",
-      "party": "R",
       "contestId": "NY-1",
       "chamber": "House",
       "reason": "IDENTITY_NOT_VERIFIED"
@@ -18653,6 +18740,8 @@
   "primaryIdentityCatalog": "research/candidate-portraits/primary-identities-2026-11-02.json",
   "primaryIdentityCatalogSha256": "7f5a0a95a0638a66380596ffe19cb17a9b47a5312007d163c345faa633c9a4fe",
   "localSourceCatalog": "research/candidate-portraits/local-sources-2026-11-02.json",
+  "aliasSourceCatalog": "research/candidate-portraits/documented-aliases-2026-11-03.json",
+  "aliasesSourceCatalogSha256": "34f372597c5c75bc2acbc50f9c23db752027d160511ab33caee6d901cb92507f",
   "sourceCatalogSha256": "ba52f968f672bb2c7d8177d5b69f2fb32f1c8d515dcf09e60bb02db0b912edd1",
   "supplementalSourceCatalogSha256": "a66fd3ffd62a50eb8c52d0e2b96318a7501bb3d719431e671621303fde7d2a94",
   "noncongressSourceCatalogSha256": "920e8674d912b80aec7c3b01623dbb9c357cfc1bb93be1f2fbd6bf21eb42fc73",

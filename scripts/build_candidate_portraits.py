@@ -537,7 +537,110 @@ def reviewed_licensed(current: dict, catalog: dict, admitted: list[dict]) -> lis
     return out
 
 
-def build_ledger(current: dict, catalog: dict, reviewed_at: str, supplement: dict | None = None, noncongress: dict | None = None, licensed: dict | None = None, local: dict | None = None) -> dict:
+
+def reviewed_documented_aliases(current: dict, catalog: dict, admitted: list[dict], aliases: dict) -> list[dict]:
+    """Admit manually reviewed first-party aliases to pinned congressional images.
+
+    This is a closed, candidate-ID-bound evidence register, not a nickname or face
+    matching algorithm. Captured official-source excerpts are hashed and checked.
+    """
+    if aliases.get("schema") != "KAHRELUM_DOCUMENTED_CONGRESSIONAL_ALIASES_v1.0":
+        raise ValueError("Unknown documented congressional alias catalog schema")
+    reviewed_at = aliases.get("reviewedAtUtc", "")
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z", reviewed_at):
+        raise ValueError("Documented alias review timestamp must be UTC")
+    people = {p["bioguide_id"]: p for p in catalog["people"]}
+    images = {p["bioguideId"]: p for p in catalog["images"]}
+    candidates = {p["sourceCandidateId"]: p for p in candidate_rows(current)}
+    occupied = {p["sourceCandidateId"] for p in admitted}
+    seen_candidates, seen_bioguides, out = set(), set(), []
+    base = (ROOT / "research/candidate-portraits/alias-captures-2026-11-03").resolve()
+
+    for alias in aliases["records"]:
+        sid = alias["sourceCandidateId"]
+        candidate = candidates.get(sid)
+        fields = ("sourceCandidateId", "candidateName", "state", "party", "chamber", "contestId")
+        expected = ({field: candidate["name"] if field == "candidateName" else candidate[field]
+                     for field in fields} if candidate else {})
+        if any(alias.get(field) != expected.get(field) for field in fields):
+            raise ValueError("Documented alias source roster binding mismatch")
+        if sid in occupied or sid in seen_candidates:
+            raise ValueError("Documented alias would replace or duplicate a portrait")
+        seen_candidates.add(sid)
+        bioguide = alias["bioguideId"]
+        if bioguide in seen_bioguides:
+            raise ValueError("Duplicate Bioguide identity among documented aliases")
+        seen_bioguides.add(bioguide)
+        person = people.get(bioguide)
+        img = images.get(bioguide)
+        if not person or not img or not re.fullmatch(r"[A-Z]\d{6}", bioguide):
+            raise ValueError("Documented alias lacks pinned congressional identity and photograph")
+        state = alias["state"]
+        party = PARTIES.get(person["party"], person["party"])
+        district = alias["contestId"].split("-", 1)[-1]
+        if (alias["chamber"] != "House" or person["type"] != "rep"
+                or person["state"] != state or party != alias["party"]
+                or person["district"] != district or not alias["contestId"].startswith(state + "-")):
+            raise ValueError("Congressional photo state/party/chamber/district identity mismatch")
+        if (img["path"] != f"congress/225x275/{bioguide}.jpg"
+                or not re.fullmatch(r"[0-9a-f]{40}", img["blobSha"])):
+            raise ValueError("Pinned image blob does not match Bioguide archive")
+        url = alias.get("firstPartySourceUrl", "")
+        parsed = urlsplit(url)
+        hostname = (parsed.hostname or "").lower()
+        if (parsed.scheme != "https" or not (hostname.endswith(".gov") or hostname == "usna.edu")
+                or parsed.username or parsed.password):
+            raise ValueError("Documented identity evidence must use official HTTPS source")
+        capture = alias.get("capture", {})
+        relpath = capture.get("path", "")
+        path = (ROOT / relpath).resolve()
+        if not path.is_relative_to(base) or path.suffix != ".txt":
+            raise ValueError("Documented alias capture outside reviewed directory")
+        excerpt = path.read_bytes()
+        if (not re.fullmatch(r"[a-f0-9]{64}", capture.get("sha256", ""))
+                or hashlib.sha256(excerpt).hexdigest() != capture["sha256"]
+                or not re.fullmatch(r"[a-f0-9]{64}", alias.get("sourceHtmlSha256", ""))):
+            raise ValueError("Documented first-party source capture digest mismatch")
+        body = excerpt.decode("utf-8")
+        phrases = alias.get("evidencePhrases", [])
+        if (not isinstance(phrases, list) or not 1 <= len(phrases) <= 4
+                or any(not isinstance(phrase, str) or len(phrase) < 20 or phrase not in body for phrase in phrases)):
+            raise ValueError("Documented alias official identity phrases are missing")
+        evidence = normalize_name(" ".join(phrases))
+        given = re.sub(r"[^A-Za-z]", "", alias["candidateName"].split()[0])
+        family = person["last_name"]
+        crosswalk_given = {normalize_name(person["first_name"].split()[0]),
+                           normalize_name(person.get("wikipedia_id", "").split()[0])}
+        if (any(normalize_name(token) not in evidence for token in (given, family))
+                or not any(token and token in evidence for token in crosswalk_given)):
+            raise ValueError("First-party alias evidence lacks candidate and documented crosswalk names")
+        image_base = f"https://raw.githubusercontent.com/{catalog['photoSource']['repository']}/{catalog['photoSource']['commit']}"
+        source_base = f"https://github.com/{catalog['photoSource']['repository']}/blob/{catalog['photoSource']['commit']}"
+        out.append({
+            **{field: alias[field] for field in fields},
+            "status": "ADMITTED", "bioguideId": bioguide,
+            "matchedName": person["full_name"],
+            "matchMethod": "EXACT_REVIEWED_FIRST_PARTY_ALIAS_STATE_PARTY_DISTRICT",
+            "matchedSourceField": "documented_alias_capture_2026_11_03",
+            "identitySourceUrl": catalog["identitySource"]["url"],
+            "identityRole": {"chamber": "House", "state": state, "party": person["party"], "district": person["district"]},
+            "url": f"{image_base}/{img['path']}", "width": img["width"], "height": img["height"],
+            "imageBlobSha": img["blobSha"],
+            "sourceUrl": f"{source_base}/{img.get('metadataPath',img['path'])}",
+            "originalSourceUrl": img.get("originalSourceUrl") or f"{source_base}/{img.get('originalPath',img['path'])}",
+            "originalSourceName": img.get("originalSourceName", "Congressional portrait archive"),
+            "license": catalog["photoSource"]["license"],
+            "licenseUrl": catalog["photoSource"]["licenseUrl"],
+            "rightsBasis": "Public-domain declaration of the pinned congressional image corpus",
+            "attribution": "U.S. Congress / unitedstates/images",
+            "reviewedAtUtc": alias["reviewedAtUtc"],
+            "aliasEvidence": {"firstPartySourceUrl": url,
+                "capturePath": relpath, "captureSha256": capture["sha256"],
+                "sourceHtmlSha256": alias["sourceHtmlSha256"]},
+        })
+    return out
+
+def build_ledger(current: dict, catalog: dict, reviewed_at: str, supplement: dict | None = None, noncongress: dict | None = None, licensed: dict | None = None, local: dict | None = None, aliases: dict | None = None) -> dict:
     if catalog.get("schema") != "KAHRELUM_CONGRESSIONAL_PORTRAIT_SOURCES_v1.0":
         raise ValueError("Unknown portrait source catalog schema")
     photo_source = catalog["photoSource"]
@@ -644,6 +747,12 @@ def build_ledger(current: dict, catalog: dict, reviewed_at: str, supplement: dic
         records.extend(additions)
         identity_count += len(additions)
         unresolved = [r for r in unresolved if r["sourceCandidateId"] not in added_ids]
+    if aliases:
+        additions = reviewed_documented_aliases(current, catalog, records, aliases)
+        added_ids = {r["sourceCandidateId"] for r in additions}
+        records.extend(additions)
+        identity_count += len(additions)
+        unresolved = [r for r in unresolved if r["sourceCandidateId"] not in added_ids]
     coverage = {
         "sourceListedCandidateRecords": len(candidates),
         "uniqueCandidateIds": len(set(ids)),
@@ -684,6 +793,10 @@ def build_ledger(current: dict, catalog: dict, reviewed_at: str, supplement: dic
     if local:
         result["localSourceCatalog"] = "research/candidate-portraits/local-sources-2026-11-02.json"
         result["admissionRule"] += " November 2 additions also require first-party FEC name/state/party/office evidence. Local Commons source-page captures retain exact per-image licenses, creator and revision; Iowa legislative portraits retain their specific reviewed reuse permission. Source-page evidence is not represented as Commons API metadata."
+    if aliases:
+        result["admissionRule"] += " Exact first-party name aliases may bind a previously unresolved candidate to an existing pinned congressional Bioguide portrait only after unique state, party, chamber, district, document and source capture checks. Ambiguous homonyms remain unresolved."
+        result["aliasSourceCatalog"] = "research/candidate-portraits/documented-aliases-2026-11-03.json"
+        result["aliasesSourceCatalogSha256"] = hashlib.sha256((ROOT / result["aliasSourceCatalog"]).read_bytes()).hexdigest()
     return result
 
 
@@ -694,6 +807,7 @@ def main() -> None:
     parser.add_argument("--noncongress", type=Path, default=DEFAULT_NONCONGRESS)
     parser.add_argument("--licensed", type=Path, default=ROOT / "research/candidate-portraits/licensed-sources-2026-11-02.json")
     parser.add_argument("--local", type=Path, default=ROOT / "research/candidate-portraits/local-sources-2026-11-02.json")
+    parser.add_argument("--aliases", type=Path, default=ROOT / "research/candidate-portraits/documented-aliases-2026-11-03.json")
     parser.add_argument("--current", type=Path, default=ROOT / "election/current-projections.json")
     parser.add_argument("--output", type=Path, default=ROOT / "election/candidate-portraits.json")
     parser.add_argument("--reviewed-at", help="UTC review timestamp; defaults to the captured catalog timestamp")
@@ -704,6 +818,7 @@ def main() -> None:
     noncongress = json.loads(args.noncongress.read_text(encoding="utf-8")) if args.noncongress.exists() else None
     licensed = json.loads(args.licensed.read_text(encoding="utf-8")) if args.licensed.exists() else None
     local = json.loads(args.local.read_text(encoding="utf-8")) if args.local.exists() else None
+    aliases = json.loads(args.aliases.read_text(encoding="utf-8")) if args.aliases.exists() else None
     reviewed_at = args.reviewed_at or max(catalog["retrievedAtUtc"], supplement["retrievedAtUtc"], supplement.get("updatedAtUtc", supplement["retrievedAtUtc"]))
     if noncongress and not args.reviewed_at:
         reviewed_at = max(reviewed_at, noncongress["reviewedAtUtc"])
@@ -711,7 +826,9 @@ def main() -> None:
         reviewed_at = max(reviewed_at, licensed["reviewedAtUtc"])
     if local and not args.reviewed_at:
         reviewed_at = max(reviewed_at, local["reviewedAtUtc"])
-    ledger = build_ledger(json.loads(args.current.read_text(encoding="utf-8")), catalog, reviewed_at, supplement, noncongress, licensed, local)
+    if aliases and not args.reviewed_at:
+        reviewed_at = max(reviewed_at, aliases["reviewedAtUtc"])
+    ledger = build_ledger(json.loads(args.current.read_text(encoding="utf-8")), catalog, reviewed_at, supplement, noncongress, licensed, local, aliases)
     ledger["sourceCatalogSha256"] = hashlib.sha256(args.catalog.read_bytes()).hexdigest()
     ledger["supplementalSourceCatalogSha256"] = hashlib.sha256(args.supplement.read_bytes()).hexdigest()
     if noncongress:
