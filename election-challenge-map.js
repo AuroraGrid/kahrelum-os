@@ -4,7 +4,7 @@
   // Keep the projection shell and its data dependencies on one release generation.
   // The query token prevents an already-open production browser from pairing a new
   // HTML shell with an older cached map bundle or projection payload.
-  const ASSET_VERSION = '20261103-portraits-alias-1';
+  const ASSET_VERSION = '20261103-portraits-bulk-1';
   const readJson = (assetPath) => fetch(`${assetPath}?v=${ASSET_VERSION}`, { cache: 'no-store' });
 
   const states = [
@@ -244,6 +244,36 @@
           || portrait.width !== 250 || !(portrait.height > 0 && portrait.height <= 1000)) return null;
       return portrait;
     }
+    if (portrait.identityType === 'FEC_ENWIKI_SHARED_COMMONS') {
+      const id = String(portrait.fecCandidateId || '');
+      const prefix = portrait.chamber === 'House' ? 'H' : portrait.chamber === 'Senate' ? 'S' : '';
+      const sha = String(portrait.imageSha256 || '');
+      const ext = portrait.imageFormat === 'PNG' ? '.png' : portrait.imageFormat === 'JPEG' ? '.jpg' : '';
+      const cc = /^CC BY(-SA)? (2\.0|3\.0|4\.0)$/.exec(portrait.license || '');
+      const ccUrl = cc ? 'https://creativecommons.org/licenses/' + (cc[1] ? 'by-sa' : 'by') + '/' + cc[2] : '';
+      const rights = cc ? portrait.licenseUrl === ccUrl
+        : portrait.license === 'Public domain' ? portrait.licenseUrl === portrait.sourceUrl + '#Licensing'
+        : portrait.license === 'Copyrighted free use' && portrait.state === 'IA'
+          && portrait.permissionTicket === '2010030210041811' && portrait.attribution === 'Iowa General Assembly'
+          && portrait.licenseUrl === portrait.sourceUrl + '#Licensing';
+      if (!prefix || !new RegExp('^' + prefix + '\\d' + portrait.state + '\\d{5}$').test(id)
+          || !rights || !/^[a-f0-9]{64}$/.test(sha) || !ext
+          || portrait.identityId !== id || portrait.bioguideId
+          || portrait.identitySourceUrl !== 'https://www.fec.gov/data/candidate/' + id + '/?cycle=2026'
+          || portrait.url !== '/assets/candidate-portraits/' + portrait.sourceCandidateId + '-' + sha.slice(0,16) + ext
+          || portrait.imagePath !== portrait.url.slice(1)
+          || !Number.isSafeInteger(portrait.imageBytes) || portrait.imageBytes < 1000
+          || !Number.isInteger(portrait.width) || !Number.isInteger(portrait.height)
+          || !/^[a-f0-9]{40}$/.test(portrait.commonsImageSha1 || '')
+          || !/^[a-f0-9]{64}$/.test(portrait.fecBulkZipSha256 || '')
+          || !String(portrait.sourceUrl || '').startsWith('https://commons.wikimedia.org/wiki/File:')
+          || !String(portrait.sourceWikipediaArticle || '').startsWith('https://en.wikipedia.org/wiki/')
+          || !String(portrait.sourceImageUrl || '').startsWith('https://')
+          || portrait.sourceImageCheck?.httpStatus !== 200
+          || portrait.sourceImageCheck?.sha256 !== sha
+          || !String(portrait.attribution || '').trim() || !String(portrait.rightsBasis || '').trim()) return null;
+      return portrait;
+    }
     if ((portrait.identityType && portrait.identityType !== 'BIOGUIDE') || !/^[A-Z][0-9]{6}$/.test(portrait.bioguideId || '')) return null;
     const localImage = /^[A-Z][0-9]{6}$/.test(portrait.bioguideId) && /^[a-f0-9]{64}$/.test(portrait.imageSha256 || '') && portrait.url === `/assets/candidate-portraits/${portrait.bioguideId}-${portrait.imageSha256.slice(0,16)}.jpg`;
     if (!httpsUrl(portrait.url) && !localImage) return null;
@@ -383,8 +413,8 @@
       const initials = candidate.name.split(/\s+/).map((part) => part[0]).join('').slice(0,2) || '?';
       const fallback = `<span class="nominee-avatar party-${escapeHtml(party.toLowerCase())}" aria-hidden="true">${escapeHtml(initials)}</span>`;
       const visual = `<span class="nominee-visual">${fallback}${portrait ? `<img class="nominee-photo" src="${escapeHtml(portrait.url)}" alt="${escapeHtml(candidate.name)}" width="56" height="56" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : ''}</span>`;
-      const creator = ['FEC_CANDIDATE','CREDITED_COMMONS_PHOTO','FEC_LOCAL_COMMONS'].includes(portrait?.identityType) ? `${escapeHtml(portrait.creditNote || portrait.attribution)} · ` : '';
-      const custody = portrait ? `${creator}<a class="portrait-source" href="${escapeHtml(portrait.sourceUrl)}" title="${escapeHtml(portrait.attribution)}">Photo source</a> · <a class="portrait-source" href="${escapeHtml(portrait.licenseUrl)}">${escapeHtml(portrait.license)}</a>${['FEC_CANDIDATE','FEC_LOCAL_COMMONS'].includes(portrait.identityType) ? ' · Source thumbnail; no additional edits' : portrait.identityType === 'CREDITED_COMMONS_PHOTO' ? ' · Previously cropped source thumbnail; no additional edits by KAHRELUM' : ''}` : 'Photo not yet verified';
+      const creator = ['FEC_CANDIDATE','CREDITED_COMMONS_PHOTO','FEC_LOCAL_COMMONS','FEC_ENWIKI_SHARED_COMMONS'].includes(portrait?.identityType) ? `${escapeHtml(portrait.creditNote || portrait.attribution)} · ` : '';
+      const custody = portrait ? `${creator}<a class="portrait-source" href="${escapeHtml(portrait.sourceUrl)}" title="${escapeHtml(portrait.attribution)}">Photo source</a> · <a class="portrait-source" href="${escapeHtml(portrait.licenseUrl)}">${escapeHtml(portrait.license)}</a>${['FEC_CANDIDATE','FEC_LOCAL_COMMONS','FEC_ENWIKI_SHARED_COMMONS'].includes(portrait.identityType) ? ' · Source thumbnail; no additional edits' : portrait.identityType === 'CREDITED_COMMONS_PHOTO' ? ' · Previously cropped source thumbnail; no additional edits by KAHRELUM' : ''}` : 'Photo not yet verified';
       return `<div class="nominee">${visual}<div><strong>${escapeHtml(candidate.name)}</strong><small>${escapeHtml(label)}</small><small class="portrait-credit">${custody}</small></div></div>`;
     }).join('')}</div>`;
   }
