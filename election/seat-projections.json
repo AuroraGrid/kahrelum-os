@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "edition": "KAH-US-2026-20261031T181057Z with challenger source checks through 2026-11-03T03:48:31Z",
+  "edition": "KAH-US-2026-20261031T181057Z with challenger source checks through 2026-11-03T03:59:21Z",
   "comparisonStatus": "DESCRIPTIVE_ONLY_UNMATCHED_CUTOFFS_AND_SEAT_TYPES",
-  "sourceObservationFileSha256": "266af8c2f69a28b6ccd9869113a5273648ab0ba978cb56400cb53ad7bf64c830",
+  "sourceObservationFileSha256": "160cc18abda81ed92f6a527a1815cc073820d0bdd9b85a5a69de8aaed0d8c10d",
   "house": {
     "totalSeats": 435,
     "democraticControlThreshold": 218,
@@ -44,7 +44,7 @@
       {"provider":"KAHRELUM","democraticSeats":50.229989536494045,"seatType":"expected caucus","edition":"Fresh run Oct. 31 18:10 UTC; ratings Oct. 20","sourceUrl":"/election-challenge"},
       {"provider":"Decision Desk HQ","democraticSeats":52,"seatType":"projected","edition":"Updated Nov. 2 3:03 PM ET; retrieved Nov. 2 21:46 UTC","sourceUrl":"https://votes.decisiondeskhq.com/forecast/2026"},
       {"provider":"99chambers Horizon","democraticSeats":52.7,"seatType":"expected","edition":"Nov. 2 2:03 AM ET; retrieved Nov. 2 15:52 UTC","sourceUrl":"https://99chambers.app/updates/2026-11-02"},
-      {"provider":"CalltheMap","democraticSeats":51.4,"seatType":"expected incl. aligned independents","edition":"Forecast Nov. 2; direct response parsed Nov. 2 23:04 UTC","sourceUrl":"https://www.callthemap.com/senate"},
+      {"provider":"CalltheMap","democraticSeats":51.6,"seatType":"expected incl. aligned independents; separate median 52","edition":"Forecast Nov. 2; changed values retrieved prospectively Nov. 3 03:59 UTC","sourceUrl":"https://www.callthemap.com/senate"},
       {"provider":"COYNTOSS","democraticSeats":51.781,"seatType":"expected caucus; separate median 52","edition":"Release 2026-11-02-01; retrieved Nov. 2 16:35 UTC","sourceUrl":"https://chasecoyne.com/senate"},
       {"provider":"Scrutinel","democraticSeats":52.46,"seatType":"expected mean; separate median 53","edition":"Updated Nov. 2 10:25 PM EST; generated Nov. 3 03:25:40 UTC; retrieved Nov. 3 03:30 UTC","sourceUrl":"https://scrutinel.com/"},
       {"provider":"ElectIndex","democraticSeats":53.2,"seatType":"average; projected 54","edition":"Public feed commit 75d42ad; commit metadata 02:11 UTC; retrieved Nov. 3 02:18 UTC","sourceUrl":"https://electindex.com/forecasts/"},
