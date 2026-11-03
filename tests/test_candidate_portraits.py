@@ -20,7 +20,7 @@ class CandidatePortraitTests(unittest.TestCase):
 
     def test_real_roster_coverage_and_exact_card_binding(self):
         rebuilt = portraits.build_ledger(self.current, self.catalog, self.supplement["retrievedAtUtc"], self.supplement)
-        self.assertEqual(rebuilt["records"], [r for r in self.ledger["records"] if r.get("bioguideId")])
+        self.assertEqual(rebuilt["records"], [r for r in self.ledger["records"] if r.get("bioguideId") and not r.get("aliasEvidence")])
         self.assertEqual(rebuilt["coverage"]["sourceListedCandidateRecords"], 940)
         self.assertEqual(rebuilt["coverage"]["candidateCardsWithPortraits"], 397)
         self.assertEqual(rebuilt["coverage"]["candidateCardsWithoutPortraits"], 543)
