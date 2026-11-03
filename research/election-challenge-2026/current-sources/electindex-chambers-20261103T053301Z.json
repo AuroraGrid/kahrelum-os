@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "ElectIndex",
+  "sourceUrls": {
+    "publicForecast": "https://electindex.com/forecasts/",
+    "repository": "https://github.com/ElectIndex/26_us_forecast_data",
+    "commitApi": "https://api.github.com/repos/ElectIndex/26_us_forecast_data/commits?path=output/chambers.csv&per_page=1",
+    "rawPinnedCsv": "https://raw.githubusercontent.com/ElectIndex/26_us_forecast_data/9383ecc3d0403ea14ab9117382b3637a4ad46dc9/output/chambers.csv"
+  },
+  "retrieval": {
+    "commitApiRetrievedAtUtc": "2026-11-03T05:32:59.9317616Z",
+    "rawCsvRetrievedAtUtc": "2026-11-03T05:33:01.6483697Z",
+    "representation": "FIRST_PARTY_GITHUB_UTF8_RESPONSES_NOT_EXACT_WIRE_BYTES"
+  },
+  "publisherEdition": {
+    "commitSha": "9383ecc3d0403ea14ab9117382b3637a4ad46dc9",
+    "commitMessage": "Forecast update 2026-11-02 (Emerson 6-state batch + MO-02/MT-01, Concord MI, Targoz TN)",
+    "commitMetadataUtc": "2026-11-03T04:08:16Z"
+  },
+  "observations": {
+    "houseDemocraticControlPct": 93.0,
+    "houseAverageDemocraticSeats": 248.0,
+    "houseProjectedDemocraticSeats": 243,
+    "houseControlThreshold": 218,
+    "houseRaces": 435,
+    "senateDemocraticControlPct": 74.9,
+    "senateAverageDemocraticSeats": 53.0,
+    "senateProjectedDemocraticSeats": 54,
+    "senateControlThreshold": 51,
+    "senateRaces": 35
+  },
+  "custody": {
+    "rawCsvHttpStatus": 200,
+    "rawCsvUtf8Bytes": 229,
+    "rawCsvSha256": "3bb00b8d40c56c3758e722172f008572fcaa41957e768a2508f2bec64c8e82d1",
+    "commitApiHttpStatus": 200,
+    "commitApiUtf8Bytes": 3520,
+    "commitApiSha256": "99164778fb61ca25837782389392ad68c3c60560bb5a1cf3d6ebcb41cd97a5a5"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "houseDemocraticControlPct": {"from": 93.2, "to": 93.0},
+    "senateDemocraticControlPct": {"from": 76.8, "to": 74.9},
+    "houseAverageDemocraticSeats": {"from": 248.7, "to": 248.0},
+    "senateAverageDemocraticSeats": {"from": 53.2, "to": 53.0},
+    "houseProjectedDemocraticSeats": {"from": 244, "to": 243},
+    "senateProjectedDemocraticSeats": {"from": 54, "to": 54}
+  },
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "providerUsedByScript": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  }
+}
