@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "ElectIndex",
+  "sourceUrls": {
+    "publicForecast": "https://electindex.com/forecasts/",
+    "repository": "https://github.com/ElectIndex/26_us_forecast_data",
+    "commitApi": "https://api.github.com/repos/ElectIndex/26_us_forecast_data/commits?path=output/chambers.csv&per_page=1",
+    "rawPinnedCsv": "https://raw.githubusercontent.com/ElectIndex/26_us_forecast_data/75d42addad3e3c2c84ad43f99d9b2854128ac3bb/output/chambers.csv"
+  },
+  "retrieval": {
+    "commitApiRetrievedAtUtc": "2026-11-03T02:18:51.199663Z",
+    "rawCsvRetrievedAtUtc": "2026-11-03T02:18:52.954159Z",
+    "representation": "FIRST_PARTY_GITHUB_UTF8_RESPONSES_NOT_EXACT_WIRE_BYTES"
+  },
+  "publisherEdition": {
+    "commitSha": "75d42addad3e3c2c84ad43f99d9b2854128ac3bb",
+    "commitMessage": "Forecast update 2026-11-02 (AtlasIntel Alaska: SEN/GOV/AK-01)",
+    "commitMetadataUtc": "2026-11-03T02:11:38Z"
+  },
+  "observations": {
+    "houseDemocraticControlPct": 93.2,
+    "houseAverageDemocraticSeats": 248.7,
+    "houseProjectedDemocraticSeats": 244,
+    "houseControlThreshold": 218,
+    "houseRaces": 435,
+    "senateDemocraticControlPct": 76.8,
+    "senateAverageDemocraticSeats": 53.2,
+    "senateProjectedDemocraticSeats": 54,
+    "senateControlThreshold": 51,
+    "senateRaces": 35
+  },
+  "custody": {
+    "rawCsvHttpStatus": 200,
+    "rawCsvUtf8Bytes": 229,
+    "rawCsvSha256": "08f7de6dc1033a8fc1def8eb20aa3c4c1687b0ad1f28806af5ff553b02733292",
+    "commitApiHttpStatus": 200,
+    "commitApiUtf8Bytes": 3494,
+    "commitApiSha256": "11d6d9557456171272e2ddabe3d2bdcf30ffc287e51f014708aca5d69d597e1a"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "houseDemocraticControlPct": {"from": 92.6, "to": 93.2},
+    "senateDemocraticControlPct": {"from": 76.5, "to": 76.8},
+    "houseAverageDemocraticSeats": {"from": 248.3, "to": 248.7},
+    "senateAverageDemocraticSeats": {"from": 53.1, "to": 53.2},
+    "houseProjectedDemocraticSeats": {"from": 244, "to": 244},
+    "senateProjectedDemocraticSeats": {"from": 54, "to": 54}
+  },
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "providerUsedByScript": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  }
+}
