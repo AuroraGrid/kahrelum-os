@@ -277,7 +277,7 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertEqual(votescope["houseDemocraticSeats"], 238.0)
         self.assertIn("median 245", votescope["houseSeatType"])
         electindex = next(row for row in challengers["records"] if row["provider"] == "ElectIndex")
-        self.assertEqual((electindex["houseDemocraticControlPct"], electindex["senateDemocraticControlPct"], electindex["houseDemocraticSeats"], electindex["senateDemocraticSeats"]), (93.0, 74.9, 248.0, 53.0))
+        self.assertEqual((electindex["houseDemocraticControlPct"], electindex["senateDemocraticControlPct"], electindex["houseDemocraticSeats"], electindex["senateDemocraticSeats"]), (92.8, 74.9, 248.0, 53.0))
         self.assertEqual((electindex["houseProjectedDemocraticSeats"], electindex["senateProjectedDemocraticSeats"]), (243, 54))
         self.assertEqual((electindex["houseControlThreshold"], electindex["senateControlThreshold"]), (218, 51))
         new_numeric = {row["provider"]: row for row in challengers["records"] if row["provider"] in {"Dave Manuel", "On Point Politics", "VotePredictor", "Midterm Forecast"}}
@@ -293,7 +293,7 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertEqual(new_numeric["VotePredictor"]["houseDemocraticSeats"], 230.2)
         self.assertEqual((new_numeric["Midterm Forecast"]["houseDemocraticControlPct"], new_numeric["Midterm Forecast"]["senateDemocraticControlPct"]), (91.0, 76.0))
         self.assertEqual((new_numeric["Midterm Forecast"]["houseDemocraticSeats"], new_numeric["Midterm Forecast"]["senateDemocraticSeats"]), (236.0, 53.0))
-        self.assertIn("10:41 PM ET", new_numeric["Midterm Forecast"]["sourceEdition"])
+        self.assertIn("1:41 AM ET", new_numeric["Midterm Forecast"]["sourceEdition"])
         yale = next(row for row in challengers["records"] if row["provider"] == "Yale PLSC 2219 class model")
         self.assertEqual((yale["houseDemocraticControlPct"], yale["senateDemocraticControlPct"], yale["houseDemocraticSeats"], yale["senateDemocraticSeats"]), (95.0, 43.0, 237.0, 50.0))
         self.assertIn("Page snapshot Nov. 2", yale["sourceEdition"])
