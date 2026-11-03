@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "edition": "KAH-US-2026-20261031T181057Z with challenger source checks through 2026-11-03T02:49:20Z",
+  "edition": "KAH-US-2026-20261031T181057Z with challenger source checks through 2026-11-03T03:30:13Z",
   "comparisonStatus": "DESCRIPTIVE_ONLY_UNMATCHED_CUTOFFS_AND_SEAT_TYPES",
-  "sourceObservationFileSha256": "103212c68f1798e8f8cac0fa6c4737449b9eff65f4c33f5551e1af6235bdb45c",
+  "sourceObservationFileSha256": "43229047ef43f9e05804752ac884053ee6c1ae05d391e9712f8bb97b9501f075",
   "house": {
     "totalSeats": 435,
     "democraticControlThreshold": 218,
@@ -19,7 +19,7 @@
       {"provider":"99chambers Horizon","democraticSeats":241.7,"seatType":"expected","edition":"Nov. 2 2:03 AM ET; retrieved Nov. 2 15:52 UTC","sourceUrl":"https://99chambers.app/updates/2026-11-02"},
       {"provider":"CalltheMap","democraticSeats":235.7,"seatType":"expected","edition":"Forecast Nov. 2; direct response parsed Nov. 2 23:04 UTC","sourceUrl":"https://www.callthemap.com/house"},
       {"provider":"COYNTOSS","democraticSeats":238.57,"seatType":"expected mean; displayed 238.6; median 237","edition":"Release 2026-11-02-01; retrieved Nov. 2 14:42 UTC","sourceUrl":"https://chasecoyne.com/house"},
-      {"provider":"Scrutinel","democraticSeats":240.66,"seatType":"expected mean; separate median 240","edition":"Updated Nov. 2 4:25 PM EST; generated 21:25:29 UTC; retrieved Nov. 2 21:47 UTC","sourceUrl":"https://scrutinel.com/"},
+      {"provider":"Scrutinel","democraticSeats":239.31,"seatType":"expected mean; separate median 238","edition":"Updated Nov. 2 10:25 PM EST; generated Nov. 3 03:25:40 UTC; retrieved Nov. 3 03:30 UTC","sourceUrl":"https://scrutinel.com/"},
       {"provider":"Vote-Scope","democraticSeats":238,"seatType":"projected; median 245","edition":"Updated Nov. 2; changed fields retrieved Nov. 3 02:02 UTC; precise source time not exposed","sourceUrl":"https://vote-scope.com/en/us/house/"},
       {"provider":"ElectIndex","democraticSeats":248.7,"seatType":"average; projected 244","edition":"Public feed commit 75d42ad; commit metadata 02:11 UTC; retrieved Nov. 3 02:18 UTC","sourceUrl":"https://electindex.com/forecasts/"},
       {"provider":"Fred Cornell","democraticSeats":252,"seatType":"median","edition":"Run Nov. 2; retrieved Nov. 2 07:23 UTC","sourceUrl":"https://fredcornell.com/us/house"},
@@ -46,7 +46,7 @@
       {"provider":"99chambers Horizon","democraticSeats":52.7,"seatType":"expected","edition":"Nov. 2 2:03 AM ET; retrieved Nov. 2 15:52 UTC","sourceUrl":"https://99chambers.app/updates/2026-11-02"},
       {"provider":"CalltheMap","democraticSeats":51.4,"seatType":"expected incl. aligned independents","edition":"Forecast Nov. 2; direct response parsed Nov. 2 23:04 UTC","sourceUrl":"https://www.callthemap.com/senate"},
       {"provider":"COYNTOSS","democraticSeats":51.781,"seatType":"expected caucus; separate median 52","edition":"Release 2026-11-02-01; retrieved Nov. 2 16:35 UTC","sourceUrl":"https://chasecoyne.com/senate"},
-      {"provider":"Scrutinel","democraticSeats":52.52,"seatType":"expected mean; separate median 53","edition":"Updated Nov. 2 4:25 PM EST; generated 21:25:29 UTC; retrieved Nov. 2 21:47 UTC","sourceUrl":"https://scrutinel.com/"},
+      {"provider":"Scrutinel","democraticSeats":52.46,"seatType":"expected mean; separate median 53","edition":"Updated Nov. 2 10:25 PM EST; generated Nov. 3 03:25:40 UTC; retrieved Nov. 3 03:30 UTC","sourceUrl":"https://scrutinel.com/"},
       {"provider":"ElectIndex","democraticSeats":53.2,"seatType":"average; projected 54","edition":"Public feed commit 75d42ad; commit metadata 02:11 UTC; retrieved Nov. 3 02:18 UTC","sourceUrl":"https://electindex.com/forecasts/"},
       {"provider":"Fred Cornell","democraticSeats":52,"seatType":"expected party seats; plus 1 independent","edition":"Run Nov. 2; retrieved Nov. 2 07:23 UTC","sourceUrl":"https://fredcornell.com/us/senate"},
       {"provider":"Yale PLSC 2219","democraticSeats":50,"seatType":"class model","edition":"Snapshot Nov. 1; built 21:07 UTC; retrieved Nov. 2 03:21 UTC","sourceUrl":"https://kevinmdeluca.com/forecast/"},
