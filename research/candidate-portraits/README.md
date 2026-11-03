@@ -86,3 +86,9 @@ The three-photo batch above was recovered from unpublished commit `87869ea13a60a
 The dedicated `candidate-portraits` Firebase overlay profile changes only the election page, its map script, the portrait ledger and locally stored candidate JPEGs. It copies every other live file hash and Hosting configuration, rejects removals, validates attached portrait coverage and all local image bytes, preserves API response hashes, and promotes the exact verified preview version only if production has not changed. Run `scripts/deploy-unified-firebase.ps1 -Plan -Profile candidate-portraits`, then `-Preview`, review the browser, then `-Promote` from the same isolated checkout. Deployment results are recorded in the linked report.
 
 Production publication completed at **2026-11-02 20:54:29 UTC**, after the user-approved five-version storage cleanup and guarded Firebase preview/promotion. The returning browser verifies 429 admitted portraits and all eight new images. The [final production receipt](review-2026-11-02/firebase-production-receipt.json) and [browser evidence](review-2026-11-02/production-browser-audit.json) are preserved with the report.
+
+## November 3, 2026: first-party congressional alias review (staged)
+
+The importer now supports three manually reviewed, SHA-256-backed official-source name aliases to existing public-domain Bioguide images: Tom Kean Jr. (NJ-7), John/Johnny Olszewski (MD-2) and Nicholas/Nick LaLota (NY-1). The reproducible proposed ledger is **432 admitted / 508 unresolved** of 940. All 429 previously admitted records are unchanged, and no additional image files are needed. See [the November 3 audit](review-2026-11-03/REPORT.md), the `documented-aliases-2026-11-03.json` source catalog and `alias-captures-2026-11-03/`.
+
+This source change is **not** proof of a new Firebase publication. The similarly named Daniel J. Sullivan of Alaska remains unresolved and must not be shown as incumbent Dan S. Sullivan.
