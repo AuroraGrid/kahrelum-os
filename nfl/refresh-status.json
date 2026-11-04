@@ -1,7 +1,7 @@
 {
   "schema": "KAHRELUM_REFRESH_STATUS_v1.1",
-  "lastAttemptAt": "2026-11-04T16:20:48Z",
-  "lastSuccessfulSourceCheckAt": "2026-11-04T16:20:48Z",
+  "lastAttemptAt": "2026-11-04T22:02:04Z",
+  "lastSuccessfulSourceCheckAt": "2026-11-04T22:02:04Z",
   "lastPublishedUpdateAt": "2026-10-31T13:13:05Z",
   "feedFreshness": "DEGRADED",
   "monitoringState": "DEADLINE_WINDOW_OPEN",
@@ -10,7 +10,7 @@
   "sourcesSucceeded": 36,
   "sourcesFailed": 1,
   "observationsNew": 52,
-  "reviewQueueCount": 649,
+  "reviewQueueCount": 701,
   "materialAlerts": [
     {
       "observationId": "OBS-50323095a31bcf80e1ad",
@@ -37,7 +37,7 @@
     }
   ],
   "truthBoundary": "Source checks and publication are separate. lastSuccessfulSourceCheckAt means at least one source succeeded; lastFullySuccessfulSourceCheckAt requires every registered operational source to succeed.",
-  "lastCompletedCheckAt": "2026-11-04T16:20:48Z",
+  "lastCompletedCheckAt": "2026-11-04T22:02:04Z",
   "lastFullySuccessfulSourceCheckAt": "2026-10-31T22:48:20Z",
   "duplicatesSuppressed": 5,
   "sourceFailureAlerts": [
@@ -45,7 +45,7 @@
       "sourceIntegrationId": "NFL_TRANSACTIONS",
       "status": "MATERIAL_SOURCE_FAILURE",
       "reason": "ValueError: official transaction headings do not establish November 2026; fallback months are not complete records",
-      "observedAtUtc": "2026-11-04T16:20:48Z"
+      "observedAtUtc": "2026-11-04T22:02:04Z"
     }
   ],
   "reviewProposalCount": 29,
