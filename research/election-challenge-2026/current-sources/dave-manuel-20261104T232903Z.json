@@ -1,0 +1,29 @@
+{
+  "provider": "Dave Manuel",
+  "sourceUrl": "https://www.davemanuel.com/2026-midterm-forecast.php",
+  "retrievedAtUtc": "2026-11-04T23:29:03.8878326Z",
+  "requestStartedAtUtc": "2026-11-04T23:29:01.8537526Z",
+  "sourceUpdateText": "Final forecast; last updated November 3, 2026, 11:45 p.m. ET",
+  "custodyRepresentation": "FIRST_PARTY_HTTP_RESPONSE_UTF8_NOT_EXACT_WIRE_BYTES",
+  "directHttpStatus": 200,
+  "responseUtf8Bytes": 273854,
+  "rawSha256": "da6973f1404acafdcd1159a9d5fd83a3cba945a10ba3f1cf4af38fe6fab07acc",
+  "fields": {
+    "houseDemocraticControlPct": 94,
+    "houseDemocraticSeatsProjectedMedian": 234,
+    "houseDemocraticSeats90PctInterval": [216, 257],
+    "houseControlThreshold": 218,
+    "senateDemocraticControlPct": 75,
+    "senateRepublicanSeatsProjectedMedian": 47,
+    "senateRepublicanSeats90PctInterval": [43, 52],
+    "senateDemocraticAlignedSeatsComparisonFromRepublicanMedian": 53,
+    "senatePublisherDemocraticMedian": 52,
+    "senateControlThreshold": 51,
+    "genericBallotDisplayed": "D+8.2"
+  },
+  "priorReceiptPath": "research/election-challenge-2026/current-sources/dave-manuel-20261103T080256Z.json",
+  "stage": "FINAL_FORECAST_ARCHIVE_AFTER_ELECTION_DAY",
+  "providerUsedByRefreshElectionProjectionsScript": false,
+  "kahrelumProbabilityEditionDisposition": "NO_NEW_KAHRELUM_PROBABILITY_EDITION",
+  "admissionNote": "The first-party final forecast was observed prospectively on November 4. Its displayed November 3 11:45 p.m. ET update and post-election archive wording are publisher claims, not this monitor's retrieval time. Democratic House control changed from the last admitted 93% to 94%; Senate control remains 75%. House and Senate seat statistic types, intervals, and separate 218/51 control cutoffs are preserved."
+}

@@ -282,9 +282,9 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertEqual((electindex["houseControlThreshold"], electindex["senateControlThreshold"]), (218, 51))
         new_numeric = {row["provider"]: row for row in challengers["records"] if row["provider"] in {"Dave Manuel", "On Point Politics", "VotePredictor", "Midterm Forecast"}}
         self.assertEqual(set(new_numeric), {"Dave Manuel", "On Point Politics", "VotePredictor", "Midterm Forecast"})
-        self.assertEqual((new_numeric["Dave Manuel"]["houseDemocraticControlPct"], new_numeric["Dave Manuel"]["senateDemocraticControlPct"]), (93.0, 75.0))
+        self.assertEqual((new_numeric["Dave Manuel"]["houseDemocraticControlPct"], new_numeric["Dave Manuel"]["senateDemocraticControlPct"]), (94.0, 75.0))
         self.assertEqual((new_numeric["Dave Manuel"]["houseDemocraticSeats"], new_numeric["Dave Manuel"]["senateDemocraticSeats"]), (234.0, 53.0))
-        self.assertIn("2:45 AM ET", new_numeric["Dave Manuel"]["sourceEdition"])
+        self.assertIn("11:45 PM ET", new_numeric["Dave Manuel"]["sourceEdition"])
         self.assertEqual((new_numeric["On Point Politics"]["houseDemocraticControlPct"], new_numeric["On Point Politics"]["senateDemocraticControlPct"]), (90.9, 80.4))
         self.assertEqual((new_numeric["On Point Politics"]["houseDemocraticSeats"], new_numeric["On Point Politics"]["senateDemocraticSeats"]), (255.0, 54.54))
         self.assertEqual((new_numeric["On Point Politics"]["houseDemocraticControlExactPct"], new_numeric["On Point Politics"]["senateDemocraticControlExactPct"]), (90.94, 80.39))
