@@ -8,11 +8,11 @@
     "results": "https://polling-desk.com/results.csv"
   },
   "sourceSha256": {
-    "houseCsv": "b1c9d77ed6f1f2ae20b0dd0f0b7f46b8e885ca8c8664031fec8af14b7f90a1a9",
-    "resultsCsv": "a8e87dfb639760b5463ebc303c83fd068030b48339f698005f76b6af929325e5"
+    "houseCsv": "0af2975968cfb89ad071b4ad739c4503392778cf38afc22add809fa047ed6e10",
+    "resultsCsv": "b6ac2bb62d761eefc31243ded4a444fa9e5315435d7d8c27463a1a2c8fe547df"
   },
-  "sourceLatestResultUpdatedUtc": "2026-11-05T15:32:02Z",
-  "retrievalUtc": "2026-11-05T15:34:59.208341Z",
+  "sourceLatestResultUpdatedUtc": "2026-11-05T15:49:22Z",
+  "retrievalUtc": "2026-11-05T15:49:58.471818Z",
   "publishedAsOf": "Snapshot captured on 2026-11-05. Each non-House race includes its per-race source timestamp. Earlier race calls are not official state certifications.",
   "resultStatus": "UNOFFICIAL_CALLS_AND_COUNTS_NOT_CERTIFIED",
   "verificationPolicy": {
@@ -1552,11 +1552,11 @@
       "winnerOrLeader": "Austin Rogers",
       "party": "REP",
       "votes": {
-        "DEM": 147791,
+        "DEM": 147792,
         "REP": 160968,
         "OTHER": 0
       },
-      "totalVotes": 308759,
+      "totalVotes": 308760,
       "democraticMarginPoints": -4.27,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/fl-02"
@@ -1586,12 +1586,12 @@
       "winnerOrLeader": "Aaron Bean",
       "party": "REP",
       "votes": {
-        "DEM": 144752,
-        "REP": 151095,
-        "OTHER": 5022
+        "DEM": 144795,
+        "REP": 151114,
+        "OTHER": 5023
       },
-      "totalVotes": 300869,
-      "democraticMarginPoints": -2.11,
+      "totalVotes": 300932,
+      "democraticMarginPoints": -2.1,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/fl-04"
     },
@@ -1603,11 +1603,11 @@
       "winnerOrLeader": "John Rutherford",
       "party": "REP",
       "votes": {
-        "DEM": 145081,
-        "REP": 187877,
+        "DEM": 145121,
+        "REP": 187917,
         "OTHER": 0
       },
-      "totalVotes": 332958,
+      "totalVotes": 333038,
       "democraticMarginPoints": -12.85,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/fl-05"
@@ -1637,12 +1637,12 @@
       "winnerOrLeader": "Ryan Elijah",
       "party": "REP",
       "votes": {
-        "DEM": 159113,
-        "REP": 161019,
-        "OTHER": 3471
+        "DEM": 159488,
+        "REP": 161189,
+        "OTHER": 3480
       },
-      "totalVotes": 323603,
-      "democraticMarginPoints": -0.59,
+      "totalVotes": 324157,
+      "democraticMarginPoints": -0.52,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/fl-07"
     },
@@ -7636,26 +7636,26 @@
       "winnerOrLeader": "Ashley Moody",
       "party": "REP",
       "percentReporting": 100,
-      "sourceUpdatedUtc": "2026-11-05T15:31:02Z",
+      "sourceUpdatedUtc": "2026-11-05T15:48:21Z",
       "candidates": [
         {
           "name": "Ashley Moody",
           "party": "REP",
-          "votes": 4207774,
+          "votes": 4208004,
           "percent": 50.87,
           "calledWinner": true
         },
         {
           "name": "Angie Nixon",
           "party": "DEM",
-          "votes": 3968811,
-          "percent": 47.98,
+          "votes": 3969271,
+          "percent": 47.99,
           "calledWinner": false
         },
         {
           "name": "Neil J. Gillespie",
           "party": "IND",
-          "votes": 94529,
+          "votes": 94538,
           "percent": 1.14,
           "calledWinner": false
         }
@@ -9129,40 +9129,40 @@
       "winnerOrLeader": "Byron Donalds",
       "party": "REP",
       "percentReporting": 100,
-      "sourceUpdatedUtc": "2026-11-05T15:32:02Z",
+      "sourceUpdatedUtc": "2026-11-05T15:48:21Z",
       "candidates": [
         {
           "name": "Byron Donalds",
           "party": "REP",
-          "votes": 4132112,
+          "votes": 4132334,
           "percent": 50.02,
           "calledWinner": true
         },
         {
           "name": "David Jolly",
           "party": "DEM",
-          "votes": 4024180,
+          "votes": 4024639,
           "percent": 48.71,
           "calledWinner": false
         },
         {
           "name": "Scott Eckhard Jewett",
           "party": "LIB",
-          "votes": 37884,
+          "votes": 37889,
           "percent": 0.46,
           "calledWinner": false
         },
         {
           "name": "Frank J. Russo",
           "party": "IND",
-          "votes": 23199,
+          "votes": 23201,
           "percent": 0.28,
           "calledWinner": false
         },
         {
           "name": "Charles Burkett",
           "party": "IND",
-          "votes": 15235,
+          "votes": 15239,
           "percent": 0.18,
           "calledWinner": false
         }
