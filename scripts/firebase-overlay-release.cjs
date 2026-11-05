@@ -163,6 +163,13 @@ const RELEASE_PROFILES = {
     sitemapRoutes: ['/election-results-2026', '/israel-certified-2026', '/nfl/deadline-watch-2026', '/evidence-scorecard'],
     includeHomepage: true,
   },
+  'israel-c7': {
+    // Final Israel C7 only, without replacing unrelated live U.S. / NFL / investigation files.
+    overlayFiles: ['israel-certified-2026.html', 'israel-certified-2026.js',
+      'election/israel-certified-2026.json', 'forecasting.html'],
+    sitemapRoutes: [],
+    includeHomepage: true,
+  },
   'us-results-data': {
     // Recurrent, unofficial elections data only. Old locks, current Israeli records, NFL editorial releases remain immutable.
     overlayFiles: ['election/results-2026-snapshot.json'],
@@ -624,6 +631,19 @@ function replaceHomepageSection(home, fragment) {
   return Buffer.from(output, 'utf8');
 }
 
+function replaceIsraelHomepagePortfolio(home, fragment) {
+  // Replace only the existing Israel portfolio section, retaining every unrelated live byte.
+  const section = /<section\b[^>]*id="portfolio"[^>]*>[\s\S]*?<\/section>/gi;
+  const matches = home.match(section) || [];
+  if (matches.length !== 1) fail('Israel C7 homepage update requires exactly one existing portfolio section.');
+  const bounded = fragment.trim();
+  if (!bounded.startsWith('<section id="portfolio">') || !bounded.includes('C7 completed') ||
+      !bounded.includes('6 PASS') || !bounded.includes('4 MISS')) {
+    fail('Israel C7 homepage fragment lacks required custody text.');
+  }
+  return home.replace(section, bounded);
+}
+
 function replaceHomepageSocialMetadata(home, repositoryHome) {
   const socialPattern = /<meta\s+(?:property|name)="(?:og:(?:type|url|title|description|image(?::(?:secure_url|type|width|height|alt))?)|twitter:(?:card|title|description|image|image:alt))"[^>]*>\s*/gi;
   const approvedTags = repositoryHome.match(socialPattern) || [];
@@ -748,7 +768,11 @@ async function buildOverlay(live, profileName) {
     const home = (await verifiedLiveFile(live, '/index.html', '/')).toString('utf8');
     const fragment = fs.readFileSync(path.join(ROOT, 'hosting', 'homepage-divisions.html'), 'utf8');
     const repositoryHome = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
-    const boundedHome = replaceHomepageSection(home, fragment).toString('utf8');
+    let boundedHome = replaceHomepageSection(home, fragment).toString('utf8');
+    if (profileName === 'israel-c7') {
+      const portfolio = fs.readFileSync(path.join(ROOT, 'hosting', 'homepage-israel-c7.html'), 'utf8');
+      boundedHome = replaceIsraelHomepagePortfolio(boundedHome, portfolio);
+    }
     addBlob(desired, blobs, '/index.html', replaceHomepageSocialMetadata(boundedHome, repositoryHome));
   }
 
@@ -770,6 +794,11 @@ async function buildOverlay(live, profileName) {
   }
 
   const changedPaths = Object.keys(desired).filter((item) => live.fileMap[item] !== desired[item]).sort();
+  if (profileName === 'israel-c7' && changedPaths.some(item =>
+      !['/israel-certified-2026.html', '/israel-certified-2026.js',
+        '/election/israel-certified-2026.json', '/forecasting.html', '/index.html'].includes(item))) {
+    fail('Israel C7 release attempted to replace an unrelated live Firebase path.');
+  }
   if (profileName === 'results-verified' && changedPaths.some(item =>
       !RELEASE_PROFILES['results-verified'].overlayFiles.includes(item.slice(1)) &&
       !['/index.html','/sitemap.xml'].includes(item))) {
@@ -840,6 +869,8 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     ? [...HTML_ROUTES, '/evidence-scorecard']
     : profileName === 'results-verified'
     ? [...HTML_ROUTES, '/evidence-scorecard', '/election-results-2026', '/israel-certified-2026', '/nfl/deadline-watch-2026']
+    : profileName === 'israel-c7'
+    ? ['/', '/forecasting', '/israel-certified-2026']
     : profileName === 'us-results-data'
     ? ['/election-results-2026']
     : profileName === 'candidate-portraits' ? ['/election-challenge'] : profileName === 'sports-intelligence'
@@ -923,10 +954,29 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
       fail('U.S. results content incomplete, unlabelled, or mixes noncontested Senate seats.');
     }
   }
+  if (profileName === 'israel-c7') {
+    const israel = JSON.parse((await fetchBytes(origin + '/election/israel-certified-2026.json')).toString('utf8'));
+    if (israel.schema !== 'KAHRELUM_ISRAEL_C7_CERTIFIED_SEATS_POSTELECTION_AUDIT_V1' ||
+        israel.certifiedValidVotes !== 5691426 || israel.certifiedTotalBallots !== 5717397 ||
+        israel.certifiedInvalidVotes !== 25971 || israel.c7?.status !== 'CLOSED' ||
+        israel.c7?.process?.pass !== 6 || israel.c7?.process?.miss !== 4 ||
+        israel.c7?.proprietaryWinnerBrier !== 'NOT_EVALUABLE' ||
+        israel.results?.length !== 14 ||
+        israel.results.reduce((sum, x) => sum + x.certifiedSeats, 0) !== 120 ||
+        israel.scores.externalOctober26.l1 !== 20 || israel.scores.kahrelumPostClose.l1 !== 8 ||
+        !israel.goldSourceUrls.some(url => url.includes('Memorandum%20-%20Results%20of%20the%2026th%20Knesset%20Elections.pdf'))) {
+      fail('Israel C7 official-source or scoring integrity check failed.');
+    }
+    const page = (await fetchBytes(origin + '/israel-certified-2026')).toString('utf8');
+    const desk = (await fetchBytes(origin + '/forecasting')).toString('utf8');
+    if (!page.includes('6 PASS') || !page.includes('4 MISS') ||
+        !page.includes('5,691,426') || !page.includes('not evaluable') ||
+        !desk.includes('C7 completed')) fail('Israel C7 content boundary failed.');
+  }
   if (profileName === 'results-verified') {
     const israel = JSON.parse((await fetchBytes(origin + '/election/israel-certified-2026.json')).toString('utf8'));
     if (israel.schema !== 'KAHRELUM_ISRAEL_C7_CERTIFIED_SEATS_POSTELECTION_AUDIT_V1' ||
-        israel.results?.length !== 14 || israel.certifiedValidVotes !== 5691396 ||
+        israel.results?.length !== 14 || israel.certifiedValidVotes !== 5691426 ||
         israel.results.reduce((sum, x) => sum + x.certifiedSeats, 0) !== 120 ||
         israel.scores.kahrelumPostClose.l1 !== 8 || israel.scores.externalOctober26.l1 !== 20 ||
         israel.forecastSources?.kahrelum?.type !== 'POST_CLOSE_EXIT_POLL_CONDITIONED_NOWCAST_NOT_PREELECTION') {
