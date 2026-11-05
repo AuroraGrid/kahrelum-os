@@ -83,6 +83,7 @@ const OVERLAY_FILES = [
   'election/current-projections.json',
   'election/fresh-run-checkpoint.json',
   'election/challenger-source-checks.json',
+  'election/poliwave-watchlist.json',
   'election/seat-projections.json',
   'digital-id.html',
   'one.html',
@@ -147,6 +148,12 @@ const REQUIRED_REWRITES = {
 };
 const DIVISION_ROUTES = ['/assurance', '/investigations', '/forecasting', '/digital-id', '/one', '/os'];
 const RELEASE_PROFILES = {
+  'poliwave-watch': {
+    // Reference-only Poliwave lookups. Preserve live data, photos, APIs and all older forecast locks.
+    overlayFiles: ['election-challenge.html', 'election-challenge-map.js', 'election/poliwave-watchlist.json'],
+    sitemapRoutes: [],
+    includeHomepage: false,
+  },
   'lead-magnet': {
     // Bounded landing-page release: existing Firebase files and unrelated routes stay unchanged.
     overlayFiles: ['evidence-scorecard.html', 'evidence-scorecard.js'],

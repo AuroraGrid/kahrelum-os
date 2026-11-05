@@ -137,6 +137,10 @@ jobs:
           python3 scripts/build_nba_player_portraits.py --check
       - name: Validate generated Sports Intelligence records
         run: python3 scripts/sports_intelligence.py validate
+      - name: Verify Poliwave reference-only first-look coverage
+        run: |
+          node scripts/build-poliwave-watchlist.cjs --check
+          node --test tests/poliwave-race-watch.test.cjs
       - name: Parse safe Firebase release script
         run: node --check scripts/firebase-overlay-release.cjs
 

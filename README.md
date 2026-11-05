@@ -5,6 +5,8 @@
 
 **NFL Sports Intelligence Desk v1.1:** [Public trade board source](./nfl/trades.html) · [Historical research snapshot](./nfl/trade-board.json) · [Operational SourceGrid](./nfl/sourcegrid.json) · [Per-source health](./nfl/source-health.json) · [Append-only forecast ledger](./nfl/forecast-ledger.json) · [Operations and publication boundary](./research/nfl-2026-trade-deadline/SPORTS_INTELLIGENCE_V1_OPERATIONS.md). The scheduled workflow records discovery and freshness in GitHub; the `/nfl/trades` Firebase route changes only after a verified guarded deployment and explicit promotion approval.
 
+**US election results watch:** [Poliwave-first monitoring protocol](./research/election-challenge-2026/POLIWAVE_SOURCE_WATCH.md) · [470 link-only race references](./election/poliwave-watchlist.json) · [KAHRELUM election race browser](./election-challenge.html). Poliwave is an unofficial first-look link, not a certified result source or a licensed dataset feed. Original KAHRELUM forecast locks and publication approvals remain unchanged.
+
 **Evidence-to-decision control plane**
 
 Founder: [Hasan Raza Kazmi](https://github.com/AuroraGrid)

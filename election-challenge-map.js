@@ -4,7 +4,7 @@
   // Keep the projection shell and its data dependencies on one release generation.
   // The query token prevents an already-open production browser from pairing a new
   // HTML shell with an older cached map bundle or projection payload.
-  const ASSET_VERSION = '20261103-portraits-bulk-1';
+  const ASSET_VERSION = '20261105-poliwave-reference-1';
   const readJson = (assetPath) => fetch(`${assetPath}?v=${ASSET_VERSION}`, { cache: 'no-store' });
 
   const states = [
@@ -20,6 +20,15 @@
     ['VT','Vermont',2,10],['WA','Washington',3,1],['WI','Wisconsin',3,6],['WV','West Virginia',5,7],['WY','Wyoming',4,3]
   ];
   const stateByCode = Object.fromEntries(states.map(([code,name]) => [code,name]));
+  const POLIWAVE_RESULTS_BASE = 'https://www.poliwave.com/us/live/midterms-2026';
+  // Navigation only. Poliwave licensing does not authorize mirroring compiled results.
+  // Links are stable state/office indexes rather than guessed individual race URLs.
+  function poliwaveRaceUrl(race) {
+    if (!race || !['House','Senate'].includes(race.chamber)
+        || !Object.prototype.hasOwnProperty.call(stateByCode,race.state)) return null;
+    const stateSlug = stateByCode[race.state].toLowerCase().replace(/\s+/g,'-');
+    return `${POLIWAVE_RESULTS_BASE}/${stateSlug}${race.chamber === 'House' ? '/house' : ''}`;
+  }
   let races = [];
   let selectedState = 'ALL';
   let displayLimit = 40;
@@ -422,10 +431,14 @@
   function raceCard(race) {
     const dem = pct(race.pDem);
     const rep = pct(1 - race.pDem);
+    const watchUrl = poliwaveRaceUrl(race);
+    const resultWatch = watchUrl
+      ? `<p class="fine race-source-monitor"><strong>First-look result watch:</strong> <a href="${escapeHtml(watchUrl)}" target="_blank" rel="noopener noreferrer">Poliwave ${escapeHtml(race.state)} ${escapeHtml(race.chamber)} results</a> · Unofficial source. Verify vote counts and winner calls with the relevant election authority. No Poliwave results are imported into KAHRELUM.</p>`
+      : '<p class="fine">Live result source not configured for this contest.</p>';
     return `<article class="race-record">
       <div><div class="race-id">${escapeHtml(race.id)}</div><div class="race-tier">${escapeHtml(race.chamber)} · ${escapeHtml(race.tier)}</div><p class="fine">Publisher rating edition: ${escapeHtml(race.sourceDate)}${race.originalLock ? ' · also present in original lock' : ''}</p></div>
       <div><div class="race-tier">KAHRELUM party-outcome probability</div><div class="probability-pair"><div class="party-dem"><strong>${dem}</strong><span>Democratic side</span></div><div class="party-rep"><strong>${rep}</strong><span>Republican side</span></div></div><div class="probability-track" aria-label="${dem} Democratic probability and ${rep} Republican probability"><i class="democratic" style="width:${dem}"></i><i class="republican" style="width:${rep}"></i></div><p class="fine">Event: ${escapeHtml(race.event)}. This is not a named-candidate probability.</p></div>
-      <div><div class="race-tier">Source-listed candidate file</div>${candidateCards(race)}<p class="roster-warning">Discovery roster; candidate listing and photo identity do not certify ballot eligibility.</p></div>
+      <div><div class="race-tier">Source-listed candidate file</div>${candidateCards(race)}<p class="roster-warning">Discovery roster; candidate listing and photo identity do not certify ballot eligibility.</p>${resultWatch}</div>
     </article>`;
   }
 
@@ -537,7 +550,7 @@
       byId('mapLoadStatus').textContent = `Map unavailable: ${error.message} The headline forecast record remains visible below.`;
     }
   }
-  if (typeof module !== 'undefined' && module.exports) module.exports = {normalizePortraitName,applyPortraitLedger,admittedPortrait,candidateCards,handlePortraitError,buildRaces,portraitCount,admissionView,renderAdmission,formatUtc};
+  if (typeof module !== 'undefined' && module.exports) module.exports = {normalizePortraitName,applyPortraitLedger,admittedPortrait,candidateCards,handlePortraitError,buildRaces,portraitCount,admissionView,renderAdmission,formatUtc,poliwaveRaceUrl,raceCard};
   if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded',init);
 })();
 
