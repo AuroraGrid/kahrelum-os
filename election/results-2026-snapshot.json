@@ -9,10 +9,10 @@
   },
   "sourceSha256": {
     "houseCsv": "28c0783d80a4201ed232c21970a3fca6947b6add1b2aa1a8fb0c253065c23c86",
-    "resultsCsv": "dfda5ef77cee7fb4bedbf5f50d6ba3ac8eb6d8a922245609b358232a6694be11"
+    "resultsCsv": "e340a70aa0657fd6515155a4c391ae97151ec13df8ecd0307aa626f61b61b831"
   },
-  "sourceLatestResultUpdatedUtc": "2026-11-05T20:58:40Z",
-  "retrievalUtc": "2026-11-05T21:04:58.824509Z",
+  "sourceLatestResultUpdatedUtc": "2026-11-05T21:05:48Z",
+  "retrievalUtc": "2026-11-05T21:19:56.222543Z",
   "publishedAsOf": "Snapshot captured on 2026-11-05. Each non-House race includes its per-race source timestamp. Earlier race calls are not official state certifications.",
   "resultStatus": "UNOFFICIAL_CALLS_AND_COUNTS_NOT_CERTIFIED",
   "verificationPolicy": {
@@ -8308,33 +8308,33 @@
       "winnerOrLeader": "Cory Booker",
       "party": "DEM",
       "percentReporting": 81,
-      "sourceUpdatedUtc": "2026-11-05T20:26:15Z",
+      "sourceUpdatedUtc": "2026-11-05T21:05:48Z",
       "candidates": [
         {
           "name": "Cory Booker",
           "party": "DEM",
-          "votes": 1799892,
-          "percent": 62.15,
+          "votes": 1801769,
+          "percent": 62.16,
           "calledWinner": true
         },
         {
           "name": "Justin Murphy",
           "party": "REP",
-          "votes": 1018223,
-          "percent": 35.16,
+          "votes": 1018917,
+          "percent": 35.15,
           "calledWinner": false
         },
         {
           "name": "Veronica Fernandez",
           "party": "IND",
-          "votes": 47548,
+          "votes": 47649,
           "percent": 1.64,
           "calledWinner": false
         },
         {
           "name": "Joanne Kuniansky",
           "party": "OTH",
-          "votes": 26896,
+          "votes": 26939,
           "percent": 0.93,
           "calledWinner": false
         },
