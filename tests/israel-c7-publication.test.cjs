@@ -73,3 +73,17 @@ test('isolated Firebase C7 release cannot replace U.S. results, APIs or other re
   assert.match(publisher, /israel\.c7\?\.process\?\.pass\s*!==\s*6/);
   assert.match(publisher, /israel\.c7\?\.process\?\.miss\s*!==\s*4/);
 });
+
+
+test('homepage Israel portfolio is closed without replacing unrelated live sections', () => {
+  const fragment = text('hosting/homepage-israel-c7.html');
+  const index = text('index.html');
+  const release = text('scripts/firebase-overlay-release.cjs');
+  assert.match(fragment, /id="portfolio"/);
+  assert.match(fragment, /C7 completed/);
+  assert.match(fragment, /6 PASS/);
+  assert.match(index, /C7 completed/);
+  assert.doesNotMatch(index, /Case KAH-IL26-PROSPECTIVE-001 · live \/ unresolved/);
+  assert.match(release, /replaceIsraelHomepagePortfolio/);
+  assert.match(release, /homepage-israel-c7\.html/);
+});
