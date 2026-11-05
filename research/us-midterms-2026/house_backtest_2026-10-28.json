@@ -1,0 +1,88 @@
+{
+  "study_id": "KAH-US-MIDTERMS-2026-HEAD2HEAD-001",
+  "created_utc": "2026-10-28T18:39:57.759294+00:00",
+  "status": "HISTORICAL_DIAGNOSTIC_ONLY",
+  "forecasts_for_2026_generated": false,
+  "source": "MIT Election Data + Science Lab via electiondata.dev",
+  "source_sha256_by_year": {
+    "2004": "a37aff66e129712c23f15e0bcd5c9d499329a46caadad69916ea8def54964fdb",
+    "2006": "479a0c26ca4a0e3362aadd0ae4d2398f3bdd3e80f0ba6493194d6a1e67058356",
+    "2008": "a0ffa6fa097515d50b351502d12712f0b95c907fb6c3d5dd34750b9c5ce41b42",
+    "2010": "abdbe1334b3bdb69f06ae41f3764516dde6ea5ac5deaf33432acb93a5b380ef9",
+    "2012": "1c084fd65e89eaf59a29fca337ff2e8a24bcc5ba711bd23c888a8e4ef570ad83",
+    "2014": "554c15ee88a755584499b47a53d15fdaf85992801af19dfc75a44ea4febb381f",
+    "2016": "8c9ca17019f47d1fc669bdd2606c68cf20b71608a3c31074b97f3a03c0cf8df2",
+    "2018": "44968eb92725facfbd448c27315bc25c92cbe3628b0f6c6fef5c9f19065d4f4a",
+    "2022": "677f8ab0d953d482172653e7d2b24257671e7d4bdacdbef22cc9970608088b02",
+    "2024": "6b23f0e24bb6f7d3c2c84d39ea4af66d2cb3a5d52c37bed7e5e20f3b9f10cd4a"
+  },
+  "pairs": {
+    "2006": 321,
+    "2010": 355,
+    "2014": 323,
+    "2018": 322,
+    "2024": 360
+  },
+  "folds": [
+    {
+      "heldout_year": 2010,
+      "training_years": [
+        2006
+      ],
+      "training_rows": 321,
+      "heldout_rows": 355,
+      "sigma_pp": 15.962951,
+      "heldout_brier": 0.127968
+    },
+    {
+      "heldout_year": 2014,
+      "training_years": [
+        2006,
+        2010
+      ],
+      "training_rows": 676,
+      "heldout_rows": 323,
+      "sigma_pp": 17.758378,
+      "heldout_brier": 0.05159011
+    },
+    {
+      "heldout_year": 2018,
+      "training_years": [
+        2006,
+        2010,
+        2014
+      ],
+      "training_rows": 999,
+      "heldout_rows": 322,
+      "sigma_pp": 15.871355,
+      "heldout_brier": 0.10812939
+    },
+    {
+      "heldout_year": 2024,
+      "training_years": [
+        2006,
+        2010,
+        2014,
+        2018
+      ],
+      "training_rows": 1321,
+      "heldout_rows": 360,
+      "sigma_pp": 15.704298,
+      "heldout_brier": 0.04962414
+    }
+  ],
+  "aggregate_heldout_brier": 0.08439309,
+  "state_year_cluster_ci95": [
+    0.0701969,
+    0.09863148
+  ],
+  "historical_margin_change_rmse_pp": 14.385816,
+  "limitations": [
+    "Historical district geometry not independently audited for every mid-cycle change",
+    "No current generic-ballot, district polls, fundraising or candidate features",
+    "No Senate or governor calibration",
+    "Excludes unopposed, unusual tabulations, missing and unofficial source rows",
+    "This simple persistence baseline does not authenticate or validate a 2026 election forecast",
+    "These figures are not evidence of superiority over any named forecaster"
+  ]
+}
