@@ -84,4 +84,48 @@
   }
   compactCards();
   window.addEventListener("resize", compactCards, { passive: true });
+
+  var mobilePanel = document.querySelector(".site-mobile-panel");
+  if (mobilePanel) {
+    var mobileLinks = Array.prototype.slice.call(mobilePanel.querySelectorAll(":scope > a"));
+    var commercialHrefs = ["/assurance", "/pilot", "/demo", "/os", "mailto:hasan@kahrelum.com"];
+    var publicHrefs = ["/forecasting", "/investigations", "/election-lab", "/digital-id", "/sports", "/insights"];
+    function makeMobileGroup(label, className, hrefs) {
+      var group = document.createElement("div");
+      group.className = "site-mobile-group " + className;
+      var title = document.createElement("p");
+      title.className = "site-mobile-group-label";
+      title.textContent = label;
+      group.appendChild(title);
+      hrefs.forEach(function (href) {
+        var link = mobileLinks.find(function (item) { return item.getAttribute("href") === href; });
+        if (link) group.appendChild(link);
+      });
+      return group;
+    }
+    var commercialGroup = makeMobileGroup("Commercial Assurance", "site-mobile-group-commercial", commercialHrefs);
+    var publicGroup = makeMobileGroup("Public Intelligence Desks", "site-mobile-group-public", publicHrefs);
+    mobileLinks.forEach(function (link) {
+      if (link.parentNode === mobilePanel) publicGroup.appendChild(link);
+    });
+    mobilePanel.replaceChildren(commercialGroup, publicGroup);
+  }
+
+  var sharedFooter = document.querySelector("footer.site-footer");
+  if (sharedFooter) {
+    var footerInner = sharedFooter.querySelector(".site-footer-inner") || sharedFooter;
+    Array.prototype.forEach.call(document.querySelectorAll("body footer:not(.site-footer)"), function (oldFooter) {
+      var context = document.createElement("div");
+      context.className = "site-footer-context";
+      while (oldFooter.firstChild) context.appendChild(oldFooter.firstChild);
+      if (context.textContent.trim()) footerInner.insertBefore(context, footerInner.firstChild);
+      oldFooter.remove();
+    });
+    if (!footerInner.textContent.includes("© 2026 KAHRELUM")) {
+      var copyright = document.createElement("p");
+      copyright.className = "site-footer-copyright";
+      copyright.textContent = "© 2026 KAHRELUM";
+      footerInner.appendChild(copyright);
+    }
+  }
 })();

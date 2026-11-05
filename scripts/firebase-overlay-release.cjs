@@ -443,6 +443,64 @@ async function verifiedLiveFile(live, hostingPath, publicPath) {
   return bytes;
 }
 
+function normalizeSharedFooter(html) {
+  const pageContexts = [];
+  const footerMarker = "\u0000KAHRELUM_SHARED_FOOTER\u0000";
+  let sharedOpen = null;
+  let sharedInner = "";
+  let sharedClose = "</footer>";
+
+  let output = html.replace(/<footer\b([^>]*)>([\s\S]*?)<\/footer>/gi, (full, attrs, inner) => {
+    if (/\bsite-footer\b/i.test(attrs) && !sharedOpen) {
+      sharedOpen = "<footer" + attrs + ">";
+      sharedInner = inner;
+      return footerMarker;
+    }
+    pageContexts.push(inner);
+    return "";
+  });
+
+  if (!sharedOpen) {
+    sharedOpen = '<footer class="site-footer">';
+    sharedInner = '<div class="site-footer-inner"><nav aria-label="Footer navigation"><a href="/os">KAHRELUM OS</a><a href="/pilot#request">Pilot inquiry</a><a href="mailto:hasan@kahrelum.com">hasan@kahrelum.com</a><a href="https://github.com/AuroraGrid/kahrelum-os">GitHub repository</a></nav></div>';
+  }
+
+  const contextMarkup = pageContexts
+    .map((content) => content.trim())
+    .filter(Boolean)
+    .map((content) => '<div class="site-footer-context">' + content + '</div>')
+    .join("");
+
+  if (contextMarkup) {
+    const innerOpen = /<div\b(?=[^>]*class=["'][^"']*\bsite-footer-inner\b)[^>]*>/i.exec(sharedInner);
+    if (innerOpen) {
+      sharedInner = sharedInner.slice(0, innerOpen.index + innerOpen[0].length) +
+        contextMarkup + sharedInner.slice(innerOpen.index + innerOpen[0].length);
+    } else {
+      sharedInner = '<div class="site-footer-inner">' + contextMarkup + sharedInner + '</div>';
+    }
+  }
+
+  if (!sharedInner.includes('aria-label="Footer navigation"')) {
+    sharedInner = sharedInner.replace(/<\/div>\s*$/i,
+      '<nav aria-label="Footer navigation"><a href="/os">KAHRELUM OS</a><a href="/pilot#request">Pilot inquiry</a><a href="mailto:hasan@kahrelum.com">hasan@kahrelum.com</a><a href="https://github.com/AuroraGrid/kahrelum-os">GitHub repository</a></nav></div>');
+  }
+  if (!/Independent, operator-assisted research and evidence review\. Not a certification\./i.test(sharedInner)) {
+    sharedInner = sharedInner.replace(/<\/div>\s*$/i,
+      '<p class="site-footer-boundary">Independent, operator-assisted research and evidence review. Not a certification.</p></div>');
+  } else {
+    sharedInner = sharedInner.replace(
+      /<p>(Independent, operator-assisted research and evidence review\. Not a certification\.)<\/p>/i,
+      '<p class="site-footer-boundary">$1</p>');
+  }
+  if (!/© 2026 KAHRELUM|&copy; 2026 KAHRELUM/i.test(sharedInner)) {
+    sharedInner = sharedInner.replace(/<\/div>\s*$/i, '<p class="site-footer-copyright">© 2026 KAHRELUM</p></div>');
+  }
+
+  const sharedFooter = sharedOpen + sharedInner + sharedClose;
+  return output.includes(footerMarker) ? output.replace(footerMarker, sharedFooter) : output.replace(/<\/body>/i, sharedFooter + "</body>");
+}
+
 function injectSharedShell(html, route) {
   let output = html;
   const mainTag = /<main\b[^>]*>/i.exec(output);
@@ -605,12 +663,17 @@ async function buildOverlay(live, profileName) {
   for (const name of profile.overlayFiles) {
     const source = path.join(ROOT, name);
     if (!fs.existsSync(source)) fail(`Repository overlay source is missing: ${name}`);
-    addBlob(desired, blobs, '/' + name, readRepositoryBytes(name));
+    let sourceBytes = readRepositoryBytes(name);
+    if (profileName === 'site-makeover' && name.toLowerCase().endsWith('.html')) {
+      sourceBytes = Buffer.from(normalizeSharedFooter(sourceBytes.toString('utf8')), 'utf8');
+    }
+    addBlob(desired, blobs, '/' + name, sourceBytes);
   }
 
   for (const [hostingPath, route] of profile.liveTransformRoutes || []) {
     const liveHtml = (await verifiedLiveFile(live, hostingPath, route)).toString('utf8');
-    addBlob(desired, blobs, hostingPath, injectSharedShell(liveHtml, route));
+    const shelled = injectSharedShell(liveHtml, route).toString('utf8');
+    addBlob(desired, blobs, hostingPath, Buffer.from(normalizeSharedFooter(shelled), 'utf8'));
   }
 
   const one = fs.readFileSync(path.join(ROOT, 'one.html'), 'utf8');

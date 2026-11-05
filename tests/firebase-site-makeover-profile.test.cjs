@@ -73,3 +73,46 @@ test('legacy election page gets election-specific next steps without replacing i
   assert.ok(result.includes('href="/forecasting">Read the forecasting desk -></a>'));
   assert.ok(result.includes('href="/election-challenge">Review the election challenge -></a>'));
 });
+
+
+const footerStart = source.indexOf('function normalizeSharedFooter(');
+const footerEnd = source.indexOf('function injectSharedShell(', footerStart);
+assert.ok(footerStart >= 0 && footerEnd > footerStart, 'Shared footer normalization must exist');
+const normalizeSharedFooter = new Function(
+  source.slice(footerStart, footerEnd) + '\nreturn normalizeSharedFooter;'
+)();
+
+test('release normalization consolidates page footers without dropping publication details', () => {
+  const html = '<html><body><main>Page content</main>' +
+    '<footer class="site-local-footer"><p>Publication boundary: example note.</p><p>© 2026 KAHRELUM</p></footer>' +
+    '<footer class="site-footer"><div class="site-footer-inner"><nav aria-label="Footer navigation">' +
+    '<a href="/os">KAHRELUM OS</a><a href="/pilot#request">Pilot inquiry</a>' +
+    '<a href="mailto:hasan@kahrelum.com">hasan@kahrelum.com</a>' +
+    '<a href="https://github.com/AuroraGrid/kahrelum-os">GitHub repository</a>' +
+    '</nav><p>Independent, operator-assisted research and evidence review. Not a certification.</p></div></footer>' +
+    '</body></html>';
+  const result = normalizeSharedFooter(html);
+
+  assert.equal(result.split('<footer').length - 1, 1);
+  assert.ok(result.includes('Publication boundary: example note.'));
+  assert.ok(result.includes('© 2026 KAHRELUM'));
+  assert.ok(result.includes('mailto:hasan@kahrelum.com'));
+  assert.ok(result.includes('https://github.com/AuroraGrid/kahrelum-os'));
+  assert.ok(result.includes('Independent, operator-assisted research and evidence review. Not a certification.'));
+});
+
+test('shared screenshot polish hooks are present', () => {
+  const css = fs.readFileSync(path.join(root, 'site-shell.css'), 'utf8');
+  const shell = fs.readFileSync(path.join(root, 'site-shell.js'), 'utf8');
+  const digitalId = fs.readFileSync(path.join(root, 'digital-id.html'), 'utf8');
+  const pilot = fs.readFileSync(path.join(root, 'pilot.html'), 'utf8');
+
+  assert.ok(css.includes('.site-wordmark{color:#5b3b73!important}'));
+  assert.match(css, /\.site-mobile-menu>summary[^}]*border:1px solid/);
+  assert.ok(css.includes('.digital-id-watch-callout{padding:14px 16px!important}'));
+  assert.ok(css.includes('.pilot-wrap section>.eyebrow'));
+  assert.ok(shell.includes('Commercial Assurance'));
+  assert.ok(shell.includes('Public Intelligence Desks'));
+  assert.ok(digitalId.includes('digital-id-watch-callout'));
+  assert.ok(pilot.includes('Target delivery: 2 business days (Fit Check) · 5 business days (Founding Pilot)'));
+});
