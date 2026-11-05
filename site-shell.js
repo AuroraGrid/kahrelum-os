@@ -3,7 +3,9 @@
   var path = (location.pathname || "/").replace(/\/+$/, "") || "/";
   function isActive(href) {
     var target = href.replace(/\/$/, "") || "/";
-    if (target === "/sports" && path.indexOf("/nfl/") === 0) return true;\n    if (target === "/forecasting" && (path.indexOf("/election-") === 0 || path.indexOf("/israel-certified") === 0)) return true;\n    return path === target || (target !== "/" && path.indexOf(target + "/") === 0);
+    if (target === "/sports" && path.indexOf("/nfl/") === 0) return true;
+    if (target === "/forecasting" && (path.indexOf("/election-") === 0 || path.indexOf("/israel-certified") === 0)) return true;
+    return path === target || (target !== "/" && path.indexOf(target + "/") === 0);
   }
   Array.prototype.forEach.call(document.querySelectorAll(".site-header a[href]"), function (a) {
     var href = a.getAttribute("href") || "";
