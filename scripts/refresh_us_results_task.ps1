@@ -1,8 +1,8 @@
 # KAHRELUM AutoResults: US election results, source-bound autonomous refresh.
 # Designed to run in a dedicated, clean Git branch checkout on the Dell.
-param([switch]$DryRun)
+param([switch]$DryRun, [string]$RepoRoot)
 $ErrorActionPreference = 'Stop'
-$Repo = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
+$Repo = if($RepoRoot){(Resolve-Path -LiteralPath $RepoRoot -ErrorAction Stop).Path}else{(Resolve-Path (Join-Path $PSScriptRoot '..')).Path}
 $TaskName = 'KAHRELUM-Israel-Live-2026'
 $SourceTag = 'KAHRELUM-US-Results-15Min'
 $StateDir = Join-Path $env:USERPROFILE 'Documents\KAHRELUM_Custody\us-results-daemon-2026'

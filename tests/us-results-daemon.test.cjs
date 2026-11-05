@@ -33,3 +33,20 @@ test('automatic publisher updates only the US results snapshot, never frozen for
  assert.match(src,/profileName === 'us-results-data'/);
  assert.match(src,/item !== '\/election\/results-2026-snapshot.json'/);
 });
+
+test('scheduled task executes an out-of-tree, Git-hash-verified runner rather than removing its own tracked source',()=>{
+ const installer=file('scripts/install_us_results_task.ps1');
+ const runner=file('scripts/run_us_results_safe.ps1');
+ const worker=file('scripts/refresh_us_results_task.ps1');
+ assert.match(installer,/run_us_results_safe\.ps1/);
+ assert.match(installer,/Copy-Item/);
+ assert.match(runner,/Get-FileHash/);
+ assert.match(runner,/git(?:\.exe)?\s+-C\s+\$Repo\s+rev-parse|git\s+-C\s+\$repo\s+rev-parse/);
+ assert.match(runner,/scripts[\\/]refresh_us_results_task\.ps1|refresh_us_results_task\.ps1/);
+ assert.match(runner,/Start-Process/);
+ assert.match(runner,/RepoRoot/);
+ assert.match(runner,/RedirectStandardError/);
+ assert.match(runner,/ExitCode/);
+ assert.match(worker,/param\(\[switch\]\$DryRun,\s*\[string\]\$RepoRoot\)/);
+ assert.match(worker,/Resolve-Path.*RepoRoot/);
+});

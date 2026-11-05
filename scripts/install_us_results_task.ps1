@@ -19,7 +19,11 @@ if((git -C $repo branch --show-current).Trim() -ne $sourceBranch){throw 'Results
 if(@(git -C $repo status --porcelain).Count -ne 0){throw 'Results worktree must be clean'}
 if(-not (Test-Path (Join-Path $repo 'scripts/refresh_us_results_task.ps1'))){throw 'Updater script not yet committed to main; stop'}
 if(-not (Test-Path (Join-Path $repo 'election/results-2026-snapshot.json'))){throw 'Initial published snapshot missing; stop'}
-$updater=Join-Path $repo 'scripts/refresh_us_results_task.ps1'
+$runnerSource=Join-Path $repo 'scripts/run_us_results_safe.ps1'
+$updater=Join-Path $state 'run_us_results_safe.ps1'
+if(-not (Test-Path -LiteralPath $runnerSource)){throw 'Approved external runner source missing'}
+Copy-Item -LiteralPath $runnerSource -Destination $updater -Force
+if((Get-FileHash -LiteralPath $runnerSource -Algorithm SHA256).Hash -ne (Get-FileHash -LiteralPath $updater -Algorithm SHA256).Hash){throw 'Outside-repo runner copy mismatch'}
 $quote='"'
 $arguments='-NoProfile -NonInteractive -ExecutionPolicy Bypass -File '+$quote+$updater+$quote
 $action=New-ScheduledTaskAction -Execute 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe' -Argument $arguments -WorkingDirectory $repo
