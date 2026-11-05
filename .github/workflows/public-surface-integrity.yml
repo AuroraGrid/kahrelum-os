@@ -32,6 +32,8 @@ jobs:
               "README.md", "ARCHITECTURE.md", "BENCHMARKS.md",
               "CHANGELOG.md", "RELEASE_v2.3.4_FINAL.md",
               "index.html", "vercel.json", "hosting/homepage-divisions.html",
+              "pilot.html", "demo.html", "site-shell.css", "site-shell.js",
+              "data/api/v1/index.json", "data/api/v1/release.json", "data/api/v1/example.json",
               "scripts/deploy-unified-firebase.ps1",
               "scripts/firebase-overlay-release.cjs",
               "assurance.html", "investigations.html", "forecasting.html",
@@ -118,6 +120,7 @@ jobs:
           assert "firebase deploy --only hosting" not in wrapper, "Direct Firebase directory deploy must remain blocked"
           assert "CHANNEL_PREFIX" in overlay and "stableMapHash(overlay.desired).slice" in overlay, "Preview channels must remain content-addressed for concurrency safety"
           assert "'sports-intelligence'" in overlay and '"sports-intelligence"' in wrapper, "Bounded Sports Intelligence release profile missing"
+          assert "'site-makeover'" in overlay and '"site-makeover"' in wrapper, "Bounded site makeover release profile missing"
 
           stale_identity = b"hr185882" + b"-creator"
           tracked = subprocess.check_output(["git", "ls-files", "-z"]).split(b"\0")
@@ -133,7 +136,7 @@ jobs:
       - name: Test full forecast coverage, admission and portrait identity
         run: |
           python3 -m unittest discover -s tests -p 'test_*.py' -v
-          node --test tests/candidate-portraits.test.cjs tests/nfl-portraits-dom.test.cjs tests/nba-portraits-dom.test.cjs tests/election-admission-view.test.cjs tests/firebase-release-binary-integrity.test.cjs tests/investigations-publication.test.cjs tests/evidence-scorecard.test.cjs tests/lead-magnet-deployment.test.cjs
+          node --test tests/candidate-portraits.test.cjs tests/nfl-portraits-dom.test.cjs tests/nba-portraits-dom.test.cjs tests/election-admission-view.test.cjs tests/firebase-release-binary-integrity.test.cjs tests/firebase-site-makeover-profile.test.cjs tests/investigations-publication.test.cjs tests/evidence-scorecard.test.cjs tests/lead-magnet-deployment.test.cjs
           python3 scripts/build_nba_player_portraits.py --check
       - name: Validate generated Sports Intelligence records
         run: python3 scripts/sports_intelligence.py validate

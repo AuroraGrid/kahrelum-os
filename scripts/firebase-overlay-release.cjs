@@ -221,6 +221,29 @@ const RELEASE_PROFILES = {
     sitemapRoutes: ['/nfl/trades', '/election-challenge'],
     includeHomepage: false,
   },
+  'site-makeover': {
+    overlayFiles: [
+      'index.html', 'site-shell.css', 'site-shell.js',
+      'assurance.html', 'investigations.html', 'forecasting.html', 'election-challenge.html',
+      'digital-id.html', 'one.html', 'os.html', 'election-lab.html',
+      'election-results-2026.html', 'evidence-scorecard.html', 'israel-certified-2026.html',
+      'nfl/deadline-watch-2026.html', 'nfl/analysis.html', 'nfl/film-room.html',
+      'nfl/trades.html', 'nfl/weekly-brief.html', 'sports-interest.html', 'sports.html',
+      'sports/mlb.html', 'sports/nba.html', 'sports/nhl.html',
+      'insights.html', 'insights/ai-bots-money-claims.html',
+      'insights/election-forecast-custody.html', 'insights/nfl-brier-accountability.html',
+      'pilot.html', 'demo.html',
+      'data/api/v1/example.json', 'data/api/v1/index.json', 'data/api/v1/release.json',
+    ],
+    liveTransformRoutes: [
+      ['/sample.html', '/sample'], ['/connect.html', '/connect'], ['/hasan.html', '/hasan'],
+      ['/election-live.html', '/election-live'], ['/election-count.html', '/election-count'],
+      ['/election-method.html', '/election-method'], ['/election-showdown.html', '/election-showdown'],
+      ['/election-comparison.html', '/election-comparison'],
+    ],
+    sitemapRoutes: [],
+    includeHomepage: false,
+  },
   full: {
     overlayFiles: OVERLAY_FILES,
     sitemapRoutes: [
@@ -420,6 +443,49 @@ async function verifiedLiveFile(live, hostingPath, publicPath) {
   return bytes;
 }
 
+function injectSharedShell(html, route) {
+  let output = html;
+  const mainTag = /<main\b[^>]*>/i.exec(output);
+  if (!mainTag) fail(`Legacy public page has no main landmark: ${route}`);
+  let mainId = mainTag[0].match(/\bid=["']([^"']+)["']/i)?.[1];
+  if (!mainId) {
+    mainId = 'main-content';
+    output = output.replace(mainTag[0], mainTag[0].replace(/>$/, ' id="main-content">'));
+  }
+  if (!/<link\b[^>]*href=["']\/site-shell\.css(?:\?[^"']*)?["']/i.test(output)) {
+    output = output.replace(/<\/head>/i, '<link rel="stylesheet" href="/site-shell.css?v=20261105-1"></head>');
+  }
+  if (!/<script\b[^>]*src=["']\/site-shell\.js(?:\?[^"']*)?["']/i.test(output)) {
+    output = output.replace(/<\/head>/i, '<script defer src="/site-shell.js?v=20261105-1"></script></head>');
+  }
+
+  const skip = `<a class="site-skip skip-link" href="#${htmlAttribute(mainId)}">Skip to main content</a>`;
+  const skipPattern = /<a\b(?=[^>]*class=["'][^"']*\bskip-link\b)[^>]*>[\s\S]*?<\/a>/i;
+  if (skipPattern.test(output)) {
+    output = output.replace(skipPattern, skip);
+  } else {
+    output = output.replace(/<body\b[^>]*>/i, (bodyTag) => bodyTag + skip);
+  }
+
+  if (!/<header\b[^>]*class=["'][^"']*\bsite-header\b/i.test(output)) {
+    const header = '<header class="site-header"><div class="site-header-inner"><a class="site-wordmark" href="/">KAHRELUM OS</a><nav class="site-nav" aria-label="Primary navigation"><a href="/assurance">AI Assurance</a><a href="/pilot">Pilot</a><a href="/demo">Sample Record</a><details class="site-labs"><summary>Public Research Labs <span aria-hidden="true">▾</span></summary><div class="site-labs-panel"><a href="/investigations">Investigations</a><a href="/forecasting">Forecasting</a><a href="/digital-id">Digital ID</a><a href="/sports">Sports</a><a href="/insights">Insights</a><a href="/election-lab">Election Lab</a></div></details><a href="/os">OS &amp; Method</a><a href="mailto:hasan@kahrelum.com">Connect</a></nav><details class="site-mobile-menu"><summary>Menu</summary><div class="site-mobile-panel"><a href="/assurance">AI Assurance</a><a href="/pilot">Pilot</a><a href="/demo">Sample Record</a><a href="/investigations">Investigations</a><a href="/forecasting">Forecasting</a><a href="/digital-id">Digital ID</a><a href="/sports">Sports</a><a href="/insights">Insights</a><a href="/election-lab">Election Lab</a><a href="/os">OS &amp; Method</a><a href="mailto:hasan@kahrelum.com">Connect</a></div></details></div></header>';
+    const skipMatch = skipPattern.exec(output);
+    const insertAt = skipMatch.index + skipMatch[0].length;
+    output = output.slice(0, insertAt) + header + output.slice(insertAt);
+  }
+
+  if (!/<footer\b[^>]*class=["'][^"']*\bsite-footer\b/i.test(output)) {
+    const nextSteps = route.startsWith('/election-')
+      ? '<nav class="site-next-steps" aria-label="Next steps"><a href="/forecasting">Read the forecasting desk -></a><a href="/election-challenge">Review the election challenge -></a></nav>'
+      : route === '/sample'
+      ? '<nav class="site-next-steps" aria-label="Next steps"><a href="/pilot#request">Review the pilot packages -></a><a href="/demo">Open the worked example -></a></nav>'
+      : '<nav class="site-next-steps" aria-label="Next steps"><a href="/pilot#request">Review the pilot packages -></a><a href="/os">Read KAHRELUM OS & Method -></a></nav>';
+    const footer = '<footer class="site-footer"><div class="site-footer-inner"><nav aria-label="Footer navigation"><a href="/os">KAHRELUM OS</a><a href="/pilot#request">Pilot inquiry</a><a href="mailto:hasan@kahrelum.com">hasan@kahrelum.com</a><a href="https://github.com/AuroraGrid/kahrelum-os">GitHub repository</a></nav><p>Independent, operator-assisted research and evidence review. Not a certification.</p></div></footer>';
+    output = output.replace(/<\/body>/i, nextSteps + footer + '</body>');
+  }
+  return Buffer.from(output, 'utf8');
+}
+
 function replaceHomepageSection(home, fragment) {
   const marker = 'id="kahrelum-divisions-update"';
   const sectionPattern = /<section\b[^>]*id="kahrelum-divisions-update"[^>]*>[\s\S]*?<\/section>/i;
@@ -542,6 +608,11 @@ async function buildOverlay(live, profileName) {
     addBlob(desired, blobs, '/' + name, readRepositoryBytes(name));
   }
 
+  for (const [hostingPath, route] of profile.liveTransformRoutes || []) {
+    const liveHtml = (await verifiedLiveFile(live, hostingPath, route)).toString('utf8');
+    addBlob(desired, blobs, hostingPath, injectSharedShell(liveHtml, route));
+  }
+
   const one = fs.readFileSync(path.join(ROOT, 'one.html'), 'utf8');
   if (!/in development/i.test(one)) fail('KAHRELUM ONE must remain explicitly marked in development.');
 
@@ -592,6 +663,15 @@ async function buildOverlay(live, profileName) {
       changedPaths.some((item) => !['/investigations.html', '/assets/social/og-air01-v1.png'].includes(item))) {
     fail('Investigations release attempted to replace an unrelated live Firebase path.');
   }
+  if (profileName === 'site-makeover') {
+    const allowed = new Set([
+      ...profile.overlayFiles.map((name) => '/' + name),
+      ...(profile.liveTransformRoutes || []).map(([hostingPath]) => hostingPath),
+    ]);
+    if (changedPaths.some((item) => !allowed.has(item))) {
+      fail('Site makeover attempted to replace an unrelated live Firebase path.');
+    }
+  }
   if (profileName === 'lead-magnet' &&
       changedPaths.some((item) => !['/evidence-scorecard.html', '/evidence-scorecard.js', '/sitemap.xml'].includes(item))) {
     fail('Lead magnet release attempted to change unrelated live Firebase paths.');
@@ -635,6 +715,19 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     const expectedCanonical = DOMAIN + (route === '/' ? '/' : route);
     if (extractCanonical(html) !== expectedCanonical) fail(`Canonical check failed for ${route}.`);
     if (!html.includes('name="viewport"')) fail(`Viewport metadata is missing on ${route}.`);
+    if (profileName === 'site-makeover') {
+      if (!html.includes('site-header')) fail(`Shared header is missing on ${route}.`);
+      if (!html.includes('skip-link') || !/Skip to main content/i.test(html)) fail(`Skip link is missing on ${route}.`);
+      if (!html.includes('site-footer')) fail(`Shared footer is missing on ${route}.`);
+      if (!html.includes('/site-shell.css')) fail(`Shared shell stylesheet is missing on ${route}.`);
+      if (route !== '/investigations' && !html.includes('/site-shell.js')) fail(`Shared shell behavior is missing on ${route}.`);
+      for (const link of ['/os', '/pilot#request', 'mailto:hasan@kahrelum.com', 'https://github.com/AuroraGrid/kahrelum-os']) {
+        if (!html.includes(`href="${link}"`)) fail(`Shared footer link ${link} is missing on ${route}.`);
+      }
+      if (!html.includes('Independent, operator-assisted research and evidence review. Not a certification.')) {
+        fail(`Publication-boundary footer is missing on ${route}.`);
+      }
+    }
     for (const match of html.matchAll(/(?:href|src)="(\/[^"#?]*)[^"]*"/g)) internal.add(match[1]);
     checks.push({ route, status: 200, sha256: sha256(bytes) });
   }
