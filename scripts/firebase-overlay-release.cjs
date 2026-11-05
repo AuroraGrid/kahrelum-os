@@ -7,7 +7,7 @@ const path = require('path');
 const util = require('util');
 const zlib = require('zlib');
 const { Readable } = require('stream');
-const { PAGE_PATCHES, MODIFIED_ROUTES, patchLivePage, setSitemapLastmod } = require('./commercial-readiness.cjs');
+const { PAGE_PATCHES, MODIFIED_ROUTES, patchLivePage, setSitemapLastmod } = require(path.join(__dirname, 'commercial-readiness.cjs'));
 
 const SITE = 'kahrelum-public-hosting';
 const DOMAIN = 'https://kahrelum.com';
