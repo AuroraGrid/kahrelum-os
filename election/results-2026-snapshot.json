@@ -8,11 +8,11 @@
     "results": "https://polling-desk.com/results.csv"
   },
   "sourceSha256": {
-    "houseCsv": "467930f3a48275581e625ad10757e6153d7ae4baf292262186befb308ff8f240",
-    "resultsCsv": "fa2d747ec7cdee6fa353eddee750709cb9416e9e7d07d36ebd24d513962e2d77"
+    "houseCsv": "6e1487d6a950f1ec69a8b280a439c3f2999d8bd75f1a22a1050f5d17f6bbb784",
+    "resultsCsv": "74d8225b916953b115bb930789ee73638b64dc5ab9e7dcedec9a5b32d0227078"
   },
-  "sourceLatestResultUpdatedUtc": "2026-11-05T14:29:45Z",
-  "retrievalUtc": "2026-11-05T14:35:00.173280Z",
+  "sourceLatestResultUpdatedUtc": "2026-11-05T14:45:56Z",
+  "retrievalUtc": "2026-11-05T14:49:59.565043Z",
   "publishedAsOf": "Snapshot captured on 2026-11-05. Each non-House race includes its per-race source timestamp. Earlier race calls are not official state certifications.",
   "resultStatus": "UNOFFICIAL_CALLS_AND_COUNTS_NOT_CERTIFIED",
   "verificationPolicy": {
@@ -1552,11 +1552,11 @@
       "winnerOrLeader": "Austin Rogers",
       "party": "REP",
       "votes": {
-        "DEM": 147792,
+        "DEM": 147791,
         "REP": 160968,
         "OTHER": 0
       },
-      "totalVotes": 308760,
+      "totalVotes": 308759,
       "democraticMarginPoints": -4.27,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/fl-02"
@@ -1586,12 +1586,12 @@
       "winnerOrLeader": "Aaron Bean",
       "party": "REP",
       "votes": {
-        "DEM": 144795,
-        "REP": 151114,
-        "OTHER": 5023
+        "DEM": 144752,
+        "REP": 151095,
+        "OTHER": 5022
       },
-      "totalVotes": 300932,
-      "democraticMarginPoints": -2.1,
+      "totalVotes": 300869,
+      "democraticMarginPoints": -2.11,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/fl-04"
     },
@@ -1603,11 +1603,11 @@
       "winnerOrLeader": "John Rutherford",
       "party": "REP",
       "votes": {
-        "DEM": 145121,
-        "REP": 187917,
+        "DEM": 145081,
+        "REP": 187877,
         "OTHER": 0
       },
-      "totalVotes": 333038,
+      "totalVotes": 332958,
       "democraticMarginPoints": -12.85,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/fl-05"
@@ -3286,9 +3286,9 @@
       "winnerOrLeader": "Sarah Elfreth",
       "party": "DEM",
       "votes": {
-        "DEM": 173364,
-        "REP": 91642,
-        "OTHER": 710
+        "DEM": 173368,
+        "REP": 91643,
+        "OTHER": 705
       },
       "totalVotes": 265716,
       "democraticMarginPoints": 30.76,
@@ -7636,26 +7636,26 @@
       "winnerOrLeader": "Ashley Moody",
       "party": "REP",
       "percentReporting": 100,
-      "sourceUpdatedUtc": "2026-11-05T14:29:45Z",
+      "sourceUpdatedUtc": "2026-11-05T14:45:56Z",
       "candidates": [
         {
           "name": "Ashley Moody",
           "party": "REP",
-          "votes": 4208004,
+          "votes": 4207947,
           "percent": 50.87,
           "calledWinner": true
         },
         {
           "name": "Angie Nixon",
           "party": "DEM",
-          "votes": 3969271,
+          "votes": 3969186,
           "percent": 47.99,
           "calledWinner": false
         },
         {
           "name": "Neil J. Gillespie",
           "party": "IND",
-          "votes": 94538,
+          "votes": 94534,
           "percent": 1.14,
           "calledWinner": false
         }
@@ -9129,19 +9129,19 @@
       "winnerOrLeader": "Byron Donalds",
       "party": "REP",
       "percentReporting": 100,
-      "sourceUpdatedUtc": "2026-11-05T14:29:45Z",
+      "sourceUpdatedUtc": "2026-11-05T14:45:56Z",
       "candidates": [
         {
           "name": "Byron Donalds",
           "party": "REP",
-          "votes": 4132334,
+          "votes": 4132275,
           "percent": 50.02,
           "calledWinner": true
         },
         {
           "name": "David Jolly",
           "party": "DEM",
-          "votes": 4024639,
+          "votes": 4024554,
           "percent": 48.71,
           "calledWinner": false
         },
@@ -9162,7 +9162,7 @@
         {
           "name": "Charles Burkett",
           "party": "IND",
-          "votes": 15239,
+          "votes": 15238,
           "percent": 0.18,
           "calledWinner": false
         }
