@@ -128,3 +128,31 @@ test('legacy article-only routes gain a valid skip target without changing artic
   assert.ok(result.includes('<p>Preserve this research text.</p>'));
   assert.ok(result.includes('</article></main>'));
 });
+
+
+const drawerStart = source.indexOf('function groupMobileDrawer(');
+const drawerEnd = source.indexOf('function normalizeSharedFooter(', drawerStart);
+assert.ok(drawerStart >= 0 && drawerEnd > drawerStart, 'Static mobile grouping transform must exist');
+const groupMobileDrawer = new Function(
+  source.slice(drawerStart, drawerEnd) + '\nreturn groupMobileDrawer;'
+)();
+
+test('mobile drawer is grouped in static HTML and retains every link once', () => {
+  const links = [
+    '<a href="/assurance">AI Assurance</a>', '<a href="/pilot">Pilot</a>',
+    '<a href="/demo">Sample Record</a>', '<a href="/investigations">Investigations</a>',
+    '<a href="/forecasting">Forecasting</a>', '<a href="/election-lab">Election Lab</a>',
+    '<a href="/digital-id">Digital ID</a>', '<a href="/sports">Sports</a>',
+    '<a href="/insights">Insights</a>', '<a href="/os">OS &amp; Method</a>',
+    '<a href="mailto:hasan@kahrelum.com">Connect</a>',
+  ];
+  const result = groupMobileDrawer('<div class="site-mobile-panel">' + links.join('') + '</div>');
+
+  assert.ok(result.includes('Commercial Assurance'));
+  assert.ok(result.includes('Public Intelligence Desks'));
+  assert.ok(result.indexOf('AI Assurance') < result.indexOf('Public Intelligence Desks'));
+  for (const link of links) {
+
+    assert.equal((result.match(/<a\b/g) || []).length, links.length);
+  }
+});

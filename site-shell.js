@@ -86,7 +86,7 @@
   window.addEventListener("resize", compactCards, { passive: true });
 
   var mobilePanel = document.querySelector(".site-mobile-panel");
-  if (mobilePanel) {
+  if (mobilePanel && !mobilePanel.querySelector(".site-mobile-group")) {
     var mobileLinks = Array.prototype.slice.call(mobilePanel.querySelectorAll(":scope > a"));
     var commercialHrefs = ["/assurance", "/pilot", "/demo", "/os", "mailto:hasan@kahrelum.com"];
     var publicHrefs = ["/forecasting", "/investigations", "/election-lab", "/digital-id", "/sports", "/insights"];

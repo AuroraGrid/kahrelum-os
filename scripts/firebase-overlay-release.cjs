@@ -445,6 +445,29 @@ async function verifiedLiveFile(live, hostingPath, publicPath) {
   return bytes;
 }
 
+function groupMobileDrawer(html) {
+  return html.replace(/(<div\b(?=[^>]*class=["'][^"']*\bsite-mobile-panel\b)[^>]*>)([\s\S]*?)(<\/div>)/i, (full, open, inner, close) => {
+    if (/\bsite-mobile-group\b/i.test(inner)) return full;
+    const anchors = Array.from(inner.matchAll(/<a\b[^>]*href=["']([^"']*)["'][^>]*>[\s\S]*?<\/a>/gi))
+      .map((match) => ({ href: match[1], html: match[0] }));
+    if (!anchors.length) return full;
+    const commercialHrefs = ["/assurance", "/pilot", "/demo", "/os", "mailto:hasan@kahrelum.com"];
+    const publicHrefs = ["/forecasting", "/investigations", "/election-lab", "/digital-id", "/sports", "/insights"];
+    const used = new Set();
+    function group(label, className, hrefs, includeRemaining) {
+      const links = hrefs.map((href) => anchors.find((item) => item.href === href && !used.has(item))).filter(Boolean);
+      links.forEach((item) => used.add(item));
+      if (includeRemaining) anchors.filter((item) => !used.has(item)).forEach((item) => { links.push(item); used.add(item); });
+      return '<div class="site-mobile-group ' + className + '"><p class="site-mobile-group-label">' + label + '</p>' +
+        links.map((item) => item.html).join("") + '</div>';
+    }
+    return open +
+      group("Commercial Assurance", "site-mobile-group-commercial", commercialHrefs, false) +
+      group("Public Intelligence Desks", "site-mobile-group-public", publicHrefs, true) +
+      close;
+  });
+}
+
 function normalizeSharedFooter(html) {
   const pageContexts = [];
   const footerMarker = "\u0000KAHRELUM_SHARED_FOOTER\u0000";
@@ -678,7 +701,7 @@ async function buildOverlay(live, profileName) {
     if (!fs.existsSync(source)) fail(`Repository overlay source is missing: ${name}`);
     let sourceBytes = readRepositoryBytes(name);
     if (profileName === 'site-makeover' && name.toLowerCase().endsWith('.html')) {
-      sourceBytes = Buffer.from(normalizeSharedFooter(sourceBytes.toString('utf8')), 'utf8');
+      sourceBytes = Buffer.from(normalizeSharedFooter(groupMobileDrawer(sourceBytes.toString('utf8'))), 'utf8');
     }
     addBlob(desired, blobs, '/' + name, sourceBytes);
   }
@@ -686,7 +709,7 @@ async function buildOverlay(live, profileName) {
   for (const [hostingPath, route] of profile.liveTransformRoutes || []) {
     const liveHtml = (await verifiedLiveFile(live, hostingPath, route)).toString('utf8');
     const shelled = injectSharedShell(liveHtml, route).toString('utf8');
-    addBlob(desired, blobs, hostingPath, Buffer.from(normalizeSharedFooter(shelled), 'utf8'));
+    addBlob(desired, blobs, hostingPath, Buffer.from(normalizeSharedFooter(groupMobileDrawer(shelled)), 'utf8'));
   }
 
   const one = fs.readFileSync(path.join(ROOT, 'one.html'), 'utf8');
