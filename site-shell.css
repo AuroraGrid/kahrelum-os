@@ -72,3 +72,5 @@ body.site-shell-ready footer:not(.site-footer){max-width:1280px;margin:1.2rem au
 
 .site-local-header{display:none!important}
 .site-local-footer{max-width:1280px;margin:1.2rem auto 0!important;padding:.35rem clamp(1rem,3vw,2rem) 0!important;border-top:0!important;background:transparent!important;color:#70695e!important;font-size:.78rem!important;line-height:1.45!important}
+
+.site-home .public-research-card{background:transparent!important;border-color:#d3cabb}.public-lab-label{display:block;margin-bottom:.45rem;color:#615a4e;font:700 .66rem/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.12em;text-transform:uppercase}
