@@ -8,11 +8,11 @@
     "results": "https://polling-desk.com/results.csv"
   },
   "sourceSha256": {
-    "houseCsv": "0cbb0ed911b8db7b2284eb8861d81357d5d493128418a9b9af9efb7834a47415",
-    "resultsCsv": "35342dc8ac3d0b9995a0de8c81d8274af73e77e045ae33797388ce045683d9b1"
+    "houseCsv": "8c16daea4f8f6aac3ad5ee16f056e7b6b7299a0359a74f2994ea1bb704d7f730",
+    "resultsCsv": "d99731fdffd507121e662389858af05d1971648c1b2c7736b7bdeaade8c55d1d"
   },
-  "sourceLatestResultUpdatedUtc": "2026-11-05T22:00:35Z",
-  "retrievalUtc": "2026-11-05T22:05:09.092022Z",
+  "sourceLatestResultUpdatedUtc": "2026-11-05T22:19:44Z",
+  "retrievalUtc": "2026-11-05T22:20:06.520272Z",
   "publishedAsOf": "Snapshot captured on 2026-11-05. Each non-House race includes its per-race source timestamp. Earlier race calls are not official state certifications.",
   "resultStatus": "UNOFFICIAL_CALLS_AND_COUNTS_NOT_CERTIFIED",
   "verificationPolicy": {
@@ -277,13 +277,13 @@
       "winnerOrLeader": "Eli Crane",
       "party": "REP",
       "votes": {
-        "DEM": 140871,
-        "REP": 143106,
-        "OTHER": 5209
+        "DEM": 143340,
+        "REP": 148690,
+        "OTHER": 5429
       },
-      "totalVotes": 289186,
-      "democraticMarginPoints": -0.77,
-      "percentReporting": 82,
+      "totalVotes": 297459,
+      "democraticMarginPoints": -1.8,
+      "percentReporting": 85,
       "sourceUrl": "https://polling-desk.com/races/2026/house/az-02"
     },
     {
@@ -8954,40 +8954,40 @@
       "winnerOrLeader": "Katie Hobbs",
       "party": "DEM",
       "percentReporting": 71,
-      "sourceUpdatedUtc": "2026-11-05T18:09:43Z",
+      "sourceUpdatedUtc": "2026-11-05T22:19:44Z",
       "candidates": [
         {
           "name": "Katie Hobbs",
           "party": "DEM",
-          "votes": 1246992,
-          "percent": 55.51,
+          "votes": 1249574,
+          "percent": 55.42,
           "calledWinner": true
         },
         {
           "name": "Andy Biggs",
           "party": "REP",
-          "votes": 958935,
-          "percent": 42.69,
+          "votes": 964397,
+          "percent": 42.77,
           "calledWinner": false
         },
         {
           "name": "Risa Lombardo",
           "party": "GRE",
-          "votes": 20138,
+          "votes": 20226,
           "percent": 0.9,
           "calledWinner": false
         },
         {
           "name": "Teri Hourihan",
           "party": "OTH",
-          "votes": 18776,
+          "votes": 18931,
           "percent": 0.84,
           "calledWinner": false
         },
         {
           "name": "Write-in",
           "party": "OTH",
-          "votes": 1452,
+          "votes": 1461,
           "percent": 0.06,
           "calledWinner": false
         }
