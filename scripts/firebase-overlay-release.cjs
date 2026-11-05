@@ -505,8 +505,19 @@ function normalizeSharedFooter(html) {
 
 function injectSharedShell(html, route) {
   let output = html;
-  const mainTag = /<main\b[^>]*>/i.exec(output);
-  if (!mainTag) fail(`Legacy public page has no main landmark: ${route}`);
+  let mainTag = /<main\b[^>]*>/i.exec(output);
+  if (!mainTag) {
+    const articleStart = /<article\b[^>]*>/i.exec(output);
+    const articleEndPattern = /<\/article>/gi;
+    let articleEnd;
+    let lastArticleEnd;
+    while ((articleEnd = articleEndPattern.exec(output))) lastArticleEnd = articleEnd;
+    if (!articleStart || !lastArticleEnd) fail('Legacy public page has no main landmark: ' + route);
+    output = output.slice(0, articleStart.index) + '<main id="main-content">' + output.slice(articleStart.index);
+    const mainEnd = lastArticleEnd.index + lastArticleEnd[0].length + '<main id="main-content">'.length;
+    output = output.slice(0, mainEnd) + '</main>' + output.slice(mainEnd);
+    mainTag = /<main\b[^>]*>/i.exec(output);
+  }
   let mainId = mainTag[0].match(/\bid=["']([^"']+)["']/i)?.[1];
   if (!mainId) {
     mainId = 'main-content';

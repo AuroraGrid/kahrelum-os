@@ -115,3 +115,16 @@ test('shared screenshot polish hooks are present', () => {
   assert.ok(digitalId.includes('digital-id-watch-callout'));
   assert.ok(pilot.includes('Target delivery: 2 business days (Fit Check) · 5 business days (Founding Pilot)'));
 });
+
+
+test('legacy article-only routes gain a valid skip target without changing article text', () => {
+  const html = '<html><head></head><body><header>Local heading</header>' +
+    '<article><h1>Published article</h1><p>Preserve this research text.</p></article>' +
+    '<footer class="site-local-footer">Copyright</footer></body></html>';
+  const result = injectSharedShell(html, '/nfl/analysis').toString('utf8');
+
+  assert.ok(result.includes('<main id="main-content"><article>'));
+  assert.ok(result.includes('href="#main-content">Skip to main content</a>'));
+  assert.ok(result.includes('<p>Preserve this research text.</p>'));
+  assert.ok(result.includes('</article></main>'));
+});
