@@ -222,20 +222,22 @@ const RELEASE_PROFILES = {
     includeHomepage: false,
   },
   'site-makeover': {
-    overlayFiles: [
-      'index.html', 'site-shell.css', 'site-shell.js',
-      'assurance.html', 'investigations.html', 'forecasting.html', 'election-challenge.html',
-      'digital-id.html', 'one.html', 'os.html', 'election-lab.html',
-      'election-results-2026.html', 'evidence-scorecard.html', 'israel-certified-2026.html',
-      'nfl/deadline-watch-2026.html', 'nfl/analysis.html', 'nfl/film-room.html',
-      'nfl/trades.html', 'nfl/weekly-brief.html', 'sports-interest.html', 'sports.html',
-      'sports/mlb.html', 'sports/nba.html', 'sports/nhl.html',
-      'insights.html', 'insights/ai-bots-money-claims.html',
-      'insights/election-forecast-custody.html', 'insights/nfl-brier-accountability.html',
-      'pilot.html', 'demo.html',
-      'data/api/v1/example.json', 'data/api/v1/index.json', 'data/api/v1/release.json',
-    ],
+    overlayFiles: ['site-shell.css', 'site-shell.js', 'digital-id.html', 'pilot.html', 'demo.html'],
     liveTransformRoutes: [
+      ['/index.html', '/'], ['/assurance.html', '/assurance'], ['/investigations.html', '/investigations'],
+      ['/forecasting.html', '/forecasting'], ['/election-challenge.html', '/election-challenge'],
+      ['/one.html', '/one'], ['/os.html', '/os'], ['/election-lab.html', '/election-lab'],
+      ['/election-results-2026.html', '/election-results-2026'],
+      ['/evidence-scorecard.html', '/evidence-scorecard'],
+      ['/israel-certified-2026.html', '/israel-certified-2026'],
+      ['/nfl/deadline-watch-2026.html', '/nfl/deadline-watch-2026'],
+      ['/nfl/analysis.html', '/nfl/analysis'], ['/nfl/film-room.html', '/nfl/film-room'],
+      ['/nfl/trades.html', '/nfl/trades'], ['/nfl/weekly-brief.html', '/nfl/weekly-brief'],
+      ['/sports-interest.html', '/sports-interest'], ['/sports.html', '/sports'],
+      ['/sports/mlb.html', '/sports/mlb'], ['/sports/nba.html', '/sports/nba'], ['/sports/nhl.html', '/sports/nhl'],
+      ['/insights.html', '/insights'], ['/insights/ai-bots-money-claims.html', '/insights/ai-bots-money-claims'],
+      ['/insights/election-forecast-custody.html', '/insights/election-forecast-custody'],
+      ['/insights/nfl-brier-accountability.html', '/insights/nfl-brier-accountability'],
       ['/sample.html', '/sample'], ['/connect.html', '/connect'], ['/hasan.html', '/hasan'],
       ['/election-live.html', '/election-live'], ['/election-count.html', '/election-count'],
       ['/election-method.html', '/election-method'], ['/election-showdown.html', '/election-showdown'],
@@ -443,10 +445,102 @@ async function verifiedLiveFile(live, hostingPath, publicPath) {
   return bytes;
 }
 
+function groupMobileDrawer(html) {
+  return html.replace(/(<div\b(?=[^>]*class=["'][^"']*\bsite-mobile-panel\b)[^>]*>)([\s\S]*?)(<\/div>)/i, (full, open, inner, close) => {
+    if (/\bsite-mobile-group\b/i.test(inner)) return full;
+    const anchors = Array.from(inner.matchAll(/<a\b[^>]*href=["']([^"']*)["'][^>]*>[\s\S]*?<\/a>/gi))
+      .map((match) => ({ href: match[1], html: match[0] }));
+    if (!anchors.length) return full;
+    const commercialHrefs = ["/assurance", "/pilot", "/demo", "/os", "mailto:hasan@kahrelum.com"];
+    const publicHrefs = ["/forecasting", "/investigations", "/election-lab", "/digital-id", "/sports", "/insights"];
+    const used = new Set();
+    function group(label, className, hrefs, includeRemaining) {
+      const links = hrefs.map((href) => anchors.find((item) => item.href === href && !used.has(item))).filter(Boolean);
+      links.forEach((item) => used.add(item));
+      if (includeRemaining) anchors.filter((item) => !used.has(item)).forEach((item) => { links.push(item); used.add(item); });
+      return '<div class="site-mobile-group ' + className + '"><p class="site-mobile-group-label">' + label + '</p>' +
+        links.map((item) => item.html).join("") + '</div>';
+    }
+    return open +
+      group("Commercial Assurance", "site-mobile-group-commercial", commercialHrefs, false) +
+      group("Public Intelligence Desks", "site-mobile-group-public", publicHrefs, true) +
+      close;
+  });
+}
+
+function normalizeSharedFooter(html) {
+  const pageContexts = [];
+  const footerMarker = "\u0000KAHRELUM_SHARED_FOOTER\u0000";
+  let sharedOpen = null;
+  let sharedInner = "";
+  let sharedClose = "</footer>";
+
+  let output = html.replace(/<footer\b([^>]*)>([\s\S]*?)<\/footer>/gi, (full, attrs, inner) => {
+    if (/\bsite-footer\b/i.test(attrs) && !sharedOpen) {
+      sharedOpen = "<footer" + attrs + ">";
+      sharedInner = inner;
+      return footerMarker;
+    }
+    pageContexts.push(inner);
+    return "";
+  });
+
+  if (!sharedOpen) {
+    sharedOpen = '<footer class="site-footer">';
+    sharedInner = '<div class="site-footer-inner"><nav aria-label="Footer navigation"><a href="/os">KAHRELUM OS</a><a href="/pilot#request">Pilot inquiry</a><a href="mailto:hasan@kahrelum.com">hasan@kahrelum.com</a><a href="https://github.com/AuroraGrid/kahrelum-os">GitHub repository</a></nav></div>';
+  }
+
+  const contextMarkup = pageContexts
+    .map((content) => content.trim())
+    .filter(Boolean)
+    .map((content) => '<div class="site-footer-context">' + content + '</div>')
+    .join("");
+
+  if (contextMarkup) {
+    const innerOpen = /<div\b(?=[^>]*class=["'][^"']*\bsite-footer-inner\b)[^>]*>/i.exec(sharedInner);
+    if (innerOpen) {
+      sharedInner = sharedInner.slice(0, innerOpen.index + innerOpen[0].length) +
+        contextMarkup + sharedInner.slice(innerOpen.index + innerOpen[0].length);
+    } else {
+      sharedInner = '<div class="site-footer-inner">' + contextMarkup + sharedInner + '</div>';
+    }
+  }
+
+  if (!sharedInner.includes('aria-label="Footer navigation"')) {
+    sharedInner = sharedInner.replace(/<\/div>\s*$/i,
+      '<nav aria-label="Footer navigation"><a href="/os">KAHRELUM OS</a><a href="/pilot#request">Pilot inquiry</a><a href="mailto:hasan@kahrelum.com">hasan@kahrelum.com</a><a href="https://github.com/AuroraGrid/kahrelum-os">GitHub repository</a></nav></div>');
+  }
+  if (!/Independent, operator-assisted research and evidence review\. Not a certification\./i.test(sharedInner)) {
+    sharedInner = sharedInner.replace(/<\/div>\s*$/i,
+      '<p class="site-footer-boundary">Independent, operator-assisted research and evidence review. Not a certification.</p></div>');
+  } else {
+    sharedInner = sharedInner.replace(
+      /<p>(Independent, operator-assisted research and evidence review\. Not a certification\.)<\/p>/i,
+      '<p class="site-footer-boundary">$1</p>');
+  }
+  if (!/© 2026 KAHRELUM|&copy; 2026 KAHRELUM/i.test(sharedInner)) {
+    sharedInner = sharedInner.replace(/<\/div>\s*$/i, '<p class="site-footer-copyright">© 2026 KAHRELUM</p></div>');
+  }
+
+  const sharedFooter = sharedOpen + sharedInner + sharedClose;
+  return output.includes(footerMarker) ? output.replace(footerMarker, sharedFooter) : output.replace(/<\/body>/i, sharedFooter + "</body>");
+}
+
 function injectSharedShell(html, route) {
   let output = html;
-  const mainTag = /<main\b[^>]*>/i.exec(output);
-  if (!mainTag) fail(`Legacy public page has no main landmark: ${route}`);
+  let mainTag = /<main\b[^>]*>/i.exec(output);
+  if (!mainTag) {
+    const articleStart = /<article\b[^>]*>/i.exec(output);
+    const articleEndPattern = /<\/article>/gi;
+    let articleEnd;
+    let lastArticleEnd;
+    while ((articleEnd = articleEndPattern.exec(output))) lastArticleEnd = articleEnd;
+    if (!articleStart || !lastArticleEnd) fail('Legacy public page has no main landmark: ' + route);
+    output = output.slice(0, articleStart.index) + '<main id="main-content">' + output.slice(articleStart.index);
+    const mainEnd = lastArticleEnd.index + lastArticleEnd[0].length + '<main id="main-content">'.length;
+    output = output.slice(0, mainEnd) + '</main>' + output.slice(mainEnd);
+    mainTag = /<main\b[^>]*>/i.exec(output);
+  }
   let mainId = mainTag[0].match(/\bid=["']([^"']+)["']/i)?.[1];
   if (!mainId) {
     mainId = 'main-content';
@@ -605,12 +699,17 @@ async function buildOverlay(live, profileName) {
   for (const name of profile.overlayFiles) {
     const source = path.join(ROOT, name);
     if (!fs.existsSync(source)) fail(`Repository overlay source is missing: ${name}`);
-    addBlob(desired, blobs, '/' + name, readRepositoryBytes(name));
+    let sourceBytes = readRepositoryBytes(name);
+    if (profileName === 'site-makeover' && name.toLowerCase().endsWith('.html')) {
+      sourceBytes = Buffer.from(normalizeSharedFooter(groupMobileDrawer(sourceBytes.toString('utf8'))), 'utf8');
+    }
+    addBlob(desired, blobs, '/' + name, sourceBytes);
   }
 
   for (const [hostingPath, route] of profile.liveTransformRoutes || []) {
     const liveHtml = (await verifiedLiveFile(live, hostingPath, route)).toString('utf8');
-    addBlob(desired, blobs, hostingPath, injectSharedShell(liveHtml, route));
+    const shelled = injectSharedShell(liveHtml, route).toString('utf8');
+    addBlob(desired, blobs, hostingPath, Buffer.from(normalizeSharedFooter(groupMobileDrawer(shelled)), 'utf8'));
   }
 
   const one = fs.readFileSync(path.join(ROOT, 'one.html'), 'utf8');

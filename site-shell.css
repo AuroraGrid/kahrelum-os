@@ -76,3 +76,20 @@ body.site-shell-ready footer:not(.site-footer){max-width:1280px;margin:1.2rem au
 .site-local-footer{max-width:1280px;margin:1.2rem auto 0!important;padding:.35rem clamp(1rem,3vw,2rem) 0!important;border-top:0!important;background:transparent!important;color:#70695e!important;font-size:.78rem!important;line-height:1.45!important}
 
 .site-home .public-research-card{background:transparent!important;border-color:#d3cabb}.public-lab-label{display:block;margin-bottom:.45rem;color:#615a4e;font:700 .66rem/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.12em;text-transform:uppercase}
+
+/* Mobile screenshot polish: keep the shared brand/menu identical across page styles. */
+.site-wordmark{color:#5b3b73!important}
+.site-mobile-menu{border:0!important;padding:0!important;background:transparent!important;box-shadow:none!important}
+.site-mobile-menu>summary{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--site-rule)!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;padding:.42rem .7rem!important;color:var(--site-ink)!important}
+.site-mobile-panel{display:block!important}
+.site-mobile-group{display:grid;grid-template-columns:1fr 1fr;gap:.2rem}
+.site-mobile-group+.site-mobile-group{margin-top:.45rem;padding-top:.6rem;border-top:1px solid var(--site-rule)}
+.site-mobile-group-label{grid-column:1/-1;margin:0;padding:.2rem .45rem .25rem;color:var(--site-muted);font:700 .66rem/1.3 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.1em;text-transform:uppercase}
+.site-footer-context{margin:0 0 .7rem;padding:0 0 .65rem;border-bottom:1px solid #c8bfae80;color:inherit;font-size:.78rem;line-height:1.45}
+.site-footer-context p{margin:.15rem 0}
+.site-footer-boundary,.site-footer-copyright{margin:.55rem 0 0;font-size:.78rem}
+.site-footer-copyright{font-size:.75rem}
+.digital-id-watch-callout{padding:14px 16px!important}
+.pilot-wrap section>.eyebrow{margin:0 0 .35rem;color:var(--site-muted);font:700 .7rem/1.3 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.demo-evidence-label{text-transform:uppercase;letter-spacing:.035em;font:700 .72rem/1.25 system-ui,-apple-system,"Segoe UI",sans-serif;color:#514b42}
+@media(max-width:768px){.site-mobile-group{grid-template-columns:1fr 1fr}.site-footer-context{margin-bottom:.55rem;padding-bottom:.5rem}}

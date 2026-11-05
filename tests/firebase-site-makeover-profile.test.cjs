@@ -24,20 +24,19 @@ test('site makeover release profile is explicit and includes the legacy public r
   assert.ok(profileStart >= 0 && profileEnd > profileStart);
   const profile = source.slice(profileStart, profileEnd);
   for (const file of [
-    'index.html',
     'site-shell.css',
     'site-shell.js',
     'pilot.html',
     'demo.html',
-    'data/api/v1/example.json',
-    'sports/mlb.html',
-    'sports/nhl.html',
+    'digital-id.html',
   ]) {
     assert.ok(profile.includes("'" + file + "'"), file + ' must be included in the bounded release');
   }
   for (const route of [
-    '/sample', '/connect', '/hasan', '/election-live', '/election-count',
-    '/election-method', '/election-showdown', '/election-comparison',
+    '/index.html', '/assurance', '/investigations', '/forecasting', '/election-challenge',
+    '/nfl/weekly-brief', '/sports/mlb', '/sample', '/connect', '/hasan',
+    '/election-live', '/election-count', '/election-method', '/election-showdown',
+    '/election-comparison',
   ]) {
     assert.ok(profile.includes("'" + route + "'"), route + ' must receive the shared shell');
   }
@@ -72,4 +71,88 @@ test('legacy election page gets election-specific next steps without replacing i
   assert.ok(result.includes('Frozen record remains as published.'));
   assert.ok(result.includes('href="/forecasting">Read the forecasting desk -></a>'));
   assert.ok(result.includes('href="/election-challenge">Review the election challenge -></a>'));
+});
+
+
+const footerStart = source.indexOf('function normalizeSharedFooter(');
+const footerEnd = source.indexOf('function injectSharedShell(', footerStart);
+assert.ok(footerStart >= 0 && footerEnd > footerStart, 'Shared footer normalization must exist');
+const normalizeSharedFooter = new Function(
+  source.slice(footerStart, footerEnd) + '\nreturn normalizeSharedFooter;'
+)();
+
+test('release normalization consolidates page footers without dropping publication details', () => {
+  const html = '<html><body><main>Page content</main>' +
+    '<footer class="site-local-footer"><p>Publication boundary: example note.</p><p>© 2026 KAHRELUM</p></footer>' +
+    '<footer class="site-footer"><div class="site-footer-inner"><nav aria-label="Footer navigation">' +
+    '<a href="/os">KAHRELUM OS</a><a href="/pilot#request">Pilot inquiry</a>' +
+    '<a href="mailto:hasan@kahrelum.com">hasan@kahrelum.com</a>' +
+    '<a href="https://github.com/AuroraGrid/kahrelum-os">GitHub repository</a>' +
+    '</nav><p>Independent, operator-assisted research and evidence review. Not a certification.</p></div></footer>' +
+    '</body></html>';
+  const result = normalizeSharedFooter(html);
+
+  assert.equal(result.split('<footer').length - 1, 1);
+  assert.ok(result.includes('Publication boundary: example note.'));
+  assert.ok(result.includes('© 2026 KAHRELUM'));
+  assert.ok(result.includes('mailto:hasan@kahrelum.com'));
+  assert.ok(result.includes('https://github.com/AuroraGrid/kahrelum-os'));
+  assert.ok(result.includes('Independent, operator-assisted research and evidence review. Not a certification.'));
+});
+
+test('shared screenshot polish hooks are present', () => {
+  const css = fs.readFileSync(path.join(root, 'site-shell.css'), 'utf8');
+  const shell = fs.readFileSync(path.join(root, 'site-shell.js'), 'utf8');
+  const digitalId = fs.readFileSync(path.join(root, 'digital-id.html'), 'utf8');
+  const pilot = fs.readFileSync(path.join(root, 'pilot.html'), 'utf8');
+
+  assert.ok(css.includes('.site-wordmark{color:#5b3b73!important}'));
+  assert.match(css, /\.site-mobile-menu>summary[^}]*border:1px solid/);
+  assert.ok(css.includes('.digital-id-watch-callout{padding:14px 16px!important}'));
+  assert.ok(css.includes('.pilot-wrap section>.eyebrow'));
+  assert.ok(shell.includes('Commercial Assurance'));
+  assert.ok(shell.includes('Public Intelligence Desks'));
+  assert.ok(digitalId.includes('digital-id-watch-callout'));
+  assert.ok(pilot.includes('Target delivery: 2 business days (Fit Check) · 5 business days (Founding Pilot)'));
+});
+
+
+test('legacy article-only routes gain a valid skip target without changing article text', () => {
+  const html = '<html><head></head><body><header>Local heading</header>' +
+    '<article><h1>Published article</h1><p>Preserve this research text.</p></article>' +
+    '<footer class="site-local-footer">Copyright</footer></body></html>';
+  const result = injectSharedShell(html, '/nfl/analysis').toString('utf8');
+
+  assert.ok(result.includes('<main id="main-content"><article>'));
+  assert.ok(result.includes('href="#main-content">Skip to main content</a>'));
+  assert.ok(result.includes('<p>Preserve this research text.</p>'));
+  assert.ok(result.includes('</article></main>'));
+});
+
+
+const drawerStart = source.indexOf('function groupMobileDrawer(');
+const drawerEnd = source.indexOf('function normalizeSharedFooter(', drawerStart);
+assert.ok(drawerStart >= 0 && drawerEnd > drawerStart, 'Static mobile grouping transform must exist');
+const groupMobileDrawer = new Function(
+  source.slice(drawerStart, drawerEnd) + '\nreturn groupMobileDrawer;'
+)();
+
+test('mobile drawer is grouped in static HTML and retains every link once', () => {
+  const links = [
+    '<a href="/assurance">AI Assurance</a>', '<a href="/pilot">Pilot</a>',
+    '<a href="/demo">Sample Record</a>', '<a href="/investigations">Investigations</a>',
+    '<a href="/forecasting">Forecasting</a>', '<a href="/election-lab">Election Lab</a>',
+    '<a href="/digital-id">Digital ID</a>', '<a href="/sports">Sports</a>',
+    '<a href="/insights">Insights</a>', '<a href="/os">OS &amp; Method</a>',
+    '<a href="mailto:hasan@kahrelum.com">Connect</a>',
+  ];
+  const result = groupMobileDrawer('<div class="site-mobile-panel">' + links.join('') + '</div>');
+
+  assert.ok(result.includes('Commercial Assurance'));
+  assert.ok(result.includes('Public Intelligence Desks'));
+  assert.ok(result.indexOf('AI Assurance') < result.indexOf('Public Intelligence Desks'));
+  for (const link of links) {
+
+    assert.equal((result.match(/<a\b/g) || []).length, links.length);
+  }
 });
