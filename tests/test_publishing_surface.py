@@ -16,7 +16,7 @@ class PublishingSurfaceTests(unittest.TestCase):
         manifest = json.loads(self.read("assets/social-manifest.json"))
         cards = manifest["cards"]
         self.assertEqual(manifest["schema"], "KAHRELUM_SOCIAL_CARDS_v1.0")
-        self.assertEqual(len(cards), 27)
+        self.assertEqual(len(cards), 31)
         self.assertEqual(len({card["route"] for card in cards}), len(cards))
         self.assertEqual(len({card["image"] for card in cards}), len(cards))
         for card in cards:
