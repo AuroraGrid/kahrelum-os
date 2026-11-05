@@ -1,0 +1,78 @@
+:root{--site-ink:#171613;--site-paper:#f4efe6;--site-rule:#c8bfae;--site-muted:#615a4e;--site-accent:#843326}
+.site-header{display:block!important;position:sticky;top:0;z-index:1000;width:100%;background:rgba(244,239,230,.97);border-bottom:1px solid var(--site-rule);backdrop-filter:blur(12px);color:var(--site-ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.site-header-inner{max-width:1280px;min-height:66px;margin:0 auto;padding:.7rem clamp(1rem,3vw,2rem);display:flex;align-items:center;justify-content:space-between;gap:1.25rem}
+.site-wordmark{font-family:Georgia,"Newsreader",serif;font-size:1rem;font-weight:700;letter-spacing:.1em;text-decoration:none;white-space:nowrap}
+.site-nav{display:flex;align-items:center;justify-content:flex-end;gap:clamp(.7rem,1.45vw,1.25rem);flex-wrap:wrap;font-size:.82rem;letter-spacing:.035em}
+.site-nav>a,.site-labs>summary,.site-mobile-panel>a{color:inherit;text-decoration:none;font-weight:600}
+.site-nav>a,.site-labs>summary{padding:.4rem 0;border-bottom:2px solid transparent}
+.site-nav a:hover,.site-mobile-panel a:hover{text-decoration:underline;text-underline-offset:.2em}
+.site-nav [aria-current="page"],.site-labs.is-active>summary{border-bottom-color:var(--site-accent);font-weight:750}
+.site-labs{position:relative}
+.site-labs>summary{list-style:none;cursor:pointer}
+.site-labs>summary::-webkit-details-marker,.site-mobile-menu>summary::-webkit-details-marker{display:none}
+.site-labs-panel{position:absolute;right:0;top:calc(100% + .55rem);z-index:1010;display:grid;min-width:12rem;gap:.1rem;padding:.5rem;background:var(--site-paper);border:1px solid var(--site-rule);box-shadow:0 12px 30px #17161318}
+.site-labs-panel a{display:block;color:var(--site-ink);padding:.45rem .6rem;text-decoration:none;font-size:.88rem}
+.site-labs-panel a[aria-current="page"]{background:#e7ddce;font-weight:700}
+.site-mobile-menu{display:none;position:relative}
+.site-mobile-menu>summary{cursor:pointer;list-style:none;border:1px solid var(--site-rule);padding:.42rem .7rem;font-size:.9rem;font-weight:700;letter-spacing:.04em}
+.site-mobile-panel{position:absolute;right:0;top:calc(100% + .5rem);z-index:1010;display:grid;grid-template-columns:1fr 1fr;gap:.2rem;min-width:min(92vw,24rem);padding:.7rem;background:var(--site-paper);border:1px solid var(--site-rule);box-shadow:0 12px 30px #17161318}
+.site-mobile-panel a{padding:.55rem .45rem;text-decoration:none;font-size:.9rem}
+.site-mobile-panel a[aria-current="page"]{background:#e7ddce}
+.site-skip,.skip-link{position:absolute;left:-9999px;top:auto;z-index:1100;background:var(--site-ink);color:var(--site-paper);padding:.65rem .9rem}
+.site-skip:focus,.skip-link:focus{left:.75rem;top:.75rem}
+.site-local-header{display:none!important}
+.site-next-steps{max-width:1280px;margin:1.5rem auto 0;padding:1rem clamp(1rem,3vw,2rem);border-top:1px solid var(--site-rule);display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;font:600 .92rem/1.4 system-ui,-apple-system,"Segoe UI",sans-serif}
+.site-next-steps a{color:var(--site-ink);text-underline-offset:.18em}
+.site-footer{margin-top:0;border-top:1px solid var(--site-rule);background:#eee8dc;color:#514b42;font:400 .82rem/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+.site-footer-inner{max-width:1280px;margin:0 auto;padding:1.1rem clamp(1rem,3vw,2rem) 1.35rem}
+.site-footer nav{display:flex;flex-wrap:wrap;gap:.45rem 1.3rem}
+.site-footer a{color:inherit}
+.site-footer p{margin:.65rem 0 0;font-size:.78rem}
+.status-badge,.case-status{display:inline-flex;align-items:center;justify-content:center;gap:.3rem;max-width:100%;padding:.2rem .55rem;border:1px solid #34302a;border-radius:999px;background:#fffaf0;color:#211e19;font:700 .69rem/1.25 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.045em;text-transform:uppercase;white-space:normal;vertical-align:middle}
+.status-ready,.status-operational,.status-voluntary{background:#e3eee3;border-color:#39563b;color:#18361b}
+.status-active{background:#f4e4d0;border-color:#7b471b;color:#562c0c}
+.status-open,.status-unknown{background:#ece7dd;border-color:#524c42;color:#2e2a25}
+.status-framework{background:#e4ebf3;border-color:#36506e;color:#1d3855}
+.status-template{background:#f0e6df;border-color:#765344;color:#4f2c20}
+.jurisdiction-statuses{display:flex;flex-wrap:wrap;gap:.35rem;margin:.45rem 0 .65rem}
+.case-record{border-radius:4px}
+.case-status{border-radius:2px}
+.case-record[data-status="READY"] .case-status{background:#e3eee3;border-color:#39563b;color:#18361b}
+.case-record[data-status="OPEN"] .case-status{background:#ece7dd;border-color:#524c42;color:#2e2a25}
+.case-record[data-status="ACTIVE"] .case-status{background:#f4e4d0;border-color:#7b471b;color:#562c0c}
+.site-freshness{margin:1rem 0;padding:.85rem 1rem;border:1px solid #643126;border-left:4px solid #843326;background:#f2e4d9;color:#2c1b16;font:750 .82rem/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.035em}
+.commercial-offer-lede{margin:1.35rem 0 .65rem;padding:1rem 1.15rem;border:1px solid var(--site-rule);border-left:4px solid var(--site-accent);background:#eee8dc}
+.site-home #divisions>.usegrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.site-home #divisions>.usegrid>.card{border:1px solid var(--site-rule);background:rgba(255,253,248,.52);padding:1.15rem}
+.offer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:900px){.site-header-inner{flex-wrap:wrap}.site-nav{gap:.55rem .85rem}.site-wordmark{font-size:.92rem}}
+@media(max-width:768px){.case-record{padding:.8rem}.site-header-inner{min-height:58px;flex-wrap:nowrap;gap:.7rem}.site-nav{display:none}.site-mobile-menu{display:block}.site-footer nav{gap:.4rem .9rem}.site-home #divisions>.usegrid,.offer-grid{grid-template-columns:1fr}.site-density{padding-block:var(--site-mobile-padding-block)!important;padding-inline:var(--site-mobile-padding-inline)!important}.site-next-steps{margin-top:1rem}}
+@media(prefers-reduced-motion:reduce){.site-header *{scroll-behavior:auto}}
+
+.site-header a:focus-visible,.site-header summary:focus-visible,.site-mobile-menu summary:focus-visible,.site-next-steps a:focus-visible,.site-footer a:focus-visible{outline:3px solid #843326;outline-offset:3px}
+.site-freshness{font-weight:800}
+@media(max-width:768px){.site-mobile-panel{grid-template-columns:1fr 1fr}.site-footer-inner{padding-block:.9rem 1rem}}
+
+.pilot-wrap{max-width:72rem;margin:0 auto;padding:clamp(1.4rem,4vw,3.2rem) clamp(1rem,3vw,2rem) 3rem}
+.pilot-hero{max-width:58rem;padding:1rem 0 1.6rem}
+.pilot-hero h1{max-width:18ch}
+.pilot-packages{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1rem 0}
+.pilot-package{border:1px solid var(--site-rule);background:rgba(255,253,248,.62);padding:1.15rem}
+.pilot-package .price{font-family:Georgia,"Newsreader",serif;font-size:2rem;font-weight:700;margin:.15rem 0 .5rem}
+.pilot-inquiry{border:1px solid var(--site-rule);background:#eee8dc;padding:1.15rem;max-width:54rem}
+.pilot-inquiry label{display:block;font-weight:700;margin:.9rem 0 .3rem}
+.pilot-inquiry input,.pilot-inquiry select,.pilot-inquiry textarea{width:100%;padding:.7rem;border:1px solid #857b6d;background:#fffdf8;color:#171613;font:inherit}
+.pilot-inquiry textarea{min-height:6rem;resize:vertical}
+.pilot-actions{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:1rem}
+.pilot-actions button,.pilot-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:2.7rem;padding:.65rem 1rem;border:1px solid #171613;background:#171613;color:#f4efe6;text-decoration:none;font:700 .9rem/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;cursor:pointer}
+.pilot-actions .secondary{background:transparent;color:#171613}
+.pilot-notice{margin-top:.75rem;color:#514b42;font-size:.88rem}
+@media(max-width:768px){.pilot-packages{grid-template-columns:1fr}.pilot-package,.pilot-inquiry{padding:.9rem}}
+
+.pilot-wrap{max-width:72rem;margin:0 auto;padding:clamp(1.4rem,4vw,3.2rem) clamp(1rem,3vw,2rem) 3rem}.pilot-hero{max-width:58rem;padding:1rem 0 1.6rem}.pilot-hero h1{max-width:18ch}.pilot-packages{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1rem 0}.pilot-package{border:1px solid var(--site-rule);background:rgba(255,253,248,.62);padding:1.15rem}.pilot-package .price{font-family:Georgia,"Newsreader",serif;font-size:2rem;font-weight:700;margin:.15rem 0 .5rem}.pilot-inquiry{border:1px solid var(--site-rule);background:#eee8dc;padding:1.15rem;max-width:54rem}.pilot-inquiry label{display:block;font-weight:700;margin:.9rem 0 .3rem}.pilot-inquiry input,.pilot-inquiry select,.pilot-inquiry textarea{width:100%;padding:.7rem;border:1px solid #857b6d;background:#fffdf8;color:#171613;font:inherit}.pilot-inquiry textarea{min-height:6rem;resize:vertical}.pilot-actions{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:1rem}.pilot-actions button,.pilot-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:2.7rem;padding:.65rem 1rem;border:1px solid #171613;background:#171613;color:#f4efe6;text-decoration:none;font:700 .9rem/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;cursor:pointer}.pilot-actions .secondary{background:transparent;color:#171613}.pilot-notice{margin-top:.75rem;color:#514b42;font-size:.88rem}@media(max-width:768px){.pilot-packages{grid-template-columns:1fr}.pilot-package,.pilot-inquiry{padding:.9rem}}
+body.site-shell-ready footer:not(.site-footer){max-width:1280px;margin:1.2rem auto 0!important;padding:.35rem clamp(1rem,3vw,2rem) 0!important;border-top:0!important;background:transparent!important;color:#70695e!important;font-size:.78rem!important;line-height:1.45!important}
+
+.site-local-header{display:none!important}
+.site-local-footer{max-width:1280px;margin:1.2rem auto 0!important;padding:.35rem clamp(1rem,3vw,2rem) 0!important;border-top:0!important;background:transparent!important;color:#70695e!important;font-size:.78rem!important;line-height:1.45!important}
+
+.site-home .public-research-card{background:transparent!important;border-color:#d3cabb}.public-lab-label{display:block;margin-bottom:.45rem;color:#615a4e;font:700 .66rem/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.12em;text-transform:uppercase}
