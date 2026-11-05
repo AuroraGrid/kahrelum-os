@@ -8,11 +8,11 @@
     "results": "https://polling-desk.com/results.csv"
   },
   "sourceSha256": {
-    "houseCsv": "95830c713408b1660bd40619e08e65cfcfa0f3084eef8f396c26f52053e324f6",
-    "resultsCsv": "efa7919a5e618ed2b83a1589e5b280b40d50be714286685b17cfe8f5dfc6764f"
+    "houseCsv": "4c990fd7cf07bef58332dad94641896305d4de5dd9180bca579f214a66676d35",
+    "resultsCsv": "711aa99b49fb213af99fdc08cda937c350118a8690417d24dda55cb104b6e353"
   },
-  "sourceLatestResultUpdatedUtc": "2026-11-05T16:49:17Z",
-  "retrievalUtc": "2026-11-05T16:49:54.940753Z",
+  "sourceLatestResultUpdatedUtc": "2026-11-05T17:04:22Z",
+  "retrievalUtc": "2026-11-05T17:04:54.429861Z",
   "publishedAsOf": "Snapshot captured on 2026-11-05. Each non-House race includes its per-race source timestamp. Earlier race calls are not official state certifications.",
   "resultStatus": "UNOFFICIAL_CALLS_AND_COUNTS_NOT_CERTIFIED",
   "verificationPolicy": {
@@ -3949,12 +3949,12 @@
       "winnerOrLeader": "Michael Guest",
       "party": "REP",
       "votes": {
-        "DEM": 101882,
-        "REP": 143578,
-        "OTHER": 3127
+        "DEM": 103048,
+        "REP": 144349,
+        "OTHER": 3141
       },
-      "totalVotes": 248587,
-      "democraticMarginPoints": -16.77,
+      "totalVotes": 250538,
+      "democraticMarginPoints": -16.48,
       "percentReporting": 99,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ms-03"
     },
@@ -7636,7 +7636,7 @@
       "winnerOrLeader": "Ashley Moody",
       "party": "REP",
       "percentReporting": 100,
-      "sourceUpdatedUtc": "2026-11-05T16:49:17Z",
+      "sourceUpdatedUtc": "2026-11-05T17:03:20Z",
       "candidates": [
         {
           "name": "Ashley Moody",
@@ -8098,26 +8098,26 @@
       "winnerOrLeader": "Scott Colom",
       "party": "DEM",
       "percentReporting": 98,
-      "sourceUpdatedUtc": "2026-11-05T16:49:17Z",
+      "sourceUpdatedUtc": "2026-11-05T16:50:17Z",
       "candidates": [
         {
           "name": "Scott Colom",
           "party": "DEM",
           "votes": 466328,
-          "percent": 49.05,
+          "percent": 49.04,
           "calledWinner": false
         },
         {
           "name": "Cindy Hyde-Smith",
           "party": "REP",
           "votes": 464533,
-          "percent": 48.86,
+          "percent": 48.85,
           "calledWinner": false
         },
         {
           "name": "Ty Pinkins",
           "party": "IND",
-          "votes": 19953,
+          "votes": 19994,
           "percent": 2.1,
           "calledWinner": false
         }
@@ -9129,40 +9129,40 @@
       "winnerOrLeader": "Byron Donalds",
       "party": "REP",
       "percentReporting": 100,
-      "sourceUpdatedUtc": "2026-11-05T16:47:16Z",
+      "sourceUpdatedUtc": "2026-11-05T17:03:20Z",
       "candidates": [
         {
           "name": "Byron Donalds",
           "party": "REP",
-          "votes": 4132112,
-          "percent": 50.02,
+          "votes": 4127310,
+          "percent": 50.04,
           "calledWinner": true
         },
         {
           "name": "David Jolly",
           "party": "DEM",
-          "votes": 4024180,
-          "percent": 48.71,
+          "votes": 4015504,
+          "percent": 48.68,
           "calledWinner": false
         },
         {
           "name": "Scott Eckhard Jewett",
           "party": "LIB",
-          "votes": 37884,
+          "votes": 37785,
           "percent": 0.46,
           "calledWinner": false
         },
         {
           "name": "Frank J. Russo",
           "party": "IND",
-          "votes": 23199,
+          "votes": 23147,
           "percent": 0.28,
           "calledWinner": false
         },
         {
           "name": "Charles Burkett",
           "party": "IND",
-          "votes": 15235,
+          "votes": 15207,
           "percent": 0.18,
           "calledWinner": false
         }
