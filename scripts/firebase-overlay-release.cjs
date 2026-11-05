@@ -7,6 +7,7 @@ const path = require('path');
 const util = require('util');
 const zlib = require('zlib');
 const { Readable } = require('stream');
+const { PAGE_PATCHES, MODIFIED_ROUTES, patchLivePage, setSitemapLastmod } = require('./commercial-readiness.cjs');
 
 const SITE = 'kahrelum-public-hosting';
 const DOMAIN = 'https://kahrelum.com';
@@ -244,6 +245,18 @@ const RELEASE_PROFILES = {
       ['/election-comparison.html', '/election-comparison'],
     ],
     sitemapRoutes: [],
+    includeHomepage: false,
+  },
+  'commercial-readiness': {
+    // Only edit approved snippets of verified live HTML; preserve all other Firebase bytes.
+    overlayFiles: ['llms.txt'],
+    liveTextRoutes: [
+      ['/forecasting.html', '/forecasting'],
+      ['/investigations.html', '/investigations'],
+      ['/digital-id.html', '/digital-id'],
+    ],
+    sitemapRoutes: [],
+    sitemapLastmod: MODIFIED_ROUTES,
     includeHomepage: false,
   },
   full: {
@@ -712,6 +725,17 @@ async function buildOverlay(live, profileName) {
     addBlob(desired, blobs, hostingPath, Buffer.from(normalizeSharedFooter(groupMobileDrawer(shelled)), 'utf8'));
   }
 
+  for (const [hostingPath, route] of profile.liveTextRoutes || []) {
+    const file = hostingPath.slice(1);
+    const repositoryHtml = fs.readFileSync(path.join(ROOT, file), 'utf8');
+    for (const { after } of PAGE_PATCHES[file] || []) {
+      if (!repositoryHtml.includes(after)) fail('Repository canonical file has not been updated: ' + file);
+    }
+    const liveHtml = (await verifiedLiveFile(live, hostingPath, route)).toString('utf8');
+    const revised = patchLivePage(file, liveHtml);
+    addBlob(desired, blobs, hostingPath, Buffer.from(revised, 'utf8'));
+  }
+
   const one = fs.readFileSync(path.join(ROOT, 'one.html'), 'utf8');
   if (!/in development/i.test(one)) fail('KAHRELUM ONE must remain explicitly marked in development.');
 
@@ -738,6 +762,11 @@ async function buildOverlay(live, profileName) {
   if (profile.sitemapRoutes.length) {
     const sitemap = (await verifiedLiveFile(live, '/sitemap.xml', '/sitemap.xml')).toString('utf8');
     addBlob(desired, blobs, '/sitemap.xml', updateSitemap(sitemap, profile.sitemapRoutes));
+  }
+
+  if (profile.sitemapLastmod) {
+    const sitemap = (await verifiedLiveFile(live, '/sitemap.xml', '/sitemap.xml')).toString('utf8');
+    addBlob(desired, blobs, '/sitemap.xml', Buffer.from(setSitemapLastmod(sitemap, profile.sitemapLastmod), 'utf8'));
   }
 
   const changedPaths = Object.keys(desired).filter((item) => live.fileMap[item] !== desired[item]).sort();
@@ -769,6 +798,14 @@ async function buildOverlay(live, profileName) {
     ]);
     if (changedPaths.some((item) => !allowed.has(item))) {
       fail('Site makeover attempted to replace an unrelated live Firebase path.');
+    }
+  }
+  if (profileName === 'commercial-readiness') {
+    const allowed = new Set([
+      '/llms.txt', '/forecasting.html', '/investigations.html', '/digital-id.html', '/sitemap.xml',
+    ]);
+    if (changedPaths.some((item) => !allowed.has(item))) {
+      fail('Commercial readiness release attempted to change an unrelated live Firebase path.');
     }
   }
   if (profileName === 'lead-magnet' &&
@@ -829,6 +866,30 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     }
     for (const match of html.matchAll(/(?:href|src)="(\/[^"#?]*)[^"]*"/g)) internal.add(match[1]);
     checks.push({ route, status: 200, sha256: sha256(bytes) });
+  }
+
+  if (profileName === 'commercial-readiness') {
+    const llms = (await fetchBytes(origin + '/llms.txt')).toString('utf8');
+    if (!llms.startsWith('# KAHRELUM') || !llms.includes('No client results claimed.') ||
+        !llms.includes('https://kahrelum.com/pilot')) {
+      fail('Public llms.txt does not describe the bounded, non-customer offer.');
+    }
+    const sitemap = (await fetchBytes(origin + '/sitemap.xml')).toString('utf8');
+    for (const [route, date] of Object.entries(MODIFIED_ROUTES)) {
+      if (!sitemap.includes('<loc>' + DOMAIN + route + '</loc><lastmod>' + date + '</lastmod>')) {
+        fail('Modified sitemap date is missing for ' + route);
+      }
+    }
+    for (const [file, route] of [
+      ['forecasting.html', '/forecasting'],
+      ['investigations.html', '/investigations'],
+      ['digital-id.html', '/digital-id'],
+    ]) {
+      const html = (await fetchBytes(origin + route)).toString('utf8');
+      for (const { before, after } of PAGE_PATCHES[file]) {
+        if (html.includes(before) || !html.includes(after)) fail('Research-page conversion patch was not published: ' + route);
+      }
+    }
   }
 
   if (profileName === 'candidate-portraits') {
