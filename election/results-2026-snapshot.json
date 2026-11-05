@@ -8,11 +8,11 @@
     "results": "https://polling-desk.com/results.csv"
   },
   "sourceSha256": {
-    "houseCsv": "978ef24cbbf6e1a1a2920f9d68836da5b6092b1317c45a8d8dd70db763ef7163",
-    "resultsCsv": "cffa82d714f4713b07064773848d1db96b775f8d1033deb0923de0959ff48f80"
+    "houseCsv": "ead5cdfe588beeb660449ae2cd410bc6eab783dee2d27b25dcbade2999111cc7",
+    "resultsCsv": "edf5e7ee8e4b970f8e6ff0f98c280aae7536dd09758ee6d198cbcb61c72a898c"
   },
-  "sourceLatestResultUpdatedUtc": "2026-11-05T23:04:31Z",
-  "retrievalUtc": "2026-11-05T23:04:55.172429Z",
+  "sourceLatestResultUpdatedUtc": "2026-11-05T23:18:44Z",
+  "retrievalUtc": "2026-11-05T23:19:58.183719Z",
   "publishedAsOf": "Snapshot captured on 2026-11-05. Each non-House race includes its per-race source timestamp. Earlier race calls are not official state certifications.",
   "resultStatus": "UNOFFICIAL_CALLS_AND_COUNTS_NOT_CERTIFIED",
   "verificationPolicy": {
@@ -4952,12 +4952,12 @@
       "winnerOrLeader": "Cait Conley",
       "party": "DEM",
       "votes": {
-        "DEM": 140109,
-        "REP": 128285,
+        "DEM": 140165,
+        "REP": 128292,
         "OTHER": 293
       },
-      "totalVotes": 268687,
-      "democraticMarginPoints": 4.4,
+      "totalVotes": 268750,
+      "democraticMarginPoints": 4.42,
       "percentReporting": 94,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ny-17"
     },
@@ -7077,11 +7077,11 @@
       "winnerOrLeader": "Becca Balint",
       "party": "DEM",
       "votes": {
-        "DEM": 198737,
-        "REP": 94072,
+        "DEM": 198758,
+        "REP": 94078,
         "OTHER": 11839
       },
-      "totalVotes": 304648,
+      "totalVotes": 304675,
       "democraticMarginPoints": 34.36,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/vt-01"
@@ -9745,19 +9745,19 @@
       "winnerOrLeader": "Kathy Hochul",
       "party": "DEM",
       "percentReporting": 84,
-      "sourceUpdatedUtc": "2026-11-05T21:28:06Z",
+      "sourceUpdatedUtc": "2026-11-05T23:06:32Z",
       "candidates": [
         {
           "name": "Kathy Hochul",
           "party": "DEM",
-          "votes": 3506085,
+          "votes": 3506143,
           "percent": 59.7,
           "calledWinner": true
         },
         {
           "name": "Bruce Blakeman",
           "party": "REP",
-          "votes": 2354315,
+          "votes": 2354320,
           "percent": 40.09,
           "calledWinner": false
         },
@@ -10179,19 +10179,19 @@
       "winnerOrLeader": "Phil Scott",
       "party": "REP",
       "percentReporting": 100,
-      "sourceUpdatedUtc": "2026-11-05T22:31:57Z",
+      "sourceUpdatedUtc": "2026-11-05T23:06:32Z",
       "candidates": [
         {
           "name": "Phil Scott",
           "party": "REP",
-          "votes": 162026,
+          "votes": 162042,
           "percent": 52.43,
           "calledWinner": true
         },
         {
           "name": "Amanda Janoo",
           "party": "DEM",
-          "votes": 141620,
+          "votes": 141631,
           "percent": 45.83,
           "calledWinner": false
         },
