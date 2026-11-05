@@ -1,0 +1,17 @@
+{
+  "release": "KAHRELUM OS v2.3.4 FINAL",
+  "release_status": "FINAL",
+  "runtime_artifact": {
+    "kind": "frozen release archive",
+    "sha256": "c6caca3290abbee7121fb743fabb1210b59b7536aa46dd6d6874cd02962bc1e1",
+    "identity_scope": "Referenced frozen artifact identity; not an assertion that this artifact is running on the web server.",
+    "served_by_this_api": false
+  },
+  "public_repository_role": "Architecture, evidence, and release-record surface; not the frozen runtime archive.",
+  "release_record": "https://github.com/AuroraGrid/kahrelum-os/blob/main/RELEASE_v2.3.4_FINAL.md",
+  "runtime_connected": false,
+  "limitations": [
+    "The web interface and API do not execute the frozen runtime.",
+    "A repository release record is not a substitute for the separately hash-bound archive."
+  ]
+}

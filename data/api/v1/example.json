@@ -1,0 +1,40 @@
+{
+  "example_id": "synthetic-platform-migration-001",
+  "title": "Synthetic platform migration readiness example",
+  "label": "SYNTHETIC EXAMPLE",
+  "execution_status": "PRERECORDED — NOT A LIVE KAHRELUM RUN",
+  "synthetic": true,
+  "live_execution": false,
+  "question": "Should a team commit now to an October 31 platform migration date?",
+  "scope": "Illustrative scenario only. All entities, dates, counts, and statements below are invented; none describe a real customer or project.",
+  "evidence": [
+    {
+      "kind": "stipulated synthetic fact",
+      "statement": "In this invented scenario, 8 of 10 planned service rehearsals have passed."
+    },
+    {
+      "kind": "stipulated synthetic fact",
+      "statement": "The two remaining rehearsals cover the highest-dependency services."
+    },
+    {
+      "kind": "stipulated synthetic fact",
+      "statement": "A rollback checklist exists, but no timed rollback rehearsal has been recorded."
+    }
+  ],
+  "inference": "Passing most rehearsals is encouraging, but the unresolved highest-dependency cases and untested rollback leave material readiness uncertainty. The evidence supports continued preparation, not a firm date commitment.",
+  "uncertainty": [
+    "The scenario provides no history showing how well rehearsal results predict production outcomes.",
+    "The scope, severity, and remediation time for the two remaining services are unspecified.",
+    "No independently verified rollback timing or recovery objective is provided."
+  ],
+  "counterargument": "The team could still meet the date: eight rehearsals passed, the remaining failures may be routine, and the checklist may be sufficient if a rollback is rarely needed. The scenario contains no evidence that the remaining work will miss the deadline.",
+  "decision_gate": {
+    "current_state": "HOLD DATE COMMITMENT",
+    "rule": "Commit only after both high-dependency rehearsals pass against the frozen acceptance criteria and a timed rollback rehearsal meets the agreed recovery objective. Reassess if either gate fails."
+  },
+  "record": {
+    "state": "illustrative and prerecorded",
+    "summary": "Current disposition: continue preparation; do not treat the date as cleared by this example.",
+    "preservation_note": "This synthetic record is published unchanged as the example source for /demo and /api/v1/example. It is not a fresh execution, customer result, or empirical claim."
+  }
+}
