@@ -8,11 +8,11 @@
     "results": "https://polling-desk.com/results.csv"
   },
   "sourceSha256": {
-    "houseCsv": "801afd4682c47d0cf45cfc2ecd1ccc5ae0274f4ee0456e3c0419c14cb9425e53",
-    "resultsCsv": "afc5565df236b71afa94a78cacc0f09ccc35b562c2d3afe6cf7cfda97d26ae49"
+    "houseCsv": "4e9bf29a15552500203f644ee9c5cce0eabb5a3e95650673079edd19eccac5e2",
+    "resultsCsv": "6f70150379133012d83c20143374330a95043a2750828617825df4f74a32c3d7"
   },
-  "sourceLatestResultUpdatedUtc": "2026-11-05T18:19:50Z",
-  "retrievalUtc": "2026-11-05T18:19:57.175730Z",
+  "sourceLatestResultUpdatedUtc": "2026-11-05T18:28:58Z",
+  "retrievalUtc": "2026-11-05T18:34:57.198147Z",
   "publishedAsOf": "Snapshot captured on 2026-11-05. Each non-House race includes its per-race source timestamp. Earlier race calls are not official state certifications.",
   "resultStatus": "UNOFFICIAL_CALLS_AND_COUNTS_NOT_CERTIFIED",
   "verificationPolicy": {
@@ -6007,10 +6007,10 @@
       "party": "REP",
       "votes": {
         "DEM": 109988,
-        "REP": 195584,
+        "REP": 195585,
         "OTHER": 0
       },
-      "totalVotes": 305572,
+      "totalVotes": 305573,
       "democraticMarginPoints": -28.01,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/sd-01"
@@ -6856,12 +6856,12 @@
       "winnerOrLeader": "Celeste Maloy",
       "party": "REP",
       "votes": {
-        "DEM": 66388,
-        "REP": 110510,
-        "OTHER": 13174
+        "DEM": 66760,
+        "REP": 110633,
+        "OTHER": 13214
       },
-      "totalVotes": 190072,
-      "democraticMarginPoints": -23.21,
+      "totalVotes": 190607,
+      "democraticMarginPoints": -23.02,
       "percentReporting": 73,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ut-03"
     },
@@ -7636,7 +7636,7 @@
       "winnerOrLeader": "Ashley Moody",
       "party": "REP",
       "percentReporting": 100,
-      "sourceUpdatedUtc": "2026-11-05T18:19:50Z",
+      "sourceUpdatedUtc": "2026-11-05T18:27:57Z",
       "candidates": [
         {
           "name": "Ashley Moody",
@@ -8623,12 +8623,12 @@
       "winnerOrLeader": "Mike Rounds",
       "party": "REP",
       "percentReporting": 100,
-      "sourceUpdatedUtc": "2026-11-05T17:19:34Z",
+      "sourceUpdatedUtc": "2026-11-05T18:22:52Z",
       "candidates": [
         {
           "name": "Mike Rounds",
           "party": "REP",
-          "votes": 184585,
+          "votes": 184586,
           "percent": 60.5,
           "calledWinner": true
         },
@@ -9129,7 +9129,7 @@
       "winnerOrLeader": "Byron Donalds",
       "party": "REP",
       "percentReporting": 100,
-      "sourceUpdatedUtc": "2026-11-05T18:19:50Z",
+      "sourceUpdatedUtc": "2026-11-05T18:27:57Z",
       "candidates": [
         {
           "name": "Byron Donalds",
@@ -10053,12 +10053,12 @@
       "winnerOrLeader": "Larry Rhoden",
       "party": "REP",
       "percentReporting": 100,
-      "sourceUpdatedUtc": "2026-11-05T17:19:34Z",
+      "sourceUpdatedUtc": "2026-11-05T18:22:52Z",
       "candidates": [
         {
           "name": "Larry Rhoden",
           "party": "REP",
-          "votes": 193330,
+          "votes": 193331,
           "percent": 63.49,
           "calledWinner": true
         },
