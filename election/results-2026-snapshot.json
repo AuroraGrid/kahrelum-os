@@ -8,11 +8,11 @@
     "results": "https://polling-desk.com/results.csv"
   },
   "sourceSha256": {
-    "houseCsv": "4e9bf29a15552500203f644ee9c5cce0eabb5a3e95650673079edd19eccac5e2",
-    "resultsCsv": "6f70150379133012d83c20143374330a95043a2750828617825df4f74a32c3d7"
+    "houseCsv": "4be27f2e50e310886e082c582338e104a8b45659717c417127721eeba51db182",
+    "resultsCsv": "7a9dd15316305d9f8ed05a823c7891ae864b09a0d701d06f278034fb0430c6ab"
   },
-  "sourceLatestResultUpdatedUtc": "2026-11-05T18:28:58Z",
-  "retrievalUtc": "2026-11-05T18:34:57.198147Z",
+  "sourceLatestResultUpdatedUtc": "2026-11-05T18:48:17Z",
+  "retrievalUtc": "2026-11-05T18:49:57.567985Z",
   "publishedAsOf": "Snapshot captured on 2026-11-05. Each non-House race includes its per-race source timestamp. Earlier race calls are not official state certifications.",
   "resultStatus": "UNOFFICIAL_CALLS_AND_COUNTS_NOT_CERTIFIED",
   "verificationPolicy": {
@@ -1552,11 +1552,11 @@
       "winnerOrLeader": "Austin Rogers",
       "party": "REP",
       "votes": {
-        "DEM": 147791,
+        "DEM": 147792,
         "REP": 160968,
         "OTHER": 0
       },
-      "totalVotes": 308759,
+      "totalVotes": 308760,
       "democraticMarginPoints": -4.27,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/fl-02"
@@ -1586,12 +1586,12 @@
       "winnerOrLeader": "Aaron Bean",
       "party": "REP",
       "votes": {
-        "DEM": 144752,
-        "REP": 151095,
-        "OTHER": 5022
+        "DEM": 144795,
+        "REP": 151114,
+        "OTHER": 5023
       },
-      "totalVotes": 300869,
-      "democraticMarginPoints": -2.11,
+      "totalVotes": 300932,
+      "democraticMarginPoints": -2.1,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/fl-04"
     },
@@ -1603,11 +1603,11 @@
       "winnerOrLeader": "John Rutherford",
       "party": "REP",
       "votes": {
-        "DEM": 145081,
-        "REP": 187877,
+        "DEM": 145121,
+        "REP": 187917,
         "OTHER": 0
       },
-      "totalVotes": 332958,
+      "totalVotes": 333038,
       "democraticMarginPoints": -12.85,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/fl-05"
@@ -5700,12 +5700,12 @@
       "winnerOrLeader": "Dan Meuser",
       "party": "REP",
       "votes": {
-        "DEM": 103486,
-        "REP": 165735,
+        "DEM": 103357,
+        "REP": 165396,
         "OTHER": 0
       },
-      "totalVotes": 269221,
-      "democraticMarginPoints": -23.12,
+      "totalVotes": 268753,
+      "democraticMarginPoints": -23.08,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/pa-09"
     },
@@ -5785,11 +5785,11 @@
       "winnerOrLeader": "Guy Reschenthaler",
       "party": "REP",
       "votes": {
-        "DEM": 117057,
-        "REP": 158856,
+        "DEM": 117064,
+        "REP": 158859,
         "OTHER": 0
       },
-      "totalVotes": 275913,
+      "totalVotes": 275923,
       "democraticMarginPoints": -15.15,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/pa-14"
@@ -5820,11 +5820,11 @@
       "party": "REP",
       "votes": {
         "DEM": 131637,
-        "REP": 154135,
+        "REP": 154144,
         "OTHER": 0
       },
-      "totalVotes": 285772,
-      "democraticMarginPoints": -7.87,
+      "totalVotes": 285781,
+      "democraticMarginPoints": -7.88,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/pa-16"
     },
@@ -7636,26 +7636,26 @@
       "winnerOrLeader": "Ashley Moody",
       "party": "REP",
       "percentReporting": 100,
-      "sourceUpdatedUtc": "2026-11-05T18:27:57Z",
+      "sourceUpdatedUtc": "2026-11-05T18:48:17Z",
       "candidates": [
         {
           "name": "Ashley Moody",
           "party": "REP",
-          "votes": 4207947,
+          "votes": 4208004,
           "percent": 50.87,
           "calledWinner": true
         },
         {
           "name": "Angie Nixon",
           "party": "DEM",
-          "votes": 3969186,
+          "votes": 3969271,
           "percent": 47.99,
           "calledWinner": false
         },
         {
           "name": "Neil J. Gillespie",
           "party": "IND",
-          "votes": 94534,
+          "votes": 94538,
           "percent": 1.14,
           "calledWinner": false
         }
@@ -9129,19 +9129,19 @@
       "winnerOrLeader": "Byron Donalds",
       "party": "REP",
       "percentReporting": 100,
-      "sourceUpdatedUtc": "2026-11-05T18:27:57Z",
+      "sourceUpdatedUtc": "2026-11-05T18:48:17Z",
       "candidates": [
         {
           "name": "Byron Donalds",
           "party": "REP",
-          "votes": 4132275,
+          "votes": 4132334,
           "percent": 50.02,
           "calledWinner": true
         },
         {
           "name": "David Jolly",
           "party": "DEM",
-          "votes": 4024554,
+          "votes": 4024639,
           "percent": 48.71,
           "calledWinner": false
         },
@@ -9162,7 +9162,7 @@
         {
           "name": "Charles Burkett",
           "party": "IND",
-          "votes": 15238,
+          "votes": 15239,
           "percent": 0.18,
           "calledWinner": false
         }
@@ -9920,26 +9920,26 @@
       "winnerOrLeader": "Josh Shapiro",
       "party": "DEM",
       "percentReporting": 82,
-      "sourceUpdatedUtc": "2026-11-05T16:36:07Z",
+      "sourceUpdatedUtc": "2026-11-05T18:46:15Z",
       "candidates": [
         {
           "name": "Josh Shapiro",
           "party": "DEM",
-          "votes": 3006242,
+          "votes": 3006122,
           "percent": 60.39,
           "calledWinner": true
         },
         {
           "name": "Stacy Garrity",
           "party": "REP",
-          "votes": 1907223,
+          "votes": 1906929,
           "percent": 38.31,
           "calledWinner": false
         },
         {
           "name": "Ken Krawchuk",
           "party": "LIB",
-          "votes": 64439,
+          "votes": 64434,
           "percent": 1.29,
           "calledWinner": false
         }
