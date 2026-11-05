@@ -5,7 +5,7 @@ param(
     [switch]$Promote,
     [switch]$Deploy,
     [string]$FirebaseRoot,
-    [ValidateSet("full", "election-challenge", "election-challenge-data", "sports-intelligence", "publishing", "social-previews", "desk-upgrade", "portraits", "candidate-portraits", "investigations", "lead-magnet", "poliwave-watch", "results-verified", "us-results-data", "site-makeover")]
+    [ValidateSet("full", "election-challenge", "election-challenge-data", "sports-intelligence", "publishing", "social-previews", "desk-upgrade", "portraits", "candidate-portraits", "investigations", "lead-magnet", "poliwave-watch", "results-verified", "us-results-data", "site-makeover", "commercial-readiness")]
     [string]$Profile = "full"
 )
 
