@@ -221,6 +221,11 @@ const RELEASE_PROFILES = {
     sitemapRoutes: ['/election-challenge'],
     includeHomepage: false,
   },
+  'election-challenge-data': {
+    overlayFiles: ['election/challenger-source-checks.json', 'election/seat-projections.json'],
+    sitemapRoutes: [],
+    includeHomepage: false,
+  },
   'sports-intelligence': {
     overlayFiles: [
       'nfl/trades.html', 'nfl/trades.js', 'nfl/desk-live.json', 'nfl/current-forecasts.json', 'nfl/player-portraits.json', 'nfl/trade-board.json', 'nfl/analysis.html', 'nfl/sourcegrid.json', 'nfl/source-observations.json',
@@ -542,6 +547,10 @@ async function buildOverlay(live, profileName) {
   if (profileName === 'candidate-portraits' && changedPaths.some((item) =>
       !RELEASE_PROFILES['candidate-portraits'].overlayFiles.includes(item.slice(1)))) {
     fail('Candidate portrait release attempted to replace an unrelated live path.');
+  }
+  if (profileName === 'election-challenge-data' && changedPaths.some((item) =>
+      !RELEASE_PROFILES['election-challenge-data'].overlayFiles.includes(item.slice(1)))) {
+    fail('Election challenger data release attempted to replace an unrelated live path.');
   }
   if (profileName === 'investigations' &&
       changedPaths.some((item) => !['/investigations.html', '/assets/social/og-air01-v1.png'].includes(item))) {
