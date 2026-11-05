@@ -1,0 +1,169 @@
+{
+  "schema": "KAHRELUM_ISRAEL_C7_CERTIFIED_SEATS_POSTELECTION_AUDIT_V1",
+  "electionDate": "2026-10-27",
+  "certifiedOn": "2026-11-04",
+  "goldStatus": "OFFICIALLY_PRESENTED_RESULTS_SEATS_CROSSCHECKED; DIRECT_CEC_SITE_RETRIEVAL_RESTRICTED",
+  "goldSourceUrls": [
+    "https://main.knesset.gov.il/mk/elections/pages/electionsresults26.aspx",
+    "https://www.gov.il/he/pages/mandates",
+    "https://www.president.gov.il/en/president-herzog-receives-the-official-results-of-the-elections-to-the-26th-knesset/",
+    "https://www.israelielections.com/2026/results/"
+  ],
+  "goldProvenance": "The Central Elections Committee certified the 120-seat allocation on November 4, 2026, and submitted the final results to the president. Israel Knesset results page reports 5,691,396 valid votes. Direct CEC gov.il endpoint may block automated retrieval.",
+  "certifiedValidVotes": 5691396,
+  "partyAliasCrosswalk": "B’Yachad/Together, UTJ/United Torah Judaism, Raam/Ra’am, Yisrael Beiteinu/Yisrael Beytenu, Religious Zionism-Zehut/Religious Zionism are identified crosswalks. Others exact.",
+  "cohort": {
+    "lists": 14,
+    "seats": 120
+  },
+  "blocs": {
+    "netanyahu": 53,
+    "opposition": 48,
+    "arabLed": 19,
+    "majority": 61,
+    "blocsUnofficial": true
+  },
+  "results": [
+    {
+      "party": "Likud",
+      "certifiedSeats": 27,
+      "kahrelumPostCloseSeats": 26,
+      "externalOctober26Seats": 21,
+      "kahrelumError": -1,
+      "externalError": -6
+    },
+    {
+      "party": "Yashar",
+      "certifiedSeats": 21,
+      "kahrelumPostCloseSeats": 21,
+      "externalOctober26Seats": 22,
+      "kahrelumError": 0,
+      "externalError": 1
+    },
+    {
+      "party": "B'Yachad",
+      "certifiedSeats": 12,
+      "kahrelumPostCloseSeats": 13,
+      "externalOctober26Seats": 13,
+      "kahrelumError": 1,
+      "externalError": 1
+    },
+    {
+      "party": "Democrats",
+      "certifiedSeats": 8,
+      "kahrelumPostCloseSeats": 9,
+      "externalOctober26Seats": 9,
+      "kahrelumError": 1,
+      "externalError": 1
+    },
+    {
+      "party": "Joint List",
+      "certifiedSeats": 11,
+      "kahrelumPostCloseSeats": 10,
+      "externalOctober26Seats": 9,
+      "kahrelumError": -1,
+      "externalError": -2
+    },
+    {
+      "party": "Otzma Yehudit",
+      "certifiedSeats": 7,
+      "kahrelumPostCloseSeats": 7,
+      "externalOctober26Seats": 8,
+      "kahrelumError": 0,
+      "externalError": 1
+    },
+    {
+      "party": "Shas",
+      "certifiedSeats": 6,
+      "kahrelumPostCloseSeats": 8,
+      "externalOctober26Seats": 9,
+      "kahrelumError": 2,
+      "externalError": 3
+    },
+    {
+      "party": "United Torah Judaism",
+      "certifiedSeats": 7,
+      "kahrelumPostCloseSeats": 7,
+      "externalOctober26Seats": 8,
+      "kahrelumError": 0,
+      "externalError": 1
+    },
+    {
+      "party": "Yisrael Beytenu",
+      "certifiedSeats": 7,
+      "kahrelumPostCloseSeats": 6,
+      "externalOctober26Seats": 8,
+      "kahrelumError": -1,
+      "externalError": 1
+    },
+    {
+      "party": "Religious Zionism",
+      "certifiedSeats": 6,
+      "kahrelumPostCloseSeats": 6,
+      "externalOctober26Seats": 7,
+      "kahrelumError": 0,
+      "externalError": 1
+    },
+    {
+      "party": "Ra'am",
+      "certifiedSeats": 8,
+      "kahrelumPostCloseSeats": 7,
+      "externalOctober26Seats": 6,
+      "kahrelumError": -1,
+      "externalError": -2
+    },
+    {
+      "party": "Reservists-Economic",
+      "certifiedSeats": 0,
+      "kahrelumPostCloseSeats": 0,
+      "externalOctober26Seats": 0,
+      "kahrelumError": 0,
+      "externalError": 0
+    },
+    {
+      "party": "People of Israel",
+      "certifiedSeats": 0,
+      "kahrelumPostCloseSeats": 0,
+      "externalOctober26Seats": 0,
+      "kahrelumError": 0,
+      "externalError": 0
+    },
+    {
+      "party": "Noam",
+      "certifiedSeats": 0,
+      "kahrelumPostCloseSeats": 0,
+      "externalOctober26Seats": 0,
+      "kahrelumError": 0,
+      "externalError": 0
+    }
+  ],
+  "scores": {
+    "kahrelumPostClose": {
+      "l1": 8,
+      "mae": 0.571429,
+      "rmse": 0.845154
+    },
+    "externalOctober26": {
+      "l1": 20,
+      "mae": 1.428571,
+      "rmse": 2.070197
+    }
+  },
+  "forecastSources": {
+    "externalOriginal": {
+      "path": "research/israel-2026-election/BASELINE_LOCK_2026-10-26.md",
+      "sha256": "cbb9c2fdaa6a3d2ad318345d2d7d4e638f0f7185ddd5d3f9df9dcaebdc59d30d",
+      "cutoff": "2026-10-26T21:33:42.393Z",
+      "type": "THIRD_PARTY_PRE_ELECTION_COMPARATOR"
+    },
+    "kahrelum": {
+      "path": "research/israel-2026-election/HEAD_TO_HEAD_LOCK_2026-10-28.json",
+      "sha256": "39889cc4daaf28ec420f8fbcea1cbafa4a04acd141a071c4f0b92f509cd45b49",
+      "issuedAt": "2026-10-27T20:53:42.649339Z",
+      "type": "POST_CLOSE_EXIT_POLL_CONDITIONED_NOWCAST_NOT_PREELECTION"
+    }
+  },
+  "scoringLimitation": "The Oct 27 KAHRELUM estimate was generated after poll close and exit polls. Its lower seat error is not pre-election predictive skill. No calibrated pre-election KAHRELUM winner-probability score can be inferred. Government formation is unresolved.",
+  "checkedAtUtc": "2026-11-05T11:18:48.728Z",
+  "outcome": "Likud is the largest list with 27 certified seats; no bloc reaches 61 seats; official government formation is a separate event."
+}

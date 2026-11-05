@@ -1,0 +1,17 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path');
+const root=path.resolve(__dirname,'..');
+const deals=[
+ {date:'2026-10-29',player:'Jeffery Simmons',position:'DT',from:'Tennessee Titans',to:'Chicago Bears',fromReceives:'2027 1st, 2027 4th, 2028 1st',toReceives:'Jeffery Simmons, 2028 5th',class:'NFL_OFFICIAL_TRACKER'},
+ {date:'2026-10-27',player:'DeForest Buckner',position:'DL',from:'Indianapolis Colts',to:'San Francisco 49ers',fromReceives:'2027 4th',toReceives:'DeForest Buckner',class:'NFL_OFFICIAL_TRACKER'},
+ {date:'2026-10-27',player:'Quenton Nelson',position:'G',from:'Indianapolis Colts',to:'Seattle Seahawks',fromReceives:'2027 3rd, 2028 5th',toReceives:'Quenton Nelson',class:'NFL_OFFICIAL_TRACKER'},
+ {date:'2026-10-12',player:'Marvin Harrison Jr.',position:'WR',from:'Arizona Cardinals',to:'Houston Texans',fromReceives:'2027 2nd, 2027 7th',toReceives:'Marvin Harrison Jr., 2027 6th',class:'NFL_OFFICIAL_TRACKER'},
+ {date:'2026-10-07',player:'Cam Jurgens',position:'C',from:'Philadelphia Eagles',to:'Baltimore Ravens',fromReceives:'2027 5th, 2028 2nd',toReceives:'Cam Jurgens, 2027 7th',class:'NFL_OFFICIAL_TRACKER'},
+ {date:'2026-10-01',player:'Joey Porter Jr.',position:'CB',from:'Pittsburgh Steelers',to:'Dallas Cowboys',fromReceives:'2027 6th, 2028 2nd',toReceives:'Joey Porter Jr.',class:'NFL_OFFICIAL_TRACKER'},
+ {date:'2026-09-28',player:'J.J. McCarthy',position:'QB',from:'Minnesota Vikings',to:'New York Giants',fromReceives:'2027 5th',toReceives:'J.J. McCarthy',class:'NFL_OFFICIAL_TRACKER'}
+];
+const data={schema:'KAHRELUM_NFL_OFFICIAL_DEADLINE_SOURCE_SNAPSHOT_V1',status:'DEADLINE_STILL_OPEN',deadlineUtc:'2026-11-10T21:00:00Z',sourceCheckedDate:'2026-11-05',sourceName:'NFL.com official trade tracker',sourceUrl:'https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season',sourceSnapshot:'Seven entries listed on official NFL tracker at source check; not a guarantee no additional trades occurred after source publication.',officialListedCount:deals.length,deals,reportedUnconfirmed:[{player:'Jacoby Brissett',date:'2026-11-04',from:'Arizona Cardinals',to:'Baltimore Ravens',status:'AGREEMENT_REPORTED_NOT_IN_OFFICIAL_NFL_TRACKER_AT_CHECK',detail:'CBS describes an agreed deal expected to be completed later with compensation TBD. Do not label completed before league/club corroboration.',sourceUrl:'https://www.cbssports.com/nfl/news/2026-nfl-trade-deadline-tracker-latest-deals-grades/'}],contextSources:[
+ {title:'NFL official deadline rules',url:'https://www.nfl.com/news/nfl-important-dates'},
+ {title:'Independent NFL news and reported talks',url:'https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/2026-nfl-trade-deadline-live-updates-tracker-deals-news-rumors-analysis'}
+],publicationBoundary:'KAHRELUM operational source checks may discover reports but do not promote forecasts, deals, or draft articles without source-grade confirmation and documented publication permission. Older KAHRELUM forecasts are immutable.'};
+const out=path.join(root,'nfl','official-trade-snapshot-2026.json');fs.writeFileSync(out,JSON.stringify(data,null,2)+'\n');console.log(JSON.stringify({officialListed:deals.length,reportedPending:data.reportedUnconfirmed.length,file:out}));

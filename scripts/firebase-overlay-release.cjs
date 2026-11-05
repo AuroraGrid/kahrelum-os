@@ -148,6 +148,26 @@ const REQUIRED_REWRITES = {
 };
 const DIVISION_ROUTES = ['/assurance', '/investigations', '/forecasting', '/digital-id', '/one', '/os'];
 const RELEASE_PROFILES = {
+  'results-verified': {
+    // First release for the three election / NFL public views. Never publish research drafts or frozen forecasts.
+    overlayFiles: [
+      'election-results-2026.html', 'election-results-2026.js', 'election/results-2026-snapshot.json',
+      'israel-certified-2026.html', 'israel-certified-2026.js', 'election/israel-certified-2026.json',
+      'nfl/deadline-watch-2026.html', 'nfl/deadline-watch-2026.js', 'nfl/official-trade-snapshot-2026.json',
+      'evidence-scorecard.html',
+      'assets/social/og-us-results-2026.png', 'assets/social/og-israel-certified-2026.png',
+      'assets/social/og-nfl-deadline-watch-2026.png', 'assets/social/og-evidence-scorecard.png',
+      'assets/social-manifest.json',
+    ],
+    sitemapRoutes: ['/election-results-2026', '/israel-certified-2026', '/nfl/deadline-watch-2026', '/evidence-scorecard'],
+    includeHomepage: true,
+  },
+  'us-results-data': {
+    // Recurrent, unofficial elections data only. Old locks, current Israeli records, NFL editorial releases remain immutable.
+    overlayFiles: ['election/results-2026-snapshot.json'],
+    sitemapRoutes: [],
+    includeHomepage: false,
+  },
   'poliwave-watch': {
     // Reference-only Poliwave lookups. Preserve live data, photos, APIs and all older forecast locks.
     overlayFiles: ['election-challenge.html', 'election-challenge-map.js', 'election/poliwave-watchlist.json'],
@@ -551,6 +571,15 @@ async function buildOverlay(live, profileName) {
   }
 
   const changedPaths = Object.keys(desired).filter((item) => live.fileMap[item] !== desired[item]).sort();
+  if (profileName === 'results-verified' && changedPaths.some(item =>
+      !RELEASE_PROFILES['results-verified'].overlayFiles.includes(item.slice(1)) &&
+      !['/index.html','/sitemap.xml'].includes(item))) {
+    fail('Results release attempted to replace an unrelated live path.');
+  }
+  if (profileName === 'us-results-data' &&
+      changedPaths.some(item => item !== '/election/results-2026-snapshot.json')) {
+    fail('Automated U.S. results data may replace only its one approved snapshot.');
+  }
   if (profileName === 'candidate-portraits' && changedPaths.some((item) =>
       !RELEASE_PROFILES['candidate-portraits'].overlayFiles.includes(item.slice(1)))) {
     fail('Candidate portrait release attempted to replace an unrelated live path.');
@@ -593,6 +622,10 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
   const internal = new Set();
   const verifiedRoutes = profileName === 'lead-magnet'
     ? [...HTML_ROUTES, '/evidence-scorecard']
+    : profileName === 'results-verified'
+    ? [...HTML_ROUTES, '/evidence-scorecard', '/election-results-2026', '/israel-certified-2026', '/nfl/deadline-watch-2026']
+    : profileName === 'us-results-data'
+    ? ['/election-results-2026']
     : profileName === 'candidate-portraits' ? ['/election-challenge'] : profileName === 'sports-intelligence'
     ? HTML_ROUTES.filter((route) => route !== '/election-challenge')
     : HTML_ROUTES;
@@ -623,6 +656,46 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     const apiHashes = await captureApiHashes(origin);
     if (!util.isDeepStrictEqual(apiHashes, expectedApiHashes)) fail('Portrait release changed an existing API body.');
     return {origin, routes: checks, coverage, localImages: portraits.records.filter(row => row.url.startsWith('/')).length, apiHashes};
+  }
+  if (['results-verified','us-results-data'].includes(profileName)) {
+    const us = JSON.parse((await fetchBytes(origin + '/election/results-2026-snapshot.json')).toString('utf8'));
+    if (us.schema !== 'KAHRELUM_US_ELECTION_2026_SOURCE_SNAPSHOT_V1' ||
+        us.resultStatus !== 'UNOFFICIAL_CALLS_AND_COUNTS_NOT_CERTIFIED' ||
+        us.house?.length !== 435 || us.senate?.length !== 35 || us.governor?.length !== 36 ||
+        new Set(us.house.map(x => x.id)).size !== 435 ||
+        new Set(us.senate.map(x => x.id)).size !== 35 ||
+        new Set(us.governor.map(x => x.id)).size !== 36 ||
+        (us.summary.house.called + us.summary.house.counting) !== 435 ||
+        us.summary.senate?.seatsNotUp !== undefined) {
+      fail('U.S. results content incomplete, unlabelled, or mixes noncontested Senate seats.');
+    }
+  }
+  if (profileName === 'results-verified') {
+    const israel = JSON.parse((await fetchBytes(origin + '/election/israel-certified-2026.json')).toString('utf8'));
+    if (israel.schema !== 'KAHRELUM_ISRAEL_C7_CERTIFIED_SEATS_POSTELECTION_AUDIT_V1' ||
+        israel.results?.length !== 14 || israel.certifiedValidVotes !== 5691396 ||
+        israel.results.reduce((sum, x) => sum + x.certifiedSeats, 0) !== 120 ||
+        israel.scores.kahrelumPostClose.l1 !== 8 || israel.scores.externalOctober26.l1 !== 20 ||
+        israel.forecastSources?.kahrelum?.type !== 'POST_CLOSE_EXIT_POLL_CONDITIONED_NOWCAST_NOT_PREELECTION') {
+      fail('Israel C7 score integrity or information cutoff boundary failed.');
+    }
+    const nfl = JSON.parse((await fetchBytes(origin + '/nfl/official-trade-snapshot-2026.json')).toString('utf8'));
+    if (nfl.schema !== 'KAHRELUM_NFL_OFFICIAL_DEADLINE_SOURCE_SNAPSHOT_V1' ||
+        nfl.status !== 'DEADLINE_STILL_OPEN' || nfl.deals?.length !== nfl.officialListedCount ||
+        !nfl.reportedUnconfirmed?.every(x => x.status.includes('NOT_IN_OFFICIAL_NFL_TRACKER'))) {
+      fail('Official-tracker and reported-not-confirmed NFL separation failed.');
+    }
+    const cards = [
+      '/assets/social/og-us-results-2026.png', '/assets/social/og-israel-certified-2026.png',
+      '/assets/social/og-nfl-deadline-watch-2026.png', '/assets/social/og-evidence-scorecard.png'
+    ];
+    for (const card of cards) {
+      const bytes = await fetchBytes(origin + card);
+      if (bytes.length < 4096 || bytes.toString('ascii',1,4) !== 'PNG' ||
+          bytes.readUInt32BE(16) !== 1200 || bytes.readUInt32BE(20) !== 630) {
+        fail('Open Graph image missing or incorrect dimensions: ' + card);
+      }
+    }
   }
   const nflData = JSON.parse((await fetchBytes(origin + '/nfl/trade-board.json')).toString('utf8'));
   if (!Array.isArray(nflData.candidates) || nflData.candidates.length < 124 ||
