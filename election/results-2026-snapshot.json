@@ -8,11 +8,11 @@
     "results": "https://polling-desk.com/results.csv"
   },
   "sourceSha256": {
-    "houseCsv": "2e8dc34baa1eeb8d6a4cbbe87bc347994a4204682e01ff1f674d5574311e019a",
-    "resultsCsv": "ed4c7a4ff5f06638df456f43bb8b9026bbe36e6525e7053a3f4d179dd533fad4"
+    "houseCsv": "7c752df2fd14e18e7adc8cd76178fc2b876cc078c08f2f7e487e65675e8bd9da",
+    "resultsCsv": "f04625a2f2f17f0549f4b94da01748ffba3cf1817723db60d64e7fe286c38c00"
   },
-  "sourceLatestResultUpdatedUtc": "2026-11-05T19:19:16Z",
-  "retrievalUtc": "2026-11-05T19:19:56.611952Z",
+  "sourceLatestResultUpdatedUtc": "2026-11-05T19:32:22Z",
+  "retrievalUtc": "2026-11-05T19:34:55.125762Z",
   "publishedAsOf": "Snapshot captured on 2026-11-05. Each non-House race includes its per-race source timestamp. Earlier race calls are not official state certifications.",
   "resultStatus": "UNOFFICIAL_CALLS_AND_COUNTS_NOT_CERTIFIED",
   "verificationPolicy": {
@@ -3746,11 +3746,11 @@
       "party": "REP",
       "votes": {
         "DEM": 115825,
-        "REP": 214501,
+        "REP": 214575,
         "OTHER": 320
       },
-      "totalVotes": 330646,
-      "democraticMarginPoints": -29.84,
+      "totalVotes": 330720,
+      "democraticMarginPoints": -29.86,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/mn-07"
     },
