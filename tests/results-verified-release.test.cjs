@@ -33,7 +33,7 @@ test('Israel C7 result compares actual official seats against correctly classifi
   assert.equal(d.forecastSources.externalOriginal.sha256,sha('research/israel-2026-election/BASELINE_LOCK_2026-10-26.md'));
   assert.match(d.forecastSources.kahrelum.type,/POST_CLOSE/);
   assert.match(d.forecastSources.externalOriginal.type,/PRE_ELECTION/);
-  assert.equal(d.certifiedValidVotes,5691396);
+  assert.equal(d.certifiedValidVotes,5691426);
   assert.ok(d.goldSourceUrls.some(s=>s.includes('president.gov.il')));
   assert.ok(d.goldSourceUrls.some(s=>s.includes('main.knesset.gov.il')));
   assert.equal(d.blocs.netanyahu+d.blocs.opposition+d.blocs.arabLed,120);
