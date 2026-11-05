@@ -24,20 +24,19 @@ test('site makeover release profile is explicit and includes the legacy public r
   assert.ok(profileStart >= 0 && profileEnd > profileStart);
   const profile = source.slice(profileStart, profileEnd);
   for (const file of [
-    'index.html',
     'site-shell.css',
     'site-shell.js',
     'pilot.html',
     'demo.html',
-    'data/api/v1/example.json',
-    'sports/mlb.html',
-    'sports/nhl.html',
+    'digital-id.html',
   ]) {
     assert.ok(profile.includes("'" + file + "'"), file + ' must be included in the bounded release');
   }
   for (const route of [
-    '/sample', '/connect', '/hasan', '/election-live', '/election-count',
-    '/election-method', '/election-showdown', '/election-comparison',
+    '/index.html', '/assurance', '/investigations', '/forecasting', '/election-challenge',
+    '/nfl/weekly-brief', '/sports/mlb', '/sample', '/connect', '/hasan',
+    '/election-live', '/election-count', '/election-method', '/election-showdown',
+    '/election-comparison',
   ]) {
     assert.ok(profile.includes("'" + route + "'"), route + ' must receive the shared shell');
   }
