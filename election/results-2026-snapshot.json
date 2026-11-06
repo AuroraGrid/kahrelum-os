@@ -8,11 +8,11 @@
     "results": "https://polling-desk.com/results.csv"
   },
   "sourceSha256": {
-    "houseCsv": "f6571db80eab1f798292588e65b2ca31dce8d507104a7e3330fd0ee7cebd8ed8",
-    "resultsCsv": "c04b7e329a492e0611730c97f0fa79495174b71e3d5805b934880bcf60a1dcb0"
+    "houseCsv": "b53545882baf868a2a5974d28039369e9824167f46d2d456aff6529ded8f37ef",
+    "resultsCsv": "b6464c1dd53a0c3492e8984bbe5ddff2ce6e5a2b8d1de24defc868824da4ecd8"
   },
-  "sourceLatestResultUpdatedUtc": "2026-11-06T22:59:30Z",
-  "retrievalUtc": "2026-11-06T23:04:53.315453Z",
+  "sourceLatestResultUpdatedUtc": "2026-11-06T23:08:38Z",
+  "retrievalUtc": "2026-11-06T23:19:52.659196Z",
   "publishedAsOf": "Snapshot captured on 2026-11-05. Each non-House race includes its per-race source timestamp. Earlier race calls are not official state certifications.",
   "resultStatus": "UNOFFICIAL_CALLS_AND_COUNTS_NOT_CERTIFIED",
   "verificationPolicy": {
@@ -3660,11 +3660,11 @@
       "winnerOrLeader": "Matt Little",
       "party": "DEM",
       "votes": {
-        "DEM": 214254,
-        "REP": 160636,
-        "OTHER": 335
+        "DEM": 214262,
+        "REP": 160639,
+        "OTHER": 332
       },
-      "totalVotes": 375225,
+      "totalVotes": 375233,
       "democraticMarginPoints": 14.29,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/mn-02"
@@ -8049,40 +8049,40 @@
       "winnerOrLeader": "Peggy Flanagan",
       "party": "DEM",
       "percentReporting": 100,
-      "sourceUpdatedUtc": "2026-11-06T21:34:18Z",
+      "sourceUpdatedUtc": "2026-11-06T23:08:38Z",
       "candidates": [
         {
           "name": "Peggy Flanagan",
           "party": "DEM",
-          "votes": 1520863,
+          "votes": 1520870,
           "percent": 53.71,
           "calledWinner": true
         },
         {
           "name": "Michele Tafoya",
           "party": "REP",
-          "votes": 1233457,
+          "votes": 1233459,
           "percent": 43.56,
           "calledWinner": false
         },
         {
           "name": "Marisa Simonetti",
           "party": "IND",
-          "votes": 41574,
+          "votes": 41573,
           "percent": 1.47,
           "calledWinner": false
         },
         {
           "name": "Rebecca Whiting",
           "party": "LIB",
-          "votes": 32492,
+          "votes": 32490,
           "percent": 1.15,
           "calledWinner": false
         },
         {
           "name": "Write-in",
           "party": "OTH",
-          "votes": 3381,
+          "votes": 3376,
           "percent": 0.12,
           "calledWinner": false
         }
@@ -9549,33 +9549,33 @@
       "winnerOrLeader": "Amy Klobuchar",
       "party": "DEM",
       "percentReporting": 100,
-      "sourceUpdatedUtc": "2026-11-06T21:34:18Z",
+      "sourceUpdatedUtc": "2026-11-06T23:08:38Z",
       "candidates": [
         {
           "name": "Amy Klobuchar",
           "party": "DEM",
-          "votes": 1569691,
+          "votes": 1569700,
           "percent": 55.46,
           "calledWinner": true
         },
         {
           "name": "Lisa Demuth",
           "party": "REP",
-          "votes": 1206569,
+          "votes": 1206572,
           "percent": 42.63,
           "calledWinner": false
         },
         {
           "name": "Steven Young",
           "party": "GRE",
-          "votes": 51403,
+          "votes": 51402,
           "percent": 1.82,
           "calledWinner": false
         },
         {
           "name": "Write-in",
           "party": "OTH",
-          "votes": 2474,
+          "votes": 2470,
           "percent": 0.09,
           "calledWinner": false
         }
