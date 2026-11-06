@@ -8,6 +8,7 @@ const util = require('util');
 const zlib = require('zlib');
 const { Readable } = require('stream');
 const { PAGE_PATCHES, MODIFIED_ROUTES, patchLivePage, setSitemapLastmod } = require(path.join(__dirname, 'commercial-readiness.cjs'));
+const { cleanupPromotedPreview } = require(path.join(__dirname, 'firebase-preview-cleanup.cjs'));
 
 const SITE = 'kahrelum-public-hosting';
 const DOMAIN = 'https://kahrelum.com';
@@ -1232,6 +1233,14 @@ async function promotePreview(hosting, client, live) {
     configUnchanged: true,
     verification,
   };
+  // Only after production has passed exact-version file-map, config, and public
+  // readback checks, reclaim the redundant preview. Failed cleanup never masks
+  // a successful deploy or permits deletion of a live / archive channel.
+  try {
+    productionReceipt.previewCleanup = await cleanupPromotedPreview(hosting, SITE, receipt.previewChannel, receipt.previewVersion);
+  } catch (error) {
+    productionReceipt.previewCleanupWarning = String(error.message || error);
+  }
   writeJson(PRODUCTION_RECEIPT, productionReceipt);
   return productionReceipt;
 }
