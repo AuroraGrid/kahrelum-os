@@ -1,10 +1,10 @@
 {
   "schema": "KAHRELUM_NFL_DESK_LIVE_v1.0",
-  "generatedAtUtc": "2026-11-06T23:06:41Z",
+  "generatedAtUtc": "2026-11-06T23:40:37Z",
   "sourceStatus": {
     "schema": "KAHRELUM_REFRESH_STATUS_v1.1",
-    "lastAttemptAt": "2026-11-06T23:06:41Z",
-    "lastSuccessfulSourceCheckAt": "2026-11-06T23:06:41Z",
+    "lastAttemptAt": "2026-11-06T23:40:37Z",
+    "lastSuccessfulSourceCheckAt": "2026-11-06T23:40:37Z",
     "lastPublishedUpdateAt": "2026-10-31T13:13:05Z",
     "feedFreshness": "FRESH",
     "monitoringState": "DEADLINE_WINDOW_OPEN",
@@ -12,8 +12,8 @@
     "sourcesAttempted": 37,
     "sourcesSucceeded": 37,
     "sourcesFailed": 0,
-    "observationsNew": 2,
-    "reviewQueueCount": 987,
+    "observationsNew": 1,
+    "reviewQueueCount": 988,
     "materialAlerts": [
       {
         "observationId": "OBS-50323095a31bcf80e1ad",
@@ -33,8 +33,8 @@
     ],
     "errors": [],
     "truthBoundary": "Source checks and publication are separate. lastSuccessfulSourceCheckAt means at least one source succeeded; lastFullySuccessfulSourceCheckAt requires every registered operational source to succeed.",
-    "lastCompletedCheckAt": "2026-11-06T23:06:41Z",
-    "lastFullySuccessfulSourceCheckAt": "2026-11-06T23:06:41Z",
+    "lastCompletedCheckAt": "2026-11-06T23:40:37Z",
+    "lastFullySuccessfulSourceCheckAt": "2026-11-06T23:40:37Z",
     "duplicatesSuppressed": 7,
     "sourceFailureAlerts": [],
     "reviewProposalCount": 29,
@@ -6530,6 +6530,18 @@
   },
   "activity": [
     {
+      "id": "OBS-08031b81d1329e35ed1a",
+      "title": "Cincinnati Bengals Get Bad News Before NFL Trade Deadline - Yahoo Sports",
+      "sourceName": "Google News NFL trade discovery",
+      "originalUrl": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOOXV1QkdSTHBubVNVNGJfMm9ESEJfNEt4SFh4ZkYxelJaNVMxdW1HaEJUNHAxRTdPM0pDN1ZzZHZjRlM2TFVJYWZQdjJOLXdudXdFZFo5eGQ5ZWxaNWk2M2t5azRmWjFaZFpkTHoyWEVkODZrbnU1WU9NUklXQ3dwUGpYWEFsQ1U?oc=5",
+      "sourcePublishedAt": "2026-11-06T22:49:33Z",
+      "sourceDate": null,
+      "firstObservedAt": "2026-11-06T23:40:37Z",
+      "reviewStatus": "REVIEW_REQUIRED",
+      "claimType": "GENERAL_NFL_DISCOVERY",
+      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
+    },
+    {
       "id": "OBS-553acd5cf44ea261d67d",
       "title": "Falcons’ Trade Plans Include Parting Ways With 2 Veterans - Yahoo Sports",
       "sourceName": "Google News NFL trade discovery",
@@ -6871,18 +6883,6 @@
       "sourceName": "Google News NFL trade discovery",
       "originalUrl": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNSDVWa3dQbkJFLVJZNTBzTkFiemFyd1pBbWFBcmRVNWNVajM3TlhZTjFodWlCQmk4c05LM1VQZXVyd2FDR1JRc0dLWEFYeWJFM3UtSkEzTEFZNEN6bE5rUHdvTWdCTDRaOWE0Q29qV2hvR0FwN3lmREhBazdJWE5UQWppUUpHSzc0TjNXejRzbklFSS1icGdVaVh2Z3RoaGJabUpUOU5CZWZEYU9zVGc1aFhvT01vSXk1UEo3ZzNhcEdDbC1yQzdIaW0zQXlaaHhGeWc?oc=5",
       "sourcePublishedAt": "2026-11-06T19:01:00Z",
-      "sourceDate": null,
-      "firstObservedAt": "2026-11-06T19:25:43Z",
-      "reviewStatus": "REVIEW_REQUIRED",
-      "claimType": "GENERAL_NFL_DISCOVERY",
-      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
-    },
-    {
-      "id": "OBS-92ec7ab3521f45db5b94",
-      "title": "Dallas Cowboys' NFL Trade Deadline Plans Become Clearer After Jerry Jones Comments - Sports Illustrated",
-      "sourceName": "Google News NFL trade discovery",
-      "originalUrl": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPQVFGNy1wTHNhb3djZ3N5RHpELS1zSEhOZVVKSmFzZGJUb1dYb3dDUnA4MU90RDFFUXFPMS1jVGNGcFl2OWg1YjhtWEdQdEMzYkFsTXdlWUJ6RkVXVUI1MGdNYW5Xb0NWSGhPYmxqc0h0dkNfNEREbWFsZmM3Z0hWY0wwcnlXcFlKWWUxMmlaT0VWb2s4eEJkT21WR0JaOV82cldiSDNwZw?oc=5",
-      "sourcePublishedAt": "2026-11-06T18:40:00Z",
       "sourceDate": null,
       "firstObservedAt": "2026-11-06T19:25:43Z",
       "reviewStatus": "REVIEW_REQUIRED",

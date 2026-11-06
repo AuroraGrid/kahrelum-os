@@ -1,7 +1,7 @@
 {
   "schema": "KAHRELUM_REFRESH_STATUS_v1.1",
-  "lastAttemptAt": "2026-11-06T23:06:41Z",
-  "lastSuccessfulSourceCheckAt": "2026-11-06T23:06:41Z",
+  "lastAttemptAt": "2026-11-06T23:40:37Z",
+  "lastSuccessfulSourceCheckAt": "2026-11-06T23:40:37Z",
   "lastPublishedUpdateAt": "2026-10-31T13:13:05Z",
   "feedFreshness": "FRESH",
   "monitoringState": "DEADLINE_WINDOW_OPEN",
@@ -9,8 +9,8 @@
   "sourcesAttempted": 37,
   "sourcesSucceeded": 37,
   "sourcesFailed": 0,
-  "observationsNew": 2,
-  "reviewQueueCount": 987,
+  "observationsNew": 1,
+  "reviewQueueCount": 988,
   "materialAlerts": [
     {
       "observationId": "OBS-50323095a31bcf80e1ad",
@@ -30,8 +30,8 @@
   ],
   "errors": [],
   "truthBoundary": "Source checks and publication are separate. lastSuccessfulSourceCheckAt means at least one source succeeded; lastFullySuccessfulSourceCheckAt requires every registered operational source to succeed.",
-  "lastCompletedCheckAt": "2026-11-06T23:06:41Z",
-  "lastFullySuccessfulSourceCheckAt": "2026-11-06T23:06:41Z",
+  "lastCompletedCheckAt": "2026-11-06T23:40:37Z",
+  "lastFullySuccessfulSourceCheckAt": "2026-11-06T23:40:37Z",
   "duplicatesSuppressed": 7,
   "sourceFailureAlerts": [],
   "reviewProposalCount": 29,
