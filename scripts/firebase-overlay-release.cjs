@@ -176,6 +176,17 @@ const RELEASE_PROFILES = {
     sitemapRoutes: [],
     includeHomepage: false,
   },
+  'nfl-sourcegrid-data': {
+    // Scheduled research evidence only, never overwrite published HTML, forecasts, or unrelated records.
+    overlayFiles: [
+      'nfl/sourcegrid.json', 'nfl/source-observations.json', 'nfl/review-queue.json',
+      'nfl/refresh-status.json', 'nfl/source-health.json', 'nfl/public-feed.json',
+      'nfl/publishing.json', 'nfl/deadline-audit.json', 'nfl/forecast-ledger.json',
+      'nfl/desk-live.json',
+    ],
+    sitemapRoutes: [],
+    includeHomepage: false,
+  },
   'poliwave-watch': {
     // Reference-only Poliwave lookups. Preserve live data, photos, APIs and all older forecast locks.
     overlayFiles: ['election-challenge.html', 'election-challenge-map.js', 'election/poliwave-watchlist.json'],
@@ -729,6 +740,38 @@ async function buildOverlay(live, profileName) {
   const desired = { ...live.fileMap };
   const blobs = {};
 
+  if (profileName === 'nfl-sourcegrid-data') {
+    // An automated source check may refresh evidence, not roll back timestamps,
+    // silently erase previously reviewed editorial entries, or change forecast locks.
+    const sourceStatus = JSON.parse(fs.readFileSync(path.join(ROOT, 'nfl/refresh-status.json'), 'utf8'));
+    const liveStatus = JSON.parse((await verifiedLiveFile(live, '/nfl/refresh-status.json', '/nfl/refresh-status.json')).toString('utf8'));
+    const incomingAt = Date.parse(sourceStatus.lastCompletedCheckAt);
+    const liveAt = Date.parse(liveStatus.lastCompletedCheckAt);
+    if (!Number.isFinite(incomingAt) || !Number.isFinite(liveAt) || incomingAt < liveAt) {
+      fail('SourceGrid source check is older than the live Firebase checkpoint.');
+    }
+    if (sourceStatus.sourcesAttempted !== 37 || sourceStatus.sourcesSucceeded + sourceStatus.sourcesFailed !== 37 ||
+        !['FRESH','DEGRADED','STALE_FAILED'].includes(sourceStatus.feedFreshness)) {
+      fail('SourceGrid check is incomplete or not an executed 37-source report.');
+    }
+    const ledger = JSON.parse(fs.readFileSync(path.join(ROOT, 'nfl/forecast-ledger.json'), 'utf8'));
+    const liveLedger = JSON.parse((await verifiedLiveFile(live, '/nfl/forecast-ledger.json', '/nfl/forecast-ledger.json')).toString('utf8'));
+    for (const key of ['eligibleLocks','historicalExcluded','outcomeRecords']) {
+      const candidate = new Set((ledger[key] || []).map(record => record.recordHash || JSON.stringify(record)));
+      if ((liveLedger[key] || []).some(record => !candidate.has(record.recordHash || JSON.stringify(record)))) {
+        fail('SourceGrid update attempted to erase or rewrite a historical forecast record.');
+      }
+    }
+    const published = JSON.parse(fs.readFileSync(path.join(ROOT, 'nfl/public-feed.json'), 'utf8'));
+    const livePublished = JSON.parse((await verifiedLiveFile(live, '/nfl/public-feed.json', '/nfl/public-feed.json')).toString('utf8'));
+    const articles = new Set((published.publishedUpdates || []).map(record => JSON.stringify(record)));
+    if ((livePublished.publishedUpdates || []).some(record => !articles.has(JSON.stringify(record)))) {
+      fail('SourceGrid update attempted to replace or erase an approved editorial release.');
+    }
+    const publishing = JSON.parse(fs.readFileSync(path.join(ROOT, 'nfl/publishing.json'), 'utf8'));
+    if (publishing.publishingAuthorized !== false) fail('SourceGrid may not authorize automated third-party publication.');
+  }
+
   for (const name of profile.overlayFiles) {
     const source = path.join(ROOT, name);
     if (!fs.existsSync(source)) fail(`Repository overlay source is missing: ${name}`);
@@ -808,6 +851,10 @@ async function buildOverlay(live, profileName) {
       changedPaths.some(item => item !== '/election/results-2026-snapshot.json')) {
     fail('Automated U.S. results data may replace only its one approved snapshot.');
   }
+  if (profileName === 'nfl-sourcegrid-data' && changedPaths.some(item =>
+      !RELEASE_PROFILES['nfl-sourcegrid-data'].overlayFiles.includes(item.slice(1)))) {
+    fail('SourceGrid refresh attempted to replace an unrelated live Firebase path.');
+  }
   if (profileName === 'candidate-portraits' && changedPaths.some((item) =>
       !RELEASE_PROFILES['candidate-portraits'].overlayFiles.includes(item.slice(1)))) {
     fail('Candidate portrait release attempted to replace an unrelated live path.');
@@ -873,6 +920,8 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     ? ['/', '/forecasting', '/israel-certified-2026']
     : profileName === 'us-results-data'
     ? ['/election-results-2026']
+    : profileName === 'nfl-sourcegrid-data'
+    ? ['/nfl/trades', '/nfl/deadline-watch-2026']
     : profileName === 'candidate-portraits' ? ['/election-challenge'] : profileName === 'sports-intelligence'
     ? HTML_ROUTES.filter((route) => route !== '/election-challenge')
     : HTML_ROUTES;
@@ -1007,7 +1056,7 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
       nflData.sourceAccountability?.certifiedMeanBrier !== null) {
     fail('NFL trade board data integrity or forecast-certification boundary failed.');
   }
-  if (['full', 'sports-intelligence', 'publishing', 'desk-upgrade'].includes(profileName)) {
+  if (['full', 'sports-intelligence', 'publishing', 'desk-upgrade', 'nfl-sourcegrid-data'].includes(profileName)) {
     const [sourcegrid, status, health, ledger, audit, publicFeed, publishing] = await Promise.all([
       '/nfl/sourcegrid.json', '/nfl/refresh-status.json', '/nfl/source-health.json',
       '/nfl/forecast-ledger.json', '/nfl/deadline-audit.json', '/nfl/public-feed.json', '/nfl/publishing.json',
