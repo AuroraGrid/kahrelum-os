@@ -8,11 +8,11 @@
     "results": "https://polling-desk.com/results.csv"
   },
   "sourceSha256": {
-    "houseCsv": "f7727a1a6c90594b741074943d751e1c3fef16c6a2c3082a70a6b7de97e16b51",
-    "resultsCsv": "eedd93d607d2ae21d7fae870efc514a96d80b4427cf836052810d619e84cba1a"
+    "houseCsv": "379e51ea65e950bfc19476bfae97c51cdfb94f71f01275bc5033ffcb9abf6846",
+    "resultsCsv": "b5efe627df9f8dfe63676491380f7e45a99baa2a5c8cdecfc704842e7f263035"
   },
-  "sourceLatestResultUpdatedUtc": "2026-11-06T10:50:56Z",
-  "retrievalUtc": "2026-11-06T11:20:01.222893Z",
+  "sourceLatestResultUpdatedUtc": "2026-11-06T13:20:12Z",
+  "retrievalUtc": "2026-11-06T13:34:58.513040Z",
   "publishedAsOf": "Snapshot captured on 2026-11-05. Each non-House race includes its per-race source timestamp. Earlier race calls are not official state certifications.",
   "resultStatus": "UNOFFICIAL_CALLS_AND_COUNTS_NOT_CERTIFIED",
   "verificationPolicy": {
@@ -192,11 +192,11 @@
       "winnerOrLeader": "Rick Crawford",
       "party": "REP",
       "votes": {
-        "DEM": 60136,
-        "REP": 127083,
-        "OTHER": 6942
+        "DEM": 60144,
+        "REP": 127096,
+        "OTHER": 6944
       },
-      "totalVotes": 194161,
+      "totalVotes": 194184,
       "democraticMarginPoints": -34.48,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ar-01"
@@ -7524,26 +7524,26 @@
       "winnerOrLeader": "Tom Cotton",
       "party": "REP",
       "percentReporting": 100,
-      "sourceUpdatedUtc": "2026-11-05T19:42:29Z",
+      "sourceUpdatedUtc": "2026-11-06T13:20:12Z",
       "candidates": [
         {
           "name": "Tom Cotton",
           "party": "REP",
-          "votes": 480777,
+          "votes": 480790,
           "percent": 54.26,
           "calledWinner": true
         },
         {
           "name": "Hallie Shoffner",
           "party": "DEM",
-          "votes": 375800,
+          "votes": 375809,
           "percent": 42.41,
           "calledWinner": false
         },
         {
           "name": "Jeff Wadlin",
           "party": "LIB",
-          "votes": 29487,
+          "votes": 29488,
           "percent": 3.33,
           "calledWinner": false
         }
@@ -8919,26 +8919,26 @@
       "winnerOrLeader": "Sarah Huckabee Sanders",
       "party": "REP",
       "percentReporting": 100,
-      "sourceUpdatedUtc": "2026-11-05T19:42:29Z",
+      "sourceUpdatedUtc": "2026-11-06T13:20:12Z",
       "candidates": [
         {
           "name": "Sarah Huckabee Sanders",
           "party": "REP",
-          "votes": 477281,
+          "votes": 477294,
           "percent": 53.87,
           "calledWinner": true
         },
         {
           "name": "Fredrick Love",
           "party": "DEM",
-          "votes": 341812,
+          "votes": 341821,
           "percent": 38.58,
           "calledWinner": false
         },
         {
           "name": "Colt Shelby",
           "party": "LIB",
-          "votes": 66909,
+          "votes": 66910,
           "percent": 7.55,
           "calledWinner": false
         }
