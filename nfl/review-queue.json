@@ -7698,6 +7698,20 @@
       "reason": "BLOCKED_PENDING_EDITOR_APPROVAL",
       "priority": "HIGH",
       "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-553acd5cf44ea261d67d",
+      "queuedAt": "2026-11-06T23:06:41Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
+    },
+    {
+      "observationId": "OBS-3eddf8e014e03ccfb285",
+      "queuedAt": "2026-11-06T23:06:41Z",
+      "reason": "BLOCKED_PENDING_ORIGINAL_SOURCE_REVIEW",
+      "priority": "NORMAL",
+      "status": "OPEN"
     }
   ]
 }
