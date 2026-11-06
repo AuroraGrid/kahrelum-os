@@ -1,0 +1,4 @@
+# Raw source-receipt SHA-256 custody depends on LF bytes on every operating system.
+# Do not normalize or rewrite the original evidence content.
+research/election-challenge-2026/sources/*.json text eol=lf
+research/nba-player-portraits/espn-sources-2026-10-31.json text eol=lf
