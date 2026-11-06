@@ -8,11 +8,11 @@
     "results": "https://polling-desk.com/results.csv"
   },
   "sourceSha256": {
-    "houseCsv": "379e51ea65e950bfc19476bfae97c51cdfb94f71f01275bc5033ffcb9abf6846",
-    "resultsCsv": "b5efe627df9f8dfe63676491380f7e45a99baa2a5c8cdecfc704842e7f263035"
+    "houseCsv": "491032d07a986c0b8b45bcbf9964c65b6ef3aa7c8852ef45e9ff93dfe301e8b9",
+    "resultsCsv": "ceaf3475c135196791711e6fb83f00d1b7303e84e719da9db66059eb62154f4f"
   },
-  "sourceLatestResultUpdatedUtc": "2026-11-06T13:20:12Z",
-  "retrievalUtc": "2026-11-06T13:34:58.513040Z",
+  "sourceLatestResultUpdatedUtc": "2026-11-06T15:49:17Z",
+  "retrievalUtc": "2026-11-06T15:50:02.489000Z",
   "publishedAsOf": "Snapshot captured on 2026-11-05. Each non-House race includes its per-race source timestamp. Earlier race calls are not official state certifications.",
   "resultStatus": "UNOFFICIAL_CALLS_AND_COUNTS_NOT_CERTIFIED",
   "verificationPolicy": {
@@ -1552,11 +1552,11 @@
       "winnerOrLeader": "Austin Rogers",
       "party": "REP",
       "votes": {
-        "DEM": 147792,
+        "DEM": 147791,
         "REP": 160968,
         "OTHER": 0
       },
-      "totalVotes": 308760,
+      "totalVotes": 308759,
       "democraticMarginPoints": -4.27,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/fl-02"
@@ -1586,12 +1586,12 @@
       "winnerOrLeader": "Aaron Bean",
       "party": "REP",
       "votes": {
-        "DEM": 144795,
-        "REP": 151114,
-        "OTHER": 5023
+        "DEM": 144752,
+        "REP": 151095,
+        "OTHER": 5022
       },
-      "totalVotes": 300932,
-      "democraticMarginPoints": -2.1,
+      "totalVotes": 300869,
+      "democraticMarginPoints": -2.11,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/fl-04"
     },
@@ -1603,11 +1603,11 @@
       "winnerOrLeader": "John Rutherford",
       "party": "REP",
       "votes": {
-        "DEM": 145121,
-        "REP": 187917,
+        "DEM": 145081,
+        "REP": 187877,
         "OTHER": 0
       },
-      "totalVotes": 333038,
+      "totalVotes": 332958,
       "democraticMarginPoints": -12.85,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/fl-05"
@@ -2011,12 +2011,12 @@
       "winnerOrLeader": "Jim Kingston",
       "party": "REP",
       "votes": {
-        "DEM": 132465,
-        "REP": 140216,
+        "DEM": 132496,
+        "REP": 140221,
         "OTHER": 0
       },
-      "totalVotes": 272681,
-      "democraticMarginPoints": -2.84,
+      "totalVotes": 272717,
+      "democraticMarginPoints": -2.83,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ga-01"
     },
@@ -2131,10 +2131,10 @@
       "party": "REP",
       "votes": {
         "DEM": 104868,
-        "REP": 160114,
+        "REP": 160115,
         "OTHER": 0
       },
-      "totalVotes": 264982,
+      "totalVotes": 264983,
       "democraticMarginPoints": -20.85,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ga-08"
@@ -2812,9 +2812,9 @@
       "votes": {
         "DEM": 97845,
         "REP": 121402,
-        "OTHER": 5542
+        "OTHER": 5543
       },
-      "totalVotes": 224789,
+      "totalVotes": 224790,
       "democraticMarginPoints": -10.48,
       "percentReporting": 99,
       "sourceUrl": "https://polling-desk.com/races/2026/house/in-09"
@@ -3184,11 +3184,11 @@
       "winnerOrLeader": "Dan Koh",
       "party": "DEM",
       "votes": {
-        "DEM": 206244,
+        "DEM": 206256,
         "REP": 119112,
         "OTHER": 0
       },
-      "totalVotes": 325356,
+      "totalVotes": 325368,
       "democraticMarginPoints": 26.78,
       "percentReporting": 99,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ma-06"
@@ -3830,12 +3830,12 @@
       "winnerOrLeader": "Mark Alford",
       "party": "REP",
       "votes": {
-        "DEM": 88596,
-        "REP": 151329,
-        "OTHER": 7195
+        "DEM": 89182,
+        "REP": 154236,
+        "OTHER": 7289
       },
-      "totalVotes": 247120,
-      "democraticMarginPoints": -25.39,
+      "totalVotes": 250707,
+      "democraticMarginPoints": -25.95,
       "percentReporting": 99,
       "sourceUrl": "https://polling-desk.com/races/2026/house/mo-04"
     },
@@ -3921,7 +3921,7 @@
       },
       "totalVotes": 239517,
       "democraticMarginPoints": -18.09,
-      "percentReporting": 99,
+      "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ms-01"
     },
     {
@@ -3932,12 +3932,12 @@
       "winnerOrLeader": "Bennie Thompson",
       "party": "DEM",
       "votes": {
-        "DEM": 164970,
-        "REP": 73164,
-        "OTHER": 5883
+        "DEM": 165154,
+        "REP": 73223,
+        "OTHER": 5886
       },
-      "totalVotes": 244017,
-      "democraticMarginPoints": 37.62,
+      "totalVotes": 244263,
+      "democraticMarginPoints": 37.64,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ms-02"
     },
@@ -3955,7 +3955,7 @@
       },
       "totalVotes": 250781,
       "democraticMarginPoints": -16.47,
-      "percentReporting": 99,
+      "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ms-03"
     },
     {
@@ -3972,7 +3972,7 @@
       },
       "totalVotes": 214643,
       "democraticMarginPoints": -25.26,
-      "percentReporting": 89,
+      "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ms-04"
     },
     {
@@ -4357,12 +4357,12 @@
       "winnerOrLeader": "Donald Norcross",
       "party": "DEM",
       "votes": {
-        "DEM": 180228,
-        "REP": 75927,
-        "OTHER": 269
+        "DEM": 181039,
+        "REP": 76249,
+        "OTHER": 275
       },
-      "totalVotes": 256424,
-      "democraticMarginPoints": 40.68,
+      "totalVotes": 257563,
+      "democraticMarginPoints": 40.69,
       "percentReporting": 89,
       "sourceUrl": "https://polling-desk.com/races/2026/house/nj-01"
     },
@@ -4374,13 +4374,13 @@
       "winnerOrLeader": "Zack Mullock",
       "party": "DEM",
       "votes": {
-        "DEM": 136896,
-        "REP": 129768,
-        "OTHER": 2933
+        "DEM": 137197,
+        "REP": 129908,
+        "OTHER": 2934
       },
-      "totalVotes": 269597,
-      "democraticMarginPoints": 2.64,
-      "percentReporting": 85,
+      "totalVotes": 270039,
+      "democraticMarginPoints": 2.7,
+      "percentReporting": 86,
       "sourceUrl": "https://polling-desk.com/races/2026/house/nj-02"
     },
     {
@@ -4612,13 +4612,13 @@
       "winnerOrLeader": "Dina Titus",
       "party": "DEM",
       "votes": {
-        "DEM": 136269,
-        "REP": 87038,
-        "OTHER": 7050
+        "DEM": 140438,
+        "REP": 89521,
+        "OTHER": 7344
       },
-      "totalVotes": 230357,
-      "democraticMarginPoints": 21.37,
-      "percentReporting": 76,
+      "totalVotes": 237303,
+      "democraticMarginPoints": 21.46,
+      "percentReporting": 78,
       "sourceUrl": "https://polling-desk.com/races/2026/house/nv-01"
     },
     {
@@ -4646,13 +4646,13 @@
       "winnerOrLeader": "Susie Lee",
       "party": "DEM",
       "votes": {
-        "DEM": 156654,
-        "REP": 100970,
-        "OTHER": 6091
+        "DEM": 161012,
+        "REP": 103031,
+        "OTHER": 6330
       },
-      "totalVotes": 263715,
-      "democraticMarginPoints": 21.12,
-      "percentReporting": 86,
+      "totalVotes": 270373,
+      "democraticMarginPoints": 21.44,
+      "percentReporting": 88,
       "sourceUrl": "https://polling-desk.com/races/2026/house/nv-03"
     },
     {
@@ -4663,13 +4663,13 @@
       "winnerOrLeader": "Steven Horsford",
       "party": "DEM",
       "votes": {
-        "DEM": 146779,
-        "REP": 91704,
-        "OTHER": 4570
+        "DEM": 150972,
+        "REP": 93200,
+        "OTHER": 4710
       },
-      "totalVotes": 243053,
-      "democraticMarginPoints": 22.66,
-      "percentReporting": 80,
+      "totalVotes": 248882,
+      "democraticMarginPoints": 23.21,
+      "percentReporting": 82,
       "sourceUrl": "https://polling-desk.com/races/2026/house/nv-04"
     },
     {
@@ -5054,12 +5054,12 @@
       "winnerOrLeader": "Nick Langworthy",
       "party": "REP",
       "votes": {
-        "DEM": 119749,
-        "REP": 181807,
+        "DEM": 120199,
+        "REP": 182067,
         "OTHER": 151
       },
-      "totalVotes": 301707,
-      "democraticMarginPoints": -20.57,
+      "totalVotes": 302417,
+      "democraticMarginPoints": -20.46,
       "percentReporting": 97,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ny-23"
     },
@@ -5105,13 +5105,13 @@
       "winnerOrLeader": "Tim Kennedy",
       "party": "DEM",
       "votes": {
-        "DEM": 158733,
-        "REP": 83531,
-        "OTHER": 349
+        "DEM": 163755,
+        "REP": 84618,
+        "OTHER": 365
       },
-      "totalVotes": 242613,
-      "democraticMarginPoints": 31.0,
-      "percentReporting": 91,
+      "totalVotes": 248738,
+      "democraticMarginPoints": 31.82,
+      "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ny-26"
     },
     {
@@ -5581,12 +5581,12 @@
       "winnerOrLeader": "Brendan Boyle",
       "party": "DEM",
       "votes": {
-        "DEM": 147970,
-        "REP": 35186,
+        "DEM": 148570,
+        "REP": 35413,
         "OTHER": 0
       },
-      "totalVotes": 183156,
-      "democraticMarginPoints": 61.58,
+      "totalVotes": 183983,
+      "democraticMarginPoints": 61.5,
       "percentReporting": 52,
       "sourceUrl": "https://polling-desk.com/races/2026/house/pa-02"
     },
@@ -5598,12 +5598,12 @@
       "winnerOrLeader": "Chris Rabb",
       "party": "DEM",
       "votes": {
-        "DEM": 253887,
+        "DEM": 254163,
         "REP": 0,
-        "OTHER": 17350
+        "OTHER": 17361
       },
-      "totalVotes": 271237,
-      "democraticMarginPoints": 93.6,
+      "totalVotes": 271524,
+      "democraticMarginPoints": 93.61,
       "percentReporting": 78,
       "sourceUrl": "https://polling-desk.com/races/2026/house/pa-03"
     },
@@ -5700,11 +5700,11 @@
       "winnerOrLeader": "Dan Meuser",
       "party": "REP",
       "votes": {
-        "DEM": 103395,
-        "REP": 165419,
+        "DEM": 103401,
+        "REP": 165424,
         "OTHER": 0
       },
-      "totalVotes": 268814,
+      "totalVotes": 268825,
       "democraticMarginPoints": -23.07,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/pa-09"
@@ -5904,13 +5904,13 @@
       "winnerOrLeader": "Joe Wilson",
       "party": "REP",
       "votes": {
-        "DEM": 144593,
-        "REP": 147620,
-        "OTHER": 3997
+        "DEM": 144663,
+        "REP": 147659,
+        "OTHER": 3998
       },
-      "totalVotes": 296210,
-      "democraticMarginPoints": -1.02,
-      "percentReporting": 100,
+      "totalVotes": 296320,
+      "democraticMarginPoints": -1.01,
+      "percentReporting": 99,
       "sourceUrl": "https://polling-desk.com/races/2026/house/sc-02"
     },
     {
@@ -6006,11 +6006,11 @@
       "winnerOrLeader": "Marty Jackley",
       "party": "REP",
       "votes": {
-        "DEM": 109993,
+        "DEM": 109995,
         "REP": 195588,
         "OTHER": 0
       },
-      "totalVotes": 305581,
+      "totalVotes": 305583,
       "democraticMarginPoints": -28.01,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/sd-01"
@@ -6942,11 +6942,11 @@
       "party": "DEM",
       "votes": {
         "DEM": 223073,
-        "REP": 81051,
+        "REP": 81015,
         "OTHER": 4875
       },
-      "totalVotes": 308999,
-      "democraticMarginPoints": 45.96,
+      "totalVotes": 308963,
+      "democraticMarginPoints": 45.98,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/va-04"
     },
@@ -7009,12 +7009,12 @@
       "winnerOrLeader": "Don Beyer",
       "party": "DEM",
       "votes": {
-        "DEM": 248071,
-        "REP": 56298,
-        "OTHER": 8403
+        "DEM": 248940,
+        "REP": 56350,
+        "OTHER": 8428
       },
-      "totalVotes": 312772,
-      "democraticMarginPoints": 61.31,
+      "totalVotes": 313718,
+      "democraticMarginPoints": 61.39,
       "percentReporting": 100,
       "sourceUrl": "https://polling-desk.com/races/2026/house/va-08"
     },
@@ -7636,26 +7636,26 @@
       "winnerOrLeader": "Ashley Moody",
       "party": "REP",
       "percentReporting": 100,
-      "sourceUpdatedUtc": "2026-11-06T10:50:56Z",
+      "sourceUpdatedUtc": "2026-11-06T15:39:09Z",
       "candidates": [
         {
           "name": "Ashley Moody",
           "party": "REP",
-          "votes": 4208004,
+          "votes": 4207947,
           "percent": 50.87,
           "calledWinner": true
         },
         {
           "name": "Angie Nixon",
           "party": "DEM",
-          "votes": 3969271,
+          "votes": 3969186,
           "percent": 47.99,
           "calledWinner": false
         },
         {
           "name": "Neil J. Gillespie",
           "party": "IND",
-          "votes": 94538,
+          "votes": 94534,
           "percent": 1.14,
           "calledWinner": false
         }
@@ -7671,19 +7671,19 @@
       "winnerOrLeader": "Jon Ossoff",
       "party": "DEM",
       "percentReporting": 100,
-      "sourceUpdatedUtc": "2026-11-05T19:43:29Z",
+      "sourceUpdatedUtc": "2026-11-06T14:39:04Z",
       "candidates": [
         {
           "name": "Jon Ossoff",
           "party": "DEM",
-          "votes": 2463162,
+          "votes": 2463192,
           "percent": 59.0,
           "calledWinner": true
         },
         {
           "name": "Mike Collins",
           "party": "REP",
-          "votes": 1711636,
+          "votes": 1711641,
           "percent": 41.0,
           "calledWinner": false
         }
@@ -7923,12 +7923,12 @@
       "winnerOrLeader": "Edward J. Markey",
       "party": "DEM",
       "percentReporting": 91,
-      "sourceUpdatedUtc": "2026-11-06T04:38:40Z",
+      "sourceUpdatedUtc": "2026-11-06T15:16:28Z",
       "candidates": [
         {
           "name": "Edward J. Markey",
           "party": "DEM",
-          "votes": 1650740,
+          "votes": 1650755,
           "percent": 63.39,
           "calledWinner": true
         },
@@ -7949,7 +7949,7 @@
         {
           "name": "Joe Tache",
           "party": "OTH",
-          "votes": 56435,
+          "votes": 56436,
           "percent": 2.17,
           "calledWinner": false
         }
@@ -8097,27 +8097,27 @@
       "status": "COUNTING",
       "winnerOrLeader": "Scott Colom",
       "party": "DEM",
-      "percentReporting": 98,
-      "sourceUpdatedUtc": "2026-11-05T22:26:51Z",
+      "percentReporting": 100,
+      "sourceUpdatedUtc": "2026-11-06T15:10:17Z",
       "candidates": [
         {
           "name": "Scott Colom",
           "party": "DEM",
-          "votes": 466877,
+          "votes": 467061,
           "percent": 49.05,
           "calledWinner": false
         },
         {
           "name": "Cindy Hyde-Smith",
           "party": "REP",
-          "votes": 464993,
-          "percent": 48.85,
+          "votes": 465054,
+          "percent": 48.84,
           "calledWinner": false
         },
         {
           "name": "Ty Pinkins",
           "party": "IND",
-          "votes": 20023,
+          "votes": 20026,
           "percent": 2.1,
           "calledWinner": false
         }
@@ -8308,40 +8308,40 @@
       "winnerOrLeader": "Cory Booker",
       "party": "DEM",
       "percentReporting": 82,
-      "sourceUpdatedUtc": "2026-11-06T04:42:44Z",
+      "sourceUpdatedUtc": "2026-11-06T15:29:35Z",
       "candidates": [
         {
           "name": "Cory Booker",
           "party": "DEM",
-          "votes": 1812553,
+          "votes": 1813636,
           "percent": 62.23,
           "calledWinner": true
         },
         {
           "name": "Justin Murphy",
           "party": "REP",
-          "votes": 1021541,
+          "votes": 1022003,
           "percent": 35.07,
           "calledWinner": false
         },
         {
           "name": "Veronica Fernandez",
           "party": "IND",
-          "votes": 48111,
+          "votes": 48138,
           "percent": 1.65,
           "calledWinner": false
         },
         {
           "name": "Joanne Kuniansky",
           "party": "OTH",
-          "votes": 27241,
+          "votes": 27259,
           "percent": 0.94,
           "calledWinner": false
         },
         {
           "name": "Write-in",
           "party": "OTH",
-          "votes": 3306,
+          "votes": 3308,
           "percent": 0.11,
           "calledWinner": false
         }
@@ -8573,34 +8573,34 @@
       "status": "CALLED",
       "winnerOrLeader": "Annie Andrews",
       "party": "DEM",
-      "percentReporting": 100,
-      "sourceUpdatedUtc": "2026-11-04T07:34:17Z",
+      "percentReporting": 99,
+      "sourceUpdatedUtc": "2026-11-06T14:52:09Z",
       "candidates": [
         {
           "name": "Annie Andrews",
           "party": "DEM",
-          "votes": 1042362,
+          "votes": 1042427,
           "percent": 51.13,
           "calledWinner": true
         },
         {
           "name": "Darline Graham",
           "party": "REP",
-          "votes": 951165,
+          "votes": 951208,
           "percent": 46.65,
           "calledWinner": false
         },
         {
           "name": "Kasie Whitener",
           "party": "LIB",
-          "votes": 23560,
+          "votes": 23562,
           "percent": 1.16,
           "calledWinner": false
         },
         {
           "name": "Mark Hackett",
           "party": "OTH",
-          "votes": 16799,
+          "votes": 16801,
           "percent": 0.82,
           "calledWinner": false
         },
@@ -8623,7 +8623,7 @@
       "winnerOrLeader": "Mike Rounds",
       "party": "REP",
       "percentReporting": 100,
-      "sourceUpdatedUtc": "2026-11-05T21:57:34Z",
+      "sourceUpdatedUtc": "2026-11-06T15:49:17Z",
       "candidates": [
         {
           "name": "Mike Rounds",
@@ -8635,7 +8635,7 @@
         {
           "name": "Brian Bengs",
           "party": "IND",
-          "votes": 120509,
+          "votes": 120511,
           "percent": 39.5,
           "calledWinner": false
         }
@@ -8749,26 +8749,26 @@
       "winnerOrLeader": "Mark Warner",
       "party": "DEM",
       "percentReporting": 100,
-      "sourceUpdatedUtc": "2026-11-06T03:39:57Z",
+      "sourceUpdatedUtc": "2026-11-06T15:49:17Z",
       "candidates": [
         {
           "name": "Mark Warner",
           "party": "DEM",
-          "votes": 2182960,
-          "percent": 61.16,
+          "votes": 2183855,
+          "percent": 61.17,
           "calledWinner": true
         },
         {
           "name": "Bert Mizusawa",
           "party": "REP",
-          "votes": 1376971,
-          "percent": 38.58,
+          "votes": 1377024,
+          "percent": 38.57,
           "calledWinner": false
         },
         {
           "name": "Write-in",
           "party": "OTH",
-          "votes": 9432,
+          "votes": 9434,
           "percent": 0.26,
           "calledWinner": false
         }
@@ -9129,19 +9129,19 @@
       "winnerOrLeader": "Byron Donalds",
       "party": "REP",
       "percentReporting": 100,
-      "sourceUpdatedUtc": "2026-11-06T10:50:56Z",
+      "sourceUpdatedUtc": "2026-11-06T15:39:09Z",
       "candidates": [
         {
           "name": "Byron Donalds",
           "party": "REP",
-          "votes": 4132334,
+          "votes": 4132275,
           "percent": 50.02,
           "calledWinner": true
         },
         {
           "name": "David Jolly",
           "party": "DEM",
-          "votes": 4024639,
+          "votes": 4024554,
           "percent": 48.71,
           "calledWinner": false
         },
@@ -9162,7 +9162,7 @@
         {
           "name": "Charles Burkett",
           "party": "IND",
-          "votes": 15239,
+          "votes": 15238,
           "percent": 0.18,
           "calledWinner": false
         }
@@ -9178,19 +9178,19 @@
       "winnerOrLeader": "Keisha Lance Bottoms",
       "party": "DEM",
       "percentReporting": 100,
-      "sourceUpdatedUtc": "2026-11-05T19:43:29Z",
+      "sourceUpdatedUtc": "2026-11-06T14:39:04Z",
       "candidates": [
         {
           "name": "Keisha Lance Bottoms",
           "party": "DEM",
-          "votes": 2268480,
+          "votes": 2268509,
           "percent": 54.31,
           "calledWinner": true
         },
         {
           "name": "Rick Jackson",
           "party": "REP",
-          "votes": 1908592,
+          "votes": 1908599,
           "percent": 45.69,
           "calledWinner": false
         }
@@ -9380,27 +9380,27 @@
       "status": "CALLED",
       "winnerOrLeader": "Maura Healey",
       "party": "DEM",
-      "percentReporting": 91,
-      "sourceUpdatedUtc": "2026-11-06T04:38:40Z",
+      "percentReporting": 92,
+      "sourceUpdatedUtc": "2026-11-06T15:47:15Z",
       "candidates": [
         {
           "name": "Maura Healey",
           "party": "DEM",
-          "votes": 1623810,
-          "percent": 62.18,
+          "votes": 1625438,
+          "percent": 61.97,
           "calledWinner": true
         },
         {
           "name": "Michael Roger Minogue",
           "party": "REP",
-          "votes": 901935,
-          "percent": 34.54,
+          "votes": 911218,
+          "percent": 34.74,
           "calledWinner": false
         },
         {
           "name": "Andrea James",
           "party": "IND",
-          "votes": 85814,
+          "votes": 86279,
           "percent": 3.29,
           "calledWinner": false
         }
@@ -9702,34 +9702,34 @@
       "status": "CALLED",
       "winnerOrLeader": "Aaron Ford",
       "party": "DEM",
-      "percentReporting": 86,
-      "sourceUpdatedUtc": "2026-11-06T03:40:58Z",
+      "percentReporting": 87,
+      "sourceUpdatedUtc": "2026-11-06T15:17:29Z",
       "candidates": [
         {
           "name": "Aaron Ford",
           "party": "DEM",
-          "votes": 545091,
-          "percent": 51.53,
+          "votes": 556876,
+          "percent": 51.68,
           "calledWinner": true
         },
         {
           "name": "Joe Lombardo",
           "party": "REP",
-          "votes": 467174,
-          "percent": 44.16,
+          "votes": 473891,
+          "percent": 43.98,
           "calledWinner": false
         },
         {
           "name": "Danielle Ford",
           "party": "OTH",
-          "votes": 30157,
-          "percent": 2.85,
+          "votes": 30995,
+          "percent": 2.88,
           "calledWinner": false
         },
         {
           "name": "None of These Candidates",
           "party": "",
-          "votes": 15449,
+          "votes": 15764,
           "percent": 1.46,
           "calledWinner": false
         }
@@ -9745,26 +9745,26 @@
       "winnerOrLeader": "Kathy Hochul",
       "party": "DEM",
       "percentReporting": 85,
-      "sourceUpdatedUtc": "2026-11-06T04:48:49Z",
+      "sourceUpdatedUtc": "2026-11-06T15:43:12Z",
       "candidates": [
         {
           "name": "Kathy Hochul",
           "party": "DEM",
-          "votes": 3539555,
-          "percent": 59.7,
+          "votes": 3544864,
+          "percent": 59.72,
           "calledWinner": true
         },
         {
           "name": "Bruce Blakeman",
           "party": "REP",
-          "votes": 2376422,
-          "percent": 40.08,
+          "votes": 2377969,
+          "percent": 40.06,
           "calledWinner": false
         },
         {
           "name": "Write-in",
           "party": "OTH",
-          "votes": 12517,
+          "votes": 12555,
           "percent": 0.21,
           "calledWinner": false
         }
@@ -9920,26 +9920,26 @@
       "winnerOrLeader": "Josh Shapiro",
       "party": "DEM",
       "percentReporting": 82,
-      "sourceUpdatedUtc": "2026-11-05T20:27:16Z",
+      "sourceUpdatedUtc": "2026-11-06T15:48:16Z",
       "candidates": [
         {
           "name": "Josh Shapiro",
           "party": "DEM",
-          "votes": 3008156,
+          "votes": 3009075,
           "percent": 60.41,
           "calledWinner": true
         },
         {
           "name": "Stacy Garrity",
           "party": "REP",
-          "votes": 1907150,
-          "percent": 38.3,
+          "votes": 1907386,
+          "percent": 38.29,
           "calledWinner": false
         },
         {
           "name": "Ken Krawchuk",
           "party": "LIB",
-          "votes": 64454,
+          "votes": 64464,
           "percent": 1.29,
           "calledWinner": false
         }
@@ -10003,34 +10003,34 @@
       "status": "CALLED",
       "winnerOrLeader": "Alan Wilson",
       "party": "REP",
-      "percentReporting": 100,
-      "sourceUpdatedUtc": "2026-11-04T07:34:17Z",
+      "percentReporting": 99,
+      "sourceUpdatedUtc": "2026-11-06T14:52:09Z",
       "candidates": [
         {
           "name": "Alan Wilson",
           "party": "REP",
-          "votes": 1050190,
+          "votes": 1050234,
           "percent": 51.59,
           "calledWinner": true
         },
         {
           "name": "Jermaine Johnson",
           "party": "DEM",
-          "votes": 959001,
+          "votes": 959068,
           "percent": 47.11,
           "calledWinner": false
         },
         {
           "name": "Michael Addison",
           "party": "OTH",
-          "votes": 16111,
+          "votes": 16112,
           "percent": 0.79,
           "calledWinner": false
         },
         {
           "name": "Walid Hakim",
           "party": "GRE",
-          "votes": 9078,
+          "votes": 9076,
           "percent": 0.45,
           "calledWinner": false
         },
@@ -10053,7 +10053,7 @@
       "winnerOrLeader": "Larry Rhoden",
       "party": "REP",
       "percentReporting": 100,
-      "sourceUpdatedUtc": "2026-11-05T21:58:34Z",
+      "sourceUpdatedUtc": "2026-11-06T15:49:17Z",
       "candidates": [
         {
           "name": "Larry Rhoden",
@@ -10065,7 +10065,7 @@
         {
           "name": "Dan Ahlers",
           "party": "DEM",
-          "votes": 111157,
+          "votes": 111159,
           "percent": 36.51,
           "calledWinner": false
         }
