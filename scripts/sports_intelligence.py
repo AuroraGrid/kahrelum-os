@@ -404,15 +404,22 @@ def parse_official_transactions(content: bytes, integration: dict, checked_at: s
             "officialFields": fields,
         })
     if not output:
-        # A correctly headed November table can legitimately be empty. A fallback
-        # January page (the current site's behavior for an unopened month) cannot.
+        # November can be genuinely empty. Require verified month/year context
+        # and either the official empty table or explicit no-transactions result.
+        # Never silently accept the site's fallback month or an error page.
         if integration["url"].rstrip("/").endswith("/2026/11"):
+            decoded = content.decode("utf-8", errors="replace")
             parser = TransactionTableParser()
-            parser.feed(content.decode("utf-8", errors="replace"))
+            parser.feed(decoded)
             if parser.table_seen:
-                validate_transaction_calendar(content, "11", [])
                 return []
-        raise ValueError("official transaction table contained no traded rows")
+            context = TransactionContextParser()
+            context.feed(decoded)
+            if (any(re.fullmatch(r"No Transactions Available", heading, re.I)
+                    for heading in context.headings)
+                    and re.search(r"\bNo Results\.", " ".join(context.body_text), re.I)):
+                return []
+        raise ValueError("official transaction table contained no traded rows or verified empty-month result")
     return output
 
 
@@ -895,6 +902,7 @@ class TransactionContextParser(html.parser.HTMLParser):
         self.heading = None
         self.parts = []
         self.headings = []
+        self.body_text = []
 
     def handle_starttag(self, tag, attrs):
         if tag in {"h1", "h2", "h3", "h4", "h5", "h6", "caption"}:
@@ -907,6 +915,7 @@ class TransactionContextParser(html.parser.HTMLParser):
             self.heading = None
 
     def handle_data(self, data):
+        self.body_text.append(data)
         if self.heading:
             self.parts.append(data)
 
@@ -915,8 +924,16 @@ def validate_transaction_calendar(content: bytes, month: str, rows: list[dict]) 
     parser = TransactionContextParser()
     parser.feed(content.decode("utf-8", errors="replace"))
     expected = {"10": "October", "11": "November"}[month]
-    context = " ".join(parser.headings)
-    if not re.search(rf"\b{expected}\s+2026\b", context, re.I):
+    # NFL.com now renders the year and month in separate headings:
+    # "2026 NFL Transactions" followed by "Trades — November".
+    # Keep the older "November 2026" header valid for archived receipts.
+    combined = any(re.search(rf"\b{expected}\s+2026\b", heading, re.I) for heading in parser.headings)
+    split = (
+        any(re.fullmatch(r"2026\s+NFL\s+Transactions", heading, re.I) for heading in parser.headings)
+        and any(re.fullmatch(rf"Trades\s*[-:\u2013\u2014]\s*{expected}", heading, re.I)
+                for heading in parser.headings)
+    )
+    if not (combined or split):
         raise ValueError(f"official transaction headings do not establish {expected} 2026; fallback months are not complete records")
     if any(int(row["transactionDate"].split("/")[0]) != int(month) for row in rows):
         raise ValueError("official transaction rows do not match the requested month")
