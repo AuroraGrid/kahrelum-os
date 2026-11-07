@@ -8,11 +8,11 @@
     "results": "https://polling-desk.com/results.csv"
   },
   "sourceSha256": {
-    "houseCsv": "dc0ea74d7e383ceb6d51280b538aa1ee06254f1322a2dad3cd6bdede4841fa47",
-    "resultsCsv": "c4519b06ea4d1a7af6f7d390168380eb22a6c7e9b06efb07720234c4a221f1a4"
+    "houseCsv": "dbd87a74e0097830ee47642987bc4d70b889e4598ce5b3cd3df76c036f390e26",
+    "resultsCsv": "56787160698438f30cca45c8a6c0b6d02b81274286ca72dea42f631bde7732e5"
   },
-  "sourceLatestResultUpdatedUtc": "2026-11-07T00:34:00Z",
-  "retrievalUtc": "2026-11-07T00:34:53.544453Z",
+  "sourceLatestResultUpdatedUtc": "2026-11-07T00:48:15Z",
+  "retrievalUtc": "2026-11-07T00:49:54.428900Z",
   "publishedAsOf": "Snapshot captured on 2026-11-05. Each non-House race includes its per-race source timestamp. Earlier race calls are not official state certifications.",
   "resultStatus": "UNOFFICIAL_CALLS_AND_COUNTS_NOT_CERTIFIED",
   "verificationPolicy": {
@@ -277,13 +277,13 @@
       "winnerOrLeader": "Eli Crane",
       "party": "REP",
       "votes": {
-        "DEM": 155619,
-        "REP": 159486,
-        "OTHER": 5998
+        "DEM": 156471,
+        "REP": 159711,
+        "OTHER": 6012
       },
-      "totalVotes": 321103,
-      "democraticMarginPoints": -1.2,
-      "percentReporting": 91,
+      "totalVotes": 322194,
+      "democraticMarginPoints": -1.01,
+      "percentReporting": 92,
       "sourceUrl": "https://polling-desk.com/races/2026/house/az-02"
     },
     {
@@ -396,13 +396,13 @@
       "winnerOrLeader": "Paul Gosar",
       "party": "REP",
       "votes": {
-        "DEM": 117123,
-        "REP": 157231,
-        "OTHER": 361
+        "DEM": 117911,
+        "REP": 159772,
+        "OTHER": 367
       },
-      "totalVotes": 274715,
-      "democraticMarginPoints": -14.6,
-      "percentReporting": 79,
+      "totalVotes": 278050,
+      "democraticMarginPoints": -15.06,
+      "percentReporting": 80,
       "sourceUrl": "https://polling-desk.com/races/2026/house/az-09"
     },
     {
@@ -8953,41 +8953,41 @@
       "status": "CALLED",
       "winnerOrLeader": "Katie Hobbs",
       "party": "DEM",
-      "percentReporting": 77,
-      "sourceUpdatedUtc": "2026-11-07T00:19:47Z",
+      "percentReporting": 78,
+      "sourceUpdatedUtc": "2026-11-07T00:47:14Z",
       "candidates": [
         {
           "name": "Katie Hobbs",
           "party": "DEM",
-          "votes": 1369176,
-          "percent": 55.55,
+          "votes": 1370789,
+          "percent": 55.51,
           "calledWinner": true
         },
         {
           "name": "Andy Biggs",
           "party": "REP",
-          "votes": 1049185,
-          "percent": 42.56,
+          "votes": 1051869,
+          "percent": 42.6,
           "calledWinner": false
         },
         {
           "name": "Risa Lombardo",
           "party": "GRE",
-          "votes": 23004,
+          "votes": 23066,
           "percent": 0.93,
           "calledWinner": false
         },
         {
           "name": "Teri Hourihan",
           "party": "OTH",
-          "votes": 21951,
+          "votes": 22012,
           "percent": 0.89,
           "calledWinner": false
         },
         {
           "name": "Write-in",
           "party": "OTH",
-          "votes": 1638,
+          "votes": 1641,
           "percent": 0.07,
           "calledWinner": false
         }
