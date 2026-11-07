@@ -1,10 +1,10 @@
 {
   "schema": "KAHRELUM_NFL_DESK_LIVE_v1.0",
-  "generatedAtUtc": "2026-11-07T00:25:36Z",
+  "generatedAtUtc": "2026-11-07T01:10:36Z",
   "sourceStatus": {
     "schema": "KAHRELUM_REFRESH_STATUS_v1.1",
-    "lastAttemptAt": "2026-11-07T00:25:36Z",
-    "lastSuccessfulSourceCheckAt": "2026-11-07T00:25:36Z",
+    "lastAttemptAt": "2026-11-07T01:10:36Z",
+    "lastSuccessfulSourceCheckAt": "2026-11-07T01:10:36Z",
     "lastPublishedUpdateAt": "2026-10-31T13:13:05Z",
     "feedFreshness": "FRESH",
     "monitoringState": "DEADLINE_WINDOW_OPEN",
@@ -13,7 +13,7 @@
     "sourcesSucceeded": 37,
     "sourcesFailed": 0,
     "observationsNew": 3,
-    "reviewQueueCount": 991,
+    "reviewQueueCount": 994,
     "materialAlerts": [
       {
         "observationId": "OBS-50323095a31bcf80e1ad",
@@ -33,8 +33,8 @@
     ],
     "errors": [],
     "truthBoundary": "Source checks and publication are separate. lastSuccessfulSourceCheckAt means at least one source succeeded; lastFullySuccessfulSourceCheckAt requires every registered operational source to succeed.",
-    "lastCompletedCheckAt": "2026-11-07T00:25:36Z",
-    "lastFullySuccessfulSourceCheckAt": "2026-11-07T00:25:36Z",
+    "lastCompletedCheckAt": "2026-11-07T01:10:36Z",
+    "lastFullySuccessfulSourceCheckAt": "2026-11-07T01:10:36Z",
     "duplicatesSuppressed": 6,
     "sourceFailureAlerts": [],
     "reviewProposalCount": 29,
@@ -6530,6 +6530,42 @@
   },
   "activity": [
     {
+      "id": "OBS-ac8a1b6b3bcd4bfb89e5",
+      "title": "Brad Holmes Could Steal Colts Captain in Intriguing Lions Trade Idea - Yahoo Sports",
+      "sourceName": "Google News NFL trade discovery",
+      "originalUrl": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPS19yX2t0QTFrQlk4R3JpVTR5TU85VUk3dEpZTDgwYjN4MlpaLWx6ekZ2cVJDQ0Z2OUl1ZnJXdWFGWU9GcmZScEQyMWt0eXJQUGdhdUJFaU9HQ2Zsa0w4aEc4eHI0bEpFTVNWbGV2eFViU2VBajJ0RHB0MlEtdTVmMUNGZE4?oc=5",
+      "sourcePublishedAt": "2026-11-07T00:12:00Z",
+      "sourceDate": null,
+      "firstObservedAt": "2026-11-07T01:10:36Z",
+      "reviewStatus": "REVIEW_REQUIRED",
+      "claimType": "HYPOTHETICAL_OR_ANALYSIS",
+      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
+    },
+    {
+      "id": "OBS-9b484326af8b92a8a4c5",
+      "title": "Should the Steelers be buyers at the NFL Trade Deadline? - Steel Curtain Network",
+      "sourceName": "Google News NFL trade discovery",
+      "originalUrl": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOeWhSNDEtM3FIeWdfR3VlejRrRUpzYktDVlhFUVhWRjlQY1dFWFN2bFZ1Z1NQYjByb21zRkN2LXNZdlQ3QlZNbXFSZFlySFRCcUZLS2FEZml3XzlRN05EWTIwTlFNN3p2UVZQVE1oYXJqelozdXkxVk9pTFc5ZUlQNHlqLUZnYl9rWkQ3QkJfbU8tMFY1Y0Vn?oc=5",
+      "sourcePublishedAt": "2026-11-07T00:50:16Z",
+      "sourceDate": null,
+      "firstObservedAt": "2026-11-07T01:10:36Z",
+      "reviewStatus": "REVIEW_REQUIRED",
+      "claimType": "GENERAL_NFL_DISCOVERY",
+      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
+    },
+    {
+      "id": "OBS-448491983ba6a11694c7",
+      "title": "Recently acquired Seahawks LG Quenton Nelson will need minor knee procedure, is &#39;week-to-week&#39;",
+      "sourceName": "Yahoo Sports NFL RSS",
+      "originalUrl": "https://sports.yahoo.com/nfl/article/recently-acquired-seahawks-lg-quenton-nelson-will-need-minor-knee-procedure-is-week-to-week-003525523.html",
+      "sourcePublishedAt": "2026-11-07T00:35:25Z",
+      "sourceDate": null,
+      "firstObservedAt": "2026-11-07T01:10:36Z",
+      "reviewStatus": "REVIEW_REQUIRED",
+      "claimType": "POSSIBLE_TRANSACTION_MENTION_NOT_CONFIRMED",
+      "linkCustody": "FEED_ATTRIBUTED_ARTICLE_URL"
+    },
+    {
       "id": "OBS-613447bb84a1cb734efb",
       "title": "Bills Called Out for NFL’s ‘Biggest Trade Deadline Mistake’ - Yahoo Sports",
       "sourceName": "Google News NFL trade discovery",
@@ -6852,42 +6888,6 @@
       "reviewStatus": "REVIEW_REQUIRED",
       "claimType": "GENERAL_NFL_DISCOVERY",
       "linkCustody": "FEED_ATTRIBUTED_ARTICLE_URL"
-    },
-    {
-      "id": "OBS-1333fe2880910b4beb10",
-      "title": "5 NFL teams that need to sell ahead of trade deadline - Yahoo Sports",
-      "sourceName": "Google News NFL trade discovery",
-      "originalUrl": "https://news.google.com/rss/articles/CBMie0FVX3lxTFAyMzBtSGRxanVyUzRFWGkwYXFMMEVNQy10dDFEblFuVWlkMzBIcEVVb1ZUMWdGel9ETHNFV1NrNU9PbjR6djFRamVwemxha1FGTzlUQTVJU0JRX3BZOVFvNG9fVFFxd1pVVm1Hb0w4MUE0M2NHRE9VcWx2UQ?oc=5",
-      "sourcePublishedAt": "2026-11-06T19:40:08Z",
-      "sourceDate": null,
-      "firstObservedAt": "2026-11-06T22:42:36Z",
-      "reviewStatus": "REVIEW_REQUIRED",
-      "claimType": "GENERAL_NFL_DISCOVERY",
-      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
-    },
-    {
-      "id": "OBS-0bd353cdf15663b679c0",
-      "title": "Buffalo Bils GM Drops Bold Comment on Potential Trades Ahead of Deadline - Yahoo Sports",
-      "sourceName": "Google News NFL trade discovery",
-      "originalUrl": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNTTNVcmZSZGxKWG5XQzVqMDVadzdSZ0trM3BaWl9hcWNEU0UwVmF3VmJ0RUp4aXNqaGtmcU90cU5aRWxLSHloNFd1a3JUdUxxTWhwMkVoMEVUMkVLbUhrODBRZDRtNTN6bVZJWl9NTHBDTDhSX201VU5xZ0RWMUlFUQ?oc=5",
-      "sourcePublishedAt": "2026-11-06T20:57:17Z",
-      "sourceDate": null,
-      "firstObservedAt": "2026-11-06T22:42:36Z",
-      "reviewStatus": "REVIEW_REQUIRED",
-      "claimType": "GENERAL_NFL_DISCOVERY",
-      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
-    },
-    {
-      "id": "OBS-01b89a5bbef153080017",
-      "title": "‘Frustrated’ Derrick Henry reveals thoughts on possible trade with Ravens scuffling - New York Post",
-      "sourceName": "Google News NFL trade discovery",
-      "originalUrl": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOWURTdHNRN0pfZmdPOWl1SWhhRjhYN3V0TFZ2QS13dkZ0ZWFFYkg2V09Pd2ZCOVl0TVdYM0QzQUE5ei1nOVZoYnhNWVdRVjhNZERoMGFtRndsTmRmQ0paam5VeVFvOXFzdC01azd3bDRxUkxXVWxqVmh1MG9RQnJVRnZoeVdEMm10b2FGcmtlbUNYOHJ0cEVaeTFjemZtNG9LQkNxek9rc3F4b1hh?oc=5",
-      "sourcePublishedAt": "2026-11-06T15:10:21Z",
-      "sourceDate": null,
-      "firstObservedAt": "2026-11-06T22:42:36Z",
-      "reviewStatus": "REVIEW_REQUIRED",
-      "claimType": "GENERAL_NFL_DISCOVERY",
-      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
     }
   ],
   "publishedUpdates": [
