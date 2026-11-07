@@ -8,11 +8,11 @@
     "results": "https://polling-desk.com/results.csv"
   },
   "sourceSha256": {
-    "houseCsv": "dd63f2d97d5cd0cc81dfc2d2a04be87d970e680c6c9bf4d3f059fba0c84a0df2",
-    "resultsCsv": "118317283e221059de1247e5c31060c452e3dd59fb6756f95f258aa2cfb13037"
+    "houseCsv": "0e1e949956ebfb470b018cd478fe69c631573fca6a607251446a2900620f7160",
+    "resultsCsv": "91a5e1046e955223a3331623d3ba0ca9efa24b616835fc381d7319e42fbfc588"
   },
-  "sourceLatestResultUpdatedUtc": "2026-11-07T03:32:46Z",
-  "retrievalUtc": "2026-11-07T03:49:55.101630Z",
+  "sourceLatestResultUpdatedUtc": "2026-11-07T04:22:35Z",
+  "retrievalUtc": "2026-11-07T06:04:54.267982Z",
   "publishedAsOf": "Snapshot captured on 2026-11-05. Each non-House race includes its per-race source timestamp. Earlier race calls are not official state certifications.",
   "resultStatus": "UNOFFICIAL_CALLS_AND_COUNTS_NOT_CERTIFIED",
   "verificationPolicy": {
@@ -260,13 +260,13 @@
       "winnerOrLeader": "Amish Shah",
       "party": "DEM",
       "votes": {
-        "DEM": 179685,
-        "REP": 155688,
-        "OTHER": 7621
+        "DEM": 184253,
+        "REP": 159954,
+        "OTHER": 7902
       },
-      "totalVotes": 342994,
-      "democraticMarginPoints": 7.0,
-      "percentReporting": 97,
+      "totalVotes": 352109,
+      "democraticMarginPoints": 6.9,
+      "percentReporting": 99,
       "sourceUrl": "https://polling-desk.com/races/2026/house/az-01"
     },
     {
@@ -277,11 +277,11 @@
       "winnerOrLeader": "Eli Crane",
       "party": "REP",
       "votes": {
-        "DEM": 158819,
-        "REP": 162735,
-        "OTHER": 6170
+        "DEM": 158856,
+        "REP": 162741,
+        "OTHER": 6176
       },
-      "totalVotes": 327724,
+      "totalVotes": 327773,
       "democraticMarginPoints": -1.19,
       "percentReporting": 93,
       "sourceUrl": "https://polling-desk.com/races/2026/house/az-02"
@@ -294,13 +294,13 @@
       "winnerOrLeader": "Yassamin Ansari",
       "party": "DEM",
       "votes": {
-        "DEM": 120773,
-        "REP": 1505,
-        "OTHER": 17271
+        "DEM": 128953,
+        "REP": 1618,
+        "OTHER": 18317
       },
-      "totalVotes": 139549,
-      "democraticMarginPoints": 85.47,
-      "percentReporting": 39,
+      "totalVotes": 148888,
+      "democraticMarginPoints": 85.52,
+      "percentReporting": 41,
       "sourceUrl": "https://polling-desk.com/races/2026/house/az-03"
     },
     {
@@ -311,13 +311,13 @@
       "winnerOrLeader": "Greg Stanton",
       "party": "DEM",
       "votes": {
-        "DEM": 153289,
-        "REP": 87207,
-        "OTHER": 6234
+        "DEM": 157670,
+        "REP": 89132,
+        "OTHER": 6483
       },
-      "totalVotes": 246730,
-      "democraticMarginPoints": 26.78,
-      "percentReporting": 69,
+      "totalVotes": 253285,
+      "democraticMarginPoints": 27.06,
+      "percentReporting": 71,
       "sourceUrl": "https://polling-desk.com/races/2026/house/az-04"
     },
     {
@@ -328,13 +328,13 @@
       "winnerOrLeader": "Mark Lamb",
       "party": "REP",
       "votes": {
-        "DEM": 152017,
-        "REP": 162975,
-        "OTHER": 543
+        "DEM": 155814,
+        "REP": 166930,
+        "OTHER": 563
       },
-      "totalVotes": 315535,
-      "democraticMarginPoints": -3.47,
-      "percentReporting": 90,
+      "totalVotes": 323307,
+      "democraticMarginPoints": -3.44,
+      "percentReporting": 92,
       "sourceUrl": "https://polling-desk.com/races/2026/house/az-05"
     },
     {
@@ -362,12 +362,12 @@
       "winnerOrLeader": "Adelita Grijalva",
       "party": "DEM",
       "votes": {
-        "DEM": 140771,
-        "REP": 54822,
-        "OTHER": 349
+        "DEM": 141281,
+        "REP": 54935,
+        "OTHER": 352
       },
-      "totalVotes": 195942,
-      "democraticMarginPoints": 43.86,
+      "totalVotes": 196568,
+      "democraticMarginPoints": 43.93,
       "percentReporting": 55,
       "sourceUrl": "https://polling-desk.com/races/2026/house/az-07"
     },
@@ -379,13 +379,13 @@
       "winnerOrLeader": "Abraham Hamadeh",
       "party": "REP",
       "votes": {
-        "DEM": 137230,
-        "REP": 144547,
-        "OTHER": 581
+        "DEM": 139083,
+        "REP": 146140,
+        "OTHER": 596
       },
-      "totalVotes": 282358,
-      "democraticMarginPoints": -2.59,
-      "percentReporting": 80,
+      "totalVotes": 285819,
+      "democraticMarginPoints": -2.47,
+      "percentReporting": 81,
       "sourceUrl": "https://polling-desk.com/races/2026/house/az-08"
     },
     {
@@ -396,12 +396,12 @@
       "winnerOrLeader": "Paul Gosar",
       "party": "REP",
       "votes": {
-        "DEM": 117911,
-        "REP": 159772,
-        "OTHER": 367
+        "DEM": 119355,
+        "REP": 160724,
+        "OTHER": 371
       },
-      "totalVotes": 278050,
-      "democraticMarginPoints": -15.06,
+      "totalVotes": 280450,
+      "democraticMarginPoints": -14.75,
       "percentReporting": 80,
       "sourceUrl": "https://polling-desk.com/races/2026/house/az-09"
     },
@@ -8953,41 +8953,41 @@
       "status": "CALLED",
       "winnerOrLeader": "Katie Hobbs",
       "party": "DEM",
-      "percentReporting": 79,
-      "sourceUpdatedUtc": "2026-11-07T03:22:37Z",
+      "percentReporting": 80,
+      "sourceUpdatedUtc": "2026-11-07T04:21:34Z",
       "candidates": [
         {
           "name": "Katie Hobbs",
           "party": "DEM",
-          "votes": 1389019,
-          "percent": 55.48,
+          "votes": 1414266,
+          "percent": 55.6,
           "calledWinner": true
         },
         {
           "name": "Andy Biggs",
           "party": "REP",
-          "votes": 1066712,
-          "percent": 42.61,
+          "votes": 1080353,
+          "percent": 42.48,
           "calledWinner": false
         },
         {
           "name": "Risa Lombardo",
           "party": "GRE",
-          "votes": 23571,
-          "percent": 0.94,
+          "votes": 24044,
+          "percent": 0.95,
           "calledWinner": false
         },
         {
           "name": "Teri Hourihan",
           "party": "OTH",
-          "votes": 22569,
-          "percent": 0.9,
+          "votes": 23076,
+          "percent": 0.91,
           "calledWinner": false
         },
         {
           "name": "Write-in",
           "party": "OTH",
-          "votes": 1681,
+          "votes": 1707,
           "percent": 0.07,
           "calledWinner": false
         }
