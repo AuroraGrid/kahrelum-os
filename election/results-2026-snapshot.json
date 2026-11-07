@@ -8,11 +8,11 @@
     "results": "https://polling-desk.com/results.csv"
   },
   "sourceSha256": {
-    "houseCsv": "231070221f0217224cf9f2e045a2fac140217e632a501c76ffc63878aee2e0ee",
-    "resultsCsv": "ac8d97f1c3a88498a22dc3a1340b1fc3f09011f3c68b2880f008806ce7e6164f"
+    "houseCsv": "82ce3203dd34646a29e178f4f0dbea6e9004cc1c16a9c8bc3e9479ae439b4e30",
+    "resultsCsv": "f4a7071c6d2b81e0b3336be6d6562450d6a4fb170072f0b188a7a2a5f6aa4f6f"
   },
-  "sourceLatestResultUpdatedUtc": "2026-11-07T00:57:27Z",
-  "retrievalUtc": "2026-11-07T01:04:53.415354Z",
+  "sourceLatestResultUpdatedUtc": "2026-11-07T01:15:37Z",
+  "retrievalUtc": "2026-11-07T01:19:53.500909Z",
   "publishedAsOf": "Snapshot captured on 2026-11-05. Each non-House race includes its per-race source timestamp. Earlier race calls are not official state certifications.",
   "resultStatus": "UNOFFICIAL_CALLS_AND_COUNTS_NOT_CERTIFIED",
   "verificationPolicy": {
@@ -345,13 +345,13 @@
       "winnerOrLeader": "JoAnna Mendoza",
       "party": "DEM",
       "votes": {
-        "DEM": 181117,
-        "REP": 152546,
-        "OTHER": 7696
+        "DEM": 181361,
+        "REP": 153083,
+        "OTHER": 7728
       },
-      "totalVotes": 341359,
-      "democraticMarginPoints": 8.37,
-      "percentReporting": 96,
+      "totalVotes": 342172,
+      "democraticMarginPoints": 8.26,
+      "percentReporting": 97,
       "sourceUrl": "https://polling-desk.com/races/2026/house/az-06"
     },
     {
@@ -362,12 +362,12 @@
       "winnerOrLeader": "Adelita Grijalva",
       "party": "DEM",
       "votes": {
-        "DEM": 134411,
-        "REP": 52214,
+        "DEM": 134500,
+        "REP": 52294,
         "OTHER": 328
       },
-      "totalVotes": 186953,
-      "democraticMarginPoints": 43.97,
+      "totalVotes": 187122,
+      "democraticMarginPoints": 43.93,
       "percentReporting": 52,
       "sourceUrl": "https://polling-desk.com/races/2026/house/az-07"
     },
@@ -7111,12 +7111,12 @@
       "winnerOrLeader": "Rick Larsen",
       "party": "DEM",
       "votes": {
-        "DEM": 215800,
-        "REP": 105466,
-        "OTHER": 1198
+        "DEM": 218513,
+        "REP": 107570,
+        "OTHER": 1212
       },
-      "totalVotes": 322464,
-      "democraticMarginPoints": 34.22,
+      "totalVotes": 327295,
+      "democraticMarginPoints": 33.9,
       "percentReporting": 99,
       "sourceUrl": "https://polling-desk.com/races/2026/house/wa-02"
     },
@@ -7145,13 +7145,13 @@
       "winnerOrLeader": "Amanda McKinney",
       "party": "REP",
       "votes": {
-        "DEM": 96482,
-        "REP": 114780,
-        "OTHER": 465
+        "DEM": 98531,
+        "REP": 118093,
+        "OTHER": 475
       },
-      "totalVotes": 211727,
-      "democraticMarginPoints": -8.64,
-      "percentReporting": 78,
+      "totalVotes": 217099,
+      "democraticMarginPoints": -9.01,
+      "percentReporting": 80,
       "sourceUrl": "https://polling-desk.com/races/2026/house/wa-04"
     },
     {
@@ -7179,12 +7179,12 @@
       "winnerOrLeader": "Emily Randall",
       "party": "DEM",
       "votes": {
-        "DEM": 198186,
-        "REP": 111443,
-        "OTHER": 547
+        "DEM": 199436,
+        "REP": 112753,
+        "OTHER": 549
       },
-      "totalVotes": 310176,
-      "democraticMarginPoints": 27.97,
+      "totalVotes": 312738,
+      "democraticMarginPoints": 27.72,
       "percentReporting": 99,
       "sourceUrl": "https://polling-desk.com/races/2026/house/wa-06"
     },
@@ -8954,40 +8954,40 @@
       "winnerOrLeader": "Katie Hobbs",
       "party": "DEM",
       "percentReporting": 78,
-      "sourceUpdatedUtc": "2026-11-07T00:47:14Z",
+      "sourceUpdatedUtc": "2026-11-07T01:15:37Z",
       "candidates": [
         {
           "name": "Katie Hobbs",
           "party": "DEM",
-          "votes": 1370789,
-          "percent": 55.51,
+          "votes": 1371170,
+          "percent": 55.5,
           "calledWinner": true
         },
         {
           "name": "Andy Biggs",
           "party": "REP",
-          "votes": 1051869,
+          "votes": 1052437,
           "percent": 42.6,
           "calledWinner": false
         },
         {
           "name": "Risa Lombardo",
           "party": "GRE",
-          "votes": 23066,
+          "votes": 23086,
           "percent": 0.93,
           "calledWinner": false
         },
         {
           "name": "Teri Hourihan",
           "party": "OTH",
-          "votes": 22012,
+          "votes": 22028,
           "percent": 0.89,
           "calledWinner": false
         },
         {
           "name": "Write-in",
           "party": "OTH",
-          "votes": 1641,
+          "votes": 1643,
           "percent": 0.07,
           "calledWinner": false
         }
