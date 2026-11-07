@@ -1,10 +1,10 @@
 {
   "schema": "KAHRELUM_NFL_DESK_LIVE_v1.0",
-  "generatedAtUtc": "2026-11-06T23:40:37Z",
+  "generatedAtUtc": "2026-11-07T00:25:36Z",
   "sourceStatus": {
     "schema": "KAHRELUM_REFRESH_STATUS_v1.1",
-    "lastAttemptAt": "2026-11-06T23:40:37Z",
-    "lastSuccessfulSourceCheckAt": "2026-11-06T23:40:37Z",
+    "lastAttemptAt": "2026-11-07T00:25:36Z",
+    "lastSuccessfulSourceCheckAt": "2026-11-07T00:25:36Z",
     "lastPublishedUpdateAt": "2026-10-31T13:13:05Z",
     "feedFreshness": "FRESH",
     "monitoringState": "DEADLINE_WINDOW_OPEN",
@@ -12,8 +12,8 @@
     "sourcesAttempted": 37,
     "sourcesSucceeded": 37,
     "sourcesFailed": 0,
-    "observationsNew": 1,
-    "reviewQueueCount": 988,
+    "observationsNew": 3,
+    "reviewQueueCount": 991,
     "materialAlerts": [
       {
         "observationId": "OBS-50323095a31bcf80e1ad",
@@ -33,9 +33,9 @@
     ],
     "errors": [],
     "truthBoundary": "Source checks and publication are separate. lastSuccessfulSourceCheckAt means at least one source succeeded; lastFullySuccessfulSourceCheckAt requires every registered operational source to succeed.",
-    "lastCompletedCheckAt": "2026-11-06T23:40:37Z",
-    "lastFullySuccessfulSourceCheckAt": "2026-11-06T23:40:37Z",
-    "duplicatesSuppressed": 7,
+    "lastCompletedCheckAt": "2026-11-07T00:25:36Z",
+    "lastFullySuccessfulSourceCheckAt": "2026-11-07T00:25:36Z",
+    "duplicatesSuppressed": 6,
     "sourceFailureAlerts": [],
     "reviewProposalCount": 29,
     "lastManuallyVerifiedOriginalReportAtUtc": "2026-10-31T13:13:05Z",
@@ -6530,6 +6530,42 @@
   },
   "activity": [
     {
+      "id": "OBS-613447bb84a1cb734efb",
+      "title": "Bills Called Out for NFL’s ‘Biggest Trade Deadline Mistake’ - Yahoo Sports",
+      "sourceName": "Google News NFL trade discovery",
+      "originalUrl": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNTlcxdmR5ZVltbkFvZVV6c040bXJEUGpsSXB0Q25tTTFGLXc1a1ctWlZ0UFUtWV96OHlQV2tObkt1aDQydTRGNXVWQnRJbGdfM2wzMGVtWmJPSFhwa2ZDejNXYi1IT1BkWGhBTVhqVVNaNDlVLW43ZGx1bDc2TTNFR2k0b05YZw?oc=5",
+      "sourcePublishedAt": "2026-11-06T23:12:12Z",
+      "sourceDate": null,
+      "firstObservedAt": "2026-11-07T00:25:36Z",
+      "reviewStatus": "REVIEW_REQUIRED",
+      "claimType": "GENERAL_NFL_DISCOVERY",
+      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
+    },
+    {
+      "id": "OBS-3b25158898b0eaa02368",
+      "title": "5 Realistic Trade Targets for Chiefs Ahead of the NFL Trade Deadline - Sports Illustrated",
+      "sourceName": "Google News NFL trade discovery",
+      "originalUrl": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNYzA2UXZDOWtnUGg1T192WUtvUVl2ZjNMTXFGS0FxclgyWWd2TkZpRllfRDdNa2h3TU45RGxUZ1RMZDBRaThZVEdRMjF4SWV0SWg1MHpvT1c4YmZaNkpkWGdiWEo2UDRvVXV6NldVWDE1ZVZVcm1DUFg1WDhkYWFiWXlPMjhia2pibHpNQ1M2TnlZdUtFNUtQMzJNWHZVR2Z6?oc=5",
+      "sourcePublishedAt": "2026-11-06T21:06:48Z",
+      "sourceDate": null,
+      "firstObservedAt": "2026-11-07T00:25:36Z",
+      "reviewStatus": "REVIEW_REQUIRED",
+      "claimType": "GENERAL_NFL_DISCOVERY",
+      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
+    },
+    {
+      "id": "OBS-30b82f734b2073035756",
+      "title": "Veteran writer criticizes Chiefs GM Brett Veach before trade deadline - Chiefs Wire",
+      "sourceName": "Google News NFL trade discovery",
+      "originalUrl": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPTFpmcDdJenE5UmZNMVlzZFJLLXgtbmhvMC1xTVJYcFZ0Nzh6NUFCeXk3aWpnRGRIUjktd0NfeWlZdlNuaUNzZkdhZmNRdklNd1IzWThucGJDWThOY1FoTTZBaFhqVkxqeDNZTFNsZGh6Y1VhREtxT2d4T3BtNkZ4MXdjSUZIRFh5cGRqRGpUMXlYTy1NNVVnUGdYM3RyWWpoNmpkOWpxUnktMnIteFdtT3ozb1kxQmsxdmh0TkgyeE53WTJkVGVuU2ZrTEp6NHNxZ2VETzdvdVdYc1V4UzU1b2g2eGdGTjJJS1Vj?oc=5",
+      "sourcePublishedAt": "2026-11-07T00:10:00Z",
+      "sourceDate": null,
+      "firstObservedAt": "2026-11-07T00:25:36Z",
+      "reviewStatus": "REVIEW_REQUIRED",
+      "claimType": "GENERAL_NFL_DISCOVERY",
+      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
+    },
+    {
       "id": "OBS-08031b81d1329e35ed1a",
       "title": "Cincinnati Bengals Get Bad News Before NFL Trade Deadline - Yahoo Sports",
       "sourceName": "Google News NFL trade discovery",
@@ -6849,42 +6885,6 @@
       "sourcePublishedAt": "2026-11-06T15:10:21Z",
       "sourceDate": null,
       "firstObservedAt": "2026-11-06T22:42:36Z",
-      "reviewStatus": "REVIEW_REQUIRED",
-      "claimType": "GENERAL_NFL_DISCOVERY",
-      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
-    },
-    {
-      "id": "OBS-f5644d7ca45c2c784b08",
-      "title": "Tanner McKee Lands In NFL Trade Rumor After Eagles Benching - Yahoo Sports",
-      "sourceName": "Google News NFL trade discovery",
-      "originalUrl": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNbktXRzBsRFNCVmlQMk5xeEpuSEFGOE9FcEx0aWxlNkNhTkxGUVN4aXRqY0V3TFF4NExJV2gxNm5pTmtDd0kzVXRCcmVZMkZ4YXROYWw5T0NGR2szTEh3ZlN2UlhQZnpiRU4wNWYxQlNOMXJxU3JTTEJzblBmOVUzdllvcw?oc=5",
-      "sourcePublishedAt": "2026-11-06T18:05:53Z",
-      "sourceDate": null,
-      "firstObservedAt": "2026-11-06T19:25:43Z",
-      "reviewStatus": "REVIEW_REQUIRED",
-      "claimType": "GENERAL_NFL_DISCOVERY",
-      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
-    },
-    {
-      "id": "OBS-e0b5653971980f2fb067",
-      "title": "Bills Connected to Intriguing Trade Target by NFL Insider - Yahoo Sports",
-      "sourceName": "Google News NFL trade discovery",
-      "originalUrl": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNQTRoTEQ5Q1ktNlFscExMamtkUklqdUZVMFRkczlRWTFsZXNFQ0lGSVJHOTRtcFJIdThMRmUzU2V2Nk5fY2tEOGxDYV9VSnA1eFJaeDBRaDBjUjVmNjlDbGUwaEhxLVc4TGtxOHpKZVUxS0FWRXJMcG1VbEUzZ1NJa250NDFFRXJOLTYzSDloTXlMZw?oc=5",
-      "sourcePublishedAt": "2026-11-06T18:41:39Z",
-      "sourceDate": null,
-      "firstObservedAt": "2026-11-06T19:25:43Z",
-      "reviewStatus": "REVIEW_REQUIRED",
-      "claimType": "GENERAL_NFL_DISCOVERY",
-      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
-    },
-    {
-      "id": "OBS-cabd2fa13cd139745635",
-      "title": "Panthers defender has reportedly come up in trade talks - Panthers Wire",
-      "sourceName": "Google News NFL trade discovery",
-      "originalUrl": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNSDVWa3dQbkJFLVJZNTBzTkFiemFyd1pBbWFBcmRVNWNVajM3TlhZTjFodWlCQmk4c05LM1VQZXVyd2FDR1JRc0dLWEFYeWJFM3UtSkEzTEFZNEN6bE5rUHdvTWdCTDRaOWE0Q29qV2hvR0FwN3lmREhBazdJWE5UQWppUUpHSzc0TjNXejRzbklFSS1icGdVaVh2Z3RoaGJabUpUOU5CZWZEYU9zVGc1aFhvT01vSXk1UEo3ZzNhcEdDbC1yQzdIaW0zQXlaaHhGeWc?oc=5",
-      "sourcePublishedAt": "2026-11-06T19:01:00Z",
-      "sourceDate": null,
-      "firstObservedAt": "2026-11-06T19:25:43Z",
       "reviewStatus": "REVIEW_REQUIRED",
       "claimType": "GENERAL_NFL_DISCOVERY",
       "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
