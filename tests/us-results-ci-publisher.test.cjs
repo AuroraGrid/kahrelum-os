@@ -46,8 +46,8 @@ test('stale-banner client receives its own narrowly scoped authenticated Firebas
  const pub=read('scripts/firebase-overlay-release.cjs');
  const wrapper=read('scripts/deploy-unified-firebase.ps1');
  const workflow=read('.github/workflows/us-election-results-publisher.yml');
- assert.match(pub, /'us-results-ui': \\{/);
- assert.match(pub, /overlayFiles: \\['election-results-2026\\.js'\\]/);
+ assert.ok(pub.includes("'us-results-ui': {"));
+ assert.ok(pub.includes("overlayFiles: ['election-results-2026.js']"));
  assert.match(wrapper, /"us-results-ui"/);
  assert.match(workflow, /--preview --profile us-results-ui/);
  assert.match(workflow, /--promote --profile us-results-ui/);
