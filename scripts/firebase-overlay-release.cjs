@@ -806,6 +806,9 @@ async function buildOverlay(live, profileName) {
 
   if (profileName === 'chip01-publication') {
     for (const item of buildChip01SocialArtifacts()) {
+      if (!item.approvedArt) {
+        fail('Approved CHIP-01 image is not present in GitHub source: ' + item.path);
+      }
       addBlob(desired, blobs, item.path, item.image);
     }
   }
