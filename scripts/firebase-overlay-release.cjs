@@ -10,6 +10,7 @@ const { Readable } = require('stream');
 const { PAGE_PATCHES, MODIFIED_ROUTES, patchLivePage, setSitemapLastmod } = require(path.join(__dirname, 'commercial-readiness.cjs'));
 const { cleanupPromotedPreview } = require(path.join(__dirname, 'firebase-preview-cleanup.cjs'));
 const { buildCaseShareArtifacts, extractCases } = require(path.join(__dirname, 'case-social-pages.cjs'));
+const { buildChip01SocialArtifacts } = require(path.join(__dirname, 'chip01-social.cjs'));
 
 const SITE = 'kahrelum-public-hosting';
 const DOMAIN = 'https://kahrelum.com';
@@ -211,6 +212,13 @@ const RELEASE_PROFILES = {
     overlayFiles: ['election-challenge.html', 'election-challenge-map.js',
       'election/candidate-portraits.json', ...CANDIDATE_PORTRAIT_FILES],
     sitemapRoutes: [],
+    includeHomepage: false,
+  },
+  'chip01-publication': {
+    // New, source-bound CHIP-01 feature and companion Insight, no unrelated site changes.
+    overlayFiles: ['investigations.html', 'investigations/chip-01.html', 'insights.html',
+      'insights/nvidia-megaspeed-chip-custody.html'],
+    sitemapRoutes: ['/investigations/chip-01', '/insights/nvidia-megaspeed-chip-custody'],
     includeHomepage: false,
   },
   'case-share-cards': {
@@ -796,6 +804,12 @@ async function buildOverlay(live, profileName) {
     addBlob(desired, blobs, '/' + name, sourceBytes);
   }
 
+  if (profileName === 'chip01-publication') {
+    for (const item of buildChip01SocialArtifacts()) {
+      addBlob(desired, blobs, item.path, item.image);
+    }
+  }
+
   let caseShare = null;
   if (profileName === 'case-share-cards') {
     caseShare = buildCaseShareArtifacts(fs.readFileSync(path.join(ROOT, 'investigations.html'), 'utf8'));
@@ -891,6 +905,14 @@ async function buildOverlay(live, profileName) {
       !RELEASE_PROFILES['election-challenge-data'].overlayFiles.includes(item.slice(1)))) {
     fail('Election challenger data release attempted to replace an unrelated live path.');
   }
+  if (profileName === 'chip01-publication') {
+    const allowed = new Set(['/sitemap.xml',
+      ...RELEASE_PROFILES['chip01-publication'].overlayFiles.map(name => '/' + name),
+      ...buildChip01SocialArtifacts().map(item => item.path)]);
+    if (changedPaths.some(item => !allowed.has(item))) {
+      fail('CHIP-01 publication attempted to change an unrelated live Firebase path.');
+    }
+  }
   if (profileName === 'case-share-cards') {
     const allowed = new Set(['/investigations.html', '/sitemap.xml', '/assets/social/og-investigations.png']);
     for (const record of caseShare.cases) { allowed.add(record.hostingPath); allowed.add(record.imagePath); }
@@ -957,6 +979,8 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     ? ['/election-results-2026']
     : profileName === 'us-results-ui'
     ? ['/election-results-2026']
+    : profileName === 'chip01-publication'
+    ? ['/investigations', '/investigations/chip-01', '/insights', '/insights/nvidia-megaspeed-chip-custody']
     : profileName === 'case-share-cards'
     ? ['/investigations', ...extractCases(fs.readFileSync(path.join(ROOT, 'investigations.html'), 'utf8')).map(x => '/investigations/' + x.slug + '.html')]
     : profileName === 'nfl-sourcegrid-data'
@@ -1011,6 +1035,26 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     }
   }
 
+  if (profileName === 'chip01-publication') {
+    for (const item of buildChip01SocialArtifacts()) {
+      const deployed = await fetchBytes(origin + item.path);
+      if (deployed.toString('ascii', 1, 4) !== 'PNG' ||
+          deployed.readUInt32BE(16) !== 1200 || deployed.readUInt32BE(20) !== 630 ||
+          sha256(deployed) !== sha256(item.image)) {
+        fail('CHIP-01 social image failed exact 1200x630 readback: ' + item.path);
+      }
+    }
+    for (const [route, image] of [
+      ['/investigations/chip-01', '/assets/social/og-investigations-chip-01.png'],
+      ['/insights/nvidia-megaspeed-chip-custody', '/assets/social/og-insights-nvidia-megaspeed-chip-custody.png'],
+    ]) {
+      const html = (await fetchBytes(origin + route)).toString('utf8');
+      if (!html.includes('content="' + DOMAIN + image + '"') ||
+          !html.includes('twitter:card" content="summary_large_image"')) {
+        fail('CHIP-01 route-specific social tags not live: ' + route);
+      }
+    }
+  }
   if (profileName === 'case-share-cards') {
     const overview = (await fetchBytes(origin + '/investigations')).toString('utf8');
     if (!overview.includes('/assets/social/og-investigations.png') ||

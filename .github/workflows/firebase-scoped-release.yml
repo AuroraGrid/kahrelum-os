@@ -6,6 +6,11 @@ on:
     paths:
       - '.github/workflows/firebase-scoped-release.yml'
       - 'investigations.html'
+      - 'investigations/chip-01.html'
+      - 'insights.html'
+      - 'insights/nvidia-megaspeed-chip-custody.html'
+      - 'scripts/chip01-social.cjs'
+      - 'scripts/firebase-overlay-release.cjs'
       - 'scripts/case-social-pages.cjs'
       - 'assets/social-manifest.json'
   workflow_dispatch:
@@ -14,6 +19,7 @@ on:
         type: choice
         description: 'Publish only this audited Firebase overlay'
         options:
+          - chip01-publication
           - case-share-cards
           - us-results-ui
           - nfl-sourcegrid-data
@@ -33,7 +39,7 @@ jobs:
     timeout-minutes: 25
     env:
       KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON }}
-      RELEASE_PROFILE: ${{ github.event_name == 'push' && 'case-share-cards' || inputs.profile }}
+      RELEASE_PROFILE: ${{ github.event_name == 'push' && 'chip01-publication' || inputs.profile }}
     steps:
       - name: Check out reviewed main only
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.0
@@ -47,7 +53,7 @@ jobs:
         run: |
           set -euo pipefail
           case "$RELEASE_PROFILE" in
-            case-share-cards|us-results-ui|nfl-sourcegrid-data|us-results-data) ;;
+            chip01-publication|case-share-cards|us-results-ui|nfl-sourcegrid-data|us-results-data) ;;
             *) echo "::error::Unapproved release profile"; exit 1;;
           esac
           if [[ -z "$KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON" ]]; then
@@ -59,7 +65,7 @@ jobs:
       - name: Run focused release regression tests
         shell: bash
         run: |
-          node --test tests/case-social-pages.test.cjs tests/firebase-scoped-release-workflow.test.cjs
+          node --test tests/chip01-publication.test.cjs tests/case-social-pages.test.cjs tests/firebase-scoped-release-workflow.test.cjs
           node --check scripts/firebase-overlay-release.cjs
 
       - name: Publish scoped preview, then promote with exact production readback
