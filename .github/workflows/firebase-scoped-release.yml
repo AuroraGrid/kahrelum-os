@@ -24,6 +24,7 @@ on:
           - chip01-publication
           - case-share-cards
           - legacy-social-metadata
+          - indexnow-key
           - us-results-ui
           - nfl-sourcegrid-data
           - us-results-data
@@ -56,7 +57,7 @@ jobs:
         run: |
           set -euo pipefail
           case "$RELEASE_PROFILE" in
-            chip01-publication|case-share-cards|legacy-social-metadata|us-results-ui|nfl-sourcegrid-data|us-results-data) ;;
+            chip01-publication|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|us-results-data) ;;
             *) echo "::error::Unapproved release profile"; exit 1;;
           esac
           if [[ -z "$KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON" ]]; then
@@ -68,7 +69,7 @@ jobs:
       - name: Run focused release regression tests
         shell: bash
         run: |
-          node --test tests/chip01-publication.test.cjs tests/case-social-pages.test.cjs tests/firebase-scoped-release-workflow.test.cjs
+          node --test tests/indexnow-discovery.test.cjs tests/chip01-publication.test.cjs tests/case-social-pages.test.cjs tests/firebase-scoped-release-workflow.test.cjs
           node --check scripts/firebase-overlay-release.cjs
 
       - name: Publish scoped preview, then promote with exact production readback
