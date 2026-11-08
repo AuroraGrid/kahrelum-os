@@ -8,11 +8,11 @@
     "results": "https://polling-desk.com/results.csv"
   },
   "sourceSha256": {
-    "houseCsv": "e732b5d268ebab6910627577719a3c0bbcf3e589ba57b18d7b51773d657e1c13",
-    "resultsCsv": "913168ca1d8490b3a2577479ab281e727e74aec1c46859a71d22f00eae2f13cb"
+    "houseCsv": "4efdd82e1467021d3f9a4477415adcf864779cebdc4de6d350a3f5fdc49eeb31",
+    "resultsCsv": "b81d2c9a24238aadd90e22afd05b9918eea42d2e74f7e702d763eb415f0663cf"
   },
-  "sourceLatestResultUpdatedUtc": "2026-11-08T02:55:17Z",
-  "retrievalUtc": "2026-11-08T04:34:55.820294Z",
+  "sourceLatestResultUpdatedUtc": "2026-11-08T04:52:07Z",
+  "retrievalUtc": "2026-11-08T06:49:56.168702Z",
   "publishedAsOf": "Snapshot captured on 2026-11-05. Each non-House race includes its per-race source timestamp. Earlier race calls are not official state certifications.",
   "resultStatus": "UNOFFICIAL_CALLS_AND_COUNTS_NOT_CERTIFIED",
   "verificationPolicy": {
@@ -787,13 +787,13 @@
       "winnerOrLeader": "Jay Obernolte",
       "party": "REP",
       "votes": {
-        "DEM": 83401,
-        "REP": 89837,
+        "DEM": 92677,
+        "REP": 98122,
         "OTHER": 0
       },
-      "totalVotes": 173238,
-      "democraticMarginPoints": -3.72,
-      "percentReporting": 75,
+      "totalVotes": 190799,
+      "democraticMarginPoints": -2.85,
+      "percentReporting": 82,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ca-23"
     },
     {
@@ -821,12 +821,12 @@
       "winnerOrLeader": "Raul Ruiz",
       "party": "DEM",
       "votes": {
-        "DEM": 95565,
-        "REP": 51461,
+        "DEM": 95864,
+        "REP": 51636,
         "OTHER": 0
       },
-      "totalVotes": 147026,
-      "democraticMarginPoints": 30.0,
+      "totalVotes": 147500,
+      "democraticMarginPoints": 29.99,
       "percentReporting": 60,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ca-25"
     },
@@ -872,13 +872,13 @@
       "winnerOrLeader": "Judy Chu",
       "party": "DEM",
       "votes": {
-        "DEM": 169710,
-        "REP": 71445,
+        "DEM": 173511,
+        "REP": 75721,
         "OTHER": 0
       },
-      "totalVotes": 241155,
-      "democraticMarginPoints": 40.75,
-      "percentReporting": 87,
+      "totalVotes": 249232,
+      "democraticMarginPoints": 39.24,
+      "percentReporting": 90,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ca-28"
     },
     {
@@ -923,13 +923,13 @@
       "winnerOrLeader": "Gil Cisneros",
       "party": "DEM",
       "votes": {
-        "DEM": 145385,
-        "REP": 74886,
+        "DEM": 149413,
+        "REP": 76982,
         "OTHER": 0
       },
-      "totalVotes": 220271,
-      "democraticMarginPoints": 32.01,
-      "percentReporting": 88,
+      "totalVotes": 226395,
+      "democraticMarginPoints": 31.99,
+      "percentReporting": 91,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ca-31"
     },
     {
@@ -957,13 +957,13 @@
       "winnerOrLeader": "Pete Aguilar",
       "party": "DEM",
       "votes": {
-        "DEM": 105145,
-        "REP": 49578,
+        "DEM": 121989,
+        "REP": 56611,
         "OTHER": 0
       },
-      "totalVotes": 154723,
-      "democraticMarginPoints": 35.91,
-      "percentReporting": 76,
+      "totalVotes": 178600,
+      "democraticMarginPoints": 36.61,
+      "percentReporting": 88,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ca-33"
     },
     {
@@ -991,13 +991,13 @@
       "winnerOrLeader": "Norma Torres",
       "party": "DEM",
       "votes": {
-        "DEM": 98823,
-        "REP": 50380,
+        "DEM": 114742,
+        "REP": 56947,
         "OTHER": 0
       },
-      "totalVotes": 149203,
-      "democraticMarginPoints": 32.47,
-      "percentReporting": 76,
+      "totalVotes": 171689,
+      "democraticMarginPoints": 33.66,
+      "percentReporting": 88,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ca-35"
     },
     {
@@ -1467,13 +1467,13 @@
       "winnerOrLeader": "Rosa DeLauro",
       "party": "DEM",
       "votes": {
-        "DEM": 151204,
-        "REP": 87756,
-        "OTHER": 7903
+        "DEM": 150884,
+        "REP": 87598,
+        "OTHER": 7915
       },
-      "totalVotes": 246863,
-      "democraticMarginPoints": 25.7,
-      "percentReporting": 94,
+      "totalVotes": 246397,
+      "democraticMarginPoints": 25.68,
+      "percentReporting": 93,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ct-03"
     },
     {
@@ -9002,21 +9002,21 @@
       "status": "CALLED",
       "winnerOrLeader": "Xavier Becerra",
       "party": "DEM",
-      "percentReporting": 76,
-      "sourceUpdatedUtc": "2026-11-08T02:55:17Z",
+      "percentReporting": 77,
+      "sourceUpdatedUtc": "2026-11-08T04:52:07Z",
       "candidates": [
         {
           "name": "Xavier Becerra",
           "party": "DEM",
-          "votes": 6723534,
-          "percent": 65.48,
+          "votes": 6773781,
+          "percent": 65.45,
           "calledWinner": true
         },
         {
           "name": "Steve Hilton",
           "party": "REP",
-          "votes": 3544713,
-          "percent": 34.52,
+          "votes": 3575025,
+          "percent": 34.55,
           "calledWinner": false
         }
       ],
@@ -9080,26 +9080,26 @@
       "winnerOrLeader": "Ned Lamont",
       "party": "DEM",
       "percentReporting": 90,
-      "sourceUpdatedUtc": "2026-11-06T23:51:29Z",
+      "sourceUpdatedUtc": "2026-11-08T04:39:21Z",
       "candidates": [
         {
           "name": "Ned Lamont",
           "party": "DEM",
-          "votes": 771936,
-          "percent": 59.57,
+          "votes": 771350,
+          "percent": 59.56,
           "calledWinner": true
         },
         {
           "name": "Ryan Fazio",
           "party": "REP",
-          "votes": 523917,
-          "percent": 40.43,
+          "votes": 523717,
+          "percent": 40.44,
           "calledWinner": false
         },
         {
           "name": "Zenobia Adgers",
           "party": "OTH",
-          "votes": 23,
+          "votes": 24,
           "percent": 0.0,
           "calledWinner": false
         },
