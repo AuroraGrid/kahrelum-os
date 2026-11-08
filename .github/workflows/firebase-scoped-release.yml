@@ -1,0 +1,81 @@
+name: KAHRELUM Scoped Firebase Publication
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/firebase-scoped-release.yml'
+      - 'investigations.html'
+      - 'scripts/case-social-pages.cjs'
+      - 'assets/social-manifest.json'
+  workflow_dispatch:
+    inputs:
+      profile:
+        type: choice
+        description: 'Publish only this audited Firebase overlay'
+        options:
+          - case-share-cards
+          - us-results-ui
+          - nfl-sourcegrid-data
+          - us-results-data
+        default: case-share-cards
+
+permissions:
+  contents: read
+
+concurrency:
+  group: kahrelum-scoped-firebase-publisher
+  cancel-in-progress: false
+
+jobs:
+  verified-site-publication:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON }}
+      RELEASE_PROFILE: ${{ github.event_name == 'push' && 'case-share-cards' || inputs.profile }}
+    steps:
+      - name: Check out reviewed main only
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.0
+        with:
+          ref: main
+          persist-credentials: false
+          fetch-depth: 1
+
+      - name: Guard release scope and required credential
+        shell: bash
+        run: |
+          set -euo pipefail
+          case "$RELEASE_PROFILE" in
+            case-share-cards|us-results-ui|nfl-sourcegrid-data|us-results-data) ;;
+            *) echo "::error::Unapproved release profile"; exit 1;;
+          esac
+          if [[ -z "$KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON" ]]; then
+            echo "::error::Firebase publisher secret missing: cannot publish live site."
+            echo "Production untouched. Configure KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON in repository Actions secrets." >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
+
+      - name: Run focused release regression tests
+        shell: bash
+        run: |
+          node --test tests/case-social-pages.test.cjs tests/firebase-scoped-release-workflow.test.cjs
+          node --check scripts/firebase-overlay-release.cjs
+
+      - name: Publish scoped preview, then promote with exact production readback
+        shell: bash
+        run: |
+          set -euo pipefail
+          secret_path="$RUNNER_TEMP/kahrelum-scoped-publisher-service-account.json"
+          printf '%s' "$KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON" > "$secret_path"
+          chmod 600 "$secret_path"
+          trap 'rm -f "$secret_path"' EXIT
+          export GOOGLE_APPLICATION_CREDENTIALS="$secret_path"
+          export XDG_CONFIG_HOME="$RUNNER_TEMP/kahrelum-publisher-isolated-config"
+          mkdir -p "$XDG_CONFIG_HOME"
+          npm install --global firebase-tools@15.34.2
+          export FIREBASE_TOOLS_ROOT="$(npm root -g)/firebase-tools"
+          node scripts/firebase-overlay-release.cjs --plan --profile "$RELEASE_PROFILE"
+          node scripts/firebase-overlay-release.cjs --preview --profile "$RELEASE_PROFILE"
+          node scripts/firebase-overlay-release.cjs --promote --profile "$RELEASE_PROFILE"
+          echo "Scoped Firebase production readback verified for $RELEASE_PROFILE." >> "$GITHUB_STEP_SUMMARY"
