@@ -1,16 +1,16 @@
 {
   "schema": "KAHRELUM_REFRESH_STATUS_v1.1",
-  "lastAttemptAt": "2026-11-08T09:26:05Z",
-  "lastSuccessfulSourceCheckAt": "2026-11-08T09:26:05Z",
+  "lastAttemptAt": "2026-11-08T13:57:29Z",
+  "lastSuccessfulSourceCheckAt": "2026-11-08T13:57:29Z",
   "lastPublishedUpdateAt": "2026-10-31T13:13:05Z",
-  "feedFreshness": "DEGRADED",
+  "feedFreshness": "FRESH",
   "monitoringState": "DEADLINE_WINDOW_OPEN",
   "deadlineUtc": "2026-11-10T21:00:00Z",
   "sourcesAttempted": 37,
-  "sourcesSucceeded": 36,
-  "sourcesFailed": 1,
-  "observationsNew": 0,
-  "reviewQueueCount": 1140,
+  "sourcesSucceeded": 37,
+  "sourcesFailed": 0,
+  "observationsNew": 33,
+  "reviewQueueCount": 1173,
   "materialAlerts": [
     {
       "observationId": "OBS-50323095a31bcf80e1ad",
@@ -28,18 +28,11 @@
       "originalScreenTipId": "OBS-7422769d896c947ccaaa"
     }
   ],
-  "errors": [
-    {
-      "sourceIntegrationId": "GOOGLE_NEWS_RSS",
-      "httpStatus": 503,
-      "attempts": 3,
-      "error": "FetchFailure: HTTPError: HTTP 503"
-    }
-  ],
+  "errors": [],
   "truthBoundary": "Source checks and publication are separate. lastSuccessfulSourceCheckAt means at least one source succeeded; lastFullySuccessfulSourceCheckAt requires every registered operational source to succeed.",
-  "lastCompletedCheckAt": "2026-11-08T09:26:05Z",
-  "lastFullySuccessfulSourceCheckAt": "2026-11-08T02:29:36Z",
-  "duplicatesSuppressed": 1,
+  "lastCompletedCheckAt": "2026-11-08T13:57:29Z",
+  "lastFullySuccessfulSourceCheckAt": "2026-11-08T13:57:29Z",
+  "duplicatesSuppressed": 5,
   "sourceFailureAlerts": [],
   "reviewProposalCount": 29,
   "lastManuallyVerifiedOriginalReportAtUtc": "2026-10-31T13:13:05Z",
