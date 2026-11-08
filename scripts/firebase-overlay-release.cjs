@@ -222,8 +222,17 @@ const RELEASE_PROFILES = {
     includeHomepage: false,
   },
   'case-share-cards': {
-    // Standalone case share pages and 1200x630 social assets; source records remain unchanged.
-    overlayFiles: ['assets/social/og-investigations.png', 'assets/social-manifest.json'],
+    // Publish only source-bound case pages and unique 1200x630 cards. Preserve the current
+    // production overview image and social manifest rather than reintroducing stale bytes.
+    overlayFiles: [],
+    sitemapRoutes: [],
+    includeHomepage: false,
+  },
+  'legacy-social-metadata': {
+    // Repair only /pilot and /demo, whose already-hosted distinct images lacked social tags.
+    // Other commercial and research routes retain their exact live files and hashes.
+    overlayFiles: [],
+    legacySocialRoutes: ['/pilot', '/demo'],
     sitemapRoutes: [],
     includeHomepage: false,
   },
@@ -860,6 +869,14 @@ async function buildOverlay(live, profileName) {
     addBlob(desired, blobs, '/index.html', replaceHomepageSocialMetadata(boundedHome, repositoryHome));
   }
 
+  if (profile.legacySocialRoutes) {
+    for (const route of profile.legacySocialRoutes) {
+      const spec = LEGACY_SOCIAL_SPECS[route];
+      if (!spec) fail('Legacy social route is not in the approved mapping: ' + route);
+      const html = (await verifiedLiveFile(live, spec.hostingPath, route)).toString('utf8');
+      addBlob(desired, blobs, spec.hostingPath, replaceLegacySocialMetadata(html, route, spec));
+    }
+  }
   if (profile.patchLegacySocial) {
     for (const [route, spec] of Object.entries(LEGACY_SOCIAL_SPECS)) {
       const html = (await verifiedLiveFile(live, spec.hostingPath, route)).toString('utf8');
@@ -915,6 +932,9 @@ async function buildOverlay(live, profileName) {
     if (changedPaths.some(item => !allowed.has(item))) {
       fail('CHIP-01 publication attempted to change an unrelated live Firebase path.');
     }
+  }
+  if (profileName === 'legacy-social-metadata' && changedPaths.some(item => !['/pilot.html', '/demo.html'].includes(item))) {
+    fail('Legacy social metadata attempted to change an unrelated Firebase path.');
   }
   if (profileName === 'case-share-cards') {
     const allowed = new Set(['/investigations.html', '/sitemap.xml', '/assets/social/og-investigations.png']);
@@ -984,6 +1004,8 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     ? ['/election-results-2026']
     : profileName === 'chip01-publication'
     ? ['/investigations', '/investigations/chip-01', '/insights', '/insights/nvidia-megaspeed-chip-custody']
+    : profileName === 'legacy-social-metadata'
+    ? ['/pilot', '/demo']
     : profileName === 'case-share-cards'
     ? ['/investigations', ...extractCases(fs.readFileSync(path.join(ROOT, 'investigations.html'), 'utf8')).map(x => '/investigations/' + x.slug + '.html')]
     : profileName === 'nfl-sourcegrid-data'
@@ -1055,6 +1077,25 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
       if (!html.includes('content="' + DOMAIN + image + '"') ||
           !html.includes('twitter:card" content="summary_large_image"')) {
         fail('CHIP-01 route-specific social tags not live: ' + route);
+      }
+    }
+  }
+  if (profileName === 'legacy-social-metadata') {
+    for (const route of ['/pilot', '/demo']) {
+      const spec = LEGACY_SOCIAL_SPECS[route];
+      const html = (await fetchBytes(origin + route)).toString('utf8');
+      const image = DOMAIN + spec.image;
+      if (!html.includes('property="og:image" content="' + image + '"') ||
+          !html.includes('name="twitter:image" content="' + image + '"') ||
+          !html.includes('name="twitter:card" content="summary_large_image"') ||
+          !html.includes('property="og:image:width" content="1200"') ||
+          !html.includes('property="og:image:height" content="630"')) {
+        fail('Legacy social metadata image mismatch: ' + route);
+      }
+      const bytes = await fetchBytes(origin + spec.image);
+      if (bytes.toString('ascii', 1, 4) !== 'PNG' ||
+          bytes.readUInt32BE(16) !== 1200 || bytes.readUInt32BE(20) !== 630) {
+        fail('Legacy social metadata image mismatch: ' + route);
       }
     }
   }
