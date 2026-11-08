@@ -1,18 +1,18 @@
 {
   "schema": "KAHRELUM_NFL_DESK_LIVE_v1.0",
-  "generatedAtUtc": "2026-11-08T02:29:36Z",
+  "generatedAtUtc": "2026-11-08T09:26:05Z",
   "sourceStatus": {
     "schema": "KAHRELUM_REFRESH_STATUS_v1.1",
-    "lastAttemptAt": "2026-11-08T02:29:36Z",
-    "lastSuccessfulSourceCheckAt": "2026-11-08T02:29:36Z",
+    "lastAttemptAt": "2026-11-08T09:26:05Z",
+    "lastSuccessfulSourceCheckAt": "2026-11-08T09:26:05Z",
     "lastPublishedUpdateAt": "2026-10-31T13:13:05Z",
-    "feedFreshness": "FRESH",
+    "feedFreshness": "DEGRADED",
     "monitoringState": "DEADLINE_WINDOW_OPEN",
     "deadlineUtc": "2026-11-10T21:00:00Z",
     "sourcesAttempted": 37,
-    "sourcesSucceeded": 37,
-    "sourcesFailed": 0,
-    "observationsNew": 10,
+    "sourcesSucceeded": 36,
+    "sourcesFailed": 1,
+    "observationsNew": 0,
     "reviewQueueCount": 1140,
     "materialAlerts": [
       {
@@ -31,11 +31,18 @@
         "originalScreenTipId": "OBS-7422769d896c947ccaaa"
       }
     ],
-    "errors": [],
+    "errors": [
+      {
+        "sourceIntegrationId": "GOOGLE_NEWS_RSS",
+        "httpStatus": 503,
+        "attempts": 3,
+        "error": "FetchFailure: HTTPError: HTTP 503"
+      }
+    ],
     "truthBoundary": "Source checks and publication are separate. lastSuccessfulSourceCheckAt means at least one source succeeded; lastFullySuccessfulSourceCheckAt requires every registered operational source to succeed.",
-    "lastCompletedCheckAt": "2026-11-08T02:29:36Z",
+    "lastCompletedCheckAt": "2026-11-08T09:26:05Z",
     "lastFullySuccessfulSourceCheckAt": "2026-11-08T02:29:36Z",
-    "duplicatesSuppressed": 6,
+    "duplicatesSuppressed": 1,
     "sourceFailureAlerts": [],
     "reviewProposalCount": 29,
     "lastManuallyVerifiedOriginalReportAtUtc": "2026-10-31T13:13:05Z",
