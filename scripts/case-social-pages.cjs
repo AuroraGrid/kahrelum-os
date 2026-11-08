@@ -204,11 +204,12 @@ function buildCaseShareArtifacts(sourceHtml) {
   overview=metaSwap(overview,'twitter:image',image,true);
   overview=metaSwap(overview,'twitter:image:alt','KAHRELUM Investigations and OSINT overview',true);
   const cases=entries.map(item=>{
-    const url='/investigations/'+item.slug+'.html';
+    const url='/investigations/'+item.slug;
+    const hostingPath=url+'.html';
     const imagePath=item.slug==='air-01'?'/assets/social/og-air01-v1.png':
       '/assets/social/og-'+item.slug+'-v1.png';
     const includeInSitemap=!['NEEDS REDACTION','NOT SUITABLE'].includes(item.status);
-    const full={...item,url,imagePath,includeInSitemap};
+    const full={...item,url,hostingPath,imagePath,includeInSitemap};
     const imageBytes=item.slug==='air-01'
       ?fs.readFileSync(path.join(__dirname,'../assets/social/og-air01-v1.png'))
       :makeCaseImage(full);
