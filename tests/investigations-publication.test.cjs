@@ -185,20 +185,24 @@ test('AIR-01 retains explicit uncertainty, sources and all original card bytes',
  assert.equal(register.forecast,null);
 });
 
-test('AIR-01 social metadata uses the published versioned card with exact dimensions', () => {
+test('investigations overview is generic while AIR-01 has its own published 1200x630 card', () => {
  const html=read('investigations.html');
- const url='https://kahrelum.com/assets/social/og-air01-v1.png';
+ const url='https://kahrelum.com/assets/social/og-investigations.png';
  for(const prop of ['og:image','og:image:secure_url']) assert.ok(html.includes('property="'+prop+'" content="'+url+'"'));
  assert.ok(html.includes('name="twitter:image" content="'+url+'"'));
- assert.ok(html.includes('property="og:title" content="AIR-01: Learjet 60 N722BD Crash | KAHRELUM"'));
- assert.ok(html.includes('CAUSE UNDETERMINED'));
+ assert.ok(html.includes('property="og:title" content="Investigations &amp; OSINT | KAHRELUM"'));
+ const {buildCaseShareArtifacts}=require('../scripts/case-social-pages.cjs');
+ const air=buildCaseShareArtifacts(html).cases.find(x=>x.id==='AIR-01');
+ assert.ok(air);
+ for(const prop of ['og:image','og:image:secure_url']) assert.ok(air.html.includes('property="'+prop+'" content="https://kahrelum.com/assets/social/og-air01-v1.png"'));
+ assert.ok(air.html.includes('CAUSE UNDETERMINED') || air.html.includes('cause undetermined') || air.html.includes('Cause undetermined'));
  const data=fs.readFileSync(path.join(root,'assets/social/og-air01-v1.png'));
  assert.equal(data.readUInt32BE(16),1200);assert.equal(data.readUInt32BE(20),630);
  const manifest=JSON.parse(read('assets/social-manifest.json')).cards.find(c=>c.route==='/investigations');
- assert.equal(manifest.image,'assets/social/og-air01-v1.png');
- assert.equal(manifest.sha256,require('node:crypto').createHash('sha256').update(data).digest('hex'));
+ assert.equal(manifest.image,'assets/social/og-investigations.png');
+ assert.equal(manifest.sha256,require('node:crypto').createHash('sha256')
+   .update(fs.readFileSync(path.join(root,manifest.image))).digest('hex'));
 });
-
 
 test('AIR-01 two-camera evidence and high-altitude leads remain explicitly bounded', () => {
  const html=read('investigations.html');

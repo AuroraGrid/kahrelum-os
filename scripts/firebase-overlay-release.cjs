@@ -9,6 +9,7 @@ const zlib = require('zlib');
 const { Readable } = require('stream');
 const { PAGE_PATCHES, MODIFIED_ROUTES, patchLivePage, setSitemapLastmod } = require(path.join(__dirname, 'commercial-readiness.cjs'));
 const { cleanupPromotedPreview } = require(path.join(__dirname, 'firebase-preview-cleanup.cjs'));
+const { buildCaseShareArtifacts, extractCases } = require(path.join(__dirname, 'case-social-pages.cjs'));
 
 const SITE = 'kahrelum-public-hosting';
 const DOMAIN = 'https://kahrelum.com';
@@ -203,6 +204,12 @@ const RELEASE_PROFILES = {
   'candidate-portraits': {
     overlayFiles: ['election-challenge.html', 'election-challenge-map.js',
       'election/candidate-portraits.json', ...CANDIDATE_PORTRAIT_FILES],
+    sitemapRoutes: [],
+    includeHomepage: false,
+  },
+  'case-share-cards': {
+    // Standalone case share pages and 1200x630 social assets; source records remain unchanged.
+    overlayFiles: ['assets/social/og-investigations.png', 'assets/social-manifest.json'],
     sitemapRoutes: [],
     includeHomepage: false,
   },
@@ -783,6 +790,16 @@ async function buildOverlay(live, profileName) {
     addBlob(desired, blobs, '/' + name, sourceBytes);
   }
 
+  let caseShare = null;
+  if (profileName === 'case-share-cards') {
+    caseShare = buildCaseShareArtifacts(fs.readFileSync(path.join(ROOT, 'investigations.html'), 'utf8'));
+    addBlob(desired, blobs, '/investigations.html', Buffer.from(caseShare.overview, 'utf8'));
+    for (const record of caseShare.cases) {
+      addBlob(desired, blobs, record.hostingPath, Buffer.from(record.html, 'utf8'));
+      addBlob(desired, blobs, record.imagePath, record.image);
+    }
+  }
+
   for (const [hostingPath, route] of profile.liveTransformRoutes || []) {
     const liveHtml = (await verifiedLiveFile(live, hostingPath, route)).toString('utf8');
     const shelled = injectSharedShell(liveHtml, route).toString('utf8');
@@ -827,9 +844,10 @@ async function buildOverlay(live, profileName) {
     }
   }
 
-  if (profile.sitemapRoutes.length) {
+  const caseSitemapRoutes = caseShare ? caseShare.cases.filter(x => x.includeInSitemap).map(x => x.url) : [];
+  if (profile.sitemapRoutes.length || caseSitemapRoutes.length) {
     const sitemap = (await verifiedLiveFile(live, '/sitemap.xml', '/sitemap.xml')).toString('utf8');
-    addBlob(desired, blobs, '/sitemap.xml', updateSitemap(sitemap, profile.sitemapRoutes));
+    addBlob(desired, blobs, '/sitemap.xml', updateSitemap(sitemap, [...profile.sitemapRoutes, ...caseSitemapRoutes]));
   }
 
   if (profile.sitemapLastmod) {
@@ -863,6 +881,13 @@ async function buildOverlay(live, profileName) {
   if (profileName === 'election-challenge-data' && changedPaths.some((item) =>
       !RELEASE_PROFILES['election-challenge-data'].overlayFiles.includes(item.slice(1)))) {
     fail('Election challenger data release attempted to replace an unrelated live path.');
+  }
+  if (profileName === 'case-share-cards') {
+    const allowed = new Set(['/investigations.html', '/sitemap.xml', '/assets/social/og-investigations.png']);
+    for (const record of caseShare.cases) { allowed.add(record.hostingPath); allowed.add(record.imagePath); }
+    if (changedPaths.some(item => !allowed.has(item))) {
+      fail('Case share release attempted to replace an unrelated live Firebase path.');
+    }
   }
   if (profileName === 'investigations' &&
       changedPaths.some((item) => !['/investigations.html', '/assets/social/og-air01-v1.png'].includes(item))) {
@@ -921,6 +946,8 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     ? ['/', '/forecasting', '/israel-certified-2026']
     : profileName === 'us-results-data'
     ? ['/election-results-2026']
+    : profileName === 'case-share-cards'
+    ? ['/investigations', ...extractCases(fs.readFileSync(path.join(ROOT, 'investigations.html'), 'utf8')).map(x => '/investigations/' + x.slug + '.html')]
     : profileName === 'nfl-sourcegrid-data'
     ? ['/nfl/trades', '/nfl/deadline-watch-2026']
     : profileName === 'candidate-portraits' ? ['/election-challenge'] : profileName === 'sports-intelligence'
@@ -969,6 +996,32 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
       const html = (await fetchBytes(origin + route)).toString('utf8');
       for (const { before, after } of PAGE_PATCHES[file]) {
         if (html.includes(before) || !html.includes(after)) fail('Research-page conversion patch was not published: ' + route);
+      }
+    }
+  }
+
+  if (profileName === 'case-share-cards') {
+    const overview = (await fetchBytes(origin + '/investigations')).toString('utf8');
+    if (!overview.includes('/assets/social/og-investigations.png') ||
+        overview.slice(0, overview.indexOf('</head>')).includes('/assets/social/og-air01-v1.png')) {
+      fail('Investigations overview retains the AIR-01 preview.');
+    }
+    const items = buildCaseShareArtifacts(fs.readFileSync(path.join(ROOT, 'investigations.html'), 'utf8')).cases;
+    for (const row of items) {
+      if (!overview.includes('href="' + row.url + '"')) fail('Missing original card share link: ' + row.id);
+      const document = (await fetchBytes(origin + row.url)).toString('utf8');
+      if (!document.includes('content="' + DOMAIN + row.imagePath + '"') ||
+          !document.includes(row.id) || !document.includes('Original finding')) {
+        fail('Case-specific metadata or source custody failed: ' + row.id);
+      }
+      if (!row.includeInSitemap && !document.includes('name="robots" content="noindex,nofollow"')) {
+        fail('Sensitive case was newly indexable: ' + row.id);
+      }
+      const deployed = await fetchBytes(origin + row.imagePath);
+      if (deployed.toString('ascii', 1, 4) !== 'PNG' ||
+          deployed.readUInt32BE(16) !== 1200 || deployed.readUInt32BE(20) !== 630 ||
+          sha256(deployed) !== sha256(row.image)) {
+        fail('Case-specific Open Graph PNG failed readback: ' + row.id);
       }
     }
   }
