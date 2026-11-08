@@ -89,7 +89,7 @@ function makeCaseImage(item) {
   const stride = W*3+1;
   const bitmap = Buffer.alloc(stride*H);
   const colors = {CORP:[64,167,170],CYBER:[154,128,209],COURT:[215,154,91],
-    MKT:[225,174,78],AI:[211,126,153],GEO:[196,118,112],AIR:[105,168,189]};
+    MKT:[225,174,78],AI:[211,126,153],GEO:[196,118,112],AIR:[105,168,189],CHIP:[73,201,220],INSIGHT:[235,169,87]};
   const accent = colors[item.id.split('-')[0]] || [175,166,136];
   const number = Number(item.id.split('-')[1]) || 1;
   const back=[14,26,39], pale=[245,236,217], muted=[183,193,195];
