@@ -41,3 +41,15 @@ test('election source update rejects winner reversals and stale source timestamp
   assert.match(src,/urllib\.request/);
   assert.match(src,/subprocess/);
 });
+
+test('stale-banner client receives its own narrowly scoped authenticated Firebase release',()=>{
+ const pub=read('scripts/firebase-overlay-release.cjs');
+ const wrapper=read('scripts/deploy-unified-firebase.ps1');
+ const workflow=read('.github/workflows/us-election-results-publisher.yml');
+ assert.match(pub, /'us-results-ui': \\{/);
+ assert.match(pub, /overlayFiles: \\['election-results-2026\\.js'\\]/);
+ assert.match(wrapper, /"us-results-ui"/);
+ assert.match(workflow, /--preview --profile us-results-ui/);
+ assert.match(workflow, /--promote --profile us-results-ui/);
+ assert.match(workflow, /ui_needs_publish/);
+});
