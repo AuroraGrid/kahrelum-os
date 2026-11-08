@@ -209,7 +209,7 @@ const RELEASE_PROFILES = {
   },
   'case-share-cards': {
     // Standalone case share pages and 1200x630 social assets; source records remain unchanged.
-    overlayFiles: ['assets/social/og-investigations.png'],
+    overlayFiles: ['assets/social/og-investigations.png', 'assets/social-manifest.json'],
     sitemapRoutes: [],
     includeHomepage: false,
   },
