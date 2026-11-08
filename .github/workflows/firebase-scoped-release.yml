@@ -23,6 +23,7 @@ on:
         options:
           - chip01-publication
           - case-share-cards
+          - legacy-social-metadata
           - us-results-ui
           - nfl-sourcegrid-data
           - us-results-data
@@ -55,7 +56,7 @@ jobs:
         run: |
           set -euo pipefail
           case "$RELEASE_PROFILE" in
-            chip01-publication|case-share-cards|us-results-ui|nfl-sourcegrid-data|us-results-data) ;;
+            chip01-publication|case-share-cards|legacy-social-metadata|us-results-ui|nfl-sourcegrid-data|us-results-data) ;;
             *) echo "::error::Unapproved release profile"; exit 1;;
           esac
           if [[ -z "$KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON" ]]; then
