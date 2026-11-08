@@ -2,6 +2,11 @@ name: Sports Intelligence SourceGrid
 
 on:
   workflow_dispatch:
+    inputs:
+      publish_snapshot:
+        description: 'Publish the validated repository snapshot even without a new SourceGrid commit'
+        type: boolean
+        default: false
   schedule:
     # Five-minute requests, offset from the top of the hour. GitHub is best-effort.
     # Limit monitoring to the remaining 2026 deadline dates; the year gate is below.
@@ -20,9 +25,10 @@ concurrency:
 jobs:
   source-check:
     runs-on: ubuntu-24.04
-    timeout-minutes: 10
+    timeout-minutes: 25
     env:
       SOURCEGRID_REF: ${{ github.ref_name }}
+      KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON }}
     steps:
       - name: Gate the 2026 monitoring and audit lifecycle
         id: lifecycle
@@ -81,6 +87,7 @@ jobs:
           PY
 
       - name: Record source-check state on main
+        id: source_commit
         if: always() && steps.lifecycle.outputs.enabled == 'true' && steps.tests.outcome == 'success' && steps.validation.outcome == 'success'
         shell: bash
         run: |
@@ -90,7 +97,44 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m "sourcegrid: record scheduled NFL source check"
             git push origin "HEAD:${SOURCEGRID_REF}"
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
+
+      # SourceGrid commits are pushed by GITHUB_TOKEN; GitHub intentionally
+      # suppresses new push-triggered workflows from those commits. Publish
+      # in this same validated workflow, not an independent on:push workflow.
+      - name: Explain missing Firebase publisher credentials
+        if: ${{ github.ref == 'refs/heads/main' && (steps.source_commit.outputs.changed == 'true' || inputs.publish_snapshot == true) && env.KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON == '' }}
+        shell: bash
+        run: |
+          echo "::warning::Automatic Firebase publish SKIPPED: required Hosting service-account secret is not configured."
+          echo "Automatic Firebase publish SKIPPED: configure the repository secret KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON for scoped Hosting publication." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Publish public status on approval only
+        id: firebase_publish
+        # This profile publishes validated status/source ledgers only; it cannot
+        # publish unapproved stories, mutate historical probabilities, or erase
+        # unrelated Firebase files. Preview, promote and readback fail closed.
+        if: ${{ github.ref == 'refs/heads/main' && steps.tests.outcome == 'success' && steps.validation.outcome == 'success' && steps.source_commit.outcome == 'success' && (steps.source_commit.outputs.changed == 'true' || inputs.publish_snapshot == true) && env.KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON != '' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          secret_path="$RUNNER_TEMP/kahrelum-firebase-service-account.json"
+          printf '%s' "$KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON" > "$secret_path"
+          chmod 600 "$secret_path"
+          trap 'rm -f "$secret_path"' EXIT
+          export GOOGLE_APPLICATION_CREDENTIALS="$secret_path"
+          export XDG_CONFIG_HOME="$RUNNER_TEMP/kahrelum-isolated-firebase"
+          mkdir -p "$XDG_CONFIG_HOME"
+          npm install --global firebase-tools@15.34.2
+          export FIREBASE_TOOLS_ROOT="$(npm root -g)/firebase-tools"
+          node --check scripts/firebase-overlay-release.cjs
+          node scripts/firebase-overlay-release.cjs --plan --profile nfl-sourcegrid-data
+          node scripts/firebase-overlay-release.cjs --preview --profile nfl-sourcegrid-data
+          node scripts/firebase-overlay-release.cjs --promote --profile nfl-sourcegrid-data
+          echo "Authenticated Firebase preview, live promotion and exact production readback completed." >> "$GITHUB_STEP_SUMMARY"
 
       - name: Fail workflow if every integration failed
         if: steps.lifecycle.outputs.enabled == 'true' && steps.sourcegrid.outcome != 'success'
