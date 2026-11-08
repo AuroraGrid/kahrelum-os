@@ -8,11 +8,11 @@
     "results": "https://polling-desk.com/results.csv"
   },
   "sourceSha256": {
-    "houseCsv": "4efdd82e1467021d3f9a4477415adcf864779cebdc4de6d350a3f5fdc49eeb31",
-    "resultsCsv": "b81d2c9a24238aadd90e22afd05b9918eea42d2e74f7e702d763eb415f0663cf"
+    "houseCsv": "f9f2a5e73eca233453d188da51d694fa3c6a84ffb623166693703f933f9f069e",
+    "resultsCsv": "b2a0c8eff9f87dd2bb4a7506c4ba27ec252a86b53b85fd70d8c2967765e74832"
   },
-  "sourceLatestResultUpdatedUtc": "2026-11-08T04:52:07Z",
-  "retrievalUtc": "2026-11-08T16:23:29.137114Z",
+  "sourceLatestResultUpdatedUtc": "2026-11-08T18:30:08Z",
+  "retrievalUtc": "2026-11-08T20:45:03.327691Z",
   "publishedAsOf": "Snapshot captured on 2026-11-08 (UTC). Each non-House race includes its per-race source timestamp. Earlier race calls are not official state certifications.",
   "resultStatus": "UNOFFICIAL_CALLS_AND_COUNTS_NOT_CERTIFIED",
   "verificationPolicy": {
@@ -7009,13 +7009,13 @@
       "winnerOrLeader": "Don Beyer",
       "party": "DEM",
       "votes": {
-        "DEM": 251863,
-        "REP": 56758,
-        "OTHER": 8550
+        "DEM": 253780,
+        "REP": 56963,
+        "OTHER": 8656
       },
-      "totalVotes": 317171,
-      "democraticMarginPoints": 61.51,
-      "percentReporting": 97,
+      "totalVotes": 319399,
+      "democraticMarginPoints": 61.62,
+      "percentReporting": 98,
       "sourceUrl": "https://polling-desk.com/races/2026/house/va-08"
     },
     {
@@ -7043,12 +7043,12 @@
       "winnerOrLeader": "Suhas Subramanyam",
       "party": "DEM",
       "votes": {
-        "DEM": 204213,
-        "REP": 121110,
+        "DEM": 204236,
+        "REP": 121113,
         "OTHER": 6642
       },
-      "totalVotes": 331965,
-      "democraticMarginPoints": 25.03,
+      "totalVotes": 331991,
+      "democraticMarginPoints": 25.04,
       "percentReporting": 99,
       "sourceUrl": "https://polling-desk.com/races/2026/house/va-10"
     },
@@ -8749,26 +8749,26 @@
       "winnerOrLeader": "Mark Warner",
       "party": "DEM",
       "percentReporting": 97,
-      "sourceUpdatedUtc": "2026-11-07T17:00:19Z",
+      "sourceUpdatedUtc": "2026-11-08T18:30:08Z",
       "candidates": [
         {
           "name": "Mark Warner",
           "party": "DEM",
-          "votes": 2200151,
-          "percent": 61.28,
+          "votes": 2202163,
+          "percent": 61.3,
           "calledWinner": true
         },
         {
           "name": "Bert Mizusawa",
           "party": "REP",
-          "votes": 1380564,
-          "percent": 38.45,
+          "votes": 1380792,
+          "percent": 38.44,
           "calledWinner": false
         },
         {
           "name": "Write-in",
           "party": "OTH",
-          "votes": 9531,
+          "votes": 9538,
           "percent": 0.27,
           "calledWinner": false
         }
@@ -10228,12 +10228,12 @@
       "winnerOrLeader": "David Crowley",
       "party": "DEM",
       "percentReporting": 89,
-      "sourceUpdatedUtc": "2026-11-07T20:01:06Z",
+      "sourceUpdatedUtc": "2026-11-08T18:30:08Z",
       "candidates": [
         {
           "name": "David Crowley",
           "party": "DEM",
-          "votes": 1440990,
+          "votes": 1440993,
           "percent": 53.99,
           "calledWinner": true
         },
