@@ -66,6 +66,7 @@ def main():
       "senate":{"called":sum(x["status"]=="CALLED" for x in sen),"counting":sum(x["status"]=="COUNTING" for x in sen),"calledByParty":calls(sen)},
       "governor":{"called":sum(x["status"]=="CALLED" for x in gov),"counting":sum(x["status"]=="COUNTING" for x in gov),"calledByParty":calls(gov)}}
     if summary["house"]["called"]+summary["house"]["counting"]!=435:raise ValueError("House totals bad")
+    retrieved_at=datetime.datetime.now(datetime.timezone.utc)
     snapshot={
       "schema":"KAHRELUM_US_ELECTION_2026_SOURCE_SNAPSHOT_V1",
       "sourceName":"Polling Desk / civicAPI", "sourcePermission":"Polling Desk press page: free to use with credit and link. Results remain unofficial until state certification.",
@@ -73,8 +74,8 @@ def main():
       "sourceUrls":{"house":"https://polling-desk.com/house-districts.csv","results":"https://polling-desk.com/results.csv"},
       "sourceSha256":{"houseCsv":house_hash,"resultsCsv":results_hash},
       "sourceLatestResultUpdatedUtc":max(dates).replace(" ","T")+"Z",
-      "retrievalUtc":datetime.datetime.now(datetime.timezone.utc).isoformat().replace("+00:00","Z"),
-      "publishedAsOf":"Snapshot captured on 2026-11-05. Each non-House race includes its per-race source timestamp. Earlier race calls are not official state certifications.",
+      "retrievalUtc":retrieved_at.isoformat().replace("+00:00","Z"),
+      "publishedAsOf":f"Snapshot captured on {retrieved_at.date().isoformat()} (UTC). Each non-House race includes its per-race source timestamp. Earlier race calls are not official state certifications.",
       "resultStatus":"UNOFFICIAL_CALLS_AND_COUNTS_NOT_CERTIFIED",
       "verificationPolicy":{"reportedLeadersAreWinners":False,"sourceMakesCalls":"civicAPI via Polling Desk","officialStateCertificationSeparate":True,"doesNotReplaceKahrelumLocks":True},
       "summary":summary,"house":h,"senate":sen,"governor":gov}

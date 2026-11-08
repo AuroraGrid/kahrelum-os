@@ -136,7 +136,7 @@ jobs:
       - name: Test full forecast coverage, admission and portrait identity
         run: |
           python3 -m unittest discover -s tests -p 'test_*.py' -v
-          node --test tests/candidate-portraits.test.cjs tests/nfl-portraits-dom.test.cjs tests/nba-portraits-dom.test.cjs tests/election-admission-view.test.cjs tests/firebase-release-binary-integrity.test.cjs tests/firebase-site-makeover-profile.test.cjs tests/investigations-publication.test.cjs tests/case-social-pages.test.cjs tests/evidence-scorecard.test.cjs tests/lead-magnet-deployment.test.cjs tests/commercial-readiness.test.cjs
+          node --test tests/candidate-portraits.test.cjs tests/nfl-portraits-dom.test.cjs tests/nba-portraits-dom.test.cjs tests/election-admission-view.test.cjs tests/firebase-release-binary-integrity.test.cjs tests/firebase-site-makeover-profile.test.cjs tests/investigations-publication.test.cjs tests/case-social-pages.test.cjs tests/us-results-ci-publisher.test.cjs tests/evidence-scorecard.test.cjs tests/lead-magnet-deployment.test.cjs tests/commercial-readiness.test.cjs
           python3 scripts/build_nba_player_portraits.py --check
       - name: Validate generated Sports Intelligence records
         run: python3 scripts/sports_intelligence.py validate

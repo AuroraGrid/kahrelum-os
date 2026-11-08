@@ -21,7 +21,9 @@
    $('senateDetail').textContent=s.counting+' of 35 Senate contests counting · Only races on this ballot; not the full 100-seat Senate';
    $('govTotal').textContent=(g.calledByParty.DEM||0)+' D · '+(g.calledByParty.REP||0)+' R';
    $('govDetail').textContent=g.counting+' of 36 counting · '+g.called+' called';
-   $('updatedLine').textContent='Source: Polling Desk / civicAPI · latest underlying race update '+new Date(snapshot.sourceLatestResultUpdatedUtc).toLocaleString('en-US',{dateStyle:'medium',timeStyle:'short',timeZone:'UTC'})+' UTC · captured '+new Date(snapshot.retrievalUtc).toLocaleString('en-US',{dateStyle:'medium',timeStyle:'short',timeZone:'UTC'})+' UTC · not certified';
+   const age=Date.now()-Date.parse(snapshot.retrievalUtc);
+   const stale=!Number.isFinite(age)||age>90*60*1000;
+   $('updatedLine').textContent=(stale?'STALE SOURCE SNAPSHOT · captured data may lag GitHub. ':'')+'Source: Polling Desk / civicAPI · latest underlying race update '+new Date(snapshot.sourceLatestResultUpdatedUtc).toLocaleString('en-US',{dateStyle:'medium',timeStyle:'short',timeZone:'UTC'})+' UTC · captured '+new Date(snapshot.retrievalUtc).toLocaleString('en-US',{dateStyle:'medium',timeStyle:'short',timeZone:'UTC'})+' UTC · not certified';
  }
  function setState(code){selectedState=code||'';$('stateFilter').value=selectedState;visible=50;renderState();renderRows();}
  function renderState(){
