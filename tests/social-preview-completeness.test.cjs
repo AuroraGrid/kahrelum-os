@@ -41,3 +41,13 @@ test('legacy social repair validates Facebook and X meta tags and images during 
  assert.match(yaml,/legacy-social-metadata/);
  assert.doesNotMatch(yaml,/firebase deploy --only hosting/);
 });
+
+test('case share verification fetches the extensionless canonical case URLs used by Firebase cleanUrls',()=>{
+ const script=read('scripts/firebase-overlay-release.cjs');
+ const start=script.indexOf('  const verifiedRoutes =');
+ const end=script.indexOf('  for (const route of verifiedRoutes)',start);
+ assert.ok(start>0 && end>start,'route verification block exists');
+ const routes=script.slice(start,end);
+ assert.ok(routes.includes("map(x => '/investigations/' + x.slug)"),'canonical case routes must not carry the .html suffix');
+ assert.ok(!routes.includes("map(x => '/investigations/' + x.slug + '.html')"));
+});

@@ -1007,7 +1007,7 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     : profileName === 'legacy-social-metadata'
     ? ['/pilot', '/demo']
     : profileName === 'case-share-cards'
-    ? ['/investigations', ...extractCases(fs.readFileSync(path.join(ROOT, 'investigations.html'), 'utf8')).map(x => '/investigations/' + x.slug + '.html')]
+    ? ['/investigations', ...extractCases(fs.readFileSync(path.join(ROOT, 'investigations.html'), 'utf8')).map(x => '/investigations/' + x.slug)]
     : profileName === 'nfl-sourcegrid-data'
     ? ['/nfl/trades', '/nfl/deadline-watch-2026']
     : profileName === 'candidate-portraits' ? ['/election-challenge'] : profileName === 'sports-intelligence'
