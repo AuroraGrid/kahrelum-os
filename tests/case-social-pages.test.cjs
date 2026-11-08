@@ -18,8 +18,9 @@ test('all twelve already-published case IDs get unique URLs, titles and source-b
   assert.equal(new Set(result.cases.map(x => x.url)).size, expected.length);
   assert.equal(new Set(result.cases.map(x => x.imagePath)).size, expected.length);
   for (const item of result.cases) {
-    assert.equal(item.url, '/investigations/' + item.slug + '.html');
-    assert.match(item.html, new RegExp('<link rel="canonical" href="https://kahrelum\\.com/investigations/' + item.slug + '\\.html">'));
+    assert.equal(item.url, '/investigations/' + item.slug);
+    assert.equal(item.hostingPath, item.url + '.html');
+    assert.match(item.html, new RegExp('<link rel="canonical" href="https://kahrelum\\.com/investigations/' + item.slug + '">'));
     assert.ok(item.html.includes('og:image'));
     assert.ok(item.html.includes('og:title'));
     assert.ok(item.html.includes('og:description'));
