@@ -60,3 +60,27 @@ test('CHIP-01 Firebase publish scope has safe preview, promotion and exact readb
  assert.match(yaml,/chip01-publication/);
  for(const value of ['--plan --profile','--preview --profile','--promote --profile','KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON']) assert.ok(yaml.includes(value),value);
 });
+
+test('selected first red Insight artwork is hash-custodied and publication fails closed if unavailable', () => {
+ const generator=read('scripts/chip01-social.cjs');
+ const ingestor=read('.github/workflows/chip01-image-ingest.yml');
+ const publisher=read('scripts/firebase-overlay-release.cjs');
+ const first='3da0c4e0ef1fd3dcbe26326060ae80669ca90ede3dfd54aea66da9702168eebc';
+ const second='8be30ef7477710c54a5975e4ba9385ff77ab7b2a0d379e0df35c64b45d6a0bd6';
+ for(const hash of [first,second]){
+  assert.ok(generator.includes(hash), 'generator must lock approved image digest: '+hash);
+  assert.ok(ingestor.includes(hash), 'ingest must verify image digest: '+hash);
+ }
+ assert.match(publisher,/if \(!item\.approvedArt\)/);
+ assert.match(publisher,/Approved CHIP-01 image is not present in GitHub source/);
+ assert.match(ingestor,/sha256sum --check/);
+ assert.match(ingestor,/contents: write/);
+ const items=require('../scripts/chip01-social.cjs').buildChip01SocialArtifacts();
+ for(const item of items){
+  const file=path.join(root,item.path.slice(1));
+  if(fs.existsSync(file)){
+   assert.equal(item.approvedArt,true);
+   assert.equal(crypto.createHash('sha256').update(item.image).digest('hex'),item.expectedSha256);
+  }
+ }
+});
