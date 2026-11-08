@@ -78,8 +78,21 @@ jobs:
           git push origin HEAD:main
           echo "commit_changed=true" >> "$GITHUB_OUTPUT"
 
+      - name: Check whether deployed election freshness client needs replacement
+        id: ui
+        if: steps.custody.outcome == 'success'
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 2 --connect-timeout 10 --max-time 35             "https://kahrelum.com/election-results-2026.js?check=${{ github.run_id }}" -o "$RUNNER_TEMP/kahrelum-live-results.js"
+          if grep -q 'STALE SOURCE SNAPSHOT' "$RUNNER_TEMP/kahrelum-live-results.js"; then
+            echo "ui_needs_publish=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ui_needs_publish=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Explain missing Firebase publisher credentials
-        if: ${{ steps.custody.outcome == 'success' && (steps.refresh.outputs.needs_publish == 'true' || inputs.publish_snapshot == true) && env.KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON == '' }}
+        if: ${{ steps.custody.outcome == 'success' && (steps.refresh.outputs.needs_publish == 'true' || inputs.publish_snapshot == true || steps.ui.outputs.ui_needs_publish == 'true') && env.KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON == '' }}
         shell: bash
         run: |
           echo "::warning::SKIPPED: required Firebase publisher credential missing; Git record may be fresher than production."
@@ -87,7 +100,7 @@ jobs:
 
       - name: Authenticated Plan, Preview, Promote and exact live readback
         id: firebase_publish
-        if: ${{ steps.tests.outcome == 'success' && steps.refresh.outcome == 'success' && steps.custody.outcome == 'success' && (steps.refresh.outputs.needs_publish == 'true' || inputs.publish_snapshot == true) && env.KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON != '' }}
+        if: ${{ steps.tests.outcome == 'success' && steps.refresh.outcome == 'success' && steps.custody.outcome == 'success' && steps.ui.outcome == 'success' && (steps.refresh.outputs.needs_publish == 'true' || inputs.publish_snapshot == true || steps.ui.outputs.ui_needs_publish == 'true') && env.KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON != '' }}
         shell: bash
         run: |
           set -euo pipefail
@@ -101,10 +114,18 @@ jobs:
           npm install --global firebase-tools@15.34.2
           export FIREBASE_TOOLS_ROOT="$(npm root -g)/firebase-tools"
           node --check scripts/firebase-overlay-release.cjs
-          node scripts/firebase-overlay-release.cjs --plan --profile us-results-data
-          node scripts/firebase-overlay-release.cjs --preview --profile us-results-data
-          node scripts/firebase-overlay-release.cjs --promote --profile us-results-data
-          echo "US election snapshot published with live exact-version readback." >> "$GITHUB_STEP_SUMMARY"
+          if [[ "${{ steps.refresh.outputs.needs_publish }}" == "true" || "${{ inputs.publish_snapshot }}" == "true" ]]; then
+            node scripts/firebase-overlay-release.cjs --plan --profile us-results-data
+            node scripts/firebase-overlay-release.cjs --preview --profile us-results-data
+            node scripts/firebase-overlay-release.cjs --promote --profile us-results-data
+            echo "US election snapshot published with live exact-version readback." >> "$GITHUB_STEP_SUMMARY"
+          fi
+          if [[ "${{ steps.ui.outputs.ui_needs_publish }}" == "true" ]]; then
+            node scripts/firebase-overlay-release.cjs --plan --profile us-results-ui
+            node scripts/firebase-overlay-release.cjs --preview --profile us-results-ui
+            node scripts/firebase-overlay-release.cjs --promote --profile us-results-ui
+            echo "US result freshness client published with live exact-version readback." >> "$GITHUB_STEP_SUMMARY"
+          fi
 
       - name: Explicitly fail on source or promotion error
         if: ${{ always() && steps.lifecycle.outputs.enabled == 'true' && (steps.tests.outcome == 'failure' || steps.refresh.outcome == 'failure' || steps.custody.outcome == 'failure' || steps.firebase_publish.outcome == 'failure') }}
