@@ -13,6 +13,7 @@ const { buildCaseShareArtifacts, extractCases } = require(path.join(__dirname, '
 const { buildChip01SocialArtifacts } = require(path.join(__dirname, 'chip01-social.cjs'));
 
 const SITE = 'kahrelum-public-hosting';
+const INDEXNOW_KEY_FILE = 'dedc67db0c224b1c9a4be1379f7937f5.txt';
 const DOMAIN = 'https://kahrelum.com';
 const CHANNEL_PREFIX = 'safe-overlay';
 const ROOT = path.resolve(__dirname, '..');
@@ -211,6 +212,12 @@ const RELEASE_PROFILES = {
   'candidate-portraits': {
     overlayFiles: ['election-challenge.html', 'election-challenge-map.js',
       'election/candidate-portraits.json', ...CANDIDATE_PORTRAIT_FILES],
+    sitemapRoutes: [],
+    includeHomepage: false,
+  },
+  'indexnow-key': {
+    // IndexNow ownership proof only: never replace any live sitemap, case, forecast, assets or site settings.
+    overlayFiles: [INDEXNOW_KEY_FILE],
     sitemapRoutes: [],
     includeHomepage: false,
   },
@@ -770,6 +777,12 @@ async function buildOverlay(live, profileName) {
   if (!profile) fail(`Unknown release profile: ${profileName}`);
   const desired = { ...live.fileMap };
   const blobs = {};
+  if (profileName === 'indexnow-key') {
+    const keyValue = fs.readFileSync(path.join(ROOT, INDEXNOW_KEY_FILE), 'utf8');
+    if (keyValue !== INDEXNOW_KEY_FILE.slice(0, -4)) {
+      fail('IndexNow key file content does not match its basename.');
+    }
+  }
 
   if (profileName === 'nfl-sourcegrid-data') {
     // An automated source check may refresh evidence, not roll back timestamps,
@@ -936,6 +949,9 @@ async function buildOverlay(live, profileName) {
   if (profileName === 'legacy-social-metadata' && changedPaths.some(item => !['/pilot.html', '/demo.html'].includes(item))) {
     fail('Legacy social metadata attempted to change an unrelated Firebase path.');
   }
+  if (profileName === 'indexnow-key' && changedPaths.some(item => item !== '/' + INDEXNOW_KEY_FILE)) {
+    fail('IndexNow release attempted to change a path outside its exact key file.');
+  }
   if (profileName === 'case-share-cards') {
     const allowed = new Set(['/investigations.html', '/sitemap.xml', '/assets/social/og-investigations.png']);
     for (const record of caseShare.cases) { allowed.add(record.hostingPath); allowed.add(record.imagePath); }
@@ -1002,6 +1018,8 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     ? ['/election-results-2026']
     : profileName === 'us-results-ui'
     ? ['/election-results-2026']
+    : profileName === 'indexnow-key'
+    ? ['/']
     : profileName === 'chip01-publication'
     ? ['/investigations', '/investigations/chip-01', '/insights', '/insights/nvidia-megaspeed-chip-custody']
     : profileName === 'legacy-social-metadata'
@@ -1078,6 +1096,12 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
           !html.includes('twitter:card" content="summary_large_image"')) {
         fail('CHIP-01 route-specific social tags not live: ' + route);
       }
+    }
+  }
+  if (profileName === 'indexnow-key') {
+    const keyBytes = await fetchBytes(origin + '/' + INDEXNOW_KEY_FILE);
+    if (keyBytes.toString('utf8').trim() !== INDEXNOW_KEY_FILE.slice(0, -4)) {
+      fail('IndexNow key readback failed.');
     }
   }
   if (profileName === 'legacy-social-metadata') {
