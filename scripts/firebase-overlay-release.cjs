@@ -172,6 +172,12 @@ const RELEASE_PROFILES = {
     sitemapRoutes: [],
     includeHomepage: true,
   },
+  'us-results-ui': {
+    // Tiny one-time client freshness message; distinct from historical/results data.
+    overlayFiles: ['election-results-2026.js'],
+    sitemapRoutes: [],
+    includeHomepage: false,
+  },
   'us-results-data': {
     // Recurrent, unofficial elections data only. Old locks, current Israeli records, NFL editorial releases remain immutable.
     overlayFiles: ['election/results-2026-snapshot.json'],
@@ -866,6 +872,9 @@ async function buildOverlay(live, profileName) {
       !['/index.html','/sitemap.xml'].includes(item))) {
     fail('Results release attempted to replace an unrelated live path.');
   }
+  if (profileName === 'us-results-ui' && changedPaths.some(item => item !== '/election-results-2026.js')) {
+    fail('US results freshness UI attempted to replace unrelated Firebase paths.');
+  }
   if (profileName === 'us-results-data' &&
       changedPaths.some(item => item !== '/election/results-2026-snapshot.json')) {
     fail('Automated U.S. results data may replace only its one approved snapshot.');
@@ -945,6 +954,8 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     : profileName === 'israel-c7'
     ? ['/', '/forecasting', '/israel-certified-2026']
     : profileName === 'us-results-data'
+    ? ['/election-results-2026']
+    : profileName === 'us-results-ui'
     ? ['/election-results-2026']
     : profileName === 'case-share-cards'
     ? ['/investigations', ...extractCases(fs.readFileSync(path.join(ROOT, 'investigations.html'), 'utf8')).map(x => '/investigations/' + x.slug + '.html')]
@@ -1043,6 +1054,12 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     const apiHashes = await captureApiHashes(origin);
     if (!util.isDeepStrictEqual(apiHashes, expectedApiHashes)) fail('Portrait release changed an existing API body.');
     return {origin, routes: checks, coverage, localImages: portraits.records.filter(row => row.url.startsWith('/')).length, apiHashes};
+  }
+  if (profileName === 'us-results-ui') {
+    const script = (await fetchBytes(origin + '/election-results-2026.js')).toString('utf8');
+    if (!script.includes('STALE SOURCE SNAPSHOT') || !script.includes('90*60*1000')) {
+      fail('US results UI freshness warning not deployed.');
+    }
   }
   if (['results-verified','us-results-data'].includes(profileName)) {
     const us = JSON.parse((await fetchBytes(origin + '/election/results-2026-snapshot.json')).toString('utf8'));
