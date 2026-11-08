@@ -795,7 +795,7 @@ async function buildOverlay(live, profileName) {
     caseShare = buildCaseShareArtifacts(fs.readFileSync(path.join(ROOT, 'investigations.html'), 'utf8'));
     addBlob(desired, blobs, '/investigations.html', Buffer.from(caseShare.overview, 'utf8'));
     for (const record of caseShare.cases) {
-      addBlob(desired, blobs, record.url, Buffer.from(record.html, 'utf8'));
+      addBlob(desired, blobs, record.hostingPath, Buffer.from(record.html, 'utf8'));
       addBlob(desired, blobs, record.imagePath, record.image);
     }
   }
@@ -884,7 +884,7 @@ async function buildOverlay(live, profileName) {
   }
   if (profileName === 'case-share-cards') {
     const allowed = new Set(['/investigations.html', '/sitemap.xml', '/assets/social/og-investigations.png']);
-    for (const record of caseShare.cases) { allowed.add(record.url); allowed.add(record.imagePath); }
+    for (const record of caseShare.cases) { allowed.add(record.hostingPath); allowed.add(record.imagePath); }
     if (changedPaths.some(item => !allowed.has(item))) {
       fail('Case share release attempted to replace an unrelated live Firebase path.');
     }
