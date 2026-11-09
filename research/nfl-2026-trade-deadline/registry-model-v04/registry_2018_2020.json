@@ -1,0 +1,143 @@
+{
+  "schema": "KAHRELUM_NFL_REGISTRY_EXTENSION_2018_2020_v0.4",
+  "classification": "SANDBOX_HYPOTHETICAL_NON_SCORING",
+  "definition": "unique player-involving transactions by official NFL monthly trade-register date, not first press report",
+  "deadlineDates": {
+    "2018": "2018-10-30",
+    "2019": "2019-10-29",
+    "2020": "2020-11-03"
+  },
+  "sources": {
+    "2018": "https://www.nfl.com/transactions/league/trades/2018/10",
+    "2019": "https://www.nfl.com/transactions/league/trades/2019/10",
+    "2020": "https://www.nfl.com/transactions/league/trades/2020/11"
+  },
+  "events": [
+    {
+      "tradeId": "2018-reg-01",
+      "season": 2018,
+      "registeredDate": "2018-10-30",
+      "players": [
+        "Demaryius Thomas"
+      ]
+    },
+    {
+      "tradeId": "2018-reg-02",
+      "season": 2018,
+      "registeredDate": "2018-10-30",
+      "players": [
+        "Golden Tate"
+      ]
+    },
+    {
+      "tradeId": "2018-reg-03",
+      "season": 2018,
+      "registeredDate": "2018-10-30",
+      "players": [
+        "Ty Montgomery"
+      ]
+    },
+    {
+      "tradeId": "2018-reg-04",
+      "season": 2018,
+      "registeredDate": "2018-10-30",
+      "players": [
+        "Dante Fowler Jr."
+      ]
+    },
+    {
+      "tradeId": "2018-reg-05",
+      "season": 2018,
+      "registeredDate": "2018-10-30",
+      "players": [
+        "Ha Ha Clinton-Dix"
+      ]
+    },
+    {
+      "tradeId": "2019-reg-01",
+      "season": 2019,
+      "registeredDate": "2019-10-28",
+      "players": [
+        "Kenyan Drake"
+      ]
+    },
+    {
+      "tradeId": "2019-reg-02",
+      "season": 2019,
+      "registeredDate": "2019-10-28",
+      "players": [
+        "Genard Avery"
+      ]
+    },
+    {
+      "tradeId": "2019-reg-03",
+      "season": 2019,
+      "registeredDate": "2019-10-29",
+      "players": [
+        "Leonard Williams"
+      ]
+    },
+    {
+      "tradeId": "2019-reg-04",
+      "season": 2019,
+      "registeredDate": "2019-10-29",
+      "players": [
+        "Aqib Talib"
+      ]
+    },
+    {
+      "tradeId": "2020-reg-01",
+      "season": 2020,
+      "registeredDate": "2020-11-02",
+      "players": [
+        "Avery Williamson"
+      ]
+    },
+    {
+      "tradeId": "2020-reg-02",
+      "season": 2020,
+      "registeredDate": "2020-11-02",
+      "players": [
+        "Eli Ankou"
+      ]
+    },
+    {
+      "tradeId": "2020-reg-03",
+      "season": 2020,
+      "registeredDate": "2020-11-02",
+      "players": [
+        "Desmond King"
+      ]
+    },
+    {
+      "tradeId": "2020-reg-04",
+      "season": 2020,
+      "registeredDate": "2020-11-03",
+      "players": [
+        "Kwon Alexander",
+        "Kiko Alonso"
+      ]
+    },
+    {
+      "tradeId": "2020-reg-05",
+      "season": 2020,
+      "registeredDate": "2020-11-03",
+      "players": [
+        "Isaiah Ford"
+      ]
+    },
+    {
+      "tradeId": "2020-reg-06",
+      "season": 2020,
+      "registeredDate": "2020-11-03",
+      "players": [
+        "DeAndre Washington"
+      ]
+    }
+  ],
+  "notes": [
+    "Records are counted once per exchange, not once per listed player.",
+    "Official registry dates may lag an agreement or editorial report; the metric is registry-dated volume.",
+    "Three extra seasons include COVID-affected 2020, which is separately stress tested."
+  ]
+}
