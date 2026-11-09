@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Datum Signals",
+  "sourceUrl": "https://datumsignals.com/",
+  "publisherEdition": "Updated November 9, 2026, 5:00 PM UTC",
+  "verificationWindow": {
+    "startedAtUtc": "2026-11-09T19:02:59.9175829Z",
+    "endedAtUtc": "2026-11-09T19:03:11.9427290Z",
+    "requestCount": 6,
+    "cacheControl": "no-cache",
+    "resolvedRemoteIps": ["104.21.51.52", "172.67.178.17"]
+  },
+  "responses": [
+    {"attempt": 1, "resolvedRemoteIp": "104.21.51.52", "observedAtUtc": "2026-11-09T19:02:59.9175829Z", "httpStatus": 200, "houseDemocraticControlPct": 71.0, "senateDemocraticControlPct": 64.0, "rawUtf8Bytes": 48380, "rawSha256": "3a3eb6c64f040de00dce735bd3c13494f33c74fae394b645317016006f1edaa1"},
+    {"attempt": 2, "resolvedRemoteIp": "104.21.51.52", "observedAtUtc": "2026-11-09T19:03:02.3969487Z", "httpStatus": 200, "houseDemocraticControlPct": 70.0, "senateDemocraticControlPct": 64.0, "rawUtf8Bytes": 48380, "rawSha256": "2887198ba1ae6be763ec58fb6a00de27aef610127fe221c7e9d6d9b935672592"},
+    {"attempt": 3, "resolvedRemoteIp": "104.21.51.52", "observedAtUtc": "2026-11-09T19:03:05.5668178Z", "httpStatus": 200, "houseDemocraticControlPct": 71.0, "senateDemocraticControlPct": 64.0, "rawUtf8Bytes": 48380, "rawSha256": "3a3eb6c64f040de00dce735bd3c13494f33c74fae394b645317016006f1edaa1"},
+    {"attempt": 4, "resolvedRemoteIp": "172.67.178.17", "observedAtUtc": "2026-11-09T19:03:07.7244434Z", "httpStatus": 200, "houseDemocraticControlPct": 70.0, "senateDemocraticControlPct": 64.0, "rawUtf8Bytes": 48380, "rawSha256": "2887198ba1ae6be763ec58fb6a00de27aef610127fe221c7e9d6d9b935672592"},
+    {"attempt": 5, "resolvedRemoteIp": "172.67.178.17", "observedAtUtc": "2026-11-09T19:03:09.8663224Z", "httpStatus": 200, "houseDemocraticControlPct": 71.0, "senateDemocraticControlPct": 64.0, "rawUtf8Bytes": 48380, "rawSha256": "3a3eb6c64f040de00dce735bd3c13494f33c74fae394b645317016006f1edaa1"},
+    {"attempt": 6, "resolvedRemoteIp": "172.67.178.17", "observedAtUtc": "2026-11-09T19:03:11.9427290Z", "httpStatus": 200, "houseDemocraticControlPct": 70.0, "senateDemocraticControlPct": 64.0, "rawUtf8Bytes": 48380, "rawSha256": "2887198ba1ae6be763ec58fb6a00de27aef610127fe221c7e9d6d9b935672592"}
+  ],
+  "privateRepresentativeRawBodies": [
+    {"rawSha256": "2887198ba1ae6be763ec58fb6a00de27aef610127fe221c7e9d6d9b935672592", "houseDemocraticControlPct": 70.0},
+    {"rawSha256": "3a3eb6c64f040de00dce735bd3c13494f33c74fae394b645317016006f1edaa1", "houseDemocraticControlPct": 71.0}
+  ],
+  "priorVerifiedObservations": [
+    "research/election-challenge-2026/current-sources/datum-signals-resolution-20261109T163514Z.json",
+    "research/election-challenge-2026/current-sources/datum-signals-resolution-20261109T184634Z.json"
+  ],
+  "admissionDecision": {
+    "currentHouseDemocraticControlPct": null,
+    "currentSenateDemocraticControlPct": 64.0,
+    "reason": "The 17:00-labeled source resumed alternating between 70% and 71% House control after a six-response 71% convergence and publication. The 18:46 UTC 71% observation remains historical evidence, but no single current House probability is admitted while same-label replicas conflict. Senate 64% is consistent in all captures."
+  },
+  "kahrelumInputReview": {
+    "isRefreshElectionProjectionsInput": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  }
+}
