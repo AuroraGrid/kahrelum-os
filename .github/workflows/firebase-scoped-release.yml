@@ -9,6 +9,9 @@ on:
       - 'investigations/chip-01.html'
       - 'insights.html'
       - 'insights/nvidia-megaspeed-chip-custody.html'
+      - 'insights/hegseth-impeachment-forecast-2026.html'
+      - 'forecasting.html'
+      - 'assets/social/og-hegseth-impeachment-forecast-2026.png'
       - 'assets/social/og-investigations-chip-01.png'
       - 'assets/social/og-insights-nvidia-megaspeed-chip-custody.png'
       - 'scripts/chip01-social.cjs'
@@ -30,6 +33,7 @@ on:
         description: 'Publish only this independently audited Firebase overlay'
         options:
           - chip01-publication
+          - hegseth-forecast
           - case-share-cards
           - legacy-social-metadata
           - indexnow-key
@@ -88,6 +92,8 @@ jobs:
               case "$file" in
                 investigations/chip-01.html|insights/nvidia-megaspeed-chip-custody.html|assets/social/og-investigations-chip-01.png|assets/social/og-insights-nvidia-megaspeed-chip-custody.png)
                   selections+=(chip01-publication) ;;
+                insights/hegseth-impeachment-forecast-2026.html|assets/social/og-hegseth-impeachment-forecast-2026.png|forecasting.html)
+                  selections+=(hegseth-forecast) ;;
                 ai-intelligence-evaluation-2026.html)
                   selections+=(ai-evaluation) ;;
                 opticodds-market-integrity.html|assets/social/og-opticodds-market-integrity.png)
@@ -119,7 +125,7 @@ jobs:
           set -euo pipefail
           for profile in $RELEASE_PROFILES; do
             case "$profile" in
-              chip01-publication|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|commercial-readiness|buyer-discovery|election-data-index) ;;
+              chip01-publication|hegseth-forecast|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|commercial-readiness|buyer-discovery|election-data-index) ;;
               *) echo "::error::Unapproved release profile: $profile"; exit 1;;
             esac
           done

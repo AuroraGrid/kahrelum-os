@@ -1,0 +1,63 @@
+{
+  "record_id": "KAHRELUM-US-HEGSETH-20261109-V1",
+  "version": "1.0",
+  "forecast_as_of_date": "2026-11-09",
+  "reference_timezone": "America/New_York",
+  "status": "local analysis snapshot; not publicly posted or cryptographically time-locked",
+  "topic": "Pete Hegseth: formal House impeachment, office departure, Senate conviction and succession",
+  "definitions": {
+    "formal_house_impeachment": "U.S. House adopts at least one article of impeachment against Pete Hegseth. An introduction, procedural vote, or committee referral alone does not qualify.",
+    "departure": "Pete Hegseth permanently ceases to hold U.S. Secretary of Defense/Secretary of War office; excludes temporary absence. Announcement alone does not count for this analysis unless effective by cutoff.",
+    "senate_conviction": "U.S. Senate votes by the constitutionally required two-thirds of members present to convict Hegseth on at least one article.",
+    "successor": "First individual Trump publicly nominates as a permanent, Senate-confirmed replacement after Hegseth permanently departs, conditional on a nomination being made by Dec. 31, 2027. Acting officers are excluded."
+  },
+  "forecast_events": [
+    {"event": "formal_house_impeachment", "deadline_local": "2026-11-20T23:59:59-05:00", "probability": 0.64},
+    {"event": "formal_house_impeachment", "deadline_local": "2026-12-31T23:59:59-05:00", "probability": 0.76},
+    {"event": "departure", "deadline_local": "2026-11-15T23:59:59-05:00", "probability": 0.13},
+    {"event": "departure", "deadline_local": "2026-12-31T23:59:59-05:00", "probability": 0.45},
+    {"event": "departure", "deadline_local": "2027-01-31T23:59:59-05:00", "probability": 0.62},
+    {"event": "departure", "deadline_local": "2027-06-30T23:59:59-04:00", "probability": 0.75},
+    {"event": "senate_conviction", "deadline_local": "2027-06-30T23:59:59-04:00", "probability": 0.05}
+  ],
+  "successor_first_nominee_conditional": [
+    {"person": "Ron DeSantis", "probability": 0.32},
+    {"person": "Mike Waltz", "probability": 0.15},
+    {"person": "Joni Ernst", "probability": 0.12},
+    {"person": "Mike Pompeo", "probability": 0.09},
+    {"person": "Mike Rogers", "probability": 0.07},
+    {"person": "Other", "probability": 0.25}
+  ],
+  "market_context_not_exactly_comparable": {
+    "observed_date": "2026-11-09",
+    "polymarket_house_impeachment_by_2026_12_31_approx": 0.77,
+    "kalshi_house_impeachment_by_2026_12_31_observed_range": [0.68, 0.78],
+    "polymarket_departure_by_2026_12_31_observed_range": [0.43, 0.46],
+    "kalshi_departure_before_2027_01_01_observed_range": [0.42, 0.44],
+    "kalshi_departure_before_2027_02_01_observed_range": [0.60, 0.69],
+    "note": "Market pages may reflect different refresh times. Some contracts count announcements whereas the KAHRELUM departure event requires effective departure; read rules before comparing prices."
+  },
+  "evidence": [
+    {"description": "House clerk official June 3 vote 215-208 with 4 GOP in favor of Iran war-powers resolution", "url": "https://clerk.house.gov/evs/2026/roll199"},
+    {"description": "House clerk official Sept 15 vote 220-204 with 7 GOP in favor of Iran war-powers resolution", "url": "https://clerk.house.gov/evs/2026/roll307"},
+    {"description": "House clerk published composition 218 GOP, 214 Democrats, one independent, two vacancies", "url": "https://clerk.house.gov/"},
+    {"description": "Massie's eight articles of impeachment (allegations, not findings)", "url": "https://massie.house.gov/news/documentsingle.aspx?DocumentID=395853"},
+    {"description": "CBS Nov 4 reports Trump asked advisers whether Hegseth should stay, DeSantis floated", "url": "https://www.cbsnews.com/news/trump-hegseth-midterm-election-losses/"},
+    {"description": "ABC Nov 8 Jeffries supports impeachment, Trump said he intends to keep Hegseth", "url": "https://abcnews.com/Politics/im-hard-hakeem-jeffries-announces-support-hegseth-impeachment/story?id=137952235"},
+    {"description": "Axios Nov 8 reports House GOP expects possible defection, Pentagon denies wrongdoing", "url": "https://www.axios.com/2026/11/08/pete-hegseth-impeachment-house-republicans-massie"},
+    {"description": "AP reports Hegseth not considered for Tennessee Senate appointment", "url": "https://apnews.com/article/hegseth-senate-seat-tennessee-bfe5baf0dd3f26ddf0ca9b844400515d"},
+    {"description": "Constitution Art I Senate trial conviction requires two thirds present", "url": "https://www.senate.gov/civics/constitution_item/constitution.htm"},
+    {"description": "Polymarket formal impeachment pricing", "url": "https://polymarket.com/event/pete-hegseth-impeached-by-june-30"},
+    {"description": "Kalshi formal impeachment pricing", "url": "https://kalshi.com/markets/kxhegsethimpeach"},
+    {"description": "Kalshi departure pricing", "url": "https://kalshi.com/markets/kxhegsethout/hegseth-out-by/kxhegsethout-26apr"}
+  ],
+  "analysis_notes": [
+    "These are subjective judgment probabilities, not a validated KAHRELUM model output or certified track record.",
+    "War-powers crossover votes are not the same as votes for impeachment.",
+    "The House GOP retains procedural means to delay, table, or refer Massie's resolution.",
+    "Senate conviction is substantially harder than impeachment; departure is more likely to occur through White House personnel action.",
+    "The 2026 election changes control in January 2027, not November 2026.",
+    "Successor probabilities concern first publicly named permanent nominee, not the acting secretary and not confirmation odds.",
+    "All reported allegations are contested and have not been adjudicated in this analysis."
+  ]
+}
