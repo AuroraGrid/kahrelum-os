@@ -25,6 +25,13 @@ test('US results snapshot contains 435+35+36, called and counting are distinct, 
   assert.match(text('election-results-2026.html'),/Not certified|not state certifications|unofficial/i);
 });
 
+test('Israeli election frozen evidence keeps its original CRLF bytes on every checkout',()=>{
+  const attrs=text('.gitattributes');
+  for(const file of ['HEAD_TO_HEAD_LOCK_2026-10-28.json','BASELINE_LOCK_2026-10-26.md']) {
+    assert.ok(attrs.includes('research/israel-2026-election/'+file+' text eol=crlf'), 'Missing cross-platform byte-custody attribute for '+file);
+  }
+});
+
 test('Israel C7 result compares actual official seats against correctly classified frozen sources',()=>{
   const d=json('election/israel-certified-2026.json');
   assert.equal(d.results.length,14);assert.equal(d.results.reduce((s,p)=>s+p.certifiedSeats,0),120);
