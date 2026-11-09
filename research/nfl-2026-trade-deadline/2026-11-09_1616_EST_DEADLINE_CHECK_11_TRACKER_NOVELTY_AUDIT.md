@@ -1,0 +1,35 @@
+# KAHRELUM NFL SOURCEGRID | 2026-11-09, 4:16 p.m. EST | late-afternoon novelty audit
+
+**Classification:** RESEARCH-ONLY CHECKPOINT; append-only, non-scoring, not a fresh forecast or production publication. This note records checked sources and claims and does not imply every team's source was audited.
+
+## FACT — NFL editorial tracker, 11 in-season trades
+
+During the November 9 4 p.m. ET check, the **official NFL.com in-season editorial tracker** listed 11 individual player trades since the September regular-season start: the three November 9 entries (Jessie Bates III ATL→JAX, Andre Cisco NYJ→DET, Davon Godchaux NO→JAX); Jacoby Brissett ARI→BAL (Nov 6); Jeffery Simmons TEN→CHI (Oct 29); DeForest Buckner IND→SF (Oct 27); Quenton Nelson IND→SEA (Oct 27); Marvin Harrison Jr. ARI→HOU (Oct 12); and earlier in-season entries. This is **not** a reconciled NFL November monthly transaction-register count; this source is an **editorial tracker**.
+
+Primary source readback: https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season
+
+The earlier KAHRELUM champion research snapshot at commit 1309055074f0eb906ce61af8d31178326c7b3eed, created approximately 4:09 p.m. EST, reported a 9-deal *editorial tracker snapshot* and treated Cisco and Godchaux as independently reported but not yet in that tracker. That was a legitimate earlier observation, not evidence of a current nine-trade total. This note preserves both timestamps and establishes that a subsequent live official page readback listed **11**. Both Nov 9 transactions had already been alerted to user earlier in the day (previous KAHRELUM research commit d724b9bf1ad7180f9533574866e9891a53674615); **NO duplicate alert** from this reconciliation.
+
+The accessible Jacksonville club's calendar-style transactions register was lagging on Nov 9 when checked (last November entries Nov 3). Its absence is not proof these weren't reported/announced: https://www.jaguars.com/team/transactions/2026 . Source distinctions retained.
+
+## November 9 ~3:45–3:55 p.m. ET live-blog checks: NOT FRESH ORIGINAL OFFERS
+
+Secondary CBS Sports live blog published Monday November 9, 2026 at 3:45 p.m. EST repeated a **Christian McCaffrey-type** asking-price characterization for Jonathan Taylor and represented a possible **fourth-round asking price** for Grover Stewart in commentary attributed to Ian Rapoport on NFL Network's *The Aftermath*. The precise episode clip, post time, source transcript and any *new change* in the asking price were **not independently opened**. CBS oddly labels the NFL Network reporter as ESPN's Ian Rapoport; treat that affiliation as a secondary-source error. Source: https://www.cbssports.com/nfl/news/2026-nfl-trade-deadline-live-updates-latest-rumors-buzz-news/live/
+
+**Original-source reconciliation:**
+- **Jonathan Taylor CMC-style package:** This is NOT new November 9 information. NFL Network's Ian Rapoport was publicly quoted from a Nov 5 (some reporting dates Wednesday Nov 4) original GMFB remark seeking a Christian McCaffrey-type package. Colts Wire Nov 5: https://sports.yahoo.com/articles/colts-jonathan-taylor-trade-talks-151536530.html .
+- **Grover Stewart fourth-round ask:** Reported by local Packers beat writer Easton Butler on **October 22** in connection with Green Bay inquiries about both Stewart and DeForest Buckner, preserved by an October 28 writer: https://twsn.net/2026/10/28/grover-stewart-trade-3-landing-spots . An October 22 tweet was secondarily reproduced by a separately syndicated Oct 2026 report: https://staging-aws.sports.yahoo.com/articles/colts-could-entire-roster-available-213508521.html . **Original verified social post URL/time not recovered**. The reported fourth is an **asking price**, not an actual offer or bid. In tension, on **November 7** Schefter/Rapoport original reporting attributed to ESPN stated Colts were **aiming high** and that interested clubs felt the Stewart price was too high, without an exact figure. Accurate secondary: https://bleacherreport.com/articles/25530179-new-colts-rumors-keenan-allen-josh-downs-grover-stewart-trade-talks-2026-nfl-deadline . Therefore it is **not verified** that a November 9 fourth-round mention represented a newly reduced asking price. No eligible novelty-trigger or 5pp threshold solely from it.
+- **Chiefs ↔ Brian Thomas Jr.:** CBS blog 3:55 p.m. EST repeated Rapoport's KC-interest connection; the Chiefs were already named by Rapoport and Schefter in their **November 7** original notebook. Chiefs Wire Nov 7 accurately quotes and links original insiders: https://sports.yahoo.com/articles/nfl-insiders-reveal-chiefs-intrigued-145528911.html . Do not treat Nov 9 CBS post as the first credible Kansas City inquiry or as proof of an accepted offer. Jaguars' reported desire to be 'additive, not subtractive' and AFC competitor reluctance are context, not deal confirmation.
+
+## FORECAST/CUSTODY
+- Existing latest previously documented KAHRELUM prospective forecasts: Jonathan Taylor **27%**; Grover Stewart **61%**; Brian Thomas Jr. historical Oct 30 only **34% CONVERSATION_RECOVERED_PROVISIONAL**, newer certified version not established in this run. **NO revision issued** and no numerical BTJ prospective forecast invented.
+- The historical Oct 30 board (asOf 2026-10-30T15:12:12-04:00) contains 124 research candidates, including unsourced analyst scenarios and unverified provisional probabilities; current official deals are NOT changed retroactively.
+- NO score, Brier or valid pre-event prediction is inferred from the 11-trade tally; no overwrite of frozen historical data.
+- No trade offer for Chiefs/Thomas or fourth-round Stewart *bid* authenticated; no destination pricing change. No production, publishing, email, odds-market or roster actions.
+
+## SOURCEGRID coverage / gaps / next checks
+**Actually checked this run:** NFL.com editorial transaction tracker; Jacksonville official team transaction page; contemporaneous CBS Sports deadline live blog; secondary Oct22 local Packers report via Oct28 article, Nov5 Rapoport package report, Nov7 Schefter/Rapoport notebook coverage and November 7 conflicting Stewart-ask characterization; selected Jets/Chiefs/Colts contextual original-report attributions; limited national and local news queries.
+
+**Not complete:** 32/32 primary clubs, all original podcasts/radio in every market, full *The Aftermath* clip, exact latest contract/payment terms and NFL monthly November transaction-register reconciliation. This is an explicit coverage gap, not an implicit clean bill of health.
+
+**Next priority:** authentic *The Aftermath* recording to resolve Stewart asking-price chronology and any modified Colts position; authenticated new named offer, accepted bid or changed no-sale decision (especially Indianapolis/Cleveland/Kansas City), and official club roster-transaction postings. Deadline Tuesday, November 10, 2026 at 4:00 p.m. America/New_York. Do not extend this trade monitoring beyond close; verify late-filed trades for final recap as necessary.
