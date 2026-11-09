@@ -1,0 +1,223 @@
+{
+  "schema": "KAHRELUM_NFL_VOLUME_CALIBRATION_INPUTS_v1.0",
+  "lifecycle": "RESEARCH_ONLY_NOT_ISSUED",
+  "observedAtUtc": "2026-11-09T16:10:30Z",
+  "target": {
+    "unit": "UNIQUE_IN_SEASON_NFL_TRADE_TRANSACTION",
+    "firstRegularSeasonDay": "2026-09-09",
+    "deadlineUtc": "2026-11-10T21:00:00Z",
+    "deadlineLocal": "2026-11-10T16:00:00-05:00",
+    "fullSeasonQuestion": "How many distinct NFL player-involving trades officially complete from the opening of the 2026 regular season through the 2026-11-10 4 PM EST deadline?",
+    "futureQuestion": "How many additional transactions officially complete strictly after a separately locked, timestamped KAHRELUM 2026 count forecast?",
+    "inclusions": [
+      "One executed transaction per two-team deal regardless of players and draft picks",
+      "Officially completed player-involving trades"
+    ],
+    "exclusions": [
+      "Reported inquiries/agreements not verified as completed",
+      "Offseason trades",
+      "Free agency and waivers",
+      "Extensions",
+      "Multiple player/pick counting for a single transaction"
+    ],
+    "countCutoffRule": "Use official team/league completion receipts. Do not infer exact trade timing from date-only reports, and never include reported-only agreements in completed transactions.",
+    "deadlineSourceUrl": "https://www.nfl.com/news/2026-27-national-football-league-important-dates"
+  },
+  "kahrelumVolumeForecast": null,
+  "kahrelumVolumeLock": null,
+  "historical": [
+    {
+      "season": 2023,
+      "total": 15,
+      "countingWindow": "NFL tracker September 8–October 31, 2023",
+      "sourceUrl": "https://www.nfl.com/news/nfl-trade-deadline-tracking-every-move-since-start-of-the-2023-regular-season",
+      "quality": "OFFICIAL_NFL_TRACKER_COUNT",
+      "caveat": "Two deals reported Oct. 30 in the tracker posted Oct. 31 in monthly register"
+    },
+    {
+      "season": 2024,
+      "total": 18,
+      "countingWindow": "NFL tracker September 5–November 5, 2024",
+      "sourceUrl": "https://www.nfl.com/news/2024-nfl-trade-deadline-who-are-the-biggest-winners-and-losers",
+      "quality": "OFFICIAL_NFL_EXPLICIT_COUNT",
+      "caveat": "18 transactions involving 19 players; deadline after Week 9"
+    },
+    {
+      "season": 2025,
+      "total": 22,
+      "countingWindow": "NFL tracker September 4–November 4, 2025",
+      "sourceUrl": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2025-regular-season",
+      "quality": "COUNT_OF_OFFICIAL_NFL_TRACKER_ENTRIES",
+      "caveat": "Unreconciled third-party dataset counts 21"
+    }
+  ],
+  "official2026TrackerUrl": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season",
+  "completedTransactions": [
+    {
+      "tradeId": "MCCARTHY_MIN_NYG_20260928",
+      "date": "2026-09-28",
+      "headlinePlayer": "J.J. McCarthy",
+      "status": "OFFICIAL_NFL_TRACKER_LISTED"
+    },
+    {
+      "tradeId": "PORTER_PIT_DAL_20261001",
+      "date": "2026-10-01",
+      "headlinePlayer": "Joey Porter Jr.",
+      "status": "OFFICIAL_NFL_TRACKER_LISTED"
+    },
+    {
+      "tradeId": "JURGENS_PHI_BAL_20261007",
+      "date": "2026-10-07",
+      "headlinePlayer": "Cam Jurgens",
+      "status": "OFFICIAL_NFL_TRACKER_LISTED"
+    },
+    {
+      "tradeId": "HARRISON_ARI_HOU_20261012",
+      "date": "2026-10-12",
+      "headlinePlayer": "Marvin Harrison Jr.",
+      "status": "OFFICIAL_NFL_TRACKER_LISTED"
+    },
+    {
+      "tradeId": "BUCKNER_IND_SF_20261027",
+      "date": "2026-10-27",
+      "headlinePlayer": "DeForest Buckner",
+      "status": "OFFICIAL_NFL_TRACKER_LISTED"
+    },
+    {
+      "tradeId": "NELSON_IND_SEA_20261027",
+      "date": "2026-10-27",
+      "headlinePlayer": "Quenton Nelson",
+      "status": "OFFICIAL_NFL_TRACKER_LISTED"
+    },
+    {
+      "tradeId": "SIMMONS_TEN_CHI_20261029",
+      "date": "2026-10-29",
+      "headlinePlayer": "Jeffery Simmons",
+      "status": "OFFICIAL_NFL_TRACKER_LISTED"
+    },
+    {
+      "tradeId": "BRISSETT_ARI_BAL_20261106",
+      "date": "2026-11-06",
+      "headlinePlayer": "Jacoby Brissett",
+      "status": "OFFICIAL_NFL_TRACKER_LISTED",
+      "originalKahrelumForecastCustody": "https://github.com/AuroraGrid/kahrelum-os/commit/597f07fad1d0e810155f56732106299555989ead"
+    }
+  ],
+  "reportedAgreements": [
+    {
+      "tradeId": "BATES_ATL_JAX_20261109",
+      "date": "2026-11-09",
+      "headlinePlayer": "Jessie Bates III",
+      "status": "REPORTED_AGREEMENT_NOT_IN_OFFICIAL_TRACKER",
+      "reportUrl": "https://www.nfl.com/news/jessie-bates-jaguars-falcons-trade",
+      "verificationNote": "AP noted clubs had not announced the reported agreement at check; recheck team and league records."
+    }
+  ],
+  "insiderClaims": [
+    {
+      "id": "SCHEFTER-2026-10-26",
+      "reporter": "Adam Schefter",
+      "date": "2026-10-26",
+      "startDate": "2026-10-26",
+      "scope": "AFTER_DATE_TO_DEADLINE",
+      "provenance": "ATTRIBUTED_SECONDARY",
+      "min": 10,
+      "max": null,
+      "originalTimeUtc": null,
+      "sourceUrl": "https://bleacherreport.com/articles/25520820-adam-schefter-predicts-double-digit-trades-nfl-deadline-amid-buzz-jonathan-taylor-more",
+      "meaning": "At least ten further trades after his Oct. 26 Pat McAfee Show interview",
+      "sourceGroup": "SCHEFTER_MCAFEE_OCT26"
+    },
+    {
+      "id": "SCHULTZ-2026-10-26",
+      "reporter": "Jordan Schultz",
+      "date": "2026-10-26",
+      "startDate": null,
+      "scope": "WINDOW_UNVERIFIED",
+      "provenance": "ATTRIBUTED_SECONDARY",
+      "min": 12,
+      "max": 20,
+      "originalTimeUtc": null,
+      "sourceUrl": "https://www.bleachernation.com/bears/2026/10/26/bears-trade-rumors/",
+      "meaning": "Twelve to twenty deadline-related trades; original start of count window unverified",
+      "sourceGroup": "SCHULTZ_PIVOT_OCT26"
+    },
+    {
+      "id": "WOLFE-2026-11-03",
+      "reporter": "Cameron Wolfe (reporting executive expectations)",
+      "date": "2026-11-03",
+      "startDate": "2026-11-03",
+      "scope": "AFTER_DATE_TO_DEADLINE",
+      "provenance": "ORIGINAL_AUTHOR_TEXT_RELAYED",
+      "min": 10,
+      "max": null,
+      "originalTimeUtc": null,
+      "sourceUrl": "https://newsespn.pages.dev/nfl/story/_/id/50349677/trade-deadline-rise-quiet-chaotic-more-deals-2026",
+      "meaning": "Unnamed executives anticipated double-digit further trades after Nov. 3",
+      "sourceGroup": "WOLFE_EXECUTIVES_NOV3"
+    },
+    {
+      "id": "PELISSERO-UNVERIFIED",
+      "reporter": "Tom Pelissero",
+      "date": null,
+      "startDate": null,
+      "scope": "WINDOW_UNVERIFIED",
+      "provenance": "USER_REPORTED_UNVERIFIED",
+      "min": 8,
+      "max": 10,
+      "originalTimeUtc": null,
+      "sourceUrl": null,
+      "meaning": "User reported 8–10; original quote and definition not independently verified. His November 7 publication cited eight trades that had already happened, not eight future trades.",
+      "sourceGroup": "PELISSERO_UNVERIFIED"
+    },
+    {
+      "id": "LACANFORA-2026-11-02",
+      "reporter": "Jason La Canfora",
+      "date": "2026-11-02",
+      "startDate": "2026-11-02",
+      "scope": "TEAM_SPECIFIC_INDIANAPOLIS",
+      "provenance": "ORIGINAL_AUTHOR",
+      "min": 3,
+      "max": 4,
+      "originalTimeUtc": null,
+      "sourceUrl": "https://www.casino.org/news/nfl-insider-jason-la-canfora-colts-eye-3-4-more-trades-seek-second-round-pick-for-jonathan-taylor/",
+      "meaning": "Three to four further Indianapolis Colts trades, not leaguewide",
+      "sourceGroup": "LACANFORA_COLTS_NOV2"
+    },
+    {
+      "id": "SCHEFTER-2026-10-12-UNVERIFIED",
+      "reporter": "Adam Schefter",
+      "date": "2026-10-12",
+      "startDate": "2026-10-12",
+      "scope": "AFTER_DATE_TO_DEADLINE",
+      "provenance": "TRANSCRIPT_THIRD_PARTY_UNVERIFIED",
+      "min": null,
+      "max": null,
+      "originalTimeUtc": null,
+      "sourceUrl": "https://community.clipto.com/the-pat-mcafee-show/the-pat-mcafee-show-live-monday-october-12th-2026",
+      "meaning": "Unofficial transcript suggests roughly ten more trades; approximate, not a scored bound",
+      "sourceGroup": "SCHEFTER_MCAFEE_OCT12"
+    }
+  ],
+  "nonNumericInsiderCoverage": [
+    "Ian Rapoport",
+    "Jay Glazer",
+    "Albert Breer",
+    "Jeremy Fowler",
+    "Dan Graziano",
+    "Mike Garafolo",
+    "Dianna Russini",
+    "Peter Schrager",
+    "Jonathan Jones",
+    "Charles Robinson",
+    "Ari Meirov"
+  ],
+  "referenceCaveats": [
+    "25-player ESPN probabilities do not constitute a leaguewide unique transaction count or an independent model.",
+    "2023 Week 8 and 2024–25 Week 9 deadlines are different regimes; three seasons are inadequate to fit precise tails.",
+    "The NFL 2025 tracker has 22 listed transactions; separate third-party reconstruction says 21, pending deal-by-deal reconciliation.",
+    "2023 first-party tracker reported two Oct. 30 deals which October transaction register lists Oct. 31; preserve report-versus-execution ambiguity.",
+    "Existing October 30 player board is a stale snapshot; do not overwrite its probability records.",
+    "Final trades may precede NFL tracker updates; independently verify team announcements before settling outcomes."
+  ]
+}
