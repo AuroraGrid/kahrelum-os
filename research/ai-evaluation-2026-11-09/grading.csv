@@ -1,0 +1,16 @@
+question_id,case,core_accuracy,evidence_attribution,temporal_provenance,uncertainty_boundaries,falsifier_next_check,raw_total_10,critical_integrity_failure,grader_rationale
+AML-01,AML,2,2,2,2,2,10,NO,"Accurate arithmetic; grounded in E1 and 13:30 cutoff, appropriately limits inference and checks source extract."
+AML-02,AML,2,1,2,1,2,8,NO,"E2 customer explanation was not cited; one sentence says E6 ""proves no earlier availability"" although the record only lacks evidence of prior availability. Correct later qualification avoids a critical flag."
+AML-03,AML,2,2,2,2,1,9,NO,"Correctly distinguishes E4 assistant text, E5 status and R1 authority. Next check requests original record but not explicit decision-time availability/access history."
+AML-04,AML,2,2,2,1,2,9,NO,E7/E8 vs E9 and times correctly distinguished. Does not explicitly say B/C are variants of one authored fixture rather than independent cases.
+AML-05,AML,2,1,2,2,2,9,NO,FinCEN FAQ Q4 applied correctly and no legal claim invented; does not cite fictional P3 by its explicit rule ID.
+NATO-01,NATO,2,1,1,2,2,8,NO,"Correct NATO threshold/consent, but evidence explanation omits N2 utility notice and timing does not expressly exclude later N7."
+NATO-02,NATO,2,2,2,2,1,9,NO,Correct treaty/no fixed 24-hour military deployment. Next check seeks universal instrument rather than a dated nation-specific deployment authorization.
+NATO-03,NATO,2,2,2,2,1,9,NO,Correctly excludes post-cutoff N7 and treats N1/N8 as dependent; follow-up lacks explicit versioning of later evidence.
+NATO-04,NATO,2,2,2,2,2,10,NO,"Correct distinction between Articles 4/5, source and cutoff context, no invented activation, and official verification."
+NATO-05,NATO,2,2,2,2,2,10,NO,"Complete as-of-cutoff brief; separates synthetic evidence, treaty obligations, attribution unknowns, and verification triggers."
+HUM-01,HUM,2,2,2,2,2,10,NO,"Precise audio onset 02:18/2-second cue, baseline comparison, neutral interpretation, source boundary and independent source inspection."
+HUM-02,HUM,2,2,2,2,2,10,NO,"W4 dependent; W2/W3 are distinct instrument origins with clock, identity and plate limitations; proposes audit trail checks."
+HUM-03,HUM,2,1,2,2,1,8,NO,"Four neutral questions and open recall provided, but control proposed only as generic ""independent records or people"" without specifically naming W2/W3 or a concrete test."
+HUM-04,HUM,2,1,2,2,2,9,NO,Four competing explanations and checks; no explicit reference to S7 in this item and some hypotheses overlap. Deception is not inferred from gaze.
+HUM-05,HUM,2,2,2,2,2,10,NO,Accurate 18:00 cutoff and 18:30 W5 handling; retains original camera time and rejects overconfident identification.
