@@ -19,7 +19,7 @@ These are verbatim historical versions; their presence does not mean all origina
 
 1. Obtain the original *Washington Post* records or transaction-level independent documentation; do not infer service descriptions from aggregate amounts.
 2. Independently validate Engels' $500 exhibit: contact, year discrepancy, Apple Cash transaction status, and any separately identifiable post or deliverable.
-3. Open FEC Schedule B entries for America One C00728667 and check exact individual recipient names, amounts, dates, filing image references and amended filings. The third-party totals are only a lead.
+3. Continue FEC Schedule B audit for America One C00728667. Three X Strategies LLC $10,000 communications-consulting entries have been independently identified in official FEC filing text (2025-08-07, 2026-01-23 and 2026-02-05; primary PDF references in evidence-ledger.json). The **two Loomer disbursements and the full X Strategies total remain unverified** against primary entries; verify exact dates, amounts, image IDs and amendments. PDF screenshots could not be retrieved, so the FEC document-text citations have a visual-inspection limitation.
 4. Seek right of reply on any new proposed factual claims. Loomer's published responses and contrary account are already included.
 5. Conduct human editorial and legal review; correct unverified factual claims before changing `noindex` or seeking a live Firebase production release.
 6. Only after approval: add site index and sitemap links, prepare a scoped Firebase overlay release, run existing tests, create preview, promote and verify readback. There is **no** automatic publication of this draft.
