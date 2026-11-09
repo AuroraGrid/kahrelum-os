@@ -29,3 +29,8 @@ test('manual releases remain bounded and avoid no-op preview failures',()=>{
   assert.match(w,/concurrency:/);
   assert.doesNotMatch(w,/firebase deploy --only hosting/);
 });
+
+test('GitHub runner uses explicit test-file glob compatible with Node 22 on Ubuntu',()=>{
+  assert.match(w,/node --test tests\/\*\.test\.cjs/);
+  assert.doesNotMatch(w,/node --test tests\s*(?:\r?\n|$)/);
+});
