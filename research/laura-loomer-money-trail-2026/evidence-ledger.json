@@ -1,6 +1,6 @@
 {
   "case_id": "KAHRELUM-LOOMER-20261109",
-  "version": "1.2",
+  "version": "1.3",
   "publication_status": "DRAFT_HUMAN_REVIEW_REQUIRED",
   "cutoff_date": "2026-11-09",
   "immutable_originals": [
@@ -64,6 +64,38 @@
       "status": "UNSUPPORTED",
       "claim": "Payments purchased specific government actions, foreign direction, or legal violations",
       "source": null
+    },
+    {
+      "id": "LOOMER08",
+      "status": "PRIMARY_FEC_FILED_LINE_ITEMS_VERIFIED_FROM_INDEXED_TEXT",
+      "claim": "America One filed three $10,000 communications consulting disbursements to X Strategies LLC on 2025-08-07, 2026-01-23, 2026-02-05",
+      "filings": [
+        {
+          "url": "https://docquery.fec.gov/pdf/849/202601239794141849/202601239794141849.pdf",
+          "filed_on": "2026-01-23",
+          "page": 25,
+          "transaction_id": "SB21B010",
+          "payment_date": "2025-08-07",
+          "amount_usd": 10000
+        },
+        {
+          "url": "https://docquery.fec.gov/pdf/303/202602199834758303/202602199834758303.pdf",
+          "filed_on": "2026-02-19",
+          "page": 8,
+          "transaction_id": "SB21B006",
+          "payment_date": "2026-01-23",
+          "amount_usd": 10000
+        },
+        {
+          "url": "https://docquery.fec.gov/pdf/303/202602199834758303/202602199834758303.pdf",
+          "filed_on": "2026-02-19",
+          "page": 8,
+          "transaction_id": "SB21B009",
+          "payment_date": "2026-02-05",
+          "amount_usd": 10000
+        }
+      ],
+      "caveat": "Page screenshot retrieval failed; official published filing text provided the visible line items. This does not corroborate all 15 X Strategies entries, any Loomer payee entry, or a paid-post linkage."
     }
   ],
   "release_gates": {
@@ -72,6 +104,7 @@
     "Engels_exhibit_authentication": false,
     "human_editorial_review": false,
     "legal_review": false,
-    "production_deploy": false
+    "production_deploy": false,
+    "partial_X_strategies_FEC_line_items": true
   }
 }
