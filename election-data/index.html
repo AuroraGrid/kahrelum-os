@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f4efe6">
+<title>Election data directory | KAHRELUM source records</title>
+<meta name="description" content="Explore KAHRELUM's public election observation snapshots, coalition evidence, competition-lock record and timing definitions with explicit source and certification boundaries.">
+<link rel="canonical" href="https://kahrelum.com/election-data/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kahrelum.com/election-data/">
+<meta property="og:title" content="KAHRELUM | Election data and evidence directory">
+<meta property="og:description" content="Source-linked election datasets, frozen competition methods, coalition observations and explicit uncertainty boundaries.">
+<meta property="og:image" content="https://kahrelum.com/assets/social/og-election-data-guide.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="KAHRELUM election data records directory: observation, coalition, competition lock, and time window">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="KAHRELUM | Election data directory">
+<meta name="twitter:description" content="Traceable published evidence with historical cutoffs and source limitations.">
+<meta name="twitter:image" content="https://kahrelum.com/assets/social/og-election-data-guide.png">
+<link rel="stylesheet" href="/site-shell.css?v=20261105-1">
+<script defer src="/site-shell.js?v=20261105-1"></script>
+<style>
+:root{--paper:#f4efe6;--ink:#151b24;--rule:#c9c2b6;--panel:#ece7dc;--muted:#625c51;--accent:#164b55}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65}
+a{color:var(--accent)} a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1020px;padding:2.8rem 1.3rem 5rem;margin:auto}
+.eyebrow{text-transform:uppercase;letter-spacing:.13em;color:var(--muted);font-size:.76rem;font-weight:700}
+h1,h2{font-family:Georgia,serif;letter-spacing:-.025em;line-height:1.17}
+h1{font-size:clamp(2.3rem,6vw,4.1rem);margin:.5rem 0 1rem} h2{font-size:1.55rem}
+.lede{font-size:1.13rem;max-width:780px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:2rem 0}
+.card{background:#fffdf9;border:1px solid var(--rule);border-radius:8px;padding:1.35rem}
+.card h2{margin:.1rem 0 .65rem} .card a{overflow-wrap:anywhere}
+.caution{background:var(--panel);padding:1rem 1.3rem;border-left:4px solid var(--accent)}
+section{margin-top:2rem} footer{padding-top:1.6rem;margin-top:3rem;border-top:1px solid var(--rule);color:var(--muted)}
+@media(max-width:680px){.grid{grid-template-columns:1fr}.wrap{padding:1.6rem 1rem 3rem}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DataCatalog","name":"KAHRELUM election data directory","url":"https://kahrelum.com/election-data/","isAccessibleForFree":true,"description":"Directory of publicly accessible KAHRELUM election research data with distinct cutoff and verification gates.","publisher":{"@type":"Organization","name":"KAHRELUM","url":"https://kahrelum.com/"}}</script>
+</head>
+<body>
+<a class="site-skip skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header"><div class="site-header-inner">
+<a class="site-wordmark" href="/">KAHRELUM OS</a>
+<nav class="site-nav" aria-label="Primary navigation">
+<a href="/assurance">AI Assurance</a><a href="/pilot">Pilot</a>
+<a href="/demo">Sample Record</a><a href="/investigations">Investigations</a>
+<a href="/forecasting">Forecasting</a><a href="/election-lab">Election Lab</a>
+<a href="/os">OS &amp; Method</a></nav>
+</div></header>
+<main class="wrap" id="main-content">
+<p class="eyebrow">Public research labs / evidence custody</p>
+<h1>Election data directory</h1>
+<p class="lede">Read KAHRELUM's published election observations, coalition records, and competition-method snapshots in their original context. This directory is a human-readable entry point. The linked JSON files remain independent source records, with their own cutoffs, fields, corrections, and verification status.</p>
+<div class="caution"><strong>Evidence boundary.</strong> A source observation is not a certified election result. Historical locks are not rewritten after outcomes become available. An unfinished comparison or unresolved official result must remain explicitly unresolved; this directory does not change any earlier forecast, score, or source record.</div>
+<section aria-labelledby="data-files"><h2 id="data-files">Public data files</h2>
+<div class="grid">
+<article class="card"><h2>Observation snapshot</h2>
+<p>Latest published collector state, original prediction references, observed data, and separately labeled scoring or official-result status.</p>
+<a href="/election-data/latest.json">Read latest.json</a></article>
+<article class="card"><h2>Coalition source observations</h2>
+<p>Referenced coalition source records and definition fields; check each record's source and freshness before drawing conclusions.</p>
+<a href="/election-data/coalitions.json">Read coalitions.json</a></article>
+<article class="card"><h2>Competition lock</h2>
+<p>The historical competition protocol, baseline anchors and comparison rules. The lock's original cutoff and limitations are preserved.</p>
+<a href="/election-data/competition-lock.json">Read competition-lock.json</a></article>
+<article class="card"><h2>Comparison time windows</h2>
+<p>Requested observation windows, time-zone interpretation and recorded cutoff timestamps used by the original evaluation.</p>
+<a href="/election-data/comparison-time-windows.json">Read comparison-time-windows.json</a></article>
+</div>
+</section>
+<section><h2>Explore the analysis in context</h2>
+<p>The <a href="/election-lab">Election Lab</a> contains the human-readable methodology and exploration views. See the <a href="/election-challenge">Election Challenge</a> for forecasting comparisons and the <a href="/israel-certified-2026">Israel certified-result review</a> for its distinct official-results evaluation. Neither live views nor historical JSON observations should be treated as a guarantee of prediction accuracy.</p>
+<p>For the current U.S. election reporting surface, see the separate <a href="/election-results-2026">U.S. results page</a>, which retains its own unofficial and certification labels.</p></section>
+<footer><p>Public KAHRELUM research. Independent, operator-assisted research and evidence review. Not a certification. No production API keys or private case material are published here.</p>
+<a href="/pilot#request">Explore a $750 Fit Check</a> · <a href="/os">KAHRELUM OS &amp; Method</a> · <a href="https://github.com/AuroraGrid/kahrelum-os">Public source</a></footer>
+</main>
+</body></html>

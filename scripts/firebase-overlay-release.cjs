@@ -154,6 +154,13 @@ const REQUIRED_REWRITES = {
 };
 const DIVISION_ROUTES = ['/assurance', '/investigations', '/forecasting', '/digital-id', '/one', '/os'];
 const RELEASE_PROFILES = {
+  'election-data-index': {
+    // Search Console 404 repair: add only a human-readable index to the existing evidence directory.
+    // Original JSON source and frozen election locks are never republished or transformed.
+    overlayFiles: ['election-data/index.html', 'assets/social/og-election-data-guide.png', 'sitemap.md'],
+    sitemapRoutes: ['/election-data/'],
+    includeHomepage: false,
+  },
   'buyer-discovery': {
     // Read-patch current live homepage and pilot without replacing archived sections or live social assets.
     overlayFiles: ['AGENTS.md', 'sitemap.md', 'llms-full.txt', 'index.md', 'pilot-page.md'],
@@ -936,6 +943,12 @@ async function buildOverlay(live, profileName) {
   }
 
   const changedPaths = Object.keys(desired).filter((item) => live.fileMap[item] !== desired[item]).sort();
+  if (profileName === 'election-data-index' &&
+      changedPaths.some((item) => ![
+        '/election-data/index.html', '/assets/social/og-election-data-guide.png', '/sitemap.xml', '/sitemap.md',
+      ].includes(item))) {
+    fail('Election data index attempted to change unrelated live Firebase files.');
+  }
   if (profileName === 'buyer-discovery' &&
       changedPaths.some((item) => ![
         '/index.html', '/pilot.html', '/AGENTS.md', '/sitemap.md', '/llms-full.txt', '/index.md', '/pilot-page.md',
@@ -1051,7 +1064,9 @@ function extractCanonical(html) {
 async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
   const checks = [];
   const internal = new Set();
-  const verifiedRoutes = profileName === 'buyer-discovery'
+  const verifiedRoutes = profileName === 'election-data-index'
+    ? ['/election-data/']
+    : profileName === 'buyer-discovery'
     ? ['/', '/pilot']
     : profileName === 'opticodds-market-integrity'
     ? ['/opticodds-market-integrity']
@@ -1101,6 +1116,43 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     }
     for (const match of html.matchAll(/(?:href|src)="(\/[^"#?]*)[^"]*"/g)) internal.add(match[1]);
     checks.push({ route, status: 200, sha256: sha256(bytes) });
+  }
+
+  if (profileName === 'election-data-index') {
+    const page = (await fetchBytes(origin + '/election-data/')).toString('utf8');
+    const pageLink = '<link rel="canonical" href="' + DOMAIN + '/election-data/">';
+    if (!page.includes(pageLink) || !page.includes('<h1>Election data directory</h1>') ||
+        !page.includes('Historical locks are not rewritten') ||
+        !page.includes('href="/election-data/competition-lock.json"')) {
+      fail('Election data index readback failed.');
+    }
+    const sitemap = (await fetchBytes(origin + '/sitemap.xml')).toString('utf8');
+    if (!sitemap.includes('<loc>' + DOMAIN + '/election-data/</loc>')) {
+      fail('Election data index sitemap readback failed.');
+    }
+    const publicGuide = await fetchBytes(origin + '/sitemap.md');
+    if (sha256(publicGuide) !== sha256(readRepositoryBytes('sitemap.md'))) {
+      fail('Election data public directory readback failed.');
+    }
+    const imagePath = '/assets/social/og-election-data-guide.png';
+    const image = await fetchBytes(origin + imagePath);
+    const expected = fs.readFileSync(path.join(ROOT, imagePath.slice(1)));
+    if (image.subarray(1,4).toString('ascii') !== 'PNG' ||
+        image.readUInt32BE(16) !== 1200 || image.readUInt32BE(20) !== 630 ||
+        sha256(image) !== sha256(expected)) {
+      fail('Election data index social preview readback failed.');
+    }
+    for (const dataPath of [
+      '/election-data/latest.json',
+      '/election-data/coalitions.json',
+      '/election-data/competition-lock.json',
+      '/election-data/comparison-time-windows.json',
+    ]) {
+      const data = await fetchBytes(origin + dataPath);
+      try { JSON.parse(data.toString('utf8')); }
+      catch { fail('Existing election-data JSON was not readable at ' + dataPath); }
+    }
+    checks.push({ route: imagePath, status: 200, sha256: sha256(image) });
   }
 
   if (profileName === 'ai-evaluation') {
