@@ -1,0 +1,91 @@
+{
+  "schema": "KAHRELUM_NFL_TRADE_VOLUME_HISTORY_RECONCILIATION_v0.3",
+  "purpose": "Historical source-convention alternative, not a claim that the publication or registry dates equal actual executed trade timestamps",
+  "classification": "SANDBOX_HYPOTHETICAL_NON_SCORING",
+  "createdOnDate": "2026-11-09",
+  "originalV02Preserved": true,
+  "registryAdjustments": [
+    {
+      "season": 2021,
+      "eventId": "2021-eve-01",
+      "fromDay": "eve",
+      "toDay": "deadline",
+      "sourceUrl": "https://www.nfl.com/transactions/league/trades/2021/11",
+      "reason": "NFL monthly trades register dates the transaction on deadline day, while editorial tracker/club report had listed earlier day"
+    },
+    {
+      "season": 2023,
+      "eventId": "2023-eve-01",
+      "fromDay": "eve",
+      "toDay": "deadline",
+      "sourceUrl": "https://www.nfl.com/transactions/league/trades/2023/10",
+      "reason": "NFL monthly trades register dates the transaction on deadline day, while editorial tracker/club report had listed earlier day"
+    },
+    {
+      "season": 2023,
+      "eventId": "2023-eve-02",
+      "fromDay": "eve",
+      "toDay": "deadline",
+      "sourceUrl": "https://www.nfl.com/transactions/league/trades/2023/10",
+      "reason": "NFL monthly trades register dates the transaction on deadline day, while editorial tracker/club report had listed earlier day"
+    },
+    {
+      "season": 2025,
+      "eventId": "2025-eve-01",
+      "fromDay": "eve",
+      "toDay": "deadline",
+      "sourceUrl": "https://www.nfl.com/transactions/league/trades/2025/11",
+      "reason": "NFL monthly trades register dates the transaction on deadline day, while editorial tracker/club report had listed earlier day"
+    },
+    {
+      "season": 2025,
+      "eventId": "2025-eve-02",
+      "fromDay": "eve",
+      "toDay": "deadline",
+      "sourceUrl": "https://www.nfl.com/transactions/league/trades/2025/11",
+      "reason": "NFL monthly trades register dates the transaction on deadline day, while editorial tracker/club report had listed earlier day"
+    }
+  ],
+  "registryAdditions": [
+    {
+      "season": 2025,
+      "tradeId": "2025-REGISTRY-JAIRE-ALEXANDER",
+      "headline": "Jaire Alexander",
+      "deadlinePosition": "eve",
+      "eventDate": "2025-11-03",
+      "sourceUrl": "https://www.nfl.com/transactions/league/trades/2025/11",
+      "originalReportedDate": "2025-11-01",
+      "originalReportSourceUrl": "https://fantasy-www.nfl.com/news/ravens-trade-cb-jaire-alexander-to-eagles-for-2026-sixth-round-pick",
+      "reason": "Nov 3 in league registry; original club announcement occurred Nov 1, not evidence of Nov 3 clock-time execution"
+    }
+  ],
+  "primarySourceConventions": {
+    "2021": "NFL Nov transaction register Nov2 has six player rows representing five trades; Rams said agreed Nov1 and Rams own transaction site shows Oct31. Interpret this as date-convention conflict.",
+    "2022": "NFL November 1 register has 14 player rows but three two-player swaps, representing eleven trades; separately maintained website count ten differs.",
+    "2023": "NFL October register dates Leonard Williams and Kentavius Street Oct31, while editorial tracker reports Oct30. Eight register-date deadline transactions.",
+    "2024": "NFL register and official tracker concordant: one Nov4, eight Nov5.",
+    "2025": "NFL November register has 12 player rows on Nov4 representing ten unique transactions and Jaire Alexander Nov3; NFL editorial tracker lists Nov3 two trades and Nov4 eight plus Jaire Nov1."
+  },
+  "batesClubAnnouncement": {
+    "publishedET": "2026-11-09T11:30:00-05:00",
+    "sourceUrl": "https://www.jaguars.com/news/roster-moves-jaguars-trade-for-s-jessie-bates-iii",
+    "classificationAtV02AsOf": "CLUB_ANNOUNCED_PENDING_PHYSICAL",
+    "condition": "Physical pending; not automatically counted as cleared/completed by the press release",
+    "numericProbabilityIsEmpirical": false
+  },
+  "sourceLinks": [
+    "https://www.nfl.com/transactions/league/trades/2021/11",
+    "https://www.therams.com/news/rams-agree-terms-trade-denver-broncos-outside-linebacker-von-miller",
+    "https://www.therams.com/team/transactions/2021",
+    "https://www.nfl.com/transactions/league/trades/2022/11",
+    "https://www.nfl.com/transactions/league/trades/2023/10",
+    "https://www.nfl.com/news/nfl-trade-deadline-tracking-every-move-since-start-of-the-2023-regular-season",
+    "https://www.nfl.com/transactions/league/trades/2024/11",
+    "https://www.nfl.com/transactions/league/trades/2025/11",
+    "https://www.nfl.com/news/2025-nfl-trade-deadline-fallout",
+    "https://www.jaguars.com/news/roster-moves-jaguars-trade-for-s-jessie-bates-iii"
+  ],
+  "forecastLock": null,
+  "isOfficialForecast": false,
+  "countsInForecastScoreboard": false
+}
