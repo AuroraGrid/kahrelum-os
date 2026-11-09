@@ -8,11 +8,11 @@
     "results": "https://polling-desk.com/results.csv"
   },
   "sourceSha256": {
-    "houseCsv": "f10a26166c62e7a6c4b26f850de056612bcba8b218ccbf1523e4609f637346ee",
-    "resultsCsv": "e34a9446fb619b2d2b683e459de83247327fdf5eb7050a90c016393609564c92"
+    "houseCsv": "e7a048df6162e6e5a4383130bb502ae41b1d4052e734a6a866e7066f4d2fd11d",
+    "resultsCsv": "e9770d7aa4ef67baf50b3608ec92b754f274dbd0fafc48cb6a6ec669da48339b"
   },
-  "sourceLatestResultUpdatedUtc": "2026-11-09T00:55:26Z",
-  "retrievalUtc": "2026-11-09T06:54:44.677378Z",
+  "sourceLatestResultUpdatedUtc": "2026-11-09T12:55:27Z",
+  "retrievalUtc": "2026-11-09T13:24:44.896051Z",
   "publishedAsOf": "Snapshot captured on 2026-11-09 (UTC). Each non-House race includes its per-race source timestamp. Earlier race calls are not official state certifications.",
   "resultStatus": "UNOFFICIAL_CALLS_AND_COUNTS_NOT_CERTIFIED",
   "verificationPolicy": {
@@ -6856,12 +6856,12 @@
       "winnerOrLeader": "Celeste Maloy",
       "party": "REP",
       "votes": {
-        "DEM": 88911,
-        "REP": 143995,
-        "OTHER": 19327
+        "DEM": 89087,
+        "REP": 144009,
+        "OTHER": 19329
       },
-      "totalVotes": 252233,
-      "democraticMarginPoints": -21.84,
+      "totalVotes": 252425,
+      "democraticMarginPoints": -21.76,
       "percentReporting": 94,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ut-03"
     },
@@ -6975,12 +6975,12 @@
       "winnerOrLeader": "Ben Cline",
       "party": "REP",
       "votes": {
-        "DEM": 140685,
-        "REP": 175926,
-        "OTHER": 611
+        "DEM": 140727,
+        "REP": 175944,
+        "OTHER": 612
       },
-      "totalVotes": 317222,
-      "democraticMarginPoints": -11.11,
+      "totalVotes": 317283,
+      "democraticMarginPoints": -11.1,
       "percentReporting": 94,
       "sourceUrl": "https://polling-desk.com/races/2026/house/va-06"
     },
@@ -7026,11 +7026,11 @@
       "winnerOrLeader": "Morgan Griffith",
       "party": "REP",
       "votes": {
-        "DEM": 99851,
-        "REP": 194110,
+        "DEM": 99852,
+        "REP": 194112,
         "OTHER": 599
       },
-      "totalVotes": 294560,
+      "totalVotes": 294563,
       "democraticMarginPoints": -32.0,
       "percentReporting": 87,
       "sourceUrl": "https://polling-desk.com/races/2026/house/va-09"
@@ -8749,19 +8749,19 @@
       "winnerOrLeader": "Mark Warner",
       "party": "DEM",
       "percentReporting": 97,
-      "sourceUpdatedUtc": "2026-11-09T00:55:26Z",
+      "sourceUpdatedUtc": "2026-11-09T12:55:27Z",
       "candidates": [
         {
           "name": "Mark Warner",
           "party": "DEM",
-          "votes": 2202248,
+          "votes": 2202291,
           "percent": 61.3,
           "calledWinner": true
         },
         {
           "name": "Bert Mizusawa",
           "party": "REP",
-          "votes": 1380831,
+          "votes": 1380851,
           "percent": 38.44,
           "calledWinner": false
         },
