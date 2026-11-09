@@ -1,0 +1,491 @@
+{
+  "run": "AI-EVAL-20261109-NATO",
+  "dataset": "KAHRELUM AI Intelligence Evaluation Portfolio v1.0",
+  "blinding": "no_reference_answers_or_scoring_anchors_provided_to_candidate",
+  "provider_tool": "Parallel web_research",
+  "effort": "medium",
+  "prompt": "You are completing a FRESH evaluation test. The following is a SYNTHETIC case study (not an actual incident, person, or intelligence finding). No answer key, expected outputs, scoring rubrics, or feedback are supplied. Do not look for KAHRELUM's answer key. Use only the scenario and cited public reference documents. Answer ALL FIVE numbered tasks with five fields each: (1) conclusion, (2) evidence IDs and what they prove, (3) cutoff/time and provenance, (4) uncertainty and boundaries, (5) specific falsifier or next independent verification check. Distinguish fixture claims from public source statements. Do not infer missing facts or use post-cutoff material to justify earlier conclusions.\nCASE NATO. Entire incident is fictional, \"Member A\" is hypothetical. Assessment cutoff 2026-11-03 15:00 UTC. N1 anonymous post 13:10 claims cyber outage automatically triggered NATO Article 5 and all allies must send troops within 24h. N2 mock utility note 13:35 reports disruptions but unknown cause/scale. N3 mock Member A spokesperson 14:00 says investigating; no official attribution or request supplied. N4 official North Atlantic Treaty Articles 4 and 5 [S2]. N5 NATO Article 5 explainer [S3]: armed-attack threshold plus attacked ally request/consent; assistance may be non-military. N6 NATO cyber guidance [S4]: significant cyber events may qualify case by case. N7 mock later forensic note at 15:20 preliminarily suggests ransomware; actor attribution still unverified and note is AFTER cutoff. N8 14:25 quote chain repeats N1, not independent.\nPublic references: S2 official treaty https://www.nato.int/en/about-us/official-texts-and-resources/official-texts/1949/04/04/the-north-atlantic-treaty ; S3 NATO collective defence explanation https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5 ; S4 NATO cyber defence https://www.nato.int/en/what-we-do/deterrence-and-defence/cyber-defence .\nNATO-01 Can a reported cyber disruption automatically activate Article 5?\nNATO-02 Does Article 5 force every member to deploy troops within 24 hours?\nNATO-03 What was verified in the incident packet at exactly 15:00 UTC?\nNATO-04 How does Article 4 consultation differ from Article 5 obligation?\nNATO-05 Write a concise as-of-cutoff crisis brief: what is known, unknown, and decision?",
+  "raw_response": {
+    "id": "resp_a4847535-dd51-4cd6-81d8-39fc68f38c44",
+    "created_at": 1794201351,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": null,
+    "model": "parallel",
+    "object": "response",
+    "output": [
+      {
+        "id": "ws_resp_a4847535-dd51-4cd6-81d8-39fc68f38c44_0",
+        "action": {
+          "type": "search",
+          "queries": [
+            "NATO treaty Article 4 Article 5 official text consultation armed attack assistance"
+          ],
+          "query": "NATO treaty Article 4 Article 5 official text consultation armed attack assistance",
+          "sources": null
+        },
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "id": "ws_resp_a4847535-dd51-4cd6-81d8-39fc68f38c44_1",
+        "action": {
+          "type": "search",
+          "queries": [
+            "NATO Article 5 attacked ally request consent assistance military or non-military"
+          ],
+          "query": "NATO Article 5 attacked ally request consent assistance military or non-military",
+          "sources": null
+        },
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "id": "ws_resp_a4847535-dd51-4cd6-81d8-39fc68f38c44_2",
+        "action": {
+          "type": "search",
+          "queries": [
+            "NATO cyber defence significant cyber attack Article 5 case by case"
+          ],
+          "query": "NATO cyber defence significant cyber attack Article 5 case by case",
+          "sources": null
+        },
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "id": "ws_resp_a4847535-dd51-4cd6-81d8-39fc68f38c44_3",
+        "action": {
+          "type": "open_page",
+          "url": "https://www.nato.int/en/about-us/official-texts-and-resources/official-texts/1949/04/04/the-north-atlantic-treaty"
+        },
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "id": "ws_resp_a4847535-dd51-4cd6-81d8-39fc68f38c44_4",
+        "action": {
+          "type": "open_page",
+          "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5"
+        },
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "id": "ws_resp_a4847535-dd51-4cd6-81d8-39fc68f38c44_5",
+        "action": {
+          "type": "open_page",
+          "url": "https://www.nato.int/en/what-we-do/deterrence-and-defence/cyber-defence"
+        },
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "id": "msg_resp_a4847535-dd51-4cd6-81d8-39fc68f38c44",
+        "content": [
+          {
+            "annotations": [
+              {
+                "end_index": 289,
+                "start_index": 101,
+                "title": "The North Atlantic Treaty | NATO Official text",
+                "type": "url_citation",
+                "url": "https://www.nato.int/cps/en/natolive/topics_17120.htm"
+              },
+              {
+                "end_index": 488,
+                "start_index": 290,
+                "title": "The North Atlantic Treaty | NATO Official text",
+                "type": "url_citation",
+                "url": "https://www.nato.int/cps/en/natolive/topics_17120.htm"
+              },
+              {
+                "end_index": 713,
+                "start_index": 489,
+                "title": "The North Atlantic Treaty | NATO Official text",
+                "type": "url_citation",
+                "url": "https://www.nato.int/cps/en/natolive/topics_17120.htm"
+              },
+              {
+                "end_index": 1428,
+                "start_index": 1309,
+                "title": "The North Atlantic Treaty | NATO Official text",
+                "type": "url_citation",
+                "url": "https://www.nato.int/cps/en/natolive/topics_17120.htm"
+              },
+              {
+                "end_index": 1700,
+                "start_index": 1429,
+                "title": "The North Atlantic Treaty | NATO Official text",
+                "type": "url_citation",
+                "url": "https://www.nato.int/cps/en/natolive/topics_17120.htm"
+              },
+              {
+                "end_index": 1875,
+                "start_index": 1701,
+                "title": "The North Atlantic Treaty | NATO Official text",
+                "type": "url_citation",
+                "url": "https://www.nato.int/cps/en/natolive/topics_17120.htm"
+              },
+              {
+                "end_index": 2054,
+                "start_index": 1982,
+                "title": "The North Atlantic Treaty | NATO Official text",
+                "type": "url_citation",
+                "url": "https://www.nato.int/cps/en/natolive/topics_17120.htm"
+              },
+              {
+                "end_index": 2300,
+                "start_index": 2055,
+                "title": "The North Atlantic Treaty | NATO Official text",
+                "type": "url_citation",
+                "url": "https://www.nato.int/cps/en/natolive/topics_17120.htm"
+              },
+              {
+                "end_index": 2681,
+                "start_index": 2599,
+                "title": "The North Atlantic Treaty | NATO Official text",
+                "type": "url_citation",
+                "url": "https://www.nato.int/cps/en/natolive/topics_17120.htm"
+              },
+              {
+                "end_index": 3048,
+                "start_index": 2969,
+                "title": "The North Atlantic Treaty | NATO Official text",
+                "type": "url_citation",
+                "url": "https://www.nato.int/cps/en/natolive/topics_17120.htm"
+              },
+              {
+                "end_index": 3238,
+                "start_index": 3113,
+                "title": "The North Atlantic Treaty | NATO Official text",
+                "type": "url_citation",
+                "url": "https://www.nato.int/cps/en/natolive/topics_17120.htm"
+              },
+              {
+                "end_index": 4062,
+                "start_index": 3846,
+                "title": "The North Atlantic Treaty | NATO Official text",
+                "type": "url_citation",
+                "url": "https://www.nato.int/cps/en/natolive/topics_17120.htm"
+              },
+              {
+                "end_index": 4276,
+                "start_index": 4063,
+                "title": "The North Atlantic Treaty | NATO Official text",
+                "type": "url_citation",
+                "url": "https://www.nato.int/cps/en/natolive/topics_17120.htm"
+              },
+              {
+                "end_index": 4434,
+                "start_index": 4277,
+                "title": "The North Atlantic Treaty | NATO Official text",
+                "type": "url_citation",
+                "url": "https://www.nato.int/cps/en/natolive/topics_17120.htm"
+              },
+              {
+                "end_index": 5630,
+                "start_index": 5448,
+                "title": "The North Atlantic Treaty | NATO Official text",
+                "type": "url_citation",
+                "url": "https://www.nato.int/cps/en/natolive/topics_17120.htm"
+              },
+              {
+                "end_index": 5995,
+                "start_index": 5864,
+                "title": "The North Atlantic Treaty | NATO Official text",
+                "type": "url_citation",
+                "url": "https://www.nato.int/cps/en/natolive/topics_17120.htm"
+              },
+              {
+                "end_index": 6185,
+                "start_index": 6071,
+                "title": "The North Atlantic Treaty | NATO Official text",
+                "type": "url_citation",
+                "url": "https://www.nato.int/cps/en/natolive/topics_17120.htm"
+              },
+              {
+                "end_index": 289,
+                "start_index": 101,
+                "title": "Cyber defence | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/deterrence-and-defence/cyber-defence"
+              },
+              {
+                "end_index": 488,
+                "start_index": 290,
+                "title": "Cyber defence | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/deterrence-and-defence/cyber-defence"
+              },
+              {
+                "end_index": 713,
+                "start_index": 489,
+                "title": "Cyber defence | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/deterrence-and-defence/cyber-defence"
+              },
+              {
+                "end_index": 917,
+                "start_index": 847,
+                "title": "Cyber defence | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/deterrence-and-defence/cyber-defence"
+              },
+              {
+                "end_index": 3434,
+                "start_index": 3239,
+                "title": "Cyber defence | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/deterrence-and-defence/cyber-defence"
+              },
+              {
+                "end_index": 5630,
+                "start_index": 5448,
+                "title": "Cyber defence | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/deterrence-and-defence/cyber-defence"
+              },
+              {
+                "end_index": 5995,
+                "start_index": 5864,
+                "title": "Cyber defence | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/deterrence-and-defence/cyber-defence"
+              },
+              {
+                "end_index": 6185,
+                "start_index": 6071,
+                "title": "Cyber defence | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/deterrence-and-defence/cyber-defence"
+              },
+              {
+                "end_index": 6413,
+                "start_index": 6339,
+                "title": "Cyber defence | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/deterrence-and-defence/cyber-defence"
+              },
+              {
+                "end_index": 289,
+                "start_index": 101,
+                "title": "Collective defence and Article 5  | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5"
+              },
+              {
+                "end_index": 488,
+                "start_index": 290,
+                "title": "Collective defence and Article 5  | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5"
+              },
+              {
+                "end_index": 713,
+                "start_index": 489,
+                "title": "Collective defence and Article 5  | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5"
+              },
+              {
+                "end_index": 917,
+                "start_index": 847,
+                "title": "Collective defence and Article 5  | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5"
+              },
+              {
+                "end_index": 1203,
+                "start_index": 918,
+                "title": "Collective defence and Article 5  | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5"
+              },
+              {
+                "end_index": 1428,
+                "start_index": 1309,
+                "title": "Collective defence and Article 5  | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5"
+              },
+              {
+                "end_index": 1700,
+                "start_index": 1429,
+                "title": "Collective defence and Article 5  | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5"
+              },
+              {
+                "end_index": 1875,
+                "start_index": 1701,
+                "title": "Collective defence and Article 5  | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5"
+              },
+              {
+                "end_index": 2054,
+                "start_index": 1982,
+                "title": "Collective defence and Article 5  | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5"
+              },
+              {
+                "end_index": 2300,
+                "start_index": 2055,
+                "title": "Collective defence and Article 5  | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5"
+              },
+              {
+                "end_index": 2681,
+                "start_index": 2599,
+                "title": "Collective defence and Article 5  | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5"
+              },
+              {
+                "end_index": 3048,
+                "start_index": 2969,
+                "title": "Collective defence and Article 5  | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5"
+              },
+              {
+                "end_index": 3238,
+                "start_index": 3113,
+                "title": "Collective defence and Article 5  | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5"
+              },
+              {
+                "end_index": 3434,
+                "start_index": 3239,
+                "title": "Collective defence and Article 5  | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5"
+              },
+              {
+                "end_index": 3676,
+                "start_index": 3435,
+                "title": "Collective defence and Article 5  | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5"
+              },
+              {
+                "end_index": 4062,
+                "start_index": 3846,
+                "title": "Collective defence and Article 5  | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5"
+              },
+              {
+                "end_index": 4276,
+                "start_index": 4063,
+                "title": "Collective defence and Article 5  | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5"
+              },
+              {
+                "end_index": 4434,
+                "start_index": 4277,
+                "title": "Collective defence and Article 5  | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5"
+              },
+              {
+                "end_index": 4675,
+                "start_index": 4563,
+                "title": "Collective defence and Article 5  | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5"
+              },
+              {
+                "end_index": 4910,
+                "start_index": 4676,
+                "title": "Collective defence and Article 5  | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5"
+              },
+              {
+                "end_index": 5630,
+                "start_index": 5448,
+                "title": "Collective defence and Article 5  | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5"
+              },
+              {
+                "end_index": 5995,
+                "start_index": 5864,
+                "title": "Collective defence and Article 5  | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5"
+              },
+              {
+                "end_index": 6185,
+                "start_index": 6071,
+                "title": "Collective defence and Article 5  | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5"
+              },
+              {
+                "end_index": 6413,
+                "start_index": 6339,
+                "title": "Collective defence and Article 5  | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5"
+              },
+              {
+                "end_index": 6682,
+                "start_index": 6414,
+                "title": "Collective defence and Article 5  | NATO Topic",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5"
+              },
+              {
+                "end_index": 6682,
+                "start_index": 0,
+                "title": "The North Atlantic Treaty | NATO Official text",
+                "type": "url_citation",
+                "url": "https://www.nato.int/en/about-us/official-texts-and-resources/official-texts/1949/04/04/the-north-atlantic-treaty"
+              }
+            ],
+            "text": "NATO-01 — (1) Conclusion: No. A reported cyber disruption does not automatically activate Article 5. The treaty requires an armed attack, and NATO says whether a cyber event meets that threshold is assessed case by case; the attacked Ally must also request or consent to collective action. (2) Evidence IDs and what they prove: N1 is an unverified fixture claim, not a NATO determination; S2 states the armed-attack condition, while S3–S4 describe the threshold and case-by-case approach. (3) Cutoff/time and provenance: This conclusion applies at the fictional assessment cutoff of 2026-11-03 15:00 UTC; the cited NATO treaty and guidance are public references, not evidence that the fictional incident occurred. (4) Uncertainty and boundaries: The packet does not establish cause, scale, an armed attack, or the attacked Ally’s request/consent. Cyber events may qualify in some circumstances, but not automatically. (5) Falsifier/next independent check: Independently verify the disruption’s effects and obtain an authenticated statement from Member A confirming whether it requests or consents to collective action; any Article 5 assessment still depends on whether the armed-attack threshold is met.\n\nNATO-02 — (1) Conclusion: No. Article 5 does not require every member to deploy troops within 24 hours. It requires each Ally to assist by taking the action it deems necessary; assistance may or may not involve armed force. (2) Evidence IDs and what they prove: N1’s 24-hour troop claim is unsupported by the treaty language; S2 says “forthwith” and “such action as it deems necessary, including the use of armed force,” and S3 explains that the form and degree of assistance are not prescribed. (3) Cutoff/time and provenance: This is the treaty position applicable at the 2026-11-03 15:00 UTC scenario cutoff; the 24-hour claim is only in the fictional anonymous post. (4) Uncertainty and boundaries: “Forthwith” does not establish a fixed 24-hour troop-deployment deadline. The treaty does not specify identical military assistance by every Ally. (5) Falsifier/next independent check: The claim would require an applicable authoritative instrument establishing a universal 24-hour troop-deployment requirement; check the treaty text and any relevant formal NATO decision for such a provision.\n\nNATO-03 — (1) Conclusion: At exactly 15:00 UTC, the fictional packet verified only that a mock utility note reported disruptions while cause and scale remained unknown, and that a mock Member A spokesperson said the matter was under investigation with no official attribution or request supplied. It did not verify an Article 5-qualifying armed attack, actor, or request/consent. (2) Evidence IDs and what they prove: N2 records reported disruptions and unknown cause/scale; N3 records the spokesperson’s stated investigation and absence of supplied attribution/request; N1 is an anonymous assertion, and N8 merely repeats it, so N8 is not independent corroboration. S2–S3 provide the legal conditions, not verification of the fictional incident. (3) Cutoff/time and provenance: Cutoff is 2026-11-03 15:00 UTC. N7’s preliminary ransomware suggestion at 15:20 is after cutoff and must not be used to characterize what was known at 15:00. (4) Uncertainty and boundaries: These are fixture contents, not independently authenticated real-world findings; cause, scale, attribution, and any request/consent remain unestablished at cutoff. (5) Falsifier/next independent check: Seek independently corroborated utility or incident-response records on impact and cause, plus an authenticated Member A statement on attribution and whether it requests or consents to collective action.\n\nNATO-04 — (1) Conclusion: Article 4 provides for consultations when any Ally considers an Ally’s territorial integrity, political independence, or security threatened. Article 5 concerns assistance following an armed attack, subject to the attacked Ally’s request or consent to collective action; Article 4 consultation is neither an Article 5 trigger nor a prerequisite to Article 5. (2) Evidence IDs and what they prove: S2 gives the treaty wording for both articles; S3 explains the distinction, including that Article 4 consultations do not imply Article 5 and are not a necessary precondition. (3) Cutoff/time and provenance: These are public treaty provisions and NATO’s published explanation, applied as of the fictional 2026-11-03 15:00 UTC cutoff. (4) Uncertainty and boundaries: Consultation may address a perceived threat without establishing that an armed attack occurred. The packet says Member A is investigating; it does not supply an Article 4 request or Article 5 request/consent. (5) Falsifier/next independent check: Verify through an official Member A or NATO statement whether Article 4 consultations were requested or held, and separately whether Member A requested or consented to Article 5 collective action.\n\nNATO-05 — (1) Conclusion: Crisis brief as of cutoff: the fictional packet reports a disruption, but its cause and scale are unknown; Member A says it is investigating, and the packet supplies no official attribution or request. Article 5 is not automatic for cyber disruptions, and the packet does not establish its armed-attack condition or the attacked Ally’s request/consent. No 24-hour troop-deployment obligation follows; if Article 5 applied, each Ally would decide what assistance it deems necessary, which need not be military. The immediate decision is to treat the incident as unverified, pursue independent technical and official confirmation, and avoid claiming Article 5 has been triggered on this record. (2) Evidence IDs and what they prove: Fixture IDs N1–N3 and N8 describe the claims and limited reporting available by 15:00; N8 repeats N1 rather than independently confirming it. Exclude N7 because its 15:20 timing is after cutoff. Public references S2–S4 set out the treaty and NATO’s case-by-case cyber position; they do not authenticate the fictional incident. (3) Cutoff/time and provenance: Assessment cutoff is 2026-11-03 15:00 UTC. N1–N3 and N8 are fictional packet materials; S2–S4 are public NATO references; N7 is a fictional post-cutoff item. (4) Uncertainty and boundaries: No verified cause, severity, attribution, armed-attack determination, or Member A request/consent is supplied at cutoff. The later ransomware suggestion cannot resolve those unknowns as of 15:00. (5) Falsifier/next independent check: Independently validate operational effects and incident cause, then obtain an authenticated Member A or NATO statement on attribution, any request/consent, and whether Allies assess the facts as meeting the armed-attack threshold.",
+            "type": "output_text",
+            "logprobs": null
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": null
+      }
+    ],
+    "parallel_tool_calls": false,
+    "temperature": null,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": null,
+    "background": null,
+    "completed_at": 1794201372,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": null,
+    "reasoning": null,
+    "safety_identifier": null,
+    "service_tier": null,
+    "status": "completed",
+    "text": null,
+    "top_logprobs": null,
+    "truncation": null,
+    "usage": null,
+    "user": null,
+    "effort_used": "medium"
+  }
+}
