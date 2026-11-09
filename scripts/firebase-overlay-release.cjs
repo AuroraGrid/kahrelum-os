@@ -154,6 +154,14 @@ const REQUIRED_REWRITES = {
 };
 const DIVISION_ROUTES = ['/assurance', '/investigations', '/forecasting', '/digital-id', '/one', '/os'];
 const RELEASE_PROFILES = {
+  'hegseth-forecast': {
+    // Preserve the original v1 judgment separately in Git history. Publish only the
+    // new article, its discovery cards and its unique social preview, never the live homepage.
+    overlayFiles: ['insights/hegseth-impeachment-forecast-2026.html', 'insights.html',
+      'forecasting.html', 'assets/social/og-hegseth-impeachment-forecast-2026.png'],
+    sitemapRoutes: ['/insights/hegseth-impeachment-forecast-2026'],
+    includeHomepage: false,
+  },
   'election-data-index': {
     // Search Console 404 repair: add only a human-readable index to the existing evidence directory.
     // Original JSON source and frozen election locks are never republished or transformed.
@@ -994,6 +1002,13 @@ async function buildOverlay(live, profileName) {
       !RELEASE_PROFILES['election-challenge-data'].overlayFiles.includes(item.slice(1)))) {
     fail('Election challenger data release attempted to replace an unrelated live path.');
   }
+  if (profileName === 'hegseth-forecast') {
+    const allowed = new Set(['/sitemap.xml',
+      ...RELEASE_PROFILES['hegseth-forecast'].overlayFiles.map(name => '/' + name)]);
+    if (changedPaths.some(item => !allowed.has(item))) {
+      fail('Hegseth forecast attempted to change an unrelated live Firebase path.');
+    }
+  }
   if (profileName === 'chip01-publication') {
     const allowed = new Set(['/sitemap.xml',
       ...RELEASE_PROFILES['chip01-publication'].overlayFiles.map(name => '/' + name),
@@ -1086,6 +1101,8 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     ? ['/']
     : profileName === 'chip01-publication'
     ? ['/investigations', '/investigations/chip-01', '/insights', '/insights/nvidia-megaspeed-chip-custody']
+    : profileName === 'hegseth-forecast'
+    ? ['/forecasting', '/insights', '/insights/hegseth-impeachment-forecast-2026']
     : profileName === 'legacy-social-metadata'
     ? ['/pilot', '/demo']
     : profileName === 'case-share-cards'
@@ -1240,6 +1257,33 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
         if (html.includes(before) || !html.includes(after)) fail('Research-page conversion patch was not published: ' + route);
       }
     }
+  }
+
+  if (profileName === 'hegseth-forecast') {
+    const route = '/insights/hegseth-impeachment-forecast-2026';
+    const html = (await fetchBytes(origin + route)).toString('utf8');
+    for (const phrase of ['76%', '45%', 'KAHRELUM-US-HEGSETH-20261109-V1',
+      'not independently time-locked', 'House impeachment is not Senate conviction']) {
+      if (!html.includes(phrase)) fail('Hegseth original forecast readback missing: ' + phrase);
+    }
+    for (const entry of ['/forecasting', '/insights']) {
+      const page = (await fetchBytes(origin + entry)).toString('utf8');
+      if (!page.includes('href="' + route + '"')) fail('Hegseth discovery link missing: ' + entry);
+    }
+    const sitemap = (await fetchBytes(origin + '/sitemap.xml')).toString('utf8');
+    if (!sitemap.includes('<loc>' + DOMAIN + route + '</loc>')) {
+      fail('Hegseth forecast sitemap readback failed.');
+    }
+    const imagePath = '/assets/social/og-hegseth-impeachment-forecast-2026.png';
+    const image = await fetchBytes(origin + imagePath);
+    const expected = fs.readFileSync(path.join(ROOT, imagePath.slice(1)));
+    if (image.toString('ascii', 1, 4) !== 'PNG' ||
+        image.readUInt32BE(16) !== 1200 || image.readUInt32BE(20) !== 630 ||
+        sha256(image) !== sha256(expected) ||
+        !html.includes('property="og:image" content="' + DOMAIN + imagePath + '"')) {
+      fail('Hegseth social image 1200x630 and exact byte readback failed.');
+    }
+    checks.push({ route: imagePath, status: 200, sha256: sha256(image) });
   }
 
   if (profileName === 'chip01-publication') {
