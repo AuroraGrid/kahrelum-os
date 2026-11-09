@@ -36,6 +36,7 @@ This public directory groups existing website pages. Research status and timesta
 ## Insights
 
 - [Insights | KAHRELUM](https://kahrelum.com/insights)
+- [Will Hegseth Survive? Impeachment and Departure Forecast | KAHRELUM](https://kahrelum.com/insights/hegseth-impeachment-forecast-2026)
 - [Three Brier Calculations That Still Do Not Count | KAHRELUM](https://kahrelum.com/insights/nfl-brier-accountability)
 - [Keep the Election Monitor Alive—and Its Lanes Separate | KAHRELUM](https://kahrelum.com/insights/election-forecast-custody)
 - [A Bot Can Work and the Money Pitch Can Still Fail | KAHRELUM](https://kahrelum.com/insights/ai-bots-money-claims)
