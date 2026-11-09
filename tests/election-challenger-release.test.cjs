@@ -3,8 +3,10 @@ const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const { createRequire } = require('node:module');
 
 const root = path.resolve(__dirname, '..');
+const publisherRequire = createRequire(path.join(root, 'scripts/firebase-overlay-release.cjs'));
 const read = (name) => fs.readFileSync(path.join(root, name), 'utf8');
 
 test('challenger data release preserves unrelated live files and changes exactly two JSON paths', async () => {
@@ -13,7 +15,7 @@ test('challenger data release preserves unrelated live files and changes exactly
   assert.match(wrapper, /"election-challenge-data"/);
   const definitions = script.slice(0, script.lastIndexOf('\nmain().catch'));
   const build = new Function('require', '__dirname', 'process', 'fetch', 'Buffer',
-    definitions + '\nreturn buildOverlay;')(require, path.join(root, 'scripts'), process,
+    definitions + '\nreturn buildOverlay;')(publisherRequire, path.join(root, 'scripts'), process,
       async () => { throw new Error('A challenger data release must not fetch unrelated live bytes'); }, Buffer);
   const fileMap = {
     '/sitemap.xml': 'opaque-sitemap-hash',
