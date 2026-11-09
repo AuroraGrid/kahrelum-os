@@ -34,6 +34,7 @@ test('pilot patch preserves email-only inquiry and adds distinct examples with a
 test('publisher exposes isolated buyer-discovery profile with fail-closed path guard',()=>{
  const script=read('scripts/firebase-overlay-release.cjs');
  assert.match(script,/'buyer-discovery':\s*\{/);
+ assert.match(script,/patchBuyerPage\(route, liveHtml\)/);
  assert.match(script,/Buyer discovery release attempted to change an unrelated live Firebase path/);
  assert.match(script,/profileName === 'buyer-discovery'/);
  assert.match(script,/Buyer discovery structured metadata readback failed/);

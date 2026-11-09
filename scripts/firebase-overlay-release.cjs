@@ -168,7 +168,7 @@ const RELEASE_PROFILES = {
   },
   'ai-evaluation': {
     // Bounded, source-linked synthetic evaluation. Keep all other live Firebase files unchanged.
-    overlayFiles: ['ai-intelligence-evaluation-2026.html'],
+    overlayFiles: ['ai-intelligence-evaluation-2026.html', 'assets/social/og-ai-intelligence-evaluation-2026.png'],
     sitemapRoutes: ['/ai-intelligence-evaluation-2026'],
     includeHomepage: false,
   },
@@ -845,6 +845,14 @@ async function buildOverlay(live, profileName) {
     addBlob(desired, blobs, '/' + name, sourceBytes);
   }
 
+  if (profileName === 'buyer-discovery') {
+    for (const [hostingPath, route] of [['/index.html', '/'], ['/pilot.html', '/pilot']]) {
+      const liveHtml = (await verifiedLiveFile(live, hostingPath, route)).toString('utf8');
+      const patched = patchBuyerPage(route, liveHtml);
+      addBlob(desired, blobs, hostingPath, Buffer.from(patched, 'utf8'));
+    }
+  }
+
   if (profileName === 'chip01-publication') {
     for (const item of buildChip01SocialArtifacts()) {
       if (!item.approvedArt) {
@@ -941,7 +949,7 @@ async function buildOverlay(live, profileName) {
     fail('OpticOdds release attempted to change an unrelated live Firebase path.');
   }
   if (profileName === 'ai-evaluation' &&
-      changedPaths.some((item) => !['/ai-intelligence-evaluation-2026.html', '/sitemap.xml'].includes(item))) {
+      changedPaths.some((item) => !['/ai-intelligence-evaluation-2026.html', '/assets/social/og-ai-intelligence-evaluation-2026.png', '/sitemap.xml'].includes(item))) {
     fail('AI evaluation release attempted to change an unrelated live Firebase path.');
   }
   if (profileName === 'israel-c7' && changedPaths.some(item =>
@@ -1093,6 +1101,23 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     }
     for (const match of html.matchAll(/(?:href|src)="(\/[^"#?]*)[^"]*"/g)) internal.add(match[1]);
     checks.push({ route, status: 200, sha256: sha256(bytes) });
+  }
+
+  if (profileName === 'ai-evaluation') {
+    const imagePath = '/assets/social/og-ai-intelligence-evaluation-2026.png';
+    const actual = await fetchBytes(origin + imagePath);
+    const expected = fs.readFileSync(path.join(ROOT, imagePath.slice(1)));
+    if (actual.subarray(1, 4).toString('ascii') !== 'PNG' ||
+        actual.readUInt32BE(16) !== 1200 || actual.readUInt32BE(20) !== 630 ||
+        sha256(actual) !== sha256(expected)) {
+      fail('AI evaluation social preview readback failed.');
+    }
+    const page = (await fetchBytes(origin + '/ai-intelligence-evaluation-2026')).toString('utf8');
+    if (!page.includes('property="og:image" content="' + DOMAIN + imagePath + '"') ||
+        !page.includes('name="twitter:image" content="' + DOMAIN + imagePath + '"')) {
+      fail('AI evaluation social metadata readback failed.');
+    }
+    checks.push({route:imagePath,status:200,sha256:sha256(actual)});
   }
 
   if (profileName === 'buyer-discovery') {
