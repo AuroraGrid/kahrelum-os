@@ -1,0 +1,111 @@
+{
+  "run": "AI-EVAL-20261109-AML",
+  "dataset": "KAHRELUM AI Intelligence Evaluation Portfolio v1.0",
+  "blinding": "no_reference_answers_or_scoring_anchors_provided_to_candidate",
+  "provider_tool": "Parallel web_research",
+  "effort": "medium",
+  "prompt": "You are completing a fresh evaluation test. The following is a SYNTHETIC case study (not a real investigation). No answer key, scoring rubrics, expected outputs or feedback are being provided. Do not search for KAHRELUM answers; use the factual scenario below and the named public primary source as a check only. Answer all five numbered questions INDEPENDENTLY. For each use exactly five short fields: (1) conclusion, (2) evidence IDs and what they prove, (3) timing/provenance, (4) uncertainty/boundaries, (5) specific falsifier or next verification check. Clearly distinguish fixture claims from real-world facts. Do not assume absent facts.\nCASE AML, synthetic: Cutoff 2026-10-28 14:50 UTC. Rules P1: invoice copies and transfer reconciliation required for verified claim; P2: supporting records must have been available by cutoff; P3: designated human R1 approval recorded by cutoff required; P4: refer unproven prerequisites, do not endorse original closure. E1: 18,400 + 21,600 + 15,000 USD, available 13:30. E2: customer says invoice payments, 14:10. E3: fictional policy and R1 roster, 13:00. E4: AI note at 14:45 claims verified invoices and closure approved. E5: incomplete later export faithfully reports closure at 14:50, lacks R1 approval. E6: later invoices 2026-10-29 09:00, no earlier availability proved. Variant B adds E7 (invoices + reconciliations 14:20) and E8 (authentic R1 approval originally recorded 14:40). Variant C has E7 but instead E9 (later approval export with unknown original creation and availability). This is not a SAR-filing determination.\nPrimary public source S1: Oct 9, 2025 FinCEN/agency SAR FAQs, especially Question 4: https://www.fincen.gov/system/files/2025-10/SAR-FAQs-October-2025.pdf\nAML-01 What total do the three transfers show, and what can this amount establish?\nAML-02 Was verified invoice reconciliation established by the Variant A closure cutoff?\nAML-03 Does the supplied extract prove designated human R1 authorized closure on time?\nAML-04 Why does Variant B support closure while Variant C remains unresolved?\nAML-05 Does the 2025 FinCEN SAR FAQ make lack of R1 approval a universal BSA violation?\nAnswer all 5 separately with exact IDs; no reference answers are supplied.",
+  "raw_response": {
+    "id": "resp_bf07ed58-5a53-407c-b92d-fa6e015b15dc",
+    "created_at": 1794201270,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": null,
+    "model": "parallel",
+    "object": "response",
+    "output": [
+      {
+        "id": "ws_resp_bf07ed58-5a53-407c-b92d-fa6e015b15dc_0",
+        "action": {
+          "type": "search",
+          "queries": [
+            "FinCEN October 2025 SAR FAQs Question 4 approval BSA violation"
+          ],
+          "query": "FinCEN October 2025 SAR FAQs Question 4 approval BSA violation",
+          "sources": null
+        },
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "id": "ws_resp_bf07ed58-5a53-407c-b92d-fa6e015b15dc_1",
+        "action": {
+          "type": "open_page",
+          "url": "https://www.fincen.gov/system/files/2025-10/SAR-FAQs-October-2025.pdf"
+        },
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "id": "msg_resp_bf07ed58-5a53-407c-b92d-fa6e015b15dc",
+        "content": [
+          {
+            "annotations": [
+              {
+                "end_index": 3017,
+                "start_index": 2767,
+                "title": "Financial Crimes Enforcement Network Board of Governors of the Federal Reserve System Federal Deposit Insurance Corporation National Credit Union Administration",
+                "type": "url_citation",
+                "url": "https://www.fincen.gov/system/files/2025-10/SAR-FAQs-October-2025.pdf"
+              },
+              {
+                "end_index": 3083,
+                "start_index": 3018,
+                "title": "Financial Crimes Enforcement Network Board of Governors of the Federal Reserve System Federal Deposit Insurance Corporation National Credit Union Administration",
+                "type": "url_citation",
+                "url": "https://www.fincen.gov/system/files/2025-10/SAR-FAQs-October-2025.pdf"
+              },
+              {
+                "end_index": 3279,
+                "start_index": 3084,
+                "title": "Financial Crimes Enforcement Network Board of Governors of the Federal Reserve System Federal Deposit Insurance Corporation National Credit Union Administration",
+                "type": "url_citation",
+                "url": "https://www.fincen.gov/system/files/2025-10/SAR-FAQs-October-2025.pdf"
+              },
+              {
+                "end_index": 3482,
+                "start_index": 3280,
+                "title": "Financial Crimes Enforcement Network Board of Governors of the Federal Reserve System Federal Deposit Insurance Corporation National Credit Union Administration",
+                "type": "url_citation",
+                "url": "https://www.fincen.gov/system/files/2025-10/SAR-FAQs-October-2025.pdf"
+              }
+            ],
+            "text": "AML-01 — (1) Conclusion: The three transfers total **$55,000**. (2) Evidence IDs and what they prove: **E1** lists $18,400 + $21,600 + $15,000, which sum to $55,000. (3) Timing/provenance: E1 says the transfers were available at 13:30. (4) Uncertainty/boundaries: The total establishes the listed amount, not invoice purpose or reconciliation. (5) Specific falsifier or next verification check: Check the underlying transfer records if the E1 amounts or their association are disputed.\n\nAML-02 — (1) Conclusion: **No**; Variant A did not establish verified invoice reconciliation by the 14:50 cutoff. (2) Evidence IDs and what they prove: **E6** dates the invoices to 2026-10-29 09:00 and proves no earlier availability; **E4** is an AI note claiming verification, not the invoice/reconciliation records required by P1. (3) Timing/provenance: E6 is after the cutoff; no earlier availability is proved. (4) Uncertainty/boundaries: The conclusion is limited to the supplied fixture evidence; it does not establish whether such records existed outside it. (5) Specific falsifier or next verification check: Produce the invoice copies and reconciliations and evidence they were available by 2026-10-28 14:50.\n\nAML-03 — (1) Conclusion: **No**; the supplied extract does not prove designated human R1 authorized closure by the cutoff. (2) Evidence IDs and what they prove: **E3** identifies the fictional policy and R1 roster; **E5** reports closure at 14:50 but lacks R1 approval; **E4** is an AI note claiming approval. (3) Timing/provenance: E4 is at 14:45; E5 is a later incomplete export and does not record R1 approval by cutoff. (4) Uncertainty/boundaries: This means approval is unproved in the supplied extract, not that R1 necessarily did not approve. (5) Specific falsifier or next verification check: Verify an authentic R1 approval record with evidence of its original creation by 14:50.\n\nAML-04 — (1) Conclusion: Variant B supports closure under the fixture rules; Variant C remains unresolved. (2) Evidence IDs and what they prove: **E7** provides invoices and reconciliations at 14:20, meeting P1 before cutoff; **E8** is authentic R1 approval originally recorded at 14:40, meeting P3. In C, **E9** has unknown original creation and availability, so timely approval is not established. (3) Timing/provenance: E7 and E8 are before the 14:50 cutoff; E9’s timing is unknown. (4) Uncertainty/boundaries: The comparison applies the synthetic P1–P4 rules; it is not a real-world AML or SAR determination. (5) Specific falsifier or next verification check: For C, verify E9’s authentic original record and establish it was created and available by cutoff.\n\nAML-05 — (1) Conclusion: **No**; the 2025 FAQ does not make lack of R1 approval a universal BSA violation. (2) Evidence IDs and what they prove: **S1, Question 4**, says there is no BSA or implementing-regulation requirement or expectation to document a decision not to file a SAR; it addresses SAR documentation, not the fixture’s internal R1 closure rule. (3) Timing/provenance: S1 is the October 9, 2025 interagency FAQ. (4) Uncertainty/boundaries: This does not decide whether an institution’s separate policy or other applicable requirements call for approval; the case is expressly not a SAR-filing determination. (5) Specific falsifier or next verification check: To assess a real-world violation, identify the applicable law or regulation and institution-specific policy, then check the underlying approval record.",
+            "type": "output_text",
+            "logprobs": null
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": null
+      }
+    ],
+    "parallel_tool_calls": false,
+    "temperature": null,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": null,
+    "background": null,
+    "completed_at": 1794201287,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": null,
+    "reasoning": null,
+    "safety_identifier": null,
+    "service_tier": null,
+    "status": "completed",
+    "text": null,
+    "top_logprobs": null,
+    "truncation": null,
+    "usage": null,
+    "user": null,
+    "effort_used": "medium"
+  }
+}
