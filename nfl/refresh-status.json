@@ -1,16 +1,16 @@
 {
   "schema": "KAHRELUM_REFRESH_STATUS_v1.1",
-  "lastAttemptAt": "2026-11-09T13:24:30Z",
-  "lastSuccessfulSourceCheckAt": "2026-11-09T13:24:30Z",
+  "lastAttemptAt": "2026-11-09T14:25:57Z",
+  "lastSuccessfulSourceCheckAt": "2026-11-09T14:25:57Z",
   "lastPublishedUpdateAt": "2026-10-31T13:13:05Z",
-  "feedFreshness": "FRESH",
+  "feedFreshness": "DEGRADED",
   "monitoringState": "DEADLINE_WINDOW_OPEN",
   "deadlineUtc": "2026-11-10T21:00:00Z",
   "sourcesAttempted": 37,
-  "sourcesSucceeded": 37,
-  "sourcesFailed": 0,
-  "observationsNew": 24,
-  "reviewQueueCount": 1360,
+  "sourcesSucceeded": 36,
+  "sourcesFailed": 1,
+  "observationsNew": 19,
+  "reviewQueueCount": 1379,
   "materialAlerts": [
     {
       "observationId": "OBS-50323095a31bcf80e1ad",
@@ -28,11 +28,18 @@
       "originalScreenTipId": "OBS-7422769d896c947ccaaa"
     }
   ],
-  "errors": [],
+  "errors": [
+    {
+      "sourceIntegrationId": "NBC_PFT_RSS",
+      "httpStatus": null,
+      "attempts": 3,
+      "error": "FetchFailure: URLError: <urlopen error [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>"
+    }
+  ],
   "truthBoundary": "Source checks and publication are separate. lastSuccessfulSourceCheckAt means at least one source succeeded; lastFullySuccessfulSourceCheckAt requires every registered operational source to succeed.",
-  "lastCompletedCheckAt": "2026-11-09T13:24:30Z",
+  "lastCompletedCheckAt": "2026-11-09T14:25:57Z",
   "lastFullySuccessfulSourceCheckAt": "2026-11-09T13:24:30Z",
-  "duplicatesSuppressed": 8,
+  "duplicatesSuppressed": 10,
   "sourceFailureAlerts": [],
   "reviewProposalCount": 29,
   "lastManuallyVerifiedOriginalReportAtUtc": "2026-10-31T13:13:05Z",
