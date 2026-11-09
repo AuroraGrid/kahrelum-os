@@ -11,6 +11,7 @@ const { PAGE_PATCHES, MODIFIED_ROUTES, patchLivePage, setSitemapLastmod } = requ
 const { cleanupPromotedPreview } = require(path.join(__dirname, 'firebase-preview-cleanup.cjs'));
 const { buildCaseShareArtifacts, extractCases } = require(path.join(__dirname, 'case-social-pages.cjs'));
 const { buildChip01SocialArtifacts } = require(path.join(__dirname, 'chip01-social.cjs'));
+const { patchBuyerPage } = require(path.join(__dirname, 'buyer-discovery.cjs'));
 
 const SITE = 'kahrelum-public-hosting';
 const INDEXNOW_KEY_FILE = 'dedc67db0c224b1c9a4be1379f7937f5.txt';
@@ -153,6 +154,12 @@ const REQUIRED_REWRITES = {
 };
 const DIVISION_ROUTES = ['/assurance', '/investigations', '/forecasting', '/digital-id', '/one', '/os'];
 const RELEASE_PROFILES = {
+  'buyer-discovery': {
+    // Read-patch current live homepage and pilot without replacing archived sections or live social assets.
+    overlayFiles: ['AGENTS.md', 'sitemap.md', 'llms-full.txt', 'index.md', 'pilot-page.md'],
+    sitemapRoutes: [],
+    includeHomepage: false,
+  },
   'opticodds-market-integrity': {
     // Synthetic OpticOdds-aligned preview only; keep every other live Firebase file and config unchanged.
     overlayFiles: ['opticodds-market-integrity.html', 'assets/social/og-opticodds-market-integrity.png'],
@@ -921,6 +928,12 @@ async function buildOverlay(live, profileName) {
   }
 
   const changedPaths = Object.keys(desired).filter((item) => live.fileMap[item] !== desired[item]).sort();
+  if (profileName === 'buyer-discovery' &&
+      changedPaths.some((item) => ![
+        '/index.html', '/pilot.html', '/AGENTS.md', '/sitemap.md', '/llms-full.txt', '/index.md', '/pilot-page.md',
+      ].includes(item))) {
+    fail('Buyer discovery release attempted to change an unrelated live Firebase path.');
+  }
   if (profileName === 'opticodds-market-integrity' &&
       changedPaths.some((item) => ![
         '/opticodds-market-integrity.html', '/assets/social/og-opticodds-market-integrity.png', '/sitemap.xml',
@@ -1030,7 +1043,9 @@ function extractCanonical(html) {
 async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
   const checks = [];
   const internal = new Set();
-  const verifiedRoutes = profileName === 'opticodds-market-integrity'
+  const verifiedRoutes = profileName === 'buyer-discovery'
+    ? ['/', '/pilot']
+    : profileName === 'opticodds-market-integrity'
     ? ['/opticodds-market-integrity']
     : profileName === 'ai-evaluation'
     ? ['/ai-intelligence-evaluation-2026']
@@ -1078,6 +1093,30 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     }
     for (const match of html.matchAll(/(?:href|src)="(\/[^"#?]*)[^"]*"/g)) internal.add(match[1]);
     checks.push({ route, status: 200, sha256: sha256(bytes) });
+  }
+
+  if (profileName === 'buyer-discovery') {
+    for (const route of ['/', '/pilot']) {
+      const page = (await fetchBytes(origin + route)).toString('utf8');
+      if (!page.includes('id="kahrelum-buyer-discovery-schema"') ||
+          !page.includes('rel="describedby" href="/llms.txt"') ||
+          !page.includes('rel="alternate" type="text/markdown"')) {
+        fail('Buyer discovery structured metadata readback failed: ' + route);
+      }
+      if (route === '/pilot' &&
+          (!page.includes('/opticodds-market-integrity') ||
+           !page.includes('/ai-intelligence-evaluation-2026') ||
+           !page.includes('mailto:hasan@kahrelum.com?subject=KAHRELUM%20Fit%20Check%20Inquiry'))) {
+        fail('Buyer discovery conversion links readback failed.');
+      }
+    }
+    for (const name of ['AGENTS.md', 'sitemap.md', 'llms-full.txt', 'index.md', 'pilot-page.md']) {
+      const output = await fetchBytes(origin + '/' + name);
+      if (sha256(output) !== sha256(readRepositoryBytes(name))) {
+        fail('Buyer discovery documentation readback failed: ' + name);
+      }
+      checks.push({ route: '/' + name, status: 200, sha256: sha256(output) });
+    }
   }
 
   if (profileName === 'opticodds-market-integrity') {

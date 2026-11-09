@@ -17,7 +17,7 @@ test('publisher chooses scoped profiles based on changed pages rather than blind
 });
 
 test('manual releases remain bounded and avoid no-op preview failures',()=>{
-  for (const p of ['ai-evaluation','opticodds-market-integrity','chip01-publication','lead-magnet','us-results-data','nfl-sourcegrid-data']) {
+  for (const p of ['ai-evaluation','opticodds-market-integrity','chip01-publication','lead-magnet','buyer-discovery','us-results-data','nfl-sourcegrid-data']) {
     assert.ok(w.includes(p),p);
   }
   assert.match(w,/changedPaths/);

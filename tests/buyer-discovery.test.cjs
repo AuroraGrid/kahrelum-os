@@ -1,0 +1,42 @@
+'use strict';
+const {test}=require('node:test');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const root=path.join(__dirname,'..');
+const read=p=>fs.readFileSync(path.join(root,p),'utf8');
+test('buyer pages inject truthful organization/service metadata without replacing live content',()=>{
+ const {patchBuyerPage}=require('../scripts/buyer-discovery.cjs');
+ const home='<html><head><link rel="canonical" href="https://kahrelum.com/"><meta property="og:image" content="https://kahrelum.com/assets/social/og-home.png"></head><body><h1>Evidence</h1></body></html>';
+ const patched=patchBuyerPage('/',home);
+ assert.match(patched,/application\/ld\+json/);
+ assert.match(patched,/"@type":"Organization"/);
+ assert.match(patched,/rel="describedby" href="\/llms.txt"/);
+ assert.match(patched,/rel="alternate" type="text\/markdown" href="\/index.md"/);
+ assert.ok(patched.includes('<h1>Evidence</h1>'));
+ assert.ok(patched.includes('og-home.png'));
+ assert.equal(patchBuyerPage('/',patched),patched);
+});
+test('pilot patch preserves email-only inquiry and adds distinct examples with accurate terms',()=>{
+ const {patchBuyerPage}=require('../scripts/buyer-discovery.cjs');
+ const html='<html><head><link rel="canonical" href="https://kahrelum.com/pilot"><meta name="description" content="Fixed-scope, operator-assisted historical AI decision review."></head><body><a class="secondary" href="/demo">Inspect the synthetic deliverable</a><p>Form prepares an email for you to review and send</p></body></html>';
+ const p=patchBuyerPage('/pilot',html);
+ assert.match(p,/"@type":"Service"/);
+ assert.match(p,/"price":"750"/);
+ assert.match(p,/"price":"2500"/);
+ assert.match(p,/opticodds-market-integrity/);
+ assert.match(p,/ai-intelligence-evaluation-2026/);
+ assert.match(p,/href="mailto:hasan@kahrelum.com\?/);
+ assert.match(p,/rel="alternate" type="text\/markdown" href="\/pilot-page.md"/);
+ assert.match(p,/Form prepares an email for you to review and send/);
+ assert.equal(patchBuyerPage('/pilot',p),p);
+});
+test('publisher exposes isolated buyer-discovery profile with fail-closed path guard',()=>{
+ const script=read('scripts/firebase-overlay-release.cjs');
+ assert.match(script,/'buyer-discovery':\s*\{/);
+ assert.match(script,/Buyer discovery release attempted to change an unrelated live Firebase path/);
+ assert.match(script,/profileName === 'buyer-discovery'/);
+ assert.match(script,/Buyer discovery structured metadata readback failed/);
+ assert.match(read('scripts/deploy-unified-firebase.ps1'),/"buyer-discovery"/);
+ for(const f of ['sitemap.md','AGENTS.md','llms-full.txt','index.md','pilot-page.md']) assert.ok(read(f).length>120,f);
+});
