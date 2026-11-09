@@ -15,20 +15,30 @@ on:
       - 'scripts/firebase-overlay-release.cjs'
       - 'scripts/case-social-pages.cjs'
       - 'assets/social-manifest.json'
+      - 'ai-intelligence-evaluation-2026.html'
+      - 'opticodds-market-integrity.html'
+      - 'assets/social/og-opticodds-market-integrity.png'
+      - 'evidence-scorecard.html'
+      - 'evidence-scorecard.js'
   workflow_dispatch:
     inputs:
       profile:
         type: choice
-        description: 'Publish only this audited Firebase overlay'
+        description: 'Publish only this independently audited Firebase overlay'
         options:
           - chip01-publication
           - case-share-cards
           - legacy-social-metadata
           - indexnow-key
+          - ai-evaluation
+          - opticodds-market-integrity
+          - lead-magnet
+          - investigations
+          - commercial-readiness
           - us-results-ui
           - nfl-sourcegrid-data
           - us-results-data
-        default: case-share-cards
+        default: ai-evaluation
 
 permissions:
   contents: read
@@ -43,23 +53,69 @@ jobs:
     timeout-minutes: 25
     env:
       KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON }}
-      RELEASE_PROFILE: ${{ github.event_name == 'push' && 'chip01-publication' || inputs.profile }}
     steps:
-      - name: Check out reviewed main only
+      - name: Check out triggering source commit
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.0
         with:
-          ref: main
+          ref: ${{ github.sha }}
           persist-credentials: false
-          fetch-depth: 1
+          fetch-depth: 0
 
-      - name: Guard release scope and required credential
+      - name: Resolve changed publication profiles
+        id: scope
         shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          PREVIOUS_COMMIT: ${{ github.event.before }}
+          REQUESTED_PROFILE: ${{ inputs.profile }}
         run: |
           set -euo pipefail
-          case "$RELEASE_PROFILE" in
-            chip01-publication|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|us-results-data) ;;
-            *) echo "::error::Unapproved release profile"; exit 1;;
-          esac
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            profiles="$REQUESTED_PROFILE"
+          else
+            if [[ "$PREVIOUS_COMMIT" =~ ^0+$ ]] || ! git cat-file -e "$PREVIOUS_COMMIT^{commit}" 2>/dev/null; then
+              echo "::error::Cannot establish the previous push commit; refusing automatic publishing."
+              exit 1
+            fi
+            changed="$(git diff --name-only "$PREVIOUS_COMMIT" "$GITHUB_SHA" --)"
+            selections=()
+            while IFS= read -r file; do
+              case "$file" in
+                investigations/chip-01.html|insights/nvidia-megaspeed-chip-custody.html|assets/social/og-investigations-chip-01.png|assets/social/og-insights-nvidia-megaspeed-chip-custody.png)
+                  selections+=(chip01-publication) ;;
+                ai-intelligence-evaluation-2026.html)
+                  selections+=(ai-evaluation) ;;
+                opticodds-market-integrity.html|assets/social/og-opticodds-market-integrity.png)
+                  selections+=(opticodds-market-integrity) ;;
+                evidence-scorecard.html|evidence-scorecard.js)
+                  selections+=(lead-magnet) ;;
+                investigations.html)
+                  selections+=(investigations) ;;
+              esac
+            done <<< "$changed"
+            if (( ${#selections[@]} > 0 )); then
+              profiles="$(printf '%s\n' "${selections[@]}" | sort -u | paste -sd ' ' -)"
+            else
+              profiles=""
+              echo "No relevant content changed; no Firebase publication attempted."
+            fi
+          fi
+          echo "profiles=$profiles" >> "$GITHUB_OUTPUT"
+          echo "Selected release profiles: ${profiles:-none}" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Guard release scope and required credential
+        if: steps.scope.outputs.profiles != ''
+        shell: bash
+        env:
+          RELEASE_PROFILES: ${{ steps.scope.outputs.profiles }}
+        run: |
+          set -euo pipefail
+          for profile in $RELEASE_PROFILES; do
+            case "$profile" in
+              chip01-publication|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|commercial-readiness) ;;
+              *) echo "::error::Unapproved release profile: $profile"; exit 1;;
+            esac
+          done
           if [[ -z "$KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON" ]]; then
             echo "::error::Firebase publisher secret missing: cannot publish live site."
             echo "Production untouched. Configure KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON in repository Actions secrets." >> "$GITHUB_STEP_SUMMARY"
@@ -67,13 +123,18 @@ jobs:
           fi
 
       - name: Run focused release regression tests
+        if: steps.scope.outputs.profiles != ''
         shell: bash
         run: |
-          node --test tests/indexnow-discovery.test.cjs tests/chip01-publication.test.cjs tests/case-social-pages.test.cjs tests/firebase-scoped-release-workflow.test.cjs
+          set -euo pipefail
+          node --test tests
           node --check scripts/firebase-overlay-release.cjs
 
       - name: Publish scoped preview, then promote with exact production readback
+        if: steps.scope.outputs.profiles != ''
         shell: bash
+        env:
+          RELEASE_PROFILES: ${{ steps.scope.outputs.profiles }}
         run: |
           set -euo pipefail
           secret_path="$RUNNER_TEMP/kahrelum-scoped-publisher-service-account.json"
@@ -85,7 +146,15 @@ jobs:
           mkdir -p "$XDG_CONFIG_HOME"
           npm install --global firebase-tools@15.34.2
           export FIREBASE_TOOLS_ROOT="$(npm root -g)/firebase-tools"
-          node scripts/firebase-overlay-release.cjs --plan --profile "$RELEASE_PROFILE"
-          node scripts/firebase-overlay-release.cjs --preview --profile "$RELEASE_PROFILE"
-          node scripts/firebase-overlay-release.cjs --promote --profile "$RELEASE_PROFILE"
-          echo "Scoped Firebase production readback verified for $RELEASE_PROFILE." >> "$GITHUB_STEP_SUMMARY"
+          for profile in $RELEASE_PROFILES; do
+            plan_file="$RUNNER_TEMP/kahrelum-plan-$profile.log"
+            node scripts/firebase-overlay-release.cjs --plan --profile "$profile" > "$plan_file"
+            cat "$plan_file"
+            if grep -Fq '"changedPaths": []' "$plan_file"; then
+              echo "Already current: $profile; preview not required." >> "$GITHUB_STEP_SUMMARY"
+              continue
+            fi
+            node scripts/firebase-overlay-release.cjs --preview --profile "$profile"
+            node scripts/firebase-overlay-release.cjs --promote --profile "$profile"
+            echo "Scoped Firebase production readback verified for $profile." >> "$GITHUB_STEP_SUMMARY"
+          done
