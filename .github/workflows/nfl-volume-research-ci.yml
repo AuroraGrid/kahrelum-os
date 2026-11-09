@@ -1,0 +1,54 @@
+name: NFL Trade Volume Research Validation
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "research/nfl-2026-trade-deadline/**"
+      - "scripts/nfl-trade-volume-calibration.cjs"
+      - "tests/nfl-trade-volume-calibration.test.cjs"
+      - ".github/workflows/nfl-volume-research-ci.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  research-only:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - name: Checkout source without write credentials
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.0
+        with:
+          persist-credentials: false
+      - name: Record Node runtime
+        run: node --version
+      - name: Run all four generations of trade-volume tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --test \
+            tests/nfl-trade-volume-calibration.test.cjs \
+            research/nfl-2026-trade-deadline/expanded-model-v02/test_expanded_sandbox.cjs \
+            research/nfl-2026-trade-deadline/registry-model-v04/calibration_v04.test.cjs \
+            research/nfl-2026-trade-deadline/champion-v05/champion_v05.test.cjs
+      - name: Verify research-only model, no 2026 lock
+        shell: bash
+        run: |
+          set -euo pipefail
+          node research/nfl-2026-trade-deadline/champion-v05/champion_v05.cjs > "$RUNNER_TEMP/nfl-volume-research-audit.json"
+          node -e '
+            const fs=require("node:fs");
+            const assert=require("node:assert/strict");
+            const a=JSON.parse(fs.readFileSync(process.argv[1],"utf8"));
+            assert.equal(a.lifecycle,"RESEARCH_ONLY_NOT_ISSUED");
+            assert.equal(a.officialKahrelumPrediction,null);
+            assert.equal(a.officialPredictionLock,null);
+            assert.equal(a.performanceScoreboardUpdated,false);
+            assert.equal(a.internalTestsCountAsOfficialForecasts,false);
+            assert.equal(a.historicalUniqueTrades,59);
+            assert.equal(a.champions.twoDay.name,"NAIVE_POISSON_MEAN");
+            assert.equal(a.champions.deadlineOnly.name,"NAIVE_POISSON_MEAN");
+            console.log("Research-only gate passed: no production publication or forecast lock.");
+          ' "$RUNNER_TEMP/nfl-volume-research-audit.json"
