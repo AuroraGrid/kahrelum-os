@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "edition": "KAH-US-2026-20261031T181057Z with challenger source checks through 2026-11-08T12:53:01Z",
+  "edition": "KAH-US-2026-20261031T181057Z with challenger source checks through 2026-11-09T11:57:52Z",
   "comparisonStatus": "DESCRIPTIVE_ONLY_UNMATCHED_CUTOFFS_AND_SEAT_TYPES",
-  "sourceObservationFileSha256": "3a977dcd1096236c8c0ddb94e3bf3f8d33b88d4584890bc847181c1237649530",
+  "sourceObservationFileSha256": "7bca2197afae50666a6173cd14d8fb614aaa50e268e3553c0a228617b87991a2",
   "house": {
     "totalSeats": 435,
     "democraticControlThreshold": 218,
@@ -53,7 +53,7 @@
       {"provider":"Yale PLSC 2219","democraticSeats":50,"seatType":"class model","edition":"Page snapshot Nov. 2 built 23:55 UTC; class model remains last updated Nov. 1; retrieved Nov. 3 04:10 UTC","sourceUrl":"https://kevinmdeluca.com/forecast/"},
       {"provider":"Dave Manuel","democraticSeats":53,"seatType":"100 minus projected Republican median; publisher separately displays 52 D","edition":"Final forecast updated Nov. 3 11:45 PM ET; retrieved Nov. 4 23:29 UTC","sourceUrl":"https://www.davemanuel.com/2026-midterm-forecast.php"},
       {"provider":"On Point Politics","democraticSeats":54.7,"seatType":"average displayed to one decimal; prose rounds to 55","edition":"Updated Nov. 3 label; retrieved prospectively Nov. 5 05:41 UTC; precise source issue hour unexposed","sourceUrl":"https://onpointpolitics.us/forecast"},
-      {"provider":"VotePredictor","democraticSeats":51.7,"seatType":"expected Democratic seats; separate summary display rounds to 52","edition":"Source page labeled updated Nov. 8; observed prospectively by 12:53:01 UTC; precise source issue time unexposed; independent candidates count for defending party in control model","sourceUrl":"https://votepredictor.com/senate"},
+      {"provider":"VotePredictor","democraticSeats":51.6,"seatType":"expected Democratic seats; separate summary display rounds to 52","edition":"Source page labeled updated Nov. 9; observed prospectively by 11:57:52 UTC; precise source issue time unexposed; independent candidates count for defending party in control model","sourceUrl":"https://votepredictor.com/senate"},
       {"provider":"Midterm Forecast","democraticSeats":53,"seatType":"median Democratic seats; independents counted on Democratic side; 80% interval 48-57","edition":"Model run Nov. 3 4:48 AM ET; retrieved Nov. 3 09:54 UTC","sourceUrl":"https://midtermforecast.com/senate/"}
     ]
   }
