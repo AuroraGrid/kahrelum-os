@@ -21,6 +21,8 @@ on:
       - 'assets/social/og-opticodds-market-integrity.png'
       - 'evidence-scorecard.html'
       - 'evidence-scorecard.js'
+      - 'election-data/index.html'
+      - 'assets/social/og-election-data-guide.png'
   workflow_dispatch:
     inputs:
       profile:
@@ -37,6 +39,7 @@ on:
           - investigations
           - commercial-readiness
           - buyer-discovery
+          - election-data-index
           - us-results-ui
           - nfl-sourcegrid-data
           - us-results-data
@@ -91,6 +94,8 @@ jobs:
                   selections+=(opticodds-market-integrity) ;;
                 evidence-scorecard.html|evidence-scorecard.js)
                   selections+=(lead-magnet) ;;
+                election-data/index.html|assets/social/og-election-data-guide.png)
+                  selections+=(election-data-index) ;;
                 investigations.html)
                   selections+=(investigations) ;;
               esac
@@ -114,7 +119,7 @@ jobs:
           set -euo pipefail
           for profile in $RELEASE_PROFILES; do
             case "$profile" in
-              chip01-publication|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|commercial-readiness|buyer-discovery) ;;
+              chip01-publication|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|commercial-readiness|buyer-discovery|election-data-index) ;;
               *) echo "::error::Unapproved release profile: $profile"; exit 1;;
             esac
           done

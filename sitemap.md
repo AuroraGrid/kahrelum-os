@@ -27,6 +27,7 @@ This public directory groups existing website pages. Research status and timesta
 ## Elections
 
 - [2026 Election Forecast Challenge | KAHRELUM](https://kahrelum.com/election-challenge)
+- [Election data directory | KAHRELUM source records](https://kahrelum.com/election-data/)
 
 ## Forecasting
 
