@@ -153,6 +153,12 @@ const REQUIRED_REWRITES = {
 };
 const DIVISION_ROUTES = ['/assurance', '/investigations', '/forecasting', '/digital-id', '/one', '/os'];
 const RELEASE_PROFILES = {
+  'opticodds-market-integrity': {
+    // Synthetic OpticOdds-aligned preview only; keep every other live Firebase file and config unchanged.
+    overlayFiles: ['opticodds-market-integrity.html', 'assets/social/og-opticodds-market-integrity.png'],
+    sitemapRoutes: ['/opticodds-market-integrity'],
+    includeHomepage: false,
+  },
   'ai-evaluation': {
     // Bounded, source-linked synthetic evaluation. Keep all other live Firebase files unchanged.
     overlayFiles: ['ai-intelligence-evaluation-2026.html'],
@@ -915,6 +921,12 @@ async function buildOverlay(live, profileName) {
   }
 
   const changedPaths = Object.keys(desired).filter((item) => live.fileMap[item] !== desired[item]).sort();
+  if (profileName === 'opticodds-market-integrity' &&
+      changedPaths.some((item) => ![
+        '/opticodds-market-integrity.html', '/assets/social/og-opticodds-market-integrity.png', '/sitemap.xml',
+      ].includes(item))) {
+    fail('OpticOdds release attempted to change an unrelated live Firebase path.');
+  }
   if (profileName === 'ai-evaluation' &&
       changedPaths.some((item) => !['/ai-intelligence-evaluation-2026.html', '/sitemap.xml'].includes(item))) {
     fail('AI evaluation release attempted to change an unrelated live Firebase path.');
@@ -1018,7 +1030,9 @@ function extractCanonical(html) {
 async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
   const checks = [];
   const internal = new Set();
-  const verifiedRoutes = profileName === 'ai-evaluation'
+  const verifiedRoutes = profileName === 'opticodds-market-integrity'
+    ? ['/opticodds-market-integrity']
+    : profileName === 'ai-evaluation'
     ? ['/ai-intelligence-evaluation-2026']
     : profileName === 'lead-magnet'
     ? [...HTML_ROUTES, '/evidence-scorecard']
@@ -1064,6 +1078,28 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     }
     for (const match of html.matchAll(/(?:href|src)="(\/[^"#?]*)[^"]*"/g)) internal.add(match[1]);
     checks.push({ route, status: 200, sha256: sha256(bytes) });
+  }
+
+  if (profileName === 'opticodds-market-integrity') {
+    const imagePath = '/assets/social/og-opticodds-market-integrity.png';
+    const image = await fetchBytes(origin + imagePath);
+    const expected = fs.readFileSync(path.join(ROOT, imagePath.slice(1)));
+    if (image.subarray(1, 4).toString('ascii') !== 'PNG' ||
+        image.readUInt32BE(16) !== 1200 || image.readUInt32BE(20) !== 630 ||
+        sha256(image) !== sha256(expected)) {
+      fail('OpticOdds social preview readback failed.');
+    }
+    const sitemap = (await fetchBytes(origin + '/sitemap.xml')).toString('utf8');
+    if (!sitemap.includes('<loc>' + DOMAIN + '/opticodds-market-integrity</loc>')) {
+      fail('OpticOdds sitemap route readback failed.');
+    }
+    const page = (await fetchBytes(origin + '/opticodds-market-integrity')).toString('utf8');
+    if (!page.includes('Synthetic / No live API') ||
+        !page.includes('No OpticOdds customer failure is alleged') ||
+        !page.includes('No production integration')) {
+      fail('OpticOdds synthetic evidence boundary readback failed.');
+    }
+    checks.push({ route: imagePath, status: 200, sha256: sha256(image) });
   }
 
   if (profileName === 'commercial-readiness') {

@@ -14,6 +14,6 @@ test('scorecard deploy runs a bounded profile rather than the full site', () => 
   assert.doesNotMatch(overlay.split('const HTML_ROUTES =')[0], /'evidence-scorecard\.html'/);
 });
 test('new scorecard route is verified only on its scoped release profile', () => {
-  assert.match(overlay, /const verifiedRoutes = profileName === 'lead-magnet'/);
+  assert.match(overlay, /:\s*profileName === 'lead-magnet'\s*\?\s*\[\.\.\.HTML_ROUTES, '\/evidence-scorecard'\]/);
   assert.match(overlay, /\[\.\.\.HTML_ROUTES, '\/evidence-scorecard'\]/);
 });
