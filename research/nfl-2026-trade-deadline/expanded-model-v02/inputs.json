@@ -1,0 +1,616 @@
+{
+  "schema": "KAHRELUM_NFL_EXPANDED_SANDBOX_v0.2",
+  "id": "SANDBOX-NOLOCK-20261109-002",
+  "classification": "SANDBOX_HYPOTHETICAL_NON_SCORING",
+  "isOfficialForecast": false,
+  "isTimestampLocked": false,
+  "countsInForecastScoreboard": false,
+  "countsAsPerformanceEvidence": false,
+  "officialKahrelumForecast": null,
+  "officialKahrelumLock": null,
+  "asOfET": "2026-11-09T12:16:16-05:00",
+  "deadlineET": "2026-11-10T16:00:00-05:00",
+  "target": "Distinct player-involving NFL in-season trade transactions after as-of cutoff until Nov 10 4 pm ET; one deal counts once",
+  "historicalTransactions": [
+    {
+      "tradeId": "2021-eve-01",
+      "season": 2021,
+      "deadlinePosition": "eve",
+      "eventDate": "2021-11-01",
+      "headline": "Von Miller",
+      "source": "https://www.nfl.com/transactions/league/trades/2021/11",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2021-deadline-01",
+      "season": 2021,
+      "deadlinePosition": "deadline",
+      "eventDate": "2021-11-02",
+      "headline": "Melvin Ingram",
+      "source": "https://www.nfl.com/transactions/league/trades/2021/11",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2021-deadline-02",
+      "season": 2021,
+      "deadlinePosition": "deadline",
+      "eventDate": "2021-11-02",
+      "headline": "Charles Omenihu",
+      "source": "https://www.nfl.com/transactions/league/trades/2021/11",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2021-deadline-03",
+      "season": 2021,
+      "deadlinePosition": "deadline",
+      "eventDate": "2021-11-02",
+      "headline": "Laurent Duvernay-Tardif for Daniel Brown",
+      "source": "https://www.nfl.com/transactions/league/trades/2021/11",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2021-deadline-04",
+      "season": 2021,
+      "deadlinePosition": "deadline",
+      "eventDate": "2021-11-02",
+      "headline": "Kary Vincent Jr.",
+      "source": "https://www.nfl.com/transactions/league/trades/2021/11",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2022-deadline-01",
+      "season": 2022,
+      "deadlinePosition": "deadline",
+      "eventDate": "2022-11-01",
+      "headline": "Dean Marlowe",
+      "source": "https://www.nfl.com/news/2022-nfl-trade-deadline-tracker-full-details-on-every-move",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2022-deadline-02",
+      "season": 2022,
+      "deadlinePosition": "deadline",
+      "eventDate": "2022-11-01",
+      "headline": "Rashad Fenton",
+      "source": "https://www.nfl.com/news/2022-nfl-trade-deadline-tracker-full-details-on-every-move",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2022-deadline-03",
+      "season": 2022,
+      "deadlinePosition": "deadline",
+      "eventDate": "2022-11-01",
+      "headline": "Nyheim Hines for Zack Moss",
+      "source": "https://www.nfl.com/news/2022-nfl-trade-deadline-tracker-full-details-on-every-move",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2022-deadline-04",
+      "season": 2022,
+      "deadlinePosition": "deadline",
+      "eventDate": "2022-11-01",
+      "headline": "Jacob Martin",
+      "source": "https://www.nfl.com/news/2022-nfl-trade-deadline-tracker-full-details-on-every-move",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2022-deadline-05",
+      "season": 2022,
+      "deadlinePosition": "deadline",
+      "eventDate": "2022-11-01",
+      "headline": "Jeff Wilson Jr.",
+      "source": "https://www.nfl.com/news/2022-nfl-trade-deadline-tracker-full-details-on-every-move",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2022-deadline-06",
+      "season": 2022,
+      "deadlinePosition": "deadline",
+      "eventDate": "2022-11-01",
+      "headline": "Calvin Ridley",
+      "source": "https://www.nfl.com/news/2022-nfl-trade-deadline-tracker-full-details-on-every-move",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2022-deadline-07",
+      "season": 2022,
+      "deadlinePosition": "deadline",
+      "eventDate": "2022-11-01",
+      "headline": "Bradley Chubb for Chase Edmonds",
+      "source": "https://www.nfl.com/news/2022-nfl-trade-deadline-tracker-full-details-on-every-move",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2022-deadline-08",
+      "season": 2022,
+      "deadlinePosition": "deadline",
+      "eventDate": "2022-11-01",
+      "headline": "William Jackson III",
+      "source": "https://www.nfl.com/news/2022-nfl-trade-deadline-tracker-full-details-on-every-move",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2022-deadline-09",
+      "season": 2022,
+      "deadlinePosition": "deadline",
+      "eventDate": "2022-11-01",
+      "headline": "Chase Claypool",
+      "source": "https://www.nfl.com/news/2022-nfl-trade-deadline-tracker-full-details-on-every-move",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2022-deadline-10",
+      "season": 2022,
+      "deadlinePosition": "deadline",
+      "eventDate": "2022-11-01",
+      "headline": "T.J. Hockenson",
+      "source": "https://www.nfl.com/news/2022-nfl-trade-deadline-tracker-full-details-on-every-move",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2022-deadline-11",
+      "season": 2022,
+      "deadlinePosition": "deadline",
+      "eventDate": "2022-11-01",
+      "headline": "Roquan Smith",
+      "source": "https://www.nfl.com/news/2022-nfl-trade-deadline-tracker-full-details-on-every-move",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2023-eve-01",
+      "season": 2023,
+      "deadlinePosition": "eve",
+      "eventDate": "2023-10-30",
+      "headline": "Kentavius Street",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-tracking-every-move-since-start-of-the-2023-regular-season",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2023-eve-02",
+      "season": 2023,
+      "deadlinePosition": "eve",
+      "eventDate": "2023-10-30",
+      "headline": "Leonard Williams",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-tracking-every-move-since-start-of-the-2023-regular-season",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2023-deadline-01",
+      "season": 2023,
+      "deadlinePosition": "deadline",
+      "eventDate": "2023-10-31",
+      "headline": "Rasul Douglas",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-tracking-every-move-since-start-of-the-2023-regular-season",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2023-deadline-02",
+      "season": 2023,
+      "deadlinePosition": "deadline",
+      "eventDate": "2023-10-31",
+      "headline": "Donovan Peoples-Jones",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-tracking-every-move-since-start-of-the-2023-regular-season",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2023-deadline-03",
+      "season": 2023,
+      "deadlinePosition": "deadline",
+      "eventDate": "2023-10-31",
+      "headline": "Chase Young",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-tracking-every-move-since-start-of-the-2023-regular-season",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2023-deadline-04",
+      "season": 2023,
+      "deadlinePosition": "deadline",
+      "eventDate": "2023-10-31",
+      "headline": "Ezra Cleveland",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-tracking-every-move-since-start-of-the-2023-regular-season",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2023-deadline-05",
+      "season": 2023,
+      "deadlinePosition": "deadline",
+      "eventDate": "2023-10-31",
+      "headline": "Josh Dobbs",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-tracking-every-move-since-start-of-the-2023-regular-season",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2023-deadline-06",
+      "season": 2023,
+      "deadlinePosition": "deadline",
+      "eventDate": "2023-10-31",
+      "headline": "Montez Sweat",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-tracking-every-move-since-start-of-the-2023-regular-season",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2024-eve-01",
+      "season": 2024,
+      "deadlinePosition": "eve",
+      "eventDate": "2024-11-04",
+      "headline": "Baron Browning",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-tracking-every-move-since-start-of-2024-regular-season",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2024-deadline-01",
+      "season": 2024,
+      "deadlinePosition": "deadline",
+      "eventDate": "2024-11-05",
+      "headline": "Khalil Davis",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-tracking-every-move-since-start-of-2024-regular-season",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2024-deadline-02",
+      "season": 2024,
+      "deadlinePosition": "deadline",
+      "eventDate": "2024-11-05",
+      "headline": "Tre'Davious White",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-tracking-every-move-since-start-of-2024-regular-season",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2024-deadline-03",
+      "season": 2024,
+      "deadlinePosition": "deadline",
+      "eventDate": "2024-11-05",
+      "headline": "Preston Smith",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-tracking-every-move-since-start-of-2024-regular-season",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2024-deadline-04",
+      "season": 2024,
+      "deadlinePosition": "deadline",
+      "eventDate": "2024-11-05",
+      "headline": "Mike Williams",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-tracking-every-move-since-start-of-2024-regular-season",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2024-deadline-05",
+      "season": 2024,
+      "deadlinePosition": "deadline",
+      "eventDate": "2024-11-05",
+      "headline": "Marshon Lattimore",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-tracking-every-move-since-start-of-2024-regular-season",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2024-deadline-06",
+      "season": 2024,
+      "deadlinePosition": "deadline",
+      "eventDate": "2024-11-05",
+      "headline": "Jonathan Mingo",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-tracking-every-move-since-start-of-2024-regular-season",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2024-deadline-07",
+      "season": 2024,
+      "deadlinePosition": "deadline",
+      "eventDate": "2024-11-05",
+      "headline": "Khalil Herbert",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-tracking-every-move-since-start-of-2024-regular-season",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2024-deadline-08",
+      "season": 2024,
+      "deadlinePosition": "deadline",
+      "eventDate": "2024-11-05",
+      "headline": "Za'Darius Smith",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-tracking-every-move-since-start-of-2024-regular-season",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2025-eve-01",
+      "season": 2025,
+      "deadlinePosition": "eve",
+      "eventDate": "2025-11-03",
+      "headline": "Dre'Mont Jones",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2025-regular-season",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2025-eve-02",
+      "season": 2025,
+      "deadlinePosition": "eve",
+      "eventDate": "2025-11-03",
+      "headline": "Jaelan Phillips",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2025-regular-season",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2025-deadline-01",
+      "season": 2025,
+      "deadlinePosition": "deadline",
+      "eventDate": "2025-11-04",
+      "headline": "Ja'Sir Taylor",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2025-regular-season",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2025-deadline-02",
+      "season": 2025,
+      "deadlinePosition": "deadline",
+      "eventDate": "2025-11-04",
+      "headline": "Trevor Penning",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2025-regular-season",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2025-deadline-03",
+      "season": 2025,
+      "deadlinePosition": "deadline",
+      "eventDate": "2025-11-04",
+      "headline": "Quinnen Williams for Mazi Smith",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2025-regular-season",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2025-deadline-04",
+      "season": 2025,
+      "deadlinePosition": "deadline",
+      "eventDate": "2025-11-04",
+      "headline": "Joe Tryon-Shoyinka",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2025-regular-season",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2025-deadline-05",
+      "season": 2025,
+      "deadlinePosition": "deadline",
+      "eventDate": "2025-11-04",
+      "headline": "Rashid Shaheed",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2025-regular-season",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2025-deadline-06",
+      "season": 2025,
+      "deadlinePosition": "deadline",
+      "eventDate": "2025-11-04",
+      "headline": "Sauce Gardner for Adonai Mitchell",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2025-regular-season",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2025-deadline-07",
+      "season": 2025,
+      "deadlinePosition": "deadline",
+      "eventDate": "2025-11-04",
+      "headline": "Jakobi Meyers",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2025-regular-season",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    },
+    {
+      "tradeId": "2025-deadline-08",
+      "season": 2025,
+      "deadlinePosition": "deadline",
+      "eventDate": "2025-11-04",
+      "headline": "Logan Wilson",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2025-regular-season",
+      "exactPublicationTimeET": null,
+      "eventTimeUncertainty": true
+    }
+  ],
+  "historicalSourceURLs": {
+    "2021": "https://www.nfl.com/transactions/league/trades/2021/11",
+    "2022": "https://www.nfl.com/news/2022-nfl-trade-deadline-tracker-full-details-on-every-move",
+    "2023": "https://www.nfl.com/news/nfl-trade-deadline-tracking-every-move-since-start-of-the-2023-regular-season",
+    "2024": "https://www.nfl.com/news/nfl-trade-deadline-tracking-every-move-since-start-of-2024-regular-season",
+    "2025": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2025-regular-season"
+  },
+  "historicalRegimes": {
+    "early": [
+      2021,
+      2022
+    ],
+    "transitional": [
+      2023
+    ],
+    "new": [
+      2024,
+      2025
+    ]
+  },
+  "sourceRegimeWeights": {
+    "early": 0.35,
+    "transitional": 0.6,
+    "new": 1
+  },
+  "official2026Completed": [
+    {
+      "tradeId": "2026-verified-01",
+      "date": "2026-09-28",
+      "headline": "J.J. McCarthy",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season"
+    },
+    {
+      "tradeId": "2026-verified-02",
+      "date": "2026-10-01",
+      "headline": "Joey Porter Jr.",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season"
+    },
+    {
+      "tradeId": "2026-verified-03",
+      "date": "2026-10-07",
+      "headline": "Cam Jurgens",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season"
+    },
+    {
+      "tradeId": "2026-verified-04",
+      "date": "2026-10-12",
+      "headline": "Marvin Harrison Jr.",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season"
+    },
+    {
+      "tradeId": "2026-verified-05",
+      "date": "2026-10-27",
+      "headline": "Quenton Nelson",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season"
+    },
+    {
+      "tradeId": "2026-verified-06",
+      "date": "2026-10-27",
+      "headline": "DeForest Buckner",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season"
+    },
+    {
+      "tradeId": "2026-verified-07",
+      "date": "2026-10-29",
+      "headline": "Jeffery Simmons",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season"
+    },
+    {
+      "tradeId": "2026-verified-08",
+      "date": "2026-11-06",
+      "headline": "Jacoby Brissett",
+      "source": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season"
+    }
+  ],
+  "reportedPending": [
+    {
+      "tradeId": "2026-reported-BATES",
+      "headline": "Jessie Bates III",
+      "reportDate": "2026-11-09",
+      "officialCompletedAt": null,
+      "state": "REPORTED_AGREEMENT_ONLY_AT_SNAPSHOT",
+      "source": "https://www.nfl.com/news/jessie-bates-jaguars-falcons-trade"
+    }
+  ],
+  "operatingAssumptions": {
+    "remainingEveExposureFraction": 0.5,
+    "remainingEveExposureAlternative": [
+      0.25,
+      0.75
+    ],
+    "batesPendingCompletesBeforeDeadlineIllustrativeProbability": 0.75,
+    "batesProbabilitySensitivity": [
+      0,
+      0.5,
+      1
+    ],
+    "timeOfDayEmpiricallyEstimated": false,
+    "sourceWeightsEmpiricallyCalibrated": false,
+    "batesProbabilityEmpiricallyCalibrated": false
+  },
+  "insiderScenario": {
+    "method": "correlation-discounted soft exponential constraint, subjective scenario not historical skill calibration",
+    "maxTotalHeuristicWeight": 0.45,
+    "claims": [
+      {
+        "id": "SCHEFTER_OCT26",
+        "name": "Adam Schefter",
+        "min": 6,
+        "max": null,
+        "admissible": true,
+        "weight": 0.12,
+        "sigma": 3,
+        "window": "10+ deals since Oct26 less 4 NFL-tracker trades",
+        "source": "https://bleacherreport.com/articles/25520820-adam-schefter-predicts-double-digit-trades-nfl-deadline-amid-buzz-jonathan-taylor-more"
+      },
+      {
+        "id": "WOLFE_NOV3_EXECUTIVES",
+        "name": "Cameron Wolfe reporting executives",
+        "min": 9,
+        "max": null,
+        "admissible": true,
+        "weight": 0.18,
+        "sigma": 3,
+        "window": "10+ deals after Nov3 less Brissett",
+        "source": "https://newsespn.pages.dev/nfl/story/_/id/50349677/trade-deadline-rise-quiet-chaotic-more-deals-2026"
+      },
+      {
+        "id": "PELISSERO_NOV9_FINAL36",
+        "name": "Tom Pelissero (secondary Underdog attribution)",
+        "min": 8,
+        "max": 10,
+        "admissible": true,
+        "weight": 0.1,
+        "sigma": 3,
+        "window": "final 36 hours, not full season",
+        "source": "https://sports.yahoo.com/articles/nfl-trade-deadline-rumors-suggest-155938385.html"
+      },
+      {
+        "id": "SCHULTZ_OCT26",
+        "name": "Jordan Schultz",
+        "min": 12,
+        "max": 20,
+        "admissible": false,
+        "weight": 0,
+        "sigma": 3,
+        "window": "unverified total vs additional",
+        "source": "https://www.bleachernation.com/bears/2026/10/26/bears-trade-rumors/"
+      },
+      {
+        "id": "LACANFORA_COLTS",
+        "name": "Jason La Canfora",
+        "min": 3,
+        "max": 4,
+        "admissible": false,
+        "weight": 0,
+        "sigma": 3,
+        "window": "Colts-only, not leaguewide",
+        "source": "https://www.casino.org/news/nfl-insider-jason-la-canfora-colts-eye-3-4-more-trades-seek-second-round-pick-for-jonathan-taylor/"
+      }
+    ]
+  },
+  "historicalStatusNotes": [
+    "2021 Von Miller agreement announced Nov1, NFL monthly register lists Nov2, 2021 Nov2 register includes two player rows from one Chiefs-Jets swap",
+    "2022 NFL tracker has 11 Nov1 trades; alternative dataset reports 10; officially completed Roquan Smith Nov1",
+    "2023 Leonard Williams report dated Oct30 but transaction register dated Oct31",
+    "2024 eight Nov5 and one Nov4 tracker entries, some Nov5 initially reports",
+    "2025 tracker has two Nov3 and eight Nov4 entries while monthly register dates some Nov3 reports Nov4, independent dataset has 21 total vs tracker 22; no false precision"
+  ],
+  "policy": "Experimental scenario only. Sample/provenance weights not fitted. No forecast issued, locked, scored, or deployed."
+}
