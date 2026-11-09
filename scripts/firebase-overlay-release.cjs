@@ -153,6 +153,12 @@ const REQUIRED_REWRITES = {
 };
 const DIVISION_ROUTES = ['/assurance', '/investigations', '/forecasting', '/digital-id', '/one', '/os'];
 const RELEASE_PROFILES = {
+  'ai-evaluation': {
+    // Bounded, source-linked synthetic evaluation. Keep all other live Firebase files unchanged.
+    overlayFiles: ['ai-intelligence-evaluation-2026.html'],
+    sitemapRoutes: ['/ai-intelligence-evaluation-2026'],
+    includeHomepage: false,
+  },
   'results-verified': {
     // First release for the three election / NFL public views. Never publish research drafts or frozen forecasts.
     overlayFiles: [
@@ -909,6 +915,10 @@ async function buildOverlay(live, profileName) {
   }
 
   const changedPaths = Object.keys(desired).filter((item) => live.fileMap[item] !== desired[item]).sort();
+  if (profileName === 'ai-evaluation' &&
+      changedPaths.some((item) => !['/ai-intelligence-evaluation-2026.html', '/sitemap.xml'].includes(item))) {
+    fail('AI evaluation release attempted to change an unrelated live Firebase path.');
+  }
   if (profileName === 'israel-c7' && changedPaths.some(item =>
       !['/israel-certified-2026.html', '/israel-certified-2026.js',
         '/election/israel-certified-2026.json', '/forecasting.html', '/index.html'].includes(item))) {
@@ -1008,7 +1018,9 @@ function extractCanonical(html) {
 async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
   const checks = [];
   const internal = new Set();
-  const verifiedRoutes = profileName === 'lead-magnet'
+  const verifiedRoutes = profileName === 'ai-evaluation'
+    ? ['/ai-intelligence-evaluation-2026']
+    : profileName === 'lead-magnet'
     ? [...HTML_ROUTES, '/evidence-scorecard']
     : profileName === 'results-verified'
     ? [...HTML_ROUTES, '/evidence-scorecard', '/election-results-2026', '/israel-certified-2026', '/nfl/deadline-watch-2026']
