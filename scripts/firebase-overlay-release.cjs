@@ -5,7 +5,7 @@ const childProcess = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const util = require('util');
-const zlib = require('zlib');
+const { gzipPinned, matchesPublishedGzipHash } = require('./firebase-gzip-custody.cjs');
 const { Readable } = require('stream');
 const { PAGE_PATCHES, MODIFIED_ROUTES, patchLivePage, setSitemapLastmod } = require(path.join(__dirname, 'commercial-readiness.cjs'));
 const { cleanupPromotedPreview } = require(path.join(__dirname, 'firebase-preview-cleanup.cjs'));
@@ -421,7 +421,7 @@ const RELEASE_PROFILES = {
 
 const sha256 = (value) => crypto.createHash('sha256').update(value).digest('hex');
 const stableMapHash = (value) => sha256(Buffer.from(JSON.stringify(Object.fromEntries(Object.entries(value).sort()))));
-const gzip = (value) => zlib.gzipSync(value, { level: 9 });
+const gzip = gzipPinned;
 
 function fail(message) {
   throw new Error(message);
@@ -529,7 +529,7 @@ async function verifiedLiveFile(live, hostingPath, publicPath) {
   const expected = live.fileMap[hostingPath];
   if (!expected) fail(`Live Firebase inventory does not contain ${hostingPath}.`);
   const bytes = await fetchBytes(DOMAIN + publicPath);
-  if (sha256(gzip(bytes)) !== expected) fail(`Public bytes do not match the live Firebase hash for ${hostingPath}.`);
+  if (!matchesPublishedGzipHash(bytes, expected)) fail(`Public bytes do not match the live Firebase hash for ${hostingPath}.`);
   return bytes;
 }
 

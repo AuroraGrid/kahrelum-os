@@ -3,8 +3,10 @@ const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const { createRequire } = require('node:module');
 
 const root = path.resolve(__dirname, '..');
+const publisherRequire = createRequire(path.join(root, 'scripts/firebase-overlay-release.cjs'));
 const read = (p) => fs.readFileSync(path.join(root, p), 'utf8');
 
 test('twelve independently labeled public records preserve evidence and portfolio boundaries', () => {
@@ -64,7 +66,7 @@ test('investigations overlay preserves opaque live hashes and never fetches or r
   const script = read('scripts/firebase-overlay-release.cjs');
   const definitions = script.slice(0, script.lastIndexOf('\nmain().catch'));
   const build = new Function('require', '__dirname', 'process', 'fetch', 'Buffer',
-    definitions + '\nreturn buildOverlay;')(require, path.join(root, 'scripts'), process,
+    definitions + '\nreturn buildOverlay;')(publisherRequire, path.join(root, 'scripts'), process,
       async () => { throw new Error('A bounded investigations release must not fetch unrelated live bytes'); }, Buffer);
   const fileMap = {
     '/sitemap.xml': 'opaque-hash-from-another-platform',
@@ -88,7 +90,7 @@ test('version lifecycle passes project and site separately to the installed Fire
   const script = read('scripts/firebase-overlay-release.cjs');
   const definitions = script.slice(0, script.lastIndexOf('\nmain().catch'));
   const createPreview = new Function('require', '__dirname', 'process', 'fetch', 'Buffer',
-    definitions + '\nreturn createPreview;')(require, path.join(root, 'scripts'), process,
+    definitions + '\nreturn createPreview;')(publisherRequire, path.join(root, 'scripts'), process,
       async () => { throw new Error('No network access in this lifecycle test'); }, Buffer);
   const stop = new Error('Stop after observing finalization arguments');
   const config = {cleanUrls: true};
@@ -125,7 +127,7 @@ test('version lifecycle supports the two-argument Firebase CLI API installed by 
   const script = read('scripts/firebase-overlay-release.cjs');
   const definitions = script.slice(0, script.lastIndexOf('\nmain().catch'));
   const createPreview = new Function('require', '__dirname', 'process', 'fetch', 'Buffer',
-    definitions + '\nreturn createPreview;')(require, path.join(root, 'scripts'), process,
+    definitions + '\nreturn createPreview;')(publisherRequire, path.join(root, 'scripts'), process,
       async () => { throw new Error('No network access in this lifecycle test'); }, Buffer);
   const stop = new Error('Stop after observing finalization arguments');
   const config = {cleanUrls: true};
@@ -162,7 +164,7 @@ test('project-name aliases canonicalize to the verified project number without a
   const script = read('scripts/firebase-overlay-release.cjs');
   const definitions = script.slice(0, script.lastIndexOf('\nmain().catch'));
   const canonical = new Function('require', '__dirname', 'process', 'Buffer',
-    definitions + '\nreturn canonicalVersionName;')(require, path.join(root, 'scripts'), process, Buffer);
+    definitions + '\nreturn canonicalVersionName;')(publisherRequire, path.join(root, 'scripts'), process, Buffer);
   const live = 'projects/806087933597/sites/kahrelum-public-hosting/versions/base';
   const expected = 'projects/806087933597/sites/kahrelum-public-hosting/versions/19b135529a0ef046';
   assert.equal(canonical('projects/kahrelum-public-hosting/sites/kahrelum-public-hosting/versions/19b135529a0ef046', live), expected);
