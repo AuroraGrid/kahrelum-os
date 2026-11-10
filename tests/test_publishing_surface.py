@@ -306,9 +306,9 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertNotIn("houseDemocraticControlExactPct", new_numeric["On Point Politics"])
         self.assertNotIn("senateDemocraticControlExactPct", new_numeric["On Point Politics"])
         self.assertNotIn("houseDemocraticSeatsExact", new_numeric["On Point Politics"])
-        self.assertEqual((new_numeric["VotePredictor"]["houseDemocraticControlPct"], new_numeric["VotePredictor"]["senateDemocraticControlPct"]), (77.0, 65.0))
-        self.assertEqual((new_numeric["VotePredictor"]["houseDemocraticSeats"], new_numeric["VotePredictor"]["senateDemocraticSeats"]), (230.4, 51.6))
-        self.assertEqual(new_numeric["VotePredictor"]["custodyReceiptSha256"], "1674d2c610d4352a0eaea799105d6f0b2a770e630b0b9b94c474c5c735d9975e")
+        self.assertEqual((new_numeric["VotePredictor"]["houseDemocraticControlPct"], new_numeric["VotePredictor"]["senateDemocraticControlPct"]), (77.0, 66.0))
+        self.assertEqual((new_numeric["VotePredictor"]["houseDemocraticSeats"], new_numeric["VotePredictor"]["senateDemocraticSeats"]), (230.4, 51.7))
+        self.assertEqual(new_numeric["VotePredictor"]["custodyReceiptSha256"], "8d7ce6808edc269f3ae823430ca4401a6326953dc37d5d1f1be22d927cca6994")
         senate_receipt_path = new_numeric["VotePredictor"]["senateCustodyReceiptPath"]
         senate_receipt_bytes = (ROOT / senate_receipt_path).read_bytes()
         self.assertEqual(new_numeric["VotePredictor"]["senateCustodyReceiptSha256"], hashlib.sha256(senate_receipt_bytes).hexdigest())

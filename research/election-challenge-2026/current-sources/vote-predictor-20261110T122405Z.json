@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "VotePredictor",
+  "observedNoLaterThanUtc": "2026-11-10T12:24:05Z",
+  "custodyRepresentation": "SELECTED_FIRST_PARTY_RENDERED_FIELDS_NOT_RAW_HTML",
+  "retrievalMethod": "Firecrawl first-party public page scrape with maxAge 0, corroborated by rendered-page retrieval",
+  "sourceDateText": "Forecast updated 10 Nov 2026",
+  "preciseSourceIssueTimeExposed": false,
+  "house": {
+    "sourceUrl": "https://votepredictor.com/house",
+    "firecrawlScrapeId": "01a1c569-70c5-73cb-afff-f101857adcd5",
+    "democraticControlPct": 77.0,
+    "expectedDemocraticSeats": 230.4,
+    "democraticControlThreshold": 218,
+    "eightyPctSeatInterval": [209, 252],
+    "priorAdmittedObservation": {"sourceDateText": "Forecast updated 8 Nov 2026", "democraticControlPct": 77.0, "expectedDemocraticSeats": 230.4}
+  },
+  "senate": {
+    "sourceUrl": "https://votepredictor.com/senate",
+    "firecrawlScrapeId": "01a1c569-4001-751c-b138-297b870f8bbd",
+    "democraticControlPct": 66.0,
+    "expectedDemocraticSeats": 51.7,
+    "democraticControlThreshold": 51,
+    "eightyPctSeatInterval": [47, 55],
+    "priorAdmittedObservation": {"sourceDateText": "Forecast updated 9 Nov 2026", "democraticControlPct": 65.0, "expectedDemocraticSeats": 51.6}
+  },
+  "denominatorCaveat": "A 50-50 Senate split counts as Republican control via the vice president. Independent candidates are evaluated separately; source control events are not asserted equivalent to KAHRELUM caucus events.",
+  "rawResponsePreserved": false,
+  "admissionScope": "Descriptive challenger observation only; not a KAHRELUM model input or original forecast lock."
+}
