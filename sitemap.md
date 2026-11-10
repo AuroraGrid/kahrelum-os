@@ -36,6 +36,7 @@ This public directory groups existing website pages. Research status and timesta
 ## Insights
 
 - [Insights | KAHRELUM](https://kahrelum.com/insights)
+- [The OSINT Illusion: When Real Evidence Creates a False Sense of Certainty | KAHRELUM](https://kahrelum.com/insights/osint-illusion)
 - [Will Hegseth Survive? Impeachment and Departure Forecast | KAHRELUM](https://kahrelum.com/insights/hegseth-impeachment-forecast-2026)
 - [Three Brier Calculations That Still Do Not Count | KAHRELUM](https://kahrelum.com/insights/nfl-brier-accountability)
 - [Keep the Election Monitor Alive—and Its Lanes Separate | KAHRELUM](https://kahrelum.com/insights/election-forecast-custody)

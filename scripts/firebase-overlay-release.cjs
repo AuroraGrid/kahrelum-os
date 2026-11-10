@@ -65,6 +65,7 @@ const SOCIAL_CARD_FILES = [
   'assets/social/og-insights-election-forecast-custody.png',
   'assets/social/og-insights-nfl-brier-accountability.png',
   'assets/social/og-insights.png',
+  'assets/social/og-insights-osint-illusion.png',
   'assets/social/og-investigations.png',
   'assets/social/og-nfl-analysis.png',
   'assets/social/og-nfl-film-room.png',
@@ -134,6 +135,7 @@ const OVERLAY_FILES = [
   'insights/nfl-brier-accountability.html',
   'insights/election-forecast-custody.html',
   'insights/ai-bots-money-claims.html',
+  'insights/osint-illusion.html',
   'nfl/weekly-brief.html',
   'sports-interest.html',
   'assets/kahrelum-sports-intelligence-nfl-social-card.png',
@@ -149,7 +151,7 @@ const HTML_ROUTES = [
   '/nfl/trades', '/nfl/analysis', '/nfl/weekly-brief', '/nfl/trade-volume-challenge-2026',
   '/sports', '/nfl/film-room', '/sports/nba', '/sports/mlb', '/sports/nhl',
   '/insights', '/insights/nfl-brier-accountability', '/insights/election-forecast-custody',
-  '/insights/ai-bots-money-claims', '/sports-interest',
+  '/insights/ai-bots-money-claims', '/insights/osint-illusion', '/sports-interest',
 ];
 const API_ROUTES = ['/api/v1', '/api/v1/release', '/api/v1/example'];
 const LEGACY_SOCIAL_SPECS = {
@@ -166,6 +168,13 @@ const REQUIRED_REWRITES = {
 };
 const DIVISION_ROUTES = ['/assurance', '/investigations', '/forecasting', '/digital-id', '/one', '/os'];
 const RELEASE_PROFILES = {
+  'osint-illusion': {
+    // Bounded publication: article, discovery, text directory and original social art only.
+    overlayFiles: ['insights/osint-illusion.html', 'insights.html', 'sitemap.md',
+      'assets/social/og-insights-osint-illusion.png'],
+    sitemapRoutes: ['/insights/osint-illusion'],
+    includeHomepage: false,
+  },
   'hegseth-forecast': {
     // Preserve the original v1 judgment separately in Git history. Publish only the
     // new article, its discovery cards and its unique social preview, never the live homepage.
@@ -1047,6 +1056,10 @@ async function buildOverlay(live, profileName) {
       !RELEASE_PROFILES['election-challenge-data'].overlayFiles.includes(item.slice(1)))) {
     fail('Election challenger data release attempted to replace an unrelated live path.');
   }
+  if (profileName === 'osint-illusion') {
+    const allowed = new Set(['/sitemap.xml', ...RELEASE_PROFILES['osint-illusion'].overlayFiles.map(name => '/' + name)]);
+    if (changedPaths.some(item => !allowed.has(item))) fail('OSINT Insight attempted to alter unrelated Firebase routes.');
+  }
   if (profileName === 'hegseth-forecast') {
     const allowed = new Set(['/sitemap.xml',
       ...RELEASE_PROFILES['hegseth-forecast'].overlayFiles.map(name => '/' + name)]);
@@ -1124,7 +1137,9 @@ function extractCanonical(html) {
 async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
   const checks = [];
   const internal = new Set();
-  const verifiedRoutes = profileName === 'election-data-index'
+  const verifiedRoutes = profileName === 'osint-illusion'
+    ? ['/insights', '/insights/osint-illusion']
+    : profileName === 'election-data-index'
     ? ['/election-data/']
     : profileName === 'buyer-discovery'
     ? ['/', '/pilot']
@@ -1304,6 +1319,28 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     }
   }
 
+  if (profileName === 'osint-illusion') {
+    const route = '/insights/osint-illusion';
+    const article = (await fetchBytes(origin + route)).toString('utf8');
+    if (!article.includes('7Q-VAF') || !article.includes('No verified evidence in this source review establishes')) {
+      fail('OSINT source boundary missing from production readback.');
+    }
+    const index = (await fetchBytes(origin + '/insights')).toString('utf8');
+    if (!index.includes('href="' + route + '"')) fail('OSINT discovery link missing on production.');
+    const textMap = (await fetchBytes(origin + '/sitemap.md')).toString('utf8');
+    if (!textMap.includes(DOMAIN + route)) fail('OSINT article missing in the public text sitemap.');
+    const xml = (await fetchBytes(origin + '/sitemap.xml')).toString('utf8');
+    if (!xml.includes('<loc>' + DOMAIN + route + '</loc>')) fail('OSINT article missing in production XML sitemap.');
+    const imagePath = '/assets/social/og-insights-osint-illusion.png';
+    const bytes = await fetchBytes(origin + imagePath);
+    const source = fs.readFileSync(path.join(ROOT, imagePath.slice(1)));
+    if (bytes.toString('ascii', 1, 4) !== 'PNG' || bytes.readUInt32BE(16) !== 1200 ||
+        bytes.readUInt32BE(20) !== 630 || sha256(bytes) !== sha256(source) ||
+        !article.includes('property="og:image" content="' + DOMAIN + imagePath + '"')) {
+      fail('OSINT social card bytes or metadata missing on production.');
+    }
+    checks.push({route: imagePath, status: 200, sha256: sha256(bytes)});
+  }
   if (profileName === 'hegseth-forecast') {
     const route = '/insights/hegseth-impeachment-forecast-2026';
     const html = (await fetchBytes(origin + route)).toString('utf8');
