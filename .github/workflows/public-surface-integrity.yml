@@ -26,6 +26,8 @@ jobs:
           python3 scripts/build-kahrelum-editorial-social.py
           python3 scripts/build-kahrelum-editorial-social.py --check
           node --test tests/nfl-editorial-v2.test.cjs
+      - name: Run full Node regression sweep before Firebase promotion
+        run: node --test tests/*.test.cjs
       - name: Validate canonical public surface
         shell: bash
         run: |
