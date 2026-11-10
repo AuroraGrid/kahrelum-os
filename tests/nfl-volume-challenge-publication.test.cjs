@@ -49,7 +49,7 @@ test('scoped Firebase challenge profile cannot overwrite SourceGrid or forecast 
 });
 test('Firebase CI watches the versioned page assets and allows nfl-editorial-v2 profile',()=>{
  const y=read('.github/workflows/firebase-scoped-release.yml');
- for(const token of ['nfl/trade-volume-challenge-2026.html','og-nfl-trade-volume-challenge-2026-v2.png','selections+=(nfl-editorial-v2)','- nfl-editorial-v2','nfl-editorial-v2|us-results-data'])assert.ok(y.includes(token),token);
+ for(const token of ['nfl/trade-volume-challenge-2026.html','assets/social/editorial-source/**','selections+=(nfl-editorial-v2)','- nfl-editorial-v2','nfl-editorial-v2|us-results-data'])assert.ok(y.includes(token),token);
  assert.doesNotMatch(y,/firebase deploy --only hosting/);
 });
 test('challenge links are present in sports desk, NFL trade desk, film room and public sitemap',()=>{
