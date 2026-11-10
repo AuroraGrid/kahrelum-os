@@ -136,6 +136,7 @@ const OVERLAY_FILES = [
   'insights/election-forecast-custody.html',
   'insights/ai-bots-money-claims.html',
   'insights/osint-illusion.html',
+  'insights/hegseth-war-powers-fact-check.html',
   'nfl/weekly-brief.html',
   'sports-interest.html',
   'assets/kahrelum-sports-intelligence-nfl-social-card.png',
@@ -151,7 +152,7 @@ const HTML_ROUTES = [
   '/nfl/trades', '/nfl/analysis', '/nfl/weekly-brief', '/nfl/trade-volume-challenge-2026',
   '/sports', '/nfl/film-room', '/sports/nba', '/sports/mlb', '/sports/nhl',
   '/insights', '/insights/nfl-brier-accountability', '/insights/election-forecast-custody',
-  '/insights/ai-bots-money-claims', '/insights/osint-illusion', '/sports-interest',
+  '/insights/ai-bots-money-claims', '/insights/osint-illusion', '/insights/hegseth-war-powers-fact-check', '/sports-interest',
 ];
 const API_ROUTES = ['/api/v1', '/api/v1/release', '/api/v1/example'];
 const LEGACY_SOCIAL_SPECS = {
@@ -168,6 +169,12 @@ const REQUIRED_REWRITES = {
 };
 const DIVISION_ROUTES = ['/assurance', '/investigations', '/forecasting', '/digital-id', '/one', '/os'];
 const RELEASE_PROFILES = {
+  'hegseth-law-audit': {
+    // Only the article, Insights discovery and source directory; no forecast mutation.
+    overlayFiles: ['insights/hegseth-war-powers-fact-check.html', 'insights.html', 'sitemap.md'],
+    sitemapRoutes: ['/insights/hegseth-war-powers-fact-check'],
+    includeHomepage: false,
+  },
   'osint-illusion': {
     // Bounded publication: article, discovery, text directory and original social art only.
     overlayFiles: ['insights/osint-illusion.html', 'insights.html', 'sitemap.md',
@@ -1056,6 +1063,13 @@ async function buildOverlay(live, profileName) {
       !RELEASE_PROFILES['election-challenge-data'].overlayFiles.includes(item.slice(1)))) {
     fail('Election challenger data release attempted to replace an unrelated live path.');
   }
+  if (profileName === 'hegseth-law-audit') {
+    const allowed = new Set(['/sitemap.xml',
+      ...RELEASE_PROFILES['hegseth-law-audit'].overlayFiles.map(name => '/' + name)]);
+    if (changedPaths.some(item => !allowed.has(item))) {
+      fail('Hegseth legal audit attempted to change an unrelated Firebase route.');
+    }
+  }
   if (profileName === 'osint-illusion') {
     const allowed = new Set(['/sitemap.xml', ...RELEASE_PROFILES['osint-illusion'].overlayFiles.map(name => '/' + name)]);
     if (changedPaths.some(item => !allowed.has(item))) fail('OSINT Insight attempted to alter unrelated Firebase routes.');
@@ -1137,7 +1151,9 @@ function extractCanonical(html) {
 async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
   const checks = [];
   const internal = new Set();
-  const verifiedRoutes = profileName === 'osint-illusion'
+  const verifiedRoutes = profileName === 'hegseth-law-audit'
+    ? ['/insights', '/insights/hegseth-war-powers-fact-check']
+    : profileName === 'osint-illusion'
     ? ['/insights', '/insights/osint-illusion']
     : profileName === 'election-data-index'
     ? ['/election-data/']
@@ -1319,6 +1335,30 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     }
   }
 
+  if (profileName === 'hegseth-law-audit') {
+    const route = '/insights/hegseth-war-powers-fact-check';
+    const article = (await fetchBytes(origin + route)).toString('utf8');
+    for (const required of ['76%', '64%', '45%', '5%', 'R42738', 'R42699',
+      '10 U.S.C. §184', 'Kelly v. Hegseth', 'preliminary injunction']) {
+      if (!article.includes(required)) fail('Hegseth legal audit article missing from production: ' + required);
+    }
+    const index = (await fetchBytes(origin + '/insights')).toString('utf8');
+    if (!index.includes('href="' + route + '"')) fail('Hegseth legal audit index link missing on production.');
+    const textSitemap = (await fetchBytes(origin + '/sitemap.md')).toString('utf8');
+    if (!textSitemap.includes(DOMAIN + route)) fail('Hegseth legal audit text sitemap missing production route.');
+    const sitemap = (await fetchBytes(origin + '/sitemap.xml')).toString('utf8');
+    if (!sitemap.includes('<loc>' + DOMAIN + route + '</loc>')) fail('Hegseth legal audit XML sitemap missing production route.');
+    const imagePath = '/assets/social/og-hegseth-impeachment-forecast-2026.png';
+    const image = await fetchBytes(origin + imagePath);
+    const expectedImage = fs.readFileSync(path.join(ROOT, imagePath.slice(1)));
+    if (image.toString('ascii', 1, 4) !== 'PNG' ||
+        image.readUInt32BE(16) !== 1200 || image.readUInt32BE(20) !== 630 ||
+        sha256(image) !== sha256(expectedImage) ||
+        !article.includes('property="og:image" content="' + DOMAIN + imagePath + '"')) {
+      fail('Hegseth legal audit reused social image failed production readback.');
+    }
+    checks.push({route: imagePath, status: 200, sha256: sha256(image)});
+  }
   if (profileName === 'osint-illusion') {
     const route = '/insights/osint-illusion';
     const article = (await fetchBytes(origin + route)).toString('utf8');
