@@ -15,13 +15,28 @@ class PublishingSurfaceTests(unittest.TestCase):
     def test_every_canonical_page_has_a_distinct_exact_size_social_card(self):
         manifest = json.loads(self.read("assets/social-manifest.json"))
         cards = manifest["cards"]
+        # The NFL v2 release is intentionally scoped. Its manifest overrides only the
+        # eight changed pages; never roll back the newer live Investigations card
+        # by republishing the older broad social-manifest.json snapshot.
+        scoped = json.loads(self.read("assets/social/nfl-editorial-v2-manifest.json"))
+        self.assertEqual(scoped["schema"], "KAHRELUM_NFL_EDITORIAL_SOCIAL_v2")
+        overrides = {row["route"]: row for row in scoped["assets"]}
+        effective_images = {
+            card["route"]: overrides[card["route"]]["output"]
+            if card["route"] in overrides else card["image"]
+            for card in cards
+        }
+        self.assertEqual(len(set(effective_images.values())), len(cards))
         self.assertEqual(manifest["schema"], "KAHRELUM_SOCIAL_CARDS_v1.0")
         self.assertEqual(len(cards), 31)
         self.assertEqual(len({card["route"] for card in cards}), len(cards))
         self.assertEqual(len({card["image"] for card in cards}), len(cards))
         for card in cards:
             with self.subTest(route=card["route"]):
-                image = ROOT / card["image"]
+                effective = overrides.get(card["route"])
+                image_path = effective["output"] if effective else card["image"]
+                hash_expected = effective["sha256"] if effective else card["sha256"]
+                image = ROOT / image_path
                 with image.open("rb") as stream:
                     self.assertEqual(stream.read(8), b"\x89PNG\r\n\x1a\n")
                     length = struct.unpack(">I", stream.read(4))[0]
@@ -29,13 +44,13 @@ class PublishingSurfaceTests(unittest.TestCase):
                     self.assertGreaterEqual(length, 8)
                     width, height = struct.unpack(">II", stream.read(8))
                 self.assertEqual((width, height), (1200, 630))
-                self.assertEqual(hashlib.sha256(image.read_bytes()).hexdigest(), card["sha256"])
+                self.assertEqual(hashlib.sha256(image.read_bytes()).hexdigest(), hash_expected)
                 if card.get("productionManaged"):
                     self.assertIsNone(card["sourceHtml"])
                     self.assertIn(card["route"], {"/pilot", "/demo", "/sample", "/connect", "/hasan"})
                     continue
                 page = self.read(card["sourceHtml"])
-                absolute_image = f'https://kahrelum.com/{card["image"]}'
+                absolute_image = f'https://kahrelum.com/{image_path}'
                 self.assertIn(f'property="og:image" content="{absolute_image}"', page)
                 self.assertIn(f'name="twitter:image" content="{absolute_image}"', page)
                 for field in ("og:type", "og:url", "og:title", "og:description"):
@@ -47,7 +62,7 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertIn('content="1200"', page)
         self.assertIn('content="630"', page)
         self.assertIn('name="twitter:card" content="summary_large_image"', page)
-        self.assertIn('/assets/social/og-nfl-trades.png', page)
+        self.assertIn('/assets/social/og-nfl-trades-v2.png', page)
 
     def test_production_managed_legacy_routes_have_guarded_social_overlays(self):
         release = self.read("scripts/firebase-overlay-release.cjs")
