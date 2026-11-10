@@ -14,7 +14,7 @@ const cards=[
 test('redesigned NFL challenge uses the same serious editorial desk design language as Film Room',()=>{
  const s=read('nfl/trade-volume-challenge-2026.html');
  assert.ok(s.includes('href="/sports-desk.css"'));
- assert.ok(s.includes('href="/nfl/trade-volume-challenge-2026.css"'));
+ assert.match(s,/href="\/nfl\/trade-volume-challenge-2026\.css(?:\?v=\d+)?"/);
  assert.ok(s.includes('class="site-header"'));
  assert.ok(s.includes('class="ops-strip"'));
  assert.ok(s.includes('class="challenge-report"'));
