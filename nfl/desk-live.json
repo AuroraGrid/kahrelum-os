@@ -1,10 +1,10 @@
 {
   "schema": "KAHRELUM_NFL_DESK_LIVE_v1.0",
-  "generatedAtUtc": "2026-11-10T07:23:30Z",
+  "generatedAtUtc": "2026-11-10T07:40:22Z",
   "sourceStatus": {
     "schema": "KAHRELUM_REFRESH_STATUS_v1.1",
-    "lastAttemptAt": "2026-11-10T07:23:30Z",
-    "lastSuccessfulSourceCheckAt": "2026-11-10T07:23:30Z",
+    "lastAttemptAt": "2026-11-10T07:40:22Z",
+    "lastSuccessfulSourceCheckAt": "2026-11-10T07:40:22Z",
     "lastPublishedUpdateAt": "2026-10-31T13:13:05Z",
     "feedFreshness": "FRESH",
     "monitoringState": "DEADLINE_WINDOW_OPEN",
@@ -12,7 +12,7 @@
     "sourcesAttempted": 37,
     "sourcesSucceeded": 37,
     "sourcesFailed": 0,
-    "observationsNew": 4,
+    "observationsNew": 0,
     "reviewQueueCount": 1629,
     "materialAlerts": [
       {
@@ -33,9 +33,9 @@
     ],
     "errors": [],
     "truthBoundary": "Source checks and publication are separate. lastSuccessfulSourceCheckAt means at least one source succeeded; lastFullySuccessfulSourceCheckAt requires every registered operational source to succeed.",
-    "lastCompletedCheckAt": "2026-11-10T07:23:30Z",
-    "lastFullySuccessfulSourceCheckAt": "2026-11-10T07:23:30Z",
-    "duplicatesSuppressed": 7,
+    "lastCompletedCheckAt": "2026-11-10T07:40:22Z",
+    "lastFullySuccessfulSourceCheckAt": "2026-11-10T07:40:22Z",
+    "duplicatesSuppressed": 8,
     "sourceFailureAlerts": [],
     "reviewProposalCount": 29,
     "lastManuallyVerifiedOriginalReportAtUtc": "2026-10-31T13:13:05Z",
