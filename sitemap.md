@@ -84,6 +84,8 @@ This public directory groups existing website pages. Research status and timesta
 
 ## Sports and NFL
 
+- [NFL 2026 Trade Deadline Challenge: KAHRELUM vs. NFL Insiders](https://kahrelum.com/nfl/trade-volume-challenge-2026)
+
 - [NFL Trade Intelligence | KAHRELUM Sports Intelligence Desk](https://kahrelum.com/nfl/trades)
 - [NFL trade rumors have an evidence problem | KAHRELUM Sports Intelligence](https://kahrelum.com/nfl/analysis)
 - [NFL Film Room | KAHRELUM Sports Intelligence](https://kahrelum.com/nfl/film-room)
