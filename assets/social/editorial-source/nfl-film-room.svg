@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img">
+<title>KAHRELUM THE FILM ROOM</title>
+<defs>
+ <pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M0 10 L10 0" stroke="#fff6df" stroke-width=".35" opacity=".3"/></pattern>
+ <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#181514"/><stop offset="100%" stop-color="#1d2120"/></linearGradient>
+</defs>
+<rect x="0" y="0" width="1200" height="630" fill="url(#bg)" />
+<rect x="0" y="0" width="1200" height="8" fill="#728b6e" />
+<rect x="0" y="8" width="558" height="622" fill="#151312" />
+
+<rect x="558" y="8" width="642" height="622" fill="#252521" />
+<rect x="558" y="8" width="642" height="622" fill="url(#hatch)" opacity=".17"/>
+<line x1="560" y1="8" x2="560" y2="630" stroke="#b88c49" stroke-width="2" />
+
+<rect x="613" y="60" width="530" height="500" fill="#1b4638" stroke="#bdc8b7" stroke-width="4"/>
+<line x1="640" y1="84" x2="640" y2="537" stroke="#a9cbb5" stroke-width="1" opacity=".45"/><line x1="686" y1="84" x2="686" y2="537" stroke="#a9cbb5" stroke-width="1" opacity=".45"/><line x1="732" y1="84" x2="732" y2="537" stroke="#a9cbb5" stroke-width="1" opacity=".45"/><line x1="778" y1="84" x2="778" y2="537" stroke="#a9cbb5" stroke-width="1" opacity=".45"/><line x1="824" y1="84" x2="824" y2="537" stroke="#a9cbb5" stroke-width="1" opacity=".45"/><line x1="870" y1="84" x2="870" y2="537" stroke="#a9cbb5" stroke-width="1" opacity=".45"/><line x1="916" y1="84" x2="916" y2="537" stroke="#a9cbb5" stroke-width="1" opacity=".45"/><line x1="962" y1="84" x2="962" y2="537" stroke="#a9cbb5" stroke-width="1" opacity=".45"/><line x1="1008" y1="84" x2="1008" y2="537" stroke="#a9cbb5" stroke-width="1" opacity=".45"/><line x1="1054" y1="84" x2="1054" y2="537" stroke="#a9cbb5" stroke-width="1" opacity=".45"/><line x1="1100" y1="84" x2="1100" y2="537" stroke="#a9cbb5" stroke-width="1" opacity=".45"/>
+<line x1="640" y1="310" x2="1116" y2="310" stroke="#e0ecdf" stroke-width="3" />
+<rect x="649" y="81" width="460" height="453" fill="none" stroke="#dae7d9" stroke-width="1"/>
+<rect x="787" y="81" width="183" height="453" fill="none" stroke="#dae7d9" stroke-width="2"/>
+<text x="672" y="110" fill="#aec6bb" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="600" letter-spacing="1" >10</text><text x="672" y="511" fill="#aec6bb" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="600" letter-spacing="1" >40</text><text x="782" y="110" fill="#aec6bb" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="600" letter-spacing="1" >20</text><text x="782" y="511" fill="#aec6bb" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="600" letter-spacing="1" >30</text><text x="892" y="110" fill="#aec6bb" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="600" letter-spacing="1" >30</text><text x="892" y="511" fill="#aec6bb" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="600" letter-spacing="1" >20</text><text x="1002" y="110" fill="#aec6bb" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="600" letter-spacing="1" >40</text><text x="1002" y="511" fill="#aec6bb" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="600" letter-spacing="1" >10</text>
+<circle cx="720" cy="225" r="23" fill="#e9d8ab" opacity=".9"/><text x="711" y="234" fill="#18352c" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="850" letter-spacing="0" >X</text><circle cx="825" cy="309" r="23" fill="#e9d8ab" opacity=".9"/><text x="816" y="318" fill="#18352c" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="850" letter-spacing="0" >X</text><circle cx="935" cy="225" r="23" fill="#e9d8ab" opacity=".9"/><text x="926" y="234" fill="#18352c" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="850" letter-spacing="0" >X</text><circle cx="1036" cy="309" r="23" fill="#e9d8ab" opacity=".9"/><text x="1027" y="318" fill="#18352c" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="850" letter-spacing="0" >X</text>
+<circle cx="785" cy="387" r="22" fill="#195343" stroke="#c7dfca" stroke-width="3"/><text x="776" y="395" fill="#e9e4cb" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="800" letter-spacing="0" >O</text><circle cx="897" cy="367" r="22" fill="#195343" stroke="#c7dfca" stroke-width="3"/><text x="888" y="375" fill="#e9e4cb" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="800" letter-spacing="0" >O</text><circle cx="1000" cy="387" r="22" fill="#195343" stroke="#c7dfca" stroke-width="3"/><text x="991" y="395" fill="#e9e4cb" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="800" letter-spacing="0" >O</text>
+<path d="M777 386 Q 875 270 954 233 M898 369 Q 979 334 1059 308" stroke="#efbc77" stroke-width="4" stroke-dasharray="12 7" fill="none"/>
+<rect x="624" y="552" width="506" height="42" fill="#101e1c" />
+<text x="643" y="580" fill="#d9d8c7" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="750" letter-spacing="1" >PLAY CONTEXT  •  SOURCE REQUIRED  •  NO GRADE</text>
+
+<text x="58" y="77" fill="#f7f5ed" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="850" letter-spacing="2" >K A H R E L U M</text>
+<text x="58" y="124" fill="#e0a76b" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="800" letter-spacing="1.2" >NFL  /  FILM INTELLIGENCE</text>
+<line x1="58" y1="153" x2="531" y2="153" stroke="#728b6e" stroke-width="2" />
+<text x="58" y="232" fill="#f8f4ec" font-family="Arial,Helvetica,sans-serif" font-size="58" font-weight="850" letter-spacing="0" >THE</text><text x="58" y="301" fill="#f8f4ec" font-family="Arial,Helvetica,sans-serif" font-size="58" font-weight="850" letter-spacing="0" >FILM ROOM</text>
+<text x="58" y="418" fill="#c9c7c2" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="500" letter-spacing="0" >Play-level evidence, not highlight hype.</text><text x="58" y="455" fill="#c9c7c2" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="500" letter-spacing="0" >Rights-safe, review-gated analysis.</text>
+<line x1="58" y1="540" x2="530" y2="540" stroke="#877866" stroke-width="1" />
+<text x="58" y="584" fill="#d0c8b9" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="750" letter-spacing="1" >FILM REVIEW  /  SOURCE ADMISSION</text>
+<rect x="0" y="8" width="8" height="622" fill="#728b6e" />
+</svg>
