@@ -1,10 +1,10 @@
 {
   "schema": "KAHRELUM_NFL_DESK_LIVE_v1.0",
-  "generatedAtUtc": "2026-11-10T06:15:38Z",
+  "generatedAtUtc": "2026-11-10T07:23:30Z",
   "sourceStatus": {
     "schema": "KAHRELUM_REFRESH_STATUS_v1.1",
-    "lastAttemptAt": "2026-11-10T06:15:38Z",
-    "lastSuccessfulSourceCheckAt": "2026-11-10T06:15:38Z",
+    "lastAttemptAt": "2026-11-10T07:23:30Z",
+    "lastSuccessfulSourceCheckAt": "2026-11-10T07:23:30Z",
     "lastPublishedUpdateAt": "2026-10-31T13:13:05Z",
     "feedFreshness": "FRESH",
     "monitoringState": "DEADLINE_WINDOW_OPEN",
@@ -12,8 +12,8 @@
     "sourcesAttempted": 37,
     "sourcesSucceeded": 37,
     "sourcesFailed": 0,
-    "observationsNew": 9,
-    "reviewQueueCount": 1625,
+    "observationsNew": 4,
+    "reviewQueueCount": 1629,
     "materialAlerts": [
       {
         "observationId": "OBS-50323095a31bcf80e1ad",
@@ -33,9 +33,9 @@
     ],
     "errors": [],
     "truthBoundary": "Source checks and publication are separate. lastSuccessfulSourceCheckAt means at least one source succeeded; lastFullySuccessfulSourceCheckAt requires every registered operational source to succeed.",
-    "lastCompletedCheckAt": "2026-11-10T06:15:38Z",
-    "lastFullySuccessfulSourceCheckAt": "2026-11-10T06:15:38Z",
-    "duplicatesSuppressed": 8,
+    "lastCompletedCheckAt": "2026-11-10T07:23:30Z",
+    "lastFullySuccessfulSourceCheckAt": "2026-11-10T07:23:30Z",
+    "duplicatesSuppressed": 7,
     "sourceFailureAlerts": [],
     "reviewProposalCount": 29,
     "lastManuallyVerifiedOriginalReportAtUtc": "2026-10-31T13:13:05Z",
@@ -6530,6 +6530,54 @@
   },
   "activity": [
     {
+      "id": "OBS-e6390038489d9f1fa7bb",
+      "title": "Couple of potential Eagles trade chips prefer to stay in Philly",
+      "sourceName": "Yahoo Sports NFL RSS",
+      "originalUrl": "https://sports.yahoo.com/articles/couple-potential-eagles-trade-chips-070000614.html",
+      "sourcePublishedAt": "2026-11-10T01:55:03Z",
+      "sourceDate": null,
+      "firstObservedAt": "2026-11-10T07:23:30Z",
+      "reviewStatus": "REVIEW_REQUIRED",
+      "claimType": "GENERAL_NFL_DISCOVERY",
+      "linkCustody": "FEED_ATTRIBUTED_ARTICLE_URL"
+    },
+    {
+      "id": "OBS-c9f0687d163320cf85a7",
+      "title": "Jets deal Andre Cisco to Lions but plan to ‘stand pat’ at NFL trade deadline - New York Post",
+      "sourceName": "Google News NFL trade discovery",
+      "originalUrl": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPTHFpUVZlSXVpU0FaWlgxTWNkMFoyN2RuRmNJWXlLVjFib2d2MG1MNEUwbkthek5MQTJOcDRLS1o4T3B0VlRxZExNTWhMZTNuaUxfVlM3WVhiNDdjemp5bnhqYTlXZmprYW9ibGlEckd2SG4wM3ktaThSTEFlRWUwVUZ3N3RXVFJ2TWlnV3FsRGZUYkstem5tNzJaM3V1b01Q?oc=5",
+      "sourcePublishedAt": "2026-11-10T03:19:49Z",
+      "sourceDate": null,
+      "firstObservedAt": "2026-11-10T07:23:30Z",
+      "reviewStatus": "REVIEW_REQUIRED",
+      "claimType": "GENERAL_NFL_DISCOVERY",
+      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
+    },
+    {
+      "id": "OBS-a32f59a08c75010bbafc",
+      "title": "Who could be moved at the NFL trade deadline? Here are five players to watch",
+      "sourceName": "Yahoo Sports NFL RSS",
+      "originalUrl": "https://sports.yahoo.com/articles/could-moved-nfl-trade-deadline-081757713.html",
+      "sourcePublishedAt": "2026-11-10T01:55:03Z",
+      "sourceDate": null,
+      "firstObservedAt": "2026-11-10T07:23:30Z",
+      "reviewStatus": "REVIEW_REQUIRED",
+      "claimType": "GENERAL_NFL_DISCOVERY",
+      "linkCustody": "FEED_ATTRIBUTED_ARTICLE_URL"
+    },
+    {
+      "id": "OBS-8d4ef96cda479ffd8766",
+      "title": "A blockbuster! Eagles trade Jordan Davis to Jaguars for 1st- and 2nd-round picks",
+      "sourceName": "Yahoo Sports NFL RSS",
+      "originalUrl": "https://sports.yahoo.com/articles/blockbuster-eagles-trade-jordan-davis-171924572.html",
+      "sourcePublishedAt": "2026-11-10T01:55:03Z",
+      "sourceDate": null,
+      "firstObservedAt": "2026-11-10T07:23:30Z",
+      "reviewStatus": "REVIEW_REQUIRED",
+      "claimType": "GENERAL_NFL_DISCOVERY",
+      "linkCustody": "FEED_ATTRIBUTED_ARTICLE_URL"
+    },
+    {
       "id": "OBS-e5a064dd0f6c10a6754f",
       "title": "Cowboys stud WR tops trio of receivers Rams must try to trade for amid Puka Nacua’s injury update",
       "sourceName": "Yahoo Sports NFL RSS",
@@ -6840,54 +6888,6 @@
       "reviewStatus": "REVIEW_REQUIRED",
       "claimType": "GENERAL_NFL_DISCOVERY",
       "linkCustody": "FEED_ATTRIBUTED_ARTICLE_URL"
-    },
-    {
-      "id": "OBS-8885ad10a4ee49e265d1",
-      "title": "Chiefs trade deadline rumors: Latest buzz, speculation for Kansas City - Chiefs Wire",
-      "sourceName": "Google News NFL trade discovery",
-      "originalUrl": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPSmxqRUU5OFhyM3V0V1NLOEQxWVFpbm1peFA1cUhjSVNIS0pVOGxMSm54T19xR2RHN0dOMFBYOWFkTl9IQWJCTnNOOW5UNUpfcVJTejFBVFZRSkt3d0FSVXNxLWJBblFVLVVwRFZVUVpid0s5a2tBTGFMUzJNSHY2OTloRVRSZlBZdTlVcG8tSGpoUldJRm5oUHVZOHhZWG5VUGV4V1pmdXhNUHJxV0t0a0VtRjN0dDl2Ymk3Ui1CdUw1eGtoR3h4NFNkakZSRkktTl84TGJRLU9ZMXV3M1FiSmhTVy1MUQ?oc=5",
-      "sourcePublishedAt": "2026-11-10T01:52:00Z",
-      "sourceDate": null,
-      "firstObservedAt": "2026-11-10T03:17:55Z",
-      "reviewStatus": "REVIEW_REQUIRED",
-      "claimType": "GENERAL_NFL_DISCOVERY",
-      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
-    },
-    {
-      "id": "OBS-09b40a5bd2a160aeefb6",
-      "title": "Orlovsky Begs Vikings to Explore QB Options at Trade Deadline - Yahoo Sports",
-      "sourceName": "Google News NFL trade discovery",
-      "originalUrl": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOVURqZmJsR3VMd0hQM3MyazNJNENGdktEbS11UVZESWNUSUdwRTRlR1ZJNi0tdHEtSmp6UHBPT0FpU2g1VlV6WUY3V3I5TWR5a205S20zMkRMc0pRZUIzRlU5SE1rZHE4R3hMSl9GVUExS3VBNE9TVWtGdS0yMVJRMEIwY0FDMm1D?oc=5",
-      "sourcePublishedAt": "2026-11-10T00:35:00Z",
-      "sourceDate": null,
-      "firstObservedAt": "2026-11-10T03:17:55Z",
-      "reviewStatus": "REVIEW_REQUIRED",
-      "claimType": "GENERAL_NFL_DISCOVERY",
-      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
-    },
-    {
-      "id": "OBS-de1b837ab9b25fb8ee81",
-      "title": "NFL Trade Deadline Grades: How Well Did Jaguars Do In Big Trades? - FOX Sports",
-      "sourceName": "Google News NFL trade discovery",
-      "originalUrl": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1QWlpPM2o3REEzeFNIUWlmQmtUQ3hELWRRY0V0X1p0Y2lCTngwbnNEYThwMlJpdU04R3NkZlNaamhhcGl5a3h4UTg4cUt4cGdjazlJUC1oY0NzLWRaeFNDbWk3cDQ3bzhuMDFvUWZoNGHSAXBBVV95cUxNMFlNdEt5ZlNsWFlPaHRxR211b0FVQWM1Wk42YTd6TFhDRVZGVTREcFBCWEhqUjhZNUNlZkNLR25lRU44elZmWk1iNlN0T3ZRSmFITXp0NVJtU0F1RFZJQXFpelQ1OEt4NHloekY2VnJp?oc=5",
-      "sourcePublishedAt": "2026-11-09T18:45:00Z",
-      "sourceDate": null,
-      "firstObservedAt": "2026-11-10T02:15:14Z",
-      "reviewStatus": "REVIEW_REQUIRED",
-      "claimType": "GENERAL_NFL_DISCOVERY",
-      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
-    },
-    {
-      "id": "OBS-b3b83fabd46e5db56042",
-      "title": "The 1 trade Saints must make in final week before 2026 NFL trade deadline - Yahoo Sports",
-      "sourceName": "Google News NFL trade discovery",
-      "originalUrl": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBoSVd6Y0pfZXhfZWdZQVBvcjRLeU1GTHpkeTJpZEdXUzhZUmNDZDVDcTJ2ZExQbnNyYlRwN2xwRVBnMnE0ckkzZFhYY19LazJxTkVMRzhVTU12MEFsVV90UldDeXlJSXpzZmZFZUlJR0VjOVc4TlhSLXJ3T3pOTXc?oc=5",
-      "sourcePublishedAt": "2026-11-09T23:37:19Z",
-      "sourceDate": null,
-      "firstObservedAt": "2026-11-10T02:15:14Z",
-      "reviewStatus": "REVIEW_REQUIRED",
-      "claimType": "GENERAL_NFL_DISCOVERY",
-      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
     }
   ],
   "publishedUpdates": [
