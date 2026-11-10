@@ -65,7 +65,9 @@ on:
         default: ai-evaluation
 
 permissions:
-  contents: read
+  # Write access is used only to custody deterministic NFL social build artifacts
+  # on a separate public release-receipt branch, not to update main.
+  contents: write
 
 concurrency:
   group: kahrelum-scoped-firebase-publisher
@@ -82,7 +84,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.0
         with:
           ref: ${{ github.sha }}
-          persist-credentials: false
+          persist-credentials: true
           fetch-depth: 0
 
       - name: Resolve changed publication profiles
@@ -164,6 +166,50 @@ jobs:
           python3 scripts/build-kahrelum-editorial-social.py --check
           node --test tests/*.test.cjs
           node --check scripts/firebase-overlay-release.cjs
+
+      - name: Publicly custody compiled editorial assets in a clean Git commit
+        if: contains(steps.scope.outputs.profiles, 'nfl-editorial-v2')
+        shell: bash
+        run: |
+          set -euo pipefail
+          # The renderer is deterministic: all eight PNGs and the scoped hash manifest
+          # must be produced from the exact committed SVG sources. Don't weaken the
+          # Firebase publisher's clean-tree requirement to bypass this step.
+          python3 scripts/build-kahrelum-editorial-social.py --check
+          mapfile -t dirty < <(git status --porcelain=v1 --untracked-files=all | cut -c4-)
+          for file in "${dirty[@]}"; do
+            case "$file" in
+              assets/social/og-nfl-trade-volume-challenge-2026-v2.png|assets/social/og-nfl-trades-v2.png|assets/social/og-nfl-film-room-v2.png|assets/social/og-nfl-analysis-v2.png|assets/social/og-sports-v2.png|assets/social/og-nfl-deadline-watch-2026-v2.png|assets/social/og-nfl-weekly-brief-v2.png|assets/social/og-insights-nfl-brier-accountability-v2.png|assets/social/nfl-editorial-v2-manifest.json) ;;
+              *) echo "::error::Unexpected modified or untracked path: $file"; exit 1 ;;
+            esac
+          done
+          git add -- \
+            assets/social/og-nfl-trade-volume-challenge-2026-v2.png \
+            assets/social/og-nfl-trades-v2.png \
+            assets/social/og-nfl-film-room-v2.png \
+            assets/social/og-nfl-analysis-v2.png \
+            assets/social/og-sports-v2.png \
+            assets/social/og-nfl-deadline-watch-2026-v2.png \
+            assets/social/og-nfl-weekly-brief-v2.png \
+            assets/social/og-insights-nfl-brier-accountability-v2.png \
+            assets/social/nfl-editorial-v2-manifest.json
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "build(social): preserve exact NFL editorial v2 raster receipts"
+            receipt_branch="release-receipts/nfl-editorial-${GITHUB_SHA:0:12}"
+            # This public ref makes the derived art commit independently inspectable.
+            # It does NOT update main or trigger another main-only Firebase release.
+            git push origin "HEAD:refs/heads/$receipt_branch"
+            remote_sha="$(git ls-remote origin "refs/heads/$receipt_branch" | awk '{print $1}')"
+            if [[ "$remote_sha" != "$(git rev-parse HEAD)" ]]; then
+              echo "::error::Remote artifact custody readback failed"; exit 1
+            fi
+            echo "Compiled art receipt: https://github.com/$GITHUB_REPOSITORY/tree/$receipt_branch" >> "$GITHUB_STEP_SUMMARY"
+          fi
+          if [[ -n "$(git status --porcelain=v1 --untracked-files=all)" ]]; then
+            echo "::error::Generated-artifact source is not clean"; exit 1
+          fi
 
       - name: Publish scoped preview, then promote with exact production readback
         if: steps.scope.outputs.profiles != ''
