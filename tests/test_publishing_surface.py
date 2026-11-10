@@ -314,7 +314,7 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertEqual(new_numeric["VotePredictor"]["senateCustodyReceiptSha256"], hashlib.sha256(senate_receipt_bytes).hexdigest())
         self.assertEqual((new_numeric["Midterm Forecast"]["houseDemocraticControlPct"], new_numeric["Midterm Forecast"]["senateDemocraticControlPct"]), (91.0, 76.0))
         self.assertEqual((new_numeric["Midterm Forecast"]["houseDemocraticSeats"], new_numeric["Midterm Forecast"]["senateDemocraticSeats"]), (236.0, 53.0))
-        self.assertIn("4:48 AM ET", new_numeric["Midterm Forecast"]["sourceEdition"])
+        self.assertIn("1:39 PM ET", new_numeric["Midterm Forecast"]["sourceEdition"])
         yale = next(row for row in challengers["records"] if row["provider"] == "Yale PLSC 2219 class model")
         self.assertEqual((yale["houseDemocraticControlPct"], yale["senateDemocraticControlPct"], yale["houseDemocraticSeats"], yale["senateDemocraticSeats"]), (95.0, 43.0, 237.0, 50.0))
         self.assertIn("Page snapshot Nov. 2", yale["sourceEdition"])
