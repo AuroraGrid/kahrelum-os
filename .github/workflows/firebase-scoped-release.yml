@@ -10,6 +10,7 @@ on:
       - 'insights.html'
       - 'insights/nvidia-megaspeed-chip-custody.html'
       - 'insights/hegseth-impeachment-forecast-2026.html'
+      - 'insights/hegseth-war-powers-fact-check.html'
       - 'insights/osint-illusion.html'
       - 'assets/social/og-insights-osint-illusion.png'
       - 'forecasting.html'
@@ -49,6 +50,7 @@ on:
         options:
           - chip01-publication
           - hegseth-forecast
+          - hegseth-law-audit
           - osint-illusion
           - case-share-cards
           - legacy-social-metadata
@@ -118,6 +120,8 @@ jobs:
                   selections+=(chip01-publication) ;;
                 insights/hegseth-impeachment-forecast-2026.html|assets/social/og-hegseth-impeachment-forecast-2026.png|forecasting.html)
                   selections+=(hegseth-forecast) ;;
+                 insights/hegseth-war-powers-fact-check.html)
+                   selections+=(hegseth-law-audit) ;;
                  insights/osint-illusion.html|assets/social/og-insights-osint-illusion.png)
                    selections+=(osint-illusion) ;;
                 ai-intelligence-evaluation-2026.html)
@@ -151,7 +155,7 @@ jobs:
           set -euo pipefail
           for profile in $RELEASE_PROFILES; do
             case "$profile" in
-              chip01-publication|hegseth-forecast|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|commercial-readiness|buyer-discovery|election-data-index) ;;
+              chip01-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|commercial-readiness|buyer-discovery|election-data-index) ;;
               *) echo "::error::Unapproved release profile: $profile"; exit 1;;
             esac
           done
