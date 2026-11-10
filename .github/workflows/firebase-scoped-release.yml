@@ -11,6 +11,11 @@ on:
       - 'insights/nvidia-megaspeed-chip-custody.html'
       - 'insights/hegseth-impeachment-forecast-2026.html'
       - 'forecasting.html'
+      - 'nfl/trade-volume-challenge-2026.html'
+      - 'assets/social/og-nfl-trade-volume-challenge-2026.png'
+      - 'nfl/trades.html'
+      - 'nfl/film-room.html'
+      - 'sports.html'
       - 'assets/social/og-hegseth-impeachment-forecast-2026.png'
       - 'assets/social/og-investigations-chip-01.png'
       - 'assets/social/og-insights-nvidia-megaspeed-chip-custody.png'
@@ -45,6 +50,7 @@ on:
           - buyer-discovery
           - election-data-index
           - us-results-ui
+          - nfl-challenge
           - nfl-sourcegrid-data
           - us-results-data
         default: ai-evaluation
@@ -90,6 +96,8 @@ jobs:
             selections=()
             while IFS= read -r file; do
               case "$file" in
+                nfl/trade-volume-challenge-2026.html|assets/social/og-nfl-trade-volume-challenge-2026.png|nfl/trades.html|nfl/film-room.html|sports.html)
+                  selections+=(nfl-challenge) ;;
                 investigations/chip-01.html|insights/nvidia-megaspeed-chip-custody.html|assets/social/og-investigations-chip-01.png|assets/social/og-insights-nvidia-megaspeed-chip-custody.png)
                   selections+=(chip01-publication) ;;
                 insights/hegseth-impeachment-forecast-2026.html|assets/social/og-hegseth-impeachment-forecast-2026.png|forecasting.html)
@@ -125,7 +133,7 @@ jobs:
           set -euo pipefail
           for profile in $RELEASE_PROFILES; do
             case "$profile" in
-              chip01-publication|hegseth-forecast|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|commercial-readiness|buyer-discovery|election-data-index) ;;
+              chip01-publication|hegseth-forecast|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|commercial-readiness|buyer-discovery|election-data-index) ;;
               *) echo "::error::Unapproved release profile: $profile"; exit 1;;
             esac
           done

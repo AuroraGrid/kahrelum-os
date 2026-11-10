@@ -5,7 +5,7 @@ const routes = [
   '/', '/assurance', '/investigations', '/forecasting', '/digital-id', '/one', '/os',
   '/election-challenge', '/pilot', '/demo', '/sample', '/connect', '/hasan', '/election-lab',
   '/election-live', '/election-count', '/election-method', '/election-showdown', '/election-comparison',
-  '/nfl/trades', '/nfl/analysis', '/nfl/weekly-brief', '/sports', '/nfl/film-room', '/sports/nba',
+  '/nfl/trades', '/nfl/analysis', '/nfl/weekly-brief', '/nfl/trade-volume-challenge-2026', '/sports', '/nfl/film-room', '/sports/nba',
   '/sports/mlb', '/sports/nhl', '/insights', '/insights/nfl-brier-accountability',
   '/insights/election-forecast-custody', '/insights/ai-bots-money-claims', '/sports-interest'
 ];
