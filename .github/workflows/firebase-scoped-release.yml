@@ -167,6 +167,34 @@ jobs:
           node --test tests/*.test.cjs
           node --check scripts/firebase-overlay-release.cjs
 
+      - name: Restore clean Git tree after non-NFL art tests
+        # The global test runner builds deterministic NFL rasters. For a CHIP-01
+        # (or other non-NFL) release those are test byproducts, not part of the
+        # release and not authority to modify committed files. Fail on any
+        # unexpected dirty path. Keep the publisher's clean-tree gate intact.
+        if: steps.scope.outputs.profiles != '' && !contains(steps.scope.outputs.profiles, 'nfl-editorial-v2')
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t dirty < <(git status --porcelain=v1 --untracked-files=all | cut -c4-)
+          for file in "${dirty[@]}"; do
+            case "$file" in
+              assets/social/og-nfl-trade-volume-challenge-2026-v2.png|assets/social/og-nfl-trades-v2.png|assets/social/og-nfl-film-room-v2.png|assets/social/og-nfl-analysis-v2.png|assets/social/og-sports-v2.png|assets/social/og-nfl-deadline-watch-2026-v2.png|assets/social/og-nfl-weekly-brief-v2.png|assets/social/og-insights-nfl-brier-accountability-v2.png|assets/social/nfl-editorial-v2-manifest.json) ;;
+              *) echo "::error::Unexpected changed/untracked path after tests: $file"; exit 1 ;;
+            esac
+          done
+          for file in "${dirty[@]}"; do
+            if git ls-files --error-unmatch -- "$file" >/dev/null 2>&1; then
+              git restore --source=HEAD -- "$file"
+            else
+              rm -f -- "$file"
+            fi
+          done
+          if [[ -n "$(git status --porcelain=v1 --untracked-files=all)" ]]; then
+            echo "::error::Repo is still dirty after approved test-output cleanup"; exit 1
+          fi
+          echo "Non-NFL release: deterministic editorial test outputs discarded; exact triggering source commit preserved." >> "$GITHUB_STEP_SUMMARY"
+
       - name: Publicly custody compiled editorial assets in a clean Git commit
         if: contains(steps.scope.outputs.profiles, 'nfl-editorial-v2')
         shell: bash
