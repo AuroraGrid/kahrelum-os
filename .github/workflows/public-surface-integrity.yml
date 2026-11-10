@@ -144,6 +144,8 @@ jobs:
         run: |
           node scripts/build-poliwave-watchlist.cjs --check
           node --test tests/poliwave-race-watch.test.cjs
+      - name: Test NFL challenger publication custody and social image bytes
+        run: node --test tests/nfl-volume-challenge-publication.test.cjs
       - name: Parse safe Firebase release script
         run: node --check scripts/firebase-overlay-release.cjs
 
