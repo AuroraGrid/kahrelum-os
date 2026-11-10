@@ -1,10 +1,10 @@
 {
   "schema": "KAHRELUM_NFL_DESK_LIVE_v1.0",
-  "generatedAtUtc": "2026-11-10T07:40:22Z",
+  "generatedAtUtc": "2026-11-10T08:13:04Z",
   "sourceStatus": {
     "schema": "KAHRELUM_REFRESH_STATUS_v1.1",
-    "lastAttemptAt": "2026-11-10T07:40:22Z",
-    "lastSuccessfulSourceCheckAt": "2026-11-10T07:40:22Z",
+    "lastAttemptAt": "2026-11-10T08:13:04Z",
+    "lastSuccessfulSourceCheckAt": "2026-11-10T08:13:04Z",
     "lastPublishedUpdateAt": "2026-10-31T13:13:05Z",
     "feedFreshness": "FRESH",
     "monitoringState": "DEADLINE_WINDOW_OPEN",
@@ -12,8 +12,8 @@
     "sourcesAttempted": 37,
     "sourcesSucceeded": 37,
     "sourcesFailed": 0,
-    "observationsNew": 0,
-    "reviewQueueCount": 1629,
+    "observationsNew": 3,
+    "reviewQueueCount": 1632,
     "materialAlerts": [
       {
         "observationId": "OBS-50323095a31bcf80e1ad",
@@ -33,9 +33,9 @@
     ],
     "errors": [],
     "truthBoundary": "Source checks and publication are separate. lastSuccessfulSourceCheckAt means at least one source succeeded; lastFullySuccessfulSourceCheckAt requires every registered operational source to succeed.",
-    "lastCompletedCheckAt": "2026-11-10T07:40:22Z",
-    "lastFullySuccessfulSourceCheckAt": "2026-11-10T07:40:22Z",
-    "duplicatesSuppressed": 8,
+    "lastCompletedCheckAt": "2026-11-10T08:13:04Z",
+    "lastFullySuccessfulSourceCheckAt": "2026-11-10T08:13:04Z",
+    "duplicatesSuppressed": 6,
     "sourceFailureAlerts": [],
     "reviewProposalCount": 29,
     "lastManuallyVerifiedOriginalReportAtUtc": "2026-10-31T13:13:05Z",
@@ -6530,6 +6530,42 @@
   },
   "activity": [
     {
+      "id": "OBS-f98dc974e02e79f4589e",
+      "title": "The killer mistake Broncos must avoid at 2026 NFL trade deadline - Yahoo Sports",
+      "sourceName": "Google News NFL trade discovery",
+      "originalUrl": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNeUlHNjVMRUlOdFluMHduSU81aXQ1V1ZFV1FJUFhRcTBxWDhfclJvZW42RUtNeXJqQ2JhemdIUXRNMy1aVzEyZUJvRXZRdm9ULW41ajdEYTR5WEpTZ3Z6RTFKbjZyUk5MajBqdjRYNk9QamtmZFdFaXNWaUxrVlhiM2JiYzh0ZS1kclE?oc=5",
+      "sourcePublishedAt": "2026-11-10T07:28:00Z",
+      "sourceDate": null,
+      "firstObservedAt": "2026-11-10T08:13:04Z",
+      "reviewStatus": "REVIEW_REQUIRED",
+      "claimType": "GENERAL_NFL_DISCOVERY",
+      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
+    },
+    {
+      "id": "OBS-958ff21b9fadb041505e",
+      "title": "Carson Wentz and Vikings&#39; offense melt down in loss to Bills with trade deadline looming",
+      "sourceName": "Yahoo Sports NFL RSS",
+      "originalUrl": "https://sports.yahoo.com/nfl/live/bills-vikings-score-live-updates-inactives-highlights-stats-where-to-watch-week-9-monday-night-football-234804735.html",
+      "sourcePublishedAt": "2026-11-09T23:48:04Z",
+      "sourceDate": null,
+      "firstObservedAt": "2026-11-10T08:13:04Z",
+      "reviewStatus": "REVIEW_REQUIRED",
+      "claimType": "GENERAL_NFL_DISCOVERY",
+      "linkCustody": "FEED_ATTRIBUTED_ARTICLE_URL"
+    },
+    {
+      "id": "OBS-283ab6784ee210cc526c",
+      "title": "49ers Now: Will San Francisco make more moves before NFL trade deadline? - Yahoo Sports",
+      "sourceName": "Google News NFL trade discovery",
+      "originalUrl": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNeG5TVHhha1NsVEc4eGFHSWFZeUlhQXVWUTVudXpkUGxoZnhJMEdsOEgwTGw5N2Yyak1hWWZrNUUwTC1QSTlBRnNTejRCMHo3VDYtcDZ3R2dWcnZEQUVtUVJMVHVnRkRPTkdRMHRNZzdKaE9FSjBlTkhFSkN3TmdzdA?oc=5",
+      "sourcePublishedAt": "2026-11-10T07:45:00Z",
+      "sourceDate": null,
+      "firstObservedAt": "2026-11-10T08:13:04Z",
+      "reviewStatus": "REVIEW_REQUIRED",
+      "claimType": "GENERAL_NFL_DISCOVERY",
+      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
+    },
+    {
       "id": "OBS-e6390038489d9f1fa7bb",
       "title": "Couple of potential Eagles trade chips prefer to stay in Philly",
       "sourceName": "Yahoo Sports NFL RSS",
@@ -6852,42 +6888,6 @@
       "reviewStatus": "REVIEW_REQUIRED",
       "claimType": "GENERAL_NFL_DISCOVERY",
       "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
-    },
-    {
-      "id": "OBS-c408714960e166c36dd6",
-      "title": "Packers’ perfect Jonathan Taylor trade offer to Colts before NFL trade deadline - Yahoo Sports",
-      "sourceName": "Google News NFL trade discovery",
-      "originalUrl": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOb3JkQ0Qtd0F5elNoOWNaMkhuWVVGSndSSjA2Uzg4Rzk2V1RaWGxOdHVIX3ZrQl9fWklVT2NvdXlueWpjTXZJY1lSNmpiaTdTeTlreGUyNXd0b2R2V3dZOFhZQ1FYaUVqVGpYYVhlOGtFbkdYdjBMcGJFcmxJOWp3MkRnWUYyaVdXbjktdVZfdw?oc=5",
-      "sourcePublishedAt": "2026-11-10T02:26:00Z",
-      "sourceDate": null,
-      "firstObservedAt": "2026-11-10T03:17:55Z",
-      "reviewStatus": "REVIEW_REQUIRED",
-      "claimType": "POSSIBLE_REPORT_OF_MARKET_CONTACT",
-      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
-    },
-    {
-      "id": "OBS-8934744a16e7c9cefbe3",
-      "title": "Adam Schefter expects Broncos to be active at NFL trade deadline - Broncos Wire",
-      "sourceName": "Google News NFL trade discovery",
-      "originalUrl": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPS18yclVaOUpRVWRJUUhNZTlYNFZMX1F4LU9ueWlJOHY4Y0ZRUjhoQUJPTkR4RUpKd0tOdDBBSFFWZ2JDNTQtSG1ucnN4QkpZQ3VzbGtsRVNTU2tlcWd4U1dOMHdLUmt1WFhyc0ZHOGZobGs3NlhGbFRfNXZQVnllSEtwcE1DYXlXS2pzbl8wWnB6bW9HU2JqOVQ2RVNWcEVDTVZ2Ym9OTG12UFNLTEdoVTNTNjBVYkxRMXVIelJfbE5JRDBDZXQzcnQzdm5zQzFGc0E?oc=5",
-      "sourcePublishedAt": "2026-11-09T23:10:00Z",
-      "sourceDate": null,
-      "firstObservedAt": "2026-11-10T03:17:55Z",
-      "reviewStatus": "REVIEW_REQUIRED",
-      "claimType": "GENERAL_NFL_DISCOVERY",
-      "linkCustody": "DISCOVERY_REDIRECT_NOT_ORIGINAL_REPORT"
-    },
-    {
-      "id": "OBS-88ceb49f8fc6e8f556f6",
-      "title": "Could the Jordan Davis trade suggest Eagles are preparing for a new defensive coordinator?",
-      "sourceName": "Yahoo Sports NFL RSS",
-      "originalUrl": "https://sports.yahoo.com/articles/could-jordan-davis-trade-suggest-022722336.html",
-      "sourcePublishedAt": "2026-11-10T02:27:22Z",
-      "sourceDate": null,
-      "firstObservedAt": "2026-11-10T03:17:55Z",
-      "reviewStatus": "REVIEW_REQUIRED",
-      "claimType": "GENERAL_NFL_DISCOVERY",
-      "linkCustody": "FEED_ATTRIBUTED_ARTICLE_URL"
     }
   ],
   "publishedUpdates": [
