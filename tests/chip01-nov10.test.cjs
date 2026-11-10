@@ -37,7 +37,7 @@ test('CHIP-01 outcome forecasts are timestamp-custodied as new November 10 predi
  assert.equal(src.outcomes.reduce((a,x)=>a+x.probability,0),1);
  assert.match(src.resolution.rules.join(' '),/February 10, 2027/);
  assert.ok(src.resolution.primary_source);
- assert.ok(src.resolution.exception_policy);
+ assert.match(src.resolution.rules.join(" "),/EXCEPTION\/UNSCORED/);
  assert.ok(src.falsifiers.length>=3);
  for(const page of ['investigations/chip-01.html','insights/nvidia-megaspeed-chip-custody.html']){
   const html=read(page);
