@@ -12,6 +12,14 @@ on:
       - 'insights/hegseth-impeachment-forecast-2026.html'
       - 'forecasting.html'
       - 'nfl/trade-volume-challenge-2026.html'
+      - 'nfl/trade-volume-challenge-2026.css'
+      - 'nfl/trade-volume-challenge-2026.js'
+      - 'nfl/analysis.html'
+      - 'nfl/deadline-watch-2026.html'
+      - 'nfl/weekly-brief.html'
+      - 'insights/nfl-brier-accountability.html'
+      - 'assets/social/editorial-source/**'
+      - 'scripts/build-kahrelum-editorial-social.py'
       - 'assets/social/og-nfl-trade-volume-challenge-2026.png'
       - 'nfl/trades.html'
       - 'nfl/film-room.html'
@@ -50,6 +58,7 @@ on:
           - buyer-discovery
           - election-data-index
           - us-results-ui
+          - nfl-editorial-v2
           - nfl-challenge
           - nfl-sourcegrid-data
           - us-results-data
@@ -96,6 +105,8 @@ jobs:
             selections=()
             while IFS= read -r file; do
               case "$file" in
+                nfl/trade-volume-challenge-2026.html|nfl/trade-volume-challenge-2026.css|nfl/trade-volume-challenge-2026.js|nfl/trades.html|nfl/film-room.html|nfl/analysis.html|sports.html|nfl/deadline-watch-2026.html|nfl/weekly-brief.html|insights/nfl-brier-accountability.html|assets/social/editorial-source/*|scripts/build-kahrelum-editorial-social.py)
+                  selections+=(nfl-editorial-v2) ;;
                 nfl/trade-volume-challenge-2026.html|assets/social/og-nfl-trade-volume-challenge-2026.png|nfl/trades.html|nfl/film-room.html|sports.html)
                   selections+=(nfl-challenge) ;;
                 investigations/chip-01.html|insights/nvidia-megaspeed-chip-custody.html|assets/social/og-investigations-chip-01.png|assets/social/og-insights-nvidia-megaspeed-chip-custody.png)
@@ -133,7 +144,7 @@ jobs:
           set -euo pipefail
           for profile in $RELEASE_PROFILES; do
             case "$profile" in
-              chip01-publication|hegseth-forecast|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|commercial-readiness|buyer-discovery|election-data-index) ;;
+              chip01-publication|hegseth-forecast|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|commercial-readiness|buyer-discovery|election-data-index) ;;
               *) echo "::error::Unapproved release profile: $profile"; exit 1;;
             esac
           done
@@ -148,6 +159,9 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          python3 -m pip install --disable-pip-version-check --quiet cairosvg==2.8.2
+          python3 scripts/build-kahrelum-editorial-social.py
+          python3 scripts/build-kahrelum-editorial-social.py --check
           node --test tests/*.test.cjs
           node --check scripts/firebase-overlay-release.cjs
 
