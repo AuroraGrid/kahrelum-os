@@ -61,6 +61,7 @@ const SOCIAL_CARD_FILES = [
   'assets/social/og-nfl-analysis.png',
   'assets/social/og-nfl-film-room.png',
   'assets/social/og-nfl-trades.png',
+  'assets/social/og-nfl-trade-volume-challenge-2026.png',
   'assets/social/og-nfl-weekly-brief.png',
   'assets/social/og-one.png',
   'assets/social/og-os.png',
@@ -97,6 +98,7 @@ const OVERLAY_FILES = [
   'election-lab.html',
   'election-lab-app.js',
   'election-lab-roster.json',
+  'nfl/trade-volume-challenge-2026.html',
   'nfl/trades.html', 'nfl/trades.js', 'nfl/desk-live.json', 'nfl/current-forecasts.json', 'nfl/player-portraits.json',
   'nfl/analysis.html',
   'nfl/trade-board.json',
@@ -134,7 +136,7 @@ const HTML_ROUTES = [
   '/election-challenge',
   '/pilot', '/demo', '/sample', '/connect', '/hasan', '/election-lab', '/election-live',
   '/election-count', '/election-method', '/election-showdown', '/election-comparison',
-  '/nfl/trades', '/nfl/analysis', '/nfl/weekly-brief',
+  '/nfl/trades', '/nfl/analysis', '/nfl/weekly-brief', '/nfl/trade-volume-challenge-2026',
   '/sports', '/nfl/film-room', '/sports/nba', '/sports/mlb', '/sports/nhl',
   '/insights', '/insights/nfl-brier-accountability', '/insights/election-forecast-custody',
   '/insights/ai-bots-money-claims', '/sports-interest',
@@ -379,6 +381,13 @@ const RELEASE_PROFILES = {
   'election-challenge-data': {
     overlayFiles: ['election/challenger-source-checks.json', 'election/seat-projections.json'],
     sitemapRoutes: [],
+    includeHomepage: false,
+  },
+  'nfl-challenge': {
+    // Exact publication scope. Preserve existing operational SourceGrid and forecast ledgers.
+    overlayFiles: ['nfl/trade-volume-challenge-2026.html', 'assets/social/og-nfl-trade-volume-challenge-2026.png',
+      'nfl/trades.html', 'nfl/film-room.html', 'sports.html'],
+    sitemapRoutes: ['/nfl/trade-volume-challenge-2026'],
     includeHomepage: false,
   },
   'sports-intelligence': {
