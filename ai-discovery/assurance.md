@@ -3,6 +3,8 @@ title: "AI and Agent Assurance"
 canonical: "https://kahrelum.com/assurance"
 updated: "2026-11-12"
 content_type: "public-research-summary"
+description: "Source-bound overview of KAHRELUM's retrospective AI and agent decision assurance service, permissions, fixed pricing and scope limitations."
+last_updated: "2026-11-12"
 ---
 
 # AI and Agent Assurance | KAHRELUM

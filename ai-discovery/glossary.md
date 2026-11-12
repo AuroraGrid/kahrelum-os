@@ -3,6 +3,8 @@ title: "KAHRELUM evidence terminology and source boundaries"
 canonical: "https://kahrelum.com/ai-discovery/glossary.md"
 updated: "2026-11-12"
 content_type: "agent-readable public summary"
+description: "KAHRELUM glossary defining FACT, ALLEGATION, INFERENCE, FORECAST, UNKNOWN, frozen cutoffs, FC1, C7, and buyer evidence boundaries."
+last_updated: "2026-11-12"
 ---
 
 # KAHRELUM Evidence and Forecast Glossary

@@ -3,6 +3,8 @@ title: "KAHRELUM Fixed-Scope Pilot and Fit Check"
 canonical: "https://kahrelum.com/pilot"
 updated: "2026-11-12"
 content_type: "agent-readable public service summary"
+description: "KAHRELUM fixed-scope historical AI decision review: the $750 three-case Fit Check, $2,500 Founding Pilot, permissions, delivery targets and enquiry rules."
+last_updated: "2026-11-12"
 ---
 
 # KAHRELUM Historical AI Decision Review | Fixed-Scope Pilot

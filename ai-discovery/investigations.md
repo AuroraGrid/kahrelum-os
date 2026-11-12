@@ -3,6 +3,8 @@ title: "Investigations and OSINT"
 canonical: "https://kahrelum.com/investigations"
 updated: "2026-11-12"
 content_type: "public-research-summary"
+description: "Public investigation register guidance distinguishing source-verified facts, contested allegations, evidence cutoffs and redaction limits."
+last_updated: "2026-11-12"
 ---
 
 # Investigations and OSINT | KAHRELUM

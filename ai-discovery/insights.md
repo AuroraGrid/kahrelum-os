@@ -3,6 +3,8 @@ title: "Insights | Research and Evidence"
 canonical: "https://kahrelum.com/insights"
 updated: "2026-11-12"
 content_type: "agent-readable public summary"
+description: "KAHRELUM's source-graded public analysis of legal claims, AI infrastructure, geopolitics and sports forecasting uncertainty."
+last_updated: "2026-11-12"
 ---
 
 # Insights | Research and Evidence

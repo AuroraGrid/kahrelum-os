@@ -3,6 +3,8 @@ title: "KAHRELUM AI Assurance Investigations and Forecasting"
 canonical: "https://kahrelum.com/"
 updated: "2026-11-12"
 content_type: "agent-readable public summary"
+description: "KAHRELUM public overview of retrospective AI decision assurance, dated investigations, forecasting methods, commercial scope and evidence limitations."
+last_updated: "2026-11-12"
 ---
 
 # KAHRELUM | AI Assurance, Investigations & Forecasting
