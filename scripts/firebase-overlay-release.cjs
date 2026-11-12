@@ -187,7 +187,7 @@ const RELEASE_PROFILES = {
     overlayFiles: [
       'forecasting/100-forecast-challenge.html',
       'forecasting/100-forecast-v1.4.json',
-      'assets/social/og-100-forecast-challenge.png',
+      'assets/social/og-100-forecast-challenge-v2.png',
       'forecasting.html', 'sitemap.md', 'llms.txt',
       'ai-discovery/forecasting.md', 'ai-discovery/100-forecast-challenge.md'
     ],

@@ -157,7 +157,7 @@ jobs:
             elif grep -Fqx 'forecasting/100-forecast-challenge.html' <<< "$changed"; then
               while IFS= read -r file; do
                 case "$file" in
-                  forecasting/100-forecast-challenge.html|forecasting/100-forecast-v1.4.json|assets/social/og-100-forecast-challenge.png|forecasting.html|sitemap.md|llms.txt|ai-discovery/forecasting.md|ai-discovery/100-forecast-challenge.md|tests/forecast-100-publication.test.cjs|scripts/firebase-overlay-release.cjs|.github/workflows/firebase-scoped-release.yml)
+                  forecasting/100-forecast-challenge.html|forecasting/100-forecast-v1.4.json|assets/social/og-100-forecast-challenge.png|assets/social/og-100-forecast-challenge-v2.png|assets/social/og-100-forecast-challenge-v2.svg|scripts/build-forecast-social-v2.py|tests/forecast-100-social-v2.test.cjs|forecasting.html|sitemap.md|llms.txt|ai-discovery/forecasting.md|ai-discovery/100-forecast-challenge.md|tests/forecast-100-publication.test.cjs|scripts/firebase-overlay-release.cjs|.github/workflows/firebase-scoped-release.yml)
                     ;;
                   *) echo "::error::100-forecast publication includes unrelated path: $file"; exit 1 ;;
                 esac

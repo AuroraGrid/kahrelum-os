@@ -9,7 +9,7 @@ const json=p=>JSON.parse(read(p));
 const route='/forecasting/100-forecast-challenge';
 const page='forecasting/100-forecast-challenge.html';
 const feed='forecasting/100-forecast-v1.4.json';
-const card='assets/social/og-100-forecast-challenge.png';
+const card='assets/social/og-100-forecast-challenge-v2.png';
 const commit='1c0124e4431e941dfaf2cd57dac339f9b7488891';
 const digest='952eb38e27ddb65cf46fcf6217c9dccc4e006e568f616ae418af85f449781481';
 
