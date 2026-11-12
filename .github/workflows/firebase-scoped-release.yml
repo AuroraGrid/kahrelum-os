@@ -236,11 +236,24 @@ jobs:
             git commit -m "build(social): preserve exact NFL editorial v2 raster receipts"
             receipt_branch="release-receipts/nfl-editorial-${GITHUB_SHA:0:12}"
             # This public ref makes the derived art commit independently inspectable.
-            # It does NOT update main or trigger another main-only Firebase release.
-            git push origin "HEAD:refs/heads/$receipt_branch"
+            # A workflow rerun may produce a new commit ID from identical source bytes.
+            # Never overwrite an existing public receipt merely to make retries pass.
             remote_sha="$(git ls-remote origin "refs/heads/$receipt_branch" | awk '{print $1}')"
-            if [[ "$remote_sha" != "$(git rev-parse HEAD)" ]]; then
-              echo "::error::Remote artifact custody readback failed"; exit 1
+            if [[ -n "$remote_sha" ]]; then
+              git fetch --no-tags origin "refs/heads/$receipt_branch"
+              remote_tree="$(git rev-parse FETCH_HEAD^{tree})"
+              local_tree="$(git rev-parse HEAD^{tree})"
+              if [[ "$remote_tree" != "$local_tree" ]]; then
+                echo "::error::Existing public artifact receipt differs from regenerated source"; exit 1
+              fi
+              echo "Previously published art receipt verified byte-for-byte by Git tree: $receipt_branch" >> "$GITHUB_STEP_SUMMARY"
+            else
+              git push origin "HEAD:refs/heads/$receipt_branch"
+              remote_sha="$(git ls-remote origin "refs/heads/$receipt_branch" | awk '{print $1}')"
+              if [[ "$remote_sha" != "$(git rev-parse HEAD)" ]]; then
+                echo "::error::Remote artifact custody readback failed"; exit 1
+              fi
+              echo "New public art receipt accepted: $receipt_branch" >> "$GITHUB_STEP_SUMMARY"
             fi
             echo "Compiled art receipt: https://github.com/$GITHUB_REPOSITORY/tree/$receipt_branch" >> "$GITHUB_STEP_SUMMARY"
           fi
