@@ -1,0 +1,168 @@
+{
+  "schema": "KAHRELUM_NFL_2026_POSTDEADLINE_AUDIT_V1",
+  "status": "POST_DEADLINE_RECONCILED",
+  "sourceAuditDate": "2026-11-12",
+  "deadlineUtc": "2026-11-10T21:00:00Z",
+  "sourceReport": "https://github.com/AuroraGrid/kahrelum-os/blob/main/research/nfl-2026-trade-deadline/2026-11-12_POST_DEADLINE_OUTCOME_AUDIT.md",
+  "sourceLimits": "Club and league records through Nov 12. Not individually inspected 32-club transaction certificates. Future corrections must be dated and source-reconciled.",
+  "tradeCountInSeason": 17,
+  "clubAnnouncedNov10Count": 5,
+  "registerDatedNov10Count": 7,
+  "fc1VolumeScoreStatus": "UNRESOLVED_DATE_BOUNDARY",
+  "fc1Explanation": "Separate November 10 club-announcement chronology (5) and NFL registry date (7 unique completed deals after excluding Henley and deduplicating Neuzil/Vorhees). Original six-point FC1 target and record remain unchanged; no certified FC1 score.",
+  "excludedNotCompleted": [
+    "Daiyan Henley: Denver Broncos announced proposed trade would not be finalized, Nov 11",
+    "Arnold Ebiketie: Bengals cancelled proposed trade"
+  ],
+  "fixedCohort": {
+    "eligibleForecasts": 123,
+    "positiveTrades": 8,
+    "negativeTrades": 115,
+    "brierScore": 0.077813821138,
+    "allNoBrier": 0.065040650407,
+    "interpretation": "Worse than all-NO on same self-selected 123 player events; no claimed superiority or external calibration."
+  },
+  "confirmedTrades": [
+    {
+      "date": "2026-09-28",
+      "player": "J.J. McCarthy",
+      "movement": "Minnesota Vikings → New York Giants",
+      "consideration": "Minnesota receives 2027 fifth.",
+      "sourceUrl": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season",
+      "preOct31Lock": true
+    },
+    {
+      "date": "2026-10-01",
+      "player": "Joey Porter Jr.",
+      "movement": "Pittsburgh Steelers → Dallas Cowboys",
+      "consideration": "Pittsburgh receives 2027 sixth and 2028 second.",
+      "sourceUrl": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season",
+      "preOct31Lock": true
+    },
+    {
+      "date": "2026-10-07",
+      "player": "Cam Jurgens",
+      "movement": "Philadelphia Eagles → Baltimore Ravens",
+      "consideration": "Baltimore also receives 2027 seventh; Philadelphia receives 2027 fifth and 2028 second.",
+      "sourceUrl": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season",
+      "preOct31Lock": true
+    },
+    {
+      "date": "2026-10-12",
+      "player": "Marvin Harrison Jr.",
+      "movement": "Arizona Cardinals → Houston Texans",
+      "consideration": "Houston also receives 2027 sixth; Arizona receives 2027 second and 2027 seventh.",
+      "sourceUrl": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season",
+      "preOct31Lock": true
+    },
+    {
+      "date": "2026-10-27",
+      "player": "Quenton Nelson",
+      "movement": "Indianapolis Colts → Seattle Seahawks",
+      "consideration": "Indianapolis receives 2027 third and 2028 fifth.",
+      "sourceUrl": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season",
+      "preOct31Lock": true
+    },
+    {
+      "date": "2026-10-27",
+      "player": "DeForest Buckner",
+      "movement": "Indianapolis Colts → San Francisco 49ers",
+      "consideration": "Indianapolis receives 2027 fourth.",
+      "sourceUrl": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season",
+      "preOct31Lock": true
+    },
+    {
+      "date": "2026-10-29",
+      "player": "Jeffery Simmons",
+      "movement": "Tennessee Titans → Chicago Bears",
+      "consideration": "Chicago also receives 2028 fifth; Tennessee receives 2027 first, 2027 fourth and 2028 first.",
+      "sourceUrl": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season",
+      "preOct31Lock": true
+    },
+    {
+      "date": "2026-11-06",
+      "player": "Jacoby Brissett",
+      "movement": "Arizona Cardinals → Baltimore Ravens",
+      "consideration": "Baltimore also receives 2027 fifth; Arizona receives 2027 fourth and 2028 seventh.",
+      "sourceUrl": "https://www.azcardinals.com/news/jacoby-brissett-trade-to-ravens-becomes-official",
+      "preOct31Lock": false
+    },
+    {
+      "date": "2026-11-09",
+      "player": "Jessie Bates III",
+      "movement": "Atlanta Falcons → Jacksonville Jaguars",
+      "consideration": "Atlanta receives 2027 second and 2028 fifth.",
+      "sourceUrl": "https://www.jaguars.com/news/roster-moves-jaguars-trade-for-s-jessie-bates-iii",
+      "preOct31Lock": false
+    },
+    {
+      "date": "2026-11-09",
+      "player": "Davon Godchaux",
+      "movement": "New Orleans Saints → Jacksonville Jaguars",
+      "consideration": "New Orleans receives conditional 2028 sixth; reported converts to 2027 sixth if Jacksonville acquires one.",
+      "sourceUrl": "https://www.jaguars.com/news/roster-moves-jaguars-trade-for-dt-davon-godchaux",
+      "preOct31Lock": false
+    },
+    {
+      "date": "2026-11-09",
+      "player": "Jordan Davis",
+      "movement": "Philadelphia Eagles → Jacksonville Jaguars",
+      "consideration": "Philadelphia receives 2027 first and 2029 second.",
+      "sourceUrl": "https://www.jaguars.com/news/roster-moves-jaguars-acquire-dt-jordan-davis",
+      "preOct31Lock": false
+    },
+    {
+      "date": "2026-11-09",
+      "player": "Andre Cisco",
+      "movement": "New York Jets → Detroit Lions",
+      "consideration": "New York receives 2029 sixth (corrected by Jets Nov 11 from older 2028 sixth reporting).",
+      "sourceUrl": "https://www.newyorkjets.com/news/garrett-wilson-omar-cooper-jr-limited-jets-practice-wednesday-bills-week-11-11-2026",
+      "preOct31Lock": false
+    },
+    {
+      "date": "2026-11-10",
+      "player": "Kirk Cousins",
+      "movement": "Las Vegas Raiders → Minnesota Vikings",
+      "consideration": "Las Vegas receives 2027 third.",
+      "sourceUrl": "https://www.vikings.com/news/kirk-cousins-reconnects-after-raiders-trade-2026",
+      "preOct31Lock": false
+    },
+    {
+      "date": "2026-11-10",
+      "player": "Keenan Allen",
+      "movement": "Indianapolis Colts → San Francisco 49ers",
+      "consideration": "Indianapolis receives 2027 sixth.",
+      "sourceUrl": "https://www.49ers.com/news/the-49ers-acquire-wr-keenan-allen",
+      "preOct31Lock": false
+    },
+    {
+      "date": "2026-11-10",
+      "player": "Amani Hooker",
+      "movement": "Tennessee Titans → Buffalo Bills",
+      "consideration": "Buffalo also receives 2027 fifth; Tennessee receives 2027 second.",
+      "sourceUrl": "https://www.buffalobills.com/news/bills-land-impact-safety-amani-hooker-in-trade-with-titans",
+      "preOct31Lock": false
+    },
+    {
+      "date": "2026-11-10",
+      "player": "Josh Downs",
+      "movement": "Indianapolis Colts → Kansas City Chiefs",
+      "consideration": "Kansas City also receives 2027 seventh; Indianapolis receives 2027 fourth and 2027 fifth.",
+      "sourceUrl": "https://www.chiefs.com/news/five-things-to-know-about-new-chiefs-wr-josh-downs",
+      "preOct31Lock": false
+    },
+    {
+      "date": "2026-11-10",
+      "player": "Ryan Neuzil",
+      "movement": "Atlanta Falcons → Baltimore Ravens",
+      "consideration": "Atlanta receives Andrew Vorhees and reported 2028 sixth; conditionality mentioned by Ravens, exact condition undisclosed.",
+      "sourceUrl": "https://www.baltimoreravens.com/news/ravens-trade-ryan-neuzil-andrew-vorhees-offensive-lineman-atlanta-falcons",
+      "preOct31Lock": false
+    }
+  ],
+  "originalSourceSnapshots": {
+    "preDeadlineTracker": "/nfl/official-trade-snapshot-2026.json",
+    "preDeadlineOperationalCheck": "/nfl/refresh-status.json",
+    "preDeadlineAuditPlaceholder": "/nfl/deadline-audit.json"
+  }
+}
