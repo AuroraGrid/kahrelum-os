@@ -118,7 +118,9 @@ jobs:
                   selections+=(nfl-editorial-v2) ;;
                 nfl/trade-volume-challenge-2026.html|assets/social/og-nfl-trade-volume-challenge-2026.png|nfl/trades.html|nfl/film-room.html|sports.html)
                   selections+=(nfl-challenge) ;;
-                investigations/chip-01.html|insights/nvidia-megaspeed-chip-custody.html|assets/social/og-investigations-chip-01.png|assets/social/og-insights-nvidia-megaspeed-chip-custody.png)
+                investigations/chip-01.html|insights/nvidia-megaspeed-chip-custody.html)
+                  selections+=(investigations-text-only) ;;
+                assets/social/og-investigations-chip-01.png|assets/social/og-insights-nvidia-megaspeed-chip-custody.png)
                   selections+=(chip01-publication) ;;
                 insights/hegseth-impeachment-forecast-2026.html|assets/social/og-hegseth-impeachment-forecast-2026.png|forecasting.html)
                   selections+=(hegseth-forecast) ;;
