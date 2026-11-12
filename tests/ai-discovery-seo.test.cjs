@@ -82,3 +82,32 @@ test('live patch retains previous case bytes, frozen forecast HTML and prior met
   if(file==='forecasting.html')assert.equal(out.slice(out.indexOf('<main'),out.indexOf('</main>')),live.slice(live.indexOf('<main'),live.indexOf('</main>')));
  }
 });
+
+
+test('pilot offer page exposes accurate machine-readable service scope and a safe Markdown mirror',()=>{
+  const source=read('pilot.html');
+  const json=source.match(/<script type="application\/ld\+json" id="kahrelum-ai-discovery-schema">([\s\S]*?)<\/script>/);
+  assert.ok(json,'Pilot must publish a source-bound JSON-LD block');
+  const service=JSON.parse(json[1]);
+  assert.equal(service['@context'],'https://schema.org');
+  assert.equal(service['@type'],'Service');
+  assert.equal(service.url,'https://kahrelum.com/pilot');
+  assert.equal(service.provider['@type'],'Organization');
+  assert.deepEqual(service.offers.map(o=>o.price),['750','2500']);
+  assert.ok(service.offers.every(o=>o.priceCurrency==='USD'));
+  assert.ok(!JSON.stringify(service).includes('LocalBusiness'));
+  assert.ok(!JSON.stringify(service).includes('AggregateRating'));
+  const alt='<link rel="alternate" type="text/markdown" href="/pilot-page.md">';
+  const described='<link rel="describedby" href="/llms.txt">';
+  const robots='<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">';
+  const glossary='<a class="agent-glossary-link" href="/ai-discovery/glossary.md">Evidence glossary</a>';
+  for(const hint of [alt,described,robots,glossary]) assert.ok(source.includes(hint),'Pilot missing '+hint);
+  assert.match(read('pilot-page.md'),/canonical: "https:\/\/kahrelum\.com\/pilot"/);
+  const legacy=source.replace(json[0],'').replace(alt,'').replace(described,'').replace(robots,'').replace(glossary,'');
+  const {enhanceDiscoveryPage}=require('../scripts/ai-seo-discovery.cjs');
+  const patched=enhanceDiscoveryPage(legacy,source,'/pilot');
+  for(const hint of [json[0],alt,described,robots,glossary])assert.ok(patched.includes(hint));
+  assert.equal(enhanceDiscoveryPage(patched,source,'/pilot'),patched,'Pilot patch must be idempotent');
+  assert.equal(patched.split('</head>')[1].replace(glossary,''),legacy.split('</head>')[1],'Prior live commercial copy must remain unchanged');
+  assert.throws(()=>enhanceDiscoveryPage(legacy.replace('href="https://kahrelum.com/pilot"','href="https://wrong.invalid/pilot"'),source,'/pilot'),/canonical/);
+});

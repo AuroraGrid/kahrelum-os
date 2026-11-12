@@ -31,3 +31,4 @@ Statements reflect the named public page and its original dated source records. 
 - [Public source directory](https://kahrelum.com/sitemap.md)
 - [Agent guide](https://kahrelum.com/AGENTS.md)
 - [Service and permissions](https://kahrelum.com/pilot)
+- [Pilot inquiry and fixed-scope terms in Markdown](https://kahrelum.com/pilot-page.md) (public summary, not a submission endpoint or direct checkout)
