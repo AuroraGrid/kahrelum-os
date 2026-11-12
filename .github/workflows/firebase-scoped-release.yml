@@ -33,6 +33,7 @@ on:
       - 'investigations/chip-01.html'
       - 'insights.html'
       - 'insights/nvidia-megaspeed-chip-custody.html'
+      - 'insights/malik-beasley-sentencing-2026.html'
       - 'insights/hegseth-impeachment-forecast-2026.html'
       - 'insights/hegseth-war-powers-fact-check.html'
       - 'insights/osint-illusion.html'
@@ -80,6 +81,7 @@ on:
         description: 'Publish only this independently audited Firebase overlay'
         options:
           - chip01-publication
+          - malik-beasley-forecast
           - hegseth-forecast
           - hegseth-law-audit
           - osint-illusion
@@ -166,6 +168,16 @@ jobs:
                 esac
               done <<< "$changed"
               profiles="site-completion"
+            elif grep -Fqx 'insights/malik-beasley-sentencing-2026.html' <<< "$changed"; then
+              # Dedicated safe editorial overlay. No unrelated live files.
+              while IFS= read -r file; do
+                case "$file" in
+                  research/malik-beasley-2026/MB-2026-01.json|tests/malik-beasley-forecast-publication.test.cjs|insights/malik-beasley-sentencing-2026.html|insights.html|forecasting.html|sitemap.md|llms.txt|ai-discovery/forecasting.md|scripts/firebase-overlay-release.cjs|.github/workflows/firebase-scoped-release.yml)
+                    ;;
+                  *) echo "::error::Malik Beasley forecast includes unrelated path: $file"; exit 1 ;;
+                esac
+              done <<< "$changed"
+              profiles="malik-beasley-forecast"
             elif grep -Fqx 'forecasting/100-forecast-challenge.html' <<< "$changed"; then
               while IFS= read -r file; do
                 case "$file" in
@@ -254,7 +266,7 @@ jobs:
           set -euo pipefail
           for profile in $RELEASE_PROFILES; do
             case "$profile" in
-              forecast-100-publication|calibration-nfl-2026|chip01-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|ai-discovery-seo|ai-visibility-hardening|site-completion|mobile-nav-layout|commercial-readiness|buyer-discovery|election-data-index) ;;
+              malik-beasley-forecast|forecast-100-publication|calibration-nfl-2026|chip01-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|ai-discovery-seo|ai-visibility-hardening|site-completion|mobile-nav-layout|commercial-readiness|buyer-discovery|election-data-index) ;;
               *) echo "::error::Unapproved release profile: $profile"; exit 1;;
             esac
           done
