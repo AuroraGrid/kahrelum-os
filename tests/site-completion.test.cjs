@@ -120,3 +120,26 @@ test('site-completion allowlist includes all canonical Markdown mirrors without 
  assert.match(pub,/siteCompletionAllowedPaths\(\)/);
  assert.match(pub,/Unexpected site completion changed paths/);
 });
+
+
+test('Hosting config guard accepts harmless key-order normalization but blocks actual config drift',()=>{
+ const {configsSemanticallyEqual}=require('../scripts/site-completion.cjs');
+ const base={
+  cleanUrls:true,
+  rewrites:[{glob:'/api/v1',path:'/data/api/v1/index.json'}],
+  headers:[{glob:'/index.md',headers:{'Content-Type':'text/markdown; charset=utf-8',Link:'<https://kahrelum.com/>; rel="canonical"'}}]
+ };
+ const reordered={
+  headers:[{headers:{Link:'<https://kahrelum.com/>; rel="canonical"','Content-Type':'text/markdown; charset=utf-8'},glob:'/index.md'}],
+  rewrites:[{path:'/data/api/v1/index.json',glob:'/api/v1'}],
+  cleanUrls:true
+ };
+ assert.notEqual(JSON.stringify(base),JSON.stringify(reordered),'raw serialization must differ to recreate regression');
+ assert.equal(configsSemanticallyEqual(base,reordered),true,'same semantic config must pass');
+ assert.equal(configsSemanticallyEqual(base,{...reordered,cleanUrls:false}),false,'actual policy drift must fail');
+ assert.equal(configsSemanticallyEqual(base,{...reordered,headers:[]}),false,'removing Markdown response headers must fail');
+ assert.equal(configsSemanticallyEqual(base,{...reordered,rewrites:[{glob:'/api/v1',path:'/different'}]}),false,'changed API rewrite must fail');
+ const pub=read('scripts/firebase-overlay-release.cjs');
+ assert.match(pub,/configsSemanticallyEqual\(live\.config,\s*receipt\.baseConfig\)/);
+ assert.match(pub,/Production Hosting configuration changed after preview/);
+});
