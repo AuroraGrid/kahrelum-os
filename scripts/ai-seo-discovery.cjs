@@ -20,7 +20,7 @@ function enhanceDiscoveryPage(live,canonical,route){
  if(!live.includes('<link rel="canonical" href="'+url+'">')||!canonical.includes('<link rel="canonical" href="'+url+'">'))throw Error('Live route canonical mismatch '+route);
  if(!live.includes('</head>')||live.split('</head>').length!==2)throw Error('Malformed live head');
  let out=live;
- if(route!=='/pilot'){
+ { // The pilot now uses the same JSON-LD and Markdown discovery requirements.
   const marker='id="kahrelum-ai-discovery-schema"';
   const m=canonical.match(/<script type="application\/ld\+json" id="kahrelum-ai-discovery-schema">([\s\S]*?)<\/script>/);
   if(!m)throw Error('Missing canonical AI discovery JSON-LD');
@@ -33,12 +33,27 @@ function enhanceDiscoveryPage(live,canonical,route){
   }else{
    out=out.replace('</head>',m[0]+'\n</head>');
   }
-  const mirror=canonical.match(/<link rel="alternate" type="text\/markdown" href="(\/ai-discovery\/[^"]+\.md)">/)?.[0];
+  const mirror=canonical.match(/<link rel="alternate" type="text\/markdown" href="(\/(?:ai-discovery\/[^"]+|pilot-page)\.md)">/)?.[0];
   if(!mirror)throw Error('Missing canonical Markdown alternate');
   if(!out.includes(mirror))out=out.replace('</head>',mirror+'\n</head>');
  }
  const described='<link rel="describedby" href="/llms.txt">';
  if(!out.includes(described))out=out.replace('</head>',described+'\n</head>');
+ if(route==='/pilot'){
+   const robots='<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">';
+   const glossary='<a class="agent-glossary-link" href="/ai-discovery/glossary.md">Evidence glossary</a>';
+   const nextSteps='<nav class="site-next-steps" aria-label="Next steps">';
+   if(!canonical.includes(robots)||!canonical.includes(glossary))throw Error('Canonical pilot agent hints absent');
+   if(!out.includes(robots)){
+     if(/<meta name="robots"[^>]*>/.test(out))throw Error('Conflicting live pilot robots directive');
+     out=out.replace('</head>',robots+'\n</head>');
+   }
+   if(!out.includes(glossary)){
+     onlyOne(out,nextSteps,'pilot next-steps nav');
+     out=out.replace(nextSteps,nextSteps+glossary);
+   }
+   onlyOne(out,glossary,'pilot glossary link');
+ }
  const faqid='buyer-faq-20261112';
  if(route==='/assurance'||route==='/pilot'){
    const snippet=section(canonical,faqid);
@@ -52,12 +67,17 @@ function enhanceDiscoveryPage(live,canonical,route){
  // These are additive discovery changes only, and must preserve all prior source
  // analysis, case cards, injected commercial metadata and site-shell code.
  const strip=(h)=>h.replace(/<script type="application\/ld\+json" id="kahrelum-ai-discovery-schema">[\s\S]*?<\/script>\s*/,'')
-  .replace(/<link rel="alternate" type="text\/markdown" href="\/ai-discovery\/[^"]+\.md">\s*/,'')
+  .replace(/<link rel="alternate" type="text\/markdown" href="\/(?:ai-discovery\/[^"]+|pilot-page)\.md">\s*/,'')
   .replace(/<link rel="describedby" href="\/llms.txt">\s*/,'')
   .replace(/<section id="buyer-faq-20261112"[^>]*>[\s\S]*?<\/section>\s*/,'')
   .replace(/\s+(?=<\/head>)/g,'');
  const norm=s=>s.replace(/\r\n/g,'\n');
- assert.equal(norm(strip(out)),norm(strip(live)),'Unexpected mutation outside approved AI discovery snippets: '+route);
+ const withoutPilotHints=h=>route==='/pilot'
+   ?h.replace(/<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">\s*/,'')
+     .replace('<a class="agent-glossary-link" href="/ai-discovery/glossary.md">Evidence glossary</a>','')
+   :h;
+ assert.equal(norm(withoutPilotHints(strip(out))),norm(withoutPilotHints(strip(live))),
+   'Unexpected mutation outside approved AI discovery snippets: '+route);
  return norm(out)===norm(live)?live:out;
 }
 module.exports={enhanceDiscoveryPage};
