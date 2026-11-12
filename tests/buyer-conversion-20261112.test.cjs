@@ -62,6 +62,6 @@ test('the older buyer discovery patch accepts only the reviewed new pilot search
  assert.ok(updated.includes('Review three authorized historical AI decisions for $750.'));
  assert.ok(updated.includes('id="kahrelum-ai-discovery-schema"'));
  assert.ok(updated.includes('id="pilotInquiry"'));
- assert.ok(updated.includes('not automatically transmitted'));
+ assert.match(updated,/does not automatically transmit|not automatically sent/i);
  assert.equal(patchBuyerPage('/pilot',updated),updated);
 });
