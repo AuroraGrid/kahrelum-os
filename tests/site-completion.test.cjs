@@ -106,3 +106,17 @@ test('election-data page is substantive, source-cautious, and has a concise SEO 
  const words=h.replace(/<script[\s\S]*?<\/script>/g,' ').replace(/<style[\s\S]*?<\/style>/g,' ').replace(/<[^>]+>/g,' ').trim().split(/\s+/);
  assert.ok(words.length>=600,'thin page: '+words.length+' words');
 });
+
+
+test('site-completion allowlist includes all canonical Markdown mirrors without permitting images or forecast mutations',()=>{
+ const {MARKDOWN_CANONICALS,siteCompletionAllowedPaths}=require('../scripts/site-completion.cjs');
+ const allowed=siteCompletionAllowedPaths();
+ assert.ok(allowed instanceof Set);
+ assert.equal(MARKDOWN_CANONICALS.length,13);
+ for(const [url] of MARKDOWN_CANONICALS)assert.ok(allowed.has(url),'Missing exact Markdown mirror '+url);
+ for(const url of ['/index.html','/insights.html','/nfl/deadline-watch-2026.html','/election-data/index.html','/site-shell.css','/sitemap.xml'])assert.ok(allowed.has(url),'Missing HTML/CSS '+url);
+ for(const url of ['/assets/social/og-home.png','/nfl/forecast-ledger.json','/election/candidate-portraits.json','/api/v1'])assert.equal(allowed.has(url),false,'Unsafe path '+url);
+ const pub=read('scripts/firebase-overlay-release.cjs');
+ assert.match(pub,/siteCompletionAllowedPaths\(\)/);
+ assert.match(pub,/Unexpected site completion changed paths/);
+});
