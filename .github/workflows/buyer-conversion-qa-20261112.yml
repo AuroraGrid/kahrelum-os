@@ -23,6 +23,9 @@ jobs:
           node --check scripts/buyer-conversion-20261112.cjs
           node --check scripts/firebase-overlay-release.cjs
           node --test tests/buyer-conversion-20261112.test.cjs tests/buyer-conversion-live-patch.test.cjs
+          python3 -m pip install --disable-pip-version-check --quiet cairosvg==2.8.2
+          python3 scripts/build-kahrelum-editorial-social.py
+          python3 scripts/build-kahrelum-editorial-social.py --check
           node --test tests/*.test.cjs
           git status --short
           echo 'No publication or deployment attempted.'
