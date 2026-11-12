@@ -39,8 +39,8 @@ test('Operating state keeps verified source, scoring, and editorial boundaries i
   const publishing=JSON.parse(text('nfl/publishing.json'));
   const ledger=JSON.parse(text('nfl/forecast-ledger.json'));
   const desk=JSON.parse(text('nfl/desk-live.json'));
-  assert.equal(status.monitoringState,'DEADLINE_WINDOW_OPEN');
-  assert.ok(['DEGRADED','FRESH','STALE_FAILED'].includes(status.feedFreshness));
+  assert.equal(status.monitoringState,'DEADLINE_CLOSED_ARCHIVE');
+  assert.ok(['DEGRADED','FRESH','STALE_FAILED','HISTORICAL_ARCHIVE'].includes(status.feedFreshness));
   assert.equal(publishing.publishingAuthorized,false);
   assert.ok(Array.isArray(ledger.eligibleLocks));
   assert.ok(Array.isArray(ledger.historicalExcluded));
