@@ -78,3 +78,31 @@ test('narrow viewports make multi-column data tables independently scrollable wi
  assert.match(pub,/'site-completion':\s*\{[\s\S]{0,500}'site-shell\.css'/);
  assert.match(pub,/Site completion attempted to replace an unrelated Firebase file/);
 });
+
+test('all 13 public Markdown canonical mirrors have complete honest dated frontmatter',()=>{
+ const docs=['index.md','pilot-page.md',...[
+  'assurance','digital-id','evidence-scorecard','forecasting','glossary','insights',
+  'investigations','nfl-deadline-2026','nvidia-chip-custody','os','sports'
+ ].map(x=>'ai-discovery/'+x+'.md')];
+ assert.equal(docs.length,13);
+ for(const doc of docs){
+  const body=read(doc),front=body.match(/^---\n([\s\S]*?)\n---\n/)?.[1];
+  assert.ok(front,doc+' missing YAML frontmatter');
+  for(const field of ['title','canonical','description','last_updated'])assert.match(front,new RegExp('^'+field+':\\s*".+"','m'),doc+' missing '+field);
+  assert.match(front,/last_updated: "2026-11-12"/);
+  assert.match(body,/## Sitemap/);
+ }
+ const pub=read('scripts/firebase-overlay-release.cjs');
+ const segment=pub.match(/  'site-completion': \{([\s\S]*?)\n  \},/)?.[1]||'';
+ assert.match(segment,/index\.md/);
+ assert.match(segment,/pilot-page\.md/);
+ assert.match(segment,/ai-discovery\/assurance\.md/);
+});
+test('election-data page is substantive, source-cautious, and has a concise SEO description',()=>{
+ const h=read('election-data/index.html'),desc=h.match(/<meta name="description" content="([^"]+)"/)?.[1]||'';
+ assert.ok(desc.length>=70&&desc.length<=160,desc.length);
+ assert.match(h,/id="site-final-reading-notes"/);
+ assert.match(h,/not.*certif|unofficial/i);
+ const words=h.replace(/<script[\s\S]*?<\/script>/g,' ').replace(/<style[\s\S]*?<\/style>/g,' ').replace(/<[^>]+>/g,' ').trim().split(/\s+/);
+ assert.ok(words.length>=600,'thin page: '+words.length+' words');
+});
