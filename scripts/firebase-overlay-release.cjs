@@ -926,7 +926,7 @@ async function buildOverlay(live, profileName) {
       fail('SourceGrid source check is older than the live Firebase checkpoint.');
     }
     if (sourceStatus.sourcesAttempted !== 37 || sourceStatus.sourcesSucceeded + sourceStatus.sourcesFailed !== 37 ||
-        !['FRESH','DEGRADED','STALE_FAILED'].includes(sourceStatus.feedFreshness)) {
+        !['FRESH','DEGRADED','STALE_FAILED','HISTORICAL_ARCHIVE'].includes(sourceStatus.feedFreshness)) {
       fail('SourceGrid check is incomplete or not an executed 37-source report.');
     }
     const ledger = JSON.parse(fs.readFileSync(path.join(ROOT, 'nfl/forecast-ledger.json'), 'utf8'));
