@@ -6,6 +6,7 @@ on:
     paths:
       - '.github/workflows/firebase-scoped-release.yml'
       - 'investigations.html'
+      - 'insights.html'
       - 'investigations/chip-01.html'
       - 'insights.html'
       - 'insights/nvidia-megaspeed-chip-custody.html'
@@ -59,6 +60,7 @@ on:
           - opticodds-market-integrity
           - lead-magnet
           - investigations
+          - investigations-text-only
           - commercial-readiness
           - buyer-discovery
           - election-data-index
@@ -132,8 +134,8 @@ jobs:
                   selections+=(lead-magnet) ;;
                 election-data/index.html|assets/social/og-election-data-guide.png)
                   selections+=(election-data-index) ;;
-                investigations.html)
-                  selections+=(investigations) ;;
+                investigations.html|insights.html)
+                  selections+=(investigations-text-only) ;;
               esac
             done <<< "$changed"
             if (( ${#selections[@]} > 0 )); then
@@ -155,7 +157,7 @@ jobs:
           set -euo pipefail
           for profile in $RELEASE_PROFILES; do
             case "$profile" in
-              chip01-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|commercial-readiness|buyer-discovery|election-data-index) ;;
+              chip01-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|commercial-readiness|buyer-discovery|election-data-index) ;;
               *) echo "::error::Unapproved release profile: $profile"; exit 1;;
             esac
           done
