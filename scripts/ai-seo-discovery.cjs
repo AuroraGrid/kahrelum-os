@@ -26,10 +26,24 @@ function enhanceDiscoveryPage(live,canonical,route){
   if(!m)throw Error('Missing canonical AI discovery JSON-LD');
   const data=JSON.parse(m[1]);
   if(data.url!==url||data['@context']!=='https://schema.org')throw Error('Schema URL or context mismatch');
-  if(!['Service','CollectionPage','SoftwareApplication'].includes(data['@type'])||JSON.stringify(data).includes('"@type":"LocalBusiness"'))throw Error('Unsupported schema claim');
+  if(!['Service','CollectionPage','SoftwareApplication','WebPage'].includes(data['@type'])||
+     JSON.stringify(data).includes('"@type":"LocalBusiness"'))throw Error('Unsupported schema claim');
+  if(route==='/pilot' && (data['@type']!=='WebPage'||
+     data.mainEntity?.['@id']!==url+'#service'||data.mainEntity?.['@type']!=='Service'))throw Error('Pilot must refer to canonical service ID');
   if(out.includes(marker)){
    const published=out.match(/<script type="application\/ld\+json" id="kahrelum-ai-discovery-schema">([\s\S]*?)<\/script>/);
-   if(!published||JSON.stringify(JSON.parse(published[1]))!==JSON.stringify(data))throw Error('Existing schema conflicts with source');
+   if(!published)throw Error('Malformed live agent structured data');
+   const old=JSON.parse(published[1]);
+   if(JSON.stringify(old)!==JSON.stringify(data)){
+     // Permit exactly the previous, already-verified standalone pilot Service
+     // to become the same named service within a WebPage mainEntity.
+     // Any independent production edit or a different service/offer fails closed.
+     if(route!=='/pilot'||data['@type']!=='WebPage')throw Error('Existing schema conflicts with source');
+     const prior={'@context':'https://schema.org',...data.mainEntity};
+     delete prior['@id'];
+     if(JSON.stringify(prior)!==JSON.stringify(old))throw Error('Live pilot Service differs from previous verified source');
+     out=out.replace(published[0],m[0]);
+   }
   }else{
    out=out.replace('</head>',m[0]+'\n</head>');
   }
