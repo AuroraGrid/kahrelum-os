@@ -40,3 +40,15 @@ This is a read-only public research website, **not an installable production age
 - https://kahrelum.com/ai-discovery/investigations.md
 - https://kahrelum.com/ai-discovery/forecasting.md
 - https://kahrelum.com/ai-discovery/evidence-scorecard.md
+
+## Evidence glossary and additional public summaries (2026-11-12)
+
+- Glossary: https://kahrelum.com/ai-discovery/glossary.md
+- Research articles: https://kahrelum.com/ai-discovery/insights.md
+- Digital identity source cautions: https://kahrelum.com/ai-discovery/digital-id.md
+- Public method limitations: https://kahrelum.com/ai-discovery/os.md
+- Sports and forecast custody: https://kahrelum.com/ai-discovery/sports.md
+- NFL post-deadline audit: https://kahrelum.com/ai-discovery/nfl-deadline-2026.md
+- Nvidia investigations source limits: https://kahrelum.com/ai-discovery/nvidia-chip-custody.md
+
+Summary creation is not a new audit of the original dated source. Browser agents may read these public files but have no implied API permissions, private-data rights, or authority to rescore published probabilities.
