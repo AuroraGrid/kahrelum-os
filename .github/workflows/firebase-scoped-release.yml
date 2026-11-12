@@ -128,7 +128,7 @@ jobs:
             if grep -Eq '^ai-discovery/(assurance|investigations|forecasting|evidence-scorecard)\.md$' <<< "$changed"; then
               while IFS= read -r file; do
                 case "$file" in
-                  assurance.html|investigations.html|forecasting.html|evidence-scorecard.html|pilot.html|AGENTS.md|llms.txt|sitemap.md|ai-discovery/*.md|scripts/ai-seo-discovery.cjs|scripts/firebase-overlay-release.cjs|scripts/deploy-unified-firebase.ps1|tests/ai-discovery-seo.test.cjs|research/site-design/AI_DISCOVERY_SEO_RELEASE_20261112.md|.github/workflows/firebase-scoped-release.yml)
+                  assurance.html|investigations.html|forecasting.html|evidence-scorecard.html|pilot.html|AGENTS.md|llms.txt|sitemap.md|ai-discovery/*.md|scripts/ai-seo-discovery.cjs|scripts/firebase-overlay-release.cjs|scripts/deploy-unified-firebase.ps1|tests/ai-discovery-seo.test.cjs|tests/investigations-publication.test.cjs|research/site-design/AI_DISCOVERY_SEO_RELEASE_20261112.md|.github/workflows/firebase-scoped-release.yml)
                     ;;
                   *) echo "::error::Mixed AI-discovery push contains unrelated path: $file"; exit 1 ;;
                 esac
