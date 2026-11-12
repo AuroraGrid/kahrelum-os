@@ -1876,7 +1876,7 @@ async function createPreview(hosting, client, live, overlay, profileName, source
   if (!overlay.changedPaths.length) fail('The overlay is already identical to production; no preview release is needed.');
   const channelId = `${CHANNEL_PREFIX}-${stableMapHash(overlay.desired).slice(0, 12)}`;
   const versionName = canonicalVersionName(await createHostingVersion(hosting, {
-    config: overlay.expectedConfig,
+    config: overlay.expectedConfig || live.config,
     labels: { 'deployment-tool': 'kahrelum-safe-overlay' },
   }), live.version.name);
   const populated = (await client.post(`/${versionName}:populateFiles`, { files: overlay.desired })).body;
@@ -1896,7 +1896,7 @@ async function createPreview(hosting, client, live, overlay, profileName, source
   const finalizedFiles = await listVersionFiles(client, versionName);
   const finalizedMap = Object.fromEntries(finalizedFiles.map((item) => [item.path, item.hash]));
   if (!util.isDeepStrictEqual(finalizedMap, overlay.desired)) fail('Finalized preview file map differs from the live-derived desired map.');
-  if (!util.isDeepStrictEqual(normalizeConfig(finalized.config), overlay.expectedConfig)) fail('Finalized preview Hosting configuration differs from the approved config delta.');
+  if (!util.isDeepStrictEqual(normalizeConfig(finalized.config), overlay.expectedConfig || live.config)) fail('Finalized preview Hosting configuration differs from the approved config delta.');
 
   let channel = await hosting.getChannel('-', SITE, channelId);
   if (!channel) {
@@ -1916,8 +1916,8 @@ async function createPreview(hosting, client, live, overlay, profileName, source
     baseVersion: live.version.name,
     baseConfig: live.config,
     baseConfigHash: sha256(Buffer.from(JSON.stringify(live.config))),
-    expectedConfig: overlay.expectedConfig,
-    expectedConfigHash: sha256(Buffer.from(JSON.stringify(overlay.expectedConfig))),
+    expectedConfig: overlay.expectedConfig || live.config,
+    expectedConfigHash: sha256(Buffer.from(JSON.stringify(overlay.expectedConfig || live.config))),
     previewChannel: channelId,
     previewUrl: channel.url,
     previewVersion: versionName,
