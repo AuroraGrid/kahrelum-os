@@ -1,0 +1,56 @@
+name: KAHRELUM Emergency Firebase Hosting Retention (guarded)
+
+on:
+  push:
+    branches: [ops/firebase-safe-retention-20261112]
+    paths:
+      - '.github/workflows/firebase-emergency-retention-20261112.yml'
+
+permissions:
+  contents: read
+
+# Serialize against the site's guarded production publisher.
+concurrency:
+  group: kahrelum-scoped-firebase-publisher
+  cancel-in-progress: false
+
+jobs:
+  retain-five-previous:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    env:
+      KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON }}
+      EXPECTED_LIVE_VERSION: projects/806087933597/sites/kahrelum-public-hosting/versions/4a4de08c063eb2f7
+    steps:
+      - name: Checkout exact controlled branch
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.0
+        with:
+          persist-credentials: false
+      - name: Authenticate and strictly validate retention script
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -z "$KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON" ]]; then
+            echo "::error::Firebase credential unavailable; nothing changed."
+            exit 1
+          fi
+          node --check scripts/firebase-release-retention.cjs
+          node --test tests/firebase-release-retention.test.cjs
+      - name: Plan, apply only for exact verified live version, read back
+        shell: bash
+        run: |
+          set -euo pipefail
+          secret_path="$RUNNER_TEMP/hosting-retention-auth.json"
+          printf '%s' "$KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON" > "$secret_path"
+          chmod 600 "$secret_path"
+          trap 'rm -f "$secret_path"' EXIT
+          export GOOGLE_APPLICATION_CREDENTIALS="$secret_path"
+          export XDG_CONFIG_HOME="$RUNNER_TEMP/isolated-firebase"
+          mkdir -p "$XDG_CONFIG_HOME"
+          npm install --global firebase-tools@15.34.2
+          export FIREBASE_TOOLS_ROOT="$(npm root -g)/firebase-tools"
+          echo 'Preflight: inspect live release and existing retention. No active file changes.'
+          node scripts/firebase-release-retention.cjs --plan --keep 5
+          echo 'Apply: only if the LIVE version is still the previously verified version.'
+          node scripts/firebase-release-retention.cjs --apply --keep 5 --confirm-live-version "$EXPECTED_LIVE_VERSION"
+          echo 'A successful APPLIED receipt only schedules historical versions for reclamation; no live files are removed.' >> "$GITHUB_STEP_SUMMARY"
