@@ -31,6 +31,9 @@ This public directory groups existing website pages. Research status and timesta
 
 ## Forecasting
 
+- [100-Forecast Prospective Challenge · Audit Pending | KAHRELUM](https://kahrelum.com/forecasting/100-forecast-challenge)
+- [100-Forecast v1.4 Public JSON | KAHRELUM](https://kahrelum.com/forecasting/100-forecast-v1.4.json)
+
 - [Seven Prospective Forecasts, October–November 2026: KAHRELUM Calibration (Brier 0.1444)](https://kahrelum.com/insights/calibration-oct-nov-2026)
 
 - [Forecasting & Intelligence | KAHRELUM](https://kahrelum.com/forecasting)

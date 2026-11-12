@@ -20,8 +20,6 @@ on:
       - 'sports.html'
       - 'nfl/deadline-watch-2026.html'
       - 'scripts/agent-visibility-hardening.cjs'
-      - 'scripts/buyer-conversion-20261112.cjs'
-      - 'scripts/buyer-discovery.cjs'
       - 'scripts/ai-seo-discovery.cjs'
       - 'site-shell.css'
       - 'nfl/deadline-reconciled-2026.json'
@@ -40,6 +38,11 @@ on:
       - 'insights/calibration-oct-nov-2026.html'
       - 'assets/social/og-calibration-oct-nov-2026.png'
       - 'forecasting.html'
+      - 'forecasting/100-forecast-challenge.html'
+      - 'forecasting/100-forecast-v1.4.json'
+      - 'assets/social/og-100-forecast-challenge.png'
+      - 'ai-discovery/100-forecast-challenge.md'
+      - 'tests/forecast-100-publication.test.cjs'
       - 'nfl/trade-volume-challenge-2026.html'
       - 'nfl/trade-volume-challenge-2026.css'
       - 'nfl/trade-volume-challenge-2026.js'
@@ -92,9 +95,9 @@ on:
           - site-completion
           - commercial-readiness
           - buyer-discovery
-          - buyer-conversion
           - election-data-index
           - us-results-ui
+          - forecast-100-publication
           - calibration-nfl-2026
           - nfl-editorial-v2
           - nfl-challenge
@@ -142,16 +145,7 @@ jobs:
               exit 1
             fi
             changed="$(git diff --name-only "$PREVIOUS_COMMIT" "$GITHUB_SHA" --)"
-            if grep -Fqx 'scripts/buyer-conversion-20261112.cjs' <<< "$changed"; then
-              while IFS= read -r file; do
-                case "$file" in
-                  assurance.html|pilot.html|scripts/buyer-conversion-20261112.cjs|scripts/buyer-discovery.cjs|scripts/firebase-overlay-release.cjs|scripts/deploy-unified-firebase.ps1|tests/buyer-conversion-20261112.test.cjs|tests/buyer-conversion-live-patch.test.cjs|.github/workflows/firebase-scoped-release.yml)
-                    ;;
-                  *) echo "::error::Buyer conversion push contains unrelated path: $file"; exit 1 ;;
-                esac
-              done <<< "$changed"
-              profiles="buyer-conversion"
-            elif grep -Fqx 'scripts/site-completion.cjs' <<< "$changed"; then
+            if grep -Fqx 'scripts/site-completion.cjs' <<< "$changed"; then
               while IFS= read -r file; do
                 case "$file" in
                   scripts/site-completion.cjs|scripts/site-completion-browser-qa.cjs|scripts/firebase-overlay-release.cjs|scripts/deploy-unified-firebase.ps1|tests/site-completion.test.cjs|site-shell.css|index.md|pilot-page.md|ai-discovery/*.md|insights.html|nfl/deadline-watch-2026.html|election-data/index.html|research/site-design/SITE_COMPLETION_20261112.md|.github/workflows/firebase-scoped-release.yml)
@@ -160,6 +154,15 @@ jobs:
                 esac
               done <<< "$changed"
               profiles="site-completion"
+            elif grep -Fqx 'forecasting/100-forecast-challenge.html' <<< "$changed"; then
+              while IFS= read -r file; do
+                case "$file" in
+                  forecasting/100-forecast-challenge.html|forecasting/100-forecast-v1.4.json|assets/social/og-100-forecast-challenge.png|forecasting.html|sitemap.md|llms.txt|ai-discovery/forecasting.md|ai-discovery/100-forecast-challenge.md|tests/forecast-100-publication.test.cjs|scripts/firebase-overlay-release.cjs|.github/workflows/firebase-scoped-release.yml)
+                    ;;
+                  *) echo "::error::100-forecast publication includes unrelated path: $file"; exit 1 ;;
+                esac
+              done <<< "$changed"
+              profiles="forecast-100-publication"
             elif grep -Fqx 'insights/calibration-oct-nov-2026.html' <<< "$changed"; then
               while IFS= read -r file; do
                 case "$file" in
@@ -239,7 +242,7 @@ jobs:
           set -euo pipefail
           for profile in $RELEASE_PROFILES; do
             case "$profile" in
-              calibration-nfl-2026|chip01-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|ai-discovery-seo|ai-visibility-hardening|site-completion|commercial-readiness|buyer-discovery|buyer-conversion|election-data-index) ;;
+              forecast-100-publication|calibration-nfl-2026|chip01-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|ai-discovery-seo|ai-visibility-hardening|site-completion|commercial-readiness|buyer-discovery|election-data-index) ;;
               *) echo "::error::Unapproved release profile: $profile"; exit 1;;
             esac
           done

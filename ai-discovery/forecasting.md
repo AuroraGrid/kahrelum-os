@@ -32,6 +32,13 @@ Statements reflect the named public page and its original dated source records. 
 - [Agent guide](https://kahrelum.com/AGENTS.md)
 - [Service and permissions](https://kahrelum.com/pilot)
 
+## 100-Forecast Prospective Challenge · November 12, 2026
+
+- [Browse 100 open, unscored predictions](https://kahrelum.com/forecasting/100-forecast-challenge). Twenty per domain, 50 short and 50 medium, with question, probability, deadline, resolution criteria and sources.
+- [Machine-readable v1.4 candidate record](https://kahrelum.com/forecasting/100-forecast-v1.4.json), derived from [GitHub commit 1c0124e4431e941dfaf2cd57dac339f9b7488891](https://github.com/AuroraGrid/kahrelum-os/commit/1c0124e4431e941dfaf2cd57dac339f9b7488891) (2026-11-12 21:12 UTC).
+- Certification HOLD: historical v1.0 claimed lock timestamps are not authenticated. v1.4 is a *new* GitHub prospective record. Source validation is incomplete; 0 resolved; no Brier result or superiority claim for this cohort.
+- [Detailed agent-readable caution and method](https://kahrelum.com/ai-discovery/100-forecast-challenge.md).
+
 ## Initial prospective calibration, November 13, 2026 PKT
 
 - [Read the seven-case public calibration](https://kahrelum.com/insights/calibration-oct-nov-2026) (mean Brier 0.1444, five of seven directional hits, 42.2% lower loss than a constant 50%/0.2500 baseline).
