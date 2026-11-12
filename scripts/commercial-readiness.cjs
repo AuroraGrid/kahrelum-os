@@ -57,7 +57,7 @@ function setSitemapLastmod(xml, modifiedRoutes = MODIFIED_ROUTES) {
   }
   let result = xml;
   for (const [route, date] of Object.entries(modifiedRoutes)) {
-    if (!/^\/[a-z0-9/-]+$/.test(route) || !/^\d{4}-\d{2}-\d{2}$/.test(date) ||
+    if (!/^\/(?:[a-z0-9/-]*)$/.test(route) || !/^\d{4}-\d{2}-\d{2}$/.test(date) ||
         new Date(date + 'T00:00:00Z').toISOString().slice(0, 10) !== date) {
       throw new Error('Invalid sitemap route or verified modification date');
     }
