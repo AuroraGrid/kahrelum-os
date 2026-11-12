@@ -3,8 +3,8 @@
   "lastAttemptAt": "2026-11-10T15:48:22Z",
   "lastSuccessfulSourceCheckAt": "2026-11-10T15:48:22Z",
   "lastPublishedUpdateAt": "2026-10-31T13:13:05Z",
-  "feedFreshness": "FRESH",
-  "monitoringState": "DEADLINE_WINDOW_OPEN",
+  "feedFreshness": "HISTORICAL_ARCHIVE",
+  "monitoringState": "DEADLINE_CLOSED_ARCHIVE",
   "deadlineUtc": "2026-11-10T21:00:00Z",
   "sourcesAttempted": 37,
   "sourcesSucceeded": 37,
@@ -36,5 +36,8 @@
   "sourceFailureAlerts": [],
   "reviewProposalCount": 29,
   "lastManuallyVerifiedOriginalReportAtUtc": "2026-10-31T13:13:05Z",
-  "originalReportManualVerificationNotice": "Manual original-report verification only; not a 37-feed SourceGrid run. lastSuccessfulSourceCheckAt/lastFullySuccessfulSourceCheckAt unchanged."
+  "originalReportManualVerificationNotice": "Manual original-report verification only; not a 37-feed SourceGrid run. lastSuccessfulSourceCheckAt/lastFullySuccessfulSourceCheckAt unchanged.",
+  "archivedAtDate": "2026-11-12",
+  "archiveNote": "This report describes the last 37-source pre-deadline check on 2026-11-10T15:48:22Z. It does not assert any subsequent check or fresh source health. See /nfl/deadline-reconciled-2026.json for the post-deadline result.",
+  "originalSourceArchive": "https://github.com/AuroraGrid/kahrelum-os/blob/main/research/nfl-2026-trade-deadline/archive-public-2026-11-12/2026-11-10-operational-status-original.json"
 }
