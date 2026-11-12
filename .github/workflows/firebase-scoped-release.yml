@@ -13,6 +13,8 @@ on:
       - 'ai-discovery/**'
       - 'scripts/site-completion.cjs'
       - 'scripts/site-completion-browser-qa.cjs'
+      - 'scripts/mobile-nav-browser-qa.cjs'
+      - 'tests/mobile-nav-layout.test.cjs'
       - 'index.html'
       - 'insights.html'
       - 'digital-id.html'
@@ -93,6 +95,7 @@ on:
           - ai-discovery-seo
           - ai-visibility-hardening
           - site-completion
+          - mobile-nav-layout
           - commercial-readiness
           - buyer-discovery
           - election-data-index
@@ -145,7 +148,16 @@ jobs:
               exit 1
             fi
             changed="$(git diff --name-only "$PREVIOUS_COMMIT" "$GITHUB_SHA" --)"
-            if grep -Fqx 'scripts/site-completion.cjs' <<< "$changed"; then
+            if grep -Fqx 'scripts/mobile-nav-browser-qa.cjs' <<< "$changed"; then
+              while IFS= read -r file; do
+                case "$file" in
+                  site-shell.css|scripts/mobile-nav-browser-qa.cjs|tests/mobile-nav-layout.test.cjs|scripts/firebase-overlay-release.cjs|scripts/deploy-unified-firebase.ps1|.github/workflows/firebase-scoped-release.yml)
+                    ;;
+                  *) echo "::error::Mobile navigation source push includes unrelated path: $file"; exit 1 ;;
+                esac
+              done <<< "$changed"
+              profiles="mobile-nav-layout"
+            elif grep -Fqx 'scripts/site-completion.cjs' <<< "$changed"; then
               while IFS= read -r file; do
                 case "$file" in
                   scripts/site-completion.cjs|scripts/site-completion-browser-qa.cjs|scripts/firebase-overlay-release.cjs|scripts/deploy-unified-firebase.ps1|tests/site-completion.test.cjs|site-shell.css|index.md|pilot-page.md|ai-discovery/*.md|insights.html|nfl/deadline-watch-2026.html|election-data/index.html|research/site-design/SITE_COMPLETION_20261112.md|.github/workflows/firebase-scoped-release.yml)
@@ -242,7 +254,7 @@ jobs:
           set -euo pipefail
           for profile in $RELEASE_PROFILES; do
             case "$profile" in
-              forecast-100-publication|calibration-nfl-2026|chip01-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|ai-discovery-seo|ai-visibility-hardening|site-completion|commercial-readiness|buyer-discovery|election-data-index) ;;
+              forecast-100-publication|calibration-nfl-2026|chip01-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|ai-discovery-seo|ai-visibility-hardening|site-completion|mobile-nav-layout|commercial-readiness|buyer-discovery|election-data-index) ;;
               *) echo "::error::Unapproved release profile: $profile"; exit 1;;
             esac
           done
@@ -372,7 +384,7 @@ jobs:
               echo "Already current: $profile; preview not required." >> "$GITHUB_STEP_SUMMARY"
               continue
             fi
-            if [[ "$profile" == "site-completion" ]]; then
+            if [[ "$profile" == "site-completion" || "$profile" == "mobile-nav-layout" ]]; then
               preview_log="$RUNNER_TEMP/kahrelum-preview-$profile.log"
               node scripts/firebase-overlay-release.cjs --preview --profile "$profile" | tee "$preview_log"
               preview_url="$(grep -oE '"previewUrl": "[^"]+"' "$preview_log" | tail -n1 | cut -d'"' -f4)"
@@ -380,8 +392,13 @@ jobs:
                 echo "::error::Missing verified Firebase preview URL for Chrome browser QA"; exit 1
               fi
               node --version
-              node scripts/site-completion-browser-qa.cjs "$preview_url"
-              echo "Measured real Chrome 320/390/768/1280 layouts against exact Firebase preview." >> "$GITHUB_STEP_SUMMARY"
+              if [[ "$profile" == "mobile-nav-layout" ]]; then
+                node scripts/mobile-nav-browser-qa.cjs "$preview_url"
+                echo "Verified opened mobile navigation at 320/390/414/768px in real Chrome." >> "$GITHUB_STEP_SUMMARY"
+              else
+                node scripts/site-completion-browser-qa.cjs "$preview_url"
+                echo "Measured real Chrome 320/390/768/1280 layouts against exact Firebase preview." >> "$GITHUB_STEP_SUMMARY"
+              fi
             else
               node scripts/firebase-overlay-release.cjs --preview --profile "$profile"
             fi
