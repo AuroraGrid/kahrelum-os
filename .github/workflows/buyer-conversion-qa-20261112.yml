@@ -1,0 +1,28 @@
+name: Buyer Conversion Scoped QA (read only)
+on:
+  push:
+    branches: [ops/qa-buyer-conversion-20261112]
+    paths: ['.github/workflows/buyer-conversion-qa-20261112.yml']
+permissions:
+  contents: read
+jobs:
+  test-buyer-conversion:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - name: Checkout reviewed PR head
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.0
+        with:
+          ref: 3474d8d0395453acfa180605c3decd3c576ab722
+          persist-credentials: false
+      - name: Parse, test, and guard commercial release
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "Reviewed source SHA: $(git rev-parse HEAD)"
+          node --check scripts/buyer-conversion-20261112.cjs
+          node --check scripts/firebase-overlay-release.cjs
+          node --test tests/buyer-conversion-20261112.test.cjs tests/buyer-conversion-live-patch.test.cjs
+          node --test tests/*.test.cjs
+          git status --short
+          echo 'No publication or deployment attempted.'
