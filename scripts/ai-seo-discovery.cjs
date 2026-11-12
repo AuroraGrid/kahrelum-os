@@ -76,7 +76,8 @@ function enhanceDiscoveryPage(live,canonical,route){
    ?h.replace(/<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">\s*/,'')
      .replace('<a class="agent-glossary-link" href="/ai-discovery/glossary.md">Evidence glossary</a>','')
    :h;
- assert.equal(norm(withoutPilotHints(strip(out))),norm(withoutPilotHints(strip(live))),
+ const comparable=h=>strip(withoutPilotHints(h));
+ assert.equal(norm(comparable(out)),norm(comparable(live)),
    'Unexpected mutation outside approved AI discovery snippets: '+route);
  return norm(out)===norm(live)?live:out;
 }
