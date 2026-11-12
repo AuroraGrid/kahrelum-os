@@ -1,0 +1,82 @@
+name: KAHRELUM Reclaim 6 Historically Published Preview Channels
+on:
+  push:
+    branches: [ops/firebase-quota-inventory-20261112]
+    paths: ['.github/workflows/firebase-safe-preview-reclaim-20261112.yml']
+permissions:
+  contents: read
+concurrency:
+  group: kahrelum-scoped-firebase-publisher
+  cancel-in-progress: false
+jobs:
+  reclaim-confirmed-safe-previews:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    env:
+      KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON }}
+      EXPECTED_LIVE_VERSION: projects/806087933597/sites/kahrelum-public-hosting/versions/7bb99cf33ff54fa7
+    steps:
+      - name: Checkout bounded preview cleanup source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.0
+        with:
+          persist-credentials: false
+      - name: Run preview deletion safety regression tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check scripts/firebase-safe-preview-reclaim.cjs
+          node --test tests/firebase-safe-preview-reclaim.test.cjs
+      - name: Remove only exact generated previews already published live
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -z "$KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON" ]]; then
+            echo "::error::Firebase service credential missing; no deletion attempted."
+            exit 1
+          fi
+          secret_path="$RUNNER_TEMP/kahrelum-preview-reclaim-auth.json"
+          printf '%s' "$KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON" > "$secret_path"
+          chmod 600 "$secret_path"
+          trap 'rm -f "$secret_path"' EXIT
+          export GOOGLE_APPLICATION_CREDENTIALS="$secret_path"
+          export XDG_CONFIG_HOME="$RUNNER_TEMP/isolated-firebase"
+          mkdir -p "$XDG_CONFIG_HOME"
+          npm install --global firebase-tools@15.34.2
+          export FIREBASE_TOOLS_ROOT="$(npm root -g)/firebase-tools"
+          node <<'NODE'
+          'use strict';
+          (async()=>{
+            const firebase=require(process.env.FIREBASE_TOOLS_ROOT);
+            await firebase.projects.list({json:true,nonInteractive:true});
+            const hosting=require(process.env.FIREBASE_TOOLS_ROOT+'/lib/hosting/api');
+            const {Client}=require(process.env.FIREBASE_TOOLS_ROOT+'/lib/apiv2');
+            const {hostingApiOrigin}=require(process.env.FIREBASE_TOOLS_ROOT+'/lib/api');
+            const {reclaimPublishedPreviews}=require('./scripts/firebase-safe-preview-reclaim.cjs');
+            const site='kahrelum-public-hosting';
+            const candidates=[
+              {id:'safe-overlay-9c58cf734919',versionId:'7bb99cf33ff54fa7'},
+              {id:'safe-overlay-85cc4a78017c',versionId:'3adc23ff357c47af'},
+              {id:'safe-overlay-c94b61a0a061',versionId:'2464ff3ac11fef64'},
+              {id:'safe-overlay-64851c9e703f',versionId:'6ecd8942c6959243'},
+              {id:'safe-overlay-88cec92dccd6',versionId:'c484285503aa09f0'},
+              {id:'safe-overlay-702f86326b01',versionId:'99515a7414b31a84'},
+            ];
+            const client=new Client({urlPrefix:hostingApiOrigin(),apiVersion:'v1beta1',auth:true});
+            const publishedVersionIds=new Set();
+            let token='',pages=0;
+            do{
+              const out=await client.get('/sites/'+site+'/channels/live/releases',{queryParams:{pageSize:100,...(token?{pageToken:token}:{})}});
+              for(const rel of out.body?.releases||[]){
+                const id=(rel.version?.name||'').split('/versions/').pop();
+                if(id)publishedVersionIds.add(id);
+              }
+              token=out.body?.nextPageToken||'';
+              pages++;
+              if(pages>30)throw Error('Incomplete release history: stop before deletion');
+            }while(token);
+            console.log('PREFLIGHT '+JSON.stringify({site,historyComplete:!token,publishedVersionCount:publishedVersionIds.size,targetPreviewIds:candidates.map(x=>x.id)}));
+            const result=await reclaimPublishedPreviews({hosting,site,expectedLiveVersion:process.env.EXPECTED_LIVE_VERSION,candidates,publishedVersionIds,historyComplete:!token});
+            console.log('PREVIEW_DELETION_RECEIPT '+JSON.stringify(result));
+            console.log('PRODUCTION_UNCHANGED: no live releases, files, archives, or backups were deleted.');
+          })().catch(e=>{console.error('SAFE_RECLAIM_FAILED '+e.message);process.exitCode=1;});
+          NODE
