@@ -36,6 +36,35 @@ function enhanceAgentVisibility(live,source,route){
  one(source,NAV,'Source navigation');
  const newline=live.includes('\r\n')?'\r\n':'\n';
  let out=live;
+ if(route==='/'){
+  // Production is read from the currently authenticated Firebase live version.
+  // Only source-approved head metadata is inserted; no historical body bytes
+  // or existing robots exclusions can be replaced by this scoped release.
+  const schemaPattern=/<script type="application\/ld\+json" id="kahrelum-homepage-schema">([^<]+)<\/script>/;
+  const schema=source.match(schemaPattern);
+  if(!schema)throw Error('Required source homepage schema missing');
+  const graph=JSON.parse(schema[1]);
+  if(graph['@context']!=='https://schema.org'||graph['@type']!=='WebPage'||
+     graph.url!==url||graph.dateModified!=='2026-11-12'||
+     JSON.stringify(graph).includes('LocalBusiness'))throw Error('Unsupported homepage schema');
+  const tags=[
+    schema[0],
+    '<link rel="alternate" type="text/markdown" href="/index.md">',
+    DESCRIBED,
+    '<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">',
+  ];
+  for(const tag of tags){
+   one(source,tag,'Source homepage metadata');
+   if(!out.includes(tag)){
+    if(tag===schema[0]&&out.includes('id="kahrelum-homepage-schema"'))throw Error('Conflicting live homepage schema');
+    if(tag.includes('rel="alternate"')&&/rel="alternate" type="text\/markdown"/.test(out))throw Error('Conflicting live homepage Markdown alternate');
+    if(tag===DESCRIBED&&out.includes('rel="describedby"'))throw Error('Conflicting live homepage AI discovery');
+    if(tag.includes('name="robots"')&&/<meta name="robots"[^>]*>/.test(out))throw Error('Conflicting live homepage robots directive');
+    out=out.replace('</head>',tag+newline+'</head>');
+   }
+   one(out,tag,'Live homepage metadata');
+  }
+ }
  if(route!=='/'){
   const marker='id="kahrelum-visibility-schema"';
   const expr=/<script type="application\/ld\+json" id="kahrelum-visibility-schema">([^<]+)<\/script>/;

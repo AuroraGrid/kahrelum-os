@@ -157,10 +157,10 @@ jobs:
                 esac
               done <<< "$changed"
               profiles="calibration-nfl-2026"
-            elif grep -Eq '^ai-discovery/(glossary|insights|digital-id|os|sports|nfl-deadline-2026|nvidia-chip-custody)\.md$' <<< "$changed"; then
+            elif grep -Eq '^ai-discovery/(glossary|insights|digital-id|os|sports|nfl-deadline-2026|nvidia-chip-custody)\.md$' <<< "$changed" || grep -Fqx 'scripts/agent-visibility-hardening.cjs' <<< "$changed"; then
               while IFS= read -r file; do
                 case "$file" in
-                  index.html|insights.html|digital-id.html|os.html|sports.html|nfl/deadline-watch-2026.html|insights/nvidia-megaspeed-chip-custody.html|index.md|pilot-page.md|AGENTS.md|llms.txt|sitemap.md|ai-discovery/insights.md|ai-discovery/digital-id.md|ai-discovery/os.md|ai-discovery/sports.md|ai-discovery/nfl-deadline-2026.md|ai-discovery/nvidia-chip-custody.md|ai-discovery/glossary.md|scripts/agent-visibility-hardening.cjs|scripts/commercial-readiness.cjs|scripts/firebase-overlay-release.cjs|scripts/deploy-unified-firebase.ps1|tests/ai-visibility-hardening.test.cjs|research/site-design/AI_VISIBILITY_HARDENING_20261112.md|.github/workflows/firebase-scoped-release.yml)
+                  index.html|insights.html|digital-id.html|os.html|sports.html|nfl/deadline-watch-2026.html|insights/nvidia-megaspeed-chip-custody.html|index.md|pilot-page.md|AGENTS.md|llms.txt|sitemap.md|ai-discovery/insights.md|ai-discovery/digital-id.md|ai-discovery/os.md|ai-discovery/sports.md|ai-discovery/nfl-deadline-2026.md|ai-discovery/nvidia-chip-custody.md|ai-discovery/glossary.md|scripts/agent-visibility-hardening.cjs|scripts/commercial-readiness.cjs|scripts/firebase-overlay-release.cjs|scripts/deploy-unified-firebase.ps1|tests/ai-visibility-hardening.test.cjs|tests/homepage-crawler-discovery.test.cjs|research/site-design/AI_VISIBILITY_HARDENING_20261112.md|.github/workflows/firebase-scoped-release.yml)
                     ;;
                   *) echo "::error::AI visibility release contains unrelated path: $file"; exit 1 ;;
                 esac

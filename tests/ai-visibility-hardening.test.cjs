@@ -78,3 +78,23 @@ test('sitemap accepts only source-verified homepage modification date, idempoten
  assert.equal(setSitemapLastmod(revised,{'/':'2026-11-12'}),revised);
  assert.throws(()=>setSitemapLastmod(sitemap,{'/../../etc':'2026-11-12'}));
 });
+
+
+test('live-baselined homepage receives source-backed crawler metadata without body rewrites',()=>{
+ const {enhanceAgentVisibility}=require('../scripts/agent-visibility-hardening.cjs');
+ const source=read('index.html');
+ const tags=[
+  source.match(/<script type="application\/ld\+json" id="kahrelum-homepage-schema">[^<]+<\/script>/)?.[0],
+  '<link rel="alternate" type="text/markdown" href="/index.md">',
+  '<link rel="describedby" href="/llms.txt">',
+  '<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">'
+ ];
+ assert.ok(tags.every(Boolean));
+ const old=tags.reduce((html,tag)=>html.replace(tag,''),source);
+ const patched=enhanceAgentVisibility(old,source,'/');
+ for(const tag of tags)assert.ok(patched.includes(tag),'Missing crawler metadata '+tag);
+ assert.equal(patched.split('</head>')[1],old.split('</head>')[1],'Unexpected homepage body rewrite');
+ assert.equal(enhanceAgentVisibility(patched,source,'/'),patched,'Must be idempotent');
+ const tainted=old.replace('<link rel="canonical" href="https://kahrelum.com/">','<link rel="canonical" href="https://wrong.example/">');
+ assert.throws(()=>enhanceAgentVisibility(tainted,source,'/'),/canonical/i);
+});

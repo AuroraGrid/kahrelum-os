@@ -1452,6 +1452,23 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     checks.push({ route, status: 200, sha256: sha256(bytes) });
   }
 
+  if (profileName === 'ai-visibility-hardening') {
+    // Production/preview readback must contain the source-checked homepage fields;
+    // a successful Firebase release alone is not a successful SEO release.
+    const home=(await fetchBytes(origin+'/')).toString('utf8');
+    const tag=home.match(/<script type="application\/ld\+json" id="kahrelum-homepage-schema">([^<]+)<\/script>/);
+    if(!tag)fail('Homepage structured data not published.');
+    const graph=JSON.parse(tag[1]);
+    if(graph['@context']!=='https://schema.org'||graph['@type']!=='WebPage'||
+       graph.url!==DOMAIN+'/'||graph.dateModified!=='2026-11-12')fail('Homepage source-bounded structured data failed readback.');
+    for(const snippet of [
+      '<link rel="alternate" type="text/markdown" href="/index.md">',
+      '<link rel="describedby" href="/llms.txt">',
+      '<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">',
+    ])if(!home.includes(snippet))fail('Homepage crawler discovery not published: '+snippet);
+    checks.push({route:'/',status:200,structuredData:'WebPage',alternate:'/index.md',robots:'index, follow'});
+  }
+
   if (profileName === 'site-completion') {
     const headers=await verifyMarkdownResponseHeaders(origin);
     checks.push(...headers.map(h=>({route:h.route,status:h.status,contentType:h.type,canonical:h.canonical})));
