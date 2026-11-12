@@ -14,7 +14,7 @@ const { buildChip01SocialArtifacts } = require(path.join(__dirname, 'chip01-soci
 const { patchBuyerPage } = require(path.join(__dirname, 'buyer-discovery.cjs'));
 const { enhanceDiscoveryPage } = require(path.join(__dirname, 'ai-seo-discovery.cjs'));
 const { enhanceAgentVisibility } = require(path.join(__dirname, 'agent-visibility-hardening.cjs'));
-const { prepareMarkdownHostingConfig, patchCompletionPage, verifyMarkdownResponseHeaders } = require(path.join(__dirname, 'site-completion.cjs'));
+const { siteCompletionAllowedPaths, prepareMarkdownHostingConfig, patchCompletionPage, verifyMarkdownResponseHeaders } = require(path.join(__dirname, 'site-completion.cjs'));
 const { patchPilot, patchArticleMetadata, patchHomepageC7 } = require(path.join(__dirname, 'release3-live-patches.cjs'));
 const { patchInvestigationOverview, patchInsightsIndex, patchNvidiaDetailPage } = require(path.join(__dirname, 'investigations-text-refresh.cjs'));
 
@@ -1215,9 +1215,9 @@ async function buildOverlay(live, profileName) {
     if (changedPaths.some(path => !allowed.has(path))) fail('Release 3 attempted to change unrelated live Firebase files.');
   }
   if (profileName === 'site-completion') {
-    const allowed = new Set(['/index.html', '/insights.html', '/nfl/deadline-watch-2026.html',
-      '/election-data/index.html', '/site-shell.css', '/sitemap.xml']);
-    if (changedPaths.some(x => !allowed.has(x))) fail('Site completion attempted to replace an unrelated Firebase file');
+    const allowed = siteCompletionAllowedPaths();
+    const unexpected = changedPaths.filter(x => !allowed.has(x));
+    if (unexpected.length) fail('Site completion attempted to replace an unrelated Firebase file. Unexpected site completion changed paths: '+unexpected.join(', '));
   }
   if (profileName === 'ai-visibility-hardening') {
     const allowed = new Set([
