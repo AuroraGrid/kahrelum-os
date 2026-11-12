@@ -10,7 +10,7 @@ const {patchInvestigationOverview,patchInsightsIndex}=require('../scripts/invest
 test('Release 2 names the November 12 CHIP-01 update without implying all twelve case cards were re-reviewed',()=>{
  const html=read('investigations.html');
  assert.match(html,/id="investigations-r2-desk-status"/);
- assert.match(html,/New open investigation · Updated November 12, 2026/);
+ assert.match(html,/Open investigation · Updated November 12, 2026/);
  assert.match(html,/November 12.*Megaspeed.*BIS|November 12.*Megaspeed.*inspect/i);
  assert.match(html,/October 31(?:, 2026)? through November 2(?:, 2026)?|October 31.*November 2/i);
  assert.match(html,/not (?:an? )?(?:new|fresh) (?:review|verification|fact-check) of the (?:older|other|twelve) case records/i);
@@ -36,7 +36,7 @@ test('Insights index surfaces follow-up evidence while protecting original forec
  const html=read('insights.html');
  assert.match(html,/War powers.*Nov 12/i);
  assert.match(html,/Counterintelligence.*Updated Nov 12/i);
- assert.match(html,/referr?ed.*(?:committee|Judiciary)/i);
+ assert.match(html,/(?:refer|referred).*Judiciary Committee/i);
  assert.match(html,/Megaspeed.*BIS|Megaspeed.*inspections/i);
  assert.match(html,/Original judgment forecast: 76% House impeachment by year-end, 45% actual departure/);
 });
@@ -67,7 +67,7 @@ test('Live Insights patch only replaces three approved discovery cards and prese
  const canonical=read('insights.html');
  const card=canonical.match(/<article class="card"><p class="kicker">Counterintelligence[^]*?<\/article>/)?.[0];
  assert.ok(card);
- const stale=canonical.replace(card,'<article class="card"><p>OLD NOVEMBER 10 NVIDIA ENTRY</p></article>')
+ const stale=canonical.replace(card,'<article class="card"><p>OLD NOVEMBER 10 NVIDIA ENTRY</p><a href="/insights/nvidia-megaspeed-chip-custody">Details</a></article>')
  .replace('</main>','<!-- LIVE-ONLY-INDEX-EXTRA --></main>');
  const patched=patchInsightsIndex(stale,canonical);
  assert.match(patched,/Updated Nov 12/);
