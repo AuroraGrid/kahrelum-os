@@ -52,7 +52,10 @@ function enhanceAgentVisibility(live,source,route){
    // add an identifier instead of publishing a duplicate contradictory schema.
    const old=/<script type="application\/ld\+json">([^<]+)<\/script>/;
    const published=out.match(old);
-   if(!published||JSON.stringify(JSON.parse(published[1]))!==JSON.stringify(obj))throw Error('Nvidia Article schema conflicts; preserve original rather than overwrite');
+   if(!published)throw Error('Nvidia previous source Article schema missing');
+   const current=JSON.parse(published[1]);
+   const historical={...obj};delete historical.url;
+   if(JSON.stringify(current)!==JSON.stringify(historical)||current.mainEntityOfPage!==url)throw Error('Nvidia Article schema conflicts; preserve original rather than overwrite');
    out=out.replace(old,srcScript);
   }else {
    // Prevent two independently asserted versions of the same page schema.
