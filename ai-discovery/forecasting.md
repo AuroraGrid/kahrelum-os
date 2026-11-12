@@ -3,6 +3,8 @@ title: "Forecasting and Intelligence"
 canonical: "https://kahrelum.com/forecasting"
 updated: "2026-11-12"
 content_type: "public-research-summary"
+description: "Dated forecasting evidence, immutable probabilities, resolution rules, external comparators and admitted evaluation failures."
+last_updated: "2026-11-12"
 ---
 
 # Forecasting and Intelligence | KAHRELUM

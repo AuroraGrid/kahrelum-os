@@ -3,6 +3,8 @@ title: "2026 NFL Trade Deadline Reconciliation"
 canonical: "https://kahrelum.com/nfl/deadline-watch-2026"
 updated: "2026-11-12"
 content_type: "agent-readable public summary"
+description: "November 2026 NFL deadline source reconciliation with archived source snapshots, a scored player cohort and unresolved six-trade FC1."
+last_updated: "2026-11-12"
 ---
 
 # 2026 NFL Trade Deadline Reconciliation

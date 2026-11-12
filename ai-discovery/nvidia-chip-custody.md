@@ -3,6 +3,8 @@ title: "Nvidia Megaspeed GPU Custody and Leadership"
 canonical: "https://kahrelum.com/insights/nvidia-megaspeed-chip-custody"
 updated: "2026-11-12"
 content_type: "agent-readable public summary"
+description: "Nvidia and Megaspeed source guide distinguishing filed CEO succession facts, disputed GPU custody allegations and unscored forecasts."
+last_updated: "2026-11-12"
 ---
 
 # Nvidia Megaspeed GPU Custody and Leadership

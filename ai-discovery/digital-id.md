@@ -3,6 +3,8 @@ title: "Digital Identity Watch"
 canonical: "https://kahrelum.com/digital-id"
 updated: "2026-11-12"
 content_type: "agent-readable public summary"
+description: "Public-source digital identity policy watch separating actual legislation, voluntary access, implementation status and unassessed jurisdictions."
+last_updated: "2026-11-12"
 ---
 
 # Digital Identity Watch

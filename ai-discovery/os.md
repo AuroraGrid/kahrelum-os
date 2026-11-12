@@ -3,6 +3,8 @@ title: "KAHRELUM OS and Research Method"
 canonical: "https://kahrelum.com/os"
 updated: "2026-11-12"
 content_type: "agent-readable public summary"
+description: "Public KAHRELUM evidence-to-decision method with source verification, countercases, correction trail and runtime limitations."
+last_updated: "2026-11-12"
 ---
 
 # KAHRELUM OS and Research Method

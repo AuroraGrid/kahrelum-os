@@ -3,6 +3,8 @@ title: "Decision Evidence Gap Scorecard"
 canonical: "https://kahrelum.com/evidence-scorecard"
 updated: "2026-11-12"
 content_type: "public-research-summary"
+description: "Free browser-only three-case decision evidence gap worksheet with eight reviewer controls and local CSV export, not certification."
+last_updated: "2026-11-12"
 ---
 
 # Decision Evidence Gap Scorecard | KAHRELUM

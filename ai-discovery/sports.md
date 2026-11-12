@@ -3,6 +3,8 @@ title: "Sports Intelligence and Forecast Accountability"
 canonical: "https://kahrelum.com/sports"
 updated: "2026-11-12"
 content_type: "agent-readable public summary"
+description: "Source-grade sports research that separates confirmed transactions, reporter rumours, original forecasts and audited scoring."
+last_updated: "2026-11-12"
 ---
 
 # Sports Intelligence and Forecast Accountability
