@@ -326,7 +326,20 @@ const RELEASE_PROFILES = {
     // One integrated improvement pass with exact live-source patches.
     // Only fresh page editorial copy, SEO title metadata and source-truthful sitemap dates.
     // Markdown response headers are the ONLY deliberate Hosting config delta.
-    overlayFiles: ['site-shell.css'],
+    overlayFiles: ['site-shell.css',
+      'index.md',
+      'pilot-page.md',
+      'ai-discovery/assurance.md',
+      'ai-discovery/digital-id.md',
+      'ai-discovery/evidence-scorecard.md',
+      'ai-discovery/forecasting.md',
+      'ai-discovery/glossary.md',
+      'ai-discovery/insights.md',
+      'ai-discovery/investigations.md',
+      'ai-discovery/nfl-deadline-2026.md',
+      'ai-discovery/nvidia-chip-custody.md',
+      'ai-discovery/os.md',
+      'ai-discovery/sports.md'],
     sitemapRoutes: [],
     sitemapLastmod: {
       '/': '2026-11-12',
