@@ -31,3 +31,11 @@ Statements reflect the named public page and its original dated source records. 
 - [Public source directory](https://kahrelum.com/sitemap.md)
 - [Agent guide](https://kahrelum.com/AGENTS.md)
 - [Service and permissions](https://kahrelum.com/pilot)
+
+## Initial prospective calibration, November 13, 2026 PKT
+
+- [Read the seven-case public calibration](https://kahrelum.com/insights/calibration-oct-nov-2026) (mean Brier 0.1444, five of seven directional hits, 42.2% lower loss than a constant 50%/0.2500 baseline).
+- The 0.1264 eight-record mean includes a separate synthetic gate drill, not seven live-event accuracy.
+- The archived Oct 13–14 original Drive probabilities are distinct from the later consolidated scoreboard; source access may be restricted.
+- The Nov 10 FC1 NFL trade-count challenge remains unscored over club-date vs register-date conflict, while the separate 123-player NFL cohort underperformed its all-NO baseline.
+- Small N and event heterogeneity preclude superiority claims. A missed scheduled October 20 resolution check is disclosed separately from gate compliance.
