@@ -31,6 +31,8 @@ This public directory groups existing website pages. Research status and timesta
 
 ## Forecasting
 
+- [Seven Prospective Forecasts, October–November 2026: KAHRELUM Calibration (Brier 0.1444)](https://kahrelum.com/insights/calibration-oct-nov-2026)
+
 - [Forecasting & Intelligence | KAHRELUM](https://kahrelum.com/forecasting)
 
 ## Insights

@@ -180,6 +180,16 @@ const RELEASE_PROFILES = {
     sitemapRoutes: ['/insights/hegseth-war-powers-fact-check'],
     includeHomepage: false,
   },
+  'calibration-nfl-2026': {
+    // Publish only the sourced cross-domain calibration report and its share card,
+    // plus the discovery crosslinks. No source ledgers, player forecasts, or homepage.
+    overlayFiles: ['insights/calibration-oct-nov-2026.html',
+      'assets/social/og-calibration-oct-nov-2026.png',
+      'forecasting.html', 'insights.html', 'nfl/trade-volume-challenge-2026.html',
+      'sitemap.md', 'llms.txt', 'ai-discovery/forecasting.md'],
+    sitemapRoutes: ['/insights/calibration-oct-nov-2026'],
+    includeHomepage: false,
+  },
   'osint-illusion': {
     // Bounded publication: article, discovery, text directory and original social art only.
     overlayFiles: ['insights/osint-illusion.html', 'insights.html', 'sitemap.md',
@@ -1380,6 +1390,8 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     ? ['/election-data/']
     : profileName === 'buyer-discovery'
     ? ['/', '/pilot']
+    : profileName === 'calibration-nfl-2026'
+    ? ['/forecasting','/insights','/insights/calibration-oct-nov-2026','/nfl/trade-volume-challenge-2026']
     : profileName === 'ai-discovery-seo'
     ? ['/assurance','/investigations','/forecasting','/evidence-scorecard','/pilot']
     : profileName === 'ai-visibility-hardening'
