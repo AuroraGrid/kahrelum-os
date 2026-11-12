@@ -71,4 +71,31 @@ function patchInsightsIndex(live,canonical){
   if(out.split('</head>')[0]!==live.split('</head>')[0])throw Error('Live Insights metadata changed');
   return out;
 }
-module.exports={patchInvestigationOverview,patchInsightsIndex};
+function patchNvidiaDetailPage(live,canonical,file){
+  const anchors={
+    'investigations/chip-01.html':'<section aria-labelledby="chip01-forecast">',
+    'insights/nvidia-megaspeed-chip-custody.html':'<section aria-labelledby="insight-leadership">',
+  };
+  const anchor=anchors[file];
+  if(!anchor)throw Error('Unapproved detailed article for a bounded CHIP-01 text patch');
+  const marker='<section id="chip01-nov12-leadership"';
+  const start=canonical.indexOf(marker);
+  if(start<0||canonical.indexOf(marker,start+1)>=0)throw Error('Missing or repeated canonical leadership update');
+  const end=canonical.indexOf('</section>\n',start);
+  if(end<0)throw Error('Leadership update has no unique section close');
+  const snippet=canonical.slice(start,end+'</section>\n'.length);
+  if(!snippet.includes('Colette Kress')||!snippet.includes('February 10, 2027')||!snippet.includes('2026-11-12-ceo-transition-addendum.md'))throw Error('Leadership text has incomplete source and settlement boundaries');
+  let out=live;
+  if(out.includes(marker)){
+    const oldStart=out.indexOf(marker),oldEnd=out.indexOf('</section>\n',oldStart);
+    if(oldEnd<0||out.indexOf(marker,oldStart+1)>=0)throw Error('Corrupt existing leadership section');
+    out=out.slice(0,oldStart)+snippet+out.slice(oldEnd+'</section>\n'.length);
+  } else {
+    if(out.split(anchor).length!==2)throw Error('Expected a single frozen leadership forecast anchor');
+    out=out.replace(anchor,snippet+anchor);
+  }
+  if(out.split('</head>')[0]!==live.split('</head>')[0])throw Error('Unapproved metadata modification in CHIP-01 patch');
+  if(!out.includes(anchor)||!out.includes('85%')||!out.includes('10%')||!out.includes('5%'))throw Error('Original outcome forecast disappeared');
+  return out;
+}
+module.exports={patchInvestigationOverview,patchInsightsIndex,patchNvidiaDetailPage};
