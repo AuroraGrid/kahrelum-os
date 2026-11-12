@@ -12,7 +12,7 @@ const { cleanupPromotedPreview } = require(path.join(__dirname, 'firebase-previe
 const { buildCaseShareArtifacts, extractCases } = require(path.join(__dirname, 'case-social-pages.cjs'));
 const { buildChip01SocialArtifacts } = require(path.join(__dirname, 'chip01-social.cjs'));
 const { patchBuyerPage } = require(path.join(__dirname, 'buyer-discovery.cjs'));
-const { patchInvestigationOverview, patchInsightsIndex } = require(path.join(__dirname, 'investigations-text-refresh.cjs'));
+const { patchInvestigationOverview, patchInsightsIndex, patchNvidiaDetailPage } = require(path.join(__dirname, 'investigations-text-refresh.cjs'));
 
 const SITE = 'kahrelum-public-hosting';
 const INDEXNOW_KEY_FILE = 'dedc67db0c224b1c9a4be1379f7937f5.txt';
@@ -933,6 +933,10 @@ async function buildOverlay(live, profileName) {
     for (const [hostingPath, publicPath, patch] of [
       ['/investigations.html', '/investigations', patchInvestigationOverview],
       ['/insights.html', '/insights', patchInsightsIndex],
+      ['/investigations/chip-01.html', '/investigations/chip-01',
+        (live, source) => patchNvidiaDetailPage(live, source, 'investigations/chip-01.html')],
+      ['/insights/nvidia-megaspeed-chip-custody.html', '/insights/nvidia-megaspeed-chip-custody',
+        (live, source) => patchNvidiaDetailPage(live, source, 'insights/nvidia-megaspeed-chip-custody.html')],
     ]) {
       const publicHtml = (await verifiedLiveFile(live, hostingPath, publicPath)).toString('utf8');
       const canonical = fs.readFileSync(path.join(ROOT, hostingPath.slice(1)), 'utf8');
