@@ -105,3 +105,12 @@ body.site-shell-ready footer:not(.site-footer){max-width:1280px;margin:1.2rem au
   .fact-table,.score-table,.challenge-table {display:block;max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;}
 }
 .site-mobile-menu summary:focus-visible,.pilot-inquiry input:focus-visible,.pilot-inquiry textarea:focus-visible,.pilot-inquiry select:focus-visible,.pilot-inquiry button:focus-visible {outline:3px solid var(--site-accent,#21608a);outline-offset:3px;}
+
+/* 2026-11-12: real 320px Chrome audit found benchmark-table min-content overflow.
+   Keep the table accessible by horizontal scrolling inside the table, not the page. */
+@media (max-width: 640px) {
+  main table {display:block;max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;}
+  main pre,main .fact-table,main .score-table,main .challenge-table {max-width:100%;overflow-x:auto;}
+  main .grid,main .usegrid,main .card,main section {min-width:0;max-width:100%;}
+  main p, main h2, main h3, main a {overflow-wrap:anywhere;}
+}

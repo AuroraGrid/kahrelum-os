@@ -67,3 +67,14 @@ test('headless browser QA has viewport and navigation, no credential or form sub
  assert.doesNotMatch(source,/\.submit\(|dispatchEvent\(new Event\('submit'/);
  assert.match(read('.github/workflows/firebase-scoped-release.yml'),/site-completion-browser-qa\.cjs/);
 });
+
+test('narrow viewports make multi-column data tables independently scrollable without hiding body overflow',()=>{
+ const css=read('site-shell.css');
+ assert.match(css,/@media\s*\(max-width:\s*640px\)/);
+ assert.match(css,/main table\s*\{/);
+ assert.match(css,/overflow-x:\s*auto/);
+ assert.match(css,/overscroll-behavior-inline:\s*contain/);
+ const pub=read('scripts/firebase-overlay-release.cjs');
+ assert.match(pub,/'site-completion':\s*\{[\s\S]{0,500}'site-shell\.css'/);
+ assert.match(pub,/Site completion attempted to replace an unrelated Firebase file/);
+});

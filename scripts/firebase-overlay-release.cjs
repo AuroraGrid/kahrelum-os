@@ -326,7 +326,7 @@ const RELEASE_PROFILES = {
     // One integrated improvement pass with exact live-source patches.
     // Only fresh page editorial copy, SEO title metadata and source-truthful sitemap dates.
     // Markdown response headers are the ONLY deliberate Hosting config delta.
-    overlayFiles: [],
+    overlayFiles: ['site-shell.css'],
     sitemapRoutes: [],
     sitemapLastmod: {
       '/': '2026-11-12',
@@ -1203,7 +1203,7 @@ async function buildOverlay(live, profileName) {
   }
   if (profileName === 'site-completion') {
     const allowed = new Set(['/index.html', '/insights.html', '/nfl/deadline-watch-2026.html',
-      '/election-data/index.html', '/sitemap.xml']);
+      '/election-data/index.html', '/site-shell.css', '/sitemap.xml']);
     if (changedPaths.some(x => !allowed.has(x))) fail('Site completion attempted to replace an unrelated Firebase file');
   }
   if (profileName === 'ai-visibility-hardening') {

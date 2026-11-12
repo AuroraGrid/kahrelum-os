@@ -139,7 +139,7 @@ jobs:
             if grep -Fqx 'scripts/site-completion.cjs' <<< "$changed"; then
               while IFS= read -r file; do
                 case "$file" in
-                  scripts/site-completion.cjs|scripts/site-completion-browser-qa.cjs|scripts/firebase-overlay-release.cjs|scripts/deploy-unified-firebase.ps1|tests/site-completion.test.cjs|insights.html|nfl/deadline-watch-2026.html|election-data/index.html|research/site-design/SITE_COMPLETION_20261112.md|.github/workflows/firebase-scoped-release.yml)
+                  scripts/site-completion.cjs|scripts/site-completion-browser-qa.cjs|scripts/firebase-overlay-release.cjs|scripts/deploy-unified-firebase.ps1|tests/site-completion.test.cjs|site-shell.css|insights.html|nfl/deadline-watch-2026.html|election-data/index.html|research/site-design/SITE_COMPLETION_20261112.md|.github/workflows/firebase-scoped-release.yml)
                     ;;
                   *) echo "::error::Site completion source push includes unrelated path: $file"; exit 1 ;;
                 esac

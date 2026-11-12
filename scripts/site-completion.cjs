@@ -1,4 +1,5 @@
 'use strict';
+// Rerun the single guarded site-completion release after responsive-table QA uncovered 320px overflow.
 const assert=require('node:assert/strict');
 const BASE='https://kahrelum.com';
 const MARKDOWN_CANONICALS=Object.freeze([
