@@ -1,6 +1,6 @@
 'use strict';
 // Only remove a generated preview after exact live adoption and verified readback.
-async function cleanupPromotedPreview(hosting, site, channel, version) {
+async function cleanupPromotedPreview(hosting, site, channel, version, options = {keepPreview: process.env.KAHRELUM_KEEP_PREVIEW === '1'}) {
   if (!/^safe-overlay-[a-f0-9]{12}$/.test(channel)) {
     throw new Error('Only generated safe-overlay previews may be reclaimed.');
   }
@@ -17,6 +17,8 @@ async function cleanupPromotedPreview(hosting, site, channel, version) {
   if (preview.release?.version?.name!==version) {
     throw new Error('Preview cleanup refused: preview version differs from verified release.');
   }
+  // Process-only KAHRELUM_KEEP_PREVIEW=1 retains the verified preview; all identity guards still apply.
+  if (options.keepPreview) return {status:'RETAINED',channel,liveVersion:version};
   await hosting.deleteChannel('-',site,channel);
   const after=await hosting.getChannel('-',site,'live');
   if (after?.release?.version?.name!==version) {
