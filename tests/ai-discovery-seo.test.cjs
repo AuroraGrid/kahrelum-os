@@ -90,11 +90,16 @@ test('pilot offer page exposes accurate machine-readable service scope and a saf
   assert.ok(json,'Pilot must publish a source-bound JSON-LD block');
   const service=JSON.parse(json[1]);
   assert.equal(service['@context'],'https://schema.org');
-  assert.equal(service['@type'],'Service');
+  assert.equal(service['@type'],'WebPage');
   assert.equal(service.url,'https://kahrelum.com/pilot');
-  assert.equal(service.provider['@type'],'Organization');
-  assert.deepEqual(service.offers.map(o=>o.price),['750','2500']);
-  assert.ok(service.offers.every(o=>o.priceCurrency==='USD'));
+  assert.equal(service.mainEntity['@type'],'Service');
+  assert.equal(service.mainEntity['@id'],'https://kahrelum.com/pilot#service');
+  assert.equal(service.mainEntity.provider['@type'],'Organization');
+  assert.deepEqual(service.mainEntity.offers.map(o=>o.price),['750','2500']);
+  assert.ok(service.mainEntity.offers.every(o=>o.priceCurrency==='USD'));
+  const buyer=require('../scripts/buyer-discovery.cjs').patchBuyerPage('/pilot',source);
+  const buyerGraph=JSON.parse(buyer.match(/<script type="application\/ld\+json" id="kahrelum-buyer-discovery-schema">([^<]+)<\/script>/)[1]);
+  assert.equal(buyerGraph['@graph'].find(n=>n['@type']==='Service')['@id'],service.mainEntity['@id']);
   assert.ok(!JSON.stringify(service).includes('LocalBusiness'));
   assert.ok(!JSON.stringify(service).includes('AggregateRating'));
   const alt='<link rel="alternate" type="text/markdown" href="/pilot-page.md">';
@@ -110,4 +115,25 @@ test('pilot offer page exposes accurate machine-readable service scope and a saf
   assert.equal(enhanceDiscoveryPage(patched,source,'/pilot'),patched,'Pilot patch must be idempotent');
   assert.equal(patched.split('</head>')[1].replace(glossary,''),legacy.split('</head>')[1],'Prior live commercial copy must remain unchanged');
   assert.throws(()=>enhanceDiscoveryPage(legacy.replace('href="https://kahrelum.com/pilot"','href="https://wrong.invalid/pilot"'),source,'/pilot'),/canonical/);
+});
+
+
+test('pilot Service schema migration is source-pinned and preserves all live content',()=>{
+  const source=read('pilot.html');
+  const sourceScript=source.match(/<script type="application\/ld\+json" id="kahrelum-ai-discovery-schema">([^<]+)<\/script>/)?.[0];
+  assert.ok(sourceScript);
+  const schema=JSON.parse(source.match(/<script type="application\/ld\+json" id="kahrelum-ai-discovery-schema">([^<]+)<\/script>/)[1]);
+  const prior={'@context':'https://schema.org',...schema.mainEntity};
+  delete prior['@id'];
+  const oldScript='<script type="application/ld+json" id="kahrelum-ai-discovery-schema">'+JSON.stringify(prior)+'</script>';
+  const oldLive=source.replace(sourceScript,oldScript);
+  const {enhanceDiscoveryPage}=require('../scripts/ai-seo-discovery.cjs');
+  const next=enhanceDiscoveryPage(oldLive,source,'/pilot');
+  assert.ok(next.includes(sourceScript));
+  assert.equal(enhanceDiscoveryPage(next,source,'/pilot'),next);
+  assert.equal(next.replace(sourceScript,''),oldLive.replace(oldScript,''),'No modification of historical buyer page content');
+  const changed={...prior,offers:[...prior.offers]};
+  changed.offers[0]={...changed.offers[0],price:'700'};
+  const bad=source.replace(sourceScript,oldScript.replace(JSON.stringify(prior),JSON.stringify(changed)));
+  assert.throws(()=>enhanceDiscoveryPage(bad,source,'/pilot'),/previous verified source/);
 });

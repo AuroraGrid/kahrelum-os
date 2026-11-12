@@ -32,3 +32,4 @@ Statements reflect the named public page and its original dated source records. 
 - [Agent guide](https://kahrelum.com/AGENTS.md)
 - [Service and permissions](https://kahrelum.com/pilot)
 - [Pilot inquiry and fixed-scope terms in Markdown](https://kahrelum.com/pilot-page.md) (public summary, not a submission endpoint or direct checkout)
+- [Evidence terminology and confidence boundaries](https://kahrelum.com/ai-discovery/glossary.md) (definitions for interpreting facts, inferences, forecasts and unresolved outcomes)
