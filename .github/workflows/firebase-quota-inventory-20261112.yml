@@ -72,6 +72,23 @@ jobs:
                 reason:version===liveVersion?'identical-to-live':expired?'expired':'not-proven'};
             });
             console.log('CHANNEL_INVENTORY '+JSON.stringify({count:view.length,channels:view}));
+            const promotedIds=new Set();
+            let releaseToken='', releasePages=0, scannedReleases=0;
+            do{
+              const rr=await client.get('/sites/'+site+'/channels/live/releases',{queryParams:{pageSize:100,...(releaseToken?{pageToken:releaseToken}:{})}});
+              for(const rel of rr.body?.releases||[]){
+                const v=(rel.version?.name||'').split('/versions/').pop();
+                if(v)promotedIds.add(v);
+                scannedReleases++;
+              }
+              releaseToken=rr.body?.nextPageToken||'';
+              releasePages++;
+              if(releasePages>=30&&releaseToken)break;
+            }while(releaseToken);
+            const normalized=v=>(v||'').split('/versions/').pop();
+            const promotedPreviews=view.filter(c=>/^safe-overlay-[a-f0-9]{12}$/.test(c.id)&&promotedIds.has(normalized(c.version)));
+            console.log('PROMOTED_PREVIEW_CANDIDATES '+JSON.stringify({historyComplete:!releaseToken,scannedReleases,candidates:promotedPreviews.map(x=>({id:x.id,versionId:normalized(x.version),isCurrentlyLive:normalized(x.version)===normalized(liveVersion)}))}));
+
             for(const url of ['/sites/'+site+'/versions/'+liveVersion.split('/').pop(),'/sites/'+site+'/channels/live/releases']){
               try{const r=await client.get(url,{queryParams:url.endsWith('/releases')?{pageSize:15}:{}});
                 if(url.endsWith('/releases')) console.log('LIVE_RELEASE_HISTORY '+JSON.stringify((r.body?.releases||[]).map(x=>({version:x.version?.name,versionBytes:x.version?.versionBytes,releaseTime:x.releaseTime}))));
