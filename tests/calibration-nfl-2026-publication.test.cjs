@@ -34,7 +34,8 @@ test('dedicated Firebase profile is tightly scoped and retains NFL preview',()=>
  const script=read('scripts/firebase-overlay-release.cjs');
  const match=script.match(/  'calibration-nfl-2026': \{([\s\S]*?)\n  \},/);assert.ok(match,'Publisher must support dedicated profile');
  for(const token of ['forecasting.html','insights.html','nfl/trade-volume-challenge-2026.html',card,'insights/calibration-oct-nov-2026.html']) assert.ok(match[1].includes(token),token);
- assert.doesNotMatch(match[1],/forecast-ledger|sourcegrid|current-forecasts|desk-live|homepage/i);
+ assert.doesNotMatch(match[1],/forecast-ledger|sourcegrid|current-forecasts|desk-live/i);
+ assert.ok(match[1].includes('includeHomepage: false'));
  const workflow=read('.github/workflows/firebase-scoped-release.yml');
  assert.ok(workflow.includes('calibration-nfl-2026'));
  assert.ok(workflow.includes('insights/calibration-oct-nov-2026.html'));
