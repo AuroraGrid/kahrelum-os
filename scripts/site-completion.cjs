@@ -2,6 +2,14 @@
 // Rerun the integrated site-completion release to close Markdown frontmatter and verified election directory SEO.
 const assert=require('node:assert/strict');
 const BASE='https://kahrelum.com';
+const util=require('node:util');
+// Firebase's API may serialize equivalent configuration objects with different key order.
+// Only semantic equivalence is acceptable; changes to headers, routes or cleanUrls still fail.
+function configsSemanticallyEqual(left,right){
+ try { return util.isDeepStrictEqual(JSON.parse(JSON.stringify(left)),JSON.parse(JSON.stringify(right))); }
+ catch { return false; }
+}
+
 const MARKDOWN_CANONICALS=Object.freeze([
  ['/index.md',BASE+'/'],
  ['/pilot-page.md',BASE+'/pilot'],
@@ -125,4 +133,4 @@ async function verifyMarkdownResponseHeaders(origin){
  }
  return checks;
 }
-module.exports={MARKDOWN_CANONICALS,siteCompletionAllowedPaths,prepareMarkdownHostingConfig,patchCompletionPage,verifyMarkdownResponseHeaders};
+module.exports={MARKDOWN_CANONICALS,siteCompletionAllowedPaths,configsSemanticallyEqual,prepareMarkdownHostingConfig,patchCompletionPage,verifyMarkdownResponseHeaders};
