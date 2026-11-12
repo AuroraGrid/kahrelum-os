@@ -91,7 +91,7 @@
     }
   ],
   "eligibleForecasts": 123,
-  "correctTrades": 8,
+  "correctTrades": 1,
   "correctNonTrades": 112,
   "incorrect": 10,
   "brierScore": 0.077813821138,
@@ -108,5 +108,13 @@
   "fc1VolumeScoreStatus": "UNRESOLVED_DATE_BOUNDARY",
   "fc1VolumeScore": null,
   "originalPendingAuditSnapshot": "https://github.com/AuroraGrid/kahrelum-os/blob/main/research/nfl-2026-trade-deadline/archive-public-2026-11-12/2026-10-31-pending-audit-original.json",
-  "evidenceRecord": "https://github.com/AuroraGrid/kahrelum-os/blob/main/research/nfl-2026-trade-deadline/2026-11-12_POST_DEADLINE_OUTCOME_AUDIT.md"
+  "evidenceRecord": "https://github.com/AuroraGrid/kahrelum-os/blob/main/research/nfl-2026-trade-deadline/2026-11-12_POST_DEADLINE_OUTCOME_AUDIT.md",
+  "positiveTrades": 8,
+  "negativeTrades": 115,
+  "threshold50Percent": {
+    "truePositive": 1,
+    "falsePositive": 3,
+    "falseNegative": 7,
+    "trueNegative": 112
+  }
 }
