@@ -41,6 +41,8 @@ jobs:
           'use strict';
           (async()=>{
             const root=process.env.FIREBASE_TOOLS_ROOT;
+            const firebase=require(root);
+            await firebase.projects.list({json:true,nonInteractive:true});
             const {Client}=require(root+'/lib/apiv2');
             const {hostingApiOrigin}=require(root+'/lib/api');
             const hosting=require(root+'/lib/hosting/api');
