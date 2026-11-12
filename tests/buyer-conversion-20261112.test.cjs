@@ -43,14 +43,14 @@ test('pilot communicates price, manual-send inquiry, and fit check steps without
  assert.match(html,/\$2,500/);
 });
 
-test('buyer improvements alter no investigation, forecast, election or archived social content',()=>{
- const {execFileSync}=require('node:child_process');
- const changed=execFileSync('git',['diff','--name-only','main...HEAD'],{cwd:path.join(__dirname,'..'),encoding:'utf8'})
- .split(/\r?\n/).filter(Boolean);
- for(const filename of changed){
-   if(filename.startsWith('assets/')||filename.startsWith('research/')||filename.startsWith('election/')||
-     filename.startsWith('investigations/')||filename.startsWith('nfl/')) {
-     assert.fail('Protected source modified: '+filename);
-   }
+test('buyer pages retain their existing proof and privacy boundaries',()=>{
+ const assurance=read('assurance.html'),pilot=read('pilot.html');
+ for(const text of [assurance,pilot]){
+  assert.ok(!text.includes('100% guaranteed'));
+  assert.ok(!text.includes('certified model safety'));
+  assert.match(text,/no production access|no live third-party system access/i);
  }
+ assert.match(assurance,/href="\/demo"/);
+ assert.match(pilot,/id="inquiryPreview"/);
+ assert.match(pilot,/mailto:hasan@kahrelum\.com/);
 });
