@@ -54,3 +54,14 @@ test('buyer pages retain their existing proof and privacy boundaries',()=>{
  assert.match(pilot,/id="inquiryPreview"/);
  assert.match(pilot,/mailto:hasan@kahrelum\.com/);
 });
+
+test('the older buyer discovery patch accepts only the reviewed new pilot search description',()=>{
+ const {patchBuyerPage}=require('../scripts/buyer-discovery.cjs');
+ const html=read('pilot.html');
+ const updated=patchBuyerPage('/pilot',html);
+ assert.ok(updated.includes('Review three authorized historical AI decisions for $750.'));
+ assert.ok(updated.includes('id="kahrelum-ai-discovery-schema"'));
+ assert.ok(updated.includes('id="pilotInquiry"'));
+ assert.ok(updated.includes('not automatically transmitted'));
+ assert.equal(patchBuyerPage('/pilot',updated),updated);
+});
