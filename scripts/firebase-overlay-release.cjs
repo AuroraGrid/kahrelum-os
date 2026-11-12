@@ -180,6 +180,19 @@ const RELEASE_PROFILES = {
     sitemapRoutes: ['/insights/hegseth-war-powers-fact-check'],
     includeHomepage: false,
   },
+  'forecast-100-publication': {
+    // Dedicated public research release. No prediction source ledgers, past probabilities,
+    // production homepage, or unrelated research pages may be modified by this profile.
+    overlayFiles: [
+      'forecasting/100-forecast-challenge.html',
+      'forecasting/100-forecast-v1.4.json',
+      'assets/social/og-100-forecast-challenge.png',
+      'forecasting.html', 'sitemap.md', 'llms.txt',
+      'ai-discovery/forecasting.md', 'ai-discovery/100-forecast-challenge.md'
+    ],
+    sitemapRoutes: ['/forecasting/100-forecast-challenge'],
+    includeHomepage: false,
+  },
   'calibration-nfl-2026': {
     // Publish only the sourced cross-domain calibration report and its share card,
     // plus the discovery crosslinks. No source ledgers, player forecasts, or homepage.
@@ -1390,6 +1403,8 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     ? ['/election-data/']
     : profileName === 'buyer-discovery'
     ? ['/', '/pilot']
+    : profileName === 'forecast-100-publication'
+    ? ['/forecasting', '/forecasting/100-forecast-challenge']
     : profileName === 'calibration-nfl-2026'
     ? ['/forecasting','/insights','/insights/calibration-oct-nov-2026','/nfl/trade-volume-challenge-2026']
     : profileName === 'ai-discovery-seo'
