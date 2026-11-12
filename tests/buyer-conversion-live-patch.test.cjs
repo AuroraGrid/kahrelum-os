@@ -54,3 +54,14 @@ test('malformed source, changed canonical, unsupported title or conflicting exis
  assert.throws(()=>patchBuyerConversion(old.replace('<section><p class="eyebrow">Buying & data handling','<section id="example-decision-audits"><h2>Conflicting third-party text</h2></section><section><p class="eyebrow">Buying & data handling'),source,'/assurance'),/conflict/i);
  assert.throws(()=>patchBuyerConversion(old,source,'/forecasting'),/route/i);
 });
+
+test('published pilot verification accepts the actual manual-send text and rejects a missing disclosure',()=>{
+ const {patchBuyerConversion}=require('../scripts/buyer-conversion-20261112.cjs');
+ const source=read('pilot.html');
+ assert.match(source,/does not automatically transmit or store your entry/);
+ const damaged=source.replace('does not automatically transmit or store your entry','might transmit information')
+   .replace('not automatically sent','possibly sent');
+ assert.throws(()=>patchBuyerConversion(damaged,source,'/pilot'),/manual.send|transmit|inquiry/i);
+ const publisher=read('scripts/firebase-overlay-release.cjs');
+ assert.match(publisher,/does not automatically transmit\|not automatically sent/);
+});

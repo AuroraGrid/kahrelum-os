@@ -1568,7 +1568,7 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
         fail('Buyer conversion SEO and asset readback failed: ' + route);
       }
       if (route === '/pilot' && (!html.includes('id="pilotInquiry"') ||
-          !html.includes('not automatically transmitted') ||
+          !/does not automatically transmit|not automatically sent/i.test(html) ||
           !html.includes('Prepare a $750 Fit Check inquiry (you send)'))) {
         fail('Buyer conversion published a non-reviewable inquiry: ' + route);
       }
