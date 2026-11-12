@@ -46,6 +46,10 @@ async function main(){
     reports.push({route,width,overflow,...result});
     assert.ok(result.hasH1,'Missing public page H1: '+route);
     assert.ok(result.siteMobileMenu,'Mobile navigation missing: '+route);
+    if(overflow>4){
+      const offenders=await evaluate("(()=>Array.from(document.querySelectorAll('body *')).map(e=>({tag:e.tagName,id:e.id,cls:String(e.className||'').slice(0,65),right:Math.round(e.getBoundingClientRect().right),width:Math.round(e.getBoundingClientRect().width)})).filter(x=>x.right>document.documentElement.clientWidth+4).slice(0,18))()");
+      console.error('SITE_BROWSER_OVERFLOW '+JSON.stringify({route,width,overflow,offenders}));
+    }
     assert.ok(overflow<=4,'Horizontal overflow '+overflow+'px on '+route+' @'+width+'px');
     if(route==='/pilot'){assert.ok(result.pilotInquiry&&result.pilotPreview,'Buyer preview missing');assert.ok(result.formLabels,'Unlabelled buyer input')}
    }
