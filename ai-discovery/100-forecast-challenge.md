@@ -43,4 +43,6 @@ Machine records are **snapshots**, not auto-updating feeds. A future official ou
 - Public source directory: https://kahrelum.com/sitemap.md
 - Agent guide: https://kahrelum.com/AGENTS.md
 
+**Certification status: HOLD, not certified.**
+
 **Status: AUDIT PENDING. The public page is not a claim of 100 certified locks or verified forecasting superiority.**
