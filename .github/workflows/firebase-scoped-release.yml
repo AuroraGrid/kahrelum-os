@@ -5,6 +5,12 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/firebase-scoped-release.yml'
+      - 'pilot.html'
+      - 'site-shell.css'
+      - 'nfl/deadline-reconciled-2026.json'
+      - 'nfl/official-trade-snapshot-2026.json'
+      - 'nfl/deadline-audit.json'
+      - 'nfl/refresh-status.json'
       - 'investigations.html'
       - 'insights.html'
       - 'investigations/chip-01.html'
@@ -61,6 +67,7 @@ on:
           - lead-magnet
           - investigations
           - investigations-text-only
+          - release3-verified
           - commercial-readiness
           - buyer-discovery
           - election-data-index
@@ -114,6 +121,8 @@ jobs:
             selections=()
             while IFS= read -r file; do
               case "$file" in
+                pilot.html|site-shell.css|nfl/deadline-reconciled-2026.json|nfl/official-trade-snapshot-2026.json|nfl/deadline-audit.json|nfl/refresh-status.json|nfl/deadline-watch-2026.html|nfl/deadline-watch-2026.js|nfl/weekly-brief.html|insights/hegseth-war-powers-fact-check.html|insights/nvidia-megaspeed-chip-custody.html|investigations/chip-01.html|election-data/index.html)
+                  selections+=(release3-verified) ;;
                 nfl/trade-volume-challenge-2026.html|nfl/trade-volume-challenge-2026.css|nfl/trade-volume-challenge-2026.js|nfl/trades.html|nfl/film-room.html|nfl/analysis.html|sports.html|nfl/deadline-watch-2026.html|nfl/weekly-brief.html|insights/nfl-brier-accountability.html|assets/social/editorial-source/*|scripts/build-kahrelum-editorial-social.py)
                   selections+=(nfl-editorial-v2) ;;
                 nfl/trade-volume-challenge-2026.html|assets/social/og-nfl-trade-volume-challenge-2026.png|nfl/trades.html|nfl/film-room.html|sports.html)
@@ -159,7 +168,7 @@ jobs:
           set -euo pipefail
           for profile in $RELEASE_PROFILES; do
             case "$profile" in
-              chip01-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|commercial-readiness|buyer-discovery|election-data-index) ;;
+              chip01-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|commercial-readiness|buyer-discovery|election-data-index) ;;
               *) echo "::error::Unapproved release profile: $profile"; exit 1;;
             esac
           done

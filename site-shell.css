@@ -93,3 +93,15 @@ body.site-shell-ready footer:not(.site-footer){max-width:1280px;margin:1.2rem au
 .pilot-wrap section>.eyebrow{margin:0 0 .35rem;color:var(--site-muted);font:700 .7rem/1.3 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.12em;text-transform:uppercase}
 .demo-evidence-label{text-transform:uppercase;letter-spacing:.035em;font:700 .72rem/1.25 system-ui,-apple-system,"Segoe UI",sans-serif;color:#514b42}
 @media(max-width:768px){.site-mobile-group{grid-template-columns:1fr 1fr}.site-footer-context{margin-bottom:.55rem;padding-bottom:.5rem}}
+
+/* Release 3 narrow-screen guards: navigation and form controls remain operable at 320–480px. */
+@media (max-width: 480px) {
+  .site-header-inner,.pilot-wrap,.pilot-inquiry,.site-footer-inner {min-width:0;max-width:100%;}
+  .site-mobile-panel,.site-mobile-group {grid-template-columns:minmax(0,1fr);min-width:0;max-width:100%;}
+  .site-mobile-panel a,.site-mobile-menu summary,.pilot-actions button,.pilot-actions a {min-height:44px;display:flex;align-items:center;overflow-wrap:anywhere;}
+  .pilot-inquiry input,.pilot-inquiry select,.pilot-inquiry textarea {box-sizing:border-box;display:block;width:100%;max-width:100%;min-width:0;}
+  .pilot-actions {display:flex;flex-direction:column;gap:.65rem;align-items:stretch;}
+  .site-next-steps,.site-footer-inner,.site-labs-panel {overflow-wrap:anywhere;max-width:100%;}
+  .fact-table,.score-table,.challenge-table {display:block;max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;}
+}
+.site-mobile-menu summary:focus-visible,.pilot-inquiry input:focus-visible,.pilot-inquiry textarea:focus-visible,.pilot-inquiry select:focus-visible,.pilot-inquiry button:focus-visible {outline:3px solid var(--site-accent,#21608a);outline-offset:3px;}

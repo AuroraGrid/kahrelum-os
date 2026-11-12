@@ -1,18 +1,120 @@
 {
   "schema": "KAHRELUM_NFL_DEADLINE_AUDIT_v1.0",
   "scheduledForUtc": "2026-11-12T14:00:00Z",
-  "status": "PENDING_SCHEDULED_AUDIT",
+  "status": "FIXED_COHORT_SCORED_FC1_UNRESOLVED",
   "officialOutcomeCutoffUtc": "2026-11-10T21:00:00Z",
-  "confirmedTransactions": [],
+  "confirmedTransactions": [
+    {
+      "date": "2026-09-28",
+      "player": "J.J. McCarthy",
+      "sourceUrl": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season"
+    },
+    {
+      "date": "2026-10-01",
+      "player": "Joey Porter Jr.",
+      "sourceUrl": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season"
+    },
+    {
+      "date": "2026-10-07",
+      "player": "Cam Jurgens",
+      "sourceUrl": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season"
+    },
+    {
+      "date": "2026-10-12",
+      "player": "Marvin Harrison Jr.",
+      "sourceUrl": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season"
+    },
+    {
+      "date": "2026-10-27",
+      "player": "Quenton Nelson",
+      "sourceUrl": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season"
+    },
+    {
+      "date": "2026-10-27",
+      "player": "DeForest Buckner",
+      "sourceUrl": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season"
+    },
+    {
+      "date": "2026-10-29",
+      "player": "Jeffery Simmons",
+      "sourceUrl": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season"
+    },
+    {
+      "date": "2026-11-06",
+      "player": "Jacoby Brissett",
+      "sourceUrl": "https://www.azcardinals.com/news/jacoby-brissett-trade-to-ravens-becomes-official"
+    },
+    {
+      "date": "2026-11-09",
+      "player": "Jessie Bates III",
+      "sourceUrl": "https://www.jaguars.com/news/roster-moves-jaguars-trade-for-s-jessie-bates-iii"
+    },
+    {
+      "date": "2026-11-09",
+      "player": "Davon Godchaux",
+      "sourceUrl": "https://www.jaguars.com/news/roster-moves-jaguars-trade-for-dt-davon-godchaux"
+    },
+    {
+      "date": "2026-11-09",
+      "player": "Jordan Davis",
+      "sourceUrl": "https://www.jaguars.com/news/roster-moves-jaguars-acquire-dt-jordan-davis"
+    },
+    {
+      "date": "2026-11-09",
+      "player": "Andre Cisco",
+      "sourceUrl": "https://www.newyorkjets.com/news/garrett-wilson-omar-cooper-jr-limited-jets-practice-wednesday-bills-week-11-11-2026"
+    },
+    {
+      "date": "2026-11-10",
+      "player": "Kirk Cousins",
+      "sourceUrl": "https://www.vikings.com/news/kirk-cousins-reconnects-after-raiders-trade-2026"
+    },
+    {
+      "date": "2026-11-10",
+      "player": "Keenan Allen",
+      "sourceUrl": "https://www.49ers.com/news/the-49ers-acquire-wr-keenan-allen"
+    },
+    {
+      "date": "2026-11-10",
+      "player": "Amani Hooker",
+      "sourceUrl": "https://www.buffalobills.com/news/bills-land-impact-safety-amani-hooker-in-trade-with-titans"
+    },
+    {
+      "date": "2026-11-10",
+      "player": "Josh Downs",
+      "sourceUrl": "https://www.chiefs.com/news/five-things-to-know-about-new-chiefs-wr-josh-downs"
+    },
+    {
+      "date": "2026-11-10",
+      "player": "Ryan Neuzil",
+      "sourceUrl": "https://www.baltimoreravens.com/news/ravens-trade-ryan-neuzil-andrew-vorhees-offensive-lineman-atlanta-falcons"
+    }
+  ],
   "eligibleForecasts": 123,
-  "correctTrades": 0,
-  "correctNonTrades": 0,
-  "incorrect": 0,
-  "brierScore": null,
-  "allNoBaselineBrier": null,
+  "correctTrades": 1,
+  "correctNonTrades": 112,
+  "incorrect": 10,
+  "brierScore": 0.077813821138,
+  "allNoBaselineBrier": 0.065040650407,
   "excludedHistoricalForecasts": 23,
   "limitations": [
-    "Outcomes are not scored before the documented official audit time."
+    "The frozen 123-player fixed cohort (8 yes / 115 no) scored Brier 0.077813821138, worse than an all-NO benchmark at 0.065040650407.",
+    "At a separately declared 50% yes threshold there were 1 TP, 3 FP, 7 FN and 112 TN; this threshold classification is descriptive, not the primary Brier score.",
+    "The independent six-trade volume FC1 remains unscored because Nov 9 club announcements appear in Nov 10 registry entries. Five club-chronology vs seven register-dated completed deals are not interchangeable.",
+    "Original probabilities, 2026-10-31 pending source file and all previously admitted forecast ledgers are preserved. No claim of predictive superiority."
   ],
-  "generatedAt": "2026-10-31T04:47:11Z"
+  "generatedAt": "2026-10-31T04:47:11Z",
+  "auditDate": "2026-11-12",
+  "fc1VolumeScoreStatus": "UNRESOLVED_DATE_BOUNDARY",
+  "fc1VolumeScore": null,
+  "originalPendingAuditSnapshot": "https://github.com/AuroraGrid/kahrelum-os/blob/main/research/nfl-2026-trade-deadline/archive-public-2026-11-12/2026-10-31-pending-audit-original.json",
+  "evidenceRecord": "https://github.com/AuroraGrid/kahrelum-os/blob/main/research/nfl-2026-trade-deadline/2026-11-12_POST_DEADLINE_OUTCOME_AUDIT.md",
+  "positiveTrades": 8,
+  "negativeTrades": 115,
+  "threshold50Percent": {
+    "truePositive": 1,
+    "falsePositive": 3,
+    "falseNegative": 7,
+    "trueNegative": 112
+  }
 }

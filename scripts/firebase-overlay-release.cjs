@@ -12,6 +12,7 @@ const { cleanupPromotedPreview } = require(path.join(__dirname, 'firebase-previe
 const { buildCaseShareArtifacts, extractCases } = require(path.join(__dirname, 'case-social-pages.cjs'));
 const { buildChip01SocialArtifacts } = require(path.join(__dirname, 'chip01-social.cjs'));
 const { patchBuyerPage } = require(path.join(__dirname, 'buyer-discovery.cjs'));
+const { patchPilot, patchArticleMetadata, patchHomepageC7 } = require(path.join(__dirname, 'release3-live-patches.cjs'));
 const { patchInvestigationOverview, patchInsightsIndex, patchNvidiaDetailPage } = require(path.join(__dirname, 'investigations-text-refresh.cjs'));
 
 const SITE = 'kahrelum-public-hosting';
@@ -289,6 +290,33 @@ const RELEASE_PROFILES = {
     // Fetch and hash-check the currently deployed HTML, then patch bounded editorial text only.
     overlayFiles: [],
     sitemapRoutes: [],
+    includeHomepage: false,
+  },
+  'release3-verified': {
+    // Only corrected post-deadline facts, user-reviewed buyer enquiry, dated article metadata
+    // and mobile CSS. Original source snapshots are separately archived in research.
+    overlayFiles: [
+      'nfl/deadline-reconciled-2026.json',
+      'nfl/official-trade-snapshot-2026.json', 'nfl/deadline-audit.json', 'nfl/refresh-status.json',
+      'nfl/deadline-watch-2026.html', 'nfl/deadline-watch-2026.js', 'nfl/weekly-brief.html',
+      'site-shell.css',
+    ],
+    sitemapRoutes: [],
+    sitemapLastmod: {
+      '/pilot': '2026-11-12',
+      '/nfl/deadline-watch-2026': '2026-11-12',
+      '/nfl/weekly-brief': '2026-11-12',
+      '/insights/hegseth-war-powers-fact-check': '2026-11-12',
+      '/insights/nvidia-megaspeed-chip-custody': '2026-11-12',
+      '/investigations/chip-01': '2026-11-12',
+      '/election-data/': '2026-11-12',
+      '/israel-certified-2026': '2026-11-05',
+      '/nfl/trades': '2026-11-12',
+      '/nfl/trade-volume-challenge-2026': '2026-11-12',
+      '/election-results-2026': '2026-11-12',
+      '/insights': '2026-11-12',
+      '/investigations': '2026-11-12',
+    },
     includeHomepage: false,
   },
   'chip01-publication': {
@@ -898,7 +926,7 @@ async function buildOverlay(live, profileName) {
       fail('SourceGrid source check is older than the live Firebase checkpoint.');
     }
     if (sourceStatus.sourcesAttempted !== 37 || sourceStatus.sourcesSucceeded + sourceStatus.sourcesFailed !== 37 ||
-        !['FRESH','DEGRADED','STALE_FAILED'].includes(sourceStatus.feedFreshness)) {
+        !['FRESH','DEGRADED','STALE_FAILED','HISTORICAL_ARCHIVE'].includes(sourceStatus.feedFreshness)) {
       fail('SourceGrid check is incomplete or not an executed 37-source report.');
     }
     const ledger = JSON.parse(fs.readFileSync(path.join(ROOT, 'nfl/forecast-ledger.json'), 'utf8'));
@@ -943,6 +971,25 @@ async function buildOverlay(live, profileName) {
       const revised = patch(publicHtml, canonical);
       addBlob(desired, blobs, hostingPath, Buffer.from(revised, 'utf8'));
     }
+  }
+
+  if (profileName === 'release3-verified') {
+    for (const [hostingPath, publicPath, transform] of [
+      ['/pilot.html', '/pilot', (live, source) => patchPilot(live, source)],
+      ['/insights/hegseth-war-powers-fact-check.html', '/insights/hegseth-war-powers-fact-check', (live, source) => patchArticleMetadata(live, source, 'article')],
+      ['/insights/nvidia-megaspeed-chip-custody.html', '/insights/nvidia-megaspeed-chip-custody', (live, source) => patchArticleMetadata(live, source, 'article')],
+      ['/investigations/chip-01.html', '/investigations/chip-01', (live, source) => patchArticleMetadata(live, source, 'article')],
+      ['/election-data/index.html', '/election-data/', (live, source) => patchArticleMetadata(live, source, 'catalog')],
+    ]) {
+      const liveHtml = (await verifiedLiveFile(live, hostingPath, publicPath)).toString('utf8');
+      const canonical = fs.readFileSync(path.join(ROOT, hostingPath.slice(1)), 'utf8');
+      const revised = transform(liveHtml, canonical);
+      if (revised !== liveHtml) addBlob(desired, blobs, hostingPath, Buffer.from(revised, 'utf8'));
+    }
+    const liveHome = (await verifiedLiveFile(live, '/index.html', '/')).toString('utf8');
+    const canonicalHome = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+    const correctedHome = patchHomepageC7(liveHome, canonicalHome);
+    if (correctedHome !== liveHome) addBlob(desired, blobs, '/index.html', Buffer.from(correctedHome, 'utf8'));
   }
 
   if (profileName === 'buyer-discovery') {
@@ -1041,6 +1088,15 @@ async function buildOverlay(live, profileName) {
         '/election-data/index.html', '/assets/social/og-election-data-guide.png', '/sitemap.xml', '/sitemap.md',
       ].includes(item))) {
     fail('Election data index attempted to change unrelated live Firebase files.');
+  }
+  if (profileName === 'release3-verified') {
+    const allowed = new Set([
+      ...RELEASE_PROFILES['release3-verified'].overlayFiles.map(name => '/' + name),
+      '/pilot.html', '/insights/hegseth-war-powers-fact-check.html',
+      '/insights/nvidia-megaspeed-chip-custody.html', '/investigations/chip-01.html',
+      '/election-data/index.html', '/index.html', '/sitemap.xml',
+    ]);
+    if (changedPaths.some(path => !allowed.has(path))) fail('Release 3 attempted to change unrelated live Firebase files.');
   }
   if (profileName === 'buyer-discovery' &&
       changedPaths.some((item) => ![
@@ -1183,6 +1239,8 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     ? ['/election-data/']
     : profileName === 'buyer-discovery'
     ? ['/', '/pilot']
+    : profileName === 'release3-verified'
+    ? ['/', '/pilot', '/nfl/deadline-watch-2026', '/nfl/weekly-brief', '/insights/hegseth-war-powers-fact-check', '/insights/nvidia-megaspeed-chip-custody', '/investigations/chip-01', '/election-data/']
     : profileName === 'opticodds-market-integrity'
     ? ['/opticodds-market-integrity']
     : profileName === 'ai-evaluation'
