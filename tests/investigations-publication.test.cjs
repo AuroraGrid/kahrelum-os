@@ -36,7 +36,9 @@ test('twelve independently labeled public records preserve evidence and portfoli
   assert.match(youth, /\$567 million/);
   assert.match(youth, /\$375 million/);
   assert.match(youth, /appeal filings, any stay, collections and compliance are UNKNOWN/);
-  assert.doesNotMatch(html, /<script\b/i);
+  // JSON-LD is an inert source-description script, not executable client code.
+  const executableScripts = html.replace(/<script\s+type="application\/ld\+json"\s+id="kahrelum-ai-discovery-schema">[\s\S]*?<\/script>/i, '');
+  assert.doesNotMatch(executableScripts, /<script\b/i);
 });
 
 test('scoped Firebase release cannot republish older elections, NFL, homepage or files outside investigations', () => {
