@@ -12,6 +12,7 @@ const { cleanupPromotedPreview } = require(path.join(__dirname, 'firebase-previe
 const { buildCaseShareArtifacts, extractCases } = require(path.join(__dirname, 'case-social-pages.cjs'));
 const { buildChip01SocialArtifacts } = require(path.join(__dirname, 'chip01-social.cjs'));
 const { patchBuyerPage } = require(path.join(__dirname, 'buyer-discovery.cjs'));
+const { patchInvestigationOverview, patchInsightsIndex } = require(path.join(__dirname, 'investigations-text-refresh.cjs'));
 
 const SITE = 'kahrelum-public-hosting';
 const INDEXNOW_KEY_FILE = 'dedc67db0c224b1c9a4be1379f7937f5.txt';
@@ -280,6 +281,13 @@ const RELEASE_PROFILES = {
   'indexnow-key': {
     // IndexNow ownership proof only: never replace any live sitemap, case, forecast, assets or site settings.
     overlayFiles: [INDEXNOW_KEY_FILE],
+    sitemapRoutes: [],
+    includeHomepage: false,
+  },
+  'investigations-text-only': {
+    // Keep live Firebase metadata, referenced assets and unrelated files untouched.
+    // Fetch and hash-check the currently deployed HTML, then patch bounded editorial text only.
+    overlayFiles: [],
     sitemapRoutes: [],
     includeHomepage: false,
   },
@@ -919,6 +927,18 @@ async function buildOverlay(live, profileName) {
       sourceBytes = Buffer.from(normalizeSharedFooter(groupMobileDrawer(sourceBytes.toString('utf8'))), 'utf8');
     }
     addBlob(desired, blobs, '/' + name, sourceBytes);
+  }
+
+  if (profileName === 'investigations-text-only') {
+    for (const [hostingPath, publicPath, patch] of [
+      ['/investigations.html', '/investigations', patchInvestigationOverview],
+      ['/insights.html', '/insights', patchInsightsIndex],
+    ]) {
+      const publicHtml = (await verifiedLiveFile(live, hostingPath, publicPath)).toString('utf8');
+      const canonical = fs.readFileSync(path.join(ROOT, hostingPath.slice(1)), 'utf8');
+      const revised = patch(publicHtml, canonical);
+      addBlob(desired, blobs, hostingPath, Buffer.from(revised, 'utf8'));
+    }
   }
 
   if (profileName === 'buyer-discovery') {
