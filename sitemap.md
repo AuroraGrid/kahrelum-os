@@ -93,3 +93,12 @@ This public directory groups existing website pages. Research status and timesta
 - [NFL Film Room | KAHRELUM Sports Intelligence](https://kahrelum.com/nfl/film-room)
 - [NFL Trade Intelligence Verified Brief | KAHRELUM](https://kahrelum.com/nfl/weekly-brief)
 - [NFL 2026 Trade Deadline Intelligence | KAHRELUM](https://kahrelum.com/nfl/deadline-watch-2026)
+
+## Agent-readable companion summaries (2026-11-12)
+
+- [AI and Agent Assurance](https://kahrelum.com/ai-discovery/assurance.md)
+- [Investigations and OSINT](https://kahrelum.com/ai-discovery/investigations.md)
+- [Forecasting and Intelligence](https://kahrelum.com/ai-discovery/forecasting.md)
+- [Decision Evidence Gap Scorecard](https://kahrelum.com/ai-discovery/evidence-scorecard.md)
+
+These files are public summaries of existing pages, not new verification of historical evidence.

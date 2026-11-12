@@ -6,6 +6,12 @@ on:
     paths:
       - '.github/workflows/firebase-scoped-release.yml'
       - 'pilot.html'
+      - 'assurance.html'
+      - 'AGENTS.md'
+      - 'llms.txt'
+      - 'sitemap.md'
+      - 'ai-discovery/**'
+      - 'scripts/ai-seo-discovery.cjs'
       - 'site-shell.css'
       - 'nfl/deadline-reconciled-2026.json'
       - 'nfl/official-trade-snapshot-2026.json'
@@ -68,6 +74,7 @@ on:
           - investigations
           - investigations-text-only
           - release3-verified
+          - ai-discovery-seo
           - commercial-readiness
           - buyer-discovery
           - election-data-index
@@ -118,8 +125,18 @@ jobs:
               exit 1
             fi
             changed="$(git diff --name-only "$PREVIOUS_COMMIT" "$GITHUB_SHA" --)"
-            selections=()
-            while IFS= read -r file; do
+            if grep -Eq '^ai-discovery/(assurance|investigations|forecasting|evidence-scorecard)\.md$' <<< "$changed"; then
+              while IFS= read -r file; do
+                case "$file" in
+                  assurance.html|investigations.html|forecasting.html|evidence-scorecard.html|pilot.html|AGENTS.md|llms.txt|sitemap.md|ai-discovery/*.md|scripts/ai-seo-discovery.cjs|scripts/firebase-overlay-release.cjs|scripts/deploy-unified-firebase.ps1|tests/ai-discovery-seo.test.cjs|tests/investigations-publication.test.cjs|research/site-design/AI_DISCOVERY_SEO_RELEASE_20261112.md|.github/workflows/firebase-scoped-release.yml)
+                    ;;
+                  *) echo "::error::Mixed AI-discovery push contains unrelated path: $file"; exit 1 ;;
+                esac
+              done <<< "$changed"
+              profiles="ai-discovery-seo"
+            else
+              selections=()
+              while IFS= read -r file; do
               case "$file" in
                 pilot.html|site-shell.css|nfl/deadline-reconciled-2026.json|nfl/official-trade-snapshot-2026.json|nfl/deadline-audit.json|nfl/refresh-status.json|nfl/deadline-watch-2026.html|nfl/deadline-watch-2026.js|nfl/weekly-brief.html|insights/hegseth-war-powers-fact-check.html|insights/nvidia-megaspeed-chip-custody.html|investigations/chip-01.html|election-data/index.html)
                   selections+=(release3-verified) ;;
@@ -155,6 +172,7 @@ jobs:
               profiles=""
               echo "No relevant content changed; no Firebase publication attempted."
             fi
+            fi
           fi
           echo "profiles=$profiles" >> "$GITHUB_OUTPUT"
           echo "Selected release profiles: ${profiles:-none}" >> "$GITHUB_STEP_SUMMARY"
@@ -168,7 +186,7 @@ jobs:
           set -euo pipefail
           for profile in $RELEASE_PROFILES; do
             case "$profile" in
-              chip01-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|commercial-readiness|buyer-discovery|election-data-index) ;;
+              chip01-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|ai-discovery-seo|commercial-readiness|buyer-discovery|election-data-index) ;;
               *) echo "::error::Unapproved release profile: $profile"; exit 1;;
             esac
           done

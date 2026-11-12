@@ -12,6 +12,7 @@ const { cleanupPromotedPreview } = require(path.join(__dirname, 'firebase-previe
 const { buildCaseShareArtifacts, extractCases } = require(path.join(__dirname, 'case-social-pages.cjs'));
 const { buildChip01SocialArtifacts } = require(path.join(__dirname, 'chip01-social.cjs'));
 const { patchBuyerPage } = require(path.join(__dirname, 'buyer-discovery.cjs'));
+const { enhanceDiscoveryPage } = require(path.join(__dirname, 'ai-seo-discovery.cjs'));
 const { patchPilot, patchArticleMetadata, patchHomepageC7 } = require(path.join(__dirname, 'release3-live-patches.cjs'));
 const { patchInvestigationOverview, patchInsightsIndex, patchNvidiaDetailPage } = require(path.join(__dirname, 'investigations-text-refresh.cjs'));
 
@@ -316,6 +317,24 @@ const RELEASE_PROFILES = {
       '/election-results-2026': '2026-11-12',
       '/insights': '2026-11-12',
       '/investigations': '2026-11-12',
+    },
+    includeHomepage: false,
+  },
+  'ai-discovery-seo': {
+    // Read-patch only verified current live HTML, keep source bodies and all OG imagery.
+    // Publish four new source-bounded Markdown mirrors plus public agent discovery docs.
+    overlayFiles: [
+      'AGENTS.md','llms.txt','sitemap.md',
+      'ai-discovery/assurance.md','ai-discovery/investigations.md',
+      'ai-discovery/forecasting.md','ai-discovery/evidence-scorecard.md',
+    ],
+    sitemapRoutes: [],
+    sitemapLastmod: {
+      '/assurance': '2026-11-12',
+      '/investigations': '2026-11-12',
+      '/forecasting': '2026-11-12',
+      '/evidence-scorecard': '2026-11-12',
+      '/pilot': '2026-11-12',
     },
     includeHomepage: false,
   },
@@ -992,6 +1011,21 @@ async function buildOverlay(live, profileName) {
     if (correctedHome !== liveHome) addBlob(desired, blobs, '/index.html', Buffer.from(correctedHome, 'utf8'));
   }
 
+  if (profileName === 'ai-discovery-seo') {
+    for (const [hostingPath, route] of [
+      ['/assurance.html', '/assurance'],
+      ['/investigations.html', '/investigations'],
+      ['/forecasting.html', '/forecasting'],
+      ['/evidence-scorecard.html', '/evidence-scorecard'],
+      ['/pilot.html', '/pilot'],
+    ]) {
+      const liveHtml = (await verifiedLiveFile(live, hostingPath, route)).toString('utf8');
+      const sourceHtml = fs.readFileSync(path.join(ROOT, hostingPath.slice(1)), 'utf8');
+      const revised = enhanceDiscoveryPage(liveHtml, sourceHtml, route);
+      if (revised !== liveHtml) addBlob(desired, blobs, hostingPath, Buffer.from(revised, 'utf8'));
+    }
+  }
+
   if (profileName === 'buyer-discovery') {
     for (const [hostingPath, route] of [['/index.html', '/'], ['/pilot.html', '/pilot']]) {
       const liveHtml = (await verifiedLiveFile(live, hostingPath, route)).toString('utf8');
@@ -1097,6 +1131,14 @@ async function buildOverlay(live, profileName) {
       '/election-data/index.html', '/index.html', '/sitemap.xml',
     ]);
     if (changedPaths.some(path => !allowed.has(path))) fail('Release 3 attempted to change unrelated live Firebase files.');
+  }
+  if (profileName === 'ai-discovery-seo') {
+    const allowed = new Set([
+      ...RELEASE_PROFILES['ai-discovery-seo'].overlayFiles.map(x => '/' + x),
+      '/assurance.html','/investigations.html','/forecasting.html',
+      '/evidence-scorecard.html','/pilot.html','/sitemap.xml',
+    ]);
+    if (changedPaths.some(x => !allowed.has(x))) fail('AI discovery SEO release attempted to change unrelated live Firebase files.');
   }
   if (profileName === 'buyer-discovery' &&
       changedPaths.some((item) => ![
@@ -1239,6 +1281,8 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     ? ['/election-data/']
     : profileName === 'buyer-discovery'
     ? ['/', '/pilot']
+    : profileName === 'ai-discovery-seo'
+    ? ['/assurance','/investigations','/forecasting','/evidence-scorecard','/pilot']
     : profileName === 'release3-verified'
     ? ['/', '/pilot', '/nfl/deadline-watch-2026', '/nfl/weekly-brief', '/insights/hegseth-war-powers-fact-check', '/insights/nvidia-megaspeed-chip-custody', '/investigations/chip-01', '/election-data/']
     : profileName === 'opticodds-market-integrity'
