@@ -50,10 +50,18 @@ test('Fail-closed patch is idempotent and cannot rewrite source bodies',()=>{
  const {enhanceAgentVisibility}=require('../scripts/agent-visibility-hardening.cjs');
  for(const [file,route,type,md] of pages){
   const source=read(file);
-  const old=source.replace(/<script type="application\/ld\+json" id="kahrelum-visibility-schema">[^<]+<\/script>\s*/,'')
+  let old=source.replace(/<script type="application\/ld\+json" id="kahrelum-visibility-schema">[^<]+<\/script>\s*/,'')
     .replace(/<link rel="alternate" type="text\/markdown" href="\/ai-discovery\/[^"]+\.md">\s*/,'')
     .replace(/<link rel="describedby" href="\/llms.txt">\s*/,'')
     .replace(/<a class="agent-glossary-link" href="\/ai-discovery\/glossary\.md">[^<]+<\/a>/,'');
+  if(route==='/insights/nvidia-megaspeed-chip-custody'){
+    // The verified live Nvidia article already carries source-bound Article JSON-LD
+    // without the later canonical 'url' field. Reconstruct that earlier version
+    // instead of simulating a missing original schema.
+    const graph=JSON.parse(source.match(/<script type="application\/ld\+json" id="kahrelum-visibility-schema">([^<]+)<\/script>/)[1]);
+    delete graph.url;
+    old=old.replace('</head>','<script type="application/ld+json">'+JSON.stringify(graph)+'</script></head>');
+  }
   const patched=enhanceAgentVisibility(old,source,route);
   assert.match(patched,/kahrelum-visibility-schema/);
   assert.equal(enhanceAgentVisibility(patched,source,route),patched);
