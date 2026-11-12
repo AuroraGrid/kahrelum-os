@@ -1,0 +1,96 @@
+name: KAHRELUM Firebase Hosting Quota Inventory (read only)
+on:
+  push:
+    branches: [ops/firebase-quota-inventory-20261112]
+    paths: ['.github/workflows/firebase-quota-inventory-20261112.yml']
+permissions:
+  contents: read
+concurrency:
+  group: kahrelum-scoped-firebase-publisher
+  cancel-in-progress: false
+jobs:
+  inventory:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    env:
+      KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.0
+        with:
+          persist-credentials: false
+      - name: Read exact live Hosting channel and safe cleanup candidates
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -z "$KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON" ]]; then
+            echo "::error::Firebase credential missing; no changes made."
+            exit 1
+          fi
+          secret_path="$RUNNER_TEMP/kahrelum-hosting-audit-auth.json"
+          printf '%s' "$KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON" > "$secret_path"
+          chmod 600 "$secret_path"
+          trap 'rm -f "$secret_path"' EXIT
+          export GOOGLE_APPLICATION_CREDENTIALS="$secret_path"
+          export XDG_CONFIG_HOME="$RUNNER_TEMP/isolated-firebase"
+          mkdir -p "$XDG_CONFIG_HOME"
+          npm install --global firebase-tools@15.34.2
+          export FIREBASE_TOOLS_ROOT="$(npm root -g)/firebase-tools"
+          node --check scripts/firebase-release-retention.cjs
+          node scripts/firebase-release-retention.cjs --plan --keep 3
+          node <<'NODE'
+          'use strict';
+          (async()=>{
+            const root=process.env.FIREBASE_TOOLS_ROOT;
+            const {Client}=require(root+'/lib/apiv2');
+            const {hostingApiOrigin}=require(root+'/lib/api');
+            const hosting=require(root+'/lib/hosting/api');
+            const site='kahrelum-public-hosting';
+            const client=new Client({urlPrefix:hostingApiOrigin(),apiVersion:'v1beta1',auth:true});
+            const live=await hosting.getChannel('-',site,'live');
+            if(!live||!live.release?.version?.name)throw Error('Live version unavailable; abort inventory');
+            const liveVersion=live.release.version.name;
+            console.log('LIVE_CHANNEL '+JSON.stringify({site,version:liveVersion,retainedReleaseCount:live.retainedReleaseCount}));
+            let token='', page=0, channels=[];
+            do{
+              const r=await client.get('/sites/'+site+'/channels',{queryParams:{pageSize:100,...(token?{pageToken:token}:{})}});
+              const body=r.body||{};
+              channels.push(...(body.channels||[]));
+              token=body.nextPageToken||'';
+              page++;
+              if(page>20)throw Error('Too many channels: refusing incomplete inventory');
+            }while(token);
+            const now=Date.now();
+            const view=channels.map(c=>{
+              const id=(c.name||'').split('/').pop();
+              const version=c.release?.version?.name||null;
+              const expired=!!c.expireTime && new Date(c.expireTime).getTime()<now;
+              const generated=/^safe-overlay-[a-f0-9]{12}$/.test(id);
+              return {id,version,expireTime:c.expireTime||null,retainedReleaseCount:c.retainedReleaseCount??null,
+                safeCleanupCandidate:id!=='live'&&generated&&(version===liveVersion||expired),
+                reason:version===liveVersion?'identical-to-live':expired?'expired':'not-proven'};
+            });
+            console.log('CHANNEL_INVENTORY '+JSON.stringify({count:view.length,channels:view}));
+            for(const url of ['/sites/'+site+'/versions/'+liveVersion.split('/').pop(),'/sites/'+site+'/channels/live/releases']){
+              try{const r=await client.get(url,{queryParams:url.endsWith('/releases')?{pageSize:15}:{}});
+                if(url.endsWith('/releases')) console.log('LIVE_RELEASE_HISTORY '+JSON.stringify((r.body?.releases||[]).map(x=>({version:x.version?.name,versionBytes:x.version?.versionBytes,releaseTime:x.releaseTime}))));
+                else console.log('LIVE_VERSION_SIZE '+JSON.stringify({version:r.body?.name,versionBytes:r.body?.versionBytes,fileCount:r.body?.fileCount}));
+              }catch(e){console.log('OPTIONAL_HOSTING_DETAIL_UNAVAILABLE '+e.message.slice(0,200))}
+            }
+            try {
+              const storage=new Client({urlPrefix:'https://storage.googleapis.com/storage/v1',auth:true});
+              const b=await storage.get('/b',{queryParams:{project:site}});
+              const buckets=b.body?.items||[];
+              console.log('GCS_BUCKETS '+JSON.stringify(buckets.map(x=>({name:x.name,location:x.location,storageClass:x.storageClass}))));
+              for(const bucket of buckets.slice(0,4)){
+                let token='',objectCount=0,sizeBytes=0,pages=0;
+                do {
+                  const o=await storage.get('/b/'+encodeURIComponent(bucket.name)+'/o',{queryParams:{maxResults:1000,...(token?{pageToken:token}:{})}});
+                  for(const it of o.body?.items||[]){objectCount++;sizeBytes+=Number(it.size||0);}
+                  token=o.body?.nextPageToken||'';pages++;
+                }while(token&&pages<10);
+                console.log('GCS_BUCKET_SIZE '+JSON.stringify({bucket:bucket.name,objectCount,sizeBytes,complete:!token}));
+              }
+            }catch(e){console.log('OPTIONAL_STORAGE_INVENTORY_UNAVAILABLE '+e.message.slice(0,250))}
+            console.log('READ_ONLY_DONE: No deletion, writes, or deployment attempted.');
+          })().catch(e=>{console.error('INVENTORY_FAILED '+e.message);process.exitCode=1});
+          NODE
