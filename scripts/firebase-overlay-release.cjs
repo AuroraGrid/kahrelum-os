@@ -211,6 +211,17 @@ const RELEASE_PROFILES = {
     sitemapRoutes: ['/insights/osint-illusion'],
     includeHomepage: false,
   },
+  'malik-beasley-forecast': {
+    // Dedicated prospective sentencing article and discovery. Preserve immutable
+    // original judgment, unrelated live pages and production Hosting config.
+    overlayFiles: [
+      'insights/malik-beasley-sentencing-2026.html',
+      'insights.html', 'forecasting.html', 'sitemap.md', 'llms.txt',
+      'ai-discovery/forecasting.md',
+    ],
+    sitemapRoutes: ['/insights/malik-beasley-sentencing-2026'],
+    includeHomepage: false,
+  },
   'hegseth-forecast': {
     // Preserve the original v1 judgment separately in Git history. Publish only the
     // new article, its discovery cards and its unique social preview, never the live homepage.
@@ -1350,6 +1361,13 @@ async function buildOverlay(live, profileName) {
     const allowed = new Set(['/sitemap.xml', ...RELEASE_PROFILES['osint-illusion'].overlayFiles.map(name => '/' + name)]);
     if (changedPaths.some(item => !allowed.has(item))) fail('OSINT Insight attempted to alter unrelated Firebase routes.');
   }
+  if (profileName === 'malik-beasley-forecast') {
+    const allowed = new Set(['/sitemap.xml',
+      ...RELEASE_PROFILES['malik-beasley-forecast'].overlayFiles.map(name => '/' + name)]);
+    if (changedPaths.some(item => !allowed.has(item))) {
+      fail('Malik Beasley forecast attempted to change an unrelated live Firebase path.');
+    }
+  }
   if (profileName === 'hegseth-forecast') {
     const allowed = new Set(['/sitemap.xml',
       ...RELEASE_PROFILES['hegseth-forecast'].overlayFiles.map(name => '/' + name)]);
@@ -1442,6 +1460,8 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     ? ['/', '/assurance', '/pilot']
     : profileName === 'forecast-100-publication'
     ? ['/forecasting', '/forecasting/100-forecast-challenge']
+    : profileName === 'malik-beasley-forecast'
+    ? ['/insights', '/forecasting', '/insights/malik-beasley-sentencing-2026']
     : profileName === 'calibration-nfl-2026'
     ? ['/forecasting','/insights','/insights/calibration-oct-nov-2026','/nfl/trade-volume-challenge-2026']
     : profileName === 'ai-discovery-seo'
