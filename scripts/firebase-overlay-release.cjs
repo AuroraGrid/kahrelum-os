@@ -285,7 +285,7 @@ const RELEASE_PROFILES = {
     includeHomepage: false,
   },
   'investigations-text-only': {
-    // Keep live Firebase assets, image hashes, forecasts, private cases and unrelated files untouched.
+    // Keep live Firebase metadata, referenced assets and unrelated files untouched.
     // Fetch and hash-check the currently deployed HTML, then patch bounded editorial text only.
     overlayFiles: [],
     sitemapRoutes: [],
