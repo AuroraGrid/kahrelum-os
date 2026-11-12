@@ -46,7 +46,7 @@ test('Live overview patch retains untouched case-card bytes, live-only navigatio
  const oldBlock='<section aria-labelledby="chip01-feature"><p>Outdated November 10 display</p></section>\n';
  const section=canonical.match(/<section aria-labelledby="chip01-feature">[\s\S]*?(?=<section aria-labelledby="lane-title">)/)?.[0];
  assert.ok(section);
- const directory=canonical.match(/<nav class="case-toolbar case-published-directory"[^>]*>[\s\S]*?<\/nav>\n/)?.[0];
+ const directory=canonical.match(/<nav class="case-toolbar case-published-directory"[^>]*>[\s\S]*?<\/nav>\r?\n/)?.[0];
  assert.ok(directory);
  const stale=canonical.replace(section,oldBlock).replace(directory,'')
    .replace('</main>','<!-- LIVE-ONLY-SAFE-FOOTER --></main>')

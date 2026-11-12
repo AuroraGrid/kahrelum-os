@@ -2,6 +2,11 @@
 // Release 2: patch only editorial text, preserving verified live Firebase files.
 const assert=require('node:assert/strict');
 
+function matchLineEndings(live, canonical){
+  const normalized=canonical.replace(/\r\n/g,'\n');
+  return live.includes('\r\n') ? normalized.replace(/\n/g,'\r\n') : normalized;
+}
+
 function uniqueRange(html,start,end,label){
   const a=html.indexOf(start);
   if(a<0||html.indexOf(start,a+start.length)!==-1)throw Error(label+': start anchor missing or repeated');
@@ -26,6 +31,7 @@ function directory(html){
   return html.slice(a,b+6);
 }
 function patchInvestigationOverview(live,canonical){
+  canonical=matchLineEndings(live,canonical);
   if(typeof live!=='string'||typeof canonical!=='string')throw TypeError('Expected HTML text');
   const src=uniqueRange(canonical,'<section aria-labelledby="chip01-feature">','<section aria-labelledby="lane-title">','CHIP-01 section');
   if(!src.segment.includes('id="investigations-r2-desk-status"')||!src.segment.includes('Updated November 12, 2026'))throw Error('Canonical dated update absent');
@@ -64,6 +70,7 @@ function getCard(html,route){
   return cards[0][0];
 }
 function patchInsightsIndex(live,canonical){
+  canonical=matchLineEndings(live,canonical);
   if(typeof live!=='string'||typeof canonical!=='string')throw TypeError('Expected HTML text');
   let out=live;
   for(const route of routes){out=out.replace(getCard(out,route),getCard(canonical,route));}
@@ -72,6 +79,7 @@ function patchInsightsIndex(live,canonical){
   return out;
 }
 function patchNvidiaDetailPage(live,canonical,file){
+  canonical=matchLineEndings(live,canonical);
   const anchors={
     'investigations/chip-01.html':'<section aria-labelledby="chip01-forecast">',
     'insights/nvidia-megaspeed-chip-custody.html':'<section aria-labelledby="insight-leadership">',
@@ -81,18 +89,18 @@ function patchNvidiaDetailPage(live,canonical,file){
   const marker='<section id="chip01-nov12-leadership"';
   const start=canonical.indexOf(marker);
   if(start<0||canonical.indexOf(marker,start+1)>=0)throw Error('Missing or repeated canonical leadership update');
-  const end=canonical.indexOf('</section>\n',start);
+  const end=canonical.indexOf('</section>',start);
   if(end<0)throw Error('Leadership update has no unique section close');
-  const snippet=canonical.slice(start,end+'</section>\n'.length);
+  const snippet=canonical.slice(start,end+'</section>'.length);
   if(!snippet.includes('Colette Kress')||!snippet.includes('February 10, 2027')||!snippet.includes('2026-11-12-ceo-transition-addendum.md'))throw Error('Leadership text has incomplete source and settlement boundaries');
   let out=live;
   if(out.includes(marker)){
-    const oldStart=out.indexOf(marker),oldEnd=out.indexOf('</section>\n',oldStart);
+    const oldStart=out.indexOf(marker),oldEnd=out.indexOf('</section>',oldStart);
     if(oldEnd<0||out.indexOf(marker,oldStart+1)>=0)throw Error('Corrupt existing leadership section');
-    out=out.slice(0,oldStart)+snippet+out.slice(oldEnd+'</section>\n'.length);
+    out=out.slice(0,oldStart)+snippet+out.slice(oldEnd+'</section>'.length);
   } else {
     if(out.split(anchor).length!==2)throw Error('Expected a single frozen leadership forecast anchor');
-    out=out.replace(anchor,snippet+anchor);
+    out=out.replace(anchor,snippet+(live.includes('\r\n')?'\r\n':'\n')+anchor);
   }
   if(out.split('</head>')[0]!==live.split('</head>')[0])throw Error('Unapproved metadata modification in CHIP-01 patch');
   if(!out.includes(anchor)||!out.includes('85%')||!out.includes('10%')||!out.includes('5%'))throw Error('Original outcome forecast disappeared');

@@ -56,7 +56,7 @@ test('Scoped text publisher reads and patches four current live HTML pages witho
 test('Live CHIP-01 detailed-page insertions are additive and preserve all old forecast numbers and metadata',()=>{
  for(const file of [caseRoute,insightRoute]){
    const canonical=read(file);
-   const section=canonical.match(/<section id="chip01-nov12-leadership"[^>]*>[\s\S]*?<\/section>\n/)?.[0];
+   const section=canonical.match(/<section id="chip01-nov12-leadership"[^>]*>[\s\S]*?<\/section>\r?\n/)?.[0];
    assert.ok(section,file);
    const stale=canonical.replace(section,'').replace('</main>','<!-- VERIFIED-LIVE-ONLY-TAIL --></main>');
    const revised=patchNvidiaDetailPage(stale,canonical,file);
@@ -66,5 +66,22 @@ test('Live CHIP-01 detailed-page insertions are additive and preserve all old fo
    assert.equal(patchNvidiaDetailPage(revised,canonical,file),revised,'Idempotent same-source releases');
    assert.equal(stale.split('</head>')[0],revised.split('</head>')[0]);
    for(const p of ['85%','10%','5%'])assert.ok(revised.includes(p));
+ }
+});
+
+test('Windows checkout and live LF pages produce the same bounded idempotent patch',()=>{
+ for(const file of [caseRoute,insightRoute]){
+  const lf=read(file).replace(/\r\n/g,'\n'),crlf=lf.replace(/\n/g,'\r\n');
+  assert.equal(patchNvidiaDetailPage(lf,crlf,file),lf);
+  assert.equal(patchNvidiaDetailPage(crlf,lf,file),crlf);
+  const section=lf.match(/<section id="chip01-nov12-leadership"[^>]*>[\s\S]*?<\/section>\n/)[0];
+  const stale=lf.replace(section,'');
+  assert.equal(patchNvidiaDetailPage(stale,crlf,file),lf);
+ }
+ const patch=require('../scripts/investigations-text-refresh.cjs');
+ for(const [file,fn] of [['investigations.html',patch.patchInvestigationOverview],['insights.html',patch.patchInsightsIndex]]){
+  const lf=read(file).replace(/\r\n/g,'\n'),crlf=lf.replace(/\n/g,'\r\n');
+  assert.equal(fn(lf,crlf),lf);
+  assert.equal(fn(crlf,lf),crlf);
  }
 });
