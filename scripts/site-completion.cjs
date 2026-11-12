@@ -1,5 +1,5 @@
 'use strict';
-// Rerun the single guarded site-completion release after responsive-table QA uncovered 320px overflow.
+// Rerun the integrated site-completion release to close Markdown frontmatter and verified election directory SEO.
 const assert=require('node:assert/strict');
 const BASE='https://kahrelum.com';
 const MARKDOWN_CANONICALS=Object.freeze([
@@ -75,6 +75,21 @@ function patchCompletionPage(live,source,route){
    out=out.replace('</main>',chunk+'\n</main>');
   }
  }
+ if(route==='/election-data/'){
+   const sourceMeta=source.match(/<meta name="description" content="[^"]+">/)?.[0];
+   const currentMeta=out.match(/<meta name="description" content="[^"]+">/)?.[0];
+   if(!sourceMeta||!currentMeta)throw Error('Election data SEO description missing');
+   if(currentMeta!==sourceMeta)out=replaceUnique(out,currentMeta,sourceMeta,'Election data description');
+   const marker='id="site-final-reading-notes"';
+   const snippet=source.match(/<section id="site-final-reading-notes"[^>]*>[\s\S]*?<\/section>/)?.[0];
+   if(!snippet)throw Error('Verified election reading notes missing');
+   if(out.includes(marker)){
+    if(!out.includes(snippet))throw Error('Changed election reading notes require review');
+   }else{
+    if(out.split('</main>').length!==2)throw Error('Election closing main missing');
+    out=out.replace('</main>',snippet+'\n</main>');
+   }
+  }
  if(/<script\b/i.test(out.slice(out.indexOf('<main'),out.indexOf('</main>')).replace(/<script type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/g,''))&&!/script\b/i.test(live.slice(live.indexOf('<main'),live.indexOf('</main>')))){
    throw Error('An executable script was injected into the article body');
  }
