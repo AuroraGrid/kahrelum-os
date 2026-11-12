@@ -14,7 +14,7 @@ const { buildChip01SocialArtifacts } = require(path.join(__dirname, 'chip01-soci
 const { patchBuyerPage } = require(path.join(__dirname, 'buyer-discovery.cjs'));
 const { enhanceDiscoveryPage } = require(path.join(__dirname, 'ai-seo-discovery.cjs'));
 const { enhanceAgentVisibility } = require(path.join(__dirname, 'agent-visibility-hardening.cjs'));
-const { siteCompletionAllowedPaths, prepareMarkdownHostingConfig, patchCompletionPage, verifyMarkdownResponseHeaders } = require(path.join(__dirname, 'site-completion.cjs'));
+const { siteCompletionAllowedPaths, configsSemanticallyEqual, prepareMarkdownHostingConfig, patchCompletionPage, verifyMarkdownResponseHeaders } = require(path.join(__dirname, 'site-completion.cjs'));
 const { patchPilot, patchArticleMetadata, patchHomepageC7 } = require(path.join(__dirname, 'release3-live-patches.cjs'));
 const { patchInvestigationOverview, patchInsightsIndex, patchNvidiaDetailPage } = require(path.join(__dirname, 'investigations-text-refresh.cjs'));
 
@@ -1950,7 +1950,7 @@ async function promotePreview(hosting, client, live) {
   if (live.version.name !== receipt.baseVersion) {
     fail(`Production changed after preview (${receipt.baseVersion} -> ${live.version.name}). Prepare a new preview.`);
   }
-  if (sha256(Buffer.from(JSON.stringify(live.config))) !== receipt.baseConfigHash) fail('Production Hosting configuration changed after preview.');
+  if (!configsSemanticallyEqual(live.config, receipt.baseConfig)) fail('Production Hosting configuration changed after preview.');
   if (stableMapHash(receipt.desiredFiles) !== receipt.desiredMapHash) fail('Preview receipt file map is not internally consistent.');
   if (sha256(Buffer.from(JSON.stringify(receipt.expectedConfig))) !== receipt.expectedConfigHash) fail('Approved Hosting configuration hash changed after preview.');
 
