@@ -226,6 +226,13 @@ const RELEASE_PROFILES = {
     sitemapRoutes: ['/election-data/'],
     includeHomepage: false,
   },
+  'mobile-nav-layout': {
+    // Serve one responsive stylesheet from a verified live baseline; never deploy
+    // stale HTML, unpublished evidence, photographs or archived forecast locks.
+    overlayFiles: ['site-shell.css'],
+    sitemapRoutes: [],
+    includeHomepage: false,
+  },
   'buyer-discovery': {
     // Read-patch current live homepage and pilot without replacing archived sections or live social assets.
     overlayFiles: ['AGENTS.md', 'sitemap.md', 'llms-full.txt', 'index.md', 'pilot-page.md'],
@@ -1289,6 +1296,10 @@ async function buildOverlay(live, profileName) {
       changedPaths.some((item) => !['/assurance.html','/pilot.html','/sitemap.xml'].includes(item))) {
     fail('Buyer conversion attempted to change unrelated live Firebase files.');
   }
+  if (profileName === 'mobile-nav-layout' &&
+      changedPaths.some((item) => item !== '/site-shell.css')) {
+    fail('Mobile navigation release attempted to change unrelated live Firebase files.');
+  }
   if (profileName === 'opticodds-market-integrity' &&
       changedPaths.some((item) => ![
         '/opticodds-market-integrity.html', '/assets/social/og-opticodds-market-integrity.png', '/sitemap.xml',
@@ -1427,6 +1438,8 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     ? ['/', '/pilot']
     : profileName === 'buyer-conversion'
     ? ['/assurance','/pilot']
+    : profileName === 'mobile-nav-layout'
+    ? ['/', '/assurance', '/pilot']
     : profileName === 'forecast-100-publication'
     ? ['/forecasting', '/forecasting/100-forecast-challenge']
     : profileName === 'calibration-nfl-2026'
@@ -1508,6 +1521,15 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     checks.push({route:'/',status:200,structuredData:'WebPage',alternate:'/index.md',robots:'index, follow'});
   }
 
+  if (profileName === 'mobile-nav-layout') {
+    const served=await fetchBytes(origin+'/site-shell.css?v=20261105-1');
+    const expected=readRepositoryBytes('site-shell.css');
+    if (sha256(served)!==sha256(expected) ||
+        !served.toString('utf8').includes('Mobile navigation viewport fix')) {
+      fail('Mobile navigation CSS production readback failed.');
+    }
+    checks.push({route:'/site-shell.css',status:200,sha256:sha256(served)});
+  }
   if (profileName === 'site-completion') {
     const headers=await verifyMarkdownResponseHeaders(origin);
     checks.push(...headers.map(h=>({route:h.route,status:h.status,contentType:h.type,canonical:h.canonical})));
