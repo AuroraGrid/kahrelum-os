@@ -1,0 +1,95 @@
+'use strict';
+const assert=require('node:assert/strict');
+const BASE='https://kahrelum.com';
+const MARKDOWN_CANONICALS=Object.freeze([
+ ['/index.md',BASE+'/'],
+ ['/pilot-page.md',BASE+'/pilot'],
+ ['/ai-discovery/assurance.md',BASE+'/assurance'],
+ ['/ai-discovery/investigations.md',BASE+'/investigations'],
+ ['/ai-discovery/forecasting.md',BASE+'/forecasting'],
+ ['/ai-discovery/evidence-scorecard.md',BASE+'/evidence-scorecard'],
+ ['/ai-discovery/insights.md',BASE+'/insights'],
+ ['/ai-discovery/digital-id.md',BASE+'/digital-id'],
+ ['/ai-discovery/os.md',BASE+'/os'],
+ ['/ai-discovery/sports.md',BASE+'/sports'],
+ ['/ai-discovery/nfl-deadline-2026.md',BASE+'/nfl/deadline-watch-2026'],
+ ['/ai-discovery/nvidia-chip-custody.md',BASE+'/insights/nvidia-megaspeed-chip-custody'],
+ ['/ai-discovery/glossary.md',BASE+'/ai-discovery/glossary.md'],
+]);
+const contentType='text/markdown; charset=utf-8';
+function prepareMarkdownHostingConfig(original){
+ if(!original||original.cleanUrls!==true)throw Error('Verified Hosting cleanUrls required');
+ const source=JSON.stringify(original);
+ const config=JSON.parse(source);
+ config.headers=Array.isArray(config.headers)?config.headers:[];
+ for(const [route,canonical] of MARKDOWN_CANONICALS){
+  const required={'Content-Type':contentType,Link:'<'+canonical+'>; rel="canonical"'};
+  const matching=config.headers.filter(h=>h.glob===route||h.regex===route);
+  if(matching.length>1)throw Error('Duplicate Markdown header rule for '+route);
+  if(matching.length===1){
+    const existing=matching[0].headers||{};
+    for(const [key,value] of Object.entries(required)){
+      if(existing[key]!==value)throw Error('Conflicting published Markdown response header: '+route+' '+key);
+    }
+  }else{
+    config.headers.push({glob:route,headers:required});
+  }
+ }
+ assert.equal(JSON.stringify(original),source,'Mutation of protected Hosting config');
+ return config;
+}
+function replaceUnique(text,oldValue,nextValue,label){
+ const oldCount=text.split(oldValue).length-1;
+ const newCount=text.split(nextValue).length-1;
+ if(oldCount===0&&newCount===1)return text;
+ if(oldCount!==1||newCount!==0)throw Error(label+': conflicting or missing exact text anchor');
+ return text.replace(oldValue,nextValue);
+}
+function patchCompletionPage(live,source,route){
+ if(!['/','/insights','/nfl/deadline-watch-2026','/election-data/'].includes(route))throw Error('Unapproved completion route');
+ if(typeof live!=='string'||typeof source!=='string')throw TypeError('HTML required');
+ const expected=BASE+(route==='/'?'/':route);
+ if(!live.includes('<link rel="canonical" href="'+expected+'">')||!source.includes('<link rel="canonical" href="'+expected+'">'))throw Error('Unverified canonical: '+route);
+ let out=live;
+ if(route==='/insights'){
+  for(const regex of [/<title>[^<]+<\/title>/,/<meta property="og:title" content="[^"]+">/,/<meta name="twitter:title" content="[^"]+">/]){
+   const before=out.match(regex)?.[0],after=source.match(regex)?.[0];
+   if(!before||!after)throw Error('Missing exact Insights title metadata');
+   if(before!==after)out=replaceUnique(out,before,after,'Insights title');
+  }
+ }
+ if(route==='/'){
+  const outdated='Experimental, post-close forecasts. Official results and final accuracy remain pending until verified.';
+  const corrected='Historical post-close scenarios remain distinct from the completed Israeli C7 result; consult the official-result audit and its source limitations.';
+  if(out.includes(outdated))out=replaceUnique(out,outdated,corrected,'Home historical forecast footer');
+ }
+ if(route==='/nfl/deadline-watch-2026'||route==='/election-data/'){
+  const marker='id="site-completion-clarifications"';
+  const chunk=source.match(/<section id="site-completion-clarifications"[^>]*>[\s\S]*?<\/section>/)?.[0];
+  if(!chunk)throw Error('Missing bounded publication clarification');
+  if(out.includes(marker)){
+   if(!out.includes(chunk))throw Error('Conflicting live source clarification');
+  }else{
+   if(out.split('</main>').length!==2)throw Error('Unique live main closing tag missing');
+   out=out.replace('</main>',chunk+'\n</main>');
+  }
+ }
+ if(/<script\b/i.test(out.slice(out.indexOf('<main'),out.indexOf('</main>')).replace(/<script type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/g,''))&&!/script\b/i.test(live.slice(live.indexOf('<main'),live.indexOf('</main>')))){
+   throw Error('An executable script was injected into the article body');
+ }
+ return out.replace(/\r\n/g,'\n')===live.replace(/\r\n/g,'\n')?live:out;
+}
+async function verifyMarkdownResponseHeaders(origin){
+ const checks=[];
+ for(const [route,canonical] of [MARKDOWN_CANONICALS[0],MARKDOWN_CANONICALS[1],MARKDOWN_CANONICALS[2],MARKDOWN_CANONICALS[12]]){
+   const response=await fetch(origin+route,{cache:'no-store',headers:{'Cache-Control':'no-cache'}});
+   if(!response.ok)throw Error('Markdown route unavailable '+route+' HTTP '+response.status);
+   const type=(response.headers.get('content-type')||'').toLowerCase();
+   const link=response.headers.get('link')||'';
+   if(!type.startsWith('text/markdown'))throw Error('Markdown response Content-Type not verified for '+route+': '+type);
+   if(!link.includes('<'+canonical+'>')||!link.includes('rel="canonical"'))throw Error('Markdown Link canonical not verified for '+route);
+   checks.push({route,status:response.status,type,canonical});
+ }
+ return checks;
+}
+module.exports={MARKDOWN_CANONICALS,prepareMarkdownHostingConfig,patchCompletionPage,verifyMarkdownResponseHeaders};

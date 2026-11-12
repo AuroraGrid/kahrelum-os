@@ -14,6 +14,7 @@ const { buildChip01SocialArtifacts } = require(path.join(__dirname, 'chip01-soci
 const { patchBuyerPage } = require(path.join(__dirname, 'buyer-discovery.cjs'));
 const { enhanceDiscoveryPage } = require(path.join(__dirname, 'ai-seo-discovery.cjs'));
 const { enhanceAgentVisibility } = require(path.join(__dirname, 'agent-visibility-hardening.cjs'));
+const { prepareMarkdownHostingConfig, patchCompletionPage, verifyMarkdownResponseHeaders } = require(path.join(__dirname, 'site-completion.cjs'));
 const { patchPilot, patchArticleMetadata, patchHomepageC7 } = require(path.join(__dirname, 'release3-live-patches.cjs'));
 const { patchInvestigationOverview, patchInsightsIndex, patchNvidiaDetailPage } = require(path.join(__dirname, 'investigations-text-refresh.cjs'));
 
@@ -318,6 +319,20 @@ const RELEASE_PROFILES = {
       '/election-results-2026': '2026-11-12',
       '/insights': '2026-11-12',
       '/investigations': '2026-11-12',
+    },
+    includeHomepage: false,
+  },
+  'site-completion': {
+    // One integrated improvement pass with exact live-source patches.
+    // Only fresh page editorial copy, SEO title metadata and source-truthful sitemap dates.
+    // Markdown response headers are the ONLY deliberate Hosting config delta.
+    overlayFiles: [],
+    sitemapRoutes: [],
+    sitemapLastmod: {
+      '/': '2026-11-12',
+      '/insights': '2026-11-12',
+      '/nfl/deadline-watch-2026': '2026-11-12',
+      '/election-data/': '2026-11-12',
     },
     includeHomepage: false,
   },
@@ -1034,6 +1049,20 @@ async function buildOverlay(live, profileName) {
     if (correctedHome !== liveHome) addBlob(desired, blobs, '/index.html', Buffer.from(correctedHome, 'utf8'));
   }
 
+  if (profileName === 'site-completion') {
+    for (const [hostingPath, route] of [
+      ['/index.html', '/'],
+      ['/insights.html', '/insights'],
+      ['/nfl/deadline-watch-2026.html', '/nfl/deadline-watch-2026'],
+      ['/election-data/index.html', '/election-data/'],
+    ]) {
+      const liveHtml = (await verifiedLiveFile(live, hostingPath, route)).toString('utf8');
+      const canonical = fs.readFileSync(path.join(ROOT, hostingPath.slice(1)), 'utf8');
+      const revised = patchCompletionPage(liveHtml, canonical, route);
+      if (revised !== liveHtml) addBlob(desired, blobs, hostingPath, Buffer.from(revised, 'utf8'));
+    }
+  }
+
   if (profileName === 'ai-visibility-hardening') {
     for (const [hostingPath, route] of [
       ['/index.html', '/'],
@@ -1172,6 +1201,11 @@ async function buildOverlay(live, profileName) {
     ]);
     if (changedPaths.some(path => !allowed.has(path))) fail('Release 3 attempted to change unrelated live Firebase files.');
   }
+  if (profileName === 'site-completion') {
+    const allowed = new Set(['/index.html', '/insights.html', '/nfl/deadline-watch-2026.html',
+      '/election-data/index.html', '/sitemap.xml']);
+    if (changedPaths.some(x => !allowed.has(x))) fail('Site completion attempted to replace an unrelated Firebase file');
+  }
   if (profileName === 'ai-visibility-hardening') {
     const allowed = new Set([
       ...RELEASE_PROFILES['ai-visibility-hardening'].overlayFiles.map(x => '/' + x),
@@ -1303,7 +1337,8 @@ async function buildOverlay(live, profileName) {
   const removedPaths = Object.keys(live.fileMap).filter((item) => !(item in desired));
   if (removedPaths.length) fail(`Overlay attempted to remove live paths: ${removedPaths.join(', ')}`);
 
-  return { desired, blobs, changedPaths };
+  const expectedConfig = profileName === 'site-completion' ? prepareMarkdownHostingConfig(live.config) : live.config;
+  return { desired, blobs, changedPaths, expectedConfig };
 }
 
 async function captureApiHashes(origin) {
@@ -1336,6 +1371,8 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     ? ['/assurance','/investigations','/forecasting','/evidence-scorecard','/pilot']
     : profileName === 'ai-visibility-hardening'
     ? ['/', '/insights', '/digital-id', '/os', '/sports', '/nfl/deadline-watch-2026', '/insights/nvidia-megaspeed-chip-custody']
+    : profileName === 'site-completion'
+    ? ['/', '/insights', '/nfl/deadline-watch-2026', '/election-data/']
     : profileName === 'release3-verified'
     ? ['/', '/pilot', '/nfl/deadline-watch-2026', '/nfl/weekly-brief', '/insights/hegseth-war-powers-fact-check', '/insights/nvidia-megaspeed-chip-custody', '/investigations/chip-01', '/election-data/']
     : profileName === 'opticodds-market-integrity'
@@ -1390,6 +1427,10 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     checks.push({ route, status: 200, sha256: sha256(bytes) });
   }
 
+  if (profileName === 'site-completion') {
+    const headers=await verifyMarkdownResponseHeaders(origin);
+    checks.push(...headers.map(h=>({route:h.route,status:h.status,contentType:h.type,canonical:h.canonical})));
+  }
   if (profileName === 'election-data-index') {
     const page = (await fetchBytes(origin + '/election-data/')).toString('utf8');
     const pageLink = '<link rel="canonical" href="' + DOMAIN + '/election-data/">';
@@ -1835,7 +1876,7 @@ async function createPreview(hosting, client, live, overlay, profileName, source
   if (!overlay.changedPaths.length) fail('The overlay is already identical to production; no preview release is needed.');
   const channelId = `${CHANNEL_PREFIX}-${stableMapHash(overlay.desired).slice(0, 12)}`;
   const versionName = canonicalVersionName(await createHostingVersion(hosting, {
-    config: live.config,
+    config: overlay.expectedConfig || live.config,
     labels: { 'deployment-tool': 'kahrelum-safe-overlay' },
   }), live.version.name);
   const populated = (await client.post(`/${versionName}:populateFiles`, { files: overlay.desired })).body;
@@ -1855,7 +1896,7 @@ async function createPreview(hosting, client, live, overlay, profileName, source
   const finalizedFiles = await listVersionFiles(client, versionName);
   const finalizedMap = Object.fromEntries(finalizedFiles.map((item) => [item.path, item.hash]));
   if (!util.isDeepStrictEqual(finalizedMap, overlay.desired)) fail('Finalized preview file map differs from the live-derived desired map.');
-  if (!util.isDeepStrictEqual(normalizeConfig(finalized.config), live.config)) fail('Finalized preview Hosting configuration differs from production.');
+  if (!util.isDeepStrictEqual(normalizeConfig(finalized.config), overlay.expectedConfig || live.config)) fail('Finalized preview Hosting configuration differs from the approved config delta.');
 
   let channel = await hosting.getChannel('-', SITE, channelId);
   if (!channel) {
@@ -1875,6 +1916,8 @@ async function createPreview(hosting, client, live, overlay, profileName, source
     baseVersion: live.version.name,
     baseConfig: live.config,
     baseConfigHash: sha256(Buffer.from(JSON.stringify(live.config))),
+    expectedConfig: overlay.expectedConfig || live.config,
+    expectedConfigHash: sha256(Buffer.from(JSON.stringify(overlay.expectedConfig || live.config))),
     previewChannel: channelId,
     previewUrl: channel.url,
     previewVersion: versionName,
@@ -1896,6 +1939,7 @@ async function promotePreview(hosting, client, live) {
   }
   if (sha256(Buffer.from(JSON.stringify(live.config))) !== receipt.baseConfigHash) fail('Production Hosting configuration changed after preview.');
   if (stableMapHash(receipt.desiredFiles) !== receipt.desiredMapHash) fail('Preview receipt file map is not internally consistent.');
+  if (sha256(Buffer.from(JSON.stringify(receipt.expectedConfig))) !== receipt.expectedConfigHash) fail('Approved Hosting configuration hash changed after preview.');
 
   const preview = await hosting.getChannel('-', SITE, receipt.previewChannel);
   if (preview?.release?.version?.name !== receipt.previewVersion) fail('Preview channel no longer points to the verified version.');
@@ -1912,7 +1956,7 @@ async function promotePreview(hosting, client, live) {
   const releasedMap = Object.fromEntries(releasedFiles.map((item) => [item.path, item.hash]));
   if (released.release.version.name !== receipt.previewVersion) fail('Live channel did not adopt the verified preview version.');
   if (!util.isDeepStrictEqual(releasedMap, receipt.desiredFiles)) fail('Production file-map readback differs from the verified preview.');
-  if (!util.isDeepStrictEqual(normalizeConfig(released.release.version.config), receipt.baseConfig)) fail('Production Hosting configuration changed during promotion.');
+  if (!util.isDeepStrictEqual(normalizeConfig(released.release.version.config), receipt.expectedConfig)) fail('Production Hosting configuration differs from the verified approved delta.');
   const verification = await verifySurface(DOMAIN, receipt.expectedApiHashes, receipt.releaseProfile || 'full');
   const productionReceipt = {
     promotedAt: new Date().toISOString(),
@@ -1921,7 +1965,8 @@ async function promotePreview(hosting, client, live) {
     fileCount: releasedFiles.length,
     desiredMapHash: receipt.desiredMapHash,
     sourceCommit: receipt.sourceCommit,
-    configUnchanged: true,
+    configUnchanged: util.isDeepStrictEqual(receipt.baseConfig, receipt.expectedConfig),
+    approvedMarkdownHeaders: receipt.releaseProfile === 'site-completion' ? 13 : 0,
     verification,
   };
   // Only after production has passed exact-version file-map, config, and public
@@ -1966,7 +2011,8 @@ async function main() {
     desiredFileCount: Object.keys(overlay.desired).length,
     changedPaths: overlay.changedPaths,
     removedPaths: [],
-    configPreserved: true,
+    configPreserved: util.isDeepStrictEqual(overlay.expectedConfig, live.config),
+    approvedMarkdownHeaders: profileName === 'site-completion' ? 13 : 0,
   };
   if (mode === '--plan') {
     console.log(JSON.stringify(summary, null, 2));
