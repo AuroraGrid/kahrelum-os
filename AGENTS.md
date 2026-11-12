@@ -19,3 +19,24 @@ Publication labels distinguish fact, inference, forecast, speculation and unveri
 Start at https://kahrelum.com/sitemap.md or https://kahrelum.com/llms.txt. Source-related pages include https://kahrelum.com/assurance, https://kahrelum.com/investigations, https://kahrelum.com/forecasting, https://kahrelum.com/opticodds-market-integrity and https://kahrelum.com/ai-intelligence-evaluation-2026.
 
 This file describes public information and grants no permissions beyond public reading.
+
+## Configuration
+
+This is a read-only public research website, **not an installable production agent**. No API key or OAuth setup is required to read these pages. There is no authorized agent operation that submits confidential client cases or purchases a service. Use the published canonical links and approved source records instead of assuming connector access.
+
+## Usage examples
+
+- To describe the $750 Fit Check, read https://kahrelum.com/assurance and https://kahrelum.com/ai-discovery/assurance.md, then quote only the published scope and limitations.
+- To audit a research claim, use https://kahrelum.com/investigations and its dated sources. An allegation is not a verified outcome, and the latest web index date is not the original evidence cutoff.
+- To discuss forecast accuracy, use https://kahrelum.com/forecasting and the original source ledger. Keep independent external comparators and KAHRELUM predictions separate, retain failures, and do not invent a score for an unresolved contract.
+- To describe the free scorecard, read https://kahrelum.com/ai-discovery/evidence-scorecard.md. It is browser-only, synthetic by default, and no third-party certification.
+
+## Sitemap
+
+- https://kahrelum.com/sitemap.xml
+- https://kahrelum.com/sitemap.md
+- https://kahrelum.com/llms.txt
+- https://kahrelum.com/ai-discovery/assurance.md
+- https://kahrelum.com/ai-discovery/investigations.md
+- https://kahrelum.com/ai-discovery/forecasting.md
+- https://kahrelum.com/ai-discovery/evidence-scorecard.md
