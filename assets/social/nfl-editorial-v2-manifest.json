@@ -1,0 +1,80 @@
+{
+  "schema": "KAHRELUM_NFL_EDITORIAL_SOCIAL_v2",
+  "purpose": "Content-specific, coherent KAHRELUM Sports Intelligence social previews",
+  "renderer": "CairoSVG 2.8.2",
+  "immutableSources": true,
+  "assets": [
+    {
+      "route": "/nfl/trade-volume-challenge-2026",
+      "source": "assets/social/editorial-source/nfl-trade-volume-challenge-2026.svg",
+      "output": "assets/social/og-nfl-trade-volume-challenge-2026-v2.png",
+      "sourceSha256": "cbbb01ab5086b6dc65a003ba40886a95a4854245fdd134565e9e7d57c019a8aa",
+      "sha256": "c62eb79b863b4c92b7ff1bf63fbbefd261578e4eed7b3fc3d0ba4a9066626c81",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/nfl/trades",
+      "source": "assets/social/editorial-source/nfl-trades.svg",
+      "output": "assets/social/og-nfl-trades-v2.png",
+      "sourceSha256": "211a1ae8aafdd4bfc8acc42239845f8d417b7a6ff50f6ff39484477a27d49a28",
+      "sha256": "b8b45cf76e835525bdaf1964c98833ee69dde0c55798b2f331f3c8434dd7ae0e",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/nfl/film-room",
+      "source": "assets/social/editorial-source/nfl-film-room.svg",
+      "output": "assets/social/og-nfl-film-room-v2.png",
+      "sourceSha256": "63925958dc134e2e4f612f2e22cc4051772f6685c21b54e937ecf03ae02a53a7",
+      "sha256": "0517c7ca5e9a9c65da1b54974af5340abd41957d1d530632393b01ef65106c48",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/nfl/analysis",
+      "source": "assets/social/editorial-source/nfl-analysis.svg",
+      "output": "assets/social/og-nfl-analysis-v2.png",
+      "sourceSha256": "147df3f01c0d83973481032956f2502723bfe0226eb7ca039dba0f5d2d680402",
+      "sha256": "8968337f3a8d820763f696e78dbf04411415ff178616e3223cc5e133539b1e62",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/sports",
+      "source": "assets/social/editorial-source/sports-desk.svg",
+      "output": "assets/social/og-sports-v2.png",
+      "sourceSha256": "a966aae63c9063884fc3c6abfb8c743202c76d644a0aad0b0888edea29aa7c53",
+      "sha256": "b866ba2c82a13db9e7ec39dd6fc2dbcc2e5c43432b3925747abea76d047f6a59",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/nfl/deadline-watch-2026",
+      "source": "assets/social/editorial-source/nfl-deadline-watch-2026.svg",
+      "output": "assets/social/og-nfl-deadline-watch-2026-v2.png",
+      "sourceSha256": "572be238ca1e12b52bc09ad9f41fae20bcf21c040a6598f53be72393e973ad56",
+      "sha256": "8db32bdd4a4e071ecfba204b9b27e9f0aeea420638ec848bece01511c3073f5c",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/nfl/weekly-brief",
+      "source": "assets/social/editorial-source/nfl-weekly-brief.svg",
+      "output": "assets/social/og-nfl-weekly-brief-v2.png",
+      "sourceSha256": "9f15fddedcbfe3a71501f28fedccd1a068ab2d6cc31cb224601ad5445b89bc87",
+      "sha256": "8a4cfa3be682debb304a3e2e457d1da39d9b467ff33cac52849e7a5d27558cc8",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/insights/nfl-brier-accountability",
+      "source": "assets/social/editorial-source/nfl-brier-accountability.svg",
+      "output": "assets/social/og-insights-nfl-brier-accountability-v2.png",
+      "sourceSha256": "1d248e93c83e17d8bfbac5e8e1fa40a86fbd7febbdaf98740115b93cece1b58e",
+      "sha256": "0a685c07506d21802fb59ab09061febd2776c770d59e7da04d0d9bdb87771534",
+      "width": 1200,
+      "height": 630
+    }
+  ]
+}
