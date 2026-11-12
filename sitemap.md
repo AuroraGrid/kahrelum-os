@@ -119,3 +119,4 @@ These files are public summaries of existing pages, not new verification of hist
 - [Nvidia and Megaspeed investigation](https://kahrelum.com/ai-discovery/nvidia-chip-custody.md)
 
 These are navigation and terminology documents rather than new historical evidence verification or performance scores.
+- [Malik Beasley federal sentencing forecast, prospective 2026-11-12](https://kahrelum.com/insights/malik-beasley-sentencing-2026): 62% subjective probability of at least 12 months, original source custody, court settlement rules, status OPEN/UNSCORED.

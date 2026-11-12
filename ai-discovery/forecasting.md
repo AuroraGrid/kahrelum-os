@@ -46,3 +46,9 @@ Statements reflect the named public page and its original dated source records. 
 - The archived Oct 13–14 original Drive probabilities are distinct from the later consolidated scoreboard; source access may be restricted.
 - The Nov 10 FC1 NFL trade-count challenge remains unscored over club-date vs register-date conflict, while the separate 123-player NFL cohort underperformed its all-NO baseline.
 - Small N and event heterogeneity preclude superiority claims. A missed scheduled October 20 resolution check is disclosed separately from gate compliance.
+
+## Malik Beasley sentencing forecast (November 12, 2026)
+
+- Canonical article: https://kahrelum.com/insights/malik-beasley-sentencing-2026
+- Original v1 judgment custody: https://github.com/AuroraGrid/kahrelum-os/commit/805d5df3c04eb5320f223dc552c55516dc487f76
+- Forecast: 62% probability of initial federal imprisonment of 12 months or more in E.D.N.Y. 26-CR-190. No outcome is resolved and no Brier score is claimed. December 9, 2026 is a scheduled plea hearing; sentencing date is not known. A first official sentencing judgment, not actual time served, controls settlement. The original probability is never rewritten.
