@@ -61,3 +61,12 @@ test('Fail-closed patch is idempotent and cannot rewrite source bodies',()=>{
   for(const chunk of [...old.matchAll(/<article class="case-record"[\s\S]*?<\/article>/g)])assert.ok(patched.includes(chunk[0]));
  }
 });
+
+test('sitemap accepts only source-verified homepage modification date, idempotently',()=>{
+ const {setSitemapLastmod}=require('../scripts/commercial-readiness.cjs');
+ const sitemap='<?xml version="1.0"?><urlset><url><loc>https://kahrelum.com/</loc></url></urlset>';
+ const revised=setSitemapLastmod(sitemap,{'/':'2026-11-12'});
+ assert.match(revised,/<loc>https:\/\/kahrelum\.com\/<\/loc><lastmod>2026-11-12<\/lastmod>/);
+ assert.equal(setSitemapLastmod(revised,{'/':'2026-11-12'}),revised);
+ assert.throws(()=>setSitemapLastmod(sitemap,{'/../../etc':'2026-11-12'}));
+});
