@@ -57,7 +57,7 @@ function patchInvestigationOverview(live,canonical){
   }
   if((actual.match(/href="\/investigations\//g)||[]).length!==10)throw Error('Exactly ten public case links required');
   if(actual.includes('href="/investigations/court-01"')||actual.includes('href="/investigations/court-05"'))throw Error('Redaction-required case was linked');
-  return out;
+  return out.replace(/\r\n/g,'\n')===live.replace(/\r\n/g,'\n') ? live : out;
 }
 const routes=[
 '/insights/hegseth-war-powers-fact-check',
@@ -76,7 +76,7 @@ function patchInsightsIndex(live,canonical){
   for(const route of routes){out=out.replace(getCard(out,route),getCard(canonical,route));}
   if(!out.includes('Updated Nov 12')||!out.includes('211–204'))throw Error('Nov 12 discovery correction missing');
   if(out.split('</head>')[0]!==live.split('</head>')[0])throw Error('Live Insights metadata changed');
-  return out;
+  return out.replace(/\r\n/g,'\n')===live.replace(/\r\n/g,'\n') ? live : out;
 }
 function patchNvidiaDetailPage(live,canonical,file){
   canonical=matchLineEndings(live,canonical);
@@ -104,6 +104,6 @@ function patchNvidiaDetailPage(live,canonical,file){
   }
   if(out.split('</head>')[0]!==live.split('</head>')[0])throw Error('Unapproved metadata modification in CHIP-01 patch');
   if(!out.includes(anchor)||!out.includes('85%')||!out.includes('10%')||!out.includes('5%'))throw Error('Original outcome forecast disappeared');
-  return out;
+  return out.replace(/\r\n/g,'\n')===live.replace(/\r\n/g,'\n') ? live : out;
 }
 module.exports={patchInvestigationOverview,patchInsightsIndex,patchNvidiaDetailPage};

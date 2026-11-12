@@ -85,3 +85,12 @@ test('Windows checkout and live LF pages produce the same bounded idempotent pat
   assert.equal(fn(crlf,lf),crlf);
  }
 });
+
+test('Mixed live line endings alone never create a release',()=>{
+ const patch=require('../scripts/investigations-text-refresh.cjs');
+ for(const [file,fn] of [['investigations.html',patch.patchInvestigationOverview],['insights.html',patch.patchInsightsIndex],[caseRoute,patchNvidiaDetailPage],[insightRoute,patchNvidiaDetailPage]]){
+  const lf=read(file).replace(/\r\n/g,'\n');
+  const mixed=lf.replace('\n','\r\n');
+  assert.equal(fn(mixed,lf.replace(/\n/g,'\r\n'),file),mixed);
+ }
+});
