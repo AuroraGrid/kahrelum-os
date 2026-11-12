@@ -1,0 +1,33 @@
+{
+  "provider": "VotePredictor",
+  "observationCutoffUtc": "2026-11-12T12:44:14Z",
+  "sourceIssueTime": "UNEXPOSED",
+  "retrieval": "First-party public pages, Firecrawl maxAge 0 markdown; repeated live retrievals agreed on the admitted numbers; raw markdown retained locally and excluded from the public commit",
+  "house": {
+    "sourceUrl": "https://votepredictor.com/house",
+    "capturePath": "research/election-challenge-2026/current-sources/vote-predictor-house-20261112T1242Z.md",
+    "captureSha256": "ad5819849887eedd551709b72f08a6e830b173043310fe5576cd0a9e3a33fc95",
+    "scrapeId": "01a1cfc7-ee68-72da-863d-8ab1f41fdba6",
+    "democraticControlPct": 77,
+    "expectedDemocraticSeats": 230.5,
+    "roundedSummaryDemocraticSeats": 231,
+    "democraticMajorityThreshold": 218
+  },
+  "senate": {
+    "sourceUrl": "https://votepredictor.com/senate",
+    "capturePath": "research/election-challenge-2026/current-sources/vote-predictor-senate-20261112T1242Z.md",
+    "captureSha256": "9c6233e92859a1c514b5473c2104d1490e158f4a9a98af9e327672a888a3bd11",
+    "scrapeId": "01a1cfc7-3d8a-7668-b347-0b3b2ef3a4fb",
+    "democraticControlPct": 65,
+    "expectedDemocraticSeats": 51.5,
+    "roundedSummaryDemocraticSeats": 52,
+    "democraticMajorityThreshold": 51
+  },
+  "comparisonToPriorLedger": {
+    "houseDemocraticControlPct": "77 -> 77",
+    "houseExpectedDemocraticSeats": "230.4 -> 230.5",
+    "senateDemocraticControlPct": "66 -> 65",
+    "senateExpectedDemocraticSeats": "51.7 -> 51.5"
+  },
+  "caveat": "Web-index renderings observed during the review included the prior 66%/51.7 Senate and 230.4 House values. Repeated maxAge 0 first-party scrapes for each changed page consistently showed the newly observed fields. This is a prospective observation, not a backdated publisher issue time. Challenger observations are not KAHRELUM model inputs."
+}
