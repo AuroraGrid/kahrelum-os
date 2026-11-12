@@ -12,6 +12,7 @@ const { cleanupPromotedPreview } = require(path.join(__dirname, 'firebase-previe
 const { buildCaseShareArtifacts, extractCases } = require(path.join(__dirname, 'case-social-pages.cjs'));
 const { buildChip01SocialArtifacts } = require(path.join(__dirname, 'chip01-social.cjs'));
 const { patchBuyerPage } = require(path.join(__dirname, 'buyer-discovery.cjs'));
+const { patchBuyerConversion } = require(path.join(__dirname, 'buyer-conversion-20261112.cjs'));
 const { enhanceDiscoveryPage } = require(path.join(__dirname, 'ai-seo-discovery.cjs'));
 const { enhanceAgentVisibility } = require(path.join(__dirname, 'agent-visibility-hardening.cjs'));
 const { siteCompletionAllowedPaths, configsSemanticallyEqual, prepareMarkdownHostingConfig, patchCompletionPage, verifyMarkdownResponseHeaders } = require(path.join(__dirname, 'site-completion.cjs'));
@@ -229,6 +230,14 @@ const RELEASE_PROFILES = {
     // Read-patch current live homepage and pilot without replacing archived sections or live social assets.
     overlayFiles: ['AGENTS.md', 'sitemap.md', 'llms-full.txt', 'index.md', 'pilot-page.md'],
     sitemapRoutes: [],
+    includeHomepage: false,
+  },
+  'buyer-conversion': {
+    // Source-pinned surgical update of ONLY current live assurance and pilot.
+    // Preserve the live source map, original research, social artwork and Hosting config.
+    overlayFiles: [],
+    sitemapRoutes: [],
+    sitemapLastmod: {'/assurance':'2026-11-12','/pilot':'2026-11-12'},
     includeHomepage: false,
   },
   'opticodds-market-integrity': {
@@ -1139,6 +1148,15 @@ async function buildOverlay(live, profileName) {
     }
   }
 
+  if (profileName === 'buyer-conversion') {
+    for (const [hostingPath, route] of [['/assurance.html', '/assurance'], ['/pilot.html', '/pilot']]) {
+      const liveHtml = (await verifiedLiveFile(live, hostingPath, route)).toString('utf8');
+      const sourceHtml = fs.readFileSync(path.join(ROOT, hostingPath.slice(1)), 'utf8');
+      const revised = patchBuyerConversion(liveHtml, sourceHtml, route);
+      if (revised !== liveHtml) addBlob(desired, blobs, hostingPath, Buffer.from(revised, 'utf8'));
+    }
+  }
+
   if (profileName === 'chip01-publication') {
     for (const item of buildChip01SocialArtifacts()) {
       if (!item.approvedArt) {
@@ -1266,6 +1284,10 @@ async function buildOverlay(live, profileName) {
         '/index.html', '/pilot.html', '/AGENTS.md', '/sitemap.md', '/llms-full.txt', '/index.md', '/pilot-page.md',
       ].includes(item))) {
     fail('Buyer discovery release attempted to change an unrelated live Firebase path.');
+  }
+  if (profileName === 'buyer-conversion' &&
+      changedPaths.some((item) => !['/assurance.html','/pilot.html','/sitemap.xml'].includes(item))) {
+    fail('Buyer conversion attempted to change unrelated live Firebase files.');
   }
   if (profileName === 'opticodds-market-integrity' &&
       changedPaths.some((item) => ![
@@ -1403,6 +1425,8 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     ? ['/election-data/']
     : profileName === 'buyer-discovery'
     ? ['/', '/pilot']
+    : profileName === 'buyer-conversion'
+    ? ['/assurance','/pilot']
     : profileName === 'forecast-100-publication'
     ? ['/forecasting', '/forecasting/100-forecast-challenge']
     : profileName === 'calibration-nfl-2026'
@@ -1540,6 +1564,30 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
       fail('AI evaluation social metadata readback failed.');
     }
     checks.push({route:imagePath,status:200,sha256:sha256(actual)});
+  }
+
+  if (profileName === 'buyer-conversion') {
+    for (const [route,sectionId,asset] of [
+      ['/assurance','example-decision-audits','og-assurance.png'],
+      ['/pilot','fit-check-process','og-pilot.png'],
+    ]) {
+      const html = (await fetchBytes(origin + route)).toString('utf8');
+      const expectedTitle = route === '/assurance'
+        ? 'AI Agent Decision Audits &amp; Assurance | KAHRELUM'
+        : 'AI Decision Audit: $750 Fit Check | KAHRELUM';
+      if (!html.includes('<title>' + expectedTitle + '</title>') ||
+          !html.includes('id="' + sectionId + '"') ||
+          !html.includes('/assets/social/' + asset) ||
+          !html.includes('property="og:image"') ||
+          !html.includes('$750') || !html.includes('$2,500')) {
+        fail('Buyer conversion SEO and asset readback failed: ' + route);
+      }
+      if (route === '/pilot' && (!html.includes('id="pilotInquiry"') ||
+          !/does not automatically transmit|not automatically sent/i.test(html) ||
+          !html.includes('Prepare a $750 Fit Check inquiry (you send)'))) {
+        fail('Buyer conversion published a non-reviewable inquiry: ' + route);
+      }
+    }
   }
 
   if (profileName === 'buyer-discovery') {
