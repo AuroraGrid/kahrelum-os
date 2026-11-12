@@ -102,3 +102,15 @@ This public directory groups existing website pages. Research status and timesta
 - [Decision Evidence Gap Scorecard](https://kahrelum.com/ai-discovery/evidence-scorecard.md)
 
 These files are public summaries of existing pages, not new verification of historical evidence.
+
+## Further AI-readable public summaries and terminology (2026-11-12)
+
+- [Evidence status glossary](https://kahrelum.com/ai-discovery/glossary.md)
+- [Insights](https://kahrelum.com/ai-discovery/insights.md)
+- [Worldwide Digital ID watch](https://kahrelum.com/ai-discovery/digital-id.md)
+- [KAHRELUM method](https://kahrelum.com/ai-discovery/os.md)
+- [Sports intelligence](https://kahrelum.com/ai-discovery/sports.md)
+- [NFL trade deadline reconciliation](https://kahrelum.com/ai-discovery/nfl-deadline-2026.md)
+- [Nvidia and Megaspeed investigation](https://kahrelum.com/ai-discovery/nvidia-chip-custody.md)
+
+These are navigation and terminology documents rather than new historical evidence verification or performance scores.

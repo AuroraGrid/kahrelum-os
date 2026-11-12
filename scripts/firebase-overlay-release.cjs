@@ -13,6 +13,7 @@ const { buildCaseShareArtifacts, extractCases } = require(path.join(__dirname, '
 const { buildChip01SocialArtifacts } = require(path.join(__dirname, 'chip01-social.cjs'));
 const { patchBuyerPage } = require(path.join(__dirname, 'buyer-discovery.cjs'));
 const { enhanceDiscoveryPage } = require(path.join(__dirname, 'ai-seo-discovery.cjs'));
+const { enhanceAgentVisibility } = require(path.join(__dirname, 'agent-visibility-hardening.cjs'));
 const { patchPilot, patchArticleMetadata, patchHomepageC7 } = require(path.join(__dirname, 'release3-live-patches.cjs'));
 const { patchInvestigationOverview, patchInsightsIndex, patchNvidiaDetailPage } = require(path.join(__dirname, 'investigations-text-refresh.cjs'));
 
@@ -317,6 +318,28 @@ const RELEASE_PROFILES = {
       '/election-results-2026': '2026-11-12',
       '/insights': '2026-11-12',
       '/investigations': '2026-11-12',
+    },
+    includeHomepage: false,
+  },
+  'ai-visibility-hardening': {
+    // Targeted source-bound agent discoverability; preserve live page content, OG previews,
+    // historical records, forecast locks, CSS/JS, API responses and Hosting configuration.
+    overlayFiles: [
+      'index.md', 'pilot-page.md', 'AGENTS.md', 'llms.txt', 'sitemap.md',
+      'ai-discovery/insights.md', 'ai-discovery/digital-id.md',
+      'ai-discovery/os.md', 'ai-discovery/sports.md',
+      'ai-discovery/nfl-deadline-2026.md',
+      'ai-discovery/nvidia-chip-custody.md', 'ai-discovery/glossary.md',
+    ],
+    sitemapRoutes: [],
+    sitemapLastmod: {
+      '/': '2026-11-12',
+      '/insights': '2026-11-12',
+      '/digital-id': '2026-11-12',
+      '/os': '2026-11-12',
+      '/sports': '2026-11-12',
+      '/nfl/deadline-watch-2026': '2026-11-12',
+      '/insights/nvidia-megaspeed-chip-custody': '2026-11-12',
     },
     includeHomepage: false,
   },
@@ -1011,6 +1034,23 @@ async function buildOverlay(live, profileName) {
     if (correctedHome !== liveHome) addBlob(desired, blobs, '/index.html', Buffer.from(correctedHome, 'utf8'));
   }
 
+  if (profileName === 'ai-visibility-hardening') {
+    for (const [hostingPath, route] of [
+      ['/index.html', '/'],
+      ['/insights.html', '/insights'],
+      ['/digital-id.html', '/digital-id'],
+      ['/os.html', '/os'],
+      ['/sports.html', '/sports'],
+      ['/nfl/deadline-watch-2026.html', '/nfl/deadline-watch-2026'],
+      ['/insights/nvidia-megaspeed-chip-custody.html', '/insights/nvidia-megaspeed-chip-custody'],
+    ]) {
+      const liveHtml = (await verifiedLiveFile(live, hostingPath, route)).toString('utf8');
+      const sourceHtml = fs.readFileSync(path.join(ROOT, hostingPath.slice(1)), 'utf8');
+      const revised = enhanceAgentVisibility(liveHtml, sourceHtml, route);
+      if (revised !== liveHtml) addBlob(desired, blobs, hostingPath, Buffer.from(revised, 'utf8'));
+    }
+  }
+
   if (profileName === 'ai-discovery-seo') {
     for (const [hostingPath, route] of [
       ['/assurance.html', '/assurance'],
@@ -1131,6 +1171,17 @@ async function buildOverlay(live, profileName) {
       '/election-data/index.html', '/index.html', '/sitemap.xml',
     ]);
     if (changedPaths.some(path => !allowed.has(path))) fail('Release 3 attempted to change unrelated live Firebase files.');
+  }
+  if (profileName === 'ai-visibility-hardening') {
+    const allowed = new Set([
+      ...RELEASE_PROFILES['ai-visibility-hardening'].overlayFiles.map(x => '/' + x),
+      '/index.html', '/insights.html', '/digital-id.html', '/os.html',
+      '/sports.html', '/nfl/deadline-watch-2026.html',
+      '/insights/nvidia-megaspeed-chip-custody.html', '/sitemap.xml',
+    ]);
+    if (changedPaths.some(x => !allowed.has(x))) {
+      fail('AI visibility release attempted to change unrelated live Firebase files.');
+    }
   }
   if (profileName === 'ai-discovery-seo') {
     const allowed = new Set([
@@ -1283,6 +1334,8 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     ? ['/', '/pilot']
     : profileName === 'ai-discovery-seo'
     ? ['/assurance','/investigations','/forecasting','/evidence-scorecard','/pilot']
+    : profileName === 'ai-visibility-hardening'
+    ? ['/', '/insights', '/digital-id', '/os', '/sports', '/nfl/deadline-watch-2026', '/insights/nvidia-megaspeed-chip-custody']
     : profileName === 'release3-verified'
     ? ['/', '/pilot', '/nfl/deadline-watch-2026', '/nfl/weekly-brief', '/insights/hegseth-war-powers-fact-check', '/insights/nvidia-megaspeed-chip-custody', '/investigations/chip-01', '/election-data/']
     : profileName === 'opticodds-market-integrity'

@@ -1,3 +1,10 @@
+---
+title: "KAHRELUM Fixed-Scope Pilot and Fit Check"
+canonical: "https://kahrelum.com/pilot"
+updated: "2026-11-12"
+content_type: "agent-readable public service summary"
+---
+
 # KAHRELUM Historical AI Decision Review | Fixed-Scope Pilot
 
 Canonical page: https://kahrelum.com/pilot
@@ -17,3 +24,10 @@ The $750 Fit Check fee is fully credited toward a $2,500 Founding Pilot begun wi
 The public form prepares an email for the visitor to review and send. It does not automatically transmit or store the inquiry or provide direct payment checkout. Contact: mailto:hasan@kahrelum.com. Confirm supplier eligibility, processing location, permission and data handling before providing any case material. Do not send protected personal information, passwords, private customer records, credentials or confidential prompts in a public inquiry.
 
 Synthetic samples: https://kahrelum.com/demo, https://kahrelum.com/opticodds-market-integrity, https://kahrelum.com/ai-intelligence-evaluation-2026.
+
+## Sitemap
+
+- [Pilot and manually sent inquiry](https://kahrelum.com/pilot)
+- [AI Assurance](https://kahrelum.com/assurance)
+- [Evidence terminology](https://kahrelum.com/ai-discovery/glossary.md)
+- [Agent reading instructions](https://kahrelum.com/AGENTS.md)
