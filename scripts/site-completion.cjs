@@ -18,6 +18,23 @@ const MARKDOWN_CANONICALS=Object.freeze([
  ['/ai-discovery/glossary.md',BASE+'/ai-discovery/glossary.md'],
 ]);
 const contentType='text/markdown; charset=utf-8';
+// Single source of truth for the exact bounded Firebase Hosting file-map delta.
+// The 13 canonical Markdown mirrors are preexisting public files, not a full-site overwrite.
+function siteCompletionAllowedPaths(){
+ const allowed=new Set([
+  '/index.html','/insights.html','/nfl/deadline-watch-2026.html',
+  '/election-data/index.html','/site-shell.css','/sitemap.xml',
+ ]);
+ for(const [route,canonical] of MARKDOWN_CANONICALS){
+  if(!/^\/(?:index\.md|pilot-page\.md|ai-discovery\/[a-z0-9-]+\.md)$/.test(route)||
+      !canonical.startsWith(BASE+'/'))throw Error('Unapproved Markdown response path or canonical '+route);
+  if(allowed.has(route))throw Error('Duplicate site completion file path '+route);
+  allowed.add(route);
+ }
+ if(MARKDOWN_CANONICALS.length!==13)throw Error('Unexpected Markdown allowlist count');
+ return allowed;
+}
+
 function prepareMarkdownHostingConfig(original){
  if(!original||original.cleanUrls!==true)throw Error('Verified Hosting cleanUrls required');
  const source=JSON.stringify(original);
@@ -108,4 +125,4 @@ async function verifyMarkdownResponseHeaders(origin){
  }
  return checks;
 }
-module.exports={MARKDOWN_CANONICALS,prepareMarkdownHostingConfig,patchCompletionPage,verifyMarkdownResponseHeaders};
+module.exports={MARKDOWN_CANONICALS,siteCompletionAllowedPaths,prepareMarkdownHostingConfig,patchCompletionPage,verifyMarkdownResponseHeaders};
