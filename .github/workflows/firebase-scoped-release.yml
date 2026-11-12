@@ -125,7 +125,18 @@ jobs:
               exit 1
             fi
             changed="$(git diff --name-only "$PREVIOUS_COMMIT" "$GITHUB_SHA" --)"
-            if grep -Eq '^ai-discovery/(assurance|investigations|forecasting|evidence-scorecard)\.md
+            if grep -Eq '^ai-discovery/(assurance|investigations|forecasting|evidence-scorecard)\.md$' <<< "$changed"; then
+              while IFS= read -r file; do
+                case "$file" in
+                  assurance.html|investigations.html|forecasting.html|evidence-scorecard.html|pilot.html|AGENTS.md|llms.txt|sitemap.md|ai-discovery/*.md|scripts/ai-seo-discovery.cjs|scripts/firebase-overlay-release.cjs|scripts/deploy-unified-firebase.ps1|tests/ai-discovery-seo.test.cjs|research/site-design/AI_DISCOVERY_SEO_RELEASE_20261112.md|.github/workflows/firebase-scoped-release.yml)
+                    ;;
+                  *) echo "::error::Mixed AI-discovery push contains unrelated path: $file"; exit 1 ;;
+                esac
+              done <<< "$changed"
+              profiles="ai-discovery-seo"
+            else
+              selections=()
+              while IFS= read -r file; do
               case "$file" in
                 pilot.html|site-shell.css|nfl/deadline-reconciled-2026.json|nfl/official-trade-snapshot-2026.json|nfl/deadline-audit.json|nfl/refresh-status.json|nfl/deadline-watch-2026.html|nfl/deadline-watch-2026.js|nfl/weekly-brief.html|insights/hegseth-war-powers-fact-check.html|insights/nvidia-megaspeed-chip-custody.html|investigations/chip-01.html|election-data/index.html)
                   selections+=(release3-verified) ;;
@@ -176,200 +187,6 @@ jobs:
           for profile in $RELEASE_PROFILES; do
             case "$profile" in
               chip01-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|ai-discovery-seo|commercial-readiness|buyer-discovery|election-data-index) ;;
-              *) echo "::error::Unapproved release profile: $profile"; exit 1;;
-            esac
-          done
-          if [[ -z "$KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON" ]]; then
-            echo "::error::Firebase publisher secret missing: cannot publish live site."
-            echo "Production untouched. Configure KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON in repository Actions secrets." >> "$GITHUB_STEP_SUMMARY"
-            exit 1
-          fi
-
-      - name: Run focused release regression tests
-        if: steps.scope.outputs.profiles != ''
-        shell: bash
-        run: |
-          set -euo pipefail
-          python3 -m pip install --disable-pip-version-check --quiet cairosvg==2.8.2
-          python3 scripts/build-kahrelum-editorial-social.py
-          python3 scripts/build-kahrelum-editorial-social.py --check
-          node --test tests/*.test.cjs
-          node --check scripts/firebase-overlay-release.cjs
-
-      - name: Restore clean Git tree after non-NFL art tests
-        # The global test runner builds deterministic NFL rasters. For a CHIP-01
-        # (or other non-NFL) release those are test byproducts, not part of the
-        # release and not authority to modify committed files. Fail on any
-        # unexpected dirty path. Keep the publisher's clean-tree gate intact.
-        if: steps.scope.outputs.profiles != '' && !contains(steps.scope.outputs.profiles, 'nfl-editorial-v2')
-        shell: bash
-        run: |
-          set -euo pipefail
-          mapfile -t dirty < <(git status --porcelain=v1 --untracked-files=all | cut -c4-)
-          for file in "${dirty[@]}"; do
-            case "$file" in
-              assets/social/og-nfl-trade-volume-challenge-2026-v2.png|assets/social/og-nfl-trades-v2.png|assets/social/og-nfl-film-room-v2.png|assets/social/og-nfl-analysis-v2.png|assets/social/og-sports-v2.png|assets/social/og-nfl-deadline-watch-2026-v2.png|assets/social/og-nfl-weekly-brief-v2.png|assets/social/og-insights-nfl-brier-accountability-v2.png|assets/social/nfl-editorial-v2-manifest.json) ;;
-              *) echo "::error::Unexpected changed/untracked path after tests: $file"; exit 1 ;;
-            esac
-          done
-          for file in "${dirty[@]}"; do
-            if git ls-files --error-unmatch -- "$file" >/dev/null 2>&1; then
-              git restore --source=HEAD -- "$file"
-            else
-              rm -f -- "$file"
-            fi
-          done
-          if [[ -n "$(git status --porcelain=v1 --untracked-files=all)" ]]; then
-            echo "::error::Repo is still dirty after approved test-output cleanup"; exit 1
-          fi
-          echo "Non-NFL release: deterministic editorial test outputs discarded; exact triggering source commit preserved." >> "$GITHUB_STEP_SUMMARY"
-
-      - name: Publicly custody compiled editorial assets in a clean Git commit
-        if: contains(steps.scope.outputs.profiles, 'nfl-editorial-v2')
-        shell: bash
-        run: |
-          set -euo pipefail
-          # The renderer is deterministic: all eight PNGs and the scoped hash manifest
-          # must be produced from the exact committed SVG sources. Don't weaken the
-          # Firebase publisher's clean-tree requirement to bypass this step.
-          python3 scripts/build-kahrelum-editorial-social.py --check
-          mapfile -t dirty < <(git status --porcelain=v1 --untracked-files=all | cut -c4-)
-          for file in "${dirty[@]}"; do
-            case "$file" in
-              assets/social/og-nfl-trade-volume-challenge-2026-v2.png|assets/social/og-nfl-trades-v2.png|assets/social/og-nfl-film-room-v2.png|assets/social/og-nfl-analysis-v2.png|assets/social/og-sports-v2.png|assets/social/og-nfl-deadline-watch-2026-v2.png|assets/social/og-nfl-weekly-brief-v2.png|assets/social/og-insights-nfl-brier-accountability-v2.png|assets/social/nfl-editorial-v2-manifest.json) ;;
-              *) echo "::error::Unexpected modified or untracked path: $file"; exit 1 ;;
-            esac
-          done
-          git add -- \
-            assets/social/og-nfl-trade-volume-challenge-2026-v2.png \
-            assets/social/og-nfl-trades-v2.png \
-            assets/social/og-nfl-film-room-v2.png \
-            assets/social/og-nfl-analysis-v2.png \
-            assets/social/og-sports-v2.png \
-            assets/social/og-nfl-deadline-watch-2026-v2.png \
-            assets/social/og-nfl-weekly-brief-v2.png \
-            assets/social/og-insights-nfl-brier-accountability-v2.png \
-            assets/social/nfl-editorial-v2-manifest.json
-          if ! git diff --cached --quiet; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git commit -m "build(social): preserve exact NFL editorial v2 raster receipts"
-            receipt_branch="release-receipts/nfl-editorial-${GITHUB_SHA:0:12}"
-            # This public ref makes the derived art commit independently inspectable.
-            # A workflow rerun may produce a new commit ID from identical source bytes.
-            # Never overwrite an existing public receipt merely to make retries pass.
-            remote_sha="$(git ls-remote origin "refs/heads/$receipt_branch" | awk '{print $1}')"
-            if [[ -n "$remote_sha" ]]; then
-              git fetch --no-tags origin "refs/heads/$receipt_branch"
-              remote_tree="$(git rev-parse FETCH_HEAD^{tree})"
-              local_tree="$(git rev-parse HEAD^{tree})"
-              if [[ "$remote_tree" != "$local_tree" ]]; then
-                echo "::error::Existing public artifact receipt differs from regenerated source"; exit 1
-              fi
-              echo "Previously published art receipt verified byte-for-byte by Git tree: $receipt_branch" >> "$GITHUB_STEP_SUMMARY"
-            else
-              git push origin "HEAD:refs/heads/$receipt_branch"
-              remote_sha="$(git ls-remote origin "refs/heads/$receipt_branch" | awk '{print $1}')"
-              if [[ "$remote_sha" != "$(git rev-parse HEAD)" ]]; then
-                echo "::error::Remote artifact custody readback failed"; exit 1
-              fi
-              echo "New public art receipt accepted: $receipt_branch" >> "$GITHUB_STEP_SUMMARY"
-            fi
-            echo "Compiled art receipt: https://github.com/$GITHUB_REPOSITORY/tree/$receipt_branch" >> "$GITHUB_STEP_SUMMARY"
-          fi
-          if [[ -n "$(git status --porcelain=v1 --untracked-files=all)" ]]; then
-            echo "::error::Generated-artifact source is not clean"; exit 1
-          fi
-
-      - name: Publish scoped preview, then promote with exact production readback
-        if: steps.scope.outputs.profiles != ''
-        shell: bash
-        env:
-          RELEASE_PROFILES: ${{ steps.scope.outputs.profiles }}
-        run: |
-          set -euo pipefail
-          secret_path="$RUNNER_TEMP/kahrelum-scoped-publisher-service-account.json"
-          printf '%s' "$KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON" > "$secret_path"
-          chmod 600 "$secret_path"
-          trap 'rm -f "$secret_path"' EXIT
-          export GOOGLE_APPLICATION_CREDENTIALS="$secret_path"
-          export XDG_CONFIG_HOME="$RUNNER_TEMP/kahrelum-publisher-isolated-config"
-          mkdir -p "$XDG_CONFIG_HOME"
-          npm install --global firebase-tools@15.34.2
-          export FIREBASE_TOOLS_ROOT="$(npm root -g)/firebase-tools"
-          for profile in $RELEASE_PROFILES; do
-            plan_file="$RUNNER_TEMP/kahrelum-plan-$profile.log"
-            node scripts/firebase-overlay-release.cjs --plan --profile "$profile" > "$plan_file"
-            cat "$plan_file"
-            if grep -Fq '"changedPaths": []' "$plan_file"; then
-              echo "Already current: $profile; preview not required." >> "$GITHUB_STEP_SUMMARY"
-              continue
-            fi
-            node scripts/firebase-overlay-release.cjs --preview --profile "$profile"
-            node scripts/firebase-overlay-release.cjs --promote --profile "$profile"
-            echo "Scoped Firebase production readback verified for $profile." >> "$GITHUB_STEP_SUMMARY"
-          done
- <<< "$changed"; then
-              while IFS= read -r file; do
-                case "$file" in
-                  assurance.html|investigations.html|forecasting.html|evidence-scorecard.html|pilot.html|AGENTS.md|llms.txt|sitemap.md|ai-discovery/*.md|scripts/ai-seo-discovery.cjs|scripts/firebase-overlay-release.cjs|scripts/deploy-unified-firebase.ps1|tests/ai-discovery-seo.test.cjs|research/site-design/AI_DISCOVERY_SEO_RELEASE_20261112.md|.github/workflows/firebase-scoped-release.yml)
-                    ;;
-                  *) echo "::error::Mixed AI-discovery push contains unrelated path: $file"; exit 1 ;;
-                esac
-              done <<< "$changed"
-              profiles="ai-discovery-seo"
-            else
-              selections=()
-              while IFS= read -r file; do
-              case "$file" in
-                pilot.html|site-shell.css|nfl/deadline-reconciled-2026.json|nfl/official-trade-snapshot-2026.json|nfl/deadline-audit.json|nfl/refresh-status.json|nfl/deadline-watch-2026.html|nfl/deadline-watch-2026.js|nfl/weekly-brief.html|insights/hegseth-war-powers-fact-check.html|insights/nvidia-megaspeed-chip-custody.html|investigations/chip-01.html|election-data/index.html)
-                  selections+=(release3-verified) ;;
-                nfl/trade-volume-challenge-2026.html|nfl/trade-volume-challenge-2026.css|nfl/trade-volume-challenge-2026.js|nfl/trades.html|nfl/film-room.html|nfl/analysis.html|sports.html|nfl/deadline-watch-2026.html|nfl/weekly-brief.html|insights/nfl-brier-accountability.html|assets/social/editorial-source/*|scripts/build-kahrelum-editorial-social.py)
-                  selections+=(nfl-editorial-v2) ;;
-                nfl/trade-volume-challenge-2026.html|assets/social/og-nfl-trade-volume-challenge-2026.png|nfl/trades.html|nfl/film-room.html|sports.html)
-                  selections+=(nfl-challenge) ;;
-                investigations/chip-01.html|insights/nvidia-megaspeed-chip-custody.html)
-                  selections+=(investigations-text-only) ;;
-                assets/social/og-investigations-chip-01.png|assets/social/og-insights-nvidia-megaspeed-chip-custody.png)
-                  selections+=(chip01-publication) ;;
-                insights/hegseth-impeachment-forecast-2026.html|assets/social/og-hegseth-impeachment-forecast-2026.png|forecasting.html)
-                  selections+=(hegseth-forecast) ;;
-                 insights/hegseth-war-powers-fact-check.html)
-                   selections+=(hegseth-law-audit) ;;
-                 insights/osint-illusion.html|assets/social/og-insights-osint-illusion.png)
-                   selections+=(osint-illusion) ;;
-                ai-intelligence-evaluation-2026.html)
-                  selections+=(ai-evaluation) ;;
-                opticodds-market-integrity.html|assets/social/og-opticodds-market-integrity.png)
-                  selections+=(opticodds-market-integrity) ;;
-                evidence-scorecard.html|evidence-scorecard.js)
-                  selections+=(lead-magnet) ;;
-                election-data/index.html|assets/social/og-election-data-guide.png)
-                  selections+=(election-data-index) ;;
-                investigations.html|insights.html)
-                  selections+=(investigations-text-only) ;;
-              esac
-            done <<< "$changed"
-            if (( ${#selections[@]} > 0 )); then
-              profiles="$(printf '%s\n' "${selections[@]}" | sort -u | paste -sd ' ' -)"
-            else
-              profiles=""
-              echo "No relevant content changed; no Firebase publication attempted."
-            fi
-          fi
-          echo "profiles=$profiles" >> "$GITHUB_OUTPUT"
-          echo "Selected release profiles: ${profiles:-none}" >> "$GITHUB_STEP_SUMMARY"
-
-      - name: Guard release scope and required credential
-        if: steps.scope.outputs.profiles != ''
-        shell: bash
-        env:
-          RELEASE_PROFILES: ${{ steps.scope.outputs.profiles }}
-        run: |
-          set -euo pipefail
-          for profile in $RELEASE_PROFILES; do
-            case "$profile" in
-              chip01-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|commercial-readiness|buyer-discovery|election-data-index) ;;
               *) echo "::error::Unapproved release profile: $profile"; exit 1;;
             esac
           done
