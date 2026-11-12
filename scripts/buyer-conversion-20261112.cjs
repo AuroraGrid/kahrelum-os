@@ -78,6 +78,11 @@ function patchBuyerConversion(live,source,route){
   out=out.replace(spec.before,approvedSection+spec.before);
  }
  if(route==='/pilot'){
+  // The public inquiry is a local email composer, not a data-submitting form.
+  // Refuse any live patch that loses the explicit manual-send disclosure.
+  if(!/does not automatically transmit|not automatically sent/i.test(out)) {
+   throw Error('Pilot inquiry manual-send disclosure missing');
+  }
   const approved='<a href="#request">Prepare a $750 Fit Check inquiry (you send)</a>';
   const prior='<a href="#request">Outline one workflow</a>';
   if(!source.includes(approved))throw Error('Missing approved pilot CTA');
