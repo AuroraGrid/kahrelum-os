@@ -114,3 +114,42 @@ body.site-shell-ready footer:not(.site-footer){max-width:1280px;margin:1.2rem au
   main .grid,main .usegrid,main .card,main section {min-width:0;max-width:100%;}
   main p, main h2, main h3, main a {overflow-wrap:anywhere;}
 }
+
+/* Mobile navigation viewport fix (2026-11-12).
+   The old <=480px .site-mobile-panel max-width:100% resolved against the tiny
+   details/summary button, collapsing the dropdown into unreadable vertical text.
+   Anchor its width to the viewport instead, without changing any live page body. */
+@media (max-width: 768px) {
+  .site-mobile-menu { position: relative; z-index: 1020; }
+  .site-mobile-panel {
+    position: absolute;
+    left: auto;
+    right: 0;
+    width: min(92vw, 24rem);
+    min-width: min(92vw, 24rem);
+    max-width: min(92vw, 24rem);
+    box-sizing: border-box;
+    max-height: calc(100dvh - 5rem);
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+  }
+  .site-mobile-group a {
+    min-width: 0;
+    overflow-wrap: normal;
+    word-break: normal;
+    white-space: normal;
+  }
+}
+@media (max-width: 480px) {
+  .site-mobile-panel {
+    width: min(calc(100vw - 2rem), 24rem);
+    min-width: min(calc(100vw - 2rem), 24rem);
+    max-width: min(calc(100vw - 2rem), 24rem);
+    max-height: calc(100dvh - 5rem);
+    overflow-y: auto;
+  }
+  .site-mobile-group {
+    grid-template-columns: minmax(0,1fr);
+  }
+}
