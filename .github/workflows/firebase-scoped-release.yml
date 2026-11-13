@@ -34,6 +34,7 @@ on:
       - 'insights.html'
       - 'insights/nvidia-megaspeed-chip-custody.html'
       - 'insights/malik-beasley-sentencing-2026.html'
+      - 'assets/social/og-malik-beasley-sentencing-2026.png'
       - 'insights/hegseth-impeachment-forecast-2026.html'
       - 'insights/hegseth-war-powers-fact-check.html'
       - 'insights/osint-illusion.html'
@@ -172,7 +173,7 @@ jobs:
               # Dedicated safe editorial overlay. No unrelated live files.
               while IFS= read -r file; do
                 case "$file" in
-                  research/malik-beasley-2026/MB-2026-01.json|tests/malik-beasley-forecast-publication.test.cjs|insights/malik-beasley-sentencing-2026.html|insights.html|forecasting.html|sitemap.md|llms.txt|ai-discovery/forecasting.md|scripts/firebase-overlay-release.cjs|.github/workflows/firebase-scoped-release.yml)
+                  research/malik-beasley-2026/MB-2026-01.json|tests/malik-beasley-forecast-publication.test.cjs|insights/malik-beasley-sentencing-2026.html|assets/social/og-malik-beasley-sentencing-2026.png|tests/malik-beasley-social-preview.test.cjs|insights.html|forecasting.html|sitemap.md|llms.txt|ai-discovery/forecasting.md|scripts/firebase-overlay-release.cjs|.github/workflows/firebase-scoped-release.yml)
                     ;;
                   *) echo "::error::Malik Beasley forecast includes unrelated path: $file"; exit 1 ;;
                 esac
