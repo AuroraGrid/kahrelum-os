@@ -7,6 +7,8 @@ on:
       - '.github/workflows/firebase-scoped-release.yml'
       - 'pilot.html'
       - 'assurance.html'
+      - 'scripts/buyer-conversion-20261112.cjs'
+      - 'tests/ai-mode-buyer-discovery-20261113.test.cjs'
       - 'AGENTS.md'
       - 'llms.txt'
       - 'sitemap.md'
@@ -107,6 +109,7 @@ on:
           - mobile-nav-layout
           - commercial-readiness
           - buyer-discovery
+          - buyer-conversion
           - election-data-index
           - us-results-ui
           - forecast-100-publication
@@ -229,6 +232,15 @@ jobs:
                 esac
               done <<< "$changed"
               profiles="ai-discovery-seo"
+            elif grep -Fqx 'assurance.html' <<< "$changed"; then
+              while IFS= read -r file; do
+                case "$file" in
+                  assurance.html|pilot.html|scripts/buyer-conversion-20261112.cjs|tests/ai-mode-buyer-discovery-20261113.test.cjs|.github/workflows/firebase-scoped-release.yml)
+                    ;;
+                  *) echo "::error::Buyer-conversion release includes unrelated path: $file"; exit 1 ;;
+                esac
+              done <<< "$changed"
+              profiles="buyer-conversion"
             else
               selections=()
               while IFS= read -r file; do
@@ -281,7 +293,7 @@ jobs:
           set -euo pipefail
           for profile in $RELEASE_PROFILES; do
             case "$profile" in
-              nfc-east-title-2026|malik-beasley-forecast|forecast-100-publication|calibration-nfl-2026|chip01-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|ai-discovery-seo|ai-visibility-hardening|site-completion|mobile-nav-layout|commercial-readiness|buyer-discovery|election-data-index) ;;
+              nfc-east-title-2026|malik-beasley-forecast|forecast-100-publication|calibration-nfl-2026|chip01-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|ai-discovery-seo|ai-visibility-hardening|site-completion|mobile-nav-layout|commercial-readiness|buyer-discovery|buyer-conversion|election-data-index) ;;
               *) echo "::error::Unapproved release profile: $profile"; exit 1;;
             esac
           done
