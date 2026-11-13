@@ -235,7 +235,7 @@ jobs:
             elif grep -Fqx 'assurance.html' <<< "$changed"; then
               while IFS= read -r file; do
                 case "$file" in
-                  assurance.html|pilot.html|scripts/buyer-conversion-20261112.cjs|tests/ai-mode-buyer-discovery-20261113.test.cjs|.github/workflows/firebase-scoped-release.yml)
+                  assurance.html|pilot.html|scripts/buyer-conversion-20261112.cjs|scripts/firebase-overlay-release.cjs|tests/ai-mode-buyer-discovery-20261113.test.cjs|.github/workflows/firebase-scoped-release.yml)
                     ;;
                   *) echo "::error::Buyer-conversion release includes unrelated path: $file"; exit 1 ;;
                 esac

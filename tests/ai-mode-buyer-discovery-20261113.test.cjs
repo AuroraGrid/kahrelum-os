@@ -47,6 +47,8 @@ test('GitHub publisher scopes buyer-conversion release to exact buyer files',()=
  assert.match(workflow,/buyer-conversion/);
  assert.match(workflow,/grep -Fqx 'assurance\.html'/);
  assert.match(workflow,/profiles="buyer-conversion"/);
+ assert.match(workflow,/assurance\.html\|pilot\.html\|scripts\/buyer-conversion-20261112\.cjs\|scripts\/firebase-overlay-release\.cjs\|tests\/ai-mode-buyer-discovery-20261113\.test\.cjs\|\.github\/workflows\/firebase-scoped-release\.yml/);
+ assert.match(read("assurance.html"),/source verification, policy compliance, evidence quality/i);
  const publisher=read('scripts/firebase-overlay-release.cjs');
  assert.match(publisher,/'buyer-conversion':/);
  assert.match(publisher,/\/assurance\.html.*\/pilot\.html/);
