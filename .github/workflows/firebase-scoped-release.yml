@@ -41,6 +41,11 @@ on:
       - 'assets/social/og-insights-osint-illusion.png'
       - 'insights/calibration-oct-nov-2026.html'
       - 'assets/social/og-calibration-oct-nov-2026.png'
+      - 'forecasting/nfc-east-2026.html'
+      - 'assets/social/og-nfc-east-title-2026.svg'
+      - 'research/nfc-east-2026/**'
+      - 'scripts/render-nfc-social.py'
+      - 'tests/nfc-east-title-publication.test.cjs'
       - 'forecasting.html'
       - 'forecasting/100-forecast-challenge.html'
       - 'forecasting/100-forecast-v1.4.json'
@@ -82,6 +87,7 @@ on:
         description: 'Publish only this independently audited Firebase overlay'
         options:
           - chip01-publication
+          - nfc-east-title-2026
           - malik-beasley-forecast
           - hegseth-forecast
           - hegseth-law-audit
@@ -169,6 +175,14 @@ jobs:
                 esac
               done <<< "$changed"
               profiles="site-completion"
+            elif grep -Fqx 'forecasting/nfc-east-2026.html' <<< "$changed"; then
+              while IFS= read -r file; do
+                case "$file" in
+                  research/nfc-east-2026/*|forecasting/nfc-east-2026.html|assets/social/og-nfc-east-title-2026.svg|scripts/render-nfc-social.py|tests/nfc-east-title-publication.test.cjs|forecasting.html|sitemap.md|llms.txt|ai-discovery/forecasting.md|scripts/firebase-overlay-release.cjs|.github/workflows/firebase-scoped-release.yml) ;;
+                  *) echo "::error::NFC East release includes unrelated path: $file"; exit 1 ;;
+                esac
+              done <<< "$changed"
+              profiles="nfc-east-title-2026"
             elif grep -Fqx 'insights/malik-beasley-sentencing-2026.html' <<< "$changed"; then
               # Dedicated safe editorial overlay. No unrelated live files.
               while IFS= read -r file; do
@@ -267,7 +281,7 @@ jobs:
           set -euo pipefail
           for profile in $RELEASE_PROFILES; do
             case "$profile" in
-              malik-beasley-forecast|forecast-100-publication|calibration-nfl-2026|chip01-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|ai-discovery-seo|ai-visibility-hardening|site-completion|mobile-nav-layout|commercial-readiness|buyer-discovery|election-data-index) ;;
+              nfc-east-title-2026|malik-beasley-forecast|forecast-100-publication|calibration-nfl-2026|chip01-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|ai-discovery-seo|ai-visibility-hardening|site-completion|mobile-nav-layout|commercial-readiness|buyer-discovery|election-data-index) ;;
               *) echo "::error::Unapproved release profile: $profile"; exit 1;;
             esac
           done
