@@ -51,3 +51,12 @@ test('GitHub publisher scopes buyer-conversion release to exact buyer files',()=
  assert.match(publisher,/'buyer-conversion':/);
  assert.match(publisher,/\/assurance\.html.*\/pilot\.html/);
 });
+
+test('automatic buyer-conversion release accepts audited publisher script changes, not unrelated files',()=>{
+ const workflow=read('.github/workflows/firebase-scoped-release.yml');
+ const buyer=workflow.match(/elif grep -Fqx 'assurance\\.html'[\\s\\S]*?profiles="buyer-conversion"/)?.[0];
+ assert.ok(buyer,'Buyer release routing must exist');
+ assert.match(buyer,/scripts\\/firebase-overlay-release\\.cjs/);
+ assert.match(buyer,/tests\\/ai-mode-buyer-discovery-20261113\\.test\\.cjs/);
+ assert.match(buyer,/Buyer-conversion release includes unrelated path/);
+});
