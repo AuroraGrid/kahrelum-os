@@ -16,7 +16,7 @@ test('buyer-guide text answers an unbranded small-business need without overclai
   assert.match(html,/\$750/);
   assert.match(html,/operator-assisted/i);
   assert.match(html,/certification|certified|accredit/i);
-  assert.match(html,//pilot#request|href="#request"/);
+  assert.ok(html.includes('href="/pilot#request"')||html.includes('href="#request"'));
  }
  assert.match(read('assurance.html'),/monitoring platforms|monitoring software/i);
  assert.match(read('assurance.html'),/no (?:independently verified )?client results|not customer cases|no client results claimed/i);
@@ -32,7 +32,8 @@ test('buyer-guidance is safely patched into verified legacy live pages and remai
   assert.match(patched,sectionRE);
   assert.equal(patchBuyerConversion(patched,source,'/'+route),patched);
   assert.match(patched,/mailto:hasan@kahrelum.com/);
-  assert.match(patched,/not automatically transmit|not automatically sent|no confidential/i);
+  if(route==='pilot')assert.match(patched,/does not automatically transmit|not automatically sent/i);
+  else assert.match(patched,/does not request confidential|not customer cases/i);
   const changed=legacy.replace(sectionRE,'');
   assert.throws(()=>patchBuyerConversion(changed.replace(
     route==='assurance'?'<section id="example-decision-audits"':'<section id="fit-check-process"',
