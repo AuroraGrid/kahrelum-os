@@ -77,6 +77,16 @@ function patchBuyerConversion(live,source,route){
   if(out.split(spec.before).length!==2)throw Error('Live buyer section anchor changed: '+route);
   out=out.replace(spec.before,approvedSection+spec.before);
  }
+ const guideId='buyer-intent-guide-20261113';
+ const approvedGuide=extractSection(source,guideId);
+ const guideMarker='<section id="'+guideId+'"';
+ const beforeGuide='<section id="'+spec.sectionId+'"';
+ if(out.includes(guideMarker)){
+  if(out.split(guideMarker).length!==2||!out.includes(approvedGuide))throw Error('Existing buyer guide conflicts with verified source');
+ }else{
+  if(out.split(beforeGuide).length!==2)throw Error('Buyer guide insertion anchor changed: '+route);
+  out=out.replace(beforeGuide,approvedGuide+beforeGuide);
+ }
  if(route==='/pilot'){
   // The public inquiry is a local email composer, not a data-submitting form.
   // Refuse any live patch that loses the explicit manual-send disclosure.

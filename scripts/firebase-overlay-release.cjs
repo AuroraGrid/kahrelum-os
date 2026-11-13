@@ -264,7 +264,7 @@ const RELEASE_PROFILES = {
     // Preserve the live source map, original research, social artwork and Hosting config.
     overlayFiles: [],
     sitemapRoutes: [],
-    sitemapLastmod: {'/assurance':'2026-11-12','/pilot':'2026-11-12'},
+    sitemapLastmod: {'/assurance':'2026-11-13','/pilot':'2026-11-13'},
     includeHomepage: false,
   },
   'opticodds-market-integrity': {
