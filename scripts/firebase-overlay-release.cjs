@@ -211,6 +211,14 @@ const RELEASE_PROFILES = {
     sitemapRoutes: ['/insights/osint-illusion'],
     includeHomepage: false,
   },
+  'nfc-east-title-2026': {
+    // One dated sports forecasting snapshot, no historical mutation.
+    overlayFiles: ['forecasting/nfc-east-2026.html',
+      'assets/social/og-nfc-east-title-2026.svg',
+      'forecasting.html', 'sitemap.md', 'llms.txt', 'ai-discovery/forecasting.md'],
+    sitemapRoutes: ['/forecasting/nfc-east-2026'],
+    includeHomepage: false,
+  },
   'malik-beasley-forecast': {
     // Dedicated prospective sentencing article and discovery. Preserve immutable
     // original judgment, unrelated live pages and production Hosting config.
@@ -1078,6 +1086,25 @@ async function buildOverlay(live, profileName) {
     addBlob(desired, blobs, '/' + name, sourceBytes);
   }
 
+  if (profileName === 'nfc-east-title-2026') {
+    const recordBytes = readRepositoryBytes('research/nfc-east-2026/nfc-east-title-2026-11-12.json');
+    const record = JSON.parse(recordBytes.toString('utf8'));
+    if (record.main?.sample_counts?.draws !== 1000000 ||
+        record.main.sample_counts.champions.NYG !== 663737 ||
+        record.main.sample_counts.champions.DAL !== 233978 ||
+        Math.abs(record.main.division_odds.NYG - 0.663737) > 1e-9) {
+      fail('NFC East original record has changed; refusing source mutation.');
+    }
+    addBlob(desired, blobs, '/forecasting/nfc-east-title-2026-11-12.json', recordBytes);
+    const image = childProcess.execFileSync('python3',
+      [path.join(ROOT, 'scripts/render-nfc-social.py')], {maxBuffer: 6*1024*1024});
+    if (image.subarray(0,8).toString('hex') !== '89504e470d0a1a0a' ||
+        image.readUInt32BE(16) !== 1200 || image.readUInt32BE(20) !== 630) {
+      fail('NFC East social image render invalid.');
+    }
+    addBlob(desired, blobs, '/assets/social/og-nfc-east-title-2026.png', image);
+  }
+
   if (profileName === 'investigations-text-only') {
     for (const [hostingPath, publicPath, patch] of [
       ['/investigations.html', '/investigations', patchInvestigationOverview],
@@ -1362,6 +1389,15 @@ async function buildOverlay(live, profileName) {
     const allowed = new Set(['/sitemap.xml', ...RELEASE_PROFILES['osint-illusion'].overlayFiles.map(name => '/' + name)]);
     if (changedPaths.some(item => !allowed.has(item))) fail('OSINT Insight attempted to alter unrelated Firebase routes.');
   }
+  if (profileName === 'nfc-east-title-2026') {
+    const allowed = new Set(['/sitemap.xml',
+      '/forecasting/nfc-east-title-2026-11-12.json',
+      '/assets/social/og-nfc-east-title-2026.png',
+      ...RELEASE_PROFILES['nfc-east-title-2026'].overlayFiles.map(name => '/' + name)]);
+    if (changedPaths.some(item => !allowed.has(item))) {
+      fail('NFC East release attempted to change unrelated Firebase paths.');
+    }
+  }
   if (profileName === 'malik-beasley-forecast') {
     const allowed = new Set(['/sitemap.xml',
       ...RELEASE_PROFILES['malik-beasley-forecast'].overlayFiles.map(name => '/' + name)]);
@@ -1461,6 +1497,8 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     ? ['/', '/assurance', '/pilot']
     : profileName === 'forecast-100-publication'
     ? ['/forecasting', '/forecasting/100-forecast-challenge']
+    : profileName === 'nfc-east-title-2026'
+    ? ['/forecasting', '/forecasting/nfc-east-2026']
     : profileName === 'malik-beasley-forecast'
     ? ['/insights', '/forecasting', '/insights/malik-beasley-sentencing-2026']
     : profileName === 'calibration-nfl-2026'
@@ -1551,6 +1589,34 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
       fail('Beasley social image is not a valid 1200x630 PNG.');
     }
     checks.push({route:imageRoute,status:200,sha256:sha256(servedPng),dimensions:'1200x630'});
+  }
+
+  if (profileName === 'nfc-east-title-2026') {
+    const route = '/forecasting/nfc-east-2026';
+    const page = (await fetchBytes(origin + route)).toString('utf8');
+    const index = (await fetchBytes(origin + '/forecasting')).toString('utf8');
+    if (!page.includes('Giants 66.4%') || !page.includes('Cowboys 23.4%') ||
+        !page.includes('OPEN · UNSCORED') || !page.includes('EXPERIMENTAL MODEL') ||
+        !index.includes('href="' + route + '"')) fail('NFC East article or index missing.');
+    const jsonPath='/forecasting/nfc-east-title-2026-11-12.json';
+    const published=await fetchBytes(origin+jsonPath);
+    if (sha256(published) !== sha256(readRepositoryBytes('research/nfc-east-2026/nfc-east-title-2026-11-12.json'))) {
+      fail('NFC East JSON source bytes changed after release.');
+    }
+    const imagePath='/assets/social/og-nfc-east-title-2026.png';
+    const actual=await fetchBytes(origin+imagePath);
+    const expected=childProcess.execFileSync('python3',[path.join(ROOT,'scripts/render-nfc-social.py')], {maxBuffer:6*1024*1024});
+    if (actual.subarray(0,8).toString('hex')!=='89504e470d0a1a0a' ||
+        actual.readUInt32BE(16)!==1200 || actual.readUInt32BE(20)!==630 ||
+        sha256(actual)!==sha256(expected) ||
+        !page.includes('property="og:image" content="' + DOMAIN + imagePath + '"') ||
+        !page.includes('name="twitter:image" content="' + DOMAIN + imagePath + '"')) {
+      fail('NFC East OG/Twitter image exact byte readback failed.');
+    }
+    const sitemap=(await fetchBytes(origin+'/sitemap.xml')).toString('utf8');
+    if (!sitemap.includes('<loc>'+DOMAIN+route+'</loc>')) fail('NFC East XML sitemap missing.');
+    checks.push({route:jsonPath,status:200,sha256:sha256(published)});
+    checks.push({route:imagePath,status:200,sha256:sha256(actual),dimensions:'1200x630'});
   }
 
   if (profileName === 'ai-visibility-hardening') {

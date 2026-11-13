@@ -52,3 +52,9 @@ Statements reflect the named public page and its original dated source records. 
 - Canonical article: https://kahrelum.com/insights/malik-beasley-sentencing-2026
 - Original v1 judgment custody: https://github.com/AuroraGrid/kahrelum-os/commit/805d5df3c04eb5320f223dc552c55516dc487f76
 - Forecast: 62% probability of initial federal imprisonment of 12 months or more in E.D.N.Y. 26-CR-190. No outcome is resolved and no Brier score is claimed. December 9, 2026 is a scheduled plea hearing; sentencing date is not known. A first official sentencing judgment, not actual time served, controls settlement. The original probability is never rewritten.
+
+## NFC East 2026 division title forecast · November 12 postgame
+
+- [NFC East probabilities and update history](https://kahrelum.com/forecasting/nfc-east-2026): Giants 66.4%, Cowboys 23.4%, Commanders 9.7%, Eagles 0.5% after Washington defeated the Giants 24–21. Dated, open, unscored, experimental 1,000,000-simulation model.
+- [Original GitHub source custody](https://github.com/AuroraGrid/kahrelum-os/commit/d29ffcc02433efe3bd184865bd15d075fcfce7de) from November 13 UTC, not a pregame external lock; [public JSON](https://kahrelum.com/forecasting/nfc-east-title-2026-11-12.json) records model assumptions, market inputs, sensitivity and the rare approximate tiebreak allocation.
+- After verified games, append a new version, preserve each original probability and cite the official result. Do not imply a run or a new score before it exists.

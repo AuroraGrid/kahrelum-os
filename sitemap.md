@@ -31,6 +31,9 @@ This public directory groups existing website pages. Research status and timesta
 
 ## Forecasting
 
+- [NFC East title odds and dated updates](https://kahrelum.com/forecasting/nfc-east-2026)
+- [NFC East original simulation JSON](https://kahrelum.com/forecasting/nfc-east-title-2026-11-12.json)
+
 - [100-Forecast Prospective Challenge · Audit Pending | KAHRELUM](https://kahrelum.com/forecasting/100-forecast-challenge)
 - [100-Forecast v1.4 Public JSON | KAHRELUM](https://kahrelum.com/forecasting/100-forecast-v1.4.json)
 
