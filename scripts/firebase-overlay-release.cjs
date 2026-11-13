@@ -216,6 +216,7 @@ const RELEASE_PROFILES = {
     // original judgment, unrelated live pages and production Hosting config.
     overlayFiles: [
       'insights/malik-beasley-sentencing-2026.html',
+      'assets/social/og-malik-beasley-sentencing-2026.png',
       'insights.html', 'forecasting.html', 'sitemap.md', 'llms.txt',
       'ai-discovery/forecasting.md',
     ],
@@ -1522,6 +1523,34 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     }
     for (const match of html.matchAll(/(?:href|src)="(\/[^"#?]*)[^"]*"/g)) internal.add(match[1]);
     checks.push({ route, status: 200, sha256: sha256(bytes) });
+  }
+
+  if (profileName === 'malik-beasley-forecast') {
+    // Fail closed unless BOTH the image and social tags are published exactly
+    // as committed, in the preview as well as the final production release.
+    const articleRoute = '/insights/malik-beasley-sentencing-2026';
+    const imageRoute = '/assets/social/og-malik-beasley-sentencing-2026.png';
+    const imageUrl = DOMAIN + imageRoute;
+    const articleHtml = (await fetchBytes(origin + articleRoute)).toString('utf8');
+    for (const marker of [
+      '<meta property="og:image" content="' + imageUrl + '">',
+      '<meta property="og:image:secure_url" content="' + imageUrl + '">',
+      '<meta name="twitter:image" content="' + imageUrl + '">',
+      '<meta property="og:image:width" content="1200">',
+      '<meta property="og:image:height" content="630">',
+    ]) {
+      if (!articleHtml.includes(marker)) fail('Beasley forecast social metadata mismatch: ' + marker);
+    }
+    const servedPng = await fetchBytes(origin + imageRoute);
+    const expectedPng = readRepositoryBytes('assets/social/og-malik-beasley-sentencing-2026.png');
+    if (servedPng.length !== expectedPng.length || sha256(servedPng) !== sha256(expectedPng)) {
+      fail('Beasley dedicated social image bytes differ from custodied source.');
+    }
+    if (servedPng.length < 1000 || servedPng.subarray(0,8).toString('hex') !== '89504e470d0a1a0a' ||
+        servedPng.readUInt32BE(16) !== 1200 || servedPng.readUInt32BE(20) !== 630) {
+      fail('Beasley social image is not a valid 1200x630 PNG.');
+    }
+    checks.push({route:imageRoute,status:200,sha256:sha256(servedPng),dimensions:'1200x630'});
   }
 
   if (profileName === 'ai-visibility-hardening') {
