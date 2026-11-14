@@ -70,5 +70,5 @@ test('AIR-02 v1.2 source reconciliation is dated, linked and explicitly bounds r
  assert.match(section[0],/not the 22 claimed/);
  assert.match(section[0],/NWS|National Weather Service/);
  const ledger=read('evidence/AIR-02_OSINT_RECONCILIATION_2026-11-14.md');
- for(const phrase of ['REPORTED OSINT','NOT YET REPRODUCED','3:36 p.m.','1,083','1,035','990','199/208','Kp=0','no final','preserve'])assert.match(ledger,new RegExp(phrase,'i'));
+ for(const phrase of ['REPORTED OSINT','NOT YET REPRODUCED','3:36 p.m.','1,083','1,035','990','199/208','Kp=0','not independently established','preserve'])assert.match(ledger,new RegExp(phrase,'i'));
 });
