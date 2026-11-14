@@ -230,7 +230,7 @@ jobs:
             elif grep -Fqx 'investigations/air-02.html' <<< "$changed"; then
               while IFS= read -r file; do
                 case "$file" in
-                  investigations/air-02.html|assets/social/og-air02-v1.png|investigations.html|tests/air02-publication.test.cjs|tests/firebase-scoped-release-workflow.test.cjs|scripts/air02-social.cjs|scripts/firebase-overlay-release.cjs|scripts/deploy-unified-firebase.ps1|.github/workflows/firebase-scoped-release.yml)
+                  investigations/air-02.html|evidence/AIR-02_OSINT_RECONCILIATION_2026-11-14.md|assets/social/og-air02-v1.png|investigations.html|tests/air02-publication.test.cjs|tests/firebase-scoped-release-workflow.test.cjs|scripts/air02-social.cjs|scripts/firebase-overlay-release.cjs|scripts/deploy-unified-firebase.ps1|.github/workflows/firebase-scoped-release.yml)
                     ;;
                   *) echo "::error::AIR-02 publication includes unrelated path: $file"; exit 1 ;;
                 esac
