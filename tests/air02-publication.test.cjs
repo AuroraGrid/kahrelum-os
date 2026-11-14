@@ -52,10 +52,23 @@ test('AIR-02 Firebase profile admits exactly its page, art, live index and sitem
 
 test('AIR-02 addendum preserves the entire original cutoff record',()=>{
  const html=read('investigations/air-02.html').replace(/\r\n/g,'\n');
- const baseline=html.replace(/<section id="update-20261114"[\s\S]*?<\/section>\s*(?=<\/main>)/,'');
+ const withoutV12=html.replace(/<section id="reconciliation-20261114"[\s\S]*?<\/section>\n(?=<\/main>)/,'');
+ const baseline=withoutV12.replace(/<section id="update-20261114"[\s\S]*?<\/section>\s*(?=<\/main>)/,'');
  assert.equal(crypto.createHash('sha256').update(baseline).digest('hex'),'a56c6dcd137f9d734f4e736af666c14d57e6d593131f7deebacc99a98f19dda9');
  assert.match(html,/04:27 UTC/);
  assert.match(html,/official preliminary explanation/);
  assert.match(html,/AIR-02 remains OPEN/);
  assert.match(html,/adv_date=11142026&amp;advn=5/);
+});
+
+test('AIR-02 v1.2 source reconciliation is dated, linked and explicitly bounds raw-feed claims',()=>{
+ const html=read('investigations/air-02.html');
+ const section=html.match(/<section id="reconciliation-20261114"[\s\S]*?<\/section>/);
+ assert.ok(section,'separate versioned reconciliation section must exist');
+ for(const phrase of ['November 14, 2026','Advisory 111','Advisory 120','Advisory 005','OpenSky','adsb.lol','21 en-route centers','not independently certified','unverified','root-cause']) assert.match(section[0],new RegExp(phrase,'i'));
+ assert.match(section[0],/evidence\/AIR-02_OSINT_RECONCILIATION_2026-11-14\.md/);
+ assert.match(section[0],/not the 22 claimed/);
+ assert.match(section[0],/NWS|National Weather Service/);
+ const ledger=read('evidence/AIR-02_OSINT_RECONCILIATION_2026-11-14.md');
+ for(const phrase of ['REPORTED OSINT','NOT YET REPRODUCED','3:36 p.m.','1,083','1,035','990','199/208','Kp=0','not independently established','preserve'])assert.match(ledger,new RegExp(phrase,'i'));
 });
