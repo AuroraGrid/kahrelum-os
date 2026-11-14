@@ -26,13 +26,13 @@ test('only approved scopes can be sent to guarded publisher and missing credenti
 
 test('AIR-02 source reconciliation remains a release-allowed document without broadening live publication scope',()=>{
  const source=read('.github/workflows/firebase-scoped-release.yml');
- const gate=source.match(/elif grep -Fqx 'investigations\\/air-02\\.html' <<< "\\$changed"; then[\\s\\S]*?profiles="air02-publication"/);
+ const gate=source.match(/elif grep -Fqx 'investigations\/air-02\.html' <<< "\$changed"; then[\s\S]*?profiles="air02-publication"/);
  assert.ok(gate,'source-to-profile gate');
- assert.match(gate[0],/evidence\\/AIR-02_OSINT_RECONCILIATION_2026-11-14\\.md/);
- assert.match(gate[0],/\\*\\) echo "::error::AIR-02 publication includes unrelated path/);
+ assert.match(gate[0],/evidence\/AIR-02_OSINT_RECONCILIATION_2026-11-14\.md/);
+ assert.match(gate[0],/\*\) echo "::error::AIR-02 publication includes unrelated path/);
  const release=read('scripts/firebase-overlay-release.cjs');
- const profile=release.match(/'air02-publication': \\{([\\s\\S]*?)\\n  \\},/);
+ const profile=release.match(/'air02-publication': \{([\s\S]*?)\n  \},/);
  assert.ok(profile);
- assert.match(profile[0],/investigations\\/air-02\\.html/);
- assert.doesNotMatch(profile[0],/evidence\\/AIR-02_OSINT_RECONCILIATION_2026-11-14\\.md/);
+ assert.match(profile[0],/investigations\/air-02\.html/);
+ assert.doesNotMatch(profile[0],/evidence\/AIR-02_OSINT_RECONCILIATION_2026-11-14\.md/);
 });
