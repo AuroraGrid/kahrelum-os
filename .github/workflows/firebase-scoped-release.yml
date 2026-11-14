@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/firebase-scoped-release.yml'
+      - 'intelligence.html'
+      - 'assets/social/og-kahrelum-intelligence-20261114.png'
+      - 'tests/intelligence-share.test.cjs'
       - 'pilot.html'
       - 'assurance.html'
       - 'scripts/buyer-conversion-20261112.cjs'
@@ -91,6 +94,7 @@ on:
         type: choice
         description: 'Publish only this independently audited Firebase overlay'
         options:
+          - intelligence-share
           - chip01-publication
           - nfc-east-title-2026
           - malik-beasley-forecast
@@ -164,7 +168,15 @@ jobs:
               exit 1
             fi
             changed="$(git diff --name-only "$PREVIOUS_COMMIT" "$GITHUB_SHA" --)"
-            if grep -Fqx 'scripts/mobile-nav-browser-qa.cjs' <<< "$changed"; then
+            if grep -Eq '^(intelligence\.html|assets/social/og-kahrelum-intelligence-20261114\.png|tests/intelligence-share\.test\.cjs)$' <<< "$changed"; then
+              while IFS= read -r file; do
+                case "$file" in
+                  intelligence.html|assets/social/og-kahrelum-intelligence-20261114.png|tests/intelligence-share.test.cjs|research/site-design/INTELLIGENCE_SHARE_20261114.md|scripts/firebase-overlay-release.cjs|scripts/deploy-unified-firebase.ps1|.github/workflows/firebase-scoped-release.yml) ;;
+                  *) echo "::error::Intelligence share release includes unrelated path: $file"; exit 1 ;;
+                esac
+              done <<< "$changed"
+              profiles="intelligence-share"
+            elif grep -Fqx 'scripts/mobile-nav-browser-qa.cjs'  <<< "$changed"; then
               while IFS= read -r file; do
                 case "$file" in
                   site-shell.css|scripts/mobile-nav-browser-qa.cjs|tests/mobile-nav-layout.test.cjs|scripts/firebase-overlay-release.cjs|scripts/deploy-unified-firebase.ps1|.github/workflows/firebase-scoped-release.yml)
@@ -310,7 +322,7 @@ jobs:
           set -euo pipefail
           for profile in $RELEASE_PROFILES; do
             case "$profile" in
-              nfc-east-title-2026|malik-beasley-forecast|forecast-100-publication|calibration-nfl-2026|chip01-publication|air02-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|ai-discovery-seo|ai-visibility-hardening|site-completion|mobile-nav-layout|commercial-readiness|buyer-discovery|buyer-conversion|election-data-index) ;;
+              intelligence-share|nfc-east-title-2026|malik-beasley-forecast|forecast-100-publication|calibration-nfl-2026|chip01-publication|air02-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|ai-discovery-seo|ai-visibility-hardening|site-completion|mobile-nav-layout|commercial-readiness|buyer-discovery|buyer-conversion|election-data-index) ;;
               *) echo "::error::Unapproved release profile: $profile"; exit 1;;
             esac
           done

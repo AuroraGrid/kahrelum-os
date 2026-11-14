@@ -175,6 +175,11 @@ const REQUIRED_REWRITES = {
 };
 const DIVISION_ROUTES = ['/assurance', '/investigations', '/forecasting', '/digital-id', '/one', '/os'];
 const RELEASE_PROFILES = {
+  'intelligence-share': {
+    overlayFiles: ['intelligence.html', 'assets/social/og-kahrelum-intelligence-20261114.png'],
+    sitemapRoutes: ['/intelligence'],
+    includeHomepage: false,
+  },
   'hegseth-law-audit': {
     // Only the article, Insights discovery and source directory; no forecast mutation.
     overlayFiles: ['insights/hegseth-war-powers-fact-check.html', 'insights.html', 'sitemap.md'],
@@ -1322,6 +1327,10 @@ async function buildOverlay(live, profileName) {
   }
 
   const changedPaths = Object.keys(desired).filter((item) => live.fileMap[item] !== desired[item]).sort();
+  if (profileName === 'intelligence-share' && changedPaths.some(item =>
+      !['/intelligence.html', '/assets/social/og-kahrelum-intelligence-20261114.png', '/sitemap.xml'].includes(item))) {
+    fail('Intelligence sharing release attempted to replace an unrelated live Firebase path.');
+  }
   if (profileName === 'election-data-index' &&
       changedPaths.some((item) => ![
         '/election-data/index.html', '/assets/social/og-election-data-guide.png', '/sitemap.xml', '/sitemap.md',
@@ -1578,6 +1587,8 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     ? ['/']
     : profileName === 'chip01-publication'
     ? ['/investigations', '/investigations/chip-01', '/insights', '/insights/nvidia-megaspeed-chip-custody']
+    : profileName === 'intelligence-share'
+    ? ['/intelligence']
     : profileName === 'air02-publication'
     ? ['/investigations', '/investigations/air-02']
     : profileName === 'hegseth-forecast'
