@@ -15,7 +15,7 @@ Scope: FAA nationwide ground stop of November 13, 2026. This is a dated addendum
 - **3:36 p.m., November 13 (20:36 UTC):** Duffy subsequently said the FAA first experienced radar-data and communications instability at centers and TRACONs. This is an official retrospective timing claim, not a separately inspected system log.
 - **3:53–3:54 p.m. (20:53–20:54 UTC):** FAA Advisory 111 lists event time 20:53 UTC and effective/signature time 20:54 UTC, ordering all departing flights ground stopped and inbound international flights handled case-by-case. The 17–18 minute difference from the 3:36 p.m. official account is different operational milestones, not a reason to overwrite either.
 - **5:46 p.m. (22:46 UTC):** FAA Advisory 120 explicitly gave "COMMUNICATIONS FAILURE" as its reason and said departures could be coordinated as en-route facilities recovered.
-- **6:01 p.m. (23:01 UTC):** NWS Central Operations said NWS radar data systems and network communications were operating normally. NWS repeated its radar-outage denial publicly on November 13.
+- **6:01 p.m. (23:01 UTC):** secondary reporting cites a contemporaneous NWS Central Operations status message affirming radar/data-system health; the exact original administrative-message bytes have not been archived in this ledger. At **6:14 p.m. (23:14 UTC)**, the NWS publicly confirmed no radar outage in its timestamped Bluesky statement.
 - **6:36, 6:42, 6:49 p.m. (23:36, 23:42, 23:49 UTC):** the supplied OpenSky note reported 1,083; 1,035; and 990 aircraft respectively over the lower 48 under an unspecified sample/filter. Difference of 93 observed tracks, or approximately 8.6% of the first count, across 13 minutes. The figures have not been reproduced from archived raw responses.
 - **Around 6:37 p.m. (23:37 UTC):** the supplied adsb.lol note reported within 30 miles: NYC/JFK 8 airborne versus 67 ground, LAX 14/40, DFW 7/36, DEN 13/29, ATL 5/25, ORD 9/24, DCA 8/22. These are reported regional receiver/algorithm outputs, not certified individual-airport movement records.
 - **8:15 p.m. (01:15 UTC November 14):** Duffy said the national airspace had reopened, while cautioning that airlines would take time to restore schedules.
@@ -38,7 +38,7 @@ FAA facilities background: https://www.faa.gov/podcasts/the-air-up-there/how-air
 
 **C. Remote radio links are a credible architecture; their failure is HYPOTHESIS.**
 FAA Aeronautical Information Manual section 5-3-1 describes Remote Center Air/Ground sites linked to ARTCCs over landlines or microwave, and backup arrangements for ordinary frequency outages. That proves the architecture exists, *not* that a particular long-haul trunk, nationwide common backbone, or all remote sites failed on November 13.
-FAA AIM: https://www.faa.gov/air_traffic/publications/aim_html/chap5_section_3.html
+FAA AIM section 5-3-1 (official HTML): https://www.faa.gov/Air_traffic/publications/atpubs/aim_html/chap5_section_3.html
 
 **D. Airspace drained and airport surface traffic accumulated: DIRECTIONAL OSINT, NOT AUTHENTICATED COUNTS.**
 The supplied OpenSky sample moves downward and the adsb.lol hub ratios show more tracked ground than airborne aircraft under the supplied filters. Because unarchived ADS-B/Mode S public receiver feeds have incomplete and variable coverage, these are not a nationwide aircraft census, verified aircraft departures, or direct FAA ATC-facility health measures. A point-in-time track that is low and climbing does not establish an authorized takeoff or that it was flying VFR. Flight-plan and ATC clearances are not directly inferable from ADS-B position, altitude or callsign alone.
@@ -54,7 +54,7 @@ NWS administrative messages (dynamic listing): https://www.nco.ncep.noaa.gov/sta
 
 **G. Space weather: no significant geomagnetic storm indicated; exact Kp=0 UNVERIFIED.**
 A NOAA/SWPC three-day forecast issued November 14 at 00:30 UTC reported the greatest observed three-hour Kp over the preceding 24 hours as 1, below storm scale, and expected no geomagnetic storm. This supports a quiet geomagnetic context, but is not the same as validating the exact claimed Kp=0 at the analyst's sampling instant. Nor does quiet planetary Kp exclude all localized radio, GNSS or avionics interference.
-NOAA via NWS forecast product (versioned/dynamic presentation): https://forecast.weather.gov/product.php?format=TXT&glossary=0&issuedby=TDF&product=DAY&site=PPG&version=1
+NOAA via NWS forecast product (issue 2026-11-14 00:30 UTC, as indexed on November 14; this version-number URL is rolling, NOT a permanent historical archive): https://forecast.weather.gov/product.php?format=txt&glossary=0&issuedby=TDF&product=DAY&site=NWS&version=1
 
 **H. GPS, local radar/towers and Microsoft 365: NOT ESTABLISHED by the supplied material.**
 The analyst described normal sampled aircraft GPS accuracy and local transmissions, but supplied neither sensor/quality distributions nor archived FAA facility status. A live broadcast or aircraft position cannot independently attest to ATC operational continuity. No common technical dependency tying Microsoft 365 to this FAA event has been established. Officials explicitly said not all FAA radar or telecom was lost.
