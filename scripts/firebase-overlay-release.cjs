@@ -478,6 +478,13 @@ const RELEASE_PROFILES = {
     sitemapRoutes: [],
     includeHomepage: false,
   },
+  'air02-publication': {
+    // New AIR-02 article and original case art; patch only the live index feature slot.
+    overlayFiles: ['investigations/air-02.html', 'assets/social/og-air02-v1.png'],
+    liveTransformRoutes: [['/investigations.html', '/investigations']],
+    sitemapRoutes: ['/investigations/air-02'],
+    includeHomepage: false,
+  },
   portraits: {
     overlayFiles: [
       'sports.html', 'sports/module-registry.json', ...NBA_DIRECTORY_FILES,
@@ -1018,6 +1025,31 @@ function updateSitemap(xml, routes) {
   return Buffer.from(output, 'utf8');
 }
 
+function verifyAir02IndexPatch(html) {
+  if (!html.includes('data-investigations-release="2026-11-02.1"') ||
+      !html.includes('<strong>12</strong><span>Public case records') ||
+      !html.includes('56 historical case families and four extension leads')) {
+    fail('AIR-02 index historical snapshot markers changed; refusing publication.');
+  }
+  const ids = Array.from(html.matchAll(/data-case-id="([A-Z]+-[0-9]+)"/g), m => m[1]);
+  if (ids.length !== 12 || new Set(ids).size !== 12) fail('AIR-02 index must retain exactly twelve original case records.');
+  const records = JSON.parse(fs.readFileSync(path.join(ROOT, 'tests/investigations-preserved-cards.json'), 'utf8'));
+  for (const [id, expected] of Object.entries(records)) {
+    const match = html.match(new RegExp('<article class="case-record"[^>]*data-case-id="' + id + '"[\\s\\S]*?<\\/article>'));
+    if (!match || sha256(Buffer.from(match[0].replace(/\r\n/g, '\n'), 'utf8')) !== expected) {
+      fail('AIR-02 index changed preserved historical card bytes: ' + id);
+    }
+  }
+  const feature = '<section class="case-record case-featured" aria-labelledby="air02-feature"><div class="case-top"><span class="case-id">NEW INVESTIGATION · AIR-02</span><span class="case-status open">OPEN · CAUSE UNKNOWN</span></div><h2 id="air02-feature">FAA nationwide ground stop: communications disruption</h2><p>November 13, 2026 · The ground stop is confirmed. The initiating technical failure and any cybersecurity involvement remain unverified. This new case is outside the twelve-record historical snapshot above.</p><a href="/investigations/air-02">Read the AIR-02 investigation →</a></section>';
+  const marker = '<div class="case-records">';
+  if (html.includes('href="/investigations/air-02"')) {
+    if (!html.includes(feature)) fail('Existing AIR-02 feature differs from the approved insertion.');
+    return html;
+  }
+  if ((html.match(/<div class="case-records">/g) || []).length !== 1) fail('AIR-02 index insertion marker is missing or ambiguous.');
+  return html.replace(marker, feature + marker);
+}
+
 function addBlob(desired, blobs, hostingPath, bytes) {
   const compressed = gzip(bytes);
   const hash = sha256(compressed);
@@ -1224,6 +1256,10 @@ async function buildOverlay(live, profileName) {
 
   for (const [hostingPath, route] of profile.liveTransformRoutes || []) {
     const liveHtml = (await verifiedLiveFile(live, hostingPath, route)).toString('utf8');
+    if (profileName === 'air02-publication') {
+      addBlob(desired, blobs, hostingPath, Buffer.from(verifyAir02IndexPatch(liveHtml), 'utf8'));
+      continue;
+    }
     const shelled = injectSharedShell(liveHtml, route).toString('utf8');
     addBlob(desired, blobs, hostingPath, Buffer.from(normalizeSharedFooter(groupMobileDrawer(shelled)), 'utf8'));
   }
@@ -1437,6 +1473,19 @@ async function buildOverlay(live, profileName) {
       changedPaths.some((item) => !['/investigations.html', '/assets/social/og-air01-v1.png'].includes(item))) {
     fail('Investigations release attempted to replace an unrelated live Firebase path.');
   }
+  if (profileName === 'air02-publication') {
+    const article = fs.readFileSync(path.join(ROOT, 'investigations/air-02.html'));
+    const image = fs.readFileSync(path.join(ROOT, 'assets/social/og-air02-v1.png'));
+    if (!article.toString('utf8').includes('AIR-02') || !desired['/investigations/air-02.html'] ||
+        !desired['/assets/social/og-air02-v1.png'] ||
+        image.subarray(0, 8).toString('hex') !== '89504e470d0a1a0a' ||
+        image.readUInt32BE(16) !== 1200 || image.readUInt32BE(20) !== 630) {
+      fail('AIR-02 article or original 1200x630 social image failed its source integrity check.');
+    }
+    const allowed = new Set(['/investigations.html', '/investigations/air-02.html',
+      '/assets/social/og-air02-v1.png', '/sitemap.xml']);
+    if (changedPaths.some(item => !allowed.has(item))) fail('AIR-02 publication attempted to change an unrelated live Firebase path.');
+  }
   if (profileName === 'site-makeover') {
     const allowed = new Set([
       ...profile.overlayFiles.map((name) => '/' + name),
@@ -1529,6 +1578,8 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     ? ['/']
     : profileName === 'chip01-publication'
     ? ['/investigations', '/investigations/chip-01', '/insights', '/insights/nvidia-megaspeed-chip-custody']
+    : profileName === 'air02-publication'
+    ? ['/investigations', '/investigations/air-02']
     : profileName === 'hegseth-forecast'
     ? ['/forecasting', '/insights', '/insights/hegseth-impeachment-forecast-2026']
     : profileName === 'legacy-social-metadata'

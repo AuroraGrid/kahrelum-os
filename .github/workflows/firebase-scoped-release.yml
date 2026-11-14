@@ -33,6 +33,9 @@ on:
       - 'investigations.html'
       - 'insights.html'
       - 'investigations/chip-01.html'
+      - 'investigations/air-02.html'
+      - 'assets/social/og-air02-v1.png'
+      - 'tests/air02-publication.test.cjs'
       - 'insights.html'
       - 'insights/nvidia-megaspeed-chip-custody.html'
       - 'insights/malik-beasley-sentencing-2026.html'
@@ -102,6 +105,7 @@ on:
           - lead-magnet
           - investigations
           - investigations-text-only
+          - air02-publication
           - release3-verified
           - ai-discovery-seo
           - ai-visibility-hardening
@@ -223,6 +227,19 @@ jobs:
                 esac
               done <<< "$changed"
               profiles="ai-visibility-hardening"
+            elif grep -Fqx 'investigations/air-02.html' <<< "$changed"; then
+              while IFS= read -r file; do
+                case "$file" in
+                  investigations/air-02.html|assets/social/og-air02-v1.png|investigations.html|tests/air02-publication.test.cjs|tests/firebase-scoped-release-workflow.test.cjs|scripts/air02-social.cjs|scripts/firebase-overlay-release.cjs|scripts/deploy-unified-firebase.ps1|.github/workflows/firebase-scoped-release.yml)
+                    ;;
+                  *) echo "::error::AIR-02 publication includes unrelated path: $file"; exit 1 ;;
+                esac
+              done <<< "$changed"
+              profiles="air02-publication"
+            elif grep -Fqx 'tests/firebase-scoped-release-workflow.test.cjs' <<< "$changed" &&
+                 grep -Fqx 'investigations/air-02.html' <<< "$changed"; then
+              echo "::error::Ambiguous AIR-02 release change set."
+              exit 1
             elif grep -Eq '^ai-discovery/(assurance|investigations|forecasting|evidence-scorecard)\.md$' <<< "$changed"; then
               while IFS= read -r file; do
                 case "$file" in
@@ -293,7 +310,7 @@ jobs:
           set -euo pipefail
           for profile in $RELEASE_PROFILES; do
             case "$profile" in
-              nfc-east-title-2026|malik-beasley-forecast|forecast-100-publication|calibration-nfl-2026|chip01-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|ai-discovery-seo|ai-visibility-hardening|site-completion|mobile-nav-layout|commercial-readiness|buyer-discovery|buyer-conversion|election-data-index) ;;
+              nfc-east-title-2026|malik-beasley-forecast|forecast-100-publication|calibration-nfl-2026|chip01-publication|air02-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|ai-discovery-seo|ai-visibility-hardening|site-completion|mobile-nav-layout|commercial-readiness|buyer-discovery|buyer-conversion|election-data-index) ;;
               *) echo "::error::Unapproved release profile: $profile"; exit 1;;
             esac
           done
