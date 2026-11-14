@@ -20,6 +20,6 @@ test('only approved scopes can be sent to guarded publisher and missing credenti
  const x=read('.github/workflows/firebase-scoped-release.yml');
  assert.match(x,/^\s+if \[\[ -z "\$KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON" \]\]; then/m);
  assert.match(x,/exit 1/);
- for(const scope of ['case-share-cards','us-results-ui','nfl-sourcegrid-data','us-results-data']) assert.ok(x.includes(scope),scope);
+ for(const scope of ['case-share-cards','us-results-ui','nfl-sourcegrid-data','us-results-data','air02-publication']) assert.ok(x.includes(scope),scope);
  assert.match(x,/concurrency:/);
 });
