@@ -48,3 +48,14 @@ test('AIR-02 Firebase profile admits exactly its page, art, live index and sitem
  const ps=read('scripts/deploy-unified-firebase.ps1');
  assert.match(wf,/air02-publication/);assert.match(ps,/air02-publication/);
 });
+
+
+test('AIR-02 addendum preserves the entire original cutoff record',()=>{
+ const html=read('investigations/air-02.html').replace(/\r\n/g,'\n');
+ const baseline=html.replace(/<section id="update-20261114"[\s\S]*?<\/section>\s*(?=<\/main>)/,'');
+ assert.equal(crypto.createHash('sha256').update(baseline).digest('hex'),'a56c6dcd137f9d734f4e736af666c14d57e6d593131f7deebacc99a98f19dda9');
+ assert.match(html,/04:27 UTC/);
+ assert.match(html,/official preliminary explanation/);
+ assert.match(html,/AIR-02 remains OPEN/);
+ assert.match(html,/adv_date=11142026&amp;advn=5/);
+});
