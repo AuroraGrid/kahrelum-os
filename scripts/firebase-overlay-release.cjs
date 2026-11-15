@@ -162,11 +162,11 @@ const HTML_ROUTES = [
 ];
 const API_ROUTES = ['/api/v1', '/api/v1/release', '/api/v1/example'];
 const LEGACY_SOCIAL_SPECS = {
-  '/pilot': { hostingPath: '/pilot.html', image: '/assets/social/og-pilot.png', alt: 'Historical AI Decision Review — KAHRELUM Pilot social preview' },
-  '/demo': { hostingPath: '/demo.html', image: '/assets/social/og-demo.png', alt: 'KAHRELUM Worked Example — Synthetic, Prerecorded social preview' },
-  '/sample': { hostingPath: '/sample.html', image: '/assets/social/og-sample.png', alt: 'Synthetic Sample Deliverable — KAHRELUM social preview' },
-  '/connect': { hostingPath: '/connect.html', image: '/assets/social/og-connect.png', alt: 'Connect with Hasan Raza Kazmi — KAHRELUM social preview' },
-  '/hasan': { hostingPath: '/hasan.html', image: '/assets/social/og-hasan.png', alt: 'Hasan Raza Kazmi — Founder, KAHRELUM social preview' },
+  '/pilot': { hostingPath: '/pilot.html', image: '/assets/social/og-pilot.png', alt: 'Historical AI Decision Review â€” KAHRELUM Pilot social preview' },
+  '/demo': { hostingPath: '/demo.html', image: '/assets/social/og-demo.png', alt: 'KAHRELUM Worked Example â€” Synthetic, Prerecorded social preview' },
+  '/sample': { hostingPath: '/sample.html', image: '/assets/social/og-sample.png', alt: 'Synthetic Sample Deliverable â€” KAHRELUM social preview' },
+  '/connect': { hostingPath: '/connect.html', image: '/assets/social/og-connect.png', alt: 'Connect with Hasan Raza Kazmi â€” KAHRELUM social preview' },
+  '/hasan': { hostingPath: '/hasan.html', image: '/assets/social/og-hasan.png', alt: 'Hasan Raza Kazmi â€” Founder, KAHRELUM social preview' },
 };
 const REQUIRED_REWRITES = {
   '/api/v1': '/data/api/v1/index.json',
@@ -484,8 +484,8 @@ const RELEASE_PROFILES = {
     includeHomepage: false,
   },
   'fortune-ca001': {
-    overlayFiles: ['investigations/ca-001.html'],
-    sitemapRoutes: ['/investigations/ca-001'],
+    overlayFiles: ['investigations/ca-001.html', 'assets/social/og-ca001-v1.png'],
+    sitemapRoutes: [],
     includeHomepage: false,
   },
   'air02-publication': {
@@ -864,8 +864,8 @@ function normalizeSharedFooter(html) {
       /<p>(Independent, operator-assisted research and evidence review\. Not a certification\.)<\/p>/i,
       '<p class="site-footer-boundary">$1</p>');
   }
-  if (!/© 2026 KAHRELUM|&copy; 2026 KAHRELUM/i.test(sharedInner)) {
-    sharedInner = sharedInner.replace(/<\/div>\s*$/i, '<p class="site-footer-copyright">© 2026 KAHRELUM</p></div>');
+  if (!/Â© 2026 KAHRELUM|&copy; 2026 KAHRELUM/i.test(sharedInner)) {
+    sharedInner = sharedInner.replace(/<\/div>\s*$/i, '<p class="site-footer-copyright">Â© 2026 KAHRELUM</p></div>');
   }
 
   const sharedFooter = sharedOpen + sharedInner + sharedClose;
@@ -908,7 +908,7 @@ function injectSharedShell(html, route) {
   }
 
   if (!/<header\b[^>]*class=["'][^"']*\bsite-header\b/i.test(output)) {
-    const header = '<header class="site-header"><div class="site-header-inner"><a class="site-wordmark" href="/">KAHRELUM OS</a><nav class="site-nav" aria-label="Primary navigation"><a href="/assurance">AI Assurance</a><a href="/pilot">Pilot</a><a href="/demo">Sample Record</a><details class="site-labs"><summary>Public Research Labs <span aria-hidden="true">▾</span></summary><div class="site-labs-panel"><a href="/investigations">Investigations</a><a href="/forecasting">Forecasting</a><a href="/digital-id">Digital ID</a><a href="/sports">Sports</a><a href="/insights">Insights</a><a href="/election-lab">Election Lab</a></div></details><a href="/os">OS &amp; Method</a><a href="mailto:hasan@kahrelum.com">Connect</a></nav><details class="site-mobile-menu"><summary>Menu</summary><div class="site-mobile-panel"><a href="/assurance">AI Assurance</a><a href="/pilot">Pilot</a><a href="/demo">Sample Record</a><a href="/investigations">Investigations</a><a href="/forecasting">Forecasting</a><a href="/digital-id">Digital ID</a><a href="/sports">Sports</a><a href="/insights">Insights</a><a href="/election-lab">Election Lab</a><a href="/os">OS &amp; Method</a><a href="mailto:hasan@kahrelum.com">Connect</a></div></details></div></header>';
+    const header = '<header class="site-header"><div class="site-header-inner"><a class="site-wordmark" href="/">KAHRELUM OS</a><nav class="site-nav" aria-label="Primary navigation"><a href="/assurance">AI Assurance</a><a href="/pilot">Pilot</a><a href="/demo">Sample Record</a><details class="site-labs"><summary>Public Research Labs <span aria-hidden="true">â–¾</span></summary><div class="site-labs-panel"><a href="/investigations">Investigations</a><a href="/forecasting">Forecasting</a><a href="/digital-id">Digital ID</a><a href="/sports">Sports</a><a href="/insights">Insights</a><a href="/election-lab">Election Lab</a></div></details><a href="/os">OS &amp; Method</a><a href="mailto:hasan@kahrelum.com">Connect</a></nav><details class="site-mobile-menu"><summary>Menu</summary><div class="site-mobile-panel"><a href="/assurance">AI Assurance</a><a href="/pilot">Pilot</a><a href="/demo">Sample Record</a><a href="/investigations">Investigations</a><a href="/forecasting">Forecasting</a><a href="/digital-id">Digital ID</a><a href="/sports">Sports</a><a href="/insights">Insights</a><a href="/election-lab">Election Lab</a><a href="/os">OS &amp; Method</a><a href="mailto:hasan@kahrelum.com">Connect</a></div></details></div></header>';
     const skipMatch = skipPattern.exec(output);
     const insertAt = skipMatch.index + skipMatch[0].length;
     output = output.slice(0, insertAt) + header + output.slice(insertAt);
@@ -1050,7 +1050,7 @@ function verifyAir02IndexPatch(html) {
       fail('AIR-02 index changed preserved historical card bytes: ' + id);
     }
   }
-  const feature = '<section class="case-record case-featured" aria-labelledby="air02-feature"><div class="case-top"><span class="case-id">NEW INVESTIGATION · AIR-02</span><span class="case-status open">OPEN · CAUSE UNKNOWN</span></div><h2 id="air02-feature">FAA nationwide ground stop: communications disruption</h2><p>November 13, 2026 · The ground stop is confirmed. The initiating technical failure and any cybersecurity involvement remain unverified. This new case is outside the twelve-record historical snapshot above.</p><a href="/investigations/air-02">Read the AIR-02 investigation →</a></section>';
+  const feature = '<section class="case-record case-featured" aria-labelledby="air02-feature"><div class="case-top"><span class="case-id">NEW INVESTIGATION Â· AIR-02</span><span class="case-status open">OPEN Â· CAUSE UNKNOWN</span></div><h2 id="air02-feature">FAA nationwide ground stop: communications disruption</h2><p>November 13, 2026 Â· The ground stop is confirmed. The initiating technical failure and any cybersecurity involvement remain unverified. This new case is outside the twelve-record historical snapshot above.</p><a href="/investigations/air-02">Read the AIR-02 investigation â†’</a></section>';
   const marker = '<div class="case-records">';
   if (html.includes('href="/investigations/air-02"')) {
     if (!html.includes(feature)) fail('Existing AIR-02 feature differs from the approved insertion.');
@@ -1488,9 +1488,15 @@ async function buildOverlay(live, profileName) {
     fail('Investigations release attempted to replace an unrelated live Firebase path.');
   }
   if (profileName === 'fortune-ca001') {
-    const allowed = new Set(['/investigations/ca-001.html', '/sitemap.xml']);
+    const allowed = new Set(['/investigations/ca-001.html', '/assets/social/og-ca001-v1.png']);
     if (changedPaths.some(item => !allowed.has(item))) fail('CA-001 release attempted an unrelated path.');
     const article = fs.readFileSync(path.join(ROOT, 'investigations/ca-001.html'), 'utf8');
+    const cover = fs.readFileSync(path.join(ROOT, 'assets/social/og-ca001-v1.png'));
+    if (sha256(cover) !== '09c178721154b937061df51e09a5b0bb2342d7c7122a2af95f48daef2d0ae03d' ||
+        cover.readUInt32BE(16) !== 1200 || cover.readUInt32BE(20) !== 630 ||
+        !article.includes('summary_large_image') || !article.includes('og-ca001-v1.png')) {
+      fail('CA-001 supplied cover or social metadata integrity failure.');
+    }
     for (const required of ['CA-001', '19.1%', 'MISLEADING', 'Joshua Hong', 'employed adults', 'counterevidence', 'NOT YET VERIFIABLE']) {
       if (!article.includes(required)) fail('CA-001 required evidence boundary missing: ' + required);
     }
@@ -1673,7 +1679,7 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     const page = (await fetchBytes(origin + route)).toString('utf8');
     const index = (await fetchBytes(origin + '/forecasting')).toString('utf8');
     if (!page.includes('Giants 66.4%') || !page.includes('Cowboys 23.4%') ||
-        !page.includes('OPEN · UNSCORED') || !page.includes('EXPERIMENTAL MODEL') ||
+        !page.includes('OPEN Â· UNSCORED') || !page.includes('EXPERIMENTAL MODEL') ||
         !index.includes('href="' + route + '"')) fail('NFC East article or index missing.');
     const jsonPath='/forecasting/nfc-east-title-2026-11-12.json';
     const published=await fetchBytes(origin+jsonPath);
@@ -1878,7 +1884,7 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     const route = '/insights/hegseth-war-powers-fact-check';
     const article = (await fetchBytes(origin + route)).toString('utf8');
     for (const required of ['76%', '64%', '45%', '5%', 'R42738', 'R42699',
-      '10 U.S.C. §184', 'Kelly v. Hegseth', 'preliminary injunction']) {
+      '10 U.S.C. Â§184', 'Kelly v. Hegseth', 'preliminary injunction']) {
       if (!article.includes(required)) fail('Hegseth legal audit article missing from production: ' + required);
     }
     const index = (await fetchBytes(origin + '/insights')).toString('utf8');
