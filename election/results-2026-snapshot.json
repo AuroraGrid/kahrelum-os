@@ -8,11 +8,11 @@
     "results": "https://polling-desk.com/results.csv"
   },
   "sourceSha256": {
-    "houseCsv": "68ec854cbf639e1375d7ddff90cad02476190249e84db9e79ced1e8e00e4f1a2",
-    "resultsCsv": "27279ed3f742f16099bd8c401f291e5110b8d057fbd712ccead01693a7676c2e"
+    "houseCsv": "9f49d503191cd315b22dc8cde65e63696b7e054adab8955ba33717b6406434fa",
+    "resultsCsv": "fc25497d56c1d4bbb82a3318cf16344824746eef95fbeb5e2dedf7cefa2fbdb4"
   },
-  "sourceLatestResultUpdatedUtc": "2026-11-15T09:53:27Z",
-  "retrievalUtc": "2026-11-15T14:51:57.149617Z",
+  "sourceLatestResultUpdatedUtc": "2026-11-15T18:41:17Z",
+  "retrievalUtc": "2026-11-15T20:04:09.331435Z",
   "publishedAsOf": "Snapshot captured on 2026-11-15 (UTC). Each non-House race includes its per-race source timestamp. Earlier race calls are not official state certifications.",
   "resultStatus": "UNOFFICIAL_CALLS_AND_COUNTS_NOT_CERTIFIED",
   "verificationPolicy": {
@@ -2759,12 +2759,12 @@
       "winnerOrLeader": "Jefferson Shreve",
       "party": "REP",
       "votes": {
-        "DEM": 90652,
-        "REP": 111169,
+        "DEM": 90667,
+        "REP": 111176,
         "OTHER": 0
       },
-      "totalVotes": 201821,
-      "democraticMarginPoints": -10.17,
+      "totalVotes": 201843,
+      "democraticMarginPoints": -10.16,
       "percentReporting": 99,
       "sourceUrl": "https://polling-desk.com/races/2026/house/in-06"
     },
@@ -2793,11 +2793,11 @@
       "winnerOrLeader": "Mark Messmer",
       "party": "REP",
       "votes": {
-        "DEM": 95362,
-        "REP": 117714,
+        "DEM": 95373,
+        "REP": 117716,
         "OTHER": 0
       },
-      "totalVotes": 213076,
+      "totalVotes": 213089,
       "democraticMarginPoints": -10.49,
       "percentReporting": 99,
       "sourceUrl": "https://polling-desk.com/races/2026/house/in-08"
