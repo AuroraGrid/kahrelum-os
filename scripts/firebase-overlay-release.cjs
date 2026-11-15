@@ -483,6 +483,11 @@ const RELEASE_PROFILES = {
     sitemapRoutes: [],
     includeHomepage: false,
   },
+  'fortune-ca001': {
+    overlayFiles: ['investigations/ca-001.html'],
+    sitemapRoutes: ['/investigations/ca-001'],
+    includeHomepage: false,
+  },
   'air02-publication': {
     // New AIR-02 article and original case art; patch only the live index feature slot.
     overlayFiles: ['investigations/air-02.html', 'assets/social/og-air02-v1.png'],
@@ -1482,6 +1487,14 @@ async function buildOverlay(live, profileName) {
       changedPaths.some((item) => !['/investigations.html', '/assets/social/og-air01-v1.png'].includes(item))) {
     fail('Investigations release attempted to replace an unrelated live Firebase path.');
   }
+  if (profileName === 'fortune-ca001') {
+    const allowed = new Set(['/investigations/ca-001.html', '/sitemap.xml']);
+    if (changedPaths.some(item => !allowed.has(item))) fail('CA-001 release attempted an unrelated path.');
+    const article = fs.readFileSync(path.join(ROOT, 'investigations/ca-001.html'), 'utf8');
+    for (const required of ['CA-001', '19.1%', 'MISLEADING', 'Joshua Hong', 'employed adults', 'counterevidence', 'NOT YET VERIFIABLE']) {
+      if (!article.includes(required)) fail('CA-001 required evidence boundary missing: ' + required);
+    }
+  }
   if (profileName === 'air02-publication') {
     const article = fs.readFileSync(path.join(ROOT, 'investigations/air-02.html'));
     const image = fs.readFileSync(path.join(ROOT, 'assets/social/og-air02-v1.png'));
@@ -1589,6 +1602,8 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     ? ['/investigations', '/investigations/chip-01', '/insights', '/insights/nvidia-megaspeed-chip-custody']
     : profileName === 'intelligence-share'
     ? ['/intelligence']
+    : profileName === 'fortune-ca001'
+    ? ['/investigations/ca-001']
     : profileName === 'air02-publication'
     ? ['/investigations', '/investigations/air-02']
     : profileName === 'hegseth-forecast'
