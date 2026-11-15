@@ -4,7 +4,7 @@ By Hasan Raza Kazmi | KAHRELUM Intelligence
 
 CA-001 | Claim Audit | Published November 15, 2026
 
-Evidence reviewed November 13th–14th, 2026; Fortune and the original SHL report rechecked November 15, 2026. Publication evidence cutoff: 2026-11-15T12:30:00Z (7:30 a.m. EST). Original reporting: Joshua Hong, Fortune, November 9, 2026.
+Evidence reviewed November 13th–14th, 2026; Fortune and the original SHL report rechecked November 15, 2026. Publication evidence cutoff: 2026-11-15T12:24:44Z (7:24:44 a.m. EST). Original reporting: Joshua Hong, Fortune, November 9, 2026.
 
 ## Finding
 
