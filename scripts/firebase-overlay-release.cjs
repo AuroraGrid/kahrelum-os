@@ -1463,7 +1463,9 @@ async function buildOverlay(live, profileName) {
   if (profileName === 'nfc-east-title-2026') {
     const allowed = new Set(['/sitemap.xml',
       '/forecasting/nfc-east-title-2026-11-12.json',
+      '/forecasting/nfc-east-title-2026-11-15-post-sf.json',
       '/assets/social/og-nfc-east-title-2026.png',
+      '/assets/social/og-nfc-east-title-2026-11-15.png',
       ...RELEASE_PROFILES['nfc-east-title-2026'].overlayFiles.map(name => '/' + name)]);
     if (changedPaths.some(item => !allowed.has(item))) {
       fail('NFC East release attempted to change unrelated Firebase paths.');
