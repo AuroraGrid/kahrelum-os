@@ -71,7 +71,7 @@ test('Versioned Nov 15 social art renders exactly 1200x630 and metadata points t
 
 test('Guarded NFC East publisher explicitly allows only the two new postgame routes',()=>{
  const publisher=read('scripts/firebase-overlay-release.cjs');
- const start=publisher.indexOf("  if (profileName === 'nfc-east-title-2026') {\\n    const allowed");
+ const start=publisher.lastIndexOf("  if (profileName === 'nfc-east-title-2026') {");
  const end=publisher.indexOf("  if (profileName === 'malik-beasley-forecast')",start);
  assert.ok(start>=0 && end>start);
  const guard=publisher.slice(start,end);
