@@ -1701,28 +1701,42 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     const route = '/forecasting/nfc-east-2026';
     const page = (await fetchBytes(origin + route)).toString('utf8');
     const index = (await fetchBytes(origin + '/forecasting')).toString('utf8');
-    if (!page.includes('Giants 66.4%') || !page.includes('Cowboys 23.4%') ||
-        !page.includes('OPEN · UNSCORED') || !page.includes('EXPERIMENTAL MODEL') ||
-        !index.includes('href="' + route + '"')) fail('NFC East article or index missing.');
-    const jsonPath='/forecasting/nfc-east-title-2026-11-12.json';
-    const published=await fetchBytes(origin+jsonPath);
-    if (sha256(published) !== sha256(readRepositoryBytes('research/nfc-east-2026/nfc-east-title-2026-11-12.json'))) {
-      fail('NFC East JSON source bytes changed after release.');
+    for (const fragment of ['Giants 70.9%', 'Cowboys 17.5%', 'Commanders 11.0%', 'Eagles 0.6%',
+                            'Giants 66.4%', 'Cowboys 23.4%', 'OPEN · UNSCORED', 'EXPERIMENTAL MODEL']) {
+      if (!page.includes(fragment)) fail('NFC East current/archived article missing: '+fragment);
     }
-    const imagePath='/assets/social/og-nfc-east-title-2026.png';
-    const actual=await fetchBytes(origin+imagePath);
-    const expected=childProcess.execFileSync('python3',[path.join(ROOT,'scripts/render-nfc-social.py')], {maxBuffer:6*1024*1024});
-    if (actual.subarray(0,8).toString('hex')!=='89504e470d0a1a0a' ||
-        actual.readUInt32BE(16)!==1200 || actual.readUInt32BE(20)!==630 ||
-        sha256(actual)!==sha256(expected) ||
-        !page.includes('property="og:image" content="' + DOMAIN + imagePath + '"') ||
-        !page.includes('name="twitter:image" content="' + DOMAIN + imagePath + '"')) {
-      fail('NFC East OG/Twitter image exact byte readback failed.');
+    if (!index.includes('href="' + route + '"')) fail('NFC East forecasting index link missing.');
+    for (const [publicPath, sourcePath] of [
+      ['/forecasting/nfc-east-title-2026-11-12.json', 'research/nfc-east-2026/nfc-east-title-2026-11-12.json'],
+      ['/forecasting/nfc-east-title-2026-11-15-post-sf.json', 'research/nfc-east-2026/nfc-east-title-2026-11-15-post-sf.json'],
+    ]) {
+      const actual = await fetchBytes(origin + publicPath);
+      if (sha256(actual) !== sha256(readRepositoryBytes(sourcePath))) {
+        fail('NFC East source JSON mismatch: '+publicPath);
+      }
+      checks.push({route:publicPath,status:200,sha256:sha256(actual)});
+    }
+    for (const [publicPath, sourceSvg, current] of [
+      ['/assets/social/og-nfc-east-title-2026.png', null, false],
+      ['/assets/social/og-nfc-east-title-2026-11-15.png', 'assets/social/og-nfc-east-title-2026-11-15.svg', true],
+    ]) {
+      const actual = await fetchBytes(origin + publicPath);
+      const args = [path.join(ROOT,'scripts/render-nfc-social.py')];
+      if (sourceSvg) args.push(sourceSvg);
+      const expected = childProcess.execFileSync('python3',args,{maxBuffer:6*1024*1024});
+      if (actual.subarray(0,8).toString('hex')!=='89504e470d0a1a0a' ||
+          actual.readUInt32BE(16)!==1200 || actual.readUInt32BE(20)!==630 ||
+          sha256(actual)!==sha256(expected)) {
+        fail('NFC East PNG source byte readback failed: '+publicPath);
+      }
+      if (current && (!page.includes('property="og:image" content="'+DOMAIN+publicPath+'"') ||
+                      !page.includes('name="twitter:image" content="'+DOMAIN+publicPath+'"'))) {
+        fail('NFC East OG/Twitter versioned metadata failed byte readback.');
+      }
+      checks.push({route:publicPath,status:200,sha256:sha256(actual),dimensions:'1200x630'});
     }
     const sitemap=(await fetchBytes(origin+'/sitemap.xml')).toString('utf8');
     if (!sitemap.includes('<loc>'+DOMAIN+route+'</loc>')) fail('NFC East XML sitemap missing.');
-    checks.push({route:jsonPath,status:200,sha256:sha256(published)});
-    checks.push({route:imagePath,status:200,sha256:sha256(actual),dimensions:'1200x630'});
   }
 
   if (profileName === 'ai-visibility-hardening') {

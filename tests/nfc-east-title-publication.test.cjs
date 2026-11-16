@@ -69,13 +69,15 @@ test('Versioned Nov 15 social art renders exactly 1200x630 and metadata points t
  assert.ok(read('scripts/firebase-overlay-release.cjs').includes('/forecasting/nfc-east-title-2026-11-15-post-sf.json'));
 });
 
-test('Guarded NFC East publisher explicitly allows only the two new postgame routes',()=>{
+test('Guarded NFC East publisher exactly allows two versioned routes and verifies both social generations',()=>{
  const publisher=read('scripts/firebase-overlay-release.cjs');
- const start=publisher.lastIndexOf("  if (profileName === 'nfc-east-title-2026') {");
- const end=publisher.indexOf("  if (profileName === 'malik-beasley-forecast')",start);
- assert.ok(start>=0 && end>start);
- const guard=publisher.slice(start,end);
+ const end=publisher.indexOf('NFC East release attempted to change unrelated Firebase paths.');
+ assert.ok(end>0);
+ const guard=publisher.slice(end-550,end+90);
  assert.ok(guard.includes("'/forecasting/nfc-east-title-2026-11-15-post-sf.json'"));
  assert.ok(guard.includes("'/assets/social/og-nfc-east-title-2026-11-15.png'"));
  assert.ok(guard.includes("...RELEASE_PROFILES['nfc-east-title-2026'].overlayFiles"));
+ const verify=publisher.slice(publisher.indexOf('NFC East source JSON mismatch:'));
+ assert.ok(verify.includes('og-nfc-east-title-2026-11-15.png'));
+ assert.ok(verify.includes('NFC East OG/Twitter versioned metadata failed byte readback'));
 });
