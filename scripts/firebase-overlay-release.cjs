@@ -220,6 +220,7 @@ const RELEASE_PROFILES = {
     // One dated sports forecasting snapshot, no historical mutation.
     overlayFiles: ['forecasting/nfc-east-2026.html',
       'assets/social/og-nfc-east-title-2026.svg',
+      'assets/social/og-nfc-east-title-2026-11-15.svg',
       'forecasting.html', 'sitemap.md', 'llms.txt', 'ai-discovery/forecasting.md'],
     sitemapRoutes: ['/forecasting/nfc-east-2026'],
     includeHomepage: false,
@@ -1145,6 +1146,26 @@ async function buildOverlay(live, profileName) {
       fail('NFC East social image render invalid.');
     }
     addBlob(desired, blobs, '/assets/social/og-nfc-east-title-2026.png', image);
+    // Immutable post-49ers November 15 snapshot. Original inputs and image remain.
+    const newerBytes = readRepositoryBytes('research/nfc-east-2026/nfc-east-title-2026-11-15-post-sf.json');
+    const newer = JSON.parse(newerBytes.toString('utf8'));
+    const expectedChampions = {NYG:708953, DAL:175437, WAS:109501, PHI:6109};
+    if (newer.main?.sample_counts?.draws !== 1000000 ||
+        newer.main?.schedule?.length !== 27 ||
+        newer.base_records_after_final?.DAL?.l !== 6 ||
+        newer.base_records_after_final?.DAL?.conf_l !== 5 ||
+        newer.trigger?.away_score !== 46 || newer.trigger?.home_score !== 40 ||
+        Object.entries(expectedChampions).some(([team,count]) => newer.main?.sample_counts?.champions?.[team] !== count)) {
+      fail('NFC East Nov 15 source custody mismatch; declining publication.');
+    }
+    addBlob(desired, blobs, '/forecasting/nfc-east-title-2026-11-15-post-sf.json', newerBytes);
+    const imageNov15 = childProcess.execFileSync('python3',
+      [path.join(ROOT, 'scripts/render-nfc-social.py'), 'assets/social/og-nfc-east-title-2026-11-15.svg'], {maxBuffer: 6*1024*1024});
+    if (imageNov15.subarray(0,8).toString('hex') !== '89504e470d0a1a0a' ||
+        imageNov15.readUInt32BE(16) !== 1200 || imageNov15.readUInt32BE(20) !== 630) {
+      fail('NFC East Nov 15 PNG rendering invalid.');
+    }
+    addBlob(desired, blobs, '/assets/social/og-nfc-east-title-2026-11-15.png', imageNov15);
   }
 
   if (profileName === 'investigations-text-only') {

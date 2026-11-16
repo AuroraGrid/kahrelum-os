@@ -51,6 +51,7 @@ on:
       - 'assets/social/og-calibration-oct-nov-2026.png'
       - 'forecasting/nfc-east-2026.html'
       - 'assets/social/og-nfc-east-title-2026.svg'
+      - 'assets/social/og-nfc-east-title-2026-11-15.svg'
       - 'research/nfc-east-2026/**'
       - 'scripts/render-nfc-social.py'
       - 'tests/nfc-east-title-publication.test.cjs'
@@ -197,7 +198,7 @@ jobs:
             elif grep -Fqx 'forecasting/nfc-east-2026.html' <<< "$changed"; then
               while IFS= read -r file; do
                 case "$file" in
-                  research/nfc-east-2026/*|forecasting/nfc-east-2026.html|assets/social/og-nfc-east-title-2026.svg|scripts/render-nfc-social.py|tests/nfc-east-title-publication.test.cjs|forecasting.html|sitemap.md|llms.txt|ai-discovery/forecasting.md|scripts/firebase-overlay-release.cjs|.github/workflows/firebase-scoped-release.yml) ;;
+                  research/nfc-east-2026/*|forecasting/nfc-east-2026.html|assets/social/og-nfc-east-title-2026.svg|assets/social/og-nfc-east-title-2026-11-15.svg|scripts/render-nfc-social.py|tests/nfc-east-title-publication.test.cjs|forecasting.html|sitemap.md|llms.txt|ai-discovery/forecasting.md|scripts/firebase-overlay-release.cjs|.github/workflows/firebase-scoped-release.yml) ;;
                   *) echo "::error::NFC East release includes unrelated path: $file"; exit 1 ;;
                 esac
               done <<< "$changed"
@@ -337,7 +338,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python3 -m pip install --disable-pip-version-check --quiet cairosvg==2.8.2
+          python3 -m pip install --disable-pip-version-check --quiet cairosvg==2.8.2 numpy==2.3.4 pytest==8.4.2
+          python3 -m pytest -q research/nfc-east-2026/test_nfc_east_post_sf_2026_11_15.py
           python3 scripts/build-kahrelum-editorial-social.py
           python3 scripts/build-kahrelum-editorial-social.py --check
           node --test tests/*.test.cjs
