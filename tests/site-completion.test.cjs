@@ -179,6 +179,7 @@ test('Insights canonical source links only to already published investigation ro
 
 
 test('Insights safely publishes its Intelligence subscription discovery link without altering article history',()=>{
+ const {patchCompletionPage}=require('../scripts/site-completion.cjs');
  const source=read('insights.html');
  const marker='<p class="dateline" id="intelligence-publication-20261117">';
  const start=source.indexOf(marker);
