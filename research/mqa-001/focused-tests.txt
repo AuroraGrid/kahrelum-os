@@ -1,0 +1,286 @@
+TAP version 13
+# Subtest: MQA canonical, social metadata and structured data agree
+ok 1 - MQA canonical, social metadata and structured data agree
+  ---
+  duration_ms: 1.2508
+  type: 'test'
+  ...
+# Subtest: MQA publication preserves unrecovered evidence and synthetic boundaries
+ok 2 - MQA publication preserves unrecovered evidence and synthetic boundaries
+  ---
+  duration_ms: 1.0106
+  type: 'test'
+  ...
+# Subtest: all four original social assets have exact dimensions and distinct bytes
+ok 3 - all four original social assets have exact dimensions and distinct bytes
+  ---
+  duration_ms: 4.334
+  type: 'test'
+  ...
+# Subtest: discovery and manual release profile include the exact new route
+ok 4 - discovery and manual release profile include the exact new route
+  ---
+  duration_ms: 1.065
+  type: 'test'
+  ...
+# Subtest: fifteen prospects are unique, five original and ten additional; no traction invented
+ok 5 - fifteen prospects are unique, five original and ten additional; no traction invented
+  ---
+  duration_ms: 1.3796
+  type: 'test'
+  ...
+# Subtest: protected historical content matches canonical Git bytes across checkout EOLs
+ok 6 - protected historical content matches canonical Git bytes across checkout EOLs
+  ---
+  duration_ms: 3.7069
+  type: 'test'
+  ...
+# Subtest: complete synthetic bid supports comparison, never a trade recommendation
+ok 7 - complete synthetic bid supports comparison, never a trade recommendation
+  ---
+  duration_ms: 6.9642
+  type: 'test'
+  ...
+# Subtest: retail ask cannot satisfy sale bid
+ok 8 - retail ask cannot satisfy sale bid
+  ---
+  duration_ms: 0.3505
+  type: 'test'
+  ...
+# Subtest: guide is never executable bid
+ok 9 - guide is never executable bid
+  ---
+  duration_ms: 0.26
+  type: 'test'
+  ...
+# Subtest: unknown intent
+ok 10 - unknown intent
+  ---
+  duration_ms: 0.2616
+  type: 'test'
+  ...
+# Subtest: anonymous conversation
+ok 11 - anonymous conversation
+  ---
+  duration_ms: 0.3585
+  type: 'test'
+  ...
+# Subtest: missing quote source
+ok 12 - missing quote source
+  ---
+  duration_ms: 0.2514
+  type: 'test'
+  ...
+# Subtest: unsupported source
+ok 13 - unsupported source
+  ---
+  duration_ms: 0.2127
+  type: 'test'
+  ...
+# Subtest: conflicting sources
+ok 14 - conflicting sources
+  ---
+  duration_ms: 0.2097
+  type: 'test'
+  ...
+# Subtest: stale quote
+ok 15 - stale quote
+  ---
+  duration_ms: 0.2326
+  type: 'test'
+  ...
+# Subtest: future quote
+ok 16 - future quote
+  ---
+  duration_ms: 0.306
+  type: 'test'
+  ...
+# Subtest: future evidence cannot repair history
+ok 17 - future evidence cannot repair history
+  ---
+  duration_ms: 0.1757
+  type: 'test'
+  ...
+# Subtest: expired quote
+ok 18 - expired quote
+  ---
+  duration_ms: 0.1389
+  type: 'test'
+  ...
+# Subtest: invalid decision timestamp
+ok 19 - invalid decision timestamp
+  ---
+  duration_ms: 0.1359
+  type: 'test'
+  ...
+# Subtest: missing timestamp zone
+ok 20 - missing timestamp zone
+  ---
+  duration_ms: 0.1184
+  type: 'test'
+  ...
+# Subtest: unknown authenticity
+ok 21 - unknown authenticity
+  ---
+  duration_ms: 0.1079
+  type: 'test'
+  ...
+# Subtest: unknown condition
+ok 22 - unknown condition
+  ---
+  duration_ms: 0.1308
+  type: 'test'
+  ...
+# Subtest: unknown mintmark
+ok 23 - unknown mintmark
+  ---
+  duration_ms: 0.1537
+  type: 'test'
+  ...
+# Subtest: unverified identity
+ok 24 - unverified identity
+  ---
+  duration_ms: 0.1495
+  type: 'test'
+  ...
+# Subtest: modern issue excluded
+ok 25 - modern issue excluded
+  ---
+  duration_ms: 0.117
+  type: 'test'
+  ...
+# Subtest: nonissue year excluded
+ok 26 - nonissue year excluded
+  ---
+  duration_ms: 0.1021
+  type: 'test'
+  ...
+# Subtest: wrong series excluded
+ok 27 - wrong series excluded
+  ---
+  duration_ms: 0.1494
+  type: 'test'
+  ...
+# Subtest: wrong currency
+ok 28 - wrong currency
+  ---
+  duration_ms: 0.1303
+  type: 'test'
+  ...
+# Subtest: lot quote cannot be per coin
+ok 29 - lot quote cannot be per coin
+  ---
+  duration_ms: 0.1495
+  type: 'test'
+  ...
+# Subtest: unknown fees
+ok 30 - unknown fees
+  ---
+  duration_ms: 0.1446
+  type: 'test'
+  ...
+# Subtest: negative fees
+ok 31 - negative fees
+  ---
+  duration_ms: 0.1367
+  type: 'test'
+  ...
+# Subtest: string price
+ok 32 - string price
+  ---
+  duration_ms: 0.1082
+  type: 'test'
+  ...
+# Subtest: nonfinite price
+ok 33 - nonfinite price
+  ---
+  duration_ms: 0.0986
+  type: 'test'
+  ...
+# Subtest: missing dealer
+ok 34 - missing dealer
+  ---
+  duration_ms: 0.137
+  type: 'test'
+  ...
+# Subtest: missing terms
+ok 35 - missing terms
+  ---
+  duration_ms: 0.1099
+  type: 'test'
+  ...
+# Subtest: missing spot evidence
+ok 36 - missing spot evidence
+  ---
+  duration_ms: 0.1491
+  type: 'test'
+  ...
+# Subtest: stale spot
+ok 37 - stale spot
+  ---
+  duration_ms: 0.1323
+  type: 'test'
+  ...
+# Subtest: wrong spot units
+ok 38 - wrong spot units
+  ---
+  duration_ms: 0.1042
+  type: 'test'
+  ...
+# Subtest: collectible total plus metal double counts
+ok 39 - collectible total plus metal double counts
+  ---
+  duration_ms: 0.2046
+  type: 'test'
+  ...
+# Subtest: duplicate source ids
+ok 40 - duplicate source ids
+  ---
+  duration_ms: 0.149
+  type: 'test'
+  ...
+# Subtest: missing freshness policy
+ok 41 - missing freshness policy
+  ---
+  duration_ms: 0.1088
+  type: 'test'
+  ...
+# Subtest: invalid quantity
+ok 42 - invalid quantity
+  ---
+  duration_ms: 0.1028
+  type: 'test'
+  ...
+# Subtest: buy direction supports ask comparison
+ok 43 - buy direction supports ask comparison
+  ---
+  duration_ms: 0.1212
+  type: 'test'
+  ...
+# Subtest: preserves prior failure and correction without mutating input
+ok 44 - preserves prior failure and correction without mutating input
+  ---
+  duration_ms: 0.1724
+  type: 'test'
+  ...
+# Subtest: empty and malformed inputs fail closed
+ok 45 - empty and malformed inputs fail closed
+  ---
+  duration_ms: 0.2408
+  type: 'test'
+  ...
+# Subtest: arithmetic uses declared conventional silver content
+ok 46 - arithmetic uses declared conventional silver content
+  ---
+  duration_ms: 0.235
+  type: 'test'
+  ...
+1..46
+# tests 46
+# suites 0
+# pass 46
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 153.9504
