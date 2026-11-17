@@ -113,6 +113,26 @@ function patchCompletionPage(live,source,route){
   const newHeading='<section><h2>Selected analysis and forecasts</h2>';
   if(out.includes(oldHeading))out=replaceUnique(out,oldHeading,newHeading,'Insights dated analysis label');
 
+  // Add one reviewed editorial publication entry point to the previously published Insights index.
+  // It must not rewrite original cards, release receipts or an unexpected live message.
+  const publicationMarker='<p class="dateline" id="intelligence-publication-20261117">';
+  const publicationAt=source.indexOf(publicationMarker);
+  if(publicationAt<0||source.indexOf(publicationMarker,publicationAt+1)>=0)throw Error('Missing or repeated Intelligence publication source link');
+  const publicationEnd=source.indexOf('</p>',publicationAt);
+  if(publicationEnd<0)throw Error('Unclosed Intelligence publication link');
+  const publicationSnippet=source.slice(publicationAt,publicationEnd+4);
+  if(!publicationSnippet.includes('href="/intelligence"')||!publicationSnippet.includes('Substack')||publicationSnippet.toLowerCase().includes('<script'))throw Error('Unexpected Intelligence publication link');
+  const currentLinks=out.split(publicationMarker).length-1;
+  if(currentLinks>1)throw Error('Duplicate Intelligence publication links');
+  if(currentLinks===1){
+   const existingAt=out.indexOf(publicationMarker),existingEnd=out.indexOf('</p>',existingAt);
+   if(existingEnd<0||out.slice(existingAt,existingEnd+4)!==publicationSnippet)throw Error('Conflicting live Intelligence publication link');
+  }else{
+   if(out.split(recentMarker).length!==2)throw Error('Missing unique Insights published-section anchor');
+   out=out.replace(recentMarker,publicationSnippet+String.fromCharCode(10)+recentMarker);
+  }
+
+
  }
  if(route==='/'){
   const outdated='Experimental, post-close forecasts. Official results and final accuracy remain pending until verified.';
