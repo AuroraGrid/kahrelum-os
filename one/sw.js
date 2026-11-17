@@ -1,5 +1,5 @@
 const CACHE = 'kahrelum-one-shell-v4';
-const SHELL = ['/one/', '/one/app', '/one/styles.css', '/one/app.js', '/one/manifest.webmanifest', '/one/icon.svg'];
+const SHELL = ['/one/app', '/one/styles.css', '/one/app.js', '/one/manifest.webmanifest', '/one/icon.svg'];
 self.addEventListener('install', event => event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL)).then(() => self.skipWaiting())));
 self.addEventListener('activate', event => event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key !== CACHE).map(key => caches.delete(key)))).then(() => self.clients.claim())));
 self.addEventListener('fetch', event => {

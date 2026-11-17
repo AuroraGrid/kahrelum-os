@@ -97,7 +97,7 @@ test('router sends explicit verification requests through ordered staged review 
 });
 test('PWA manifest includes Android-sized install icons and a scoped standalone start URL',()=>{
  const manifest=JSON.parse(fs.readFileSync(path.join(__dirname,'../one/manifest.webmanifest'),'utf8'));
- assert.equal(manifest.start_url,'/one/');assert.equal(manifest.scope,'/one/');assert.equal(manifest.display,'standalone');
+ assert.equal(manifest.start_url,'/one/app');assert.equal(manifest.scope,'/one/');assert.equal(manifest.display,'standalone');
  for(const icon of manifest.icons){assert.ok(fs.existsSync(path.join(__dirname,'..',icon.src.slice(1))));}
  assert.ok(manifest.icons.some(icon=>icon.sizes==='192x192'));assert.ok(manifest.icons.some(icon=>icon.sizes==='512x512'));
 });
