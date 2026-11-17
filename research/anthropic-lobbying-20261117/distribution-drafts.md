@@ -1,6 +1,6 @@
-# Distribution drafts — NOT PUBLISHED
+# Distribution editions and publication record
 
-Source verification passed for the narrowed, attributed claims. Publish only after the website URL is verified. Substack must be web-only: email/app distribution disabled. The website address below is intended, not live. Replace the X placeholder with the actual published Substack URL; do not guess its slug.
+Source verification passed for the narrowed, attributed claims. Publish only after the website URL is verified. Substack must be web-only: email/app distribution disabled. Website and Substack are now live at the recorded URLs; the original draft remains preserved in Git history.
 
 ## Substack
 
@@ -76,10 +76,21 @@ Nvidia’s SEC filing records the resignation effective November 11; its public 
 
 The investigation, with the quarter-by-quarter dossier, source links, competing hypotheses and limitations:
 
-[ACTUAL_VERIFIED_SUBSTACK_URL_REQUIRED]
+https://kahrelum.substack.com/p/anthropics-163-million-lobbying-trail
 
 ## Verification follow-up — November 17, 2026
 
 The original HOLD and initial blocked retrievals remain in commit 7f0e054. Browser retrieval recovered all nine filing-level reproductions, the SEC 8-K, Anthropic policy statement and full Reuters syndication. Nvidia’s announcement was retrieved directly. Secondary-source personnel lists are qualified by the known Paul Calkins omission. Ballard Q3 scope corrected to U.S. AI policy. Memo allegations/date removed. No direct evidence of coordinated action against Huang authenticated.
 
 Publication sequence: verified existing scoped Plan/Preview/Promote; Substack web-only with email/app delivery disabled; one X post with actual verified Substack URL. Original eight federal quarterly bodies remain uninspected and are not represented otherwise. No private deliberations or direct coordination evidence available.
+
+## Verified website and Substack publication
+
+- Website: https://kahrelum.com/investigations/anthropic-lobbying-chip-policy
+- Substack: https://kahrelum.substack.com/p/anthropics-163-million-lobbying-trail
+- Substack post ID 225419045; Investigations section. Email/app checkbox unchecked, then explicit Publish on web only confirmation. Public article and dossier link read back in browser. Command-line HTTP retrieval returned 403, so verification is browser-based.
+- Firebase source commit: 50531f13408d5719761af144b9a3b14fa0ac8275; release 1794954427972000; exact preview version e143d0a20af3b2a4 promoted at 2026-11-17T22:27:27.549Z.
+- Scope: dossier, current live investigations index with one added card, sitemap. No deleted paths; configuration preserved. Production exact-byte SHA-256 bb326dd2270c3082a3c3b1983b63a7ab420da0ace4254ed69fc55537aa9a5e41. Internal link targets and API preservation passed established publisher verification; unique card and sitemap checked independently.
+- Targeted HTML/arithmetic/UUID/scope/source-label checks and JavaScript syntax passed. GitHub public-surface and Vercel checks passed for the deployment commit. A separate Cloudflare Pages check failed; not used for this Firebase release, and no merge was performed.
+
+- X: https://x.com/Nospinzone/status/2122819455109734870 — one original long-form post published from @Nospinzone; linked Substack URL as above.
