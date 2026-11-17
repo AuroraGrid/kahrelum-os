@@ -174,5 +174,5 @@ test('Insights canonical source links only to already published investigation ro
    assert.ok(html.includes('href="'+route+'"'),route);
  }
  assert.match(html,/id="recent-investigations-20261117"/);
- assert.doesNotMatch(html,/<h2>Latest articles<\\/h2>/);
+ assert.equal(html.includes('<h2>Latest articles</h2>'),false);
 });
