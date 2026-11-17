@@ -32,10 +32,14 @@ test('unexpected duplicate C7 claim blocks rather than making a partial correcti
 test('scoped Firebase publication accepts only the audited homepage maintenance files',()=>{
  const fs=require('node:fs'),path=require('node:path');
  const workflow=fs.readFileSync(path.join(__dirname,'../.github/workflows/firebase-scoped-release.yml'),'utf8');
- const gate=workflow.match(/elif grep -Fqx 'scripts\\/site-completion\\.cjs' <<< "\\$changed"; then[\\s\\S]*?profiles="site-completion"/);
- assert.ok(gate,'site-completion release gate exists');
+ const head="elif grep -Fqx 'scripts/site-completion.cjs'";
+ const begin=workflow.indexOf(head);
+ assert.ok(begin>=0,'site-completion release gate exists');
+ const end=workflow.indexOf('profiles="site-completion"',begin);
+ assert.ok(end>begin,'site-completion profile decision exists');
+ const gate=workflow.slice(begin,end);
  for(const p of ['.gitattributes','scripts/release3-live-patches.cjs','tests/editorial-maintenance.test.cjs','research/website-editorial-ops/*']){
-  assert.ok(gate[0].includes(p),'explicit audited source path allowed: '+p);
+  assert.ok(gate.includes(p),'explicit audited source path allowed: '+p);
  }
- assert.doesNotMatch(gate[0],/research\\/\\*|\\*\\.html/,'no broad research or html allowlist');
+ assert.ok(!gate.includes('research/*')&&!gate.includes('*.html'),'no broad research or html allowlist');
 });
