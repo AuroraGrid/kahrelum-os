@@ -51,7 +51,14 @@ function patchBuyerPage(route,html){
    const oldDescription='<meta name="description" content="Fixed-scope, operator-assisted historical AI decision review.">';
    const newDescription='<meta name="description" content="Review three authorized historical AI decisions for $750, or up to ten for $2,500. Independent evidence-to-decision records, no production access required.">';
    if(result.includes(oldDescription))result=result.replace(oldDescription,newDescription);
-   else if(!result.includes(newDescription))throw new Error('Pilot description anchor changed; refusing stale overwrite');
+   else {
+     // Preserve the exact approved buyer-conversion description, without treating
+     // arbitrary changed metadata as authorized.
+     const approvedGrowthDescription='<meta name="description" content="Review three authorized historical AI decisions for $750. Trace evidence, policy and escalation gaps in a fixed-scope Fit Check. No production access.">';
+     if(!result.includes(newDescription) && !result.includes(approvedGrowthDescription)) {
+       throw new Error('Pilot description anchor changed; refusing stale overwrite');
+     }
+   }
    const oldLink='<a class="secondary" href="/demo">Inspect the synthetic deliverable</a>';
    const newLinks=oldLink+
       '<a class="secondary" href="/opticodds-market-integrity">Market integrity demonstration</a>'+

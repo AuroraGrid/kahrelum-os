@@ -5,14 +5,21 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/firebase-scoped-release.yml'
+      - 'intelligence.html'
+      - 'assets/social/og-kahrelum-intelligence-20261114.png'
+      - 'tests/intelligence-share.test.cjs'
       - 'pilot.html'
       - 'assurance.html'
+      - 'scripts/buyer-conversion-20261112.cjs'
+      - 'tests/ai-mode-buyer-discovery-20261113.test.cjs'
       - 'AGENTS.md'
       - 'llms.txt'
       - 'sitemap.md'
       - 'ai-discovery/**'
       - 'scripts/site-completion.cjs'
       - 'scripts/site-completion-browser-qa.cjs'
+      - 'scripts/mobile-nav-browser-qa.cjs'
+      - 'tests/mobile-nav-layout.test.cjs'
       - 'index.html'
       - 'insights.html'
       - 'digital-id.html'
@@ -29,15 +36,31 @@ on:
       - 'investigations.html'
       - 'insights.html'
       - 'investigations/chip-01.html'
+      - 'investigations/air-02.html'
+      - 'assets/social/og-air02-v1.png'
+      - 'tests/air02-publication.test.cjs'
       - 'insights.html'
       - 'insights/nvidia-megaspeed-chip-custody.html'
+      - 'insights/malik-beasley-sentencing-2026.html'
+      - 'assets/social/og-malik-beasley-sentencing-2026.png'
       - 'insights/hegseth-impeachment-forecast-2026.html'
       - 'insights/hegseth-war-powers-fact-check.html'
       - 'insights/osint-illusion.html'
       - 'assets/social/og-insights-osint-illusion.png'
       - 'insights/calibration-oct-nov-2026.html'
       - 'assets/social/og-calibration-oct-nov-2026.png'
+      - 'forecasting/nfc-east-2026.html'
+      - 'assets/social/og-nfc-east-title-2026.svg'
+      - 'assets/social/og-nfc-east-title-2026-11-15.svg'
+      - 'research/nfc-east-2026/**'
+      - 'scripts/render-nfc-social.py'
+      - 'tests/nfc-east-title-publication.test.cjs'
       - 'forecasting.html'
+      - 'forecasting/100-forecast-challenge.html'
+      - 'forecasting/100-forecast-v1.4.json'
+      - 'assets/social/og-100-forecast-challenge.png'
+      - 'ai-discovery/100-forecast-challenge.md'
+      - 'tests/forecast-100-publication.test.cjs'
       - 'nfl/trade-volume-challenge-2026.html'
       - 'nfl/trade-volume-challenge-2026.css'
       - 'nfl/trade-volume-challenge-2026.js'
@@ -72,7 +95,11 @@ on:
         type: choice
         description: 'Publish only this independently audited Firebase overlay'
         options:
+          - mqa001-review
+          - intelligence-share
           - chip01-publication
+          - nfc-east-title-2026
+          - malik-beasley-forecast
           - hegseth-forecast
           - hegseth-law-audit
           - osint-illusion
@@ -84,14 +111,18 @@ on:
           - lead-magnet
           - investigations
           - investigations-text-only
+          - air02-publication
           - release3-verified
           - ai-discovery-seo
           - ai-visibility-hardening
           - site-completion
+          - mobile-nav-layout
           - commercial-readiness
           - buyer-discovery
+          - buyer-conversion
           - election-data-index
           - us-results-ui
+          - forecast-100-publication
           - calibration-nfl-2026
           - nfl-editorial-v2
           - nfl-challenge
@@ -139,15 +170,59 @@ jobs:
               exit 1
             fi
             changed="$(git diff --name-only "$PREVIOUS_COMMIT" "$GITHUB_SHA" --)"
-            if grep -Fqx 'scripts/site-completion.cjs' <<< "$changed"; then
+            if grep -Eq '^(intelligence\.html|assets/social/og-kahrelum-intelligence-20261114\.png|tests/intelligence-share\.test\.cjs)$' <<< "$changed"; then
               while IFS= read -r file; do
                 case "$file" in
-                  scripts/site-completion.cjs|scripts/site-completion-browser-qa.cjs|scripts/firebase-overlay-release.cjs|scripts/deploy-unified-firebase.ps1|tests/site-completion.test.cjs|site-shell.css|index.md|pilot-page.md|ai-discovery/*.md|insights.html|nfl/deadline-watch-2026.html|election-data/index.html|research/site-design/SITE_COMPLETION_20261112.md|.github/workflows/firebase-scoped-release.yml)
+                  intelligence.html|assets/social/og-kahrelum-intelligence-20261114.png|tests/intelligence-share.test.cjs|research/site-design/INTELLIGENCE_SHARE_20261114.md|scripts/firebase-overlay-release.cjs|scripts/deploy-unified-firebase.ps1|.github/workflows/firebase-scoped-release.yml) ;;
+                  *) echo "::error::Intelligence share release includes unrelated path: $file"; exit 1 ;;
+                esac
+              done <<< "$changed"
+              profiles="intelligence-share"
+            elif grep -Fqx 'scripts/mobile-nav-browser-qa.cjs'  <<< "$changed"; then
+              while IFS= read -r file; do
+                case "$file" in
+                  site-shell.css|scripts/mobile-nav-browser-qa.cjs|tests/mobile-nav-layout.test.cjs|scripts/firebase-overlay-release.cjs|scripts/deploy-unified-firebase.ps1|.github/workflows/firebase-scoped-release.yml)
+                    ;;
+                  *) echo "::error::Mobile navigation source push includes unrelated path: $file"; exit 1 ;;
+                esac
+              done <<< "$changed"
+              profiles="mobile-nav-layout"
+            elif grep -Fqx 'scripts/site-completion.cjs' <<< "$changed"; then
+              while IFS= read -r file; do
+                case "$file" in
+                  .gitattributes|scripts/site-completion.cjs|scripts/release3-live-patches.cjs|scripts/site-completion-browser-qa.cjs|scripts/firebase-overlay-release.cjs|scripts/deploy-unified-firebase.ps1|tests/site-completion.test.cjs|tests/editorial-maintenance.test.cjs|site-shell.css|index.md|pilot-page.md|ai-discovery/*.md|insights.html|nfl/deadline-watch-2026.html|election-data/index.html|research/site-design/SITE_COMPLETION_20261112.md|research/website-editorial-ops/*|.github/workflows/firebase-scoped-release.yml)
                     ;;
                   *) echo "::error::Site completion source push includes unrelated path: $file"; exit 1 ;;
                 esac
               done <<< "$changed"
               profiles="site-completion"
+            elif grep -Fqx 'forecasting/nfc-east-2026.html' <<< "$changed"; then
+              while IFS= read -r file; do
+                case "$file" in
+                  research/nfc-east-2026/*|forecasting/nfc-east-2026.html|assets/social/og-nfc-east-title-2026.svg|assets/social/og-nfc-east-title-2026-11-15.svg|scripts/render-nfc-social.py|tests/nfc-east-title-publication.test.cjs|forecasting.html|sitemap.md|llms.txt|ai-discovery/forecasting.md|scripts/firebase-overlay-release.cjs|.github/workflows/firebase-scoped-release.yml) ;;
+                  *) echo "::error::NFC East release includes unrelated path: $file"; exit 1 ;;
+                esac
+              done <<< "$changed"
+              profiles="nfc-east-title-2026"
+            elif grep -Fqx 'insights/malik-beasley-sentencing-2026.html' <<< "$changed"; then
+              # Dedicated safe editorial overlay. No unrelated live files.
+              while IFS= read -r file; do
+                case "$file" in
+                  research/malik-beasley-2026/MB-2026-01.json|tests/malik-beasley-forecast-publication.test.cjs|insights/malik-beasley-sentencing-2026.html|assets/social/og-malik-beasley-sentencing-2026.png|tests/malik-beasley-social-preview.test.cjs|insights.html|forecasting.html|sitemap.md|llms.txt|ai-discovery/forecasting.md|scripts/firebase-overlay-release.cjs|.github/workflows/firebase-scoped-release.yml)
+                    ;;
+                  *) echo "::error::Malik Beasley forecast includes unrelated path: $file"; exit 1 ;;
+                esac
+              done <<< "$changed"
+              profiles="malik-beasley-forecast"
+            elif grep -Fqx 'forecasting/100-forecast-challenge.html' <<< "$changed"; then
+              while IFS= read -r file; do
+                case "$file" in
+                  forecasting/100-forecast-challenge.html|forecasting/100-forecast-v1.4.json|assets/social/og-100-forecast-challenge.png|assets/social/og-100-forecast-challenge-v2.png|assets/social/og-100-forecast-challenge-v2.svg|scripts/build-forecast-social-v2.py|tests/forecast-100-social-v2.test.cjs|forecasting.html|sitemap.md|llms.txt|ai-discovery/forecasting.md|ai-discovery/100-forecast-challenge.md|tests/forecast-100-publication.test.cjs|scripts/firebase-overlay-release.cjs|.github/workflows/firebase-scoped-release.yml)
+                    ;;
+                  *) echo "::error::100-forecast publication includes unrelated path: $file"; exit 1 ;;
+                esac
+              done <<< "$changed"
+              profiles="forecast-100-publication"
             elif grep -Fqx 'insights/calibration-oct-nov-2026.html' <<< "$changed"; then
               while IFS= read -r file; do
                 case "$file" in
@@ -166,6 +241,29 @@ jobs:
                 esac
               done <<< "$changed"
               profiles="ai-visibility-hardening"
+            elif grep -Fqx 'investigations/chip-01.html' <<< "$changed"; then
+              # Dated Nov 17 official-source delta: patch verified live CHIP-01 and companion Insight only.
+              while IFS= read -r file; do
+                case "$file" in
+                  investigations/chip-01.html|insights/nvidia-megaspeed-chip-custody.html|research/chip-01/2026-11-17-doj-bis-statement.md|scripts/investigations-text-refresh.cjs|tests/chip01-nov17-doj.test.cjs|.github/workflows/firebase-scoped-release.yml)
+                    ;;
+                  *) echo "::error::CHIP-01 Nov17 update includes unrelated path: $file"; exit 1 ;;
+                esac
+              done <<< "$changed"
+              profiles="investigations-text-only"
+            elif grep -Fqx 'investigations/air-02.html' <<< "$changed"; then
+              while IFS= read -r file; do
+                case "$file" in
+                  investigations/air-02.html|evidence/AIR-02_OSINT_RECONCILIATION_2026-11-14.md|assets/social/og-air02-v1.png|investigations.html|tests/air02-publication.test.cjs|tests/firebase-scoped-release-workflow.test.cjs|scripts/air02-social.cjs|scripts/firebase-overlay-release.cjs|scripts/deploy-unified-firebase.ps1|.github/workflows/firebase-scoped-release.yml)
+                    ;;
+                  *) echo "::error::AIR-02 publication includes unrelated path: $file"; exit 1 ;;
+                esac
+              done <<< "$changed"
+              profiles="air02-publication"
+            elif grep -Fqx 'tests/firebase-scoped-release-workflow.test.cjs' <<< "$changed" &&
+                 grep -Fqx 'investigations/air-02.html' <<< "$changed"; then
+              echo "::error::Ambiguous AIR-02 release change set."
+              exit 1
             elif grep -Eq '^ai-discovery/(assurance|investigations|forecasting|evidence-scorecard)\.md$' <<< "$changed"; then
               while IFS= read -r file; do
                 case "$file" in
@@ -175,6 +273,15 @@ jobs:
                 esac
               done <<< "$changed"
               profiles="ai-discovery-seo"
+            elif grep -Fqx 'assurance.html' <<< "$changed"; then
+              while IFS= read -r file; do
+                case "$file" in
+                  assurance.html|pilot.html|scripts/buyer-conversion-20261112.cjs|scripts/firebase-overlay-release.cjs|tests/ai-mode-buyer-discovery-20261113.test.cjs|.github/workflows/firebase-scoped-release.yml)
+                    ;;
+                  *) echo "::error::Buyer-conversion release includes unrelated path: $file"; exit 1 ;;
+                esac
+              done <<< "$changed"
+              profiles="buyer-conversion"
             else
               selections=()
               while IFS= read -r file; do
@@ -227,7 +334,7 @@ jobs:
           set -euo pipefail
           for profile in $RELEASE_PROFILES; do
             case "$profile" in
-              calibration-nfl-2026|chip01-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|ai-discovery-seo|ai-visibility-hardening|site-completion|commercial-readiness|buyer-discovery|election-data-index) ;;
+              mqa001-review|intelligence-share|nfc-east-title-2026|malik-beasley-forecast|forecast-100-publication|calibration-nfl-2026|chip01-publication|air02-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|ai-discovery-seo|ai-visibility-hardening|site-completion|mobile-nav-layout|commercial-readiness|buyer-discovery|buyer-conversion|election-data-index) ;;
               *) echo "::error::Unapproved release profile: $profile"; exit 1;;
             esac
           done
@@ -242,7 +349,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python3 -m pip install --disable-pip-version-check --quiet cairosvg==2.8.2
+          python3 -m pip install --disable-pip-version-check --quiet cairosvg==2.8.2 numpy==2.3.4 pytest==8.4.2
+          python3 -m pytest -q research/nfc-east-2026/test_nfc_east_post_sf_2026_11_15.py
           python3 scripts/build-kahrelum-editorial-social.py
           python3 scripts/build-kahrelum-editorial-social.py --check
           node --test tests/*.test.cjs
@@ -357,7 +465,7 @@ jobs:
               echo "Already current: $profile; preview not required." >> "$GITHUB_STEP_SUMMARY"
               continue
             fi
-            if [[ "$profile" == "site-completion" ]]; then
+            if [[ "$profile" == "site-completion" || "$profile" == "mobile-nav-layout" ]]; then
               preview_log="$RUNNER_TEMP/kahrelum-preview-$profile.log"
               node scripts/firebase-overlay-release.cjs --preview --profile "$profile" | tee "$preview_log"
               preview_url="$(grep -oE '"previewUrl": "[^"]+"' "$preview_log" | tail -n1 | cut -d'"' -f4)"
@@ -365,8 +473,13 @@ jobs:
                 echo "::error::Missing verified Firebase preview URL for Chrome browser QA"; exit 1
               fi
               node --version
-              node scripts/site-completion-browser-qa.cjs "$preview_url"
-              echo "Measured real Chrome 320/390/768/1280 layouts against exact Firebase preview." >> "$GITHUB_STEP_SUMMARY"
+              if [[ "$profile" == "mobile-nav-layout" ]]; then
+                node scripts/mobile-nav-browser-qa.cjs "$preview_url"
+                echo "Verified opened mobile navigation at 320/390/414/768px in real Chrome." >> "$GITHUB_STEP_SUMMARY"
+              else
+                node scripts/site-completion-browser-qa.cjs "$preview_url"
+                echo "Measured real Chrome 320/390/768/1280 layouts against exact Firebase preview." >> "$GITHUB_STEP_SUMMARY"
+              fi
             else
               node scripts/firebase-overlay-release.cjs --preview --profile "$profile"
             fi

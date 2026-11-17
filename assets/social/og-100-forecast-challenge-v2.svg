@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-labelledby="title desc">
+  <title id="title">KAHRELUM 100 Forecasts</title>
+  <desc id="desc">Editorial social preview. Public research. Five domains. Audit pending. Outcomes open.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf1"/>
+      <stop offset="1" stop-color="#ede2d1"/>
+    </linearGradient>
+    <linearGradient id="rust" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#963a22"/>
+      <stop offset="1" stop-color="#c75d3b"/>
+    </linearGradient>
+    <linearGradient id="bars" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#ba5634" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#b74b2b" stop-opacity=".33"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#paper)"/>
+  <circle cx="1100" cy="102" r="370" fill="#e9c6a9" opacity=".28"/>
+  <rect x="62" y="52" width="5" height="508" fill="#963a22"/>
+  <text x="92" y="108" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700" font-size="36" letter-spacing="4" fill="#1c1b19">KAHRELUM</text>
+  <text x="92" y="154" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="600" letter-spacing="3" fill="#963a22">PUBLIC RESEARCH</text>
+  <text x="1100" y="106" text-anchor="end" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="600" letter-spacing="2" fill="#51493f">CAL-DRILL-005</text>
+  <path d="M92 182 H1108" fill="none" stroke="#b5a999" stroke-width="1.5"/>
+  <text x="86" y="375" font-family="DejaVu Serif,Georgia,serif" font-size="183" font-weight="700" letter-spacing="-12" fill="#963a22">100</text>
+  <text x="93" y="455" font-family="DejaVu Sans,Arial,sans-serif" font-size="70" font-weight="700" letter-spacing="1" fill="#181713">FORECASTS</text>
+  <text x="95" y="493" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="600" letter-spacing="2" fill="#62574b">FIVE DOMAINS</text>
+  <rect x="770" y="218" width="345" height="297" rx="10" fill="#fff8ed" opacity=".76" stroke="#c9b9a5" stroke-width="1"/>
+  <g fill="url(#bars)">
+    <rect x="813" y="405" width="35" height="64"/>
+    <rect x="871" y="377" width="35" height="92"/>
+    <rect x="929" y="346" width="35" height="123"/>
+    <rect x="987" y="322" width="35" height="147"/>
+    <rect x="1045" y="290" width="35" height="179"/>
+  </g>
+  <path d="M803 436 C848 424 868 401 885 408 C930 421 951 363 987 353 S1059 292 1092 271" fill="none" stroke="#a5442a" stroke-width="4" stroke-linecap="round"/>
+  <g fill="#a5442a"><circle cx="803" cy="436" r="6"/><circle cx="885" cy="408" r="6"/><circle cx="987" cy="353" r="6"/><circle cx="1092" cy="271" r="6"/></g>
+  <path d="M92 532 H1108" stroke="#a5442a" stroke-width="2"/>
+  <text x="94" y="583" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="700" letter-spacing="1.1" fill="#963a22">AUDIT PENDING</text>
+  <text x="1105" y="581" text-anchor="end" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="700" letter-spacing="1" fill="#1c1b19">OUTCOMES OPEN</text>
+</svg>

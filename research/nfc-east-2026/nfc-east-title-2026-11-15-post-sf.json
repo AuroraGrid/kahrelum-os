@@ -1,0 +1,450 @@
+{
+  "name": "KAHRELUM NFC East 2026 division title forecast after SF 46, DAL 40",
+  "analysis_status": "independent experimental scenario simulation; not certified or backtested",
+  "generated_at_utc": "2026-11-16T05:09:04+00:00",
+  "as_of_nfl_eastern": "2026-11-15 final SF 46, DAL 40",
+  "trigger": {
+    "date": "2026-11-15",
+    "away": "SF",
+    "home": "DAL",
+    "away_score": 46,
+    "home_score": 40,
+    "status": "final"
+  },
+  "previous_snapshot": "nfc-east-title-2026-11-12.json",
+  "forecast_method": "1,000,000 seeded independent Monte Carlo draws over 27 unique remaining NFC East-relevant games, head-to-head dependencies and disclosed incomplete tiebreak allocation",
+  "original_division_odds": {
+    "NYG": 0.663737,
+    "DAL": 0.233978,
+    "WAS": 0.09714,
+    "PHI": 0.005145
+  },
+  "main": {
+    "conditional": {
+      "DAL_win_division_given_DAL_win_NYG_game": {
+        "true": 0.28455989,
+        "false": 0.04189201,
+        "n_true": 550320,
+        "n_false": 449680
+      },
+      "NYG_win_division_given_DAL_win_NYG_game": {
+        "true": 0.57624473,
+        "false": 0.87136186,
+        "n_true": 550320,
+        "n_false": 449680
+      },
+      "NYG_win_division_given_NYG_win_JAX": {
+        "true": 0.83634838,
+        "false": 0.65177625,
+        "n_true": 309780,
+        "n_false": 690220
+      }
+    },
+    "division_odds": {
+      "NYG": 0.708953,
+      "DAL": 0.175437,
+      "WAS": 0.109501,
+      "PHI": 0.006109
+    },
+    "expected_records": {
+      "NYG": {
+        "mean_wins": 8.4898,
+        "wins_10th_percentile": 7,
+        "wins_90th_percentile": 10,
+        "mean_win_equivalents": 8.9898,
+        "prob_9plus_wins": 0.491172,
+        "prob_10plus_wins": 0.224401
+      },
+      "DAL": {
+        "mean_wins": 7.294,
+        "wins_10th_percentile": 6,
+        "wins_90th_percentile": 9,
+        "mean_win_equivalents": 7.294,
+        "prob_9plus_wins": 0.162277,
+        "prob_10plus_wins": 0.034006
+      },
+      "WAS": {
+        "mean_wins": 6.1333,
+        "wins_10th_percentile": 4,
+        "wins_90th_percentile": 8,
+        "mean_win_equivalents": 6.6333,
+        "prob_9plus_wins": 0.037794,
+        "prob_10plus_wins": 0.005159
+      },
+      "PHI": {
+        "mean_wins": 4.7477,
+        "wins_10th_percentile": 3,
+        "wins_90th_percentile": 6,
+        "mean_win_equivalents": 4.7477,
+        "prob_9plus_wins": 0.002541,
+        "prob_10plus_wins": 0.000111
+      }
+    },
+    "model_assumptions": {
+      "home_field_points": 1.1,
+      "logistic_spread_scale_points": 7,
+      "market_probability_anchors": {
+        "JAX@NYG": 0.31
+      },
+      "no_future_tie_games": true,
+      "nyg_was_head_to_head_tiebreak_winner": "WAS",
+      "rating_scale": "neutral-field point differential",
+      "rating_shifts": {},
+      "rating_source": "Pete Ratings NFL 2026 through 2026-11-09",
+      "seed": 2026111501
+    },
+    "sample_counts": {
+      "champions": {
+        "NYG": 708953,
+        "DAL": 175437,
+        "WAS": 109501,
+        "PHI": 6109
+      },
+      "deep_unresolved_ties_allocated_50_50": 258,
+      "draws": 1000000
+    },
+    "schedule": [
+      {
+        "away": "JAX",
+        "home": "NYG",
+        "market_anchored": true,
+        "p_away": 0.69,
+        "p_home": 0.31,
+        "week": 11
+      },
+      {
+        "away": "TEN",
+        "home": "DAL",
+        "market_anchored": false,
+        "p_away": 0.28905,
+        "p_home": 0.71095,
+        "week": 11
+      },
+      {
+        "away": "CIN",
+        "home": "WAS",
+        "market_anchored": false,
+        "p_away": 0.671347,
+        "p_home": 0.328653,
+        "week": 11
+      },
+      {
+        "away": "PIT",
+        "home": "PHI",
+        "market_anchored": false,
+        "p_away": 0.658618,
+        "p_home": 0.341382,
+        "week": 11
+      },
+      {
+        "away": "NYG",
+        "home": "IND",
+        "market_anchored": false,
+        "p_away": 0.51785,
+        "p_home": 0.48215,
+        "week": 12
+      },
+      {
+        "away": "PHI",
+        "home": "DAL",
+        "market_anchored": false,
+        "p_away": 0.347835,
+        "p_home": 0.652165,
+        "week": 12
+      },
+      {
+        "away": "WAS",
+        "home": "ARI",
+        "market_anchored": false,
+        "p_away": 0.503571,
+        "p_home": 0.496429,
+        "week": 12
+      },
+      {
+        "away": "SF",
+        "home": "NYG",
+        "market_anchored": false,
+        "p_away": 0.68383,
+        "p_home": 0.31617,
+        "week": 13
+      },
+      {
+        "away": "DAL",
+        "home": "SEA",
+        "market_anchored": false,
+        "p_away": 0.286124,
+        "p_home": 0.713876,
+        "week": 13
+      },
+      {
+        "away": "WAS",
+        "home": "TEN",
+        "market_anchored": false,
+        "p_away": 0.563934,
+        "p_home": 0.436066,
+        "week": 13
+      },
+      {
+        "away": "PHI",
+        "home": "ARI",
+        "market_anchored": false,
+        "p_away": 0.467901,
+        "p_home": 0.532099,
+        "week": 13
+      },
+      {
+        "away": "NYG",
+        "home": "SEA",
+        "market_anchored": false,
+        "p_away": 0.277451,
+        "p_home": 0.722549,
+        "week": 14
+      },
+      {
+        "away": "HOU",
+        "home": "WAS",
+        "market_anchored": false,
+        "p_away": 0.661823,
+        "p_home": 0.338177,
+        "week": 14
+      },
+      {
+        "away": "IND",
+        "home": "PHI",
+        "market_anchored": false,
+        "p_away": 0.510713,
+        "p_home": 0.489287,
+        "week": 14
+      },
+      {
+        "away": "CLE",
+        "home": "NYG",
+        "market_anchored": false,
+        "p_away": 0.374189,
+        "p_home": 0.625811,
+        "week": 15
+      },
+      {
+        "away": "DAL",
+        "home": "LAR",
+        "market_anchored": false,
+        "p_away": 0.310026,
+        "p_home": 0.689974,
+        "week": 15
+      },
+      {
+        "away": "ATL",
+        "home": "WAS",
+        "market_anchored": false,
+        "p_away": 0.492858,
+        "p_home": 0.507142,
+        "week": 15
+      },
+      {
+        "away": "SEA",
+        "home": "PHI",
+        "market_anchored": false,
+        "p_away": 0.744868,
+        "p_home": 0.255132,
+        "week": 15
+      },
+      {
+        "away": "NYG",
+        "home": "DET",
+        "market_anchored": false,
+        "p_away": 0.351082,
+        "p_home": 0.648918,
+        "week": 16
+      },
+      {
+        "away": "JAX",
+        "home": "DAL",
+        "market_anchored": false,
+        "p_away": 0.758204,
+        "p_home": 0.241796,
+        "week": 16
+      },
+      {
+        "away": "WAS",
+        "home": "MIN",
+        "market_anchored": false,
+        "p_away": 0.28905,
+        "p_home": 0.71095,
+        "week": 16
+      },
+      {
+        "away": "HOU",
+        "home": "PHI",
+        "market_anchored": false,
+        "p_away": 0.693022,
+        "p_home": 0.306978,
+        "week": 16
+      },
+      {
+        "away": "NYG",
+        "home": "DAL",
+        "market_anchored": false,
+        "p_away": 0.450166,
+        "p_home": 0.549834,
+        "week": 17
+      },
+      {
+        "away": "WAS",
+        "home": "JAX",
+        "market_anchored": false,
+        "p_away": 0.143599,
+        "p_home": 0.856401,
+        "week": 17
+      },
+      {
+        "away": "PHI",
+        "home": "SF",
+        "market_anchored": false,
+        "p_away": 0.180305,
+        "p_home": 0.819695,
+        "week": 17
+      },
+      {
+        "away": "PHI",
+        "home": "NYG",
+        "market_anchored": false,
+        "p_away": 0.357619,
+        "p_home": 0.642381,
+        "week": 18
+      },
+      {
+        "away": "DAL",
+        "home": "WAS",
+        "market_anchored": false,
+        "p_away": 0.542752,
+        "p_home": 0.457248,
+        "week": 18
+      }
+    ]
+  },
+  "change_percentage_points": {
+    "NYG": 4.5216,
+    "DAL": -5.8541,
+    "WAS": 1.2361,
+    "PHI": 0.0964
+  },
+  "base_records_after_final": {
+    "DAL": {
+      "conf_l": 5,
+      "conf_t": 0,
+      "conf_w": 2,
+      "div_l": 1,
+      "div_t": 0,
+      "div_w": 2,
+      "l": 6,
+      "t": 0,
+      "w": 4
+    },
+    "NYG": {
+      "conf_l": 3,
+      "conf_t": 1,
+      "conf_w": 3,
+      "div_l": 1,
+      "div_t": 1,
+      "div_w": 2,
+      "l": 3,
+      "t": 1,
+      "w": 5
+    },
+    "PHI": {
+      "conf_l": 6,
+      "conf_t": 0,
+      "conf_w": 1,
+      "div_l": 3,
+      "div_t": 0,
+      "div_w": 1,
+      "l": 7,
+      "t": 0,
+      "w": 2
+    },
+    "WAS": {
+      "conf_l": 4,
+      "conf_t": 1,
+      "conf_w": 3,
+      "div_l": 2,
+      "div_t": 1,
+      "div_w": 2,
+      "l": 5,
+      "t": 1,
+      "w": 3
+    }
+  },
+  "base_ratings": {
+    "ARI": -4.2,
+    "ATL": -2.1,
+    "CIN": 3.1,
+    "CLE": -3.5,
+    "DAL": -0.7,
+    "DET": 2.2,
+    "HOU": 2.8,
+    "IND": -2.6,
+    "JAX": 8.4,
+    "LAR": 3.8,
+    "MIN": 2.2,
+    "NYG": -1,
+    "PHI": -4,
+    "PIT": 1.7,
+    "SEA": 4.6,
+    "SF": 5.5,
+    "TEN": -5.9,
+    "WAS": -3
+  },
+  "sensitivity": {
+    "NYG_plus_2_rating_points": {
+      "NYG": 0.79874,
+      "DAL": 0.11746667,
+      "WAS": 0.08006667,
+      "PHI": 0.00372667
+    },
+    "NYG_minus_2_rating_points": {
+      "NYG": 0.60782,
+      "DAL": 0.2416,
+      "WAS": 0.14094667,
+      "PHI": 0.00963333
+    },
+    "DAL_plus_2_rating_points": {
+      "NYG": 0.64986667,
+      "DAL": 0.25287333,
+      "WAS": 0.09238,
+      "PHI": 0.00488
+    },
+    "DAL_minus_2_rating_points": {
+      "NYG": 0.75639333,
+      "DAL": 0.11169333,
+      "WAS": 0.1243,
+      "PHI": 0.00761333
+    },
+    "scale_6": {
+      "NYG": 0.71942,
+      "DAL": 0.17541333,
+      "WAS": 0.10046667,
+      "PHI": 0.0047
+    },
+    "scale_9": {
+      "NYG": 0.69580667,
+      "DAL": 0.17114,
+      "WAS": 0.12418,
+      "PHI": 0.00887333
+    }
+  },
+  "sources": [
+    "https://www.dallascowboys.com/news/game-recap-explosive-plays-doom-dallas-46-40",
+    "https://www.49ers.com/news/49ers-outlast-the-dallas-cowboys-in-46-40-shootout-takeaways-from-sfvsdal",
+    "https://www.nfl.com/standings/division/2026/REG",
+    "https://www.nfl.com/standings/tie-breaking-procedures",
+    "https://www.peteratings.com/nfl/rankings/"
+  ],
+  "limitations": [
+    "This is a postgame recomputation of division-title probabilities, not calibration against resolved division titles.",
+    "Only verified SF 46 DAL 40 final changes the November 12 state; no independent 2026-11-15 fresh ratings, injuries, or market prices were introduced.",
+    "Pete Ratings inputs remain dated 2026-11-09. Future ties, major injuries or lineup changes and future market repricing are not modeled.",
+    "Remaining JAX@NYG 31% market anchor is a November 12 snapshot, not a current quote.",
+    "Rare Dallas-Philadelphia deep ties are split 50/50 after modeled tiebreak steps, with count disclosed.",
+    "Model parameter uncertainty dominates Monte Carlo sampling error; percentage-point changes are scenario-dependent."
+  ]
+}

@@ -12,6 +12,9 @@
 
 ## Method and published evidence
 
+- [Malik Beasley Federal Sentencing Forecast](https://kahrelum.com/insights/malik-beasley-sentencing-2026): November 12, 2026 prospectively published 62% binary subjective judgment on first federal prison term of 12+ months; complete original JSON source at GitHub commit 805d5df3. Outcome OPEN, unscored; Dec 9 is a plea hearing, not sentencing.
+
+
 - [Oct–Nov 2026 Prospective Forecast Calibration](https://kahrelum.com/insights/calibration-oct-nov-2026): Seven pre-event cases, mean Brier 0.1444, two missed directions, separate synthetic gate drill, small-sample caveats and source ledger. Not a ranking against professional forecasters.
 
 - [KAHRELUM OS and method](https://kahrelum.com/os): Evidence, alternatives, adversarial challenge, decision, and audit trail.
@@ -19,7 +22,11 @@
 - [External adversarial audit summary](https://github.com/AuroraGrid/kahrelum-os/blob/main/evidence/EXTERNAL_AUDIT_SUMMARY.md): Frozen input and reproducibility record, not a claim of universal commercial superiority.
 - [Public repository](https://github.com/AuroraGrid/kahrelum-os): Source files and documented evidence boundaries.
 
+- [NFC East division-title scenario model](https://kahrelum.com/forecasting/nfc-east-2026): November 12, 2026; Giants 66.4%, Cowboys 23.4%, Commanders 9.7%, Eagles 0.5%; one million simulations, open, unscored, experimental, initial GitHub record publicly preserved.
+
 ## Public research divisions
+
+- [100-Forecast Prospective Challenge](https://kahrelum.com/forecasting/100-forecast-challenge): Open v1.4, 100 public research forecasts across five domains. Audit pending; original v1.0 timestamps unverified, none resolved or Brier scored at the snapshot. Machine-readable public record: https://kahrelum.com/forecasting/100-forecast-v1.4.json.
 
 - [Forecasting and intelligence](https://kahrelum.com/forecasting): Date-bound election, geopolitical and sports forecasts and evaluation methods.
 - [Investigations and OSINT](https://kahrelum.com/investigations): Dated public-record research; allegations are distinguished from established facts.
@@ -52,3 +59,5 @@ These summaries are navigation aids, not refreshed original evidence, and never 
 - [Nvidia and Megaspeed source limitations](https://kahrelum.com/ai-discovery/nvidia-chip-custody.md)
 
 All Markdown summaries are annotated with canonical HTML URLs and dated source limits. They do not authenticate allegations or make an unresolved forecast scoreable.
+
+NFC East 2026 post-49ers 46, Cowboys 40: https://kahrelum.com/forecasting/nfc-east-title-2026-11-15-post-sf.json (new seeded million-draw scenario simulation; original snapshot preserved).

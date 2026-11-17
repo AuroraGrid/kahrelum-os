@@ -3850,7 +3850,2147 @@
       "recordHash": "e37167fe18accad05f6899863b42c3bcbb5c57f5324b5f6ec74499ef8e40add2"
     }
   ],
-  "outcomeRecords": [],
+  "outcomeRecords": [
+    {
+      "eventId": "NFL-2026-TRADE-K26-001-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": null,
+      "recordHash": "12211d0188b437c1b68ca52822733b4925e85fb0583106ac3330b0ebca3c7df5"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-002-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "12211d0188b437c1b68ca52822733b4925e85fb0583106ac3330b0ebca3c7df5",
+      "recordHash": "8064533db2cb19a67181a7ce5b95c134708ed1b7f3ce7a87cda53ecdf50c32a2"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-004-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "8064533db2cb19a67181a7ce5b95c134708ed1b7f3ce7a87cda53ecdf50c32a2",
+      "recordHash": "f336ed060181aa197e33da5c4fe0f1ae7ab65e5f3353df242c8bacf44b2881be"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-005-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "f336ed060181aa197e33da5c4fe0f1ae7ab65e5f3353df242c8bacf44b2881be",
+      "recordHash": "d84c957f69e0f999f3dcec26ead33f990425a5c614c9be8f26ee375c9451670b"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-006-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "d84c957f69e0f999f3dcec26ead33f990425a5c614c9be8f26ee375c9451670b",
+      "recordHash": "b5b13e55ed54a008a57e6dd31754416c067a72759953770f0f08996fd8e611dc"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-007-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "b5b13e55ed54a008a57e6dd31754416c067a72759953770f0f08996fd8e611dc",
+      "recordHash": "c6071450d05edba0e714968338ff50022aaec09a1f911b29b7ac5d1356542850"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-008-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "c6071450d05edba0e714968338ff50022aaec09a1f911b29b7ac5d1356542850",
+      "recordHash": "439f06fc247d2802cfaef67edea32855b31dfdc3f6e6fd0d16c8aa44f47f460e"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-009-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "439f06fc247d2802cfaef67edea32855b31dfdc3f6e6fd0d16c8aa44f47f460e",
+      "recordHash": "7c87bd9983daffb0678617c4fb17c5de2c1ee2db739a8e8e13a461ddbc2de716"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-010-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "7c87bd9983daffb0678617c4fb17c5de2c1ee2db739a8e8e13a461ddbc2de716",
+      "recordHash": "d5b0deb99b6b219a5089823d9d1ff9a73787646c0dc21d738a11bdd11187ec3a"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-011-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "d5b0deb99b6b219a5089823d9d1ff9a73787646c0dc21d738a11bdd11187ec3a",
+      "recordHash": "349875050bf4cb8fe4c831823bfb2be9dae6cf772ceebe12cbf2723b30640e97"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-012-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "349875050bf4cb8fe4c831823bfb2be9dae6cf772ceebe12cbf2723b30640e97",
+      "recordHash": "bb59f264769a36df58a6b59a5325aaf4417d7f0dcffb11590e144ffe51da0ccc"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-013-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "bb59f264769a36df58a6b59a5325aaf4417d7f0dcffb11590e144ffe51da0ccc",
+      "recordHash": "efa5d33028c62b5f302b385ba7f6879b37a5856556fdbf7e26163969a9d3365c"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-014-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "efa5d33028c62b5f302b385ba7f6879b37a5856556fdbf7e26163969a9d3365c",
+      "recordHash": "2591361c8660642f0061869dc73909ff87c3f6fb1e9ee20a57e71783ab640935"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-015-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "2591361c8660642f0061869dc73909ff87c3f6fb1e9ee20a57e71783ab640935",
+      "recordHash": "bf6f7388d18fc872b4ca9b924ff6e43b8db6d8dd8a81162e0d1876f3392a6540"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-016-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "bf6f7388d18fc872b4ca9b924ff6e43b8db6d8dd8a81162e0d1876f3392a6540",
+      "recordHash": "adf2455246a001fbaf6df78b57e1e6de918397601e8f1b6b3b6dbba6dcc1245c"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-017-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "adf2455246a001fbaf6df78b57e1e6de918397601e8f1b6b3b6dbba6dcc1245c",
+      "recordHash": "5cdd7e1260aad0b5ca6baf5435fb151f22f00faa616712dee7cfd97876e0ef5a"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-018-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "5cdd7e1260aad0b5ca6baf5435fb151f22f00faa616712dee7cfd97876e0ef5a",
+      "recordHash": "8eaa5380450d2dd3b5370d702b3f088903170afed06d79b5af30034bfdd3fc3f"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-019-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "8eaa5380450d2dd3b5370d702b3f088903170afed06d79b5af30034bfdd3fc3f",
+      "recordHash": "3a1bf0349fb0977e78a25188383ae55ca54c9d3b0808aa3fe16394125afea832"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-020-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "3a1bf0349fb0977e78a25188383ae55ca54c9d3b0808aa3fe16394125afea832",
+      "recordHash": "59d69329688e1ff9937475ee31983f30aac0387a7b548880b231806037dc0bbc"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-021-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "59d69329688e1ff9937475ee31983f30aac0387a7b548880b231806037dc0bbc",
+      "recordHash": "ccc300bb63feebc4795b0a4b12dea4360df243c261d22c15130753e446b96865"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-022-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "ccc300bb63feebc4795b0a4b12dea4360df243c261d22c15130753e446b96865",
+      "recordHash": "17c321257d80f8f9665e5aa61f1cbe0fb4f018f2b3efba321b62918922e0a8bf"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-024-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "17c321257d80f8f9665e5aa61f1cbe0fb4f018f2b3efba321b62918922e0a8bf",
+      "recordHash": "074935845cc2f245d4cd657cde186e6e8179322c585351c403912ceaa2ed1920"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-025-FC1",
+      "value": 1,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [
+        {
+          "fromTeam": "Jets",
+          "toTeam": "Lions",
+          "player": "Andre Cisco",
+          "position": "",
+          "transactionDate": "11/09",
+          "transactionTimestampUtc": "2026-11-09T00:00:00Z",
+          "timestampPrecision": "DATE_ONLY_TIMEZONE_UNSTATED",
+          "action": "Traded"
+        }
+      ],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "074935845cc2f245d4cd657cde186e6e8179322c585351c403912ceaa2ed1920",
+      "recordHash": "019ebacfc56864704be35dc8f88caaed9535fd2bbc7fa3dfd460894c4347d769"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-026-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "019ebacfc56864704be35dc8f88caaed9535fd2bbc7fa3dfd460894c4347d769",
+      "recordHash": "45e872d65d437d396ff0795757b93600d781482b7733d37321ba4a77587af9b3"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-027-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "45e872d65d437d396ff0795757b93600d781482b7733d37321ba4a77587af9b3",
+      "recordHash": "8e3860e15bf99862b5be32eca6cc13afb94a8413b2e3dfb05788fbcfbf6e8ede"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-028-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "8e3860e15bf99862b5be32eca6cc13afb94a8413b2e3dfb05788fbcfbf6e8ede",
+      "recordHash": "6d3afa23320ddde7a14181fb0ece8a1adc90a3ca83860d5995363549247c50f2"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-029-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "6d3afa23320ddde7a14181fb0ece8a1adc90a3ca83860d5995363549247c50f2",
+      "recordHash": "fdf81c20d93aea1621d59582594d02a01f2d6b7835d8510ca5c160e66714ee70"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-030-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "fdf81c20d93aea1621d59582594d02a01f2d6b7835d8510ca5c160e66714ee70",
+      "recordHash": "5a3137d4e2033aa251aff471ab2eab57539ee6cd56d155dc957ce3d1a3c65f07"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-031-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "5a3137d4e2033aa251aff471ab2eab57539ee6cd56d155dc957ce3d1a3c65f07",
+      "recordHash": "d10f8d729574257dd367a1b51c209782af9daa618b93c434e798d3bc32835871"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-032-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "d10f8d729574257dd367a1b51c209782af9daa618b93c434e798d3bc32835871",
+      "recordHash": "4ecb1b2e2ab088a5c78ccf9ab193e600f2e4ddc11b1e0d05b530011f18247ac5"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-033-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "4ecb1b2e2ab088a5c78ccf9ab193e600f2e4ddc11b1e0d05b530011f18247ac5",
+      "recordHash": "35e0aef9f2fcb95735ef7e4f41405270e91446a8bd94240167f933753569b47d"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-034-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "35e0aef9f2fcb95735ef7e4f41405270e91446a8bd94240167f933753569b47d",
+      "recordHash": "d36d4fb746cfccd7b54bb2e021f9502396eff470d1adc8949a6d127c3d7d8b12"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-035-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "d36d4fb746cfccd7b54bb2e021f9502396eff470d1adc8949a6d127c3d7d8b12",
+      "recordHash": "f76b1dd3c71a290488acf9596fc51bc67627b2ccbe6632e4732d10503e2255d2"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-036-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "f76b1dd3c71a290488acf9596fc51bc67627b2ccbe6632e4732d10503e2255d2",
+      "recordHash": "5abc2534a6f2256342a5c663d9e2a20c66032b5f87b38de36e8c9f8c7d111e77"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-037-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "5abc2534a6f2256342a5c663d9e2a20c66032b5f87b38de36e8c9f8c7d111e77",
+      "recordHash": "7865449dd867bdc8173f9819a353bb3e47040416254de1f9a309204626c7417a"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-038-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "7865449dd867bdc8173f9819a353bb3e47040416254de1f9a309204626c7417a",
+      "recordHash": "bfe5268339f0c04575d31b61680dc8ba84b7bf2d42722d841087f82295f9c73c"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-039-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "bfe5268339f0c04575d31b61680dc8ba84b7bf2d42722d841087f82295f9c73c",
+      "recordHash": "775c8f838533d142b508c0c72e5e730cbe88053c5f68d1c06767609b08aca4c6"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-040-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "775c8f838533d142b508c0c72e5e730cbe88053c5f68d1c06767609b08aca4c6",
+      "recordHash": "44a0dcf8b681abf384ffbbf6e332c0d73dfa789ca098634167480cb2ca113029"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-041-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "44a0dcf8b681abf384ffbbf6e332c0d73dfa789ca098634167480cb2ca113029",
+      "recordHash": "ffcf15493b952307d648488a57d82c7912ade7bc646e17ea63f4e2b2926b6910"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-042-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "ffcf15493b952307d648488a57d82c7912ade7bc646e17ea63f4e2b2926b6910",
+      "recordHash": "2678a896902c29d98c320ccbab7fddba4a2a44c221758c684d93c74e9521d1b0"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-043-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "2678a896902c29d98c320ccbab7fddba4a2a44c221758c684d93c74e9521d1b0",
+      "recordHash": "f55f0165693a54674faedc2d9c4d39aa732a18a2701b9f5249f3a46a34b1adae"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-044-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "f55f0165693a54674faedc2d9c4d39aa732a18a2701b9f5249f3a46a34b1adae",
+      "recordHash": "34b4c1d2e88805487337b4303c5fb300e402ff80a69d9f9a3e595fe7ebb90046"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-046-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "34b4c1d2e88805487337b4303c5fb300e402ff80a69d9f9a3e595fe7ebb90046",
+      "recordHash": "d89d9a506c3091aef6b4dafbde2a5b0358e74a3d866ff3a868f6f9239df6153d"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-047-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "d89d9a506c3091aef6b4dafbde2a5b0358e74a3d866ff3a868f6f9239df6153d",
+      "recordHash": "e5cfcf9bd25da3ddfd5245523f44374a7574cd8505d31a12cd4f1e8eb5ad3305"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-048-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "e5cfcf9bd25da3ddfd5245523f44374a7574cd8505d31a12cd4f1e8eb5ad3305",
+      "recordHash": "bc66102607ba073815babf9fec67e995c0337774439817ef0db2ffb6adf91d7f"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-049-FC1",
+      "value": 1,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [
+        {
+          "fromTeam": "Saints",
+          "toTeam": "Jaguars",
+          "player": "Davon Godchaux",
+          "position": "",
+          "transactionDate": "11/09",
+          "transactionTimestampUtc": "2026-11-09T00:00:00Z",
+          "timestampPrecision": "DATE_ONLY_TIMEZONE_UNSTATED",
+          "action": "Traded"
+        }
+      ],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "bc66102607ba073815babf9fec67e995c0337774439817ef0db2ffb6adf91d7f",
+      "recordHash": "bb067754907944ddb5f1605f9592e83dd4e5e67c8988f1426386955743579945"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-050-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "bb067754907944ddb5f1605f9592e83dd4e5e67c8988f1426386955743579945",
+      "recordHash": "9219f1aa3e62cd39a057b4931ef6e731065c04bead709e924ec2d2fb7b57cd69"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-051-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "9219f1aa3e62cd39a057b4931ef6e731065c04bead709e924ec2d2fb7b57cd69",
+      "recordHash": "2f75caac522b2200bb09823f12449d80a01b9ca274174546b7ded1dccf74a728"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-052-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "2f75caac522b2200bb09823f12449d80a01b9ca274174546b7ded1dccf74a728",
+      "recordHash": "178a1509ffcbc921c2ba647395d9661e1040b8d543c74ddb925b52c37267f517"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-053-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "178a1509ffcbc921c2ba647395d9661e1040b8d543c74ddb925b52c37267f517",
+      "recordHash": "f7b829c522dd54f6a898c4dfb5568dfdd2bd9f28385f68af4d2a7f2b0d17a867"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-054-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "f7b829c522dd54f6a898c4dfb5568dfdd2bd9f28385f68af4d2a7f2b0d17a867",
+      "recordHash": "f3eb690ae84574944a85e5cf3213780a8a34d9c6d72c744dd70b64b61cf7a950"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-055-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "f3eb690ae84574944a85e5cf3213780a8a34d9c6d72c744dd70b64b61cf7a950",
+      "recordHash": "236a2112b7ddcec8b75271d5ffb7dcff836c69c3c33836dbcf90ab4dabf39064"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-056-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "236a2112b7ddcec8b75271d5ffb7dcff836c69c3c33836dbcf90ab4dabf39064",
+      "recordHash": "281f584428f3092925d9150a9a2b08d346ff3197f2f2af6bade680cd5bd84079"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-057-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "281f584428f3092925d9150a9a2b08d346ff3197f2f2af6bade680cd5bd84079",
+      "recordHash": "bc9c948101f6b3a12111abed21447675553c4dc5ef8dbcda63fd2c379fdb3962"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-058-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "bc9c948101f6b3a12111abed21447675553c4dc5ef8dbcda63fd2c379fdb3962",
+      "recordHash": "7f5e76242f3a1841866d361dded93bb1e65fe61b9ac726742769e51fbf04bfc4"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-059-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "7f5e76242f3a1841866d361dded93bb1e65fe61b9ac726742769e51fbf04bfc4",
+      "recordHash": "61ce0d595911332182f50513bf0164f203796310c7da606a8378a9eb0cb83fa4"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-060-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "61ce0d595911332182f50513bf0164f203796310c7da606a8378a9eb0cb83fa4",
+      "recordHash": "45ec4aec50f45394b6740c286b7561d015ae2a92ddd8041aa9c9f90874ed4a35"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-061-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "45ec4aec50f45394b6740c286b7561d015ae2a92ddd8041aa9c9f90874ed4a35",
+      "recordHash": "5884775b1eddca6ff8111d7439da5a65d8b7517fc23fc41e7cb6f0344730595b"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-063-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "5884775b1eddca6ff8111d7439da5a65d8b7517fc23fc41e7cb6f0344730595b",
+      "recordHash": "687bf32acb7974a65969661122cb5a48805ee39370f444d59381d5023cf666ca"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-064-FC1",
+      "value": 1,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [
+        {
+          "fromTeam": "Cardinals",
+          "toTeam": "Ravens",
+          "player": "Jacoby Brissett",
+          "position": "",
+          "transactionDate": "11/06",
+          "transactionTimestampUtc": "2026-11-06T00:00:00Z",
+          "timestampPrecision": "DATE_ONLY_TIMEZONE_UNSTATED",
+          "action": "Traded"
+        }
+      ],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "687bf32acb7974a65969661122cb5a48805ee39370f444d59381d5023cf666ca",
+      "recordHash": "fb8d2e4df9986d53c4277fdfccdaf5a932d373321c1f78e246755be6659b77cc"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-065-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "fb8d2e4df9986d53c4277fdfccdaf5a932d373321c1f78e246755be6659b77cc",
+      "recordHash": "5e16ee4af18412eeb34fc4e2a2f3cc1b90ea8dc464756acc8a52e5fa9e6ee8e8"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-066-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "5e16ee4af18412eeb34fc4e2a2f3cc1b90ea8dc464756acc8a52e5fa9e6ee8e8",
+      "recordHash": "e856b4bc3d8b8cc7e9dfab726dc3e42158d027f2001877637d559f995c23e40c"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-067-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "e856b4bc3d8b8cc7e9dfab726dc3e42158d027f2001877637d559f995c23e40c",
+      "recordHash": "784072f43607bc0edb2930697ea7153da69018d87ff19e81e077e83d2f47c582"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-068-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "784072f43607bc0edb2930697ea7153da69018d87ff19e81e077e83d2f47c582",
+      "recordHash": "4b2656216fcf322605eab55eab125981e6213dcd8c3d1bcce3eb9fb589aa1f0d"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-069-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "4b2656216fcf322605eab55eab125981e6213dcd8c3d1bcce3eb9fb589aa1f0d",
+      "recordHash": "b4bd9fb0c487e7a68f15cb0dd71af2326d705db415282fb8d79df8517c8115ac"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-070-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "b4bd9fb0c487e7a68f15cb0dd71af2326d705db415282fb8d79df8517c8115ac",
+      "recordHash": "4feb06c4bf1b5f12cc5bef29a23e9bd9f7140716dccde0646af05a1c69dad793"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-071-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "4feb06c4bf1b5f12cc5bef29a23e9bd9f7140716dccde0646af05a1c69dad793",
+      "recordHash": "0f8285b2758503e066c1196d89e841697179b8752fb0dcc5f8eaced8fe5d2b83"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-072-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "0f8285b2758503e066c1196d89e841697179b8752fb0dcc5f8eaced8fe5d2b83",
+      "recordHash": "92846eb67fcd383227d24d68c96805d2a405881f2bf97ce696bfb6052630e16f"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-073-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "92846eb67fcd383227d24d68c96805d2a405881f2bf97ce696bfb6052630e16f",
+      "recordHash": "42c48c75e8eb4c2040368c24e3031658113bcf8df86688c402746bd48ea7df81"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-075-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "42c48c75e8eb4c2040368c24e3031658113bcf8df86688c402746bd48ea7df81",
+      "recordHash": "205d4cf835b9e35c374013693c33b7ab2e3b96a643414e2ec4d2288af8d75103"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-076-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "205d4cf835b9e35c374013693c33b7ab2e3b96a643414e2ec4d2288af8d75103",
+      "recordHash": "95c607a18be4639e6071fd26c654f250441d37ecef7d840f2ec30904f760a45f"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-077-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "95c607a18be4639e6071fd26c654f250441d37ecef7d840f2ec30904f760a45f",
+      "recordHash": "5ddf66e9d5515112ca968a460aaeaccb5bad8a594677c73d890804e7fcd50794"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-078-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "5ddf66e9d5515112ca968a460aaeaccb5bad8a594677c73d890804e7fcd50794",
+      "recordHash": "bf1f4527caad56f403bafbb2f5554f7369481707225298cfe802613c11acb50b"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-079-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "bf1f4527caad56f403bafbb2f5554f7369481707225298cfe802613c11acb50b",
+      "recordHash": "b6c642b43d1968476e7bfb3c18d284d65d633217a5467c321929179c7da7d73d"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-080-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "b6c642b43d1968476e7bfb3c18d284d65d633217a5467c321929179c7da7d73d",
+      "recordHash": "2a43805660d1be3091d2be1ec2efd79143c05281a22b4cb8eaece75ac194df70"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-082-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "2a43805660d1be3091d2be1ec2efd79143c05281a22b4cb8eaece75ac194df70",
+      "recordHash": "8149274daf64913c17ecfa98956f2192026cbcb30da824f1cbad1d03765ad79e"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-083-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "8149274daf64913c17ecfa98956f2192026cbcb30da824f1cbad1d03765ad79e",
+      "recordHash": "43d92973f61c888a409689f730e2ebbce68c81ae93984664d3f1067103b96e8a"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-084-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "43d92973f61c888a409689f730e2ebbce68c81ae93984664d3f1067103b96e8a",
+      "recordHash": "e368e64e1337cf1725744053eaa61acf64aab62722cbfcefecfbc8bbc457b01d"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-085-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "e368e64e1337cf1725744053eaa61acf64aab62722cbfcefecfbc8bbc457b01d",
+      "recordHash": "f5bb0584606a0f7bf221949eeae1f9f1b500134e6d093f3a075e1549e05fba0a"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-086-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "f5bb0584606a0f7bf221949eeae1f9f1b500134e6d093f3a075e1549e05fba0a",
+      "recordHash": "c4a634d5c3ee3dcd73a7d66eac40750e3d4554832abc087d649097729dccd0a2"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-087-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "c4a634d5c3ee3dcd73a7d66eac40750e3d4554832abc087d649097729dccd0a2",
+      "recordHash": "a2c57120d26dcb9a6c34a9e2ca0b3d003c09b9d258f968652a9c6dc82be8aea8"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-089-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "a2c57120d26dcb9a6c34a9e2ca0b3d003c09b9d258f968652a9c6dc82be8aea8",
+      "recordHash": "a84a85e6fabd54d0c75c7b77f38db32cb3a00436c63526e49d1dd3539a99cd63"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-090-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "a84a85e6fabd54d0c75c7b77f38db32cb3a00436c63526e49d1dd3539a99cd63",
+      "recordHash": "f2ae416086b4e1774bb09025647d7de04399bf67d14b91b4974de7a755ae7c86"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-091-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "f2ae416086b4e1774bb09025647d7de04399bf67d14b91b4974de7a755ae7c86",
+      "recordHash": "527d7ef83a6094dd3f050d3e908f22720fbb739c17f9501a6bff3534ad00d12a"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-092-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "527d7ef83a6094dd3f050d3e908f22720fbb739c17f9501a6bff3534ad00d12a",
+      "recordHash": "4a671c074819326a57b56bca17bc60eaf6f0d2ecf3904f7c24df1f8a9cd7d909"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-093-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "4a671c074819326a57b56bca17bc60eaf6f0d2ecf3904f7c24df1f8a9cd7d909",
+      "recordHash": "a841fcebd6bf2241fb913a8f95571ab65b6a1789a5d8eb67685d616bfd2366e0"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-094-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "a841fcebd6bf2241fb913a8f95571ab65b6a1789a5d8eb67685d616bfd2366e0",
+      "recordHash": "dd2fa474fec377b733e837cd0e62e3dab21705fd007685232ad7e7b922e7c5ec"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-095-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "dd2fa474fec377b733e837cd0e62e3dab21705fd007685232ad7e7b922e7c5ec",
+      "recordHash": "0e452d81751989307e3c4a1eac7b0a56f3a5b5386580cdd19bb87df9ca3453bb"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-096-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "0e452d81751989307e3c4a1eac7b0a56f3a5b5386580cdd19bb87df9ca3453bb",
+      "recordHash": "4504d5142b37b5db0d6b6621f1efbf5c1574cad777e3fcf3303582f604d550ac"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-097-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "4504d5142b37b5db0d6b6621f1efbf5c1574cad777e3fcf3303582f604d550ac",
+      "recordHash": "cae8c3b613a38dec3460f1485b246f035642fdc607390899566eac61d7db94eb"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-098-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "cae8c3b613a38dec3460f1485b246f035642fdc607390899566eac61d7db94eb",
+      "recordHash": "d05de3cf217dcbf01e4813a53a869378d0c11d7b7dd4d3372b5257bbd79d1253"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-099-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "d05de3cf217dcbf01e4813a53a869378d0c11d7b7dd4d3372b5257bbd79d1253",
+      "recordHash": "e36429688e86d3cdccecaa7e131e7a186b6ddc78ba9b26b49cce6f3951abcc7f"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-100-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "e36429688e86d3cdccecaa7e131e7a186b6ddc78ba9b26b49cce6f3951abcc7f",
+      "recordHash": "fe468e0b0f906722b2c1b7f0da3ec04cccaf2f581b62e4171f2775745d729085"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-101-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "fe468e0b0f906722b2c1b7f0da3ec04cccaf2f581b62e4171f2775745d729085",
+      "recordHash": "6be7741738efee40ae4dc5e877c81cb5eb532786b38884796125c19bde5cb191"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-102-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "6be7741738efee40ae4dc5e877c81cb5eb532786b38884796125c19bde5cb191",
+      "recordHash": "542a12c691b6cda4e4c28664bd6be9625bc14c0ed294c3fe9c035022f62bb4d9"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-103-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "542a12c691b6cda4e4c28664bd6be9625bc14c0ed294c3fe9c035022f62bb4d9",
+      "recordHash": "4ee5c730978b2f9faf6ef2a4c34e704e29a24da6cbae8ef8b037dc0b3b6d8972"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-104-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "4ee5c730978b2f9faf6ef2a4c34e704e29a24da6cbae8ef8b037dc0b3b6d8972",
+      "recordHash": "3cf0469b3ec57f119b42c2b64ab208394499e290cb6e5a2811aac01deb89e47e"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-105-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "3cf0469b3ec57f119b42c2b64ab208394499e290cb6e5a2811aac01deb89e47e",
+      "recordHash": "1b1a9fe2daea1237f461ba7b90318902b79965238c74c1c8bf5ecd7027a71024"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-106-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "1b1a9fe2daea1237f461ba7b90318902b79965238c74c1c8bf5ecd7027a71024",
+      "recordHash": "b17363b13ef7e49b49d8753dfe8b8927fb4fbfc5b5439f780b16d32d4b462c1c"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-107-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "b17363b13ef7e49b49d8753dfe8b8927fb4fbfc5b5439f780b16d32d4b462c1c",
+      "recordHash": "e16cb0657a0354253484c747896cca45dcec0e12e0d457cd4e175d19ce415811"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-108-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "e16cb0657a0354253484c747896cca45dcec0e12e0d457cd4e175d19ce415811",
+      "recordHash": "99602d1fd85eff322c7534b99350ac33c4effbc929430f44919055a4547063e3"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-109-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "99602d1fd85eff322c7534b99350ac33c4effbc929430f44919055a4547063e3",
+      "recordHash": "17d9548a6e6afa040f24115c67e25769296ab439cd2fd0481b50f89d9f3e00a2"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-110-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "17d9548a6e6afa040f24115c67e25769296ab439cd2fd0481b50f89d9f3e00a2",
+      "recordHash": "0fc3ff3ff254ad7376a7b17f70a62fa466521a6e65d0fefb172a8881c0eb3b95"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-111-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "0fc3ff3ff254ad7376a7b17f70a62fa466521a6e65d0fefb172a8881c0eb3b95",
+      "recordHash": "2c988d5819553ababd01294a1e07dfeebd069bf3173abdce414fd69fdce8e24d"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-112-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "2c988d5819553ababd01294a1e07dfeebd069bf3173abdce414fd69fdce8e24d",
+      "recordHash": "10b83559059c5f04aef3c55eced6d3d05ce287fe3b86449a5d9d9935b23c4173"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-113-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "10b83559059c5f04aef3c55eced6d3d05ce287fe3b86449a5d9d9935b23c4173",
+      "recordHash": "f685c329a86e71394ae76c665bb9628714049570dffa80b6c6e2407df6aadf17"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-114-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "f685c329a86e71394ae76c665bb9628714049570dffa80b6c6e2407df6aadf17",
+      "recordHash": "0ad5a2f10422f76f4985f3745e7cf699a292da65315d5a068fa1934d9b65ab32"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-115-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "0ad5a2f10422f76f4985f3745e7cf699a292da65315d5a068fa1934d9b65ab32",
+      "recordHash": "b06219e945bb6c52c9879e0cc7c5c598458c57e2ff7e31d3161f319fba1c03fe"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-116-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "b06219e945bb6c52c9879e0cc7c5c598458c57e2ff7e31d3161f319fba1c03fe",
+      "recordHash": "5068d989fc4a788df9a758d1193cc010d6cad974070baab9be07cbd860dee0ec"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-117-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "5068d989fc4a788df9a758d1193cc010d6cad974070baab9be07cbd860dee0ec",
+      "recordHash": "c374bd82deadc5807006ce49862af8511a2290f7fde8659fece30cdffed5cd7a"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-118-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "c374bd82deadc5807006ce49862af8511a2290f7fde8659fece30cdffed5cd7a",
+      "recordHash": "b187551dd23be4ecb624e20dc12ddd48e531fa5e490bc3e033e3826dac6608d3"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-119-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "b187551dd23be4ecb624e20dc12ddd48e531fa5e490bc3e033e3826dac6608d3",
+      "recordHash": "77219f9b9ea3810a50a48a5fe07e7f1534f1771ef137478791d23373030d96e1"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-120-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "77219f9b9ea3810a50a48a5fe07e7f1534f1771ef137478791d23373030d96e1",
+      "recordHash": "7b959026620ed20705ecfe8b05ade757ae6cf93f75d88798024813ac9436bc35"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-121-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "7b959026620ed20705ecfe8b05ade757ae6cf93f75d88798024813ac9436bc35",
+      "recordHash": "f46c9fe9da651c7cfc0f742edd7eb1256a2d1777e23b3ea18426afb60cb31409"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-122-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "f46c9fe9da651c7cfc0f742edd7eb1256a2d1777e23b3ea18426afb60cb31409",
+      "recordHash": "8f7d60a33288c81f7368b3a485ecc4d1505dfa54cb3a53e2afa07e31f93b4894"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-123-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "8f7d60a33288c81f7368b3a485ecc4d1505dfa54cb3a53e2afa07e31f93b4894",
+      "recordHash": "a9b4d3ff78a2093271f74408e01b4273984d849d680f419de7226494a38cba6d"
+    },
+    {
+      "eventId": "NFL-2026-TRADE-K26-124-FC1",
+      "value": 0,
+      "official": true,
+      "officialSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+      "officialSourceSet": [
+        "https://www.nfl.com/transactions/league/trades/2026/10",
+        "https://www.nfl.com/transactions/league/trades/2026/11"
+      ],
+      "officialRecordsRetrievedAtUtc": "2026-11-12T21:35:02Z",
+      "matchedOfficialTransactions": [],
+      "resolvedAtUtc": "2026-11-12T21:35:02Z",
+      "eventWindowStartUtc": "2026-10-31T04:47:11Z",
+      "eventWindowEndUtc": "2026-11-10T21:00:00Z",
+      "resolutionMethod": "COMPLETE_OFFICIAL_TABLES_WITH_PROSPECTIVE_WINDOW_CHECK",
+      "previousRecordHash": "a9b4d3ff78a2093271f74408e01b4273984d849d680f419de7226494a38cba6d",
+      "recordHash": "73996e427e935b09390b21b6e78bad0d16c06689b4e45c16ed514cc044df75b5"
+    }
+  ],
   "historicalExcluded": [
     {
       "eventId": "HIST-K26-001",

@@ -31,6 +31,13 @@ This public directory groups existing website pages. Research status and timesta
 
 ## Forecasting
 
+- [NFC East title odds and dated updates](https://kahrelum.com/forecasting/nfc-east-2026)
+- [NFC East original simulation JSON](https://kahrelum.com/forecasting/nfc-east-title-2026-11-12.json)
+- [NFC East November 15 updated simulation JSON](https://kahrelum.com/forecasting/nfc-east-title-2026-11-15-post-sf.json)
+
+- [100-Forecast Prospective Challenge · Audit Pending | KAHRELUM](https://kahrelum.com/forecasting/100-forecast-challenge)
+- [100-Forecast v1.4 Public JSON | KAHRELUM](https://kahrelum.com/forecasting/100-forecast-v1.4.json)
+
 - [Seven Prospective Forecasts, October–November 2026: KAHRELUM Calibration (Brier 0.1444)](https://kahrelum.com/insights/calibration-oct-nov-2026)
 
 - [Forecasting & Intelligence | KAHRELUM](https://kahrelum.com/forecasting)
@@ -116,3 +123,6 @@ These files are public summaries of existing pages, not new verification of hist
 - [Nvidia and Megaspeed investigation](https://kahrelum.com/ai-discovery/nvidia-chip-custody.md)
 
 These are navigation and terminology documents rather than new historical evidence verification or performance scores.
+- [Malik Beasley federal sentencing forecast, prospective 2026-11-12](https://kahrelum.com/insights/malik-beasley-sentencing-2026): 62% subjective probability of at least 12 months, original source custody, court settlement rules, status OPEN/UNSCORED.
+
+- [MQA-001: The $42 Morgan-Dollar Quote](https://kahrelum.com/insights/morgan-dollar-quote) — synthetic decision-control demonstration.
