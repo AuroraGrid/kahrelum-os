@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Dave Manuel",
+  "sourceUrl": "https://www.davemanuel.com/2026-midterm-forecast.php",
+  "retrievedAtUtc": "2026-11-02T23:53:11.5015886Z",
+  "sourceUpdateText": "last updated November 2, 2026, 6:45 p.m. ET",
+  "directHttpStatus": 200,
+  "custodyRepresentation": "FIRST_PARTY_HTTP_RESPONSE_UTF8_NOT_EXACT_WIRE_BYTES",
+  "directResponseUtf8Bytes": 273496,
+  "rawSha256": "6effdc5b871f25a7c3daddb56e6a58d18167a02c4a9ab2fd060f56c8e3005de0",
+  "observations": {
+    "houseDemocraticControlPct": 94.0,
+    "senateDemocraticControlPct": 73.0,
+    "houseDemocraticSeatsProjectedMedian": 235,
+    "senateDemocraticSeatsProjectedMedianIncludingAlignedIndependents": 52,
+    "houseDemocraticSeats90PctInterval": [217, 258],
+    "senateRepublicanSeats90PctInterval": [43, 52],
+    "houseControlThreshold": 218,
+    "senateControlThreshold": 51
+  },
+  "changeFromPriorAdmittedEdition": {
+    "edition": {"from": "November 2, 2026, 4:45 p.m. ET", "to": "November 2, 2026, 6:45 p.m. ET"},
+    "houseDemocraticControlPct": {"from": 92.0, "to": 94.0},
+    "senateDemocraticControlPct": {"from": 72.0, "to": 73.0},
+    "houseDemocraticSeatsProjectedMedian": {"from": 233, "to": 235},
+    "senateDemocraticSeatsProjectedMedianIncludingAlignedIndependents": {"from": 52, "to": 52},
+    "houseDemocraticSeats90PctInterval": {"from": [215, 256], "to": [217, 258]},
+    "senateRepublicanSeats90PctInterval": {"from": [43, 52], "to": [43, 52]}
+  },
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "providerUsedByScript": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "schema": "kahrelum.prospective_forecast.v1",
+  "forecast_id": "KAHRELUM-NBA-MB-20261112-V1",
+  "forecast_title": "Malik Beasley: first federal sentencing term",
+  "prepared_date_utc": "2026-11-12",
+  "original_publication_timestamp": "Earliest GitHub server-recorded commit containing this complete original JSON; no earlier timestamp claimed",
+  "status": "OPEN_PROSPECTIVE_JUDGMENT",
+  "case_authority": "United States v. Beasley et al., U.S. District Court, Eastern District of New York, No. 26-CR-190 (LDH)",
+  "primary": {
+    "question": "At Malik Beasley's FIRST sentencing in EDNY case 26-CR-190, will the judge impose at least 12 months of federal imprisonment?",
+    "probability_yes": 0.62,
+    "threshold_months": 12,
+    "expiry_review_date": "2028-12-31",
+    "settlement_yes": "The initial sentence in the cited federal case imposes a term of imprisonment of 12 months or longer, as pronounced in court and corroborated by the written judgment or amended judgment clarifying that original pronouncement.",
+    "settlement_no": "The initial sentencing judgment imposes less than 12 months of imprisonment, including probation, a fine, supervised release, home detention without imprisonment, time served that is explicitly shorter than 12 months, or 0 months.",
+    "pending_if": "No sentence has been imposed by 2028-12-31, the sentencing record is not independently obtainable, or there is an unresolved conflict between oral pronouncement and docket record. Do not treat delay as a NO or silently shift the deadline.",
+    "void_if": "The prosecution ends without a sentencing judgment, including complete dismissal before sentencing. Report VOID, not a win, unless a later initial sentencing restores scoreability under a documented independent adjudication rule.",
+    "excludes": "The 2021 state sentence, pretrial confinement counted only as a separate detention measure, probation, supervised release, restitution, fines, and predictions about actual time served or release dates.",
+    "preferred_sources": [
+      "Court's original sentencing transcript or minute entry",
+      "Federal judgment in E.D.N.Y. docket 26-CR-190",
+      "Official Department of Justice release that cites the judge's sentence"
+    ],
+    "scoring": "Binary Brier: (0.62 - outcome)^2 on the first independently verified initial sentencing outcome only; score 0.3844 on NO and 0.1444 on YES. No score while PENDING or VOID."
+  },
+  "secondary_unscored_analysis": {
+    "probability_any_federal_imprisonment": 0.82,
+    "central_judgment_months": 18,
+    "scenario_distribution_pct": {
+      "0_months": 18,
+      "1_to_11_months": 20,
+      "12_to_35_months": 36,
+      "36_to_59_months": 18,
+      "60_plus_months": 8
+    },
+    "note": "All scenario buckets are mutually exclusive and sum to 100%. Probability of >=12 months equals 36%+18%+8%=62%. This is a subjective scenario distribution, not an estimated federal Sentencing Guidelines range."
+  },
+  "source_grid": [
+    {
+      "id": "S1",
+      "type": "PRIMARY_GOVERNMENT",
+      "date": "2026-06-29",
+      "url": "https://www.justice.gov/usao-edny/pr/former-national-basketball-association-players-current-player-agent-and-three-other",
+      "finding": "DOJ confirmed indictment, case number and four alleged counts; allegations not findings of guilt."
+    },
+    {
+      "id": "S2",
+      "type": "REPORTED_COURT_STATUS",
+      "date": "2026-10-27",
+      "url": "https://www.cbssports.com/nba/news/malik-beasley-plea-deal-department-of-justice-illegal-sports-betting/",
+      "finding": "Attorney confirmed agreement to plead guilty; Dec 9 change-of-plea hearing; charges and terms undisclosed."
+    },
+    {
+      "id": "S3",
+      "type": "REPORTED_COURT_STATUS",
+      "date": "2026-10-28",
+      "url": "https://www.latimes.com/sports/story/2026-10-28/malik-beasley-reaches-plea-deal-gambling-lakers",
+      "finding": "EDNY spokesperson confirmed Dec 9 plea hearing; specific count unknown; no sentencing date established."
+    },
+    {
+      "id": "S4",
+      "type": "COMPARABLE_NOT_IDENTICAL",
+      "date": "2026-01-22",
+      "url": "https://www.reuters.com/sports/gambler-sentenced-2-years-prison-nba-betting-scandal--flm-2026-01-22/",
+      "finding": "A gambler in a distinct NBA betting scheme received a two-year prison term; not an appropriate one-to-one sentence guideline."
+    },
+    {
+      "id": "S5",
+      "type": "STATUTORY_TEXT",
+      "date": "2026-11-12",
+      "url": "https://www.law.cornell.edu/uscode/text/18/224",
+      "finding": "Sports bribery statutory maximum five years; other alleged offenses have different exposure; do not equate maxima to expected sentence."
+    },
+    {
+      "id": "S6",
+      "type": "GUIDELINES_MANUAL",
+      "date": "2026-11-01",
+      "url": "https://www.ussc.gov/guidelines/2026-guidelines-manual",
+      "finding": "Federal guideline application needs admitted counts and judicial findings that are not yet public."
+    }
+  ],
+  "rationale": {
+    "raise_probability": [
+      "Allegations involve the player personally manipulating multiple games and bribes, potentially viewed as a direct threat to league integrity.",
+      "Plea agreement makes a conviction and sentencing more likely than a trial with uncertain verdict.",
+      "One distinct NBA betting co-conspirator received incarceration, but case-specific comparability is weak."
+    ],
+    "lower_probability": [
+      "Exact plea count, loss attribution, restitution and Sentencing Guidelines stipulations are undisclosed.",
+      "Acceptance of responsibility, potential cooperation and mitigation could substantially lower imprisonment.",
+      "Co-defendant sentencing and Jontay Porter's delayed sentence illustrate timing and individualized sentencing uncertainty."
+    ],
+    "red_team": "A favorable negotiated count, cooperation credit or a below-guidelines judicial variance could produce no custody or less than 12 months; do not mistake the indictment's 20-year statutory maximum for a forecast.",
+    "reforecast_triggers": [
+      "Dec 9 guilty-plea colloquy and any public plea agreement",
+      "Court findings on loss, bribes, criminal history and acceptance of responsibility",
+      "Sentencing submissions or credible prosecutor recommendation",
+      "Sentencing date changes or another defendant's independently confirmed sentence"
+    ]
+  },
+  "methodological_limits": "Independent KAHRELUM analyst judgment, uncalibrated on this case class; not legal advice, a prediction-market quote, evidence of guilt, or an established criminal-sentencing model. Forecast must not be edited after first public GitHub commit; revisions require a separate version and retain adverse outcomes."
+}

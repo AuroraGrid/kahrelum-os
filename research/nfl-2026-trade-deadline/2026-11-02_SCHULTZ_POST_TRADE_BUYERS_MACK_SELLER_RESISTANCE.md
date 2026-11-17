@@ -1,0 +1,32 @@
+# KAHRELUM NFL Trade Deadline | Schultz post-Simmons/post-Buckner buyer continuation and Chargers resistance
+
+Research edition: 2026-11-02 (America/New_York). **This research-date label is NOT the original report timestamp, a public forecast lock, or evidence of a live Firebase update.** Relevant cutoff: November 10, 2026 at 4:00 p.m. America/New_York. No automatic publication or roster/account action.
+
+## FACT (direct official records)
+- NFL November trades register showed **No Transactions Available** on this research pass: https://www.nfl.com/transactions/league/trades/2026/11
+- Official league tracker lists seven 2026 regular-season in-season trades, most recently Jeffery Simmons to Chicago on October 29; San Francisco acquired DeForest Buckner October 27. Neither is a future candidate: https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season
+- NFL original October 15 account reports Khalil Mack's one-year **$18 million** 2026 contract and no no-trade clause, while quoting Mack affirming commitment to the Chargers: https://www.nfl.com/news/khalil-mack-keeps-faith-in-chargers-amid-trade-buzz-i-m-still-ring-chasing-here
+
+## NEW REPORT / ATRIBUTION, NOT CONFIRMED DEAL
+- **2026-11-02 22:30 UTC (17:30 EST):** Lester A. Wiltfong Jr., Windy City Gridiron, published a contemporaneous account of Jordan Schultz speaking **that day** with Ryan Clark on **The Pivot**. Schultz reportedly said the 49ers **remain interested in a receiver and pass rusher** and the Bears **remain interested in another pass rusher and secondary help** despite already trading for Buckner/Simmons respectively. He described continuing Khalil Mack interest in both clubs. This is attributable buyer-market reporting; **no verified player-specific new offer/call, asking price, agreement or acceptance was established**.
+- Primary/original linked Schultz post: https://x.com/Schultz_Report/status/2117353855902191705 ; direct retrieval returned HTTP 403, so exact audio/video was **NOT independently replayed**. Original-post time is **UNVERIFIED** (the report was published Nov 2).
+- Dated secondary transcription: https://www.windycitygridiron.com/chicago-bears-rumors/126691/nfl-trade-deadline-rumors-bears-want-pass-rush-and-secondary-help-khalil-mack-chargers-49ers
+- **Contrary seller evidence:** The same article links Adam Schefter's Nov 2 remarks that the Chargers **have not indicated willingness to trade players**. Original Pat McAfee Show link https://x.com/PatMcAfeeShow/status/2117314973244477914 returned HTTP 403; this remains a single chain of dated secondary attribution. Earlier Pelissero Oct 17 reporting said the Chargers rejected trade approaches: https://www.nbcsports.com/fantasy/football/player-news/2026-10-17/pelissero-chargers-reject-trades-not-planning-to-sell . Separately Jonathan Jones' Oct 31/Nov 1 Chargers resistance was secondarily quoted at https://athlonsports.com/nfl/los-angeles-chargers/analyst-chargers-trade-stance-confounded-nfl-teams .
+
+## Candidate/status treatment
+- **Khalil Mack (LAC EDGE):** prospective destination candidates CHI and SF remain **REPORT/INFERENCE** via Schultz; LAC seller stance **RESISTING** and contradicted buyer buzz. KAHRELUM public Oct 30 conversation-recovered provisional 8% overall anywhere is **not revised** in this edition; latest independently validated new standalone numerical forecast **UNPRICED**. Acquiring-team 2026 salary/cap obligation **UNKNOWN** (no proven proration/guarantee allocation). Do not misstate a Mack-specific verified 2026 offer.
+- **Josh Sweat (ARI EDGE):** historical provisional overall 39% maintained; **do not** convert team-category demand into an ARI-specific offer or new destination probability.
+- **Unspecified Chicago secondary targets, San Francisco edge/receiver targets:** **UNPRICED / ORIGINAL_REPORT_ATTRIBUTED_UNREPLAYED**, no player-identity-specific inquiry established.
+- **Already-traded Simmons/Buckner:** CONFIRMED_TRADE, already resolved; historical outreach or interest is NOT eligible for a fresh 2026 forecast.
+
+## Other November 2 controls, no new candidate lock
+- Giants coach John Harbaugh retrospectively acknowledged leaving Tennessee owner Amy Adams Strunk a message concerning *already-traded* Jeffery Simmons, and publicly described willingness to explore trade calls while cautioning draft capital and cap limits; Ed Valentine, Big Blue View, published **22:36 UTC / 17:36 EST**: https://www.bigblueview.com/new-york-giants-news/178333/john-harbaugh-nfl-trade-deadline-team-open-for-any-call-will-make-any-call . No contemporaneous new Giants offer or named still-available target established, and an unanswered message is not a negotiated offer. Original team press-conference recording was not independently obtained.
+- Mike Sando's Nov 2 The Athletic article reportedly said unnamed Colts players want trades, per Bleacher Report on Nov 2: https://bleacherreport.com/articles/25528406-colts-players-openly-or-privately-hoping-trade-amid-jonathan-taylor-rumors-says-nfl-insider ; original article https://www.nytimes.com/athletic/7746879/2026/11/02/nfl-trade-deadline-chiefs-bills-afc/ was inaccessible. **Do not infer Jonathan Taylor requested a trade or that any named player made such a request.**
+
+## FORECAST / NFL / FANTASY
+- **No KAHRELUM overall single-point probability revised**: neither a verified player-specific new bid nor an authenticated seller reversal. Public board dated October 30 remains an old snapshot. No attempt to silently overwrite it or its `asOf`.
+- A completed Mack or other edge acquisition could enhance Chicago/SF pass rush or change IDP roles, while SF receiver acquisition could redistribute target opportunities. Until official transaction, **no player start/sit action**.
+- **Brier: N/A**. This record is new research, not an independently timestamped retroactive forecast, and cannot certify previously recalled probabilities.
+
+## SOURCEGRID coverage & next
+Checked NFL official November trades and in-season tracker; the original-link addresses (both X pages returned 403); contemporaneous WCG Nov 2 report; prior Pelissero/Chargers refusal; NFL original Mack contract/player stance; dated Giants coach report; and Colts anonymous-source attribution. This is NOT a full 32-team, every insider, radio, agent, show or podcast sweep. Next checks: obtain original Schultz/The Pivot clip and Schefter/Pat McAfee audio; verify any Chargers GM reversal; establish *player-specific* offers and prices, and official transaction filing.

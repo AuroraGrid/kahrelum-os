@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "On Point Politics",
+  "sourceUrl": "https://onpointpolitics.us/forecast",
+  "retrieval": {
+    "retrievedAtUtc": "2026-11-03T00:37:17.3501732Z",
+    "cachePolicy": "Fresh first-party HTTPS retrieval",
+    "representation": "FIRST_PARTY_HTTP_RESPONSE_UTF8_NOT_EXACT_WIRE_BYTES"
+  },
+  "publisherEdition": {
+    "displayedUpdate": "Nov. 2, 2026",
+    "dateModified": "2026-11-02T08:00:00-04:00",
+    "timestampInterpretation": "The page exposes only a Nov. 2 display date and an unchanged 8:00 AM ET dateModified value. The changed model fields are admitted prospectively at retrieval time, not backdated to that metadata timestamp."
+  },
+  "observations": {
+    "simulations": 2000,
+    "houseDemocraticControlPctDisplayed": 90.9,
+    "houseDemocraticControlPctExact": 90.94,
+    "houseAverageDemocraticSeatsDisplayed": 255.0,
+    "houseAverageDemocraticSeatsExact": 255.12,
+    "houseMedianDemocraticSeats": 254,
+    "houseInterval80DemocraticSeats": [219, 294],
+    "houseControlThreshold": 218,
+    "senateDemocraticControlPctDisplayed": 80.4,
+    "senateDemocraticControlPctExact": 80.39,
+    "senateAverageDemocraticSeatsDisplayed": 55.0,
+    "senateAverageDemocraticSeatsExact": 54.54,
+    "senateMedianDemocraticSeats": 55,
+    "senateInterval80DemocraticSeats": [48, 60],
+    "senateControlThreshold": 51
+  },
+  "custody": {
+    "httpStatus": 200,
+    "utf8Bytes": 951561,
+    "sha256": "a354366a1c377577ef30becacee082e5d7d04e7ed5d15e87e3a64fce84dcc7b9"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "houseDemocraticControlPctDisplayed": {"from": 97.5, "to": 90.9},
+    "houseDemocraticControlPctExact": {"from": 97.52, "to": 90.94},
+    "houseAverageDemocraticSeatsExact": {"from": 252.69, "to": 255.12},
+    "houseMedianDemocraticSeats": {"from": 251, "to": 254},
+    "houseInterval80DemocraticSeats": {"from": [227, 281], "to": [219, 294]},
+    "senateDemocraticControlPctDisplayed": {"from": 88.5, "to": 80.4},
+    "senateDemocraticControlPctExact": {"from": 88.54, "to": 80.39},
+    "senateAverageDemocraticSeatsExact": {"from": 54.85, "to": 54.54},
+    "senateMedianDemocraticSeats": {"from": 55, "to": 55},
+    "senateInterval80DemocraticSeats": {"from": [50, 59], "to": [48, 60]}
+  },
+  "interpretation": "GENUINE_MODEL_NUMERICAL_UPDATE_PROSPECTIVELY_ADMITTED",
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "providerUsedByScript": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  }
+}

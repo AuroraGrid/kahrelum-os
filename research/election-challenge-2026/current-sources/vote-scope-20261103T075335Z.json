@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Vote-Scope",
+  "sourceUrl": "https://vote-scope.com/en/us/house/",
+  "retrieval": {
+    "requestStartedAtUtc": "2026-11-03T07:53:32.9498885Z",
+    "retrievedAtUtc": "2026-11-03T07:53:35.3392101Z",
+    "representation": "FIRST_PARTY_HTTP_RESPONSE_UTF8_NOT_EXACT_WIRE_BYTES"
+  },
+  "publisherEdition": {
+    "updated": "November 3, 2026",
+    "preciseSourceUpdateTimeExposed": false,
+    "stage": "LIVE_ELECTION_DAY_PAGE_WITH_FORECAST_FIELDS"
+  },
+  "observations": {
+    "houseDemocraticControlPct": 96.0,
+    "houseRepublicanControlPct": 4.0,
+    "houseProjectedDemocraticSeats": 235,
+    "houseProjectedRepublicanSeats": 200,
+    "houseDemocraticSeatRange": [224, 264],
+    "houseRepublicanSeatRange": [171, 211],
+    "houseSimulationMedianDemocraticSeats": 242,
+    "houseSimulationMedianRepublicanSeats": 193,
+    "houseControlThreshold": 218,
+    "polls": 719,
+    "simulations": 200000,
+    "senateDemocraticControlPct": null,
+    "senateDemocraticSeats": null
+  },
+  "custody": {
+    "httpStatus": 200,
+    "responseUtf8Bytes": 1094897,
+    "responseSha256": "663c329819cd214147fb1e99966cdac9982e22bf2bb3dfcc8fb4d9573c5f673c"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "priorReceiptPath": "research/election-challenge-2026/current-sources/vote-scope-20261103T020200Z.json",
+    "houseDemocraticControlPct": {"from": 97.0, "to": 96.0},
+    "houseProjectedDemocraticSeats": {"from": 238, "to": 235},
+    "houseSimulationMedianDemocraticSeats": {"from": 245, "to": 242},
+    "houseDemocraticSeatRange": {"from": [226, 267], "to": [224, 264]},
+    "polls": {"from": 718, "to": 719},
+    "simulations": {"from": 50000, "to": 200000}
+  },
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "providerUsedByScript": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  },
+  "admissionNote": "The page exposes only a November 3 edition date, so the changed fields are admitted prospectively at the November 3 07:53 UTC retrieval time and are not backdated. The forecast fields are kept distinct from the page's live-results stage. Vote-Scope reports no numerical Senate top line on this page."
+}

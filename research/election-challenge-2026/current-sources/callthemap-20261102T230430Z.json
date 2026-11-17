@@ -1,0 +1,43 @@
+{
+  "provider": "CalltheMap",
+  "houseSourceUrl": "https://www.callthemap.com/house",
+  "senateSourceUrl": "https://www.callthemap.com/senate",
+  "retrievedAtUtc": "2026-11-02T23:04:30.8717208Z",
+  "sourceUpdateText": "Forecast as of November 2, 2026",
+  "custodyRepresentation": "FIRST_PARTY_HTTP_RESPONSES_UTF8_NOT_EXACT_WIRE_BYTES",
+  "responses": {
+    "house": {
+      "observedAtUtc": "2026-11-02T23:04:30.1006308Z",
+      "directHttpStatus": 200,
+      "responseUtf8Bytes": 1262101,
+      "rawSha256": "1849419f8babf384378d0743d4d8f45285a689d5e34e7044d6d68766d557ccc1"
+    },
+    "senate": {
+      "observedAtUtc": "2026-11-02T23:04:30.8711136Z",
+      "directHttpStatus": 200,
+      "responseUtf8Bytes": 441058,
+      "rawSha256": "af4c943a0fccac094eeb06d01e69553d2130c741681f4d8f07abd15847530fa8"
+    }
+  },
+  "fields": {
+    "houseDemocraticControlPct": 83.0,
+    "houseDemocraticSeatsExpected": 235.7,
+    "houseDemocraticSeatsMedian": 234,
+    "houseDemocraticSeats80PctInterval": [212, 260],
+    "houseControlThreshold": 218,
+    "senateDemocraticControlPct": 60.0,
+    "senateDemocraticAlignedSeatsExpected": 51.4,
+    "senateDemocraticAlignedSeatsMedian": 52,
+    "senateDemocraticSeats80PctInterval": [46, 56],
+    "senateControlThreshold": 51,
+    "senateExpectedAlignedIndependents": 2.4
+  },
+  "custodyCorrection": {
+    "priorReceiptPath": "research/election-challenge-2026/current-sources/callthemap-20261102T225235Z.json",
+    "priorHouseRawSha256": "1849419f8babf384378d0743d4d8f45285a689d5e34e7044d6d68766d557ccc1",
+    "priorSenateRawSha256": "af4c943a0fccac094eeb06d01e69553d2130c741681f4d8f07abd15847530fa8",
+    "priorRecordedSenateFields": "59% control; 51.3 expected Democratic-aligned seats",
+    "classification": "PROSPECTIVE_SELECTED_FIELD_CORRECTION_FROM_IDENTICAL_PRESERVED_RESPONSE_BYTES"
+  },
+  "admissionNote": "The current direct first-party responses parse to 83% Democratic House control, 235.7 expected Democratic House seats, 60% Democratic Senate control and 51.4 expected Democratic-aligned Senate seats. Their hashes are identical to the responses preserved at 22:52 UTC, whose selected Senate fields were taken from a lagging rendered view and recorded as 59% and 51.3. The earlier receipt remains unchanged; this successor corrects the selected-field interpretation prospectively without backdating it. CalltheMap is not an input to scripts/refresh-election-projections.py, so no new KAHRELUM probability edition was created."
+}

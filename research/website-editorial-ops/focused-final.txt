@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: current election source receipt checkout keeps canonical LF hash bytes
+ok 1 - current election source receipt checkout keeps canonical LF hash bytes
+  ---
+  duration_ms: 54.2302
+  type: 'test'
+  ...
+# Subtest: C7 patch consumes the complete pending sentence without an orphaned suffix
+ok 2 - C7 patch consumes the complete pending sentence without an orphaned suffix
+  ---
+  duration_ms: 0.6947
+  type: 'test'
+  ...
+# Subtest: C7 patch repairs the exact observed production orphan without touching surrounding evidence
+ok 3 - C7 patch repairs the exact observed production orphan without touching surrounding evidence
+  ---
+  duration_ms: 0.1344
+  type: 'test'
+  ...
+# Subtest: completion patch also repairs observed live suffix idempotently
+ok 4 - completion patch also repairs observed live suffix idempotently
+  ---
+  duration_ms: 0.4196
+  type: 'test'
+  ...
+# Subtest: unexpected duplicate C7 claim blocks rather than making a partial correction
+ok 5 - unexpected duplicate C7 claim blocks rather than making a partial correction
+  ---
+  duration_ms: 0.2373
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 158.0331

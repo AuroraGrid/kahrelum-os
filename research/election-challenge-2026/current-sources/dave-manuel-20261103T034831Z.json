@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Dave Manuel",
+  "sourceUrl": "https://www.davemanuel.com/2026-midterm-forecast.php",
+  "retrievedAtUtc": "2026-11-03T03:48:31.6555494Z",
+  "sourceUpdateText": "last updated November 2, 2026, 10:45 p.m. ET",
+  "directHttpStatus": 200,
+  "custodyRepresentation": "FIRST_PARTY_HTTP_RESPONSE_UTF8_NOT_EXACT_WIRE_BYTES",
+  "directResponseUtf8Bytes": 273484,
+  "rawSha256": "bfc234dd01db69172b39914a1064e2cdf2f09487ea3990c4212231e779acd537",
+  "observations": {
+    "houseDemocraticControlPct": 93.0,
+    "senateDemocraticControlPct": 74.0,
+    "houseDemocraticSeatsProjectedMedian": 234,
+    "senateRepublicanSeatsProjectedMedian": 47,
+    "senateDemocraticSeatsProjectedMedianIncludingAlignedIndependents": 53,
+    "publisherDisplayedSenateDemocraticMedian": 52,
+    "houseDemocraticSeats90PctInterval": [216, 257],
+    "senateRepublicanSeats90PctInterval": [43, 52],
+    "houseControlThreshold": 218,
+    "senateControlThreshold": 51,
+    "publisherGenericBallotDemocraticPct": 51.7,
+    "publisherGenericBallotRepublicanPct": 43.6,
+    "publisherGenericBallotMarginDemocratic": 8.2
+  },
+  "seatSemanticsNote": "The publisher states that the projected medians are taken separately for each side, so its displayed 47 Republican and 52 Democratic Senate medians need not sum to 100. The descriptive comparison retains the previously used 100-minus-Republican median transformation as 53 Democratic-aligned seats and records the publisher's displayed 52 separately.",
+  "changeFromPriorAdmittedEdition": {
+    "edition": {"from": "November 2, 2026, 9:45 p.m. ET", "to": "November 2, 2026, 10:45 p.m. ET"},
+    "houseDemocraticControlPct": {"from": 93.0, "to": 93.0},
+    "senateDemocraticControlPct": {"from": 74.0, "to": 74.0},
+    "houseDemocraticSeatsProjectedMedian": {"from": 234, "to": 234},
+    "senateRepublicanSeatsProjectedMedian": {"from": 47, "to": 47},
+    "senateDemocraticSeatsProjectedMedianIncludingAlignedIndependents": {"from": 53, "to": 53},
+    "houseDemocraticSeats90PctInterval": {"from": [216, 257], "to": [216, 257]},
+    "senateRepublicanSeats90PctInterval": {"from": [43, 52], "to": [43, 52]},
+    "publisherGenericBallotRepublicanPct": {"from": 43.5, "to": 43.6}
+  },
+  "interpretation": "NEW_PUBLISHER_EDITION_WITH_UNCHANGED_TRACKED_CHAMBER_PROJECTIONS",
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "providerUsedByScript": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  }
+}

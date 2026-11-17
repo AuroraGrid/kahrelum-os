@@ -1,0 +1,31 @@
+# KAHRELUM NFL TRADE SOURCEGRID | 2026-11-06 | Ravens–Jaguars postgame conditional assessment
+
+**Class:** append-only **FACT / REPORT / INFERENCE / FORECAST** check. This is not a trade announcement, not an original report of a Ravens front-office decision, not a replacement for the historical October 30 public JSON snapshot, and not Firebase deployment. The prospective probability version preserved below is unchanged from the independently inspectable November 5 GitHub research commit. This record is not a new or additional independently scored binary forecast.
+
+## FACT: November 5 game result
+- The Baltimore Ravens' own **November 5, 2026, 11:16 p.m. ET** recap verifies that Jacksonville defeated Baltimore **33–10**, reducing Baltimore to **4–5** and four consecutive losses. Source: https://www.baltimoreravens.com/news/ravens-jaguars-game-recap-routed-week-9-2026 .
+- The independent AP game story, **November 5, 2026, 11:12 p.m. EST**, also verifies the 33–10 result and 4–5 record: https://www.winnipegfreepress.com/sports/football/nfl/2026/11/05/jaguars-thrash-the-depleted-ravens-33-10-for-their-5th-win-in-6-games .
+- The official NFL November 2026 trade register still returned **No Transactions Available** at this check: https://www.nfl.com/transactions/league/trades/2026/11 . This is a register observation; the web could lag an actual announcement. Brissett Arizona→Baltimore remains **REPORTED_FINALIZING**, NOT a league-confirmed transaction, in NFL's original Nov 4 article https://www.nfl.com/news/jacoby-brissett-trade-ravens-cardinals and Baltimore's Nov 5 club coverage https://www.baltimoreravens.com/news/ravens-trade-jacoby-brissett-pundits-reaction-love-jaguars-joe-fagnano-2026 .
+- The formal 2026 trade deadline is November 10, 4:00 p.m., New York time: https://www.nfl.com/news/nfl-important-dates .
+
+## REPORT: prior original conditional, not new offer
+- **November 4** ESPN insider Dan Graziano discussed Derrick Henry as a *possible* trade watch, expressly contingent in part on Baltimore losing to Jacksonville and slipping to 4–5. He did **not** report a Ravens decision to sell, actual accepted Henry offer, or a verified Patriots/Giants inquiry. His cautiously framed comment is reproduced by the Nov 4 AL.com report https://sports.yahoo.com/articles/why-thursday-night-baltimore-ravens-173601958.html , and the original ESPN writers' November 4 syndicated article is https://abc7news.com/post/nfl-week-9-latest-intel-buzz-questions-fantasy-tips-trade-deadline-news/20014730/ . Exact original quote context is not recast as a front-office report.
+- **November 5 at 6:15 p.m. EST:** A to Z Sports original sources attribute *interest* to New England and New York Giants, but no documented calls, bids, Baltimore permission or formal offers. Source: https://atozsports.com/nfl/baltimore-ravens-news/derrick-henry-trade-patriots-giants-ravens-deadline/ . This is the **pre-existing** underlying report, already captured at commit https://github.com/AuroraGrid/kahrelum-os/commit/c5aa4214d3f1a0c0734ef9cc55e375f971b298c5 ; not a new November 6 report.
+
+## INFERENCE: one conditional realized, no seller-status proof
+- The **4–5** condition Graziano considered has now occurred. Baltimore's 23-point loss adds bearish evidence regarding remaining 2026 contention. However, the Ravens were already heavy underdogs and the November 5 estimate was set with this foreseeable defeat in view. Avoid double-counting an expected game outcome as a fresh five-point surprise.
+- **Counterevidence:** reported Brissett acquisition suggests the front office still intends to compete. No club or agent has verified that Baltimore is now marketing Henry. No independent new inquiry/offer is verified after the game.
+- Separate **team-eligibility/record** confirmation from an actual **trading posture**. The report's conditional is NOT a certified Henry-sale signal, and neither Patriots nor Giants is a confirmed bidder. Salary/cap treatment remains from the earlier original ledger: https://overthecap.com/player/derrick-henry/4758 ; the 2026 full-year cap charge is not the buying club's prorated liability, exact amount UNKNOWN.
+
+## FORECAST: unchanged; material trigger reviewed
+- Derrick Henry, **BAL RB**: **17%** for official trade to any NFL club after the independently committed November 5 prospective forecast and by Nov 10 2026 4 p.m. EST; **0 percentage-point revision** in this assessment. Prior **12%** version remains independently committed and is not overwritten. Named team interest from Nov 5: NE / NYG **ORIGINAL_REPORT_INTEREST_ONLY**; **NO VERIFIED OFFERS**. This 17% single-point estimate is judgment, not betting-market probability.
+- Jacoby Brissett, **ARI QB**: **98%** for proposed BAL transaction, pending club/league completion. Reported destination BAL, unverified official compensation. No reprice.
+- Grover Stewart, **IND DT**: latest prospectively committed estimate **61%**, unchanged. Reported Nov 5 Meirov offer lacks named bidder and exact compensation.
+- **Fantasy:** only a completed Henry or Brissett move would justify a trade-driven revision of team usage estimates. Individual start/sit and injuries remain with the separate watch. No roster/account action.
+
+## Next SOURCEGRID priority / custody
+1. Direct Baltimore GM/coach/agent original statements after the loss on whether Henry is offered or retained, plus independently verified NE/NYG contacts.
+2. NFL and both clubs' official Brissett transaction and compensation; do not promote earlier proposed trade to CONFIRMED_TRADE.
+3. Colts' original offer/ask sources, Aiyuk's scheduled Nov 6 meeting outcome, new league trade-register activity, and new buyers across 32 teams. This check does not claim exhaustive listening across every local station, all named reporters or all 32 club events.
+
+**Scoring protection:** No Brier outcome or calibration score is generated. Prior Harrison/Nelson/Buckner conversations lack authenticated before-event timestamps and Simmons has no verified earlier pretrade probability. Preserve immutable forecast commits and event horizons. No public board JSON changes, Firebase production claims, social posting, outreach or NFL/fantasy transactions.

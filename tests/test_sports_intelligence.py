@@ -85,6 +85,27 @@ class SportsIntelligenceTests(unittest.TestCase):
         si.ingest(si.parse_time("2026-11-01T12:05:00Z"), self.fixtures)
         self.assertEqual(self.read("status")["sourcesFailed"], 1)
 
+    def test_official_november_separate_year_and_month_headings(self):
+        page = b'<h1>2026 NFL Transactions</h1><h2>Trades &mdash; November</h2><table class="d3-o-table"><tbody></tbody></table>'
+        integration = {"id": "NFL_TRANSACTIONS", "url": "https://www.nfl.com/transactions/league/trades/2026/11"}
+        self.assertEqual(si.parse_official_transactions(page, integration, "2026-11-05T20:00:00Z"), [])
+
+    def test_official_november_explicit_no_results_without_table(self):
+        page = b'<h1>2026 NFL Transactions</h1><h2>Trades &mdash; November</h2><h2>No Transactions Available</h2><p>No Results.</p>'
+        integration = {"id": "NFL_TRANSACTIONS", "url": "https://www.nfl.com/transactions/league/trades/2026/11"}
+        self.assertEqual(si.parse_official_transactions(page, integration, "2026-11-05T20:00:00Z"), [])
+
+    def test_official_month_rejects_wrong_year_month_and_missing_results(self):
+        integration = {"id": "NFL_TRANSACTIONS", "url": "https://www.nfl.com/transactions/league/trades/2026/11"}
+        pages = (
+            b'<h1>2026 NFL Transactions</h1><h2>Trades &mdash; January</h2><h2>No Transactions Available</h2><p>No Results.</p>',
+            b'<h1>2025 NFL Transactions</h1><h2>Trades &mdash; November</h2><h2>No Transactions Available</h2><p>No Results.</p>',
+            b'<h1>2026 NFL Transactions</h1><h2>Trades &mdash; November</h2><p>Error retrieving transactions.</p>',
+        )
+        for page in pages:
+            with self.subTest(page=page[:75]), self.assertRaises(ValueError):
+                si.parse_official_transactions(page, integration, "2026-11-05T20:00:00Z")
+
     def test_forecast_revision_preserves_original_lock(self):
         lock = argparse.Namespace(event_id="TEST-1", player="Example Player", probability="0.40", question="Will Example Player be traded before the deadline?", deadline="2026-11-10T21:00:00Z", cutoff="2026-10-30T18:00:00Z", published_at="2026-10-30T18:01:00Z", commit="a" * 40, evidence=["https://example.com/original"], counterargument="No verified offer")
         si.lock_forecast(lock)

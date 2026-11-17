@@ -1,0 +1,25 @@
+# KAHRELUM SOURCEGRID | Amani Hooker contract source reconciliation | November 5, 2026
+
+**Purpose:** Append-only correction/clarification to the earlier 2026-11-05 Hooker seller-resistance report. This is **NOT** a new trade offer, a new contract, a confirmed trade, a price revision, or evidence of a live buyer. First independently inspectable custody is the resulting GitHub commit timestamp; do not treat this document date as a historical prediction lock.
+
+## FACT | preserved prior reporting versus contract schedule
+
+- **Original team confirmation**, Tennessee Titans, September 6, 2025: Hooker signed a multiyear extension; the club did not publicly specify financial terms in the release. https://www.tennesseetitans.com/news/titans-sign-safety-amani-hooker-to-a-multi-year-contract-extension
+- **Original contemporary agent-attributed financial headline**, September 6, 2025: reporting attributed to agent Jack Bechta a **three-year $48.6 million** extension and **$29 million total guarantees**. Contemporaneous Field Level Media original: https://fieldlevelmedia.com/news/titans-s-amani-hooker-inks-3-year-48-6m-extension/ . NFL September 6 roundup likewise: https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-sept-6 . The earlier November 5 KAHRELUM note also cited a **$48.8 million** figure via CBS's September 6, 2025 RotoWire item, https://www.cbssports.com/fantasy/football/news/titans-amani-hooker-inks-extension/ . These are **contemporary reported headline valuations**, not independently authenticated remaining 2026 buyer obligations. Preserve the $48.6m versus $48.8m difference rather than silently picking one.
+- **Current detailed contract schedule**, OverTheCap inspected November 5, 2026: https://overthecap.com/player/amani-hooker/7907 . It classifies the **new-money value of the 2025 extension as $40.5m ($13.5m APY)**, **total guaranteed $29m**, fully guaranteed at signing approximately **$24.856m**, and 2026 **base salary $8.4m**, **Titans 2026 cap charge $11,957,500**, **2026 cash payout $8.91m**. It lists 2027 base salary $9.57m, 2028 base salary $11.79m, with bonus and guarantee conditions. These are contract schedule entries, **not** a claim that acquiring club would assume Tennessee's full 2026 cap charge or full annual cash payout.
+- The exact reason the 2025 **$48.6m/$48.8m** agent/press valuation differs from OTC **$40.5m new-money** is **not established from inspected sources**. It could reflect reporting assumptions, incentives, or different valuation definitions, but KAHRELUM does not assert any of those without contract evidence.
+
+## REPORT / INFERENCE / FORECAST custody
+- November 4 Jeremy Fowler ESPN report (only verified through dated Titans Wire attribution in the preceding file) says Tennessee **does not plan to trade** Hooker despite unnamed expressions of interest. No first-party named buyer, submitted offer, asking price, or definitive no-trade commitment authenticated.
+- **INFERENCE:** The OTC detail sharpens evaluation of contractual obstacles; no acquiring-club proration or cost should be quoted from a headline extension amount. The actual remaining transferable 2026 salary, vested payments, and guarantees as of a hypothetical precise trade date **remain unverified**.
+- **FORECAST:** KAHRELUM remains **UNPRICED**, unchanged; previous probability null, change N/A. **Status:** ORIGINAL_REPORT_ATTRIBUTED / REPORTED_INTEREST_UNNAMED / SELLER_RESISTING. No named destination. No fantasy change because no transaction.
+- Historical Harrison/Nelson/Buckner forecasts and provisional Brier remain unauthenticated; no scoring additions.
+
+## Run findings and boundaries
+- NFL official November 2026 transactions page, inspected November 5: **No Transactions Available**. https://www.nfl.com/transactions/league/trades/2026/11
+- NFL 2026 in-season trade tracker still last lists October 29 Jeffery Simmons, seven completed deals in season as last checked. https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season
+- Brissett Arizona-to-Baltimore remains **reported finalizing**, compensation and verified acquiring-team cash/cap unknown, existing KAHRELUM 96% unchanged. No independently newly confirmed trade, named inquiry, offer, or five-point probability movement found in this check.
+- Fresh national, regional, and all-eight-division targeted discovery queries were performed, but **not** all 32 first-party club/agent/broadcast archives were listened to or inspected firsthand. The primary Fowler paywalled wording remains unavailable.
+- No public JSON update, Firebase promotion, fantasy transaction, certified scoring entry, or article publication. Preserve original research files unchanged.
+
+**Next triggers:** actual league/club trade confirmation and compensation; first-party named bids; reversal of Tennessee's Hooker no-sale preference; authenticated contract-cost implications relevant to an identified buyer; Aiyuk November 6 reporting and roster action.

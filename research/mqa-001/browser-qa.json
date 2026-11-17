@@ -1,0 +1,45 @@
+{
+  "reviewDate": "2026-11-17",
+  "method": "Authorized Chrome browser via CUA; local HTTP preview; browser user zoom affects non-mobile CSS viewport",
+  "route": "http://127.0.0.1:8765/insights/morgan-dollar-quote",
+  "checks": [
+    {
+      "requestedWidth": 320,
+      "actualInnerWidth": 320,
+      "clientWidth": 320,
+      "scrollWidth": 320
+    },
+    {
+      "requestedWidth": 390,
+      "actualInnerWidth": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390
+    },
+    {
+      "requestedWidth": 768,
+      "actualInnerWidth": 698,
+      "clientWidth": 684,
+      "scrollWidth": 684
+    },
+    {
+      "requestedWidth": 1280,
+      "actualInnerWidth": 1164,
+      "clientWidth": 1150,
+      "scrollWidth": 1150
+    }
+  ],
+  "mainH1": 1,
+  "brokenMainImages": 0,
+  "mainImageIntrinsicDimensions": [
+    1200,
+    630
+  ],
+  "keyboardMenuEnter": "opens, visible focus, no overflow",
+  "screenshotReview": "Desktop and mobile inspected in session. No durable browser screenshot files exported. Original social PNG assets are attached through repository links.",
+  "limits": [
+    "Not a full WCAG certification",
+    "Platform uploader crop confirmation remains pending",
+    "Browser extension injected an unrelated hidden Error 403 heading; main article has exactly one H1",
+    "No Firebase preview or production deployment"
+  ]
+}

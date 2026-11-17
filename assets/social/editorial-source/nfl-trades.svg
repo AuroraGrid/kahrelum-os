@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img">
+<title>KAHRELUM TRADE INTELLIGENCE DESK</title>
+<defs>
+ <pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M0 10 L10 0" stroke="#fff6df" stroke-width=".35" opacity=".3"/></pattern>
+ <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#181514"/><stop offset="100%" stop-color="#1d2120"/></linearGradient>
+</defs>
+<rect x="0" y="0" width="1200" height="630" fill="url(#bg)" />
+<rect x="0" y="0" width="1200" height="8" fill="#ab8044" />
+<rect x="0" y="8" width="558" height="622" fill="#151312" />
+
+<rect x="558" y="8" width="642" height="622" fill="#252521" />
+<rect x="558" y="8" width="642" height="622" fill="url(#hatch)" opacity=".17"/>
+<line x1="560" y1="8" x2="560" y2="630" stroke="#b88c49" stroke-width="2" />
+
+<rect x="620" y="53" width="510" height="520" fill="#162a30" stroke="#4d7776" stroke-width="2"/>
+<rect x="620" y="53" width="510" height="59" fill="#32463f" /><text x="647" y="91" fill="#f7ead2" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="800" letter-spacing="1" >TRANSACTION STATUS BOARD</text>
+<text x="650" y="146" fill="#b6b5a3" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" letter-spacing="2" >OBSERVATION</text><text x="1004" y="146" fill="#b6b5a3" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" letter-spacing="2" >CLASS</text>
+<line x1="646" y1="161" x2="1100" y2="161" stroke="#6b8580" stroke-width="1" />
+<rect x="644" y="177" width="458" height="72" fill="#1d3035" /><rect x="658" y="193" width="7" height="34" fill="#537b66" /><text x="680" y="209" fill="#f4efe3" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="750" letter-spacing="0" >LEAGUE RECORD</text><rect x="985" y="189" width="101" height="30" fill="#537b66" rx="2"/><text x="995" y="209" fill="#141918" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="900" letter-spacing="1" >VERIFIED</text><rect x="644" y="265" width="458" height="72" fill="#1c3132" /><rect x="658" y="281" width="7" height="34" fill="#bc8448" /><text x="680" y="297" fill="#f4efe3" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="750" letter-spacing="0" >ORIGINAL REPORT</text><rect x="985" y="277" width="101" height="30" fill="#bc8448" rx="2"/><text x="995" y="297" fill="#141918" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="900" letter-spacing="1" >REPORTED</text><rect x="644" y="353" width="458" height="72" fill="#1d3035" /><rect x="658" y="369" width="7" height="34" fill="#9e7054" /><text x="680" y="385" fill="#f4efe3" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="750" letter-spacing="0" >PROPOSED DEAL</text><rect x="985" y="365" width="101" height="30" fill="#9e7054" rx="2"/><text x="995" y="385" fill="#141918" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="900" letter-spacing="1" >PENDING</text><rect x="644" y="441" width="458" height="72" fill="#1c3132" /><rect x="658" y="457" width="7" height="34" fill="#8d6a68" /><text x="680" y="473" fill="#f4efe3" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="750" letter-spacing="0" >UNVERIFIED CLAIM</text><rect x="985" y="453" width="101" height="30" fill="#8d6a68" rx="2"/><text x="995" y="473" fill="#141918" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="900" letter-spacing="1" >UNKNOWN</text>
+<text x="650" y="550" fill="#ebc999" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="750" letter-spacing="2" >CUSTODY / NOT RUMOR INFLATION</text>
+
+<text x="58" y="77" fill="#f7f5ed" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="850" letter-spacing="2" >K A H R E L U M</text>
+<text x="58" y="124" fill="#e0a76b" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="800" letter-spacing="1.2" >NFL  /  INTELLIGENCE DESK</text>
+<line x1="58" y1="153" x2="531" y2="153" stroke="#ab8044" stroke-width="2" />
+<text x="58" y="213" fill="#f8f4ec" font-family="Arial,Helvetica,sans-serif" font-size="58" font-weight="850" letter-spacing="0" >TRADE</text><text x="58" y="283" fill="#f8f4ec" font-family="Arial,Helvetica,sans-serif" font-size="58" font-weight="850" letter-spacing="0" >INTELLIGENCE</text><text x="58" y="353" fill="#f8f4ec" font-family="Arial,Helvetica,sans-serif" font-size="58" font-weight="850" letter-spacing="0" >DESK</text>
+<text x="58" y="418" fill="#c9c7c2" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="500" letter-spacing="0" >Official. Reported. Unresolved.</text><text x="58" y="455" fill="#c9c7c2" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="500" letter-spacing="0" >Every source keeps its own status.</text>
+<line x1="58" y1="540" x2="530" y2="540" stroke="#877866" stroke-width="1" />
+<text x="58" y="584" fill="#d0c8b9" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="750" letter-spacing="1" >NFL SOURCEGRID  /  EVIDENCE FIRST</text>
+<rect x="0" y="8" width="8" height="622" fill="#ab8044" />
+</svg>

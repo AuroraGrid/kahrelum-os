@@ -4,7 +4,7 @@
   // Keep the projection shell and its data dependencies on one release generation.
   // The query token prevents an already-open production browser from pairing a new
   // HTML shell with an older cached map bundle or projection payload.
-  const ASSET_VERSION = '20261031-3';
+  const ASSET_VERSION = '20261105-poliwave-reference-1';
   const readJson = (assetPath) => fetch(`${assetPath}?v=${ASSET_VERSION}`, { cache: 'no-store' });
 
   const states = [
@@ -20,6 +20,15 @@
     ['VT','Vermont',2,10],['WA','Washington',3,1],['WI','Wisconsin',3,6],['WV','West Virginia',5,7],['WY','Wyoming',4,3]
   ];
   const stateByCode = Object.fromEntries(states.map(([code,name]) => [code,name]));
+  const POLIWAVE_RESULTS_BASE = 'https://www.poliwave.com/us/live/midterms-2026';
+  // Navigation only. Poliwave licensing does not authorize mirroring compiled results.
+  // Links are stable state/office indexes rather than guessed individual race URLs.
+  function poliwaveRaceUrl(race) {
+    if (!race || !['House','Senate'].includes(race.chamber)
+        || !Object.prototype.hasOwnProperty.call(stateByCode,race.state)) return null;
+    const stateSlug = stateByCode[race.state].toLowerCase().replace(/\s+/g,'-');
+    return `${POLIWAVE_RESULTS_BASE}/${stateSlug}${race.chamber === 'House' ? '/house' : ''}`;
+  }
   let races = [];
   let selectedState = 'ALL';
   let displayLimit = 40;
@@ -197,6 +206,83 @@
           || portrait.imageCheck?.httpStatus !== 200 || !String(portrait.imageCheck?.contentType || '').startsWith('image/')) return null;
       return portrait;
     }
+    if (portrait.identityType === 'CREDITED_COMMONS_PHOTO') {
+      const digest = String(portrait.imageSha256 || '');
+      const lic = portrait.license;
+      const expectedLicense = lic === 'CC0' ? 'https://creativecommons.org/publicdomain/zero/1.0/'
+        : lic === 'CC BY-SA 4.0' ? 'https://creativecommons.org/licenses/by-sa/4.0' : null;
+      const creditFile = String(portrait.identityId || '');
+      if (!expectedLicense || portrait.licenseUrl !== expectedLicense
+          || portrait.bioguideId || portrait.chamber !== 'Senate'
+          || !/^[A-Z]{2}$/.test(portrait.state || '') || portrait.contestId !== portrait.state
+          || !/^File:[\w.%()\-]+\.jpe?g$/i.test(creditFile)
+          || portrait.sourceUrl !== 'https://commons.wikimedia.org/wiki/' + creditFile
+          || portrait.raceId !== 'S-' + portrait.state || portrait.raceSide !== 'left'
+          || portrait.sourceImageUrl !== 'https://midtermsforecast.com/img/cand/S-' + portrait.state + '_left.jpg'
+          || !Number.isSafeInteger(portrait.sourceCandidateId)
+          || !/^[a-f0-9]{64}$/.test(digest)
+          || portrait.url !== '/assets/candidate-portraits/' + portrait.sourceCandidateId + '-' + digest.slice(0,16) + '.jpg'
+          || portrait.imagePath !== portrait.url.slice(1) || !Number.isSafeInteger(portrait.imageBytes)
+          || portrait.imageBytes < 512 || portrait.width !== 96 || portrait.height !== 96
+          || !String(portrait.attribution || '').includes(' / Wikimedia Commons;')
+          || !String(portrait.rightsBasis || '').trim()
+          || !new RegExp('^S\\d' + portrait.state + '\\d{5}$').test(portrait.fecCandidateId || '')
+          || portrait.identitySourceUrl !== `https://www.fec.gov/data/candidate/${portrait.fecCandidateId}/?cycle=2026`
+          || !/^[a-f0-9]{64}$/.test(portrait.identitySourceSha256 || '')) return null;
+      return portrait;
+    }
+    if (portrait.identityType === 'FEC_LOCAL_COMMONS') {
+      const prefix = portrait.chamber === 'House' ? 'H' : portrait.chamber === 'Senate' ? 'S' : '';
+      const digest = String(portrait.imageSha256 || '');
+      const revisionUrl = `https://commons.wikimedia.org/w/index.php?oldid=${portrait.commonsRevisionId}`;
+      const cc = /^CC BY(-SA)? (2\.0|4\.0)$/.exec(portrait.license);
+      const licenseOkay = cc ? portrait.licenseUrl === `https://creativecommons.org/licenses/${cc[1] ? 'by-sa' : 'by'}/${cc[2]}/deed.en`
+        : portrait.license === 'Copyrighted free use' && portrait.state === 'IA'
+          && portrait.permissionTicket === '2010030210041811' && portrait.attribution === 'Iowa General Assembly'
+          && portrait.licenseUrl === revisionUrl + '#Licensing';
+      if (!prefix || !/^[A-Z]{2}$/.test(portrait.state || '') || portrait.bioguideId
+          || !new RegExp('^' + prefix + '\\d' + portrait.state + '\\d{5}$').test(portrait.identityId || '')
+          || portrait.fecCandidateId !== portrait.identityId
+          || portrait.identitySourceUrl !== `https://www.fec.gov/data/candidate/${portrait.identityId}/?cycle=2026`
+          || !/^[a-f0-9]{64}$/.test(portrait.identitySourceSha256 || '')
+          || !Number.isSafeInteger(portrait.commonsRevisionId) || portrait.commonsRevisionId <= 0 || portrait.sourceUrl !== revisionUrl
+          || !licenseOkay || !String(portrait.attribution || '').trim() || !portrait.rightsBasis
+          || !Number.isSafeInteger(portrait.sourceCandidateId) || !/^[a-f0-9]{64}$/.test(digest)
+          || portrait.url !== `/assets/candidate-portraits/${portrait.sourceCandidateId}-${digest.slice(0,16)}.jpg`
+          || !/^[a-f0-9]{64}$/.test(portrait.sourceCapture?.sha256 || '')
+          || portrait.width !== 250 || !(portrait.height > 0 && portrait.height <= 1000)) return null;
+      return portrait;
+    }
+    if (portrait.identityType === 'FEC_ENWIKI_SHARED_COMMONS') {
+      const id = String(portrait.fecCandidateId || '');
+      const prefix = portrait.chamber === 'House' ? 'H' : portrait.chamber === 'Senate' ? 'S' : '';
+      const sha = String(portrait.imageSha256 || '');
+      const ext = portrait.imageFormat === 'PNG' ? '.png' : portrait.imageFormat === 'JPEG' ? '.jpg' : '';
+      const cc = /^CC BY(-SA)? (2\.0|3\.0|4\.0)$/.exec(portrait.license || '');
+      const ccUrl = cc ? 'https://creativecommons.org/licenses/' + (cc[1] ? 'by-sa' : 'by') + '/' + cc[2] : '';
+      const rights = cc ? portrait.licenseUrl === ccUrl
+        : portrait.license === 'Public domain' ? portrait.licenseUrl === portrait.sourceUrl + '#Licensing'
+        : portrait.license === 'Copyrighted free use' && portrait.state === 'IA'
+          && portrait.permissionTicket === '2010030210041811' && portrait.attribution === 'Iowa General Assembly'
+          && portrait.licenseUrl === portrait.sourceUrl + '#Licensing';
+      if (!prefix || !new RegExp('^' + prefix + '\\d' + portrait.state + '\\d{5}$').test(id)
+          || !rights || !/^[a-f0-9]{64}$/.test(sha) || !ext
+          || portrait.identityId !== id || portrait.bioguideId
+          || portrait.identitySourceUrl !== 'https://www.fec.gov/data/candidate/' + id + '/?cycle=2026'
+          || portrait.url !== '/assets/candidate-portraits/' + portrait.sourceCandidateId + '-' + sha.slice(0,16) + ext
+          || portrait.imagePath !== portrait.url.slice(1)
+          || !Number.isSafeInteger(portrait.imageBytes) || portrait.imageBytes < 1000
+          || !Number.isInteger(portrait.width) || !Number.isInteger(portrait.height)
+          || !/^[a-f0-9]{40}$/.test(portrait.commonsImageSha1 || '')
+          || !/^[a-f0-9]{64}$/.test(portrait.fecBulkZipSha256 || '')
+          || !String(portrait.sourceUrl || '').startsWith('https://commons.wikimedia.org/wiki/File:')
+          || !String(portrait.sourceWikipediaArticle || '').startsWith('https://en.wikipedia.org/wiki/')
+          || !String(portrait.sourceImageUrl || '').startsWith('https://')
+          || portrait.sourceImageCheck?.httpStatus !== 200
+          || portrait.sourceImageCheck?.sha256 !== sha
+          || !String(portrait.attribution || '').trim() || !String(portrait.rightsBasis || '').trim()) return null;
+      return portrait;
+    }
     if ((portrait.identityType && portrait.identityType !== 'BIOGUIDE') || !/^[A-Z][0-9]{6}$/.test(portrait.bioguideId || '')) return null;
     const localImage = /^[A-Z][0-9]{6}$/.test(portrait.bioguideId) && /^[a-f0-9]{64}$/.test(portrait.imageSha256 || '') && portrait.url === `/assets/candidate-portraits/${portrait.bioguideId}-${portrait.imageSha256.slice(0,16)}.jpg`;
     if (!httpsUrl(portrait.url) && !localImage) return null;
@@ -225,7 +311,7 @@
       if (!portrait || duplicates.has(id) || portrait.state !== race.state || portrait.party !== candidate.party || portrait.contestId !== race.contestId || portrait.chamber !== race.chamber || normalizePortraitName(portrait.candidateName) !== normalizePortraitName(candidate.name) || !admittedPortrait({portrait})) return;
       candidate.portrait = portrait;
       matchedCards += 1;
-      people.add(portrait.bioguideId || `FEC:${portrait.identityId}`);
+      people.add(portrait.bioguideId || `FEC:${portrait.fecCandidateId || portrait.identityId}`);
     }));
     return {matchedCards,uniquePeople:people.size,available:true};
   }
@@ -336,8 +422,8 @@
       const initials = candidate.name.split(/\s+/).map((part) => part[0]).join('').slice(0,2) || '?';
       const fallback = `<span class="nominee-avatar party-${escapeHtml(party.toLowerCase())}" aria-hidden="true">${escapeHtml(initials)}</span>`;
       const visual = `<span class="nominee-visual">${fallback}${portrait ? `<img class="nominee-photo" src="${escapeHtml(portrait.url)}" alt="${escapeHtml(candidate.name)}" width="56" height="56" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : ''}</span>`;
-      const creator = portrait?.identityType === 'FEC_CANDIDATE' ? `${escapeHtml(portrait.attribution)} · ` : '';
-      const custody = portrait ? `${creator}<a class="portrait-source" href="${escapeHtml(portrait.sourceUrl)}" title="${escapeHtml(portrait.attribution)}">Photo source</a> · <a class="portrait-source" href="${escapeHtml(portrait.licenseUrl)}">${escapeHtml(portrait.license)}</a>${portrait.identityType === 'FEC_CANDIDATE' ? ' · Source thumbnail; no additional edits' : ''}` : 'Photo not yet verified';
+      const creator = ['FEC_CANDIDATE','CREDITED_COMMONS_PHOTO','FEC_LOCAL_COMMONS','FEC_ENWIKI_SHARED_COMMONS'].includes(portrait?.identityType) ? `${escapeHtml(portrait.creditNote || portrait.attribution)} · ` : '';
+      const custody = portrait ? `${creator}<a class="portrait-source" href="${escapeHtml(portrait.sourceUrl)}" title="${escapeHtml(portrait.attribution)}">Photo source</a> · <a class="portrait-source" href="${escapeHtml(portrait.licenseUrl)}">${escapeHtml(portrait.license)}</a>${['FEC_CANDIDATE','FEC_LOCAL_COMMONS','FEC_ENWIKI_SHARED_COMMONS'].includes(portrait.identityType) ? ' · Source thumbnail; no additional edits' : portrait.identityType === 'CREDITED_COMMONS_PHOTO' ? ' · Previously cropped source thumbnail; no additional edits by KAHRELUM' : ''}` : 'Photo not yet verified';
       return `<div class="nominee">${visual}<div><strong>${escapeHtml(candidate.name)}</strong><small>${escapeHtml(label)}</small><small class="portrait-credit">${custody}</small></div></div>`;
     }).join('')}</div>`;
   }
@@ -345,10 +431,14 @@
   function raceCard(race) {
     const dem = pct(race.pDem);
     const rep = pct(1 - race.pDem);
+    const watchUrl = poliwaveRaceUrl(race);
+    const resultWatch = watchUrl
+      ? `<p class="fine race-source-monitor"><strong>First-look result watch:</strong> <a href="${escapeHtml(watchUrl)}" target="_blank" rel="noopener noreferrer">Poliwave ${escapeHtml(race.state)} ${escapeHtml(race.chamber)} results</a> · Unofficial source. Verify vote counts and winner calls with the relevant election authority. No Poliwave results are imported into KAHRELUM.</p>`
+      : '<p class="fine">Live result source not configured for this contest.</p>';
     return `<article class="race-record">
       <div><div class="race-id">${escapeHtml(race.id)}</div><div class="race-tier">${escapeHtml(race.chamber)} · ${escapeHtml(race.tier)}</div><p class="fine">Publisher rating edition: ${escapeHtml(race.sourceDate)}${race.originalLock ? ' · also present in original lock' : ''}</p></div>
       <div><div class="race-tier">KAHRELUM party-outcome probability</div><div class="probability-pair"><div class="party-dem"><strong>${dem}</strong><span>Democratic side</span></div><div class="party-rep"><strong>${rep}</strong><span>Republican side</span></div></div><div class="probability-track" aria-label="${dem} Democratic probability and ${rep} Republican probability"><i class="democratic" style="width:${dem}"></i><i class="republican" style="width:${rep}"></i></div><p class="fine">Event: ${escapeHtml(race.event)}. This is not a named-candidate probability.</p></div>
-      <div><div class="race-tier">Source-listed candidate file</div>${candidateCards(race)}<p class="roster-warning">Discovery roster; candidate listing and photo identity do not certify ballot eligibility.</p></div>
+      <div><div class="race-tier">Source-listed candidate file</div>${candidateCards(race)}<p class="roster-warning">Discovery roster; candidate listing and photo identity do not certify ballot eligibility.</p>${resultWatch}</div>
     </article>`;
   }
 
@@ -460,7 +550,7 @@
       byId('mapLoadStatus').textContent = `Map unavailable: ${error.message} The headline forecast record remains visible below.`;
     }
   }
-  if (typeof module !== 'undefined' && module.exports) module.exports = {normalizePortraitName,applyPortraitLedger,admittedPortrait,candidateCards,handlePortraitError,buildRaces,portraitCount,admissionView,renderAdmission,formatUtc};
+  if (typeof module !== 'undefined' && module.exports) module.exports = {normalizePortraitName,applyPortraitLedger,admittedPortrait,candidateCards,handlePortraitError,buildRaces,portraitCount,admissionView,renderAdmission,formatUtc,poliwaveRaceUrl,raceCard};
   if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded',init);
 })();
 

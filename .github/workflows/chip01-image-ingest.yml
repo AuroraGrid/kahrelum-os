@@ -1,0 +1,68 @@
+name: Preserve selected CHIP-01 editorial images
+
+# One-time, path-triggered custody import of the two editor-approved PNGs.
+# Does not deploy the site or change any legacy page or historical evidence.
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/chip01-image-ingest.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: chip01-approved-image-import
+  cancel-in-progress: false
+
+jobs:
+  import-approved-images:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Check out current main
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.0
+        with:
+          ref: main
+          persist-credentials: true
+          fetch-depth: 1
+
+      - name: Fetch original selected editorial PNGs by exact public URLs
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/social
+          curl --fail --location --silent --show-error --retry 3 --max-time 80 \
+            'https://gcdn.picsart.com/picsart-mcp/1dbb3f15-412d-4187-867b-ddadb65f404a.png' \
+            -o assets/social/og-investigations-chip-01.png
+          curl --fail --location --silent --show-error --retry 3 --max-time 80 \
+            'https://gcdn.picsart.com/picsart-mcp/959afacc-67c6-453d-a417-bfd540dd775a.png' \
+            -o assets/social/og-insights-nvidia-megaspeed-chip-custody.png
+          printf '%s  %s\n' \
+            '8be30ef7477710c54a5975e4ba9385ff77ab7b2a0d379e0df35c64b45d6a0bd6' 'assets/social/og-investigations-chip-01.png' \
+            '3da0c4e0ef1fd3dcbe26326060ae80669ca90ede3dfd54aea66da9702168eebc' 'assets/social/og-insights-nvidia-megaspeed-chip-custody.png' | sha256sum --check
+          python3 - <<'PY'
+          import struct
+          from pathlib import Path
+          for file in (
+              'assets/social/og-investigations-chip-01.png',
+              'assets/social/og-insights-nvidia-megaspeed-chip-custody.png',
+          ):
+              b = Path(file).read_bytes()
+              assert b[:8] == b'\x89PNG\r\n\x1a\n', file
+              assert struct.unpack('>II', b[16:24]) == (1200, 630), file
+              print(file, len(b), 'bytes, 1200x630')
+          PY
+
+      - name: Commit only approved binaries to main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -- assets/social/og-investigations-chip-01.png assets/social/og-insights-nvidia-megaspeed-chip-custody.png
+          if git diff --cached --quiet; then
+            echo 'Exact approved images already present; no commit needed.'
+            exit 0
+          fi
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+            commit -m 'assets(chip01): preserve editor-approved social artwork with verified digests'
+          git push origin HEAD:main

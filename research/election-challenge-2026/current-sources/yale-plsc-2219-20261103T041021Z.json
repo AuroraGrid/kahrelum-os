@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Yale PLSC 2219 class model",
+  "sourceUrl": "https://kevinmdeluca.com/forecast/",
+  "retrievedAtUtc": "2026-11-03T04:10:21.6846268Z",
+  "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
+  "publisherEdition": {
+    "snapshotDate": "November 2, 2026",
+    "builtAtUtc": "2026-11-02T23:55:26.819257Z",
+    "classModelLastUpdatedDate": "November 1, 2026"
+  },
+  "observations": {
+    "houseDemocraticControlPctDisplayed": 95.0,
+    "houseDemocraticControlPctSerializedPriorVerified": 95.31,
+    "houseDemocraticSeats": 237.0,
+    "houseSeatType": "class-model seats",
+    "senateDemocraticControlPctDisplayed": 43.0,
+    "senateDemocraticControlPctSerializedPriorVerified": 42.84,
+    "senateDemocraticSeats": 50.0,
+    "senateSeatType": "class-model seats",
+    "senateControlRule": "50 seats resolves Republican"
+  },
+  "custody": {
+    "httpStatus": 200,
+    "representation": "FETCH_RETURNED_HTML_UTF8",
+    "sha256": "ee79a47597031ec4523f8beec2ac9805cc46a3884e281ed689c3b5bade596c60",
+    "utf8Bytes": 701418,
+    "lastModified": "Mon, 02 Nov 2026 23:57:18 GMT"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "priorReceiptPath": "research/election-challenge-2026/current-sources/yale-plsc-2219-20261102T032109Z.json",
+    "pageSnapshot": "November 1, 2026 -> November 2, 2026",
+    "classModelLastUpdatedDate": "November 1, 2026 -> November 1, 2026",
+    "numericalTopLines": "UNCHANGED"
+  },
+  "admissionNote": "The page has a new November 2 snapshot and build, but explicitly says the PLSC 2219 class model was last updated November 1 and draws it faded. Its displayed class-model top lines remain 95% Democratic House control, 237 Democratic House seats, 43% Democratic Senate control and 50 Democratic Senate seats. The previously verified exact serialized probabilities are retained only as prior-verified metadata and are not claimed as newly parsed from this response.",
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "providerUsedByScript": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  }
+}

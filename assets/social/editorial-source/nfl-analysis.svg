@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img">
+<title>KAHRELUM RUMOR IS NOT A TRADE</title>
+<defs>
+ <pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M0 10 L10 0" stroke="#fff6df" stroke-width=".35" opacity=".3"/></pattern>
+ <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#181514"/><stop offset="100%" stop-color="#1d2120"/></linearGradient>
+</defs>
+<rect x="0" y="0" width="1200" height="630" fill="url(#bg)" />
+<rect x="0" y="0" width="1200" height="8" fill="#b98045" />
+<rect x="0" y="8" width="558" height="622" fill="#151312" />
+
+<rect x="558" y="8" width="642" height="622" fill="#252521" />
+<rect x="558" y="8" width="642" height="622" fill="url(#hatch)" opacity=".17"/>
+<line x1="560" y1="8" x2="560" y2="630" stroke="#b88c49" stroke-width="2" />
+
+<rect x="642" y="50" width="516" height="525" fill="#e3d5b9" transform="rotate(3 900 300)"/>
+<g transform="translate(660 63) rotate(3 240 245)">
+<rect x="0" y="0" width="473" height="494" fill="#eadcc2" stroke="#907c65" stroke-width="2"/>
+<text x="23" y="46" fill="#302a24" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="850" letter-spacing="2" >EVIDENCE REVIEW</text>
+<line x1="24" y1="62" x2="445" y2="62" stroke="#554a3e" stroke-width="2" />
+<text x="25" y="101" fill="#625649" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="800" letter-spacing="2" >WHAT WAS SAID</text>
+<rect x="24" y="114" width="421" height="62" fill="#f6f0df" />
+<text x="39" y="153" fill="#38352c" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="800" letter-spacing="0" >TRADE INQUIRY</text>
+<text x="26" y="220" fill="#625649" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="800" letter-spacing="2" >WHAT THE RECORD SHOWS</text>
+<rect x="24" y="232" width="422" height="65" fill="#fcf9f0" />
+<text x="40" y="274" fill="#2f473f" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="850" letter-spacing="0" >NOT AN EXECUTED DEAL</text>
+<line x1="23" y1="330" x2="449" y2="330" stroke="#a99b89" stroke-width="1" />
+<text x="25" y="361" fill="#5f5547" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="750" letter-spacing="1" >SOURCE</text>
+<text x="25" y="390" fill="#5f5547" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="750" letter-spacing="1" >TIMESTAMP</text>
+<text x="25" y="419" fill="#5f5547" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="750" letter-spacing="1" >TRANSACTION</text>
+<text x="205" y="361" fill="#7c443d" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="900" letter-spacing="2" >CHECK</text>
+<text x="205" y="390" fill="#7c443d" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="900" letter-spacing="2" >CHECK</text>
+<text x="205" y="419" fill="#7c443d" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="900" letter-spacing="2" >CHECK</text>
+<rect x="285" y="439" width="160" height="37" fill="#a3513c" />
+<text x="300" y="463" fill="#fff8eb" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="900" letter-spacing="0" >NOT CONFIRMED</text>
+</g>
+
+<text x="58" y="77" fill="#f7f5ed" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="850" letter-spacing="2" >K A H R E L U M</text>
+<text x="58" y="124" fill="#e0a76b" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="800" letter-spacing="1.2" >NFL  /  CLAIM VERIFICATION</text>
+<line x1="58" y1="153" x2="531" y2="153" stroke="#b98045" stroke-width="2" />
+<text x="58" y="232" fill="#f8f4ec" font-family="Arial,Helvetica,sans-serif" font-size="58" font-weight="850" letter-spacing="0" >RUMOR IS</text><text x="58" y="301" fill="#f8f4ec" font-family="Arial,Helvetica,sans-serif" font-size="58" font-weight="850" letter-spacing="0" >NOT A TRADE</text>
+<text x="58" y="418" fill="#c9c7c2" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="500" letter-spacing="0" >Separate inquiries from execution.</text><text x="58" y="455" fill="#c9c7c2" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="500" letter-spacing="0" >Follow the evidence chain.</text>
+<line x1="58" y1="540" x2="530" y2="540" stroke="#877866" stroke-width="1" />
+<text x="58" y="584" fill="#d0c8b9" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="750" letter-spacing="1" >ANALYSIS  /  DOCUMENT BEFORE CLAIM</text>
+<rect x="0" y="8" width="8" height="622" fill="#b98045" />
+</svg>

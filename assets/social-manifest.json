@@ -159,10 +159,10 @@
     {
       "route": "/investigations",
       "sourceHtml": "investigations.html",
-      "image": "assets/social/og-air01-v1.png",
-      "title": "AIR-01: Learjet 60 N722BD Crash | KAHRELUM",
-      "description": "ACTIVE / CAUSE UNDETERMINED. Follow the Palm Beach County aviation investigation: verified records, competing hypotheses and unresolved evidence.",
-      "sha256": "0e3b4bff7479705f4ca4a24ca03769a4cac3348e72fed61686e11fb87bb7ae61",
+      "image": "assets/social/og-investigations.png",
+      "title": "Investigations & OSINT | KAHRELUM",
+      "description": "Source-linked investigations and OSINT case records. Review each case, status, original sources and unresolved questions separately.",
+      "sha256": "5382e61f4af3611489b5a636c556e8c057a377f1706b624760d36aecf8bb8e12",
       "width": 1200,
       "height": 630
     },
@@ -273,6 +273,46 @@
       "title": "Sports Intelligence Desk | KAHRELUM",
       "description": "KAHRELUM sports operations registry: an operational NFL trade desk and review-gated expansion modules for NFL film, NBA, MLB and NHL intelligence.",
       "sha256": "8600d37aec1bcb53c6928fb3517da3d305a294707873a310a71b115ad1c0f145",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/election-results-2026",
+      "sourceHtml": "election-results-2026.html",
+      "image": "assets/social/og-us-results-2026.png",
+      "title": "2026 U.S. Election Results | KAHRELUM",
+      "description": "435 House, 35 Senate and 36 governors. Unofficial results, verified source dates and forecast-custody boundaries.",
+      "sha256": "e0218be72ed4b7b7574f1687dd3717b19c88d404cedf151e8ac651ad696dd1db",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/israel-certified-2026",
+      "sourceHtml": "israel-certified-2026.html",
+      "image": "assets/social/og-israel-certified-2026.png",
+      "title": "Israel 2026 Certified Results | KAHRELUM",
+      "description": "Official 120-seat allocation and a timestamped comparison with archived post-close KAHRELUM estimates and a pre-election external forecast.",
+      "sha256": "899c9daa4c926ad888da1481790bf854fc9837a16d7e338d6488bf82fdf2e5ef",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/nfl/deadline-watch-2026",
+      "sourceHtml": "nfl/deadline-watch-2026.html",
+      "image": "assets/social/og-nfl-deadline-watch-2026.png",
+      "title": "NFL 2026 Trade Deadline | KAHRELUM",
+      "description": "Official tracker results, separate reported talks, source health and forecast custody.",
+      "sha256": "7ef029329534b00118f804bbf58ef5f1442ee0fca07223c169a920290defe3fb",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "route": "/evidence-scorecard",
+      "sourceHtml": "evidence-scorecard.html",
+      "image": "assets/social/og-evidence-scorecard.png",
+      "title": "Free Decision Evidence Gap Scorecard | KAHRELUM",
+      "description": "Eight decision controls, three historical cases and a local CSV export.",
+      "sha256": "a3bdc0c56bbaa2882b91b7e53f535d71e44c1bbb5ee6783a83471a1a8d8cb5b2",
       "width": 1200,
       "height": 630
     }

@@ -1,0 +1,41 @@
+# KAHRELUM NFL Trade SourceGrid | Overnight Nov 3, 2026 | Jordan Schultz / Taylor buyer intensity
+
+**Classification:** ORIGINAL_REPORT_ATTRIBUTED / REPORTED_INQUIRY, with CONTESTED_SEATTLE_BUYER_STATUS. **Not a completed trade, official club statement, six formally submitted bids, or certified forecast.** This note is append-only and does not alter previous versions or public trade board.
+
+**Observed information cutoff:** November 3, 2026, early morning America/New_York. **Original material date:** November 2, 2026. These are distinct from the actual public GitHub commit time (which alone proves publication of this note).
+
+## FACT: official transaction status checked again
+- NFL November 2026 trades register displayed **No Transactions Available**: https://www.nfl.com/transactions/league/trades/2026/11 .
+- NFL first-party tracker lists seven in-season deals through the 2026-10-29 Jeffery Simmons/Titans/Bears move: https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season .
+- NFL's deadline is Tuesday, November 10, 2026, at 4 p.m. New York time: https://www.nfl.com/news/nfl-important-dates .
+
+## REPORT: incremental original-reporter attribution recovered
+- **Jordan Schultz** described the Taylor market in a November 2 conversation with Ryan Clark on **The Pivot Sports**. Exact original-show URL identified: https://www.youtube.com/watch?t=1939s&v=tvCQaTaAr0Q . **This session could not independently play/replay the original video (retrieval throttled).** Identified Schultz's corresponding Nov 2 first-party X post: https://x.com/Schultz_Report/status/2117379729787392452 (original post retrieval returned HTTP 403). Do not overstate first-party direct audiovisual inspection.
+- Dated independent secondaries **quoting the same Schultz interview**: Eric Strack, MinnesotaSportsFan, November 2, https://www.minnesotasportsfan.com/minnesota-vikings/nfl-insiders-report-latest-jonathan-taylor-trade-talks/ ; Jason Marcum, Cincy Jungle, published November 3 at **00:00 UTC** (November 2 19:00 EST), https://www.cincyjungle.com/cincinnati-bengals-news/204409/jonathan-taylor-trade-news-rumors-teams-colts-rb . Both are *source-tracing*, not independent confirmations of actual team calls.
+- Schultz attributed aggressive interest to **Giants, Packers, Broncos, Seahawks, Bengals and Vikings**, suggesting five or six teams were strongly pursuing RB **Jonathan Taylor**. He **expects**, rather than reports as an accepted deal, a Taylor trade. His **second-round pick plus additional compensation** figure is a **reporter projection of what may be required**, NOT a verified standing Colts ask or a freshly submitted offer.
+- Schultz also predicted possible near-term trades involving WR **Josh Downs** and DT **Grover Stewart**, but did not report a new named specific offer for either in the portion reproduced by secondary sources. Downs/Stewart are **not upgraded to confirmed deal**.
+
+## CONTRARY EVIDENCE: do not double-count listed teams as current negotiations
+- **Nov 1 original Corbin Smith / Emerald City Spectrum**: a Colts-connected source said Seattle's Taylor interest **"started and ended"** in early discussions, after which talks focused on the already completed Quenton Nelson trade. Accessible original reporting: https://www.emeraldcityspectrum.com/trade-deadline-tidbits-seattle-seahawks-another-move-coming-before-november-10/ . November 2 secondary: https://heavy.com/sports/nfl/seattle-seahawks/seahawks-jonathan-taylor-trade-colts-source-nelson/ .
+- **Nov 1 original CBS first-party Aditi Kinkhabwala**: club said it was not *actively soliciting* offers; inbound discussions remain possible. https://www.cbssports.com/nfl/news/jonathan-taylor-trade-rumors-colts-not-shopping-around/ .
+- **Oct 31 Tom Pelissero first-person report**: Colts had **rejected** a 2027 second-round pick plus an additional selection from an **unidentified** team. https://tompelissero.substack.com/p/nfl-insider-notebook-week-8-trade-deadline-buzz .
+- **Nov 2 Schefter attributed ESPN broadcast**: Colts were engaging, though preferred to retain Taylor; explicitly named Vikings/Giants/Broncos/Packers, without identified accepted bid; preserved with date and original broadcaster attribution in Strack's above cited report.
+- Current and earlier reports may have different cutoffs: do not definitively call Seattle's inquiry reopened based solely on Schultz listing them. Keep Seattle **REPORTED_EARLY_INQUIRY_ENDED / CONTESTED** until renewed original proof appears. None of these reprints is a second independent team source.
+
+## INFERENCE / contract / fantasy
+- Multiple possible buyers strengthen the chance of eventual negotiation, but firm asking-price resistance and a disputed Seattle lane make it unwarranted to assert six simultaneous active bidding processes.
+- Denver remains **leading inferred destination** from prior DNVR beat attribution, not a winning or accepted bidder. All individual destination probabilities **UNPRICED**; no authenticated offeror identity or pick year/round beyond Pelissero's *historical rejected* proposal.
+- OverTheCap lists Taylor's **2026 Colts cap charge at $16.187m**, base salary **$6.98m** and per-game bonus allotment **$1.02m**, which do **NOT** automatically transfer in full to any new club: https://overthecap.com/salary-cap/indianapolis-colts . Previous Pelissero contract reporting estimates ~$4.866m remaining 2026 compensation and 2027 $15m base; acquiring-team exact cap liability, salary guarantee and conditions depend on transfer date/contract and remain **UNVERIFIED**. Do not equate the Colts cap number with buyer hit.
+- Any completed Taylor trade could redistribute carries in IND and the destination backfield. **No actual fantasy transaction, injury contingency, or start/sit recommendation** follows from this reporting.
+
+## FORECAST / custody
+- Existing **prospective research** version for *Taylor traded anywhere by Nov 10 16:00 EST*: **40%**, earlier independently GitHub-published v4 at https://github.com/AuroraGrid/kahrelum-os/blob/main/research/nfl-2026-trade-deadline/2026-11-02_DENVER_STEVENS_TAYLOR_BUYER_INTENSITY_FORECAST_V4.md . **Retained at 40%, change 0pp.** The stronger market-level rhetoric is not independently corroborated as six current actual bidders; prior Seattle original source makes one buyer disputed, and Indianapolis' stance and rejected offer persist. No artificial five-point bump or provider-rate substitution.
+- Schultz's assessment that a deal is likely is HIS opinion, not KAHRELUM's p. ESPN/Fowler published probabilities and Kalshi/Polymarket prices remain separately classified.
+- No outcomes newly resolved; **Brier: not calculated**. Recalled Harrison 49%, Nelson 39%, Buckner 68% and provisional 0.2449 Brier have no independently authenticated requisite forecast custody; Simmons has no verified pretrade p. Nothing backdated.
+- Public `nfl/trade-board.json` remains its **October 30 static research snapshot**, `lastIndependentSync=null`. This note does not prove Firebase production deployment.
+
+## SOURCEGRID coverage and next original checks
+**Directly checked this run:** NFL November transactions and first-party season tracker, NFL deadline calendar, identified original Pivot video link (playback failed), original Schultz X URL (403), two dated same-interview secondary attributions, full accessible original Emerald City Spectrum Seattle excerpt, first-party OTC Indianapolis cap table, existing CBS/Pelissero primary source URLs and GitHub research custody. Searched current national trade reporters, selected beat and PFT/Reuters coverage through November 3 early morning. **NOT an exhaustive 32-team/agent/radio or podcast sweep.**
+**Priority:** obtain playable original Schultz clip and exact qualifiers, seek independent club or reporter source proving a CURRENT Seattle inquiry despite Smith contrary report; identify whether any Taylor bidder submitted or revised an offer; check late official filings; investigate original Pat McAfee/Schefter clips and Colts management comment. Automated `NFL_TRANSACTIONS` parser previously degraded; direct official-page check does not repair it.
+
+No public board change, Firebase publish, sports-media outbound contact, spending, Brier computation, or fantasy/roster action.

@@ -1,5 +1,19 @@
 {
   "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/api/v1",
+      "destination": "/data/api/v1/index.json"
+    },
+    {
+      "source": "/api/v1/release",
+      "destination": "/data/api/v1/release.json"
+    },
+    {
+      "source": "/api/v1/example",
+      "destination": "/data/api/v1/example.json"
+    }
+  ],
   "git": {
     "deploymentEnabled": {
       "codex/six-bot-engineering-20261102": false

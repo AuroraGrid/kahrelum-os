@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "VotePredictor",
+  "chamber": "Senate",
+  "sourceUrl": "https://votepredictor.com/senate",
+  "observedNoLaterThanUtc": "2026-11-09T11:57:52Z",
+  "custodyRepresentation": "SELECTED_FIRST_PARTY_RENDERED_FIELDS_NOT_RAW_HTML",
+  "sourceDateText": "Forecast updated 9 Nov 2026",
+  "preciseSourceIssueTimeExposed": false,
+  "democraticControlPct": 65.0,
+  "expectedDemocraticSeats": 51.6,
+  "separateRoundedSummaryDemocraticSeats": 52,
+  "democraticControlThreshold": 51,
+  "eightyPctSeatInterval": [47, 55],
+  "priorAdmittedObservation": {
+    "observedAtUtc": "2026-11-08T12:53:01Z",
+    "democraticControlPct": 66.0,
+    "expectedDemocraticSeats": 51.7
+  },
+  "verification": "Repeated first-party rendered-page retrievals agreed: headline, control section, expected-seat line, rounded forecast summary, 50-50 treatment, and source footer were cross-checked.",
+  "denominatorCaveat": "A 50-50 split counts as Republican control via the vice president. Independent candidates are evaluated separately and the source's control event is not asserted equivalent to KAHRELUM's caucus event.",
+  "rawResponsePreserved": false,
+  "admissionScope": "Descriptive challenger observation only; not a KAHRELUM model input or original forecast lock."
+}

@@ -1,0 +1,53 @@
+{
+  "provider": "Midterm Forecast",
+  "sourceUrl": "https://midtermforecast.com/",
+  "houseSourceUrl": "https://midtermforecast.com/house/",
+  "senateSourceUrl": "https://midtermforecast.com/senate/",
+  "retrievedAtUtc": "2026-11-03T07:03:33.0847835Z",
+  "retrievedHouseAtUtc": "2026-11-03T07:03:32.8141387Z",
+  "retrievedSenateAtUtc": "2026-11-03T07:03:33.0847835Z",
+  "sourceUpdateText": "Model run Nov. 3, 1:41 AM ET; polls through Nov. 3; 20,000 simulated elections",
+  "custodyRepresentation": "FIRST_PARTY_HTTP_RESPONSES_UTF8_NOT_EXACT_WIRE_BYTES",
+  "responses": {
+    "house": {
+      "directHttpStatus": 200,
+      "lastModified": "Tue, 03 Nov 2026 06:41:41 GMT",
+      "responseUtf8Bytes": 94015,
+      "rawSha256": "e492deb68ea613d4af112b6d7b6c1a67b19d083244e6cc2dfaa16cd69e2039dd"
+    },
+    "senate": {
+      "directHttpStatus": 200,
+      "lastModified": "Tue, 03 Nov 2026 06:41:33 GMT",
+      "responseUtf8Bytes": 35876,
+      "rawSha256": "f1101f5ca782319ae0937489b9fcefdb73d839a347428830ea70f8a1c5772603"
+    }
+  },
+  "fields": {
+    "houseDemocraticControlPct": 91.0,
+    "houseDemocraticSeatsMedian": 236,
+    "houseDemocraticSeats80PctInterval": [218, 257],
+    "houseControlThreshold": 218,
+    "senateDemocraticControlPct": 76.0,
+    "senateDemocraticSeatsMedianIncludingIndependents": 53,
+    "senateDemocraticSeats80PctInterval": [48, 57],
+    "senateControlThreshold": 51,
+    "senateTieRule": "50-50 resolves Republican",
+    "genericBallotDisplayed": "D+8.9",
+    "pollsInModelDisplayed": 952
+  },
+  "changesFromPriorAdmittedEdition": {
+    "priorReceiptPath": "research/election-challenge-2026/current-sources/midterm-forecast-20261103T040938Z.json",
+    "edition": "Nov. 2 10:41 PM ET -> Nov. 3 1:41 AM ET",
+    "houseDemocraticControlPct": "91.0 -> 91.0",
+    "houseDemocraticSeatsMedian": "236 -> 236",
+    "houseDemocraticSeats80PctInterval": "218-257 -> 218-257",
+    "senateDemocraticControlPct": "76.0 -> 76.0",
+    "senateDemocraticSeatsMedianIncludingIndependents": "53 -> 53",
+    "senateDemocraticSeats80PctInterval": "48-57 -> 48-57",
+    "genericBallotDisplayed": "D+9.0 -> D+8.9",
+    "pollsInModelDisplayed": "947 -> 952"
+  },
+  "providerUsedByRefreshElectionProjectionsScript": false,
+  "kahrelumProbabilityEditionDisposition": "NO_NEW_KAHRELUM_PROBABILITY_EDITION",
+  "admissionNote": "The prospective Nov. 3 1:41 AM ET run keeps Democratic House control at 91%, its median at 236 and its 80% interval at 218-257. Democratic Senate control remains 76%, with a 53-seat median including independents and a 48-57 interval. The displayed generic ballot moves from D+9.0 to D+8.9 and the model poll count from 947 to 952. Midterm Forecast is not an input to scripts/refresh-election-projections.py, so this verified challenger update does not create a new KAHRELUM probability edition."
+}

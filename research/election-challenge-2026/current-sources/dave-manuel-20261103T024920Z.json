@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Dave Manuel",
+  "sourceUrl": "https://www.davemanuel.com/2026-midterm-forecast.php",
+  "retrievedAtUtc": "2026-11-03T02:49:20.521762Z",
+  "sourceUpdateText": "last updated November 2, 2026, 9:45 p.m. ET",
+  "directHttpStatus": 200,
+  "custodyRepresentation": "FIRST_PARTY_HTTP_RESPONSE_UTF8_NOT_EXACT_WIRE_BYTES",
+  "directResponseUtf8Bytes": 273375,
+  "rawSha256": "6b92f1eccd4ec79c2b2f7bc39d9ee376bded1dde9cb75343d44a68d5b1041d19",
+  "observations": {
+    "houseDemocraticControlPct": 93.0,
+    "senateDemocraticControlPct": 74.0,
+    "houseDemocraticSeatsProjectedMedian": 234,
+    "senateRepublicanSeatsProjectedMedian": 47,
+    "senateDemocraticSeatsProjectedMedianIncludingAlignedIndependents": 53,
+    "publisherDisplayedSenateDemocraticMedian": 52,
+    "houseDemocraticSeats90PctInterval": [216, 257],
+    "senateRepublicanSeats90PctInterval": [43, 52],
+    "houseControlThreshold": 218,
+    "senateControlThreshold": 51
+  },
+  "seatSemanticsNote": "The publisher states that the projected medians are taken separately for each side, so its displayed 47 Republican and 52 Democratic Senate medians need not sum to 100. The descriptive comparison retains the previously used 100-minus-Republican median transformation as 53 Democratic-aligned seats and records the publisher's displayed 52 separately.",
+  "changeFromPriorAdmittedEdition": {
+    "edition": {"from": "November 2, 2026, 8:45 p.m. ET", "to": "November 2, 2026, 9:45 p.m. ET"},
+    "houseDemocraticControlPct": {"from": 94.0, "to": 93.0},
+    "senateDemocraticControlPct": {"from": 74.0, "to": 74.0},
+    "houseDemocraticSeatsProjectedMedian": {"from": 235, "to": 234},
+    "senateRepublicanSeatsProjectedMedian": {"from": 47, "to": 47},
+    "senateDemocraticSeatsProjectedMedianIncludingAlignedIndependents": {"from": 53, "to": 53},
+    "houseDemocraticSeats90PctInterval": {"from": [216, 258], "to": [216, 257]},
+    "senateRepublicanSeats90PctInterval": {"from": [43, 52], "to": [43, 52]}
+  },
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "providerUsedByScript": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  }
+}

@@ -1,0 +1,68 @@
+name: Firebase Hosting Storage Maintenance
+
+on:
+  workflow_dispatch:
+    inputs:
+      apply:
+        type: boolean
+        description: 'Apply release-retention reduction after reviewing a dry-run plan'
+        default: false
+      keep_count:
+        type: choice
+        description: 'Number of PREVIOUS live releases to retain (current release always protected)'
+        options: ["5", "7", "10"]
+        default: "5"
+      confirm_live_version:
+        type: string
+        description: 'For APPLY only: exact live version from preceding Plan receipt'
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  check-hosting-retention:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    env:
+      KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON }}
+      RETAIN_COUNT: ${{ inputs.keep_count }}
+      LIVE_VERSION_CONFIRMATION: ${{ inputs.confirm_live_version }}
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.0
+        with:
+          persist-credentials: false
+
+      - name: Require authenticated publisher
+        run: |
+          if [[ -z "$KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON" ]]; then
+            echo "::error::Missing KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON; storage was not changed."
+            exit 1
+          fi
+
+      - name: Authenticated Plan then guarded optional Apply
+        shell: bash
+        run: |
+          set -euo pipefail
+          secret_path="$RUNNER_TEMP/kahrelum-retention-auth.json"
+          printf '%s' "$KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON" > "$secret_path"
+          chmod 600 "$secret_path"
+          trap 'rm -f "$secret_path"' EXIT
+          export GOOGLE_APPLICATION_CREDENTIALS="$secret_path"
+          export XDG_CONFIG_HOME="$RUNNER_TEMP/isolated-firebase"
+          mkdir -p "$XDG_CONFIG_HOME"
+          npm install --global firebase-tools@15.34.2
+          export FIREBASE_TOOLS_ROOT="$(npm root -g)/firebase-tools"
+          node --check scripts/firebase-release-retention.cjs
+          node --test tests/firebase-release-retention.test.cjs
+          node scripts/firebase-release-retention.cjs --plan --keep "$RETAIN_COUNT"
+          if [[ "${{ inputs.apply }}" == "true" ]]; then
+            if [[ -z "$LIVE_VERSION_CONFIRMATION" ]]; then
+              echo "::error::Apply requires the exact current live version from a previous plan."
+              exit 1
+            fi
+            node scripts/firebase-release-retention.cjs --apply --keep "$RETAIN_COUNT" --confirm-live-version "$LIVE_VERSION_CONFIRMATION"
+          else
+            echo "Dry-run only: no Firebase data was deleted or scheduled for deletion." >> "$GITHUB_STEP_SUMMARY"
+          fi

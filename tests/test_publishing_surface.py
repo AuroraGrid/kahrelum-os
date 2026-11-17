@@ -15,13 +15,28 @@ class PublishingSurfaceTests(unittest.TestCase):
     def test_every_canonical_page_has_a_distinct_exact_size_social_card(self):
         manifest = json.loads(self.read("assets/social-manifest.json"))
         cards = manifest["cards"]
+        # The NFL v2 release is intentionally scoped. Its manifest overrides only the
+        # eight changed pages; never roll back the newer live Investigations card
+        # by republishing the older broad social-manifest.json snapshot.
+        scoped = json.loads(self.read("assets/social/nfl-editorial-v2-manifest.json"))
+        self.assertEqual(scoped["schema"], "KAHRELUM_NFL_EDITORIAL_SOCIAL_v2")
+        overrides = {row["route"]: row for row in scoped["assets"]}
+        effective_images = {
+            card["route"]: overrides[card["route"]]["output"]
+            if card["route"] in overrides else card["image"]
+            for card in cards
+        }
+        self.assertEqual(len(set(effective_images.values())), len(cards))
         self.assertEqual(manifest["schema"], "KAHRELUM_SOCIAL_CARDS_v1.0")
-        self.assertEqual(len(cards), 27)
+        self.assertEqual(len(cards), 31)
         self.assertEqual(len({card["route"] for card in cards}), len(cards))
         self.assertEqual(len({card["image"] for card in cards}), len(cards))
         for card in cards:
             with self.subTest(route=card["route"]):
-                image = ROOT / card["image"]
+                effective = overrides.get(card["route"])
+                image_path = effective["output"] if effective else card["image"]
+                hash_expected = effective["sha256"] if effective else card["sha256"]
+                image = ROOT / image_path
                 with image.open("rb") as stream:
                     self.assertEqual(stream.read(8), b"\x89PNG\r\n\x1a\n")
                     length = struct.unpack(">I", stream.read(4))[0]
@@ -29,13 +44,13 @@ class PublishingSurfaceTests(unittest.TestCase):
                     self.assertGreaterEqual(length, 8)
                     width, height = struct.unpack(">II", stream.read(8))
                 self.assertEqual((width, height), (1200, 630))
-                self.assertEqual(hashlib.sha256(image.read_bytes()).hexdigest(), card["sha256"])
+                self.assertEqual(hashlib.sha256(image.read_bytes()).hexdigest(), hash_expected)
                 if card.get("productionManaged"):
                     self.assertIsNone(card["sourceHtml"])
                     self.assertIn(card["route"], {"/pilot", "/demo", "/sample", "/connect", "/hasan"})
                     continue
                 page = self.read(card["sourceHtml"])
-                absolute_image = f'https://kahrelum.com/{card["image"]}'
+                absolute_image = f'https://kahrelum.com/{image_path}'
                 self.assertIn(f'property="og:image" content="{absolute_image}"', page)
                 self.assertIn(f'name="twitter:image" content="{absolute_image}"', page)
                 for field in ("og:type", "og:url", "og:title", "og:description"):
@@ -47,7 +62,7 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertIn('content="1200"', page)
         self.assertIn('content="630"', page)
         self.assertIn('name="twitter:card" content="summary_large_image"', page)
-        self.assertIn('/assets/social/og-nfl-trades.png', page)
+        self.assertIn('/assets/social/og-nfl-trades-v2.png', page)
 
     def test_production_managed_legacy_routes_have_guarded_social_overlays(self):
         release = self.read("scripts/firebase-overlay-release.cjs")
@@ -254,48 +269,62 @@ class PublishingSurfaceTests(unittest.TestCase):
         self.assertEqual(challengers["records"], priced)
         self.assertEqual(unpriced, [])
         ddhq = next(row for row in challengers["records"] if row["provider"] == "Decision Desk HQ")
-        self.assertEqual((ddhq["houseDemocraticControlPct"], ddhq["senateDemocraticControlPct"]), (84.0, 65.0))
+        self.assertEqual((ddhq["houseDemocraticControlPct"], ddhq["senateDemocraticControlPct"]), (84.0, 64.0))
         self.assertEqual((ddhq["houseDemocraticSeats"], ddhq["senateDemocraticSeats"]), (241.0, 52.0))
         chambers = next(row for row in challengers["records"] if row["provider"] == "99chambers")
-        self.assertEqual((chambers["houseDemocraticControlPct"], chambers["senateDemocraticControlPct"]), (99.0, 82.0))
-        self.assertEqual((chambers["houseDemocraticSeats"], chambers["senateDemocraticSeats"]), (241.7, 52.7))
+        self.assertEqual((chambers["houseDemocraticControlPct"], chambers["senateDemocraticControlPct"]), (99.0, 81.0))
+        self.assertEqual((chambers["houseDemocraticSeats"], chambers["senateDemocraticSeats"]), (241.4, 52.6))
         scrutinel = next(row for row in challengers["records"] if row["provider"] == "Scrutinel")
-        self.assertEqual((scrutinel["houseDemocraticControlPct"], scrutinel["senateDemocraticControlPct"]), (95.0, 76.0))
-        self.assertEqual((scrutinel["houseDemocraticSeats"], scrutinel["senateDemocraticSeats"]), (239.61, 52.36))
-        self.assertIn("10:54 AM EST", scrutinel["sourceEdition"])
+        self.assertEqual((scrutinel["houseDemocraticControlPct"], scrutinel["senateDemocraticControlPct"]), (95.0, 78.0))
+        self.assertEqual((scrutinel["houseDemocraticControlExactPct"], scrutinel["senateDemocraticControlExactPct"]), (94.6, 77.76))
+        self.assertEqual((scrutinel["houseDemocraticSeats"], scrutinel["senateDemocraticSeats"]), (239.31, 52.46))
+        self.assertIn("10:25 PM EST", scrutinel["sourceEdition"])
+        self.assertIn("Final forecast frozen at midnight Eastern Nov. 3", scrutinel["sourceEdition"])
         fred = next(row for row in challengers["records"] if row["provider"] == "Fred Cornell independent")
-        self.assertEqual((fred["houseDemocraticControlPct"], fred["senateDemocraticControlPct"]), (99.0, 71.9))
+        self.assertEqual((fred["houseDemocraticControlPct"], fred["senateDemocraticControlPct"]), (99.0, 70.6))
         self.assertEqual((fred["houseDemocraticSeats"], fred["senateDemocraticSeats"]), (252.0, 52.0))
         callthemap = next(row for row in challengers["records"] if row["provider"] == "CalltheMap")
-        self.assertEqual((callthemap["houseDemocraticControlPct"], callthemap["senateDemocraticControlPct"], callthemap["senateDemocraticSeats"]), (83.0, 59.0, 51.3))
+        self.assertEqual((callthemap["houseDemocraticControlPct"], callthemap["senateDemocraticControlPct"], callthemap["houseDemocraticSeats"], callthemap["senateDemocraticSeats"]), (83.0, 62.0, 235.5, 51.6))
         coyntoss = next(row for row in challengers["records"] if row["provider"] == "COYNTOSS")
-        self.assertEqual((coyntoss["houseDemocraticControlPct"], coyntoss["senateDemocraticControlPct"], coyntoss["houseDemocraticSeats"], coyntoss["senateDemocraticSeats"]), (82.95, 72.99, 238.57, 51.781))
+        self.assertEqual((coyntoss["houseDemocraticControlPct"], coyntoss["senateDemocraticControlPct"], coyntoss["houseDemocraticSeats"], coyntoss["senateDemocraticSeats"]), (83.8, 75.27, 239.3, 51.96))
         votescope = next(row for row in challengers["records"] if row["provider"] == "Vote-Scope")
-        self.assertEqual((votescope["houseDemocraticControlPct"], votescope["senateDemocraticControlPct"]), (98.0, None))
-        self.assertEqual(votescope["houseDemocraticSeats"], 241.0)
-        self.assertIn("median 246", votescope["houseSeatType"])
+        self.assertEqual((votescope["houseDemocraticControlPct"], votescope["senateDemocraticControlPct"]), (96.0, 81.0))
+        self.assertEqual((votescope["houseDemocraticSeats"], votescope["senateDemocraticSeats"]), (242.0, 54.0))
+        self.assertEqual(votescope["houseSeatType"], "projected")
+        self.assertEqual(votescope["senateSeatType"], "projected")
         electindex = next(row for row in challengers["records"] if row["provider"] == "ElectIndex")
-        self.assertEqual((electindex["houseDemocraticControlPct"], electindex["senateDemocraticControlPct"], electindex["houseDemocraticSeats"], electindex["senateDemocraticSeats"]), (92.2, 74.9, 248.0, 53.0))
-        self.assertEqual((electindex["houseProjectedDemocraticSeats"], electindex["senateProjectedDemocraticSeats"]), (244, 54))
+        self.assertEqual((electindex["houseDemocraticControlPct"], electindex["senateDemocraticControlPct"], electindex["houseDemocraticSeats"], electindex["senateDemocraticSeats"]), (92.7, 75.7, 248.4, 53.1))
+        self.assertEqual((electindex["houseProjectedDemocraticSeats"], electindex["senateProjectedDemocraticSeats"]), (242, 54))
         self.assertEqual((electindex["houseControlThreshold"], electindex["senateControlThreshold"]), (218, 51))
         new_numeric = {row["provider"]: row for row in challengers["records"] if row["provider"] in {"Dave Manuel", "On Point Politics", "VotePredictor", "Midterm Forecast"}}
         self.assertEqual(set(new_numeric), {"Dave Manuel", "On Point Politics", "VotePredictor", "Midterm Forecast"})
-        self.assertEqual((new_numeric["Dave Manuel"]["houseDemocraticControlPct"], new_numeric["Dave Manuel"]["senateDemocraticControlPct"]), (92.0, 73.0))
-        self.assertEqual((new_numeric["Dave Manuel"]["houseDemocraticSeats"], new_numeric["Dave Manuel"]["senateDemocraticSeats"]), (233.0, 52.0))
-        self.assertEqual((new_numeric["On Point Politics"]["houseDemocraticControlPct"], new_numeric["On Point Politics"]["senateDemocraticControlPct"]), (98.0, 89.0))
-        self.assertEqual((new_numeric["On Point Politics"]["houseDemocraticSeats"], new_numeric["On Point Politics"]["senateDemocraticSeats"]), (253.0, 54.85))
-        self.assertEqual((new_numeric["On Point Politics"]["houseDemocraticControlExactPct"], new_numeric["On Point Politics"]["senateDemocraticControlExactPct"]), (97.52, 88.54))
-        self.assertEqual((new_numeric["VotePredictor"]["houseDemocraticControlPct"], new_numeric["VotePredictor"]["senateDemocraticControlPct"]), (77.0, None))
-        self.assertEqual(new_numeric["VotePredictor"]["houseDemocraticSeats"], 230.0)
-        self.assertEqual((new_numeric["Midterm Forecast"]["houseDemocraticControlPct"], new_numeric["Midterm Forecast"]["senateDemocraticControlPct"]), (92.0, 76.0))
-        self.assertEqual((new_numeric["Midterm Forecast"]["houseDemocraticSeats"], new_numeric["Midterm Forecast"]["senateDemocraticSeats"]), (237.0, 53.0))
-        self.assertIn("12:52 AM ET", new_numeric["Midterm Forecast"]["sourceEdition"])
+        self.assertEqual((new_numeric["Dave Manuel"]["houseDemocraticControlPct"], new_numeric["Dave Manuel"]["senateDemocraticControlPct"]), (94.0, 75.0))
+        self.assertEqual((new_numeric["Dave Manuel"]["houseDemocraticSeats"], new_numeric["Dave Manuel"]["senateDemocraticSeats"]), (234.0, 53.0))
+        self.assertIn("11:45 PM ET", new_numeric["Dave Manuel"]["sourceEdition"])
+        self.assertEqual((new_numeric["On Point Politics"]["houseDemocraticControlPct"], new_numeric["On Point Politics"]["senateDemocraticControlPct"]), (91.0, 80.9))
+        self.assertEqual((new_numeric["On Point Politics"]["houseDemocraticSeats"], new_numeric["On Point Politics"]["senateDemocraticSeats"]), (255.0, 54.7))
+        self.assertNotIn("houseDemocraticControlExactPct", new_numeric["On Point Politics"])
+        self.assertNotIn("senateDemocraticControlExactPct", new_numeric["On Point Politics"])
+        self.assertNotIn("houseDemocraticSeatsExact", new_numeric["On Point Politics"])
+        self.assertEqual((new_numeric["VotePredictor"]["houseDemocraticControlPct"], new_numeric["VotePredictor"]["senateDemocraticControlPct"]), (77.0, 65.0))
+        self.assertEqual((new_numeric["VotePredictor"]["houseDemocraticSeats"], new_numeric["VotePredictor"]["senateDemocraticSeats"]), (230.5, 51.5))
+        self.assertEqual(new_numeric["VotePredictor"]["custodyReceiptSha256"], "84be1bbeaa471e2b7943a6790698628dac9948e6fdd79f1bc3ee11c59658a2b0")
+        senate_receipt_path = new_numeric["VotePredictor"]["senateCustodyReceiptPath"]
+        senate_receipt_bytes = (ROOT / senate_receipt_path).read_bytes()
+        self.assertEqual(new_numeric["VotePredictor"]["senateCustodyReceiptSha256"], hashlib.sha256(senate_receipt_bytes).hexdigest())
+        self.assertEqual((new_numeric["Midterm Forecast"]["houseDemocraticControlPct"], new_numeric["Midterm Forecast"]["senateDemocraticControlPct"]), (91.0, 76.0))
+        self.assertEqual((new_numeric["Midterm Forecast"]["houseDemocraticSeats"], new_numeric["Midterm Forecast"]["senateDemocraticSeats"]), (236.0, 53.0))
+        self.assertIn("1:39 PM ET", new_numeric["Midterm Forecast"]["sourceEdition"])
         yale = next(row for row in challengers["records"] if row["provider"] == "Yale PLSC 2219 class model")
         self.assertEqual((yale["houseDemocraticControlPct"], yale["senateDemocraticControlPct"], yale["houseDemocraticSeats"], yale["senateDemocraticSeats"]), (95.0, 43.0, 237.0, 50.0))
-        self.assertIn("Snapshot Nov. 1", yale["sourceEdition"])
+        self.assertIn("Page snapshot Nov. 2", yale["sourceEdition"])
+        self.assertIn("class model explicitly remains last updated Nov. 1", yale["sourceEdition"])
         datum = next(row for row in challengers["records"] if row["provider"] == "Datum Signals")
         self.assertEqual((datum["houseDemocraticControlPct"], datum["senateDemocraticControlPct"]), (None, 64.0))
-        self.assertEqual(datum["retrievalStatus"], "FIRST_PARTY_PUBLIC_CONFLICTING_REPLICAS")
+        self.assertEqual(datum["retrievalStatus"], "FIRST_PARTY_PUBLIC_HOUSE_REPLICA_CONFLICT_SENATE_VERIFIED")
+        self.assertIsNone(datum["houseDemocraticSeats"])
+        self.assertIsNone(datum["senateDemocraticSeats"])
+        self.assertEqual(datum["custodyReceiptSha256"], hashlib.sha256((ROOT / datum["custodyReceiptPath"]).read_bytes()).hexdigest())
         self.assertFalse({"The Economist", "Silver Bulletin", "Sam Brown", "Jon Elder"} & {row["provider"] for row in challengers["records"]})
         self.assertEqual(geography["schema"], "KAHRELUM_US_STATES_MAP_v1.0")
         self.assertEqual(geography["license"], "Unlicense / public domain dedication")

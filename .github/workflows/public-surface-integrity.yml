@@ -19,6 +19,15 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.0
         with:
           persist-credentials: false
+      - name: Build and verify NFL editorial v2 social artwork
+        shell: bash
+        run: |
+          python3 -m pip install --disable-pip-version-check --quiet cairosvg==2.8.2
+          python3 scripts/build-kahrelum-editorial-social.py
+          python3 scripts/build-kahrelum-editorial-social.py --check
+          node --test tests/nfl-editorial-v2.test.cjs
+      - name: Run full Node regression sweep before Firebase promotion
+        run: node --test tests/*.test.cjs
       - name: Validate canonical public surface
         shell: bash
         run: |
@@ -32,6 +41,8 @@ jobs:
               "README.md", "ARCHITECTURE.md", "BENCHMARKS.md",
               "CHANGELOG.md", "RELEASE_v2.3.4_FINAL.md",
               "index.html", "vercel.json", "hosting/homepage-divisions.html",
+              "pilot.html", "demo.html", "site-shell.css", "site-shell.js",
+              "data/api/v1/index.json", "data/api/v1/release.json", "data/api/v1/example.json",
               "scripts/deploy-unified-firebase.ps1",
               "scripts/firebase-overlay-release.cjs",
               "assurance.html", "investigations.html", "forecasting.html",
@@ -118,6 +129,7 @@ jobs:
           assert "firebase deploy --only hosting" not in wrapper, "Direct Firebase directory deploy must remain blocked"
           assert "CHANNEL_PREFIX" in overlay and "stableMapHash(overlay.desired).slice" in overlay, "Preview channels must remain content-addressed for concurrency safety"
           assert "'sports-intelligence'" in overlay and '"sports-intelligence"' in wrapper, "Bounded Sports Intelligence release profile missing"
+          assert "'site-makeover'" in overlay and '"site-makeover"' in wrapper, "Bounded site makeover release profile missing"
 
           stale_identity = b"hr185882" + b"-creator"
           tracked = subprocess.check_output(["git", "ls-files", "-z"]).split(b"\0")
@@ -133,10 +145,16 @@ jobs:
       - name: Test full forecast coverage, admission and portrait identity
         run: |
           python3 -m unittest discover -s tests -p 'test_*.py' -v
-          node --test tests/candidate-portraits.test.cjs tests/nfl-portraits-dom.test.cjs tests/nba-portraits-dom.test.cjs tests/election-admission-view.test.cjs tests/firebase-release-binary-integrity.test.cjs tests/investigations-publication.test.cjs
+          node --test tests/indexnow-discovery.test.cjs tests/social-preview-completeness.test.cjs tests/chip01-publication.test.cjs tests/candidate-portraits.test.cjs tests/nfl-portraits-dom.test.cjs tests/nba-portraits-dom.test.cjs tests/election-admission-view.test.cjs tests/firebase-release-binary-integrity.test.cjs tests/firebase-site-makeover-profile.test.cjs tests/investigations-publication.test.cjs tests/case-social-pages.test.cjs tests/us-results-ci-publisher.test.cjs tests/firebase-release-retention.test.cjs tests/firebase-scoped-release-workflow.test.cjs tests/evidence-scorecard.test.cjs tests/lead-magnet-deployment.test.cjs tests/commercial-readiness.test.cjs tests/firebase-publisher-routing.test.cjs tests/buyer-discovery.test.cjs tests/ai-evaluation-social.test.cjs tests/firebase-gzip-custody.test.cjs tests/election-data-indexing.test.cjs tests/hegseth-publication.test.cjs
           python3 scripts/build_nba_player_portraits.py --check
       - name: Validate generated Sports Intelligence records
         run: python3 scripts/sports_intelligence.py validate
+      - name: Verify Poliwave reference-only first-look coverage
+        run: |
+          node scripts/build-poliwave-watchlist.cjs --check
+          node --test tests/poliwave-race-watch.test.cjs
+      - name: Test NFL challenger publication custody and social image bytes
+        run: node --test tests/nfl-volume-challenge-publication.test.cjs
       - name: Parse safe Firebase release script
         run: node --check scripts/firebase-overlay-release.cjs
 

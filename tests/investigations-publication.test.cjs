@@ -3,8 +3,10 @@ const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const { createRequire } = require('node:module');
 
 const root = path.resolve(__dirname, '..');
+const publisherRequire = createRequire(path.join(root, 'scripts/firebase-overlay-release.cjs'));
 const read = (p) => fs.readFileSync(path.join(root, p), 'utf8');
 
 test('twelve independently labeled public records preserve evidence and portfolio boundaries', () => {
@@ -34,7 +36,9 @@ test('twelve independently labeled public records preserve evidence and portfoli
   assert.match(youth, /\$567 million/);
   assert.match(youth, /\$375 million/);
   assert.match(youth, /appeal filings, any stay, collections and compliance are UNKNOWN/);
-  assert.doesNotMatch(html, /<script\b/i);
+  // JSON-LD is an inert source-description script, not executable client code.
+  const executableScripts = html.replace(/<script\s+type="application\/ld\+json"\s+id="kahrelum-ai-discovery-schema">[\s\S]*?<\/script>/i, '');
+  assert.doesNotMatch(executableScripts, /<script\b/i);
 });
 
 test('scoped Firebase release cannot republish older elections, NFL, homepage or files outside investigations', () => {
@@ -48,7 +52,9 @@ test('scoped Firebase release cannot republish older elections, NFL, homepage or
   assert.doesNotMatch(profile[1], /nfl\/|election\/|one\.html|forecasting\.html|index\.html|divisions\.css/);
   assert.match(script, /changedPaths\.some/);
   assert.match(script, /og-air01-v1\.png/);
-  assert.match(wrapper, /ValidateSet\([^\n]*"investigations"\)/);
+  const profileSet = wrapper.match(/ValidateSet\(([^\n]*)\)/)?.[1];
+  assert.ok(profileSet, 'Firebase wrapper must declare an explicit ValidateSet');
+  assert.ok(profileSet.split(', ').includes('"investigations"'), 'investigations profile stays available');
   assert.match(wrapper, /stale-directory deployment path has been removed/);
 });
 
@@ -62,7 +68,7 @@ test('investigations overlay preserves opaque live hashes and never fetches or r
   const script = read('scripts/firebase-overlay-release.cjs');
   const definitions = script.slice(0, script.lastIndexOf('\nmain().catch'));
   const build = new Function('require', '__dirname', 'process', 'fetch', 'Buffer',
-    definitions + '\nreturn buildOverlay;')(require, path.join(root, 'scripts'), process,
+    definitions + '\nreturn buildOverlay;')(publisherRequire, path.join(root, 'scripts'), process,
       async () => { throw new Error('A bounded investigations release must not fetch unrelated live bytes'); }, Buffer);
   const fileMap = {
     '/sitemap.xml': 'opaque-hash-from-another-platform',
@@ -86,7 +92,7 @@ test('version lifecycle passes project and site separately to the installed Fire
   const script = read('scripts/firebase-overlay-release.cjs');
   const definitions = script.slice(0, script.lastIndexOf('\nmain().catch'));
   const createPreview = new Function('require', '__dirname', 'process', 'fetch', 'Buffer',
-    definitions + '\nreturn createPreview;')(require, path.join(root, 'scripts'), process,
+    definitions + '\nreturn createPreview;')(publisherRequire, path.join(root, 'scripts'), process,
       async () => { throw new Error('No network access in this lifecycle test'); }, Buffer);
   const stop = new Error('Stop after observing finalization arguments');
   const config = {cleanUrls: true};
@@ -123,7 +129,7 @@ test('version lifecycle supports the two-argument Firebase CLI API installed by 
   const script = read('scripts/firebase-overlay-release.cjs');
   const definitions = script.slice(0, script.lastIndexOf('\nmain().catch'));
   const createPreview = new Function('require', '__dirname', 'process', 'fetch', 'Buffer',
-    definitions + '\nreturn createPreview;')(require, path.join(root, 'scripts'), process,
+    definitions + '\nreturn createPreview;')(publisherRequire, path.join(root, 'scripts'), process,
       async () => { throw new Error('No network access in this lifecycle test'); }, Buffer);
   const stop = new Error('Stop after observing finalization arguments');
   const config = {cleanUrls: true};
@@ -160,7 +166,7 @@ test('project-name aliases canonicalize to the verified project number without a
   const script = read('scripts/firebase-overlay-release.cjs');
   const definitions = script.slice(0, script.lastIndexOf('\nmain().catch'));
   const canonical = new Function('require', '__dirname', 'process', 'Buffer',
-    definitions + '\nreturn canonicalVersionName;')(require, path.join(root, 'scripts'), process, Buffer);
+    definitions + '\nreturn canonicalVersionName;')(publisherRequire, path.join(root, 'scripts'), process, Buffer);
   const live = 'projects/806087933597/sites/kahrelum-public-hosting/versions/base';
   const expected = 'projects/806087933597/sites/kahrelum-public-hosting/versions/19b135529a0ef046';
   assert.equal(canonical('projects/kahrelum-public-hosting/sites/kahrelum-public-hosting/versions/19b135529a0ef046', live), expected);
@@ -183,20 +189,24 @@ test('AIR-01 retains explicit uncertainty, sources and all original card bytes',
  assert.equal(register.forecast,null);
 });
 
-test('AIR-01 social metadata uses the published versioned card with exact dimensions', () => {
+test('investigations overview is generic while AIR-01 has its own published 1200x630 card', () => {
  const html=read('investigations.html');
- const url='https://kahrelum.com/assets/social/og-air01-v1.png';
+ const url='https://kahrelum.com/assets/social/og-investigations.png';
  for(const prop of ['og:image','og:image:secure_url']) assert.ok(html.includes('property="'+prop+'" content="'+url+'"'));
  assert.ok(html.includes('name="twitter:image" content="'+url+'"'));
- assert.ok(html.includes('property="og:title" content="AIR-01: Learjet 60 N722BD Crash | KAHRELUM"'));
- assert.ok(html.includes('CAUSE UNDETERMINED'));
+ assert.ok(html.includes('property="og:title" content="Investigations &amp; OSINT | KAHRELUM"'));
+ const {buildCaseShareArtifacts}=require('../scripts/case-social-pages.cjs');
+ const air=buildCaseShareArtifacts(html).cases.find(x=>x.id==='AIR-01');
+ assert.ok(air);
+ for(const prop of ['og:image','og:image:secure_url']) assert.ok(air.html.includes('property="'+prop+'" content="https://kahrelum.com/assets/social/og-air01-v1.png"'));
+ assert.ok(air.html.includes('CAUSE UNDETERMINED') || air.html.includes('cause undetermined') || air.html.includes('Cause undetermined'));
  const data=fs.readFileSync(path.join(root,'assets/social/og-air01-v1.png'));
  assert.equal(data.readUInt32BE(16),1200);assert.equal(data.readUInt32BE(20),630);
  const manifest=JSON.parse(read('assets/social-manifest.json')).cards.find(c=>c.route==='/investigations');
- assert.equal(manifest.image,'assets/social/og-air01-v1.png');
- assert.equal(manifest.sha256,require('node:crypto').createHash('sha256').update(data).digest('hex'));
+ assert.equal(manifest.image,'assets/social/og-investigations.png');
+ assert.equal(manifest.sha256,require('node:crypto').createHash('sha256')
+   .update(fs.readFileSync(path.join(root,manifest.image))).digest('hex'));
 });
-
 
 test('AIR-01 two-camera evidence and high-altitude leads remain explicitly bounded', () => {
  const html=read('investigations.html');

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Dave Manuel",
+  "sourceUrl": "https://www.davemanuel.com/2026-midterm-forecast.php",
+  "retrievedAtUtc": "2026-11-03T08:02:56.0981983Z",
+  "requestStartedAtUtc": "2026-11-03T08:02:53.8016213Z",
+  "sourceUpdateText": "last updated November 3, 2026, 2:45 a.m. ET",
+  "directHttpStatus": 200,
+  "custodyRepresentation": "FIRST_PARTY_HTTP_RESPONSE_UTF8_NOT_EXACT_WIRE_BYTES",
+  "directResponseUtf8Bytes": 273483,
+  "rawSha256": "da348d394445bdb0c64b9c18b53f4ee05f08e56d38ae898b28af2f65f411ac13",
+  "observations": {
+    "houseDemocraticControlPct": 93.0,
+    "senateDemocraticControlPct": 75.0,
+    "houseDemocraticSeatsProjectedMedian": 234,
+    "senateRepublicanSeatsProjectedMedian": 47,
+    "senateDemocraticSeatsProjectedMedianIncludingAlignedIndependents": 53,
+    "publisherDisplayedSenateDemocraticMedian": 52,
+    "houseDemocraticSeats90PctInterval": [216, 257],
+    "senateRepublicanSeats90PctInterval": [43, 52],
+    "houseControlThreshold": 218,
+    "senateControlThreshold": 51,
+    "publisherGenericBallotDemocraticPct": 51.7,
+    "publisherGenericBallotRepublicanPct": 43.6,
+    "publisherGenericBallotMarginDemocratic": 8.2
+  },
+  "seatSemanticsNote": "The publisher states that the projected medians are taken separately for each side, so its displayed 47 Republican and 52 Democratic Senate medians need not sum to 100. The descriptive comparison retains the previously used 100-minus-Republican median transformation as 53 Democratic-aligned seats and records the publisher's displayed 52 separately.",
+  "changeFromPriorAdmittedEdition": {
+    "priorReceiptPath": "research/election-challenge-2026/current-sources/dave-manuel-20261103T065240Z.json",
+    "edition": {
+      "from": "November 3, 2026, 1:45 a.m. ET",
+      "to": "November 3, 2026, 2:45 a.m. ET"
+    },
+    "houseDemocraticControlPct": "UNCHANGED",
+    "senateDemocraticControlPct": "UNCHANGED",
+    "trackedSeatProjections": "UNCHANGED",
+    "genericBallotDisplay": "UNCHANGED"
+  },
+  "interpretation": "NEW_PUBLISHER_EDITION_NUMERIC_TOPLINES_UNCHANGED",
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "providerUsedByScript": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  }
+}
