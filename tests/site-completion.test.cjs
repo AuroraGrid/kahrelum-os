@@ -176,3 +176,24 @@ test('Insights canonical source links only to already published investigation ro
  assert.match(html,/id="recent-investigations-20261117"/);
  assert.equal(html.includes('<h2>Latest articles</h2>'),false);
 });
+
+
+test('Insights safely publishes its Intelligence subscription discovery link without altering article history',()=>{
+ const source=read('insights.html');
+ const marker='<p class="dateline" id="intelligence-publication-20261117">';
+ const start=source.indexOf(marker);
+ assert.ok(start>=0,'new dated Intelligence publication link must exist in source');
+ const end=source.indexOf('</p>',start);
+ assert.ok(end>start);
+ const snippet=source.slice(start,end+4);
+ assert.ok(snippet.includes('href="/intelligence"'),'link must stay on owned site');
+ assert.ok(snippet.includes('Substack'),'publisher provider must be transparent');
+ const live=source.replace(snippet+'\n','');
+ assert.notEqual(live,source,'fixture starts with missing link');
+ const result=patchCompletionPage(live,source,'/insights');
+ assert.equal(result,source,'patch inserts only one exact reviewed paragraph');
+ assert.equal(patchCompletionPage(result,source,'/insights'),source,'repeat release is idempotent');
+ const conflict=live.replace('<section id="recent-investigations-20261117"',
+  marker+'Conflicting live text</p>\n<section id="recent-investigations-20261117"');
+ assert.throws(()=>patchCompletionPage(conflict,source,'/insights'),/Conflicting|unexpected|review/i);
+});
