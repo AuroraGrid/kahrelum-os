@@ -106,5 +106,26 @@
     "legal_review": false,
     "production_deploy": false,
     "partial_X_strategies_FEC_line_items": true
+  },
+  "closure_annotations_20261117": {
+    "observed_utc": "2026-11-17T18:51:15.507962+00:00",
+    "supersedes": [
+      "LOOMER06 third-party-only classification for the bounded filed totals",
+      "LOOMER08 unavailable screenshot caveat"
+    ],
+    "current_filed_payee_check": "VERIFIED_AS_COMMITTEE_REPORTING_NOT_BANK_SETTLEMENT",
+    "loomer_total_usd": 40000,
+    "loomer_transactions": [
+      "202610149908721625:SB21B017",
+      "202610149908721625:SB21B019"
+    ],
+    "x_strategies_total_usd": 150000,
+    "x_strategies_entries": 15,
+    "coverage_end": "2026-10-14",
+    "amendment_policy": "Use current regular reports; exclude superseded mid-year original",
+    "evidence": "2026-11-17-evidence-closure.md",
+    "payment_to_post_link": false,
+    "human_editorial_and_legal_clearance": false,
+    "publication": "HOLD"
   }
 }
