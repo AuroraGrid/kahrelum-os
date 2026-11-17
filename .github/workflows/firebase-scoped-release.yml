@@ -240,6 +240,16 @@ jobs:
                 esac
               done <<< "$changed"
               profiles="ai-visibility-hardening"
+            elif grep -Fqx 'investigations/chip-01.html' <<< "$changed"; then
+              # Dated Nov 17 official-source delta: patch verified live CHIP-01 and companion Insight only.
+              while IFS= read -r file; do
+                case "$file" in
+                  investigations/chip-01.html|insights/nvidia-megaspeed-chip-custody.html|research/chip-01/2026-11-17-doj-bis-statement.md|scripts/investigations-text-refresh.cjs|tests/chip01-nov17-doj.test.cjs|.github/workflows/firebase-scoped-release.yml)
+                    ;;
+                  *) echo "::error::CHIP-01 Nov17 update includes unrelated path: $file"; exit 1 ;;
+                esac
+              done <<< "$changed"
+              profiles="investigations-text-only"
             elif grep -Fqx 'investigations/air-02.html' <<< "$changed"; then
               while IFS= read -r file; do
                 case "$file" in
