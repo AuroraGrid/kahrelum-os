@@ -1,5 +1,12 @@
 {
   "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/one",
+      "destination": "/one/index",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     {
       "source": "/api/v1",
