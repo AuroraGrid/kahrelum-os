@@ -94,7 +94,7 @@ function patchCompletionPage(live,source,route){
   for(const route of ['/investigations/ca-001','/investigations/tsds-watchlist-97-claim','/investigations/air-02']){
    if(!snippet.includes('href="'+route+'"'))throw Error('Missing approved published investigation '+route);
   }
-  if(/<script\\b/i.test(snippet))throw Error('Executable markup in Insights discovery section');
+  if(snippet.toLowerCase().includes('<script'))throw Error('Executable markup in Insights discovery section');
   const existingCount=out.split(recentMarker).length-1;
   if(existingCount>1)throw Error('Duplicate existing Insights discovery sections');
   if(existingCount===1){
@@ -107,7 +107,7 @@ function patchCompletionPage(live,source,route){
    const newHeading='<section><h2>Selected analysis and forecasts</h2>';
    const anchor=out.includes(oldHeading)?oldHeading:newHeading;
    if(out.split(anchor).length!==2)throw Error('Missing unique Insights listing anchor');
-   out=out.replace(anchor,snippet+'\\n'+anchor);
+   out=out.replace(anchor,snippet+String.fromCharCode(10)+anchor);
   }
   const oldHeading='<section><h2>Latest articles</h2>';
   const newHeading='<section><h2>Selected analysis and forecasts</h2>';
