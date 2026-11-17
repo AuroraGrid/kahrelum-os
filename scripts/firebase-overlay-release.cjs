@@ -209,6 +209,13 @@ const RELEASE_PROFILES = {
     sitemapRoutes: ['/insights/calibration-oct-nov-2026'],
     includeHomepage: false,
   },
+  'mqa001-review': {
+    // Explicit manual publication only; preserve current live discovery bytes.
+    overlayFiles: ['insights/morgan-dollar-quote.html', 'insights.html', 'sitemap.md',
+      'assets/social/og-mqa001.png'],
+    sitemapRoutes: ['/insights/morgan-dollar-quote'],
+    includeHomepage: false,
+  },
   'osint-illusion': {
     // Bounded publication: article, discovery, text directory and original social art only.
     overlayFiles: ['insights/osint-illusion.html', 'insights.html', 'sitemap.md',
@@ -1123,6 +1130,11 @@ async function buildOverlay(live, profileName) {
     const source = path.join(ROOT, name);
     if (!fs.existsSync(source)) fail(`Repository overlay source is missing: ${name}`);
     let sourceBytes = readRepositoryBytes(name);
+    if (profileName === 'mqa001-review' && ['insights.html', 'sitemap.md'].includes(name)) {
+      const publicPath = name === 'insights.html' ? '/insights' : '/sitemap.md';
+      const current = (await verifiedLiveFile(live, '/' + name, publicPath)).toString('utf8');
+      sourceBytes = Buffer.from(require('./mqa001-discovery.cjs').patchDiscovery(current, sourceBytes.toString('utf8'), name), 'utf8');
+    }
     if (profileName === 'site-makeover' && name.toLowerCase().endsWith('.html')) {
       sourceBytes = Buffer.from(normalizeSharedFooter(groupMobileDrawer(sourceBytes.toString('utf8'))), 'utf8');
     }
@@ -1455,6 +1467,22 @@ async function buildOverlay(live, profileName) {
     if (changedPaths.some(item => !allowed.has(item))) {
       fail('Hegseth legal audit attempted to change an unrelated Firebase route.');
     }
+  }
+  if (profileName === 'mqa001-review') {
+    const allowed = new Set(['/sitemap.xml', ...RELEASE_PROFILES['mqa001-review'].overlayFiles.map(name => '/' + name)]);
+    if (changedPaths.some(item => !allowed.has(item))) fail('MQA release changed an unrelated path');
+    const route = '/insights/morgan-dollar-quote';
+    const article = (await fetchBytes(origin + route)).toString('utf8');
+    for (const phrase of ['Current case decision: HOLD', 'not establish that a commercial AI product failed', 'READY_FOR_COMPARISON']) {
+      if (!article.includes(phrase)) fail('MQA-001 evidence boundary missing: ' + phrase);
+    }
+    for (const [target, needle] of [['/insights', 'href="' + route + '"'], ['/sitemap.md', DOMAIN + route], ['/sitemap.xml', '<loc>' + DOMAIN + route + '</loc>']]) {
+      if (!(await fetchBytes(origin + target)).toString('utf8').includes(needle)) fail('MQA-001 discovery missing: ' + target);
+    }
+    const imagePath = '/assets/social/og-mqa001.png';
+    const bytes = await fetchBytes(origin + imagePath);
+    if (bytes.toString('ascii',1,4) !== 'PNG' || bytes.readUInt32BE(16) !== 1200 || bytes.readUInt32BE(20) !== 630 || sha256(bytes) !== sha256(readRepositoryBytes(imagePath.slice(1)))) fail('MQA-001 social image readback failed');
+    checks.push({route:imagePath,status:200,sha256:sha256(bytes)});
   }
   if (profileName === 'osint-illusion') {
     const allowed = new Set(['/sitemap.xml', ...RELEASE_PROFILES['osint-illusion'].overlayFiles.map(name => '/' + name)]);
