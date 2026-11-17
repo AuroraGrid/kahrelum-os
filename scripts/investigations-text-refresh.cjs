@@ -116,7 +116,7 @@ function patchNvidiaDetailPage(live,canonical,file){
   if(out.includes(laterMarker)){
     const oldStart=out.indexOf(laterMarker),oldEnd=out.indexOf('</section>',oldStart);
     if(oldEnd<0||out.indexOf(laterMarker,oldStart+laterMarker.length)!==-1)throw Error('Repeated or broken live Nov17 DOJ section');
-    if(out.slice(oldStart,oldEnd+'</section>'.length)!==later)throw Error('Conflicting changed live Nov17 DOJ evidence; independent review required');
+    if(out.slice(oldStart,oldEnd+'</section>'.length).replace(/\r\n/g,'\n')!==later.replace(/\r\n/g,'\n'))throw Error('Conflicting changed live Nov17 DOJ evidence; independent review required');
   } else {
     if(out.split(anchor).length!==2)throw Error('Missing frozen CHIP-01 forecast/leadership insertion anchor');
     out=out.replace(anchor,later+(live.includes('\r\n')?'\r\n':'\n')+anchor);
