@@ -10,7 +10,7 @@ test('newsletter landing has crawler-readable matching wide metadata and subscri
  const image='https://kahrelum.com/assets/social/og-kahrelum-intelligence-20261114.png';
  for(const attr of ['og:image','twitter:image']) assert.ok(html.includes(`${attr}" content="${image}"`));
  assert.match(html,/rel="canonical" href="https:\/\/kahrelum.com\/intelligence"/);
- assert.match(html,/name="robots" content="index, follow, max-image-preview:large"/);
+ assert.match(html,/name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/);
  assert.match(html,/name="twitter:card" content="summary_large_image"/);
  assert.match(html,/href="https:\/\/kahrelum.substack.com\/subscribe"/);
  assert.match(html,/og:image:width" content="1200"/);
@@ -33,4 +33,19 @@ test('release scope excludes existing articles, homepage, configuration and unre
  const workflow=read('.github/workflows/firebase-scoped-release.yml');
  assert.match(workflow,/profiles="intelligence-share"/);
  assert.match(workflow,/Intelligence share release includes unrelated path/);
+});
+
+test('Intelligence landing has JSON-LD, llms discovery, complete snippet policy and a readable topical heading',()=>{
+ const html=read('intelligence.html'),head=html.split('</head>')[0];
+ assert.match(head,/<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">/);
+ assert.match(head,/<link rel="describedby" href="\\/llms\\.txt">/);
+ const json=head.match(/<script type="application\\/ld\\+json">([\\s\\S]*?)<\\/script>/)?.[1];
+ assert.ok(json,'JSON-LD schema must be in HTML head');
+ const schema=JSON.parse(json);
+ assert.equal(schema['@type'],'WebPage');
+ assert.equal(schema.url,'https://kahrelum.com/intelligence');
+ assert.equal(schema.dateModified,'2026-11-17');
+ assert.ok(schema.description.includes('Independent investigations'));
+ assert.match(html,/<h2 id="topics-title"[^>]*>Coverage areas<\\/h2>/);
+ assert.match(html,/<a href="\\/ai-discovery\\/glossary\\.md">Evidence glossary<\\/a>/);
 });
