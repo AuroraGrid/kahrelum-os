@@ -17,7 +17,7 @@ NEW DOJ/Commerce record: Megaspeed faced a Commerce investigation from 2024; Nvi
 FAA: about 1,000 network connection attempts every 4–5 seconds, two potential sources (Amarillo and El Dorado), and instability at 17 of 22 centers. No indication of cyberattack; exact fault remains open. https://kahrelum.com/investigations/air-02
 
 ### GEO-02: source-linked reporting while full page remains draft
-Nov 17: IRGC says it targeted U.S. radar in Bahrain. Bahrain/CENTCOM report interception, no damage/injuries. No destruction verified. Reuters: https://www.reuters.com/world/middle-east/bahrain-says-it-intercepts-iranian-air-attacks-irgc-says-it-targets-us-radar-2026-11-17/
+Nov 17: IRGC says it targeted U.S. radar in Bahrain. Bahrain says it intercepted the attack. Independently verified destruction is not established in the reviewed reporting. Reuters: https://www.reuters.com/world/middle-east/bahrain-says-it-intercepts-iranian-air-attacks-irgc-says-it-targets-us-radar-2026-11-17/
 
 ### Loomer: documentary uncertainty, NOT an accusation of proven pay-to-post conduct
 The Washington Post reviewed apparent transfers over $60,000 to Laura Loomer/her business. Those records alone do not prove payment for specific posts. Sources allege paid political content; Loomer disputes it. Missing chain: payment → contract → dated post → disclosure.
@@ -65,3 +65,10 @@ Do not tag accounts unrelated to the evidence, send duplicates or private DMs, o
 3. After pressing Publish/Post, verify canonical post URLs via readback and capture original publish time, actual account, channel, final copy, and screenshot where available.
 4. Record result as PUBLISHED / DRAFT / FAILED / BLOCKED / REVIEW HOLD separately for each platform. Never claim a scheduled item is published.
 5. Never use native X Articles for this run, and do not post to LinkedIn, Buffer, email recipients or prospects. No fundraising/sales claims or third-party outreach beyond the named original X replies.
+
+
+## November 17 execution correction and receipt
+
+MQA-001 is now live after PRs #118/#127 and guarded Firebase run 44132018471; its actual offer remains HOLD and the original ZIP/transcript remain unrecovered. See PUBLICATION_RECEIPTS_20261117.json. No X or Substack post was sent during this run.
+
+GEO-02 copy above was narrowed: fresh Reuters syndication readback did not verify the previously asserted November 17 CENTCOM no-damage/no-injuries statement. The earlier wording is preserved in Git history, not cleared for posting. PR #114 retains its publication hold and unscored scenarios.

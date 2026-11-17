@@ -1,0 +1,458 @@
+{
+  "checkedAt": "2026-11-17T17:02:28.486065+00:00",
+  "account": "KAHRELUM / kahrelum.com; website authorship metadata is not a login verification",
+  "pages": [
+    {
+      "url": "https://kahrelum.com/",
+      "status": "PUBLISHED",
+      "http": 200,
+      "observedAt": "2026-11-17T17:02:29.222631+00:00",
+      "title": "KAHRELUM | AI Assurance, Investigations & Forecasting",
+      "sha256": "c5ff19e38511ff98d98c84380cbb13ce17b98d7e207b07af551c255a2fcd8f58",
+      "datedMetadata": [
+        "2026-11-12"
+      ],
+      "checks": {
+        "faaNov15": false,
+        "senate": false,
+        "doj": false,
+        "reconstruction": false,
+        "hold": false
+      }
+    },
+    {
+      "url": "https://kahrelum.com/insights",
+      "status": "PUBLISHED",
+      "http": 200,
+      "observedAt": "2026-11-17T17:02:29.273053+00:00",
+      "title": "KAHRELUM Insights | Research, Evidence & Forecasts",
+      "sha256": "396af61b8f05dcbade275d6f51ac8753389ec7a50043b3f924a53279de69c88b",
+      "datedMetadata": [
+        "2026-11-12"
+      ],
+      "checks": {
+        "faaNov15": false,
+        "senate": false,
+        "doj": false,
+        "reconstruction": false,
+        "hold": false
+      }
+    },
+    {
+      "url": "https://kahrelum.com/intelligence",
+      "status": "PUBLISHED",
+      "http": 200,
+      "observedAt": "2026-11-17T17:02:29.276327+00:00",
+      "title": "KAHRELUM Intelligence | Evidence Before Conclusions",
+      "sha256": "1802b5f261e810e08f0021a58c99d8e67e2e4f016e520db6f1755383e25a8e45",
+      "datedMetadata": [
+        "2026-11-17"
+      ],
+      "checks": {
+        "faaNov15": false,
+        "senate": false,
+        "doj": false,
+        "reconstruction": false,
+        "hold": false
+      }
+    },
+    {
+      "url": "https://kahrelum.com/investigations/air-02",
+      "status": "PUBLISHED",
+      "http": 200,
+      "observedAt": "2026-11-17T17:02:29.386740+00:00",
+      "title": "AIR-02: FAA Nationwide Ground Stop | KAHRELUM",
+      "sha256": "4ad40be4d32e4ff971d7cb998d1be376085a21f0d2a1d4dffcdd135fb83aa968",
+      "datedMetadata": [],
+      "checks": {
+        "faaNov15": true,
+        "senate": true,
+        "doj": false,
+        "reconstruction": false,
+        "hold": false
+      }
+    },
+    {
+      "url": "https://kahrelum.com/investigations/chip-01",
+      "status": "PUBLISHED",
+      "http": 200,
+      "observedAt": "2026-11-17T17:02:29.314761+00:00",
+      "title": "CHIP-01: Nvidia Chip Custody Investigation | KAHRELUM",
+      "sha256": "25047517ac777fe06e53609a8b12b55e8a8478d688049de95148d8493d05fb39",
+      "datedMetadata": [
+        "2026-11-08",
+        "2026-11-12"
+      ],
+      "checks": {
+        "faaNov15": false,
+        "senate": false,
+        "doj": true,
+        "reconstruction": false,
+        "hold": false
+      }
+    },
+    {
+      "url": "https://kahrelum.com/insights/nvidia-megaspeed-chip-custody",
+      "status": "PUBLISHED",
+      "http": 200,
+      "observedAt": "2026-11-17T17:02:29.839032+00:00",
+      "title": "Nvidia &amp; Megaspeed: Chip Custody Audit | KAHRELUM",
+      "sha256": "b76ebab543df744d6d18033ee1a02b058785ce0bd15b81b6e7e8a61bff1128cf",
+      "datedMetadata": [
+        "2026-11-08",
+        "2026-11-12"
+      ],
+      "checks": {
+        "faaNov15": false,
+        "senate": false,
+        "doj": true,
+        "reconstruction": false,
+        "hold": false
+      }
+    },
+    {
+      "url": "https://kahrelum.com/insights/morgan-dollar-quote",
+      "status": "PUBLISHED",
+      "http": 200,
+      "observedAt": "2026-11-17T17:02:29.879715+00:00",
+      "title": "The $42 Morgan-Dollar Quote: How Missing Context Changes an AI Decision | KAHRELUM",
+      "sha256": "b1e40794655d91b41fd79b19653124979bddbe4c4e18e6dc543c7a2bbec4c496",
+      "datedMetadata": [],
+      "checks": {
+        "faaNov15": false,
+        "senate": false,
+        "doj": false,
+        "reconstruction": true,
+        "hold": true
+      }
+    },
+    {
+      "url": "https://kahrelum.com/investigations/geo-02-gulf-escalation",
+      "status": "NOT VERIFIED LIVE",
+      "error": "HTTP Error 404: Not Found",
+      "observedAt": "2026-11-17T17:02:29.669095+00:00"
+    },
+    {
+      "url": "https://kahrelum.com/investigations/ca-001",
+      "status": "PUBLISHED",
+      "http": 200,
+      "observedAt": "2026-11-17T17:02:29.758628+00:00",
+      "title": "The AI Rehiring Statistic That Changes Meaning When You Check the Numbers | KAHRELUM Claim Audit",
+      "sha256": "b31b1a4c29e9d058cacbc8b802d429c5faf40e1dcba3df33680cd11d8260c509",
+      "datedMetadata": [],
+      "checks": {
+        "faaNov15": false,
+        "senate": false,
+        "doj": false,
+        "reconstruction": false,
+        "hold": false
+      }
+    },
+    {
+      "url": "https://kahrelum.com/investigations/tsds-watchlist-97-claim",
+      "status": "PUBLISHED",
+      "http": 200,
+      "observedAt": "2026-11-17T17:02:29.888837+00:00",
+      "title": "The 97% Watchlist Claim: What the Evidence Actually Shows | KAHRELUM",
+      "sha256": "de453d2f3fe65df6ec0ba8feba7e66f375c262b910d877fc32db7465d7f324c6",
+      "datedMetadata": [
+        "2026-11-15",
+        "2026-11-15"
+      ],
+      "checks": {
+        "faaNov15": false,
+        "senate": false,
+        "doj": false,
+        "reconstruction": false,
+        "hold": false
+      }
+    },
+    {
+      "url": "https://kahrelum.com/insights/hegseth-impeachment-forecast-2026",
+      "status": "PUBLISHED",
+      "http": 200,
+      "observedAt": "2026-11-17T17:02:30.185883+00:00",
+      "title": "Will Hegseth Survive? Impeachment and Departure Forecast | KAHRELUM",
+      "sha256": "818e705722f9caff28dd5046c55472b97911010beefd9e3475d1935637245699",
+      "datedMetadata": [],
+      "checks": {
+        "faaNov15": false,
+        "senate": false,
+        "doj": false,
+        "reconstruction": false,
+        "hold": false
+      }
+    },
+    {
+      "url": "https://kahrelum.com/insights/osint-illusion",
+      "status": "PUBLISHED",
+      "http": 200,
+      "observedAt": "2026-11-17T17:02:30.349461+00:00",
+      "title": "The OSINT Illusion: Real Evidence and Unsupported Conclusions | KAHRELUM",
+      "sha256": "2eda565a4a8689f7c9efa28b109225e04ff699dc98c3fa9a9723fda38f785eb3",
+      "datedMetadata": [],
+      "checks": {
+        "faaNov15": false,
+        "senate": false,
+        "doj": false,
+        "reconstruction": false,
+        "hold": false
+      }
+    },
+    {
+      "url": "https://kahrelum.com/forecasting/nfc-east-2026",
+      "status": "PUBLISHED",
+      "http": 200,
+      "observedAt": "2026-11-17T17:02:30.385555+00:00",
+      "title": "NFC East Title Odds: Giants 70.9%, Cowboys 17.5% | KAHRELUM",
+      "sha256": "5c48fc353836056b4f805454549a025e2a0180d37598d9b47d74d63cdac492fd",
+      "datedMetadata": [
+        "2026-11-13",
+        "2026-11-16"
+      ],
+      "checks": {
+        "faaNov15": false,
+        "senate": false,
+        "doj": false,
+        "reconstruction": false,
+        "hold": false
+      }
+    },
+    {
+      "url": "https://kahrelum.com/insights/calibration-oct-nov-2026",
+      "status": "PUBLISHED",
+      "http": 200,
+      "observedAt": "2026-11-17T17:02:30.355775+00:00",
+      "title": "7 Prospective Forecasts: Brier 0.1444 | KAHRELUM Calibration",
+      "sha256": "e016de1eb276ef7fe5202c89e300651322ac7253549f2054f3cb67d899ad06a8",
+      "datedMetadata": [
+        "2026-11-13",
+        "2026-11-13"
+      ],
+      "checks": {
+        "faaNov15": false,
+        "senate": false,
+        "doj": false,
+        "reconstruction": false,
+        "hold": false
+      }
+    }
+  ],
+  "socialPublicationsThisRun": [],
+  "socialStatus": "BLOCKED: authenticated Chrome UI runtime unavailable; no post/reply submitted",
+  "substackExisting": [
+    {
+      "status": "PUBLISHED (existing; feed readback)",
+      "title": "The FBI Watchlist's Viral 97% Claim Has a Serious Evidence Problem",
+      "url": "https://kahrelum.substack.com/p/the-fbi-watchlists-viral-97-claim",
+      "originalPublishedAt": "Sun, 15 Nov 2026 23:30:24 GMT",
+      "nov17AddendumPresent": false
+    },
+    {
+      "status": "PUBLISHED (existing; feed readback)",
+      "title": "The AI Rehiring Statistic That Changes Meaning When You Check the Numbers",
+      "url": "https://kahrelum.substack.com/p/the-ai-rehiring-statistic-that-changes",
+      "originalPublishedAt": "Sun, 15 Nov 2026 12:29:25 GMT",
+      "nov17AddendumPresent": false
+    },
+    {
+      "status": "PUBLISHED (existing; feed readback)",
+      "title": "The FAA Ground Stop Is Over. The Questions About America's Aviation Infrastructure Aren't.",
+      "url": "https://kahrelum.substack.com/p/faa-nationwide-ground-stop-what-failed",
+      "originalPublishedAt": "Sat, 14 Nov 2026 01:49:29 GMT",
+      "nov17AddendumPresent": false
+    }
+  ],
+  "runSummary": {
+    "newCanonicalPublication": "https://kahrelum.com/insights/morgan-dollar-quote",
+    "newXPosts": 0,
+    "newXReplies": 0,
+    "newSubstackPublications": 0,
+    "complete": false
+  },
+  "mqaRelease": {
+    "status": "PUBLISHED",
+    "prs": [
+      118,
+      127
+    ],
+    "sourceCommit": "601984dd2e1541cccbef11231543aaacd9243067",
+    "workflow": "https://github.com/AuroraGrid/kahrelum-os/actions/runs/44132018471",
+    "productionReadbackLoggedAt": "2026-11-17T17:01:21.486Z",
+    "timestampMeaning": "Workflow production readback time, not an invented article publish second",
+    "nodeTests": {
+      "pass": 342,
+      "fail": 0
+    },
+    "pythonTests": {
+      "pass": 141,
+      "fail": 0
+    },
+    "productionBrowserWidths": [
+      320,
+      390,
+      768,
+      1280
+    ],
+    "maxOverflow": 0,
+    "brokenImages": 0,
+    "changedPaths": [
+      "/assets/social/og-mqa001.png",
+      "/insights.html",
+      "/insights/morgan-dollar-quote.html",
+      "/sitemap.md",
+      "/sitemap.xml"
+    ],
+    "earlierAttempt": {
+      "status": "FAILED",
+      "workflow": "https://github.com/AuroraGrid/kahrelum-os/actions/runs/44130779170",
+      "reason": "origin is not defined during planning; repaired in PR 127; no bypass"
+    }
+  },
+  "distribution": [
+    {
+      "channel": "X",
+      "item": "AIR-02 standalone",
+      "status": "BLOCKED",
+      "url": null,
+      "reason": "Cannot verify authenticated account, duplicates or original-reply context: browser kernel initialization failure"
+    },
+    {
+      "channel": "X",
+      "item": "CHIP-01 standalone",
+      "status": "BLOCKED",
+      "url": null,
+      "reason": "Cannot verify authenticated account, duplicates or original-reply context: browser kernel initialization failure"
+    },
+    {
+      "channel": "X",
+      "item": "MQA-001 standalone",
+      "status": "BLOCKED",
+      "url": null,
+      "reason": "Cannot verify authenticated account, duplicates or original-reply context: browser kernel initialization failure"
+    },
+    {
+      "channel": "X",
+      "item": "Loomer standalone",
+      "status": "BLOCKED",
+      "url": null,
+      "reason": "Cannot verify authenticated account, duplicates or original-reply context: browser kernel initialization failure"
+    },
+    {
+      "channel": "X",
+      "item": "Reply to LauraLoomer",
+      "status": "BLOCKED",
+      "url": null,
+      "reason": "Cannot verify authenticated account, duplicates or original-reply context: browser kernel initialization failure"
+    },
+    {
+      "channel": "X",
+      "item": "Reply to drewharwell",
+      "status": "BLOCKED",
+      "url": null,
+      "reason": "Cannot verify authenticated account, duplicates or original-reply context: browser kernel initialization failure"
+    },
+    {
+      "channel": "X",
+      "item": "Reply to alexbruesewitz",
+      "status": "BLOCKED",
+      "url": null,
+      "reason": "Cannot verify authenticated account, duplicates or original-reply context: browser kernel initialization failure"
+    },
+    {
+      "channel": "X",
+      "item": "GEO-02 standalone",
+      "status": "REVIEW HOLD",
+      "url": null,
+      "reason": "Original packet overstates fresh CENTCOM attribution; corrected copy needs dated-source and duplicate verification"
+    },
+    {
+      "channel": "Substack",
+      "item": "AIR-02 dated addendum",
+      "status": "DRAFT",
+      "url": null,
+      "reason": "Local adaptation saved; editor not accessed; not a platform draft or publication"
+    },
+    {
+      "channel": "Substack",
+      "item": "CHIP-01 new update",
+      "status": "DRAFT",
+      "url": null,
+      "reason": "Local adaptation saved; editor not accessed; not a platform draft or publication"
+    },
+    {
+      "channel": "Substack",
+      "item": "MQA-001 adaptation",
+      "status": "DRAFT",
+      "url": null,
+      "reason": "Local adaptation saved; editor not accessed; not a platform draft or publication"
+    },
+    {
+      "channel": "Substack / website",
+      "item": "GEO-02",
+      "status": "REVIEW HOLD",
+      "url": null,
+      "reason": "Incomplete dated primary/independent chronology; corrected attribution, no production release"
+    },
+    {
+      "channel": "Substack / website",
+      "item": "Loomer long-form",
+      "status": "REVIEW HOLD",
+      "url": null,
+      "reason": "Transaction-to-post attribution and legal/factual gates incomplete"
+    }
+  ],
+  "preservationReadback": [
+    {
+      "url": "https://kahrelum.com/",
+      "unchanged": true
+    },
+    {
+      "url": "https://kahrelum.com/intelligence",
+      "unchanged": true
+    },
+    {
+      "url": "https://kahrelum.com/investigations/air-02",
+      "unchanged": true
+    },
+    {
+      "url": "https://kahrelum.com/investigations/chip-01",
+      "unchanged": true
+    },
+    {
+      "url": "https://kahrelum.com/insights/nvidia-megaspeed-chip-custody",
+      "unchanged": true
+    },
+    {
+      "url": "https://kahrelum.com/investigations/ca-001",
+      "unchanged": true
+    },
+    {
+      "url": "https://kahrelum.com/investigations/tsds-watchlist-97-claim",
+      "unchanged": true
+    },
+    {
+      "url": "https://kahrelum.com/insights/hegseth-impeachment-forecast-2026",
+      "unchanged": true
+    },
+    {
+      "url": "https://kahrelum.com/insights/osint-illusion",
+      "unchanged": true
+    },
+    {
+      "url": "https://kahrelum.com/forecasting/nfc-east-2026",
+      "unchanged": true
+    },
+    {
+      "url": "https://kahrelum.com/insights/calibration-oct-nov-2026",
+      "unchanged": true
+    }
+  ],
+  "limitations": [
+    "No current signed-in X/Substack account readback; no external social submission made.",
+    "Substack feed is not an exhaustive private-draft inventory.",
+    "Full fresh stale-case source audit is incomplete.",
+    "Cloudflare Pages build failures persist on baseline and branches; Firebase release tests and guards passed independently.",
+    "Original MQA ZIP/transcript remain unrecovered; no customer or external-model outcome verified."
+  ]
+}
