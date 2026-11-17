@@ -142,9 +142,14 @@
     window.dataLayer = window.dataLayer || [];
     function tag() { window.dataLayer.push(arguments); }
     tag("consent", "default", {analytics_storage:"granted", ad_storage:"denied", ad_user_data:"denied", ad_personalization:"denied"});
+    tag("set", "page_location", location.origin + location.pathname);
+    tag("set", "page_title", "KAHRELUM");
+    tag("set", "allow_google_signals", false);
+    tag("set", "allow_ad_personalization_signals", false);
     tag("js", new Date());
     var ref = "";
     try { ref = document.referrer ? new URL(document.referrer).origin + "/" : ""; } catch (_) {}
+    tag("set", "page_referrer", ref);
     tag("config", id, {
       page_location: location.origin + location.pathname,
       page_referrer: ref, page_title: "KAHRELUM",
