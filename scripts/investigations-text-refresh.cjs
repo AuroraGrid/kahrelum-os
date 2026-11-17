@@ -102,6 +102,23 @@ function patchNvidiaDetailPage(live,canonical,file){
     if(out.split(anchor).length!==2)throw Error('Expected a single frozen leadership forecast anchor');
     out=out.replace(anchor,snippet+(live.includes('\r\n')?'\r\n':'\n')+anchor);
   }
+  // November 17 federal-source update. Insert only a complete dated section into
+  // the verified live page, preserving every other published byte and prior lock.
+  const laterMarker='<section id="chip01-nov17-doj-statement"';
+  const laterStart=canonical.indexOf(laterMarker);
+  if(laterStart<0||canonical.indexOf(laterMarker,laterStart+laterMarker.length)!==-1)throw Error('Missing or repeated Nov17 DOJ section in canonical source');
+  const laterEnd=canonical.indexOf('</section>',laterStart);
+  if(laterEnd<0)throw Error('Unclosed Nov17 DOJ update');
+  const later=canonical.slice(laterStart,laterEnd+'</section>'.length);
+  if(!later.includes('2026-11-17-doj-bis-statement.md')||!later.includes('not a finding of guilt')||!later.includes('https://www.justice.gov/opa/pr/joint-statement-department-commerce-and-department-justice-megaspeed-investigation'))throw Error('Incomplete DOJ source or legal boundary');
+  if(out.includes(laterMarker)){
+    const oldStart=out.indexOf(laterMarker),oldEnd=out.indexOf('</section>',oldStart);
+    if(oldEnd<0||out.indexOf(laterMarker,oldStart+laterMarker.length)!==-1)throw Error('Repeated or broken live Nov17 DOJ section');
+    if(out.slice(oldStart,oldEnd+'</section>'.length)!==later)throw Error('Conflicting changed live Nov17 DOJ evidence; independent review required');
+  } else {
+    if(out.split(anchor).length!==2)throw Error('Missing frozen CHIP-01 forecast/leadership insertion anchor');
+    out=out.replace(anchor,later+(live.includes('\r\n')?'\r\n':'\n')+anchor);
+  }
   if(out.split('</head>')[0]!==live.split('</head>')[0])throw Error('Unapproved metadata modification in CHIP-01 patch');
   if(!out.includes(anchor)||!out.includes('85%')||!out.includes('10%')||!out.includes('5%'))throw Error('Original outcome forecast disappeared');
   return out.replace(/\r\n/g,'\n')===live.replace(/\r\n/g,'\n') ? live : out;
