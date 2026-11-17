@@ -58,3 +58,5 @@ Statements reflect the named public page and its original dated source records. 
 - [NFC East probabilities and update history](https://kahrelum.com/forecasting/nfc-east-2026): Giants 66.4%, Cowboys 23.4%, Commanders 9.7%, Eagles 0.5% after Washington defeated the Giants 24–21. Dated, open, unscored, experimental 1,000,000-simulation model.
 - [Original GitHub source custody](https://github.com/AuroraGrid/kahrelum-os/commit/d29ffcc02433efe3bd184865bd15d075fcfce7de) from November 13 UTC, not a pregame external lock; [public JSON](https://kahrelum.com/forecasting/nfc-east-title-2026-11-12.json) records model assumptions, market inputs, sensitivity and the rare approximate tiebreak allocation.
 - After verified games, append a new version, preserve each original probability and cite the official result. Do not imply a run or a new score before it exists.
+
+NFC East 2026 post-49ers 46, Cowboys 40: https://kahrelum.com/forecasting/nfc-east-title-2026-11-15-post-sf.json (new seeded million-draw scenario simulation; original snapshot preserved).

@@ -51,6 +51,7 @@ on:
       - 'assets/social/og-calibration-oct-nov-2026.png'
       - 'forecasting/nfc-east-2026.html'
       - 'assets/social/og-nfc-east-title-2026.svg'
+      - 'assets/social/og-nfc-east-title-2026-11-15.svg'
       - 'research/nfc-east-2026/**'
       - 'scripts/render-nfc-social.py'
       - 'tests/nfc-east-title-publication.test.cjs'
@@ -188,7 +189,7 @@ jobs:
             elif grep -Fqx 'scripts/site-completion.cjs' <<< "$changed"; then
               while IFS= read -r file; do
                 case "$file" in
-                  scripts/site-completion.cjs|scripts/site-completion-browser-qa.cjs|scripts/firebase-overlay-release.cjs|scripts/deploy-unified-firebase.ps1|tests/site-completion.test.cjs|site-shell.css|index.md|pilot-page.md|ai-discovery/*.md|insights.html|nfl/deadline-watch-2026.html|election-data/index.html|research/site-design/SITE_COMPLETION_20261112.md|.github/workflows/firebase-scoped-release.yml)
+                  .gitattributes|scripts/site-completion.cjs|scripts/release3-live-patches.cjs|scripts/site-completion-browser-qa.cjs|scripts/firebase-overlay-release.cjs|scripts/deploy-unified-firebase.ps1|tests/site-completion.test.cjs|tests/editorial-maintenance.test.cjs|site-shell.css|index.md|pilot-page.md|ai-discovery/*.md|insights.html|nfl/deadline-watch-2026.html|election-data/index.html|research/site-design/SITE_COMPLETION_20261112.md|research/website-editorial-ops/*|.github/workflows/firebase-scoped-release.yml)
                     ;;
                   *) echo "::error::Site completion source push includes unrelated path: $file"; exit 1 ;;
                 esac
@@ -197,7 +198,7 @@ jobs:
             elif grep -Fqx 'forecasting/nfc-east-2026.html' <<< "$changed"; then
               while IFS= read -r file; do
                 case "$file" in
-                  research/nfc-east-2026/*|forecasting/nfc-east-2026.html|assets/social/og-nfc-east-title-2026.svg|scripts/render-nfc-social.py|tests/nfc-east-title-publication.test.cjs|forecasting.html|sitemap.md|llms.txt|ai-discovery/forecasting.md|scripts/firebase-overlay-release.cjs|.github/workflows/firebase-scoped-release.yml) ;;
+                  research/nfc-east-2026/*|forecasting/nfc-east-2026.html|assets/social/og-nfc-east-title-2026.svg|assets/social/og-nfc-east-title-2026-11-15.svg|scripts/render-nfc-social.py|tests/nfc-east-title-publication.test.cjs|forecasting.html|sitemap.md|llms.txt|ai-discovery/forecasting.md|scripts/firebase-overlay-release.cjs|.github/workflows/firebase-scoped-release.yml) ;;
                   *) echo "::error::NFC East release includes unrelated path: $file"; exit 1 ;;
                 esac
               done <<< "$changed"
@@ -239,6 +240,16 @@ jobs:
                 esac
               done <<< "$changed"
               profiles="ai-visibility-hardening"
+            elif grep -Fqx 'investigations/chip-01.html' <<< "$changed"; then
+              # Dated Nov 17 official-source delta: patch verified live CHIP-01 and companion Insight only.
+              while IFS= read -r file; do
+                case "$file" in
+                  investigations/chip-01.html|insights/nvidia-megaspeed-chip-custody.html|research/chip-01/2026-11-17-doj-bis-statement.md|scripts/investigations-text-refresh.cjs|tests/chip01-nov17-doj.test.cjs|.github/workflows/firebase-scoped-release.yml)
+                    ;;
+                  *) echo "::error::CHIP-01 Nov17 update includes unrelated path: $file"; exit 1 ;;
+                esac
+              done <<< "$changed"
+              profiles="investigations-text-only"
             elif grep -Fqx 'investigations/air-02.html' <<< "$changed"; then
               while IFS= read -r file; do
                 case "$file" in
@@ -337,7 +348,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python3 -m pip install --disable-pip-version-check --quiet cairosvg==2.8.2
+          python3 -m pip install --disable-pip-version-check --quiet cairosvg==2.8.2 numpy==2.3.4 pytest==8.4.2
+          python3 -m pytest -q research/nfc-east-2026/test_nfc_east_post_sf_2026_11_15.py
           python3 scripts/build-kahrelum-editorial-social.py
           python3 scripts/build-kahrelum-editorial-social.py --check
           node --test tests/*.test.cjs
