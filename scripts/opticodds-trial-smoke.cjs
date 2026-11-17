@@ -41,13 +41,28 @@ async function runTrial({ argv = [], env = process.env, fetchImpl = globalThis.f
   const request = buildRequest(env.OPTICODDS_API_KEY);
   const receiptPath = path.join(receiptDir, 'first-request.json');
   await fs.mkdir(receiptDir, { recursive: true, mode: 0o700 });
-  try {
-    await fs.access(receiptPath);
-    throw new Error('A first-request receipt already exists. Refusing another accidental trial start.');
-  } catch (error) {
-    if (error.code !== 'ENOENT') throw error;
-  }
   const firstRequestUtc = new Date().toISOString();
+  // Reserve durably BEFORE any network access. An interrupted attempt remains
+  // blocked, even when its actual network outcome cannot be recovered.
+  const reservation = {
+    first_request_utc: firstRequestUtc,
+    endpoint: '/api/v3/sports',
+    http_status: null,
+    outcome: 'reserved_outcome_unknown',
+    vendor_trial_end_utc: null,
+    note: 'Reservation is not proof a request was sent. Do not retry or erase it without reconciliation.',
+  };
+  let handle;
+  try {
+    handle = await fs.open(receiptPath, 'wx', 0o600);
+    await handle.writeFile(JSON.stringify(reservation, null, 2) + '\n');
+    await handle.sync();
+  } catch (error) {
+    if (error.code === 'EEXIST') throw new Error('A first-request receipt already exists. Refusing another accidental trial start.');
+    throw error;
+  } finally {
+    if (handle) await handle.close();
+  }
   let httpStatus = null;
   let outcome = 'network_error';
   try {
@@ -66,7 +81,8 @@ async function runTrial({ argv = [], env = process.env, fetchImpl = globalThis.f
     vendor_trial_end_utc: null,
     note: 'No raw API response is retained. Confirm vendor clock and expiration separately.',
   };
-  await fs.writeFile(receiptPath, JSON.stringify(receipt, null, 2) + '\n', { flag: 'wx', mode: 0o600 });
+  // The reservation file continues to block retries even if completion writing fails.
+  await fs.writeFile(receiptPath, JSON.stringify(receipt, null, 2) + '\n', { mode: 0o600 });
   log('Trial attempt receipt saved locally: ' + receiptPath + '. HTTP status: ' + (httpStatus ?? 'no response') + '.');
   if (outcome === 'network_error') throw new Error('Request failed; review connectivity privately. First-attempt receipt preserved.');
   if (outcome === 'http_error') throw new Error('API returned HTTP ' + httpStatus + '; verify entitlement with Chirag. First-attempt receipt preserved.');

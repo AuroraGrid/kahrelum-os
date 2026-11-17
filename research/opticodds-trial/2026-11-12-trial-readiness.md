@@ -80,3 +80,8 @@ Source classes: PROVIDER_OBSERVATION, INDEPENDENT_PRIMARY, DOWNSTREAM_OBSERVATIO
 | Firebase publication or changes | NONE from this preparation |
 
 Official docs: https://developer.opticodds.com/docs/api-faq ; https://developer.opticodds.com/docs/odds-api-getting-started-guide ; https://developer.opticodds.com/reference/get_fixtures-odds-historical ; https://developer.opticodds.com/reference/get_stream-prediction-markets .
+
+
+## November 17 closure audit — offline only
+
+A review found that the first-use guard checked for an existing receipt before the request but created the receipt afterward. Concurrent runs or interruption after sending could therefore permit additional attempts. The script now creates and syncs an exclusive reservation before network access. An incomplete reservation means UNKNOWN, not proof a request was sent, and blocks retry until reconciled. Completion updates the same reserved file. Nine offline tests pass, including concurrent attempts and interrupted reservation. No vendor request, key retrieval, trial activation, or commercial consent occurred. Vendor and release gates above remain HOLD.

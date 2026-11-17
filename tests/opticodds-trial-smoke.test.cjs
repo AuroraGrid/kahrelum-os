@@ -6,6 +6,39 @@ const os = require('node:os');
 const path = require('node:path');
 const { runTrial, parseMode, buildRequest } = require('../scripts/opticodds-trial-smoke.cjs');
 
+test('concurrent attempts reserve before network access and permit only one request', async () => {
+  const dir = await fs.mkdtemp(path.join(os.tmpdir(), 'opticodds-test-'));
+  let calls = 0;
+  try {
+    const options = { argv: ['--live', '--confirm-trial-start'],
+      env: { OPTICODDS_API_KEY: 'mock-only-key' }, receiptDir: dir, log: () => {},
+      fetchImpl: async () => {
+        calls++;
+        const receipt = JSON.parse(await fs.readFile(path.join(dir, 'first-request.json'), 'utf8'));
+        assert.equal(receipt.outcome, 'reserved_outcome_unknown');
+        return { status: 200, ok: true };
+      } };
+    const results = await Promise.allSettled([runTrial(options), runTrial(options)]);
+    assert.equal(calls, 1);
+    assert.equal(results.filter(r => r.status === 'fulfilled').length, 1);
+    assert.match(results.find(r => r.status === 'rejected').reason.message, /already exists/);
+  } finally { await fs.rm(dir, { recursive: true, force: true }); }
+});
+
+test('an interrupted reservation blocks retry without claiming a request was sent', async () => {
+  const dir = await fs.mkdtemp(path.join(os.tmpdir(), 'opticodds-test-'));
+  try {
+    const receipt = '{"outcome":"reserved_outcome_unknown"}\n';
+    await fs.writeFile(path.join(dir, 'first-request.json'), receipt);
+    let calls = 0;
+    await assert.rejects(runTrial({ argv: ['--live', '--confirm-trial-start'],
+      env: { OPTICODDS_API_KEY: 'mock-only-key' }, receiptDir: dir,
+      fetchImpl: async () => { calls++; }, log: () => {} }), /already exists/);
+    assert.equal(calls, 0);
+    assert.equal(await fs.readFile(path.join(dir, 'first-request.json'), 'utf8'), receipt);
+  } finally { await fs.rm(dir, { recursive: true, force: true }); }
+});
+
 test('the default command is offline, even with a secret in the environment', async () => {
   let called = false;
   const output = [];
