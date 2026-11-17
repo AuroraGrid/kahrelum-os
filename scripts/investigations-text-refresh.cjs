@@ -99,8 +99,10 @@ function patchNvidiaDetailPage(live,canonical,file){
     if(oldEnd<0||out.indexOf(marker,oldStart+1)>=0)throw Error('Corrupt existing leadership section');
     out=out.slice(0,oldStart)+snippet+out.slice(oldEnd+'</section>'.length);
   } else {
-    if(out.split(anchor).length!==2)throw Error('Expected a single frozen leadership forecast anchor');
-    out=out.replace(anchor,snippet+(live.includes('\r\n')?'\r\n':'\n')+anchor);
+    const legacyInsertAnchor=out.includes('<section id="chip01-nov17-doj-statement"')?
+      '<section id="chip01-nov17-doj-statement"':anchor;
+    if(out.split(legacyInsertAnchor).length!==2)throw Error('Expected a single frozen leadership forecast anchor');
+    out=out.replace(legacyInsertAnchor,snippet+(live.includes('\r\n')?'\r\n':'\n')+legacyInsertAnchor);
   }
   // November 17 federal-source update. Insert only a complete dated section into
   // the verified live page, preserving every other published byte and prior lock.
