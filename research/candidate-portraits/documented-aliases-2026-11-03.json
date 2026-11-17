@@ -1,0 +1,66 @@
+{
+  "schema": "KAHRELUM_DOCUMENTED_CONGRESSIONAL_ALIASES_v1.0",
+  "reviewedAtUtc": "2026-11-03T06:32:01Z",
+  "description": "First-party textual identity/alias evidence bound to three existing pinned Bioguide photos, without fuzzy or face matching. Capture excerpts are reproduced verbatim from official source HTML and hashed. Original fetched HTML SHA-256 is recorded; full HTML is not republished to avoid unrelated contact information. Aliases certify photographic identity only, not the official ballot roster.",
+  "records": [
+    {
+      "sourceCandidateId": 16266,
+      "candidateName": "Tom Kean Jr.",
+      "state": "NJ",
+      "party": "R",
+      "chamber": "House",
+      "contestId": "NJ-7",
+      "bioguideId": "K000398",
+      "firstPartySourceUrl": "https://kean.house.gov/about",
+      "evidencePhrases": [
+        "About | Congressman Thomas Kean Jr.",
+        "Tom Kean, Jr. is serving his second term in Congress representing New Jersey’s 7th Congressional District."
+      ],
+      "sourceHtmlSha256": "4b0eb13c8ca46ddbebb310803a32976c79931ef854e5d8db8d40e3a33c4ea36b",
+      "capture": {
+        "path": "research/candidate-portraits/alias-captures-2026-11-03/kean.txt",
+        "sha256": "a5c679bfd2800e2c30f2f714a0264b7fd208969f5d632672bfa69dfc2984068b"
+      },
+      "reviewedAtUtc": "2026-11-03T06:32:01Z"
+    },
+    {
+      "sourceCandidateId": 23012,
+      "candidateName": "John Olszewski",
+      "state": "MD",
+      "party": "D",
+      "chamber": "House",
+      "contestId": "MD-2",
+      "bioguideId": "O000176",
+      "firstPartySourceUrl": "https://www.elections.maryland.gov/elections/2026/general_candidates/2026_GG_statewide_candidatelist.html",
+      "evidencePhrases": [
+        "Congressional District 2 John \"Johnny O\" Olszewski, Jr. Democratic"
+      ],
+      "sourceHtmlSha256": "0dfe58f720a75171bf0340b507c5a9a82e811b1f5f6ec59b40f8f7507f9a76db",
+      "capture": {
+        "path": "research/candidate-portraits/alias-captures-2026-11-03/olszewski.txt",
+        "sha256": "dd0d64a0f90c6a1475a6aa4e910243c43a35b81486ba67277d834c20dc06b2b5"
+      },
+      "reviewedAtUtc": "2026-11-03T06:32:01Z"
+    },
+    {
+      "sourceCandidateId": 23094,
+      "candidateName": "Nicholas LaLota",
+      "state": "NY",
+      "party": "R",
+      "chamber": "House",
+      "contestId": "NY-1",
+      "bioguideId": "L000598",
+      "firstPartySourceUrl": "https://usna.edu/Notables/Bios/2000lalota.php",
+      "evidencePhrases": [
+        "Nicholas Joseph LaLota Member of Congress Class of 2000",
+        "U.S. Rep. Nick LaLota represents New York's First Congressional District."
+      ],
+      "sourceHtmlSha256": "a82ed13181db484fe30fff0e4318f704c4208f9569a22759d19ac30d380502a4",
+      "capture": {
+        "path": "research/candidate-portraits/alias-captures-2026-11-03/lalota.txt",
+        "sha256": "e7fe27e587cea40441e8ce0f728faeca462f6d31334ead8064deb597a78de8c1"
+      },
+      "reviewedAtUtc": "2026-11-03T06:32:01Z"
+    }
+  ]
+}

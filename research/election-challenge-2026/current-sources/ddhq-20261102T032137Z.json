@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Decision Desk HQ",
+  "sourceUrl": "https://votes.decisiondeskhq.com/forecast/2026",
+  "retrievedAtUtc": "2026-11-02T03:21:37.5887131Z",
+  "retrievalStatus": "FIRST_PARTY_PUBLIC_RENDERED_VERIFIED",
+  "custody": {"representation": "LIVE_BROWSER_ACCESSIBILITY_TREE_SELECTED_FIELDS_NOT_RAW_HTML", "exactHttpWireBytes": false, "fullSourcePublishedInRepository": false},
+  "publisherEdition": {"renderedBrowserLabel": "Last updated Nov 1, 10:39 PM", "timezoneInterpretation": "America/New_York task timezone"},
+  "observations": {
+    "houseDemocraticControlPct": 84.0,
+    "houseRepublicanControlPct": 16.0,
+    "houseDemocraticSeats": 241.0,
+    "houseSeatType": "projected",
+    "senateDemocraticControlPct": 64.0,
+    "senateRepublicanControlPct": 36.0,
+    "senateDemocraticSeats": 52.0,
+    "senateSeatType": "projected",
+    "jointOutcomePct": {"democraticSenateAndDemocraticHouse": 62.0, "democraticSenateAndRepublicanHouse": 2.0, "republicanSenateAndDemocraticHouse": 21.0, "republicanSenateAndRepublicanHouse": 15.0}
+  },
+  "changeFromPriorAdmittedEdition": {"houseDemocraticControlPct": {"from": 83.0, "to": 84.0}, "senateDemocraticControlPct": {"from": 62.0, "to": 64.0}, "unchanged": ["houseDemocraticSeats", "senateDemocraticSeats"]},
+  "directHttpCheck": {"httpStatus": 429, "note": "Direct unattended HTTP remained rate-limited; only the live rendered first-party page supplied admitted numbers."},
+  "kahrelumInputReview": {"script": "scripts/refresh-election-projections.py", "providerUsedByScript": false, "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"},
+  "admissionNote": "The prospectively observed rendered edition raises Democratic House control to 84% and Democratic Senate control to 64%; projected seats remain 241 House and 52 Senate. The four displayed joint outcomes sum to 100%."
+}

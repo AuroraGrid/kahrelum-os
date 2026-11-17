@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "fred_methods",
+  "sourceUrl": "https://fredcornell.com/methodology/us",
+  "primarySource": true,
+  "capture": {
+    "startedAtUtc": "2026-10-31T04:16:58Z",
+    "completedAtUtc": "2026-10-31T04:17:03Z",
+    "method": "Firecrawl fresh scrape maxAge=0",
+    "cachePolicy": "maxAge=0"
+  },
+  "custody": {
+    "representation": "TOOL_RETURNED_RAW_HTML_UTF8",
+    "sha256": "515d9de7a4467826c0a4b6992e35bef835ccb745c096df3094e628cc89a71583",
+    "utf8Bytes": 175933,
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false,
+    "rawCaptureRetention": "Working capture; not part of the public commit. The public immutable receipt preserves factual observations and digests, not a replayable HTTP archive.",
+    "toolMarkdownSha256": "8272f11bb814d40480ebbe741ad4f15f7a0773be65f731c58c559c2a9c2a5a4d"
+  },
+  "publisherMetadata": {
+    "title": "US election forecast methodology | Fred Cornell",
+    "scrapeId": "01a1902c-d633-71f0-b8a1-9ec4b0017415",
+    "sourceURL": "https://fredcornell.com/methodology/us",
+    "url": "https://fredcornell.com/methodology/us",
+    "statusCode": 200,
+    "contentType": "text/html; charset=utf-8",
+    "indexId": "b79888ec-b7fe-42da-8e3d-34af73b5292f"
+  },
+  "evidenceExcerpts": [],
+  "crossSourceReview": {
+    "scope": "Related provider review synthesized across the manifest sourceIds; a method page need not itself contain the numerical forecast.",
+    "facts": [
+      {
+        "providerId": "fred",
+        "houseControlPercent": 99,
+        "senateControlPercent": 68.7,
+        "publicationLabel": "October 30, 2026 (date only)",
+        "publishedAtUtc": null,
+        "houseEventReview": "The House summary specifies a 99 percent chance of winning at least 218 seats.",
+        "senateEventReview": "The source separately reports a Democratic 51-plus event, Republican control including 50, and independents holding the balance. Its separate-independent treatment is not established as equivalent to KAHRELUM conditional caucus assumptions."
+      }
+    ]
+  }
+}

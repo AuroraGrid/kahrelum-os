@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "fred_senate",
+  "sourceUrl": "https://fredcornell.com/us/senate",
+  "primarySource": true,
+  "capture": {
+    "startedAtUtc": "2026-10-31T04:16:13Z",
+    "completedAtUtc": "2026-10-31T04:16:25Z",
+    "method": "Firecrawl fresh scrape maxAge=0",
+    "cachePolicy": "maxAge=0"
+  },
+  "custody": {
+    "representation": "TOOL_RETURNED_RAW_HTML_UTF8",
+    "sha256": "c6d3c8569b59fe9e3a4273465d1b7232074750dcc42ac9a8118fd40710bb374e",
+    "utf8Bytes": 190044,
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false,
+    "rawCaptureRetention": "Working capture; not part of the public commit. The public immutable receipt preserves factual observations and digests, not a replayable HTTP archive.",
+    "toolMarkdownSha256": "453b394b7f80afe0174219939516a7523ae426a1d662c47ae31cc8ecacf6b9f2"
+  },
+  "publisherMetadata": {
+    "title": "2026 Senate forecast: Democrats 69% chance of 51+ seats",
+    "scrapeId": "01a1902c-26d4-703f-9a31-8f9373a5d0bb",
+    "sourceURL": "https://fredcornell.com/us/senate",
+    "url": "https://fredcornell.com/us/senate",
+    "statusCode": 200,
+    "contentType": "text/html; charset=utf-8",
+    "indexId": "77a00d62-cbd3-46f7-8a92-0cfd35f02086"
+  },
+  "evidenceExcerpts": [
+    {
+      "exactText": "68.7%",
+      "representation": "markdown",
+      "characterOffset": 2044
+    },
+    {
+      "exactText": "**Independents hold the balance**",
+      "representation": "markdown",
+      "characterOffset": 2192
+    }
+  ],
+  "crossSourceReview": {
+    "scope": "Related provider review synthesized across the manifest sourceIds; a method page need not itself contain the numerical forecast.",
+    "facts": [
+      {
+        "providerId": "fred",
+        "houseControlPercent": 99,
+        "senateControlPercent": 68.7,
+        "publicationLabel": "October 30, 2026 (date only)",
+        "publishedAtUtc": null,
+        "houseEventReview": "The House summary specifies a 99 percent chance of winning at least 218 seats.",
+        "senateEventReview": "The source separately reports a Democratic 51-plus event, Republican control including 50, and independents holding the balance. Its separate-independent treatment is not established as equivalent to KAHRELUM conditional caucus assumptions."
+      }
+    ]
+  }
+}

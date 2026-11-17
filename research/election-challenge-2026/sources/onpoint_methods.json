@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "onpoint_methods",
+  "sourceUrl": "https://www.tpsielections.com/forecast/methodology",
+  "primarySource": true,
+  "capture": {
+    "startedAtUtc": "2026-10-31T04:16:13Z",
+    "completedAtUtc": "2026-10-31T04:16:25Z",
+    "method": "Firecrawl fresh scrape maxAge=0",
+    "cachePolicy": "maxAge=0"
+  },
+  "custody": {
+    "representation": "TOOL_RETURNED_RAW_HTML_UTF8",
+    "sha256": "e7f6ac9f5bc5f88705ac55d0a3fcb3b6f978f14d2e91f3d94d16bf76dc2f5782",
+    "utf8Bytes": 201297,
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false,
+    "rawCaptureRetention": "Working capture; not part of the public commit. The public immutable receipt preserves factual observations and digests, not a replayable HTTP archive.",
+    "toolMarkdownSha256": "2597425e22289c9174352fdfd5ac3590e05a27fe531020f4473ba030b7090e15"
+  },
+  "publisherMetadata": {
+    "title": "How the 2026 election forecast works | On Point Politics",
+    "scrapeId": "01a1902c-270a-718a-9dc5-f70007a64aab",
+    "sourceURL": "https://www.tpsielections.com/forecast/methodology",
+    "url": "https://www.tpsielections.com/forecast/methodology",
+    "statusCode": 200,
+    "contentType": "text/html; charset=utf-8",
+    "indexId": "b5bc6a7c-091e-429c-bf42-fb0c606f9ee3"
+  },
+  "evidenceExcerpts": [
+    {
+      "exactText": "**House:** 218 of 435 seats.",
+      "representation": "markdown",
+      "characterOffset": 34229
+    },
+    {
+      "exactText": "Dan Osborn in Nebraska is counted in the Democratic column.",
+      "representation": "markdown",
+      "characterOffset": 34167
+    }
+  ],
+  "crossSourceReview": {
+    "scope": "Related provider review synthesized across the manifest sourceIds; a method page need not itself contain the numerical forecast.",
+    "facts": [
+      {
+        "providerId": "onpoint",
+        "houseControlPercent": 97,
+        "senateControlPercent": 90,
+        "publicationLabel": "October 30, 2026 (date only)",
+        "publishedAtUtc": null,
+        "houseEventReview": "The primary forecast consistently gives 97 percent Democratic House control; the methods define 218 of 435.",
+        "senateEventReview": "The methods explicitly count Dan Osborn in the Democratic column. The full independent-caucus mapping has not been matched to KAHRELUM. The newly captured Senate probability is 90 percent, not the earlier 86."
+      }
+    ]
+  }
+}

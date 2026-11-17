@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Datum Signals",
+  "sourceUrl": "https://datumsignals.com/",
+  "retrieval": {
+    "retrievedAtUtc": "2026-11-01T21:59:06.2763596Z",
+    "cachePolicy": "Fresh first-party web extraction plus Firecrawl maxAge=0 retrieval",
+    "representation": "SELECTED_FIRST_PARTY_RENDERED_TEXT_NOT_RAW_HTML"
+  },
+  "publisherEdition": {
+    "displayedUpdate": "November 1, 2026, 5:00 PM UTC"
+  },
+  "observations": {
+    "houseDemocraticControlPct": 70.0,
+    "senateDemocraticControlPct": 64.0,
+    "houseDemocraticSeats": null,
+    "senateDemocraticSeats": null
+  },
+  "selectedRenderedText": [
+    "Source URL: https://datumsignals.com/",
+    "Updated November 1, 2026, 5:00 PM UTC",
+    "70% Democrats control the House",
+    "64% Democrats control the Senate",
+    "House summary: D 209, Toss-up 3, R 188, 218 needed",
+    "Senate summary: D 48, R 46 including seats not up, 51 to win"
+  ],
+  "custody": {
+    "directHttpStatus": null,
+    "directHttpError": "TLS connection could not be established",
+    "webExtractionStatus": "FIRST_PARTY_PAGE_RETRIEVED",
+    "firecrawlStatus": 200,
+    "firecrawlMaxAge": 0,
+    "firecrawlScrapeId": "01a1993e-41cc-76af-83ed-e4ba1b0610f2",
+    "firecrawlStructuredExtraction": "FAILED_AFTER_FRESH_RETRIEVAL_NULLABLE_SCHEMA_ERROR_NOT_USED_FOR_VALUES",
+    "selectedTextUtf8Bytes": 252,
+    "selectedTextSha256": "df22ffc3919ff4bb88ab3c30dfc3abf152c3ee8e514a663351a9843b8949cb90",
+    "hashConstruction": "selectedRenderedText joined with LF and no trailing LF"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "houseDemocraticControlPct": {
+      "from": 71.0,
+      "to": 70.0
+    },
+    "senateDemocraticControlPct": {
+      "from": 64.0,
+      "to": 64.0
+    }
+  },
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "datumSignalsUsedByScript": false,
+    "parsedHouseDistrictRatingInputsChanged": false,
+    "parsedSenateRaceRatingInputsChanged": false,
+    "expectedSeatAndControlOutputsChanged": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  },
+  "admissionNote": "The first-party page updated at 17:00 UTC lowers Democratic House control from the prospectively admitted 71% edition to 70%; Democratic Senate control remains 64%. The source does not publish compatible full-chamber expected seat totals on this card. Datum Signals is not an input to scripts/refresh-election-projections.py, so no new KAHRELUM probability edition was created."
+}

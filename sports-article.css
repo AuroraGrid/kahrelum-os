@@ -1,0 +1,8 @@
+:root{color-scheme:light!important;--bg:#f4efe6!important;--ink:#161411!important;--line:#c8bfae!important;--muted:#615a4e!important;--accent:#315e4b!important}
+body{background:var(--bg)!important;color:var(--ink)!important}
+body:before{content:"";display:block;height:4px;background:var(--ink)}
+a{color:#234f59!important;text-underline-offset:3px}
+.lead{color:#4f493f!important}
+.panel{background:#ebe4d6!important;border-left-color:#8a5b14!important;border-radius:0!important}
+.button{background:var(--ink)!important;color:var(--bg)!important;border-radius:0!important}
+

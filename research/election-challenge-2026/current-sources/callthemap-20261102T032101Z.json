@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "CalltheMap",
+  "sourceUrls": {"house": "https://www.callthemap.com/house", "senate": "https://www.callthemap.com/senate"},
+  "retrieval": {"houseRetrievedAtUtc": "2026-11-02T03:20:59.7860242Z", "senateRetrievedAtUtc": "2026-11-02T03:21:01.2367701Z", "representation": "FIRST_PARTY_HTTP_RESPONSE_UTF8_NOT_EXACT_WIRE_BYTES"},
+  "publisherEdition": {"houseForecastAsOf": "November 1, 2026", "senateForecastAsOf": "November 1, 2026"},
+  "observations": {
+    "houseDemocraticControlPct": 83.0,
+    "houseDemocraticControlUnderlyingPct": 83.199,
+    "houseExpectedDemocraticSeats": 235.8,
+    "houseFavoriteSeats": {"democratic": 233, "republican": 202},
+    "senateDemocraticControlPct": 59.0,
+    "senateDemocraticControlUnderlyingPct": 59.066,
+    "senateExpectedDemocraticAlignedSeats": 51.3,
+    "senateExpectedAlignedIndependents": 2.4,
+    "senateFavoriteSeats": {"democraticAligned": 53, "republican": 47}
+  },
+  "custody": {"houseHttpStatus": 200, "houseUtf8Bytes": 1202855, "houseSha256": "7c7f9d7cbcc591771e654e25575f0d5b99e508933da2ab8de23ad768a043490a", "senateHttpStatus": 200, "senateUtf8Bytes": 420285, "senateSha256": "bebc9190d1ede69bd4ad50195bf5caada58ad75721852536c0c65209a32953bf"},
+  "changeFromPriorAdmittedEdition": {"senateDemocraticControlPct": {"from": 58.0, "to": 59.0}, "unchanged": ["houseDemocraticControlPct", "houseExpectedDemocraticSeats", "senateExpectedDemocraticAlignedSeats"]},
+  "kahrelumInputReview": {"script": "scripts/refresh-election-projections.py", "providerUsedByScript": false, "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"}
+}

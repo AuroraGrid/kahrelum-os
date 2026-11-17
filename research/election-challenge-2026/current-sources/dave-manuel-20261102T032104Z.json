@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Dave Manuel",
+  "sourceUrl": "https://www.davemanuel.com/2026-midterm-forecast.php",
+  "retrievedAtUtc": "2026-11-02T03:21:04.3193482Z",
+  "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
+  "publisherEdition": "November 1, 2026, 10:45 p.m. ET",
+  "observations": {"houseDemocraticControlPct": 92.0, "houseDemocraticSeats": 233.0, "houseSeatType": "projected median", "houseInterval90DemocraticSeats": [215, 256], "senateDemocraticControlPct": 72.0, "senateNeitherSideControlPct": 2.0, "senateDemocraticSeats": 52.0, "senateSeatType": "projected median including two aligned independents"},
+  "custody": {"httpStatus": 200, "representation": "FETCH_RETURNED_HTML_UTF8", "sha256": "fc5eb0f1b5ccde259365ac4895e5d7067107cc98b4422d285ad3c9979011f280", "utf8Bytes": 273531, "dateHeader": "Mon, 02 Nov 2026 03:55:21 GMT", "dateHeaderStatus": "FUTURE_DATED_RELATIVE_TO_PROSPECTIVE_RETRIEVAL_NOT_USED_AS_PUBLICATION_TIME"},
+  "changeFromPriorAdmittedEdition": {"houseDemocraticControlPct": {"from": 93.0, "to": 92.0}, "unchanged": ["senateDemocraticControlPct", "houseDemocraticSeats", "senateDemocraticSeats", "senateNeitherSideControlPct"]},
+  "kahrelumInputReview": {"script": "scripts/refresh-election-projections.py", "providerUsedByScript": false, "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"}
+}

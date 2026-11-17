@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Scrutinel",
+  "sourceUrl": "https://scrutinel.com/",
+  "retrievedAtUtc": "2026-11-02T03:42:56.9124678Z",
+  "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
+  "publisherEdition": "November 1, 2026, 11:08 PM EST",
+  "observations": {
+    "houseDemocraticControlPctDisplayed": 95.0,
+    "houseDemocraticControlPctSerialized": 94.69,
+    "houseRepublicanControlPctSerialized": 5.30,
+    "houseNoMajorityPctSerialized": 0.01,
+    "houseMeanDemocraticSeats": 239.77,
+    "houseMedianDemocraticSeats": 239,
+    "houseInterval80DemocraticSeats": [222, 258],
+    "senateDemocraticControlPctDisplayed": 76.0,
+    "senateDemocraticControlPctSerialized": 75.90,
+    "senateRepublicanControlPctSerialized": 23.74,
+    "senateNoMajorityPctSerialized": 0.36,
+    "senateMeanDemocraticSeats": 52.35,
+    "senateMedianDemocraticSeats": 52,
+    "senateInterval80DemocraticSeats": [49, 56]
+  },
+  "jointOutcomePctSerialized": {"democraticHouseAndSenate": 75.25, "democraticHouseRepublicanSenate": 19.44, "republicanHouseDemocraticSenate": 0.65, "republicanHouseAndSenate": 4.66},
+  "custody": {"httpStatus": 200, "representation": "FETCH_RETURNED_HTML_UTF8", "sha256": "c20f65265c8808bc7e62e5b2503fdadbca92c005f9c0cbd76147b3cc15cf99b9", "utf8Bytes": 1784600, "lastModified": "Mon, 02 Nov 2026 04:14:14 GMT", "dateHeader": "Mon, 02 Nov 2026 04:17:13 GMT", "headerStatus": "FUTURE_DATED_RELATIVE_TO_PROSPECTIVE_RETRIEVAL_NOT_USED_AS_PUBLICATION_TIME"},
+  "changeFromPriorAdmittedEdition": {
+    "houseDemocraticControlPctDisplayed": {"from": 95.0, "to": 95.0},
+    "houseDemocraticControlPctSerialized": {"from": 95.43, "to": 94.69},
+    "senateDemocraticControlPctDisplayed": {"from": 78.0, "to": 76.0},
+    "senateDemocraticControlPctSerialized": {"from": 77.61, "to": 75.90},
+    "houseMeanDemocraticSeats": {"from": 242.18, "to": 239.77},
+    "houseMedianDemocraticSeats": {"from": 241, "to": 239},
+    "senateMeanDemocraticSeats": {"from": 52.57, "to": 52.35},
+    "senateMedianDemocraticSeats": {"from": 53, "to": 52}
+  },
+  "kahrelumInputReview": {"script": "scripts/refresh-election-projections.py", "providerUsedByScript": false, "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"}
+}

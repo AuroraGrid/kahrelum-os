@@ -1,0 +1,255 @@
+{
+  "schema_version": "0.2.0",
+  "forecast_label": "KAHRELUM Senate first prospective *research* baseline v0.1",
+  "case_id": "KAH-US-SENATE-2026-20261029",
+  "event_id": "US_SENATE_MAJOR_2026",
+  "created_at_utc": "2026-10-30T02:17:51+00:00",
+  "source_cutoff_description": "Current Cook first-party rating page displays Oct 20; retrieved during Oct 29 evening ET. No independent historical signed source capture.",
+  "source_snapshot_sha256": "425380c27a5538efab4b5c7831f5780f0ed25054f5704c10bc47e0c59ad37086",
+  "source_file": "data/senate_cook_ratings_2026-10-20.json",
+  "assumptions": {
+    "tier_to_probabilities": {
+      "Solid D": 0.99,
+      "Likely D": 0.88,
+      "Lean D": 0.7,
+      "Toss Up": 0.5,
+      "Lean R": 0.3,
+      "Likely R": 0.12,
+      "Solid R": 0.01
+    },
+    "common_race_shock_rho": 0.15,
+    "probit_shift": 0.0,
+    "integration_grid_points": 2048,
+    "all_off_ballot_seats_treated_fixed": true,
+    "event_majority_required_dem_caucus_seats": 51,
+    "binary_party_assumption": true
+  },
+  "market_exposure_disclosed": true,
+  "market_prices_used_as_model_inputs": false,
+  "competitor_forecasts_used_as_model_inputs": false,
+  "external_attested_timestamp": false,
+  "validation_status": "UNVALIDATED_PROBABILITY_MODEL / RESEARCH ONLY",
+  "interpretation": "Cook tier conversions and common error are KAHRELUM modeling assumptions, not Cook probabilities; no prospective calibration or proof of trading edge.",
+  "result": {
+    "p_dem_control": 0.46090647437793264,
+    "p_rep_control": 0.5390935256220674,
+    "expected_D_caucus_seats": 50.229989536494045,
+    "median_D_caucus_seats": 50,
+    "eighty_percent_range_D_caucus_seats": [
+      47,
+      54
+    ],
+    "p_exactly_50_D": 0.14799218016767038,
+    "seat_probability_mass": [
+      {
+        "D_caucus_seats": 34,
+        "probability": 2.0343023729962847e-12
+      },
+      {
+        "D_caucus_seats": 35,
+        "probability": 1.1916033941287115e-10
+      },
+      {
+        "D_caucus_seats": 36,
+        "probability": 3.2023238319933213e-09
+      },
+      {
+        "D_caucus_seats": 37,
+        "probability": 5.256241601659964e-08
+      },
+      {
+        "D_caucus_seats": 38,
+        "probability": 5.935615788698176e-07
+      },
+      {
+        "D_caucus_seats": 39,
+        "probability": 4.9474945597679556e-06
+      },
+      {
+        "D_caucus_seats": 40,
+        "probability": 3.207650864743994e-05
+      },
+      {
+        "D_caucus_seats": 41,
+        "probability": 0.00016899045285072748
+      },
+      {
+        "D_caucus_seats": 42,
+        "probability": 0.0007466249677726158
+      },
+      {
+        "D_caucus_seats": 43,
+        "probability": 0.0027842394160383435
+      },
+      {
+        "D_caucus_seats": 44,
+        "probability": 0.008539861689248819
+      },
+      {
+        "D_caucus_seats": 45,
+        "probability": 0.02126028642706742
+      },
+      {
+        "D_caucus_seats": 46,
+        "probability": 0.043268628106356455
+      },
+      {
+        "D_caucus_seats": 47,
+        "probability": 0.07352246688229301
+      },
+      {
+        "D_caucus_seats": 48,
+        "probability": 0.10661272706348379
+      },
+      {
+        "D_caucus_seats": 49,
+        "probability": 0.1341598469985648
+      },
+      {
+        "D_caucus_seats": 50,
+        "probability": 0.14799218016767038
+      },
+      {
+        "D_caucus_seats": 51,
+        "probability": 0.14357045770212784
+      },
+      {
+        "D_caucus_seats": 52,
+        "probability": 0.12204927053219268
+      },
+      {
+        "D_caucus_seats": 53,
+        "probability": 0.08995893975037789
+      },
+      {
+        "D_caucus_seats": 54,
+        "probability": 0.05650171782016724
+      },
+      {
+        "D_caucus_seats": 55,
+        "probability": 0.029605079384045326
+      },
+      {
+        "D_caucus_seats": 56,
+        "probability": 0.012752439421501704
+      },
+      {
+        "D_caucus_seats": 57,
+        "probability": 0.004564736861842368
+      },
+      {
+        "D_caucus_seats": 58,
+        "probability": 0.0014030007395924124
+      },
+      {
+        "D_caucus_seats": 59,
+        "probability": 0.0003832509203321905
+      },
+      {
+        "D_caucus_seats": 60,
+        "probability": 9.344428847450508e-05
+      },
+      {
+        "D_caucus_seats": 61,
+        "probability": 1.9928757797854262e-05
+      },
+      {
+        "D_caucus_seats": 62,
+        "probability": 3.603811415036772e-06
+      },
+      {
+        "D_caucus_seats": 63,
+        "probability": 5.35025419445081e-07
+      },
+      {
+        "D_caucus_seats": 64,
+        "probability": 6.320907524168349e-08
+      },
+      {
+        "D_caucus_seats": 65,
+        "probability": 5.749027122597784e-09
+      },
+      {
+        "D_caucus_seats": 66,
+        "probability": 3.860526695259341e-10
+      },
+      {
+        "D_caucus_seats": 67,
+        "probability": 1.7967662181463023e-11
+      },
+      {
+        "D_caucus_seats": 68,
+        "probability": 5.165550010176632e-13
+      },
+      {
+        "D_caucus_seats": 69,
+        "probability": 6.902153186642324e-15
+      }
+    ],
+    "shared_rho": 0.15,
+    "probit_shift": 0.0,
+    "quadrature_samples": 2048,
+    "numeric_method": "Conditional Poisson-binomial DP and Normal midpoint integration"
+  },
+  "sensitivity": [
+    {
+      "rho": 0.0,
+      "probit_shift": 0.0,
+      "p_dem_control": 0.438719087,
+      "expected_D_caucus_seats": 50.23
+    },
+    {
+      "rho": 0.0,
+      "probit_shift": 0.15,
+      "p_dem_control": 0.61850195,
+      "expected_D_caucus_seats": 51.008959
+    },
+    {
+      "rho": 0.0,
+      "probit_shift": 0.3,
+      "p_dem_control": 0.775986154,
+      "expected_D_caucus_seats": 51.785793
+    },
+    {
+      "rho": 0.15,
+      "probit_shift": 0.0,
+      "p_dem_control": 0.460906469,
+      "expected_D_caucus_seats": 50.229964
+    },
+    {
+      "rho": 0.15,
+      "probit_shift": 0.15,
+      "p_dem_control": 0.580326962,
+      "expected_D_caucus_seats": 51.008914
+    },
+    {
+      "rho": 0.15,
+      "probit_shift": 0.3,
+      "p_dem_control": 0.692761405,
+      "expected_D_caucus_seats": 51.785738
+    },
+    {
+      "rho": 0.35,
+      "probit_shift": 0.0,
+      "p_dem_control": 0.473350077,
+      "expected_D_caucus_seats": 50.229859
+    },
+    {
+      "rho": 0.35,
+      "probit_shift": 0.15,
+      "p_dem_control": 0.563957293,
+      "expected_D_caucus_seats": 51.008807
+    },
+    {
+      "rho": 0.35,
+      "probit_shift": 0.3,
+      "p_dem_control": 0.651314574,
+      "expected_D_caucus_seats": 51.78564
+    }
+  ],
+  "source_urls": [
+    "https://www.cookpolitical.com/ratings/senate-race-ratings",
+    "https://www.dailypress.senate.gov/on-the-floor/senate-facts/",
+    "https://ballotpedia.org/United_States_Senate_elections%2C_2026"
+  ]
+}

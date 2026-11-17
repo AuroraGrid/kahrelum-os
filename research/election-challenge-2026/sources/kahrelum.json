@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "kahrelum",
+  "sourceUrl": "https://github.com/AuroraGrid/kahrelum-os/blob/4af87af25a2c9efc76ce18b8155365806916ba0b/election/current-projections.json",
+  "primarySource": true,
+  "capture": {
+    "startedAtUtc": "2026-10-31T04:17:39Z",
+    "completedAtUtc": "2026-10-31T04:17:46Z",
+    "method": "GitHub connector fetch",
+    "cachePolicy": "connector fetch"
+  },
+  "custody": {
+    "representation": "TOOL_RETURNED_FILE_CONTENT_UTF8",
+    "sha256": "258ec7684431bd39ac418d2db471458791fd86c62ba402b8e2282d0f09bcec8f",
+    "utf8Bytes": 308565,
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false,
+    "rawCaptureRetention": "Working capture; not part of the public commit. The public immutable receipt preserves factual observations and digests, not a replayable HTTP archive."
+  },
+  "publisherMetadata": {
+    "title": "current-projections.json",
+    "modifiedDate": "2026-10-31T03:08:45Z",
+    "url": "https://github.com/AuroraGrid/kahrelum-os/blob/4af87af25a2c9efc76ce18b8155365806916ba0b/election/current-projections.json"
+  },
+  "evidenceExcerpts": [],
+  "crossSourceReview": {
+    "scope": "Related provider review synthesized across the manifest sourceIds; a method page need not itself contain the numerical forecast.",
+    "facts": []
+  },
+  "reviewedFacts": {
+    "editionId": "KAH-US-2026-20261031T030533Z",
+    "computedAtUtc": "2026-10-31T03:05:33.060250Z",
+    "houseControlProbability": 0.9057450487619074,
+    "senateControlProbability": 0.46090647437793264,
+    "houseSourceEdition": "October 23, 2026",
+    "senateSourceEdition": "October 20, 2026",
+    "senateIndependentRiskContestIds": [
+      "ID",
+      "MT",
+      "NE",
+      "SD"
+    ]
+  }
+}

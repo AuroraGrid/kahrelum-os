@@ -1,0 +1,32 @@
+'use strict';
+const {test}=require('node:test');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const root=path.resolve(__dirname,'..');
+const read=f=>fs.readFileSync(path.join(root,f),'utf8');
+test('the publisher keeps a clean source tree and commits deterministic NFL raster outputs to public custody',()=>{
+ const wf=read('.github/workflows/firebase-scoped-release.yml');
+ const i=wf.indexOf('      - name: Publicly custody compiled editorial assets in a clean Git commit');
+ const j=wf.indexOf('      - name: Publish scoped preview, then promote with exact production readback');
+ assert.ok(i>0&&j>i);
+ const portion=wf.slice(i,j);
+ assert.match(portion,/python3 scripts\/build-kahrelum-editorial-social\.py --check/);
+ assert.match(portion,/git status --porcelain=v1 --untracked-files=all/);
+ assert.match(portion,/Unexpected modified or untracked path/);
+ assert.match(portion,/release-receipts\/nfl-editorial-/);
+ assert.match(portion,/git push origin "HEAD:refs\/heads\/\$receipt_branch"/);
+ assert.match(portion,/Remote artifact custody readback failed/);
+ assert.match(portion,/Generated-artifact source is not clean/);
+ assert.doesNotMatch(portion,/HEAD:main|HEAD:refs\/heads\/main|--force|firebase deploy --only hosting/);
+});
+test('source provenance remains readable and previous immutable forecast does not change',()=>{
+ const d=JSON.parse(read('research/nfl-2026-trade-deadline/official-forecasts/2026-11-09_NFL_DEADLINE_DAY_TRADE_COUNT_FC1_LOCK.json'));
+ assert.equal(d.forecastId,'KAHRELUM-NFL-2026-TRADE-VOLUME-DEADLINE-DAY-FC1');
+ assert.equal(d.model.pointForecast,6);
+ assert.equal(d.scoring.outcome,null);
+ const wf=read('.github/workflows/firebase-scoped-release.yml');
+ assert.match(wf,/contents: write/);
+ assert.match(wf,/persist-credentials: true/);
+ assert.match(wf,/RELEASE_PROFILES/);
+});

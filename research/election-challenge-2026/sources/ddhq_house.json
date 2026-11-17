@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "ddhq_house",
+  "sourceUrl": "https://votes.decisiondeskhq.com/forecast/2026/house",
+  "primarySource": true,
+  "capture": {
+    "startedAtUtc": "2026-10-31T04:19:03Z",
+    "completedAtUtc": "2026-10-31T04:19:11Z",
+    "method": "Firecrawl fresh scrape maxAge=0",
+    "cachePolicy": "maxAge=0"
+  },
+  "custody": {
+    "representation": "TOOL_RETURNED_RAW_HTML_UTF8",
+    "sha256": "9600caab4a7ad4bed4e5e2784210bd5eaaa34b98c88aca748527360c6f9efe6f",
+    "utf8Bytes": 2965757,
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false,
+    "rawCaptureRetention": "Working capture; not part of the public commit. The public immutable receipt preserves factual observations and digests, not a replayable HTTP archive.",
+    "toolMarkdownSha256": "23911f12df59769f4c9a500ebefb41d62dbe6cf6c9e2b1e03245795ab26d151a"
+  },
+  "publisherMetadata": {
+    "title": "2026 House Election Predictions: Forecast & Odds | DDHQ",
+    "scrapeId": "01a1902e-bfe1-719f-8027-e65026179b68",
+    "sourceURL": "https://votes.decisiondeskhq.com/forecast/2026/house",
+    "url": "https://votes.decisiondeskhq.com/forecast/2026/house",
+    "statusCode": 200,
+    "contentType": "text/html; charset=utf-8",
+    "indexId": "cd451d90-e583-48cb-997b-0c9c7b153c4c"
+  },
+  "evidenceExcerpts": [
+    {
+      "exactText": "218 for control",
+      "representation": "markdown",
+      "characterOffset": 2356
+    }
+  ],
+  "crossSourceReview": {
+    "scope": "Related provider review synthesized across the manifest sourceIds; a method page need not itself contain the numerical forecast.",
+    "facts": [
+      {
+        "providerId": "ddhq",
+        "houseControlPercent": 82,
+        "senateControlPercent": 62,
+        "publicationLabel": "JSON-LD dateModified October 30, 2026, 14:39:52.343 UTC; displayed 10:39 AM",
+        "publishedAtUtc": "2026-10-30T14:39:52.343Z",
+        "houseEventReview": "The House page explicitly gives 218 seats for control. The main forecast states an 82 percent Democratic House probability.",
+        "senateEventReview": "A 62 percent Democratic Senate probability is public, but the captured methods do not resolve every independent candidate into the same caucus event as KAHRELUM."
+      }
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "ElectIndex",
+  "sourceUrls": {
+    "publicForecast": "https://electindex.com/forecasts/",
+    "repository": "https://github.com/ElectIndex/26_us_forecast_data",
+    "commitApi": "https://api.github.com/repos/ElectIndex/26_us_forecast_data/commits/ff6635e0e3a762302f53d26e01c6f1841d783bca",
+    "rawPinnedCsv": "https://raw.githubusercontent.com/ElectIndex/26_us_forecast_data/ff6635e0e3a762302f53d26e01c6f1841d783bca/output/chambers.csv"
+  },
+  "retrieval": {
+    "rawCsvRetrievedAtUtc": "2026-11-02T23:12:37.3908794Z",
+    "commitApiVerifiedAtUtc": "2026-11-02T23:13:11.1061981Z",
+    "representation": "FIRST_PARTY_GITHUB_RAW_UTF8_RESPONSE_NOT_EXACT_WIRE_BYTES"
+  },
+  "publisherEdition": {
+    "commitSha": "ff6635e0e3a762302f53d26e01c6f1841d783bca",
+    "commitMessage": "Poll refresh + forecast update 2026-11-02 (rerun)",
+    "commitMetadataUtc": "2026-11-02T22:45:32Z"
+  },
+  "observations": {
+    "houseDemocraticControlPct": 92.9,
+    "houseAverageDemocraticSeats": 248.5,
+    "houseProjectedDemocraticSeats": 245,
+    "houseControlThreshold": 218,
+    "houseRaces": 435,
+    "senateDemocraticControlPct": 75.5,
+    "senateAverageDemocraticSeats": 53.1,
+    "senateProjectedDemocraticSeats": 54,
+    "senateControlThreshold": 51,
+    "senateRaces": 35
+  },
+  "custody": {
+    "rawCsvHttpStatus": 200,
+    "rawCsvUtf8Bytes": 229,
+    "rawCsvSha256": "2e332f3c040ff72d727cf2fd5795917d3a84c4ed0bccebae9b9f0dbf7311eca3",
+    "commitApiHttpStatus": 200,
+    "commitApiUtf8Bytes": 1199115,
+    "commitApiSha256": "c8b07f2216aafc6a010dd289d5bc1bc8e9e10011c6ad0dd54d8ff54276db298f"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "houseDemocraticControlPct": {"from": 92.2, "to": 92.9},
+    "senateDemocraticControlPct": {"from": 74.9, "to": 75.5},
+    "houseAverageDemocraticSeats": {"from": 248.0, "to": 248.5},
+    "senateAverageDemocraticSeats": {"from": 53.0, "to": 53.1},
+    "houseProjectedDemocraticSeats": {"from": 244, "to": 245},
+    "senateProjectedDemocraticSeats": {"from": 54, "to": 54}
+  },
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "providerUsedByScript": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  }
+}

@@ -1,0 +1,266 @@
+TAP version 13
+# Subtest: complete synthetic bid supports comparison, never a trade recommendation
+ok 1 - complete synthetic bid supports comparison, never a trade recommendation
+  ---
+  duration_ms: 8.3287
+  type: 'test'
+  ...
+# Subtest: retail ask cannot satisfy sale bid
+ok 2 - retail ask cannot satisfy sale bid
+  ---
+  duration_ms: 0.4444
+  type: 'test'
+  ...
+# Subtest: guide is never executable bid
+ok 3 - guide is never executable bid
+  ---
+  duration_ms: 0.4058
+  type: 'test'
+  ...
+# Subtest: unknown intent
+ok 4 - unknown intent
+  ---
+  duration_ms: 0.4366
+  type: 'test'
+  ...
+# Subtest: anonymous conversation
+ok 5 - anonymous conversation
+  ---
+  duration_ms: 0.5759
+  type: 'test'
+  ...
+# Subtest: missing quote source
+ok 6 - missing quote source
+  ---
+  duration_ms: 0.4006
+  type: 'test'
+  ...
+# Subtest: unsupported source
+ok 7 - unsupported source
+  ---
+  duration_ms: 0.2773
+  type: 'test'
+  ...
+# Subtest: conflicting sources
+ok 8 - conflicting sources
+  ---
+  duration_ms: 0.2805
+  type: 'test'
+  ...
+# Subtest: stale quote
+ok 9 - stale quote
+  ---
+  duration_ms: 0.3448
+  type: 'test'
+  ...
+# Subtest: future quote
+ok 10 - future quote
+  ---
+  duration_ms: 0.4001
+  type: 'test'
+  ...
+# Subtest: future evidence cannot repair history
+ok 11 - future evidence cannot repair history
+  ---
+  duration_ms: 0.2357
+  type: 'test'
+  ...
+# Subtest: expired quote
+ok 12 - expired quote
+  ---
+  duration_ms: 0.1437
+  type: 'test'
+  ...
+# Subtest: invalid decision timestamp
+ok 13 - invalid decision timestamp
+  ---
+  duration_ms: 0.1645
+  type: 'test'
+  ...
+# Subtest: missing timestamp zone
+ok 14 - missing timestamp zone
+  ---
+  duration_ms: 0.1333
+  type: 'test'
+  ...
+# Subtest: unknown authenticity
+ok 15 - unknown authenticity
+  ---
+  duration_ms: 0.1241
+  type: 'test'
+  ...
+# Subtest: unknown condition
+ok 16 - unknown condition
+  ---
+  duration_ms: 0.1927
+  type: 'test'
+  ...
+# Subtest: unknown mintmark
+ok 17 - unknown mintmark
+  ---
+  duration_ms: 0.2052
+  type: 'test'
+  ...
+# Subtest: unverified identity
+ok 18 - unverified identity
+  ---
+  duration_ms: 0.2031
+  type: 'test'
+  ...
+# Subtest: modern issue excluded
+ok 19 - modern issue excluded
+  ---
+  duration_ms: 0.1382
+  type: 'test'
+  ...
+# Subtest: nonissue year excluded
+ok 20 - nonissue year excluded
+  ---
+  duration_ms: 0.1211
+  type: 'test'
+  ...
+# Subtest: wrong series excluded
+ok 21 - wrong series excluded
+  ---
+  duration_ms: 0.1759
+  type: 'test'
+  ...
+# Subtest: wrong currency
+ok 22 - wrong currency
+  ---
+  duration_ms: 0.2242
+  type: 'test'
+  ...
+# Subtest: lot quote cannot be per coin
+ok 23 - lot quote cannot be per coin
+  ---
+  duration_ms: 0.2428
+  type: 'test'
+  ...
+# Subtest: unknown fees
+ok 24 - unknown fees
+  ---
+  duration_ms: 0.1568
+  type: 'test'
+  ...
+# Subtest: negative fees
+ok 25 - negative fees
+  ---
+  duration_ms: 0.1746
+  type: 'test'
+  ...
+# Subtest: string price
+ok 26 - string price
+  ---
+  duration_ms: 0.1199
+  type: 'test'
+  ...
+# Subtest: nonfinite price
+ok 27 - nonfinite price
+  ---
+  duration_ms: 0.1242
+  type: 'test'
+  ...
+# Subtest: missing dealer
+ok 28 - missing dealer
+  ---
+  duration_ms: 0.1866
+  type: 'test'
+  ...
+# Subtest: missing terms
+ok 29 - missing terms
+  ---
+  duration_ms: 0.1871
+  type: 'test'
+  ...
+# Subtest: missing spot evidence
+ok 30 - missing spot evidence
+  ---
+  duration_ms: 0.2337
+  type: 'test'
+  ...
+# Subtest: stale spot
+ok 31 - stale spot
+  ---
+  duration_ms: 0.1922
+  type: 'test'
+  ...
+# Subtest: wrong spot units
+ok 32 - wrong spot units
+  ---
+  duration_ms: 0.1343
+  type: 'test'
+  ...
+# Subtest: collectible total plus metal double counts
+ok 33 - collectible total plus metal double counts
+  ---
+  duration_ms: 0.1299
+  type: 'test'
+  ...
+# Subtest: duplicate source ids
+ok 34 - duplicate source ids
+  ---
+  duration_ms: 0.1241
+  type: 'test'
+  ...
+# Subtest: missing freshness policy
+ok 35 - missing freshness policy
+  ---
+  duration_ms: 0.1231
+  type: 'test'
+  ...
+# Subtest: invalid quantity
+ok 36 - invalid quantity
+  ---
+  duration_ms: 0.136
+  type: 'test'
+  ...
+# Subtest: buy direction supports ask comparison
+ok 37 - buy direction supports ask comparison
+  ---
+  duration_ms: 0.1495
+  type: 'test'
+  ...
+# Subtest: preserves prior failure and correction without mutating input
+ok 38 - preserves prior failure and correction without mutating input
+  ---
+  duration_ms: 0.4525
+  type: 'test'
+  ...
+# Subtest: empty and malformed inputs fail closed
+ok 39 - empty and malformed inputs fail closed
+  ---
+  duration_ms: 0.3111
+  type: 'test'
+  ...
+# Subtest: arithmetic uses declared conventional silver content
+not ok 40 - arithmetic uses declared conventional silver content
+  ---
+  duration_ms: 8.5504
+  type: 'test'
+  location: 'C:\\Users\\Asif Computer\\Documents\\Codex\\2026-11-17\\publish-the-pending-ca-001-punctuation\\mqa001\\tests\\mqa001.test.cjs:51:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The expression evaluated to a falsy value:
+    
+      assert.ok(Math.abs(m.silverFromWeight(26.73)-0.7734484277)<1e-9)
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs:51:133)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+1..40
+# tests 40
+# suites 0
+# pass 39
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 143.323

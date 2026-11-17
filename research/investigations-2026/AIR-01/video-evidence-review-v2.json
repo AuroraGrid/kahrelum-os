@@ -1,0 +1,75 @@
+{
+  "schema": "KAHRELUM_AIR01_VIDEO_REVIEW_v2",
+  "caseId": "AIR-01",
+  "reviewDate": "2026-11-02",
+  "release": "2026-11-02.1",
+  "status": "OPEN",
+  "sourceIntegrity": "Repost metadata and compressed visual tool analysis only; not a chain-of-custody examination.",
+  "originalSourceFilesAuthenticated": false,
+  "cause": "UNKNOWN",
+  "videoSources": [
+    {
+      "id": "VIDEO-A",
+      "sourceUrl": "https://x.com/ScopeReport_/status/2116977473703354580",
+      "postedAt": "2026-11-01T19:35:35Z",
+      "durationSeconds": 20.712,
+      "frameSize": "1280x720",
+      "observation": "Dark airborne silhouette visible during approx first 1.5 seconds, fireball at ~2sec; actual ground contact not clearly visible.",
+      "attribution": "Scope repost. FOX independently credits Aki Kuusisto via Storyful. No source file equivalence confirmed.",
+      "status": "OBSERVATION / INFERENCE"
+    },
+    {
+      "id": "VIDEO-B",
+      "sourceUrl": "https://x.com/KeryexNetwork/status/2116983354788815342/video/1",
+      "postedAt": "2026-11-01T19:58:58Z",
+      "durationSeconds": 10.1,
+      "frameSize": "444x260",
+      "observation": "Wet road, fireball around one second; no identifiable aircraft in the camera field before the explosion.",
+      "status": "OBSERVATION / UNKNOWN"
+    },
+    {
+      "id": "VIDEO-C",
+      "sourceUrl": "https://x.com/ScopeReport_/status/2116983451173724429",
+      "postedAt": "2026-11-01T19:59:21Z",
+      "durationSeconds": 13.973,
+      "frameSize": "1280x720",
+      "observation": "Wet commercial road and fireball; no discernible aircraft. May overlap VIDEO-B but no pixel matching.",
+      "status": "OBSERVATION / UNKNOWN"
+    }
+  ],
+  "sourceLinks": [
+    {
+      "source": "FOX/Storyful witness attribution",
+      "url": "https://www.fox13news.com/video/fmc-9m1vsovdstd3dix7.amp"
+    },
+    {
+      "source": "FAA",
+      "url": "https://www.faa.gov/newsroom/statements/accident_incidents"
+    },
+    {
+      "source": "Flightradar24 flight tracking",
+      "url": "https://www.flightradar24.com/blog/flight-tracking-news/major-incident/learjet-60-crashes-near-west-palm-beach-florida/"
+    },
+    {
+      "source": "MyRadar meteorological commentary",
+      "url": "https://myradar.com/layers/metnotes/details/86"
+    },
+    {
+      "source": "PilotDebrief independent airframe reconstruction",
+      "url": "https://community.pilotdebrief.com/t/1-november-2026-learjet-60-n722bd-in-lake-worth-beach-florida-fatal/546"
+    }
+  ],
+  "clockCaveat": "The dashcam overlays approximate 13:45 and 13:51 are not calibrated to FAA's approximate 12:50 EST. November 1 Florida DST transition permits stale offsets but does not synchronize the two views.",
+  "rawTrackingCsv": "Original standard and granular files identified via Flightradar24's official blog but bytes could not be independently fetched at this review.",
+  "structuralFinding": "A potentially absent horizontal stabilizer in low-res images is NOT verified by NTSB; no inference of separation time, initiation or weather causation.",
+  "politicalHypothesis": "UNSUBSTANTIATED: no direct authenticated evidence connecting incident to targeting or messaging Trump.",
+  "sourceOriginalsRetained": false,
+  "videoRights": "No third-party video files embedded, downloaded for publication, or rehosted.",
+  "next": [
+    "Collect authentic camera-source originals and clock/GPS metadata",
+    "Correlate camera locations and full-length recordings with calibrated UTC",
+    "Obtain FR24 granular raw CSV and source ATC audio with time synchronization",
+    "NTSB documentation of tail structure, fracture and debris locations",
+    "Official weather SIGMET, radar and accident report and recorder readout if available"
+  ]
+}

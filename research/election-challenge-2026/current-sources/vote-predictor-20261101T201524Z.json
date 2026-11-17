@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "VotePredictor",
+  "sourceUrl": "https://votepredictor.com/house",
+  "retrieval": {
+    "retrievedAtUtc": "2026-11-01T20:15:24.8260279Z",
+    "cachePolicy": "Fresh isolated first-party browser render after Vercel checkpoint",
+    "representation": "STRUCTURED_FIRST_PARTY_RENDERED_TEXT_NOT_RAW_HTML"
+  },
+  "publisherEdition": {
+    "displayedUpdate": "1 Nov 2026",
+    "preciseUpdateTimeExposed": false,
+    "modelLastChanged": "October 31"
+  },
+  "observations": {
+    "houseDemocraticControlPct": 77.0,
+    "houseDemocraticSeats": 230.0,
+    "houseSeatType": "expected",
+    "houseInterval80DemocraticSeats": [209, 252],
+    "houseControlThreshold": 218,
+    "senateDemocraticControlPct": null,
+    "senateDemocraticSeats": null
+  },
+  "selectedRenderedText": [
+    "Source URL: https://votepredictor.com/house",
+    "Page title: 2026 House Forecast — VotePredictor",
+    "Forecast updated 1 Nov 2026",
+    "Model last changed October 31",
+    "Chance of Democratic House control: 77%",
+    "Expected Democratic seats: 230.0",
+    "80% simulation interval: 209–252",
+    "House control threshold: 218",
+    "Separate summary display: House control 77%; Expected Dem seats (of 435) 230"
+  ],
+  "custody": {
+    "directUnattendedHttpStatus": 429,
+    "interactiveBrowserStatus": "RENDERED_FIRST_PARTY_PAGE_VERIFIED",
+    "selectedTextUtf8Bytes": 365,
+    "selectedTextSha256": "322453ed3688c53a550d4500f57f504125acd99b1f95228c59e66b7bc9716998",
+    "hashConstruction": "selectedRenderedText joined with LF and no trailing LF"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "houseDemocraticControlPct": {
+      "from": 76.0,
+      "to": 77.0
+    },
+    "houseDemocraticSeats": {
+      "from": 229.9,
+      "to": 230.0
+    },
+    "houseInterval80DemocraticSeats": "UNCHANGED",
+    "senate": "NO_NUMERICAL_TOP_LINE_ADMITTED"
+  },
+  "kahrelumInputReview": {
+    "housePublisherEdition": "October 23, 2026",
+    "senatePublisherEdition": "October 20, 2026",
+    "parsedHouseDistrictRatingInputsChanged": false,
+    "parsedSenateRaceRatingInputsChanged": false,
+    "expectedSeatAndControlOutputsChanged": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  },
+  "admissionNote": "The isolated first-party Nov. 1 render raises Democratic House control from 76% to 77% and exact expected Democratic seats from 229.9 to 230.0. The 80% interval remains 209–252. No Senate top line was admitted. The page exposes no precise update time, so the prospective browser retrieval time is the custody time."
+}

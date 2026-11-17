@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Midterm Forecast",
+  "sourceUrls": {
+    "house": "https://midtermforecast.com/house/",
+    "senate": "https://midtermforecast.com/senate/"
+  },
+  "retrieval": {
+    "houseRetrievedAtUtc": "2026-11-01T18:41:44.2490758Z",
+    "senateRetrievedAtUtc": "2026-11-01T18:41:45.0717888Z",
+    "cachePolicy": "Cache-busting query plus Cache-Control: no-cache",
+    "representation": "FIRST_PARTY_HTTP_RESPONSE_UTF8_NOT_EXACT_WIRE_BYTES"
+  },
+  "publisherEdition": {
+    "displayedRun": "Nov. 1, 2026, 1:40 PM ET",
+    "pollsThrough": "Nov. 1, 2026",
+    "houseLastModified": "Sun, 01 Nov 2026 18:41:10 GMT",
+    "senateLastModified": "Sun, 01 Nov 2026 18:41:02 GMT"
+  },
+  "observations": {
+    "houseDemocraticControlPct": 91.0,
+    "houseDemocraticSeats": 236.0,
+    "houseSeatType": "median",
+    "senateDemocraticControlPct": 73.0,
+    "senateDemocraticSeats": 53.0,
+    "senateSeatType": "median Democratic seats; independents included"
+  },
+  "custody": {
+    "houseHttpStatus": 200,
+    "houseUtf8Bytes": 93835,
+    "houseSha256": "bf2bea304f05af3cd675cdaa2de028fcc995ba5d7bcdf7510e1dfbfdb14dac00",
+    "senateHttpStatus": 200,
+    "senateUtf8Bytes": 35820,
+    "senateSha256": "c306800cd331293f5841e3f270a5372215e55e599b6dc0068aec20eca0a79f76"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "houseDemocraticControlPct": {
+      "from": 90.0,
+      "to": 91.0
+    },
+    "houseDemocraticSeats": "UNCHANGED",
+    "senateDemocraticControlPct": "UNCHANGED",
+    "senateDemocraticSeats": "UNCHANGED"
+  },
+  "admissionNote": "The displayed 1:40 PM ET run was retrieved prospectively after 18:40 UTC. House and Senate statistic types remain distinct. No KAHRELUM input changed and no KAHRELUM probability was manufactured."
+}

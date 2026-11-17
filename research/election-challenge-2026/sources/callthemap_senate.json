@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "callthemap_senate",
+  "sourceUrl": "https://www.callthemap.com/senate",
+  "primarySource": true,
+  "capture": {
+    "startedAtUtc": "2026-10-31T04:16:13Z",
+    "completedAtUtc": "2026-10-31T04:16:25Z",
+    "method": "Firecrawl fresh scrape maxAge=0",
+    "cachePolicy": "maxAge=0"
+  },
+  "custody": {
+    "representation": "TOOL_RETURNED_RAW_HTML_UTF8",
+    "sha256": "e09b5999c8701cab054b02e79ebed135b925a89ba475dfd4f302c37fc1884275",
+    "utf8Bytes": 438427,
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false,
+    "rawCaptureRetention": "Working capture; not part of the public commit. The public immutable receipt preserves factual observations and digests, not a replayable HTTP archive.",
+    "toolMarkdownSha256": "f670288f3a1ad75b677ec9db57cf2528ea981b3d15f06a982c8daf7d351047c8"
+  },
+  "publisherMetadata": {
+    "title": "2026 Senate forecast: Democrats 60 in 100 to win control",
+    "scrapeId": "01a1902c-26dc-74a8-a1e8-ae4b43d9cde6",
+    "sourceURL": "https://www.callthemap.com/senate",
+    "url": "https://www.callthemap.com/senate",
+    "statusCode": 200,
+    "contentType": "text/html; charset=utf-8",
+    "indexId": "d2f8ff92-a34a-403e-acbd-cf4fa3c93d52"
+  },
+  "evidenceExcerpts": [
+    {
+      "exactText": "includes 2.5 independents expected to caucus with the Democrats",
+      "representation": "markdown",
+      "characterOffset": 932
+    }
+  ],
+  "crossSourceReview": {
+    "scope": "Related provider review synthesized across the manifest sourceIds; a method page need not itself contain the numerical forecast.",
+    "facts": [
+      {
+        "providerId": "callthemap",
+        "houseControlPercent": 85,
+        "senateControlPercent": 60,
+        "publicationLabel": "October 30, 2026 (date only)",
+        "publishedAtUtc": null,
+        "houseEventReview": "The House distribution identifies 218 as the control threshold and reports Democrats winning 85 of 100 simulations.",
+        "senateEventReview": "The source includes 2.5 expected independent seats in its Democratic-aligned total, including 0.5 from current races. Future caucus alignment remains an assumption and is not matched to KAHRELUM candidate by candidate."
+      }
+    ]
+  }
+}

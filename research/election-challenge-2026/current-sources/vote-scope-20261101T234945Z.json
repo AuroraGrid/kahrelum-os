@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Vote-Scope",
+  "sourceUrl": "https://vote-scope.com/en/us/house/",
+  "retrieval": {
+    "retrievedAtUtc": "2026-11-01T23:49:45.0533114Z",
+    "cachePolicy": "Fresh first-party HTTPS retrieval plus matching first-party web extraction",
+    "representation": "FIRST_PARTY_HTTP_RESPONSE_UTF8_NOT_EXACT_WIRE_BYTES"
+  },
+  "publisherEdition": {
+    "displayedUpdate": "November 1, 2026",
+    "preciseUpdateTimeExposed": false,
+    "httpDate": "Mon, 02 Nov 2026 00:24:03 GMT",
+    "httpDateUse": "PRESERVED_BUT_NOT_USED_AS_PUBLICATION_OR_RETRIEVAL_TIME"
+  },
+  "observations": {
+    "houseDemocraticControlPct": 97.0,
+    "houseDemocraticSeats": 237.0,
+    "houseSeatType": "projected",
+    "houseSimulationMedianDemocraticSeats": 244.0,
+    "houseIntervalDemocraticSeats": [225, 267],
+    "houseControlThreshold": 218,
+    "senateDemocraticControlPct": null,
+    "senateDemocraticSeats": null
+  },
+  "custody": {
+    "httpStatus": 200,
+    "contentType": "text/html; charset=utf-8",
+    "utf8Bytes": 1001888,
+    "sha256": "f0df8888479e742c5a25fd7efe5145d56acae197c3120b07591cc05af5ee7f2c",
+    "webExtractionStatus": "MATCHING_FIRST_PARTY_PAGE_VALUES"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "houseDemocraticControlPct": "UNCHANGED",
+    "houseDemocraticSeats": {
+      "from": 239.0,
+      "to": 237.0
+    },
+    "houseSimulationMedianDemocraticSeats": {
+      "from": 246.0,
+      "to": 244.0
+    },
+    "publisherEdition": {
+      "from": "October 31, 2026",
+      "to": "November 1, 2026"
+    },
+    "senate": "NO_NUMERICAL_TOP_LINE_ADMITTED"
+  },
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "voteScopeUsedByScript": false,
+    "parsedHouseDistrictRatingInputsChanged": false,
+    "parsedSenateRaceRatingInputsChanged": false,
+    "expectedSeatAndControlOutputsChanged": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  },
+  "admissionNote": "The prospective Nov. 1 retrieval preserves Vote-Scope's new Nov. 1 House edition: Democratic control remains 97%, projected Democratic seats decrease from 239 to 237, and the distinct simulation median decreases from 246 to 244. The displayed 225-267 range is preserved separately. No Senate numerical top line was admitted. The page exposes no precise update time, so the prospective retrieval time is the custody time. Vote-Scope is not an input to scripts/refresh-election-projections.py, so no new KAHRELUM probability edition was created."
+}

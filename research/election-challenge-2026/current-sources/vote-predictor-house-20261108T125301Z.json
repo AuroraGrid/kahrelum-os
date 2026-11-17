@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "VotePredictor",
+  "chamber": "House",
+  "sourceUrl": "https://votepredictor.com/house",
+  "observedNoLaterThanUtc": "2026-11-08T12:53:01Z",
+  "custodyRepresentation": "SELECTED_FIRST_PARTY_RENDERED_FIELDS_NOT_RAW_HTML",
+  "sourceDateText": "Forecast updated 8 Nov 2026",
+  "preciseSourceIssueTimeExposed": false,
+  "democraticControlPct": 77.0,
+  "expectedDemocraticSeats": 230.4,
+  "separateRoundedSummaryDemocraticSeats": 230,
+  "democraticControlThreshold": 218,
+  "eightyPctSeatInterval": [209, 252],
+  "priorAdmittedObservation": {
+    "observedAtUtc": "2026-11-06T18:10:37Z",
+    "democraticControlPct": 79.0,
+    "expectedDemocraticSeats": 231.7
+  },
+  "verification": "Repeated first-party rendered-page retrievals agreed; headline, control section, expected-seat line and separate summary were cross-checked.",
+  "sourceHistoryCaveat": "The page also says unchanged since November 1 beside the control chart. This is not treated as an issue timestamp or as a revision of the prospectively observed November 6 fields.",
+  "directUnattendedHttpStatus": 429,
+  "rawResponsePreserved": false,
+  "admissionScope": "Descriptive challenger observation only; not a KAHRELUM model input or original forecast lock."
+}

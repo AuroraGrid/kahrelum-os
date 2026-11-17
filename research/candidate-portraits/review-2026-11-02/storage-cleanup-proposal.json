@@ -1,0 +1,52 @@
+{
+  "checkedAt": "2026-11-02T20:33:42.758Z",
+  "action": "DELETE_ONLY_AFTER_USER_APPROVAL",
+  "currentLiveVersion": "projects/806087933597/sites/kahrelum-public-hosting/versions/38ff517af8aad9a7",
+  "preserveAllChannelHeads": true,
+  "preserveLatestDistinctLiveVersions": [
+    "38ff517af8aad9a7",
+    "da05412f84e0ab6f",
+    "1735072bf8086f0a",
+    "e99323446ff68870",
+    "ee543d17e33bfb28",
+    "0712f87f45d1331c",
+    "9038f22621186f85",
+    "65ea399a0357dec0",
+    "bd60d5f1d47d51ac",
+    "63bf105a78c55312"
+  ],
+  "selectedVersions": [
+    {
+      "name": "sites/kahrelum-public-hosting/versions/39a23669d1ef54af",
+      "createTime": "2026-11-01T01:57:25.077164Z",
+      "versionBytes": "79558995",
+      "fileCount": "2807"
+    },
+    {
+      "name": "sites/kahrelum-public-hosting/versions/19b135529a0ef046",
+      "createTime": "2026-11-01T08:49:00.835936Z",
+      "versionBytes": "82038690",
+      "fileCount": "2915"
+    },
+    {
+      "name": "sites/kahrelum-public-hosting/versions/39f1339c5243f454",
+      "createTime": "2026-11-01T15:15:12.048220Z",
+      "versionBytes": "84309737",
+      "fileCount": "3014"
+    },
+    {
+      "name": "sites/kahrelum-public-hosting/versions/74316b96d5ffcfb1",
+      "createTime": "2026-11-01T15:27:12.906468Z",
+      "versionBytes": "84378759",
+      "fileCount": "3017"
+    },
+    {
+      "name": "sites/kahrelum-public-hosting/versions/aed095fa7baad015",
+      "createTime": "2026-11-01T15:39:11.803575Z",
+      "versionBytes": "84447245",
+      "fileCount": "3020"
+    }
+  ],
+  "selectedStoredBytes": 414733426,
+  "warning": "Deletion permanently removes these five historical rollback versions. Firebase may take up to 24 hours to reclaim storage. No deletion performed."
+}

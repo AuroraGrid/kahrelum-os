@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "COYNTOSS",
+  "sourceUrls": {
+    "house": "https://chasecoyne.com/house",
+    "senate": "https://chasecoyne.com/senate"
+  },
+  "retrieval": {
+    "houseRetainedRetrievedAtUtc": "2026-11-02T14:42:17.3479041Z",
+    "senateRetrievedAtUtc": "2026-11-02T16:35:13.1958619Z",
+    "representation": "FIRST_PARTY_HTTP_RESPONSE_UTF8_NOT_EXACT_WIRE_BYTES"
+  },
+  "publisherEdition": {
+    "houseReleaseId": "2026-11-02-01",
+    "houseModelAsOf": "November 2, 2026",
+    "senateReleaseId": "2026-11-02-01",
+    "senateRunId": "RETRO-20261102-R04",
+    "senateUpdated": "November 2, 2026",
+    "senateModelInputsThrough": "November 2, 2026"
+  },
+  "observations": {
+    "houseDemocraticControlPct": 82.95,
+    "houseExpectedDemocraticSeats": 238.57,
+    "houseDisplayedExpectedDemocraticSeats": 238.6,
+    "houseMedianDemocraticSeats": 237,
+    "houseInterval80DemocraticSeats": [212, 267],
+    "senateDemocraticControlPct": 72.99,
+    "senateRepublicanControlPct": 27.01,
+    "senateExpectedDemocraticSeats": 51.781,
+    "senateDisplayedExpectedDemocraticSeats": 51.78,
+    "senateMedianDemocraticSeats": 52,
+    "senateInterval80DemocraticSeats": [49, 55],
+    "senatePollRecordsAdded": 14,
+    "senatePollRecordsEnteringAverages": 14,
+    "senatePollRecordsExcluded": 0,
+    "senateRatingChange": "Nebraska Likely R to Lean R"
+  },
+  "custody": {
+    "houseHttpStatus": 200,
+    "houseUtf8Bytes": 78376,
+    "houseSha256": "1c27f01f6d1e3bfcf2589c8aacec20c390324877640da0d071197cbffe4ed005",
+    "senateHttpStatus": 200,
+    "senateUtf8Bytes": 61866,
+    "senateSha256": "5297fe2afe1806ad081f579cc49537ba73e6c1ba2d1bda6d7b5b6c9564539455",
+    "selectedReceiptUtf8Bytes": 1006,
+    "selectedReceiptSha256": "1f234fee1fd8752ce5b090c5ecbfb3d3463dfd975adcd32a59a3b220595d444e",
+    "selectedReceiptRepresentation": "PRIVATE_SELECTED_FIELD_RECEIPT_UTF8"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "senateDemocraticControlPct": {"from": 71.94, "to": 72.99},
+    "senateExpectedDemocraticSeats": {"from": 51.706, "to": 51.781},
+    "senateMedianDemocraticSeats": {"from": 52, "to": 52},
+    "senateInterval80DemocraticSeats": {"from": [49, 54], "to": [49, 55]},
+    "unchangedHouse": ["houseDemocraticControlPct", "houseExpectedDemocraticSeats", "houseDisplayedExpectedDemocraticSeats", "houseMedianDemocraticSeats", "houseInterval80DemocraticSeats"]
+  },
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "providerUsedByScript": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  }
+}

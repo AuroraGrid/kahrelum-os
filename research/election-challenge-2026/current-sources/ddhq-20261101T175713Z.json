@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Decision Desk HQ",
+  "sourceUrl": "https://votes.decisiondeskhq.com/forecast/2026",
+  "retrievedAtUtc": "2026-11-01T17:57:13.7925373Z",
+  "retrievalStatus": "FIRST_PARTY_PUBLIC_RENDERED_VERIFIED",
+  "custody": {
+    "representation": "LIVE_BROWSER_ACCESSIBILITY_TREE_SELECTED_FIELDS_NOT_RAW_HTML",
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false
+  },
+  "publisherEdition": {
+    "renderedBrowserLabel": "Last updated Nov 1, 12:43 PM",
+    "webTextExtractionLabel": "Last updated Nov 1, 5:43 PM",
+    "timezoneInterpretation": "The browser rendered 12:43 PM in the America/New_York task timezone; the web text extraction exposed 5:43 PM. Both labels are preserved rather than silently choosing one clock."
+  },
+  "observations": {
+    "houseDemocraticControlPct": 83.0,
+    "houseRepublicanControlPct": 17.0,
+    "houseDemocraticSeats": 241.0,
+    "houseSeatType": "projected",
+    "senateDemocraticControlPct": 62.0,
+    "senateRepublicanControlPct": 38.0,
+    "senateDemocraticSeats": 52.0,
+    "senateSeatType": "projected",
+    "jointOutcomePct": {
+      "democraticSenateAndDemocraticHouse": 61.0,
+      "democraticSenateAndRepublicanHouse": 1.0,
+      "republicanSenateAndDemocraticHouse": 23.0,
+      "republicanSenateAndRepublicanHouse": 15.0
+    }
+  },
+  "changeFromPriorAdmittedEdition": {
+    "senateDemocraticControlPct": {
+      "prior": 63.0,
+      "current": 62.0
+    },
+    "senateRepublicanControlPct": {
+      "prior": 37.0,
+      "current": 38.0
+    },
+    "unchanged": [
+      "houseDemocraticControlPct",
+      "houseDemocraticSeats",
+      "senateDemocraticSeats"
+    ]
+  },
+  "directHttpCheck": {
+    "retrievedAtUtc": "2026-11-01T17:56:58.7397416Z",
+    "httpStatus": 429,
+    "note": "Direct unattended HTTP was rate-limited, so the admitted numerical evidence is explicitly the live rendered first-party page, not raw HTTP-wire custody."
+  },
+  "firecrawlCheck": {
+    "status": "TRANSPORT_ERROR_NO_RESULT",
+    "note": "A fresh maxAge=0 scrape was attempted but the Firecrawl MCP transport failed before returning a job or page data; it was not used as evidence."
+  },
+  "admissionNote": "The Senate control probability change is prospective from this retrieval. The projected 52 Democratic Senate seats are unchanged and remain a distinct statistic."
+}

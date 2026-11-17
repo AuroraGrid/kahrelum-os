@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Midterm Forecast",
+  "sourceUrls": {
+    "house": "https://midtermforecast.com/house/",
+    "senate": "https://midtermforecast.com/senate/"
+  },
+  "retrieval": {
+    "houseRetrievedAtUtc": "2026-11-02T02:24:27.8791483Z",
+    "senateRetrievedAtUtc": "2026-11-02T02:24:29.9394618Z",
+    "cachePolicy": "Cache-busting query plus Cache-Control: no-cache",
+    "representation": "FIRST_PARTY_HTTP_RESPONSE_UTF8_NOT_EXACT_WIRE_BYTES"
+  },
+  "publisherEdition": {
+    "displayedRun": "Nov. 1, 2026, 8:39 PM ET",
+    "pollsThrough": "Nov. 1, 2026",
+    "houseLastModified": "Mon, 02 Nov 2026 01:40:14 GMT",
+    "senateLastModified": "Mon, 02 Nov 2026 01:40:06 GMT"
+  },
+  "observations": {
+    "houseDemocraticControlPct": 91.0,
+    "houseDemocraticSeats": 236.0,
+    "houseSeatType": "median",
+    "senateDemocraticControlPct": 74.0,
+    "senateRepublicanControlPct": 26.0,
+    "senateDemocraticSeats": 53.0,
+    "senateSeatType": "median Democratic seats; independents included"
+  },
+  "custody": {
+    "houseHttpStatus": 200,
+    "houseUtf8Bytes": 93842,
+    "houseSha256": "d9587696de01fed4ad7f5c7517d6641114b38dbcf7ebe1a208085488689364bc",
+    "senateHttpStatus": 200,
+    "senateUtf8Bytes": 35860,
+    "senateSha256": "73bcfd155536e583bda8800ef0520a349bec64a9798c6df26a9af7fd49ec6e08"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "senateDemocraticControlPct": {
+      "from": 73.0,
+      "to": 74.0
+    },
+    "senateRepublicanControlPct": {
+      "from": 27.0,
+      "to": 26.0
+    },
+    "unchanged": [
+      "houseDemocraticControlPct",
+      "houseDemocraticSeats",
+      "senateDemocraticSeats"
+    ]
+  },
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "midtermForecastUsedByScript": false,
+    "parsedHouseDistrictRatingInputsChanged": false,
+    "parsedSenateRaceRatingInputsChanged": false,
+    "expectedSeatAndControlOutputsChanged": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  },
+  "admissionNote": "The prospective Nov. 2 retrieval preserves Midterm Forecast's displayed Nov. 1 8:39 PM ET run. Democratic Senate control increases from 73% to 74% while Republican Senate control decreases from 27% to 26%. Democratic House control remains 91%, the House median remains 236 Democratic seats and the Senate median remains 53 Democratic seats with independents included. Midterm Forecast is not an input to scripts/refresh-election-projections.py, so no new KAHRELUM probability edition was created."
+}

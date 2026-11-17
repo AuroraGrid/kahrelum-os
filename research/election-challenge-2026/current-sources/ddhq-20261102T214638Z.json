@@ -1,0 +1,16 @@
+{
+  "provider": "Decision Desk HQ",
+  "sourceUrl": "https://votes.decisiondeskhq.com/forecast/2026",
+  "retrievedAtUtc": "2026-11-02T21:46:38.781Z",
+  "sourceUpdateText": "Last updated Nov 2, 3:03 PM",
+  "custodyRepresentation": "LIVE_RENDERED_FIRST_PARTY_PAGE_SELECTED_FIELDS_NOT_RAW_HTML",
+  "directHttpStatus": 429,
+  "fields": {
+    "houseDemocraticControlPct": 84.0,
+    "houseDemocraticSeatsProjected": 241,
+    "senateDemocraticControlPct": 65.0,
+    "senateDemocraticSeatsProjected": 52,
+    "jointOutcomePcts": [63.0, 2.0, 21.0, 15.0]
+  },
+  "admissionNote": "The displayed source time advanced from 10:03 AM to 3:03 PM while the admitted chamber-control probabilities and projected seat totals remained unchanged. The rounded joint outcomes still sum to 101% and are preserved without renormalization."
+}
