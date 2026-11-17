@@ -143,3 +143,36 @@ test('Hosting config guard accepts harmless key-order normalization but blocks a
  assert.match(pub,/configsSemanticallyEqual\(live\.config,\s*receipt\.baseConfig\)/);
  assert.match(pub,/Production Hosting configuration changed after preview/);
 });
+
+test('Insights adds vetted November investigations without changing its original analysis cards',()=>{
+ const {patchCompletionPage}=require('../scripts/site-completion.cjs');
+ const head='<head><link rel="canonical" href="https://kahrelum.com/insights"><title>Insights</title><meta property="og:title" content="KAHRELUM Insights"><meta name="twitter:title" content="KAHRELUM Insights"></head>';
+ const original='<section><h2>Latest articles</h2><article id="original">Frozen 2026 research</article></section>';
+ const recent='<section id="recent-investigations-20261117"><h2>Recently published investigations</h2><a href="/investigations/ca-001">CA-001</a><a href="/investigations/tsds-watchlist-97-claim">TSDS</a><a href="/investigations/air-02">AIR-02</a></section>';
+ const live=head+'<main>'+original+'</main><footer>Preserved evidence</footer>';
+ const source=head+'<main>'+recent+'<section><h2>Selected analysis and forecasts</h2><article id="original">Frozen 2026 research</article></section></main>';
+ const result=patchCompletionPage(live,source,'/insights');
+ assert.ok(result.includes(recent),'published crosslinks remain intact');
+ assert.ok(result.includes('Selected analysis and forecasts'),'dated older articles are not called latest');
+ assert.ok(result.includes('Frozen 2026 research'),'original research preserved');
+ assert.ok(result.includes('<footer>Preserved evidence</footer>'),'footer and other records unchanged');
+ assert.equal(result.split('recent-investigations-20261117').length,2,'one recent section');
+ assert.equal(patchCompletionPage(result,source,'/insights'),result,'repeat release is idempotent');
+});
+test('Insights rejects duplicate or unreviewed replacement of the dated discovery links',()=>{
+ const {patchCompletionPage}=require('../scripts/site-completion.cjs');
+ const h='<head><link rel="canonical" href="https://kahrelum.com/insights"><title>Insights</title><meta property="og:title" content="KAHRELUM Insights"><meta name="twitter:title" content="KAHRELUM Insights"></head>';
+ const original='<section><h2>Latest articles</h2>Historical articles</section>';
+ const marker='<section id="recent-investigations-20261117"><h2>Recently published investigations</h2><a href="/investigations/ca-001">CA-001</a><a href="/investigations/tsds-watchlist-97-claim">TSDS</a><a href="/investigations/air-02">AIR-02</a></section>';
+ const src=h+'<main>'+marker+original+'</main>';
+ assert.throws(()=>patchCompletionPage(h+'<main>'+marker+marker+original+'</main>',src,'/insights'),/Duplicate|Conflicting/);
+ assert.throws(()=>patchCompletionPage(h+'<main>'+original+'</main>',h+'<main>'+original+'</main>','/insights'),/Missing|source|candidate/);
+});
+test('Insights canonical source links only to already published investigation routes',()=>{
+ const html=read('insights.html');
+ for(const route of ['/investigations/ca-001','/investigations/tsds-watchlist-97-claim','/investigations/air-02']){
+   assert.ok(html.includes('href="'+route+'"'),route);
+ }
+ assert.match(html,/id="recent-investigations-20261117"/);
+ assert.doesNotMatch(html,/<h2>Latest articles<\\/h2>/);
+});
