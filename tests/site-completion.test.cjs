@@ -150,9 +150,11 @@ test('Insights adds vetted November investigations without changing its original
  const original='<section><h2>Latest articles</h2><article id="original">Frozen 2026 research</article></section>';
  const recent='<section id="recent-investigations-20261117"><h2>Recently published investigations</h2><a href="/investigations/ca-001">CA-001</a><a href="/investigations/tsds-watchlist-97-claim">TSDS</a><a href="/investigations/air-02">AIR-02</a></section>';
  const live=head+'<main>'+original+'</main><footer>Preserved evidence</footer>';
- const source=head+'<main>'+recent+'<section><h2>Selected analysis and forecasts</h2><article id="original">Frozen 2026 research</article></section></main>';
+ const publication='<p class="dateline" id="intelligence-publication-20261117">Follow <a href="/intelligence">KAHRELUM Intelligence</a>. Subscriptions by Substack.</p>';
+ const source=head+'<main>'+publication+recent+'<section><h2>Selected analysis and forecasts</h2><article id="original">Frozen 2026 research</article></section></main>';
  const result=patchCompletionPage(live,source,'/insights');
  assert.ok(result.includes(recent),'published crosslinks remain intact');
+ assert.ok(result.includes(publication),'publication crosslink added without changing historical cards');
  assert.ok(result.includes('Selected analysis and forecasts'),'dated older articles are not called latest');
  assert.ok(result.includes('Frozen 2026 research'),'original research preserved');
  assert.ok(result.includes('<footer>Preserved evidence</footer>'),'footer and other records unchanged');
