@@ -88,6 +88,11 @@ function patchCompletionPage(live,source,route){
   const outdated='Experimental, post-close forecasts. Official results and final accuracy remain pending until verified.';
   const corrected='Historical post-close scenarios remain distinct from the completed Israeli C7 result; consult the official-result audit and its source limitations.';
   if(out.includes(outdated))out=replaceUnique(out,outdated,corrected,'Home historical forecast footer');
+  const c7='The November 4 Israeli CEC result and November 5 KAHRELUM C7 audit are complete; see the dated certified-result comparison and limitations.';
+  if(out.includes(c7+' until verified.')){
+   if(out.split(c7+' until verified.').length!==2)throw Error('Duplicate malformed C7 footer');
+   out=out.replace(c7+' until verified.',c7);
+  }
  }
  if(route==='/nfl/deadline-watch-2026'||route==='/election-data/'){
   const marker='id="site-completion-clarifications"';

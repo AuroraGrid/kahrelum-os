@@ -1,0 +1,48 @@
+TAP version 13
+# Subtest: C7 patch consumes the complete pending sentence without an orphaned suffix
+ok 1 - C7 patch consumes the complete pending sentence without an orphaned suffix
+  ---
+  duration_ms: 0.6591
+  type: 'test'
+  ...
+# Subtest: C7 patch repairs the exact observed production orphan without touching surrounding evidence
+ok 2 - C7 patch repairs the exact observed production orphan without touching surrounding evidence
+  ---
+  duration_ms: 0.1179
+  type: 'test'
+  ...
+# Subtest: completion patch also repairs observed live suffix idempotently
+not ok 3 - completion patch also repairs observed live suffix idempotently
+  ---
+  duration_ms: 0.3085
+  type: 'test'
+  location: 'C:\\Users\\Asif Computer\\Documents\\Codex\\2026-11-17\\publish-the-pending-ca-001-punctuation\\website-ops\\tests\\editorial-maintenance.test.cjs:15:1'
+  failureType: 'testCodeFailure'
+  error: 'Home C7 orphaned suffix: conflicting or missing exact text anchor'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    replaceUnique (C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\website-ops\scripts\site-completion.cjs:71:38)
+    patchCompletionPage (C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\website-ops\scripts\site-completion.cjs:92:46)
+    TestContext.<anonymous> (C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\website-ops\tests\editorial-maintenance.test.cjs:19:14)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: unexpected duplicate C7 claim blocks rather than making a partial correction
+ok 4 - unexpected duplicate C7 claim blocks rather than making a partial correction
+  ---
+  duration_ms: 0.1919
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 3
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 103.2866
