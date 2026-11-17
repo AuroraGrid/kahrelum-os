@@ -72,3 +72,15 @@ test('AIR-02 v1.2 source reconciliation is dated, linked and explicitly bounds r
  const ledger=read('evidence/AIR-02_OSINT_RECONCILIATION_2026-11-14.md');
  for(const phrase of ['REPORTED OSINT','NOT YET REPRODUCED','3:36 p.m.','1,083','1,035','990','199/208','Kp=0','not independently established','preserve'])assert.match(ledger,new RegExp(phrase,'i'));
 });
+
+test('AIR-02 November 17 addendum cites the new FAA primary Q&A without rewriting the November 13 cutoff',()=>{
+ const html=read('investigations/air-02.html');
+ const section=html.match(/<section id="faa-clarification-20261117"[\s\S]*?<\/section>/)?.[0];
+ assert.ok(section,'dated later-evidence section');
+ for(const phrase of ['Added November 17, 2026','November 15','1,000','Amarillo','El Dorado','L3Harris','17 of 22','12,462','no indication','root cause remains open','not an independent forensic conclusion']){
+  assert.ok(section.includes(phrase),'missing source-bound detail: '+phrase);
+ }
+ assert.ok(section.includes('https://www.faa.gov/newsroom/nationwide-ground-stop-questions-and-answers'));
+ assert.ok(section.includes('https://www.transportation.gov/briefing-room/icymi-us-transportation-secretary-sean-p-duffy-provides-update-restoration-airspace'));
+ assert.ok(html.includes('id="reconciliation-20261114"'),'original November 14 analysis retained');
+});
