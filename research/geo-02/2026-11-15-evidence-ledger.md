@@ -100,3 +100,16 @@ Disposition: INVESTIGATE / PREPARE; publication claims may use facts, explicitly
 - Source: https://www.reuters.com/world/middle-east/oman-iran-foreign-ministers-discuss-safeguarding-maritime-corridors-2026-11-17/
 
 **Later-event scope check:** This addition is based on externally published November 17 reporting. It does not overwrite the original 2026-11-15T02:53:00Z information cutoff, unverified 2026-11-14 tanker claims, or any pre-existing KAHRELUM Iran-war forecasts. GEO-02 publication remains REVIEW ONLY until sources, release scope, and social wording are approved.
+
+
+## November 17 one-pass closure correction (supersedes later G02-09 attribution)
+
+The earlier ledger reuses G02-09/G02-10 identifiers. References below use GEO-CLOSE-01 onward; the original entries remain historical, not current verification. The later G02-09 statement that the retrieved Reuters report specifically contained a November 17 CENTCOM interception/no-damage/no-injuries statement is **superseded**. Reuters versions retrieved in the earlier review did not support that exact attribution.
+
+**GEO-CLOSE-01 — AP readback:** https://apnews.com/article/582e0b5d51be06f0ed630fac24f39b72 (updated November 17, 1:14 p.m. EST; read in Chrome). AP reports Bahrain's interception account and attributes no equipment damage or personnel injuries to the U.S. military. This closes the missing contemporaneous *reported official account*, not original CENTCOM-statement custody or independent physical inspection. AP also distinguishes today's vessel incident reports from Fars mine claims; vessel identity and causal linkage remain unresolved.
+
+**GEO-CLOSE-02 — Oman primary publication:** https://www.fm.gov.om/en/65114/ records the November 17 foreign-minister meeting and discussion of protecting maritime corridors and maintaining diplomatic channels. https://www.fm.gov.om/en/65229/ records delivery of the Iranian President's message and de-escalation discussions. Both English pages identify themselves as unofficial translations of official Arabic reports. Meetings are established; a ceasefire, safe transit or implemented agreement is not.
+
+**GEO-CLOSE-03 — Maritime:** UKMTO's https://www.ukmto.org/recent-incidents displayed zero reports in Chrome. This is an access/display limitation, not evidence of zero incidents. No original notice identifying the earlier three alleged mine-struck vessels was recovered. Iran's claims, UKMTO reports quoted by news outlets, and a verified mine mechanism remain separate.
+
+**Disposition: HOLD.** Nov 13/15/17 episodes remain distinct. November 14 restraint deliberations and a planned November 19 summit do not prove an order, execution or agreement. Original broadcast cutoff, issuance receipt, and 30/55/15 forecast file remain unchanged; November 22 resolution window is still open. No scoring. Remaining gates: original dated Bahrain/CENTCOM incident records, named-vessel corroboration/causation, full independent chronology and scoped release QA. Previously sent Bahrain X post is https://x.com/Nospinzone/status/2122752119531073795; no duplicate sent.

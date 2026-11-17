@@ -14,3 +14,6 @@ Correction: the prior November 17 draft and central posting packet specifically 
 The Reuters regional report attributes maritime talks to Oman's foreign ministry and a missing tanker crew to UKMTO. Those accounts do not identify the three vessels from Iran's earlier mine claims or independently establish a mine mechanism. No probability or outcome is scored from them.
 
 Remaining release gates: original dated Bahrain/CENTCOM/Oman records; full November 14–17 independent-source chronology; article regression and responsive QA; source-linked artwork review; exact scoped Firebase plan/preview/promotion. No merge or deployment from this review.
+
+
+Later closure audit: AP and official Oman pages recovered; see the superseding GEO-CLOSE entries in the evidence ledger. Full release remains HOLD. Observed 2026-11-17T18:46:05.055233+00:00
