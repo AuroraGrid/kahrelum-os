@@ -83,6 +83,36 @@ function patchCompletionPage(live,source,route){
    if(!before||!after)throw Error('Missing exact Insights title metadata');
    if(before!==after)out=replaceUnique(out,before,after,'Insights title');
   }
+  // Insert only previously published, source-linked investigation cards into live Insights.
+  // Refuse to overwrite an existing nonmatching block or duplicate an article index.
+  const recentMarker='<section id="recent-investigations-20261117"';
+  const sourceAt=source.indexOf(recentMarker);
+  if(sourceAt<0||source.indexOf(recentMarker,sourceAt+1)!==-1)throw Error('Missing or duplicate Insights source discovery section');
+  const sourceEnd=source.indexOf('</section>',sourceAt);
+  if(sourceEnd<0)throw Error('Missing Insights source discovery closing section');
+  const snippet=source.slice(sourceAt,sourceEnd+'</section>'.length);
+  for(const route of ['/investigations/ca-001','/investigations/tsds-watchlist-97-claim','/investigations/air-02']){
+   if(!snippet.includes('href="'+route+'"'))throw Error('Missing approved published investigation '+route);
+  }
+  if(snippet.toLowerCase().includes('<script'))throw Error('Executable markup in Insights discovery section');
+  const existingCount=out.split(recentMarker).length-1;
+  if(existingCount>1)throw Error('Duplicate existing Insights discovery sections');
+  if(existingCount===1){
+   const existingAt=out.indexOf(recentMarker),existingEnd=out.indexOf('</section>',existingAt);
+   if(existingEnd<0)throw Error('Existing Insights discovery closing section absent');
+   const existing=out.slice(existingAt,existingEnd+'</section>'.length);
+   if(existing!==snippet)throw Error('Conflicting live Insights discovery section');
+  }else{
+   const oldHeading='<section><h2>Latest articles</h2>';
+   const newHeading='<section><h2>Selected analysis and forecasts</h2>';
+   const anchor=out.includes(oldHeading)?oldHeading:newHeading;
+   if(out.split(anchor).length!==2)throw Error('Missing unique Insights listing anchor');
+   out=out.replace(anchor,snippet+String.fromCharCode(10)+anchor);
+  }
+  const oldHeading='<section><h2>Latest articles</h2>';
+  const newHeading='<section><h2>Selected analysis and forecasts</h2>';
+  if(out.includes(oldHeading))out=replaceUnique(out,oldHeading,newHeading,'Insights dated analysis label');
+
  }
  if(route==='/'){
   const outdated='Experimental, post-close forecasts. Official results and final accuracy remain pending until verified.';
