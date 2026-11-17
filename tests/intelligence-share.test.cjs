@@ -37,15 +37,15 @@ test('release scope excludes existing articles, homepage, configuration and unre
 
 test('Intelligence landing has JSON-LD, llms discovery, complete snippet policy and a readable topical heading',()=>{
  const html=read('intelligence.html'),head=html.split('</head>')[0];
- assert.match(head,/<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">/);
- assert.match(head,/<link rel="describedby" href="\\/llms\\.txt">/);
- const json=head.match(/<script type="application\\/ld\\+json">([\\s\\S]*?)<\\/script>/)?.[1];
+ assert.ok(head.includes('<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">'));
+ assert.ok(head.includes('<link rel="describedby" href="/llms.txt">'));
+ const json=head.split('<script type="application/ld+json">')[1]?.split('</script>')[0];
  assert.ok(json,'JSON-LD schema must be in HTML head');
  const schema=JSON.parse(json);
  assert.equal(schema['@type'],'WebPage');
  assert.equal(schema.url,'https://kahrelum.com/intelligence');
  assert.equal(schema.dateModified,'2026-11-17');
  assert.ok(schema.description.includes('Independent investigations'));
- assert.match(html,/<h2 id="topics-title"[^>]*>Coverage areas<\\/h2>/);
- assert.match(html,/<a href="\\/ai-discovery\\/glossary\\.md">Evidence glossary<\\/a>/);
+ assert.ok(html.includes('<h2 id="topics-title" class="topic-title">Coverage areas</h2>'));
+ assert.ok(html.includes('<a href="/ai-discovery/glossary.md">Evidence glossary</a>'));
 });
