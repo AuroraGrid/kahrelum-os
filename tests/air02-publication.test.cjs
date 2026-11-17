@@ -52,7 +52,8 @@ test('AIR-02 Firebase profile admits exactly its page, art, live index and sitem
 
 test('AIR-02 addendum preserves the entire original cutoff record',()=>{
  const html=read('investigations/air-02.html').replace(/\r\n/g,'\n');
- const withoutV12=html.replace(/<section id="reconciliation-20261114"[\s\S]*?<\/section>\n(?=<\/main>)/,'');
+ const historic=html.replace(/\\n<section id="faa-clarification-20261117"[\\s\\S]*?<\\/section>/,'').replace('<meta property="article:modified_time" content="2026-11-17">','<meta property="article:modified_time" content="2026-11-13">');
+ const withoutV12=historic.replace(/<section id="reconciliation-20261114"[\\s\\S]*?<\\/section>\\n(?=<\\/main>)/,'');
  const baseline=withoutV12.replace(/<section id="update-20261114"[\s\S]*?<\/section>\s*(?=<\/main>)/,'');
  assert.equal(crypto.createHash('sha256').update(baseline).digest('hex'),'a56c6dcd137f9d734f4e736af666c14d57e6d593131f7deebacc99a98f19dda9');
  assert.match(html,/04:27 UTC/);
