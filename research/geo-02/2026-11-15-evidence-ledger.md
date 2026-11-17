@@ -84,3 +84,19 @@ Status: OPEN / REVIEW ONLY. Created November 15, 2026. No retrospective score or
 
 ## Control
 Disposition: INVESTIGATE / PREPARE; publication claims may use facts, explicitly attributed statements and qualified inferences. No unsealed historical forecasts promoted to successes; no news-after-cutoff backfilled into the Nov. 14 original record. Later source changes must be dated append-only, with correction trail.
+
+## Later evidence: November 17, 2026 (NOT part of the November 14 broadcast cutoff)
+
+**G02-09 | Separate November 17 Sheikh Isa episode, distinct from the November 13 and 15 radar claims**
+- Evidence: Reuters reported on November 17 that Iran said it launched drones toward U.S. radar at Bahrain's Sheikh Isa Air Base. Bahrain said it intercepted the air attacks; U.S. Central Command said multiple IRGC one-way attack drones were intercepted with no damage to U.S. equipment and no injuries to American personnel.
+- Disposition: **ATTRIBUTED OFFICIAL DRONE-LAUNCH AND INTERCEPTION ACCOUNTS**; claim of successful destruction **NOT ESTABLISHED**. An attack claim, interception statement, and independent physical-damage assessment are separate types of evidence. CENTCOM's statements on November 13 and November 17 refer to distinct incidents.
+- Primary reporting: https://www.reuters.com/world/middle-east/bahrain-says-it-intercepts-iranian-air-attacks-irgc-says-it-targets-us-radar-2026-11-17/ ; https://www.reuters.com/world/middle-east/oman-iran-foreign-ministers-discuss-safeguarding-maritime-corridors-2026-11-17/
+- Attribution: Iran's Guards announced targeting; Bahrain and CENTCOM reported interception; no authenticated independent battle-damage inspection was obtained for this file.
+- Forecast rule: Do not substitute this later observed event for the November 15 provisional 30/55/15 subjective scenario set or call it a scored win.
+
+**G02-10 | Concurrent Oman/Qatar diplomacy and vessel-risk reporting**
+- Evidence: Reuters November 17 reported Omani/Iranian maritime-security discussions and efforts to mediate the conflict; a missing tanker crew was also reported in the area. Neither a meeting nor a reported incident alone verifies a Hormuz truce, the earlier claim of three identifiable mine-struck tankers, or a new U.S. strike decision.
+- Disposition: **DIPLOMACY REPORTED / TANKER CAUSAL MECHANISM UNRESOLVED**. Preserve vessel identification, location, incident mechanism and attribution as separate checks.
+- Source: https://www.reuters.com/world/middle-east/oman-iran-foreign-ministers-discuss-safeguarding-maritime-corridors-2026-11-17/
+
+**Later-event scope check:** This addition is based on externally published November 17 reporting. It does not overwrite the original 2026-11-15T02:53:00Z information cutoff, unverified 2026-11-14 tanker claims, or any pre-existing KAHRELUM Iran-war forecasts. GEO-02 publication remains REVIEW ONLY until sources, release scope, and social wording are approved.
