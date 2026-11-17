@@ -129,3 +129,77 @@
     }
   }
 })();
+// Optional analytics: no Google requests before affirmative consent.
+(function () {
+  "use strict";
+  var id = "G-73RQ7RNKG4", key = "kahrelum-analytics-consent", enabled = false;
+  if (navigator.globalPrivacyControl || navigator.doNotTrack === "1") return;
+  var choice = "";
+  try { choice = localStorage.getItem(key) || ""; } catch (_) {}
+  function start() {
+    if (enabled) return;
+    enabled = true;
+    window.dataLayer = window.dataLayer || [];
+    function tag() { window.dataLayer.push(arguments); }
+    tag("consent", "default", {analytics_storage:"granted", ad_storage:"denied", ad_user_data:"denied", ad_personalization:"denied"});
+    tag("js", new Date());
+    var ref = "";
+    try { ref = document.referrer ? new URL(document.referrer).origin + "/" : ""; } catch (_) {}
+    tag("config", id, {
+      page_location: location.origin + location.pathname,
+      page_referrer: ref, page_title: "KAHRELUM",
+      allow_google_signals: false, allow_ad_personalization_signals: false,
+      cookie_expires: 2592000
+    });
+    var script = document.createElement("script");
+    script.async = true; script.src = "https://www.googletagmanager.com/gtag/js?id=" + id;
+    document.head.appendChild(script);
+    document.addEventListener("click", function (event) {
+      if (!enabled) return;
+      var a = event.target.closest && event.target.closest("a[href]");
+      if (!a) return;
+      var href = a.getAttribute("href"), name;
+      if (/^mailto:/i.test(href)) name = "contact_click";
+      else {
+        var target;
+        try { target = new URL(href, location.href); } catch (_) { return; }
+        if (target.origin !== location.origin) return;
+        if (/^\/pilot(?:\.html)?\/?$/.test(target.pathname)) name = "pilot_cta_click";
+        if (/fit check/i.test(a.textContent) && name) name = "fit_check_cta_click";
+      }
+      if (name) tag("event", name, {page_location:location.origin + location.pathname});
+    });
+  }
+  var box = document.createElement("aside");
+  box.setAttribute("aria-label", "Analytics privacy choices");
+  box.style.cssText = "position:fixed;bottom:12px;left:12px;max-width:420px;padding:12px;background:#fff;color:#111;border:1px solid #777;z-index:9999;font:14px sans-serif";
+  function render() {
+    box.replaceChildren();
+    if (choice) {
+      var settings = document.createElement("button"); settings.textContent = "Analytics preferences";
+      settings.onclick = function () { choice = ""; render(); }; box.appendChild(settings); return;
+    }
+    var text = document.createElement("p");
+    text.textContent = "Allow optional Google Analytics cookies to measure page visits, referral sites and service/contact clicks? Google receives browser and connection data. No form contents or email addresses are sent. You can decline or withdraw at any time.";
+    box.appendChild(text);
+    ["Allow analytics", "Decline analytics"].forEach(function (label, index) {
+      var button = document.createElement("button"); button.textContent = label;
+      button.onclick = function () {
+        choice = index === 0 ? "yes" : "no";
+        try { localStorage.setItem(key, choice); } catch (_) {}
+        if (index === 0) start();
+        else if (enabled) {
+          window["ga-disable-" + id] = true; enabled = false;
+          document.cookie.split(";").forEach(function (c) {
+            var n = c.split("=")[0].trim();
+            if (/^_ga(?:_|$)/.test(n)) ["", "; domain=" + location.hostname, "; domain=.kahrelum.com"].forEach(function (d) { document.cookie = n + "=; Max-Age=0; path=/" + d; });
+          });
+          location.reload();
+        }
+        render();
+      }; box.appendChild(button);
+    });
+  }
+  render(); document.body.appendChild(box);
+  if (choice === "yes") start();
+})();

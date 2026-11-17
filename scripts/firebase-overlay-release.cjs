@@ -175,6 +175,7 @@ const REQUIRED_REWRITES = {
 };
 const DIVISION_ROUTES = ['/assurance', '/investigations', '/forecasting', '/digital-id', '/one', '/os'];
 const RELEASE_PROFILES = {
+  'ga4-consent': { overlayFiles: ['site-shell.js'], sitemapRoutes: [], includeHomepage: false },
   'anthropic-lobbying': {
     overlayFiles: ['investigations/anthropic-lobbying-chip-policy.html'],
     sitemapRoutes: ['/investigations/anthropic-lobbying-chip-policy'],
