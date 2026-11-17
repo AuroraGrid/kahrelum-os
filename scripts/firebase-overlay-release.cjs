@@ -175,6 +175,11 @@ const REQUIRED_REWRITES = {
 };
 const DIVISION_ROUTES = ['/assurance', '/investigations', '/forecasting', '/digital-id', '/one', '/os'];
 const RELEASE_PROFILES = {
+  'anthropic-lobbying': {
+    overlayFiles: ['investigations/anthropic-lobbying-chip-policy.html'],
+    sitemapRoutes: ['/investigations/anthropic-lobbying-chip-policy'],
+    includeHomepage: false,
+  },
   'intelligence-share': {
     overlayFiles: ['intelligence.html', 'assets/social/og-kahrelum-intelligence-20261114.png'],
     sitemapRoutes: ['/intelligence'],
@@ -1141,6 +1146,20 @@ async function buildOverlay(live, profileName) {
     addBlob(desired, blobs, '/' + name, sourceBytes);
   }
 
+  if (profileName === 'anthropic-lobbying') {
+    const article = readRepositoryBytes('investigations/anthropic-lobbying-chip-policy.html').toString('utf8');
+    if (/noindex|HOLD FOR SOURCE VERIFICATION|REVIEW DRAFT/.test(article) ||
+        !article.includes('Paul Calkins') || !article.includes('secondary-source evidence') ||
+        !article.includes('U.S. AI policy')) fail('Anthropic source/publication gate failed.');
+    const liveHtml = (await verifiedLiveFile(live, '/investigations.html', '/investigations')).toString('utf8');
+    const route = '/investigations/anthropic-lobbying-chip-policy';
+    if (!liveHtml.includes('href="' + route + '"')) {
+      if ((liveHtml.match(/<\/main>/g) || []).length !== 1) fail('Unexpected investigation index structure.');
+      const card = '<section class="case-record"><h2>Anthropic lobbying and the Huang evidence gap</h2><p>November 17, 2026: $1.63 million in reported two-firm income, verified policy positions, and the limits of causal claims. Original records distinguished from secondary reproductions.</p><p><a href="' + route + '">Read the evidence dossier</a></p></section>';
+      addBlob(desired, blobs, '/investigations.html', Buffer.from(liveHtml.replace('</main>', card + '</main>'), 'utf8'));
+    }
+  }
+
   if (profileName === 'nfc-east-title-2026') {
     const recordBytes = readRepositoryBytes('research/nfc-east-2026/nfc-east-title-2026-11-12.json');
     const record = JSON.parse(recordBytes.toString('utf8'));
@@ -1365,6 +1384,10 @@ async function buildOverlay(live, profileName) {
   }
 
   const changedPaths = Object.keys(desired).filter((item) => live.fileMap[item] !== desired[item]).sort();
+  if (profileName === 'anthropic-lobbying' && changedPaths.some(item =>
+      !['/investigations/anthropic-lobbying-chip-policy.html', '/investigations.html', '/sitemap.xml'].includes(item))) {
+    fail('Anthropic release attempted to change an unrelated path.');
+  }
   if (profileName === 'intelligence-share' && changedPaths.some(item =>
       !['/intelligence.html', '/assets/social/og-kahrelum-intelligence-20261114.png', '/sitemap.xml'].includes(item))) {
     fail('Intelligence sharing release attempted to replace an unrelated live Firebase path.');
@@ -1614,7 +1637,9 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
   }
 
   const internal = new Set();
-  const verifiedRoutes = profileName === 'mqa001-review'
+  const verifiedRoutes = profileName === 'anthropic-lobbying'
+    ? ['/investigations/anthropic-lobbying-chip-policy', '/investigations']
+    : profileName === 'mqa001-review'
     ? ['/insights/morgan-dollar-quote', '/insights']
     : profileName === 'hegseth-law-audit'
     ? ['/insights', '/insights/hegseth-war-powers-fact-check']

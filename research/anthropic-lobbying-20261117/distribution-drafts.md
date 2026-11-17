@@ -1,6 +1,6 @@
 # Distribution drafts — NOT PUBLISHED
 
-Release gate: HOLD_SOURCE_VERIFICATION. Do not publish either edition until the dossier source gate passes and its real website URL has been verified. The website address below is intended, not live. Replace the X placeholder with the actual published Substack URL; do not guess its slug.
+Source verification passed for the narrowed, attributed claims. Publish only after the website URL is verified. Substack must be web-only: email/app distribution disabled. The website address below is intended, not live. Replace the X placeholder with the actual published Substack URL; do not guess its slug.
 
 ## Substack
 
@@ -26,11 +26,11 @@ Continental’s registration identifies Alberto Martinez’s former position as 
 
 That establishes a professional connection and declared lobbying activity. It does not identify a conversation about removing Huang, an instruction from Anthropic to do so, or an agreement to exchange money for that outcome.
 
-Ballard’s registration makes another distinction easy to miss. It was effective March 9, 2026, although filed April 10. It names Brian Ballard, Sylvester Lukis and Micah Ketchel, whose disclosed background includes State Department and White House advisory roles. Its stated assignment is defense procurement. The entire fee cannot simply be relabeled chip-export lobbying.
+Ballard’s registration makes another distinction easy to miss. It was effective March 9, 2026, although filed April 10. It names Brian Ballard, Sylvester Lukis and Micah Ketchel, whose disclosed background includes State Department and White House advisory roles. Its registration and Q1–Q2 reports concern defense procurement. The Q3 reproduction changes to U.S. AI policy and adds Amaryllis Fox Kennedy alongside Ketchel. The entire fee still cannot simply be relabeled chip-export lobbying.
 
 ### A policy fight is not proof of an executive-removal campaign
 
-Anthropic’s public position on compute controls and Nvidia’s interest in overseas chip sales belong in this investigation. But a policy disagreement can reflect both security arguments and commercial interests. Neither, on its own, identifies who caused a board decision.
+Anthropic’s directly inspected policy statement advocates stronger semiconductor controls, a lower no-license threshold and increased enforcement resources. Reuters describes Huang’s push to preserve access to China’s market. But a policy disagreement can reflect both security arguments and commercial interests. Neither, on its own, identifies who caused a board decision.
 
 The original Federal Register supplies one firm historical anchor: effective January 15, 2026, qualifying H200 and equivalent exports to China and Macau moved to conditional, case-by-case license review. That was not unrestricted permission to sell. It also does not establish every subsequent policy change.
 
@@ -40,7 +40,7 @@ A separate Commerce–Justice statement says the Megaspeed investigation began i
 
 To establish that Anthropic orchestrated Huang’s departure, we would need authenticated communications, instructions, meeting records or corroborated firsthand evidence connecting the client, lobbyists, officials and decision. We have not authenticated that evidence.
 
-Former employment plus money plus timing is a reason to ask precise questions. It is not a substitute for their answers. A resignation, removal from a delegation and a board dismissal also must not be conflated.
+Former employment plus money plus timing is a reason to ask precise questions. It is not a substitute for their answers. Nvidia’s original SEC filing says its board accepted Huang’s resignation as president, CEO and director on November 11, effective immediately; Kress became interim CEO. The company announced the transition November 12. That establishes the event, not whether the resignation was voluntary or pressured.
 
 Our dossier sets out competing explanations, the documents that could distinguish them, and the unresolved checks. It does not claim to have cleared every actor or disproved every possible influence effort. It identifies the boundary of the evidence available to this review.
 
@@ -48,7 +48,7 @@ Our dossier sets out competing explanations, the documents that could distinguis
 
 Primary sources include the [federal register of lobbying reports](https://lda.gov/filings/public/filing/search/?client=anthropic&search=search), [Continental’s registration](https://lda.gov/filings/public/filing/bcba8bc2-f110-44eb-b076-b49bedea9a7c/print/), [Ballard’s registration](https://lda.gov/filings/public/filing/bed8a620-9864-40dc-b2f7-ad2983a33d9b/print/), the [January 2026 Federal Register rule](https://www.govinfo.gov/content/pkg/FR-2026-01-15/pdf/2026-00789.pdf) and the [Commerce–Justice statement](https://www.justice.gov/opa/pr/joint-statement-department-commerce-and-department-justice-megaspeed-investigation).
 
-Draft status: several complete quarterly filings and the Anthropic submission returned access-denied responses; full reporting and issuer/SEC reconciliation remain incomplete. This edition is held, not published. No original interviews were conducted. Later evidence must be added through dated corrections, preserving the original record. Send source-backed corrections to hasan@kahrelum.com.
+The eight previously blocked quarterly reports were reviewed through Open America’s filing-level reproductions, explicitly secondary evidence. They are not guaranteed complete: Continental Q1’s original includes Paul Calkins, whom its reproduction omits. We retain him from the original. The original SEC filing, Nvidia announcement and Anthropic policy page were directly inspected. Unauthenticated memo claims and dates were removed. No original interviews were conducted. Corrections will be dated and preserve the earlier record; send source-backed corrections to hasan@kahrelum.com.
 
 Subscribe for KAHRELUM’s source-linked investigations. For an evidence review of a closed business decision, see the existing [KAHRELUM Fit Check](https://kahrelum.com/pilot).
 
@@ -64,7 +64,7 @@ Here is what the federal records establish:
 
 The political connection is real: Continental’s filing identifies Alberto Martinez as a former chief of staff to Marco Rubio. Ballard’s registration names Micah Ketchel and discloses previous State Department and White House advisory roles.
 
-The evidentiary limit is equally real. Neither registration identifies an assignment to remove Huang. Ballard’s declared assignment is defense procurement; its entire fee cannot be labeled chip-export lobbying.
+The evidentiary limit is equally real. Neither registration identifies an assignment to remove Huang. Ballard’s Q1–Q2 scope was defense procurement; Q3 broadened to U.S. AI policy. Its entire fee cannot be labeled chip-export lobbying. The eight formerly blocked reports are attributed to secondary reproductions, with the dossier identifying a known omission.
 
 Dates also matter. Ballard’s registration was effective March 9, 2026, but filed April 10. And the Commerce–Justice account says the Megaspeed investigation began in 2024—before either engagement in this series.
 
@@ -72,15 +72,14 @@ Competing explanations include ordinary policy/procurement advocacy, independent
 
 Lobbying totals + former employment + chronology are grounds for questions, not proof of causation.
 
+Nvidia’s SEC filing records the resignation effective November 11; its public announcement followed November 12. This verifies the transition, not an Anthropic-directed cause.
+
 The investigation, with the quarter-by-quarter dossier, source links, competing hypotheses and limitations:
 
 [ACTUAL_VERIFIED_SUBSTACK_URL_REQUIRED]
 
-## Execution record and release handoff
+## Verification follow-up — November 17, 2026
 
-- Used existing AuroraGrid/kahrelum-os checkout; branch based on fetched origin/main d6f09fd. Existing historical records left unchanged.
-- Duplicate checks: no topical dossier in current repository or live investigation index; authenticated Substack published search returned no Anthropic posts, with all seven existing published titles also inspected. Authenticated X latest search `from:Nospinzone (Anthropic OR Continental OR Ballard)` returned no results. These are bounded searches, not proof that all indexing is complete.
-- Both authenticated publishing sessions were available. No website deployment, Substack publication or X publication was attempted because the source-verification gate did not pass.
-- Blockers: eight complete quarterly filing follow-up requests returned HTTP 403; Anthropic policy PDF and full memo-report page returned 403; issuer mirror timed out; web research service failed on three subsequent calls. The official index, two registrations, Continental Q1 2026, the government statement and Federal Register rule were accessible.
-- Before release: reconcile original quarterly bodies/amendments, verify the complete policy positions and leadership event, remove draft/noindex markers, add a single card to the CURRENT live investigation index, and add the exact new route to an existing scoped overlay/sitemap workflow. Then use Plan → verified Preview → promotion of that same preview. Do not deploy a stale local index over newer live cards.
-- Verify the live website before publishing Substack; verify Substack before inserting its real URL into the single long-form X post. Do not add LinkedIn, Buffer, paid services or graphics.
+The original HOLD and initial blocked retrievals remain in commit 7f0e054. Browser retrieval recovered all nine filing-level reproductions, the SEC 8-K, Anthropic policy statement and full Reuters syndication. Nvidia’s announcement was retrieved directly. Secondary-source personnel lists are qualified by the known Paul Calkins omission. Ballard Q3 scope corrected to U.S. AI policy. Memo allegations/date removed. No direct evidence of coordinated action against Huang authenticated.
+
+Publication sequence: verified existing scoped Plan/Preview/Promote; Substack web-only with email/app delivery disabled; one X post with actual verified Substack URL. Original eight federal quarterly bodies remain uninspected and are not represented otherwise. No private deliberations or direct coordination evidence available.
