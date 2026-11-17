@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "On Point Politics",
+  "sourceUrl": "https://onpointpolitics.us/forecast",
+  "retrieval": {
+    "retrievedAtUtc": "2026-11-02T05:53:29.0365814Z",
+    "cachePolicy": "Fresh first-party HTTPS retrieval with no-cache request headers",
+    "representation": "FIRST_PARTY_HTTP_RESPONSE_UTF8_NOT_EXACT_WIRE_BYTES"
+  },
+  "publisherEdition": {
+    "displayedUpdate": "Nov. 1, 2026",
+    "preciseUpdateTimeExposed": false,
+    "httpDate": "Mon, 02 Nov 2026 06:27:47 GMT",
+    "httpDateUse": "FUTURE_DATED_PROVENANCE_ANOMALY_PRESERVED_NOT_USED_AS_PUBLICATION_OR_RETRIEVAL_TIME"
+  },
+  "observations": {
+    "houseDemocraticControlPct": 98.0,
+    "houseDemocraticSeats": 253.0,
+    "houseSeatType": "average; forecast-in-brief",
+    "senateDemocraticControlPct": 88.0,
+    "senateDemocraticSeats": 54.8,
+    "senateSeatType": "average; detailed Senate panel"
+  },
+  "distinctDisplays": {
+    "houseForecastInBriefAverageDemocraticSeats": 253.0,
+    "houseSummaryDemocraticSeats": 251.0,
+    "houseFavoredSeatCardDemocraticSeats": 246.0,
+    "senateDetailedAverageDemocraticSeats": 54.8,
+    "senateRoundedTextDemocraticSeats": 55.0
+  },
+  "custody": {
+    "httpStatus": 200,
+    "utf8Bytes": 959980,
+    "sha256": "7c560baf566f77d3ae44886966ae5bc51f9c517596b9facbbaac4948357b5e51"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "houseDemocraticControlPct": "UNCHANGED",
+    "houseDemocraticSeats": "UNCHANGED",
+    "senateDemocraticControlPct": "UNCHANGED",
+    "senateDemocraticSeats": {
+      "from": 54.6,
+      "to": 54.8
+    }
+  },
+  "kahrelumInputReview": {
+    "housePublisherEdition": "October 23, 2026",
+    "senatePublisherEdition": "October 20, 2026",
+    "parsedHouseDistrictInputsChanged": false,
+    "parsedSenateRaceInputsChanged": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  },
+  "admissionNote": "The first-party page retains 98% Democratic House control, 88% Democratic Senate control and 253 average Democratic House seats while its detailed Senate panel moves from 54.6 to 54.8 average Democratic seats. Distinct rounded and favored-seat displays remain separate. The source exposes no precise update time, so the prospective retrieval time is the custody time. The future-dated HTTP Date header is preserved as an anomaly and is not used to backdate the observation."
+}

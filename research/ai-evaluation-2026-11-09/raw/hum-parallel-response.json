@@ -1,0 +1,414 @@
+{
+  "run": "AI-EVAL-20261109-HUM",
+  "dataset": "KAHRELUM AI Intelligence Evaluation Portfolio v1.0",
+  "blinding": "no_reference_answers_or_scoring_anchors_provided_to_candidate",
+  "provider_tool": "Parallel web_research",
+  "effort": "medium",
+  "prompt": "You are completing a FRESH evaluation test. The following is a SYNTHETIC case study (not an actual incident, person, or intelligence finding). No answer key, expected outputs, scoring rubrics, or feedback are supplied. Do not look for KAHRELUM's answer key. Use only the scenario and cited public reference documents. Answer ALL FIVE numbered tasks with five fields each: (1) conclusion, (2) evidence IDs and what they prove, (3) cutoff/time and provenance, (4) uncertainty and boundaries, (5) specific falsifier or next independent verification check. Distinguish fixture claims from public source statements. Do not infer missing facts or use post-cutoff material to justify earlier conclusions.\nCASE HUM, completely synthetic. Cutoff 2026-10-17 18:00 UTC. W1 interview recorded 17:00: at audio 02:10 witness says \"near the east gate just after four\" and \"white van, something like GX7\"; at 03:05 corrects \"maybe west gate; cannot be sure\"; at 04:40 says no photo. W1-CUE: gaze down about two seconds at 02:18 after plate question; neutral baseline had two similar gaze shifts. This cue DOES NOT diagnose deception. W2 badge T-17 west gate scan 16:03, no evidence whose identity or clock accuracy. W3 camera image label 16:06: white vehicle near west gate, no legible plate, clock unverified. W4 second witness 17:30 repeats account learned from W1, not independent. W5 technical audit first available 18:30: camera clock may run seven minutes fast, AFTER cutoff. Exercise rules: neutral interview, distinguish observed/inferred, separate independent origins, version corrections.\nSources: S5 official UK College of Policing investigative interviewing guidance https://www.college.police.uk/app/investigation/investigative-interviewing/investigative-interviewing ; S6 US NIJ Eyewitness Evidence: A Guide for Law Enforcement https://nij.ojp.gov/library/publications/eyewitness-evidence-guide-law-enforcement ; S7 National Academies The Polygraph and Lie Detection https://www.nationalacademies.org/read/10420/chapter/8 .\nHUM-01 Create a neutral cue log and explain the evidential value of gaze aversion.\nHUM-02 Which records are genuinely independent corroboration?\nHUM-03 Design four non-leading follow-up questions with at least one source-verifiable control.\nHUM-04 Give at least three competing hypotheses with one discriminator each.\nHUM-05 Issue a cutoff-accurate finding, then explain how W5 is handled.",
+  "raw_response": {
+    "id": "resp_e344e627-4462-4597-a596-8f1730930d31",
+    "created_at": 1794201351,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": null,
+    "model": "parallel",
+    "object": "response",
+    "output": [
+      {
+        "id": "ws_resp_e344e627-4462-4597-a596-8f1730930d31_0",
+        "action": {
+          "type": "search",
+          "queries": [
+            "College of Policing investigative interviewing open questions witness account guidance"
+          ],
+          "query": "College of Policing investigative interviewing open questions witness account guidance",
+          "sources": null
+        },
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "id": "ws_resp_e344e627-4462-4597-a596-8f1730930d31_1",
+        "action": {
+          "type": "open_page",
+          "url": "https://www.college.police.uk/app/investigation/investigative-interviewing/investigative-interviewing"
+        },
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "id": "ws_resp_e344e627-4462-4597-a596-8f1730930d31_2",
+        "action": {
+          "type": "search",
+          "queries": [
+            "NIJ Eyewitness Evidence Guide witness interview independent account non-leading questions"
+          ],
+          "query": "NIJ Eyewitness Evidence Guide witness interview independent account non-leading questions",
+          "sources": null
+        },
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "id": "ws_resp_e344e627-4462-4597-a596-8f1730930d31_3",
+        "action": {
+          "type": "open_page",
+          "url": "https://nij.ojp.gov/library/publications/eyewitness-evidence-guide-law-enforcement"
+        },
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "id": "ws_resp_e344e627-4462-4597-a596-8f1730930d31_4",
+        "action": {
+          "type": "search",
+          "queries": [
+            "National Academies Polygraph Lie Detection gaze aversion behavioral cues deception"
+          ],
+          "query": "National Academies Polygraph Lie Detection gaze aversion behavioral cues deception",
+          "sources": null
+        },
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "id": "ws_resp_e344e627-4462-4597-a596-8f1730930d31_5",
+        "action": {
+          "type": "open_page",
+          "url": "https://www.nationalacademies.org/read/10420/chapter/8"
+        },
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "id": "msg_resp_e344e627-4462-4597-a596-8f1730930d31",
+        "content": [
+          {
+            "annotations": [
+              {
+                "end_index": 607,
+                "start_index": 539,
+                "title": "Read \"The Polygraph and Lie Detection\" at NAP.edu",
+                "type": "url_citation",
+                "url": "https://www.nationalacademies.org/read/10420/chapter/8"
+              },
+              {
+                "end_index": 983,
+                "start_index": 855,
+                "title": "Read \"The Polygraph and Lie Detection\" at NAP.edu",
+                "type": "url_citation",
+                "url": "https://www.nationalacademies.org/read/10420/chapter/8"
+              },
+              {
+                "end_index": 1257,
+                "start_index": 1148,
+                "title": "Read \"The Polygraph and Lie Detection\" at NAP.edu",
+                "type": "url_citation",
+                "url": "https://www.nationalacademies.org/read/10420/chapter/8"
+              },
+              {
+                "end_index": 1516,
+                "start_index": 1378,
+                "title": "Read \"The Polygraph and Lie Detection\" at NAP.edu",
+                "type": "url_citation",
+                "url": "https://www.nationalacademies.org/read/10420/chapter/8"
+              },
+              {
+                "end_index": 6506,
+                "start_index": 6449,
+                "title": "Read \"The Polygraph and Lie Detection\" at NAP.edu",
+                "type": "url_citation",
+                "url": "https://www.nationalacademies.org/read/10420/chapter/8"
+              },
+              {
+                "end_index": 7289,
+                "start_index": 7236,
+                "title": "Read \"The Polygraph and Lie Detection\" at NAP.edu",
+                "type": "url_citation",
+                "url": "https://www.nationalacademies.org/read/10420/chapter/8"
+              },
+              {
+                "end_index": 1516,
+                "start_index": 1378,
+                "title": "Investigative interviewing | College of Policing",
+                "type": "url_citation",
+                "url": "https://www.college.police.uk/app/investigation/investigative-interviewing/investigative-interviewing"
+              },
+              {
+                "end_index": 3844,
+                "start_index": 3694,
+                "title": "Investigative interviewing | College of Policing",
+                "type": "url_citation",
+                "url": "https://www.college.police.uk/app/investigation/investigative-interviewing/investigative-interviewing"
+              },
+              {
+                "end_index": 4105,
+                "start_index": 3848,
+                "title": "Investigative interviewing | College of Policing",
+                "type": "url_citation",
+                "url": "https://www.college.police.uk/app/investigation/investigative-interviewing/investigative-interviewing"
+              },
+              {
+                "end_index": 4459,
+                "start_index": 4267,
+                "title": "Investigative interviewing | College of Policing",
+                "type": "url_citation",
+                "url": "https://www.college.police.uk/app/investigation/investigative-interviewing/investigative-interviewing"
+              },
+              {
+                "end_index": 5205,
+                "start_index": 5102,
+                "title": "Investigative interviewing | College of Policing",
+                "type": "url_citation",
+                "url": "https://www.college.police.uk/app/investigation/investigative-interviewing/investigative-interviewing"
+              },
+              {
+                "end_index": 5587,
+                "start_index": 5419,
+                "title": "Investigative interviewing | College of Policing",
+                "type": "url_citation",
+                "url": "https://www.college.police.uk/app/investigation/investigative-interviewing/investigative-interviewing"
+              },
+              {
+                "end_index": 7669,
+                "start_index": 7562,
+                "title": "Investigative interviewing | College of Policing",
+                "type": "url_citation",
+                "url": "https://www.college.police.uk/app/investigation/investigative-interviewing/investigative-interviewing"
+              },
+              {
+                "end_index": 7897,
+                "start_index": 7741,
+                "title": "Investigative interviewing | College of Policing",
+                "type": "url_citation",
+                "url": "https://www.college.police.uk/app/investigation/investigative-interviewing/investigative-interviewing"
+              },
+              {
+                "end_index": 8288,
+                "start_index": 8134,
+                "title": "Investigative interviewing | College of Policing",
+                "type": "url_citation",
+                "url": "https://www.college.police.uk/app/investigation/investigative-interviewing/investigative-interviewing"
+              },
+              {
+                "end_index": 8664,
+                "start_index": 8582,
+                "title": "Investigative interviewing | College of Policing",
+                "type": "url_citation",
+                "url": "https://www.college.police.uk/app/investigation/investigative-interviewing/investigative-interviewing"
+              },
+              {
+                "end_index": 2170,
+                "start_index": 2068,
+                "title": "Reproductions supplied by EDRS are the best that can be made from the original document.",
+                "type": "url_citation",
+                "url": "https://files.eric.ed.gov/fulltext/ED482533.pdf"
+              },
+              {
+                "end_index": 2715,
+                "start_index": 2646,
+                "title": "Reproductions supplied by EDRS are the best that can be made from the original document.",
+                "type": "url_citation",
+                "url": "https://files.eric.ed.gov/fulltext/ED482533.pdf"
+              },
+              {
+                "end_index": 2945,
+                "start_index": 2837,
+                "title": "Reproductions supplied by EDRS are the best that can be made from the original document.",
+                "type": "url_citation",
+                "url": "https://files.eric.ed.gov/fulltext/ED482533.pdf"
+              },
+              {
+                "end_index": 3298,
+                "start_index": 3146,
+                "title": "Reproductions supplied by EDRS are the best that can be made from the original document.",
+                "type": "url_citation",
+                "url": "https://files.eric.ed.gov/fulltext/ED482533.pdf"
+              },
+              {
+                "end_index": 3639,
+                "start_index": 3542,
+                "title": "Reproductions supplied by EDRS are the best that can be made from the original document.",
+                "type": "url_citation",
+                "url": "https://files.eric.ed.gov/fulltext/ED482533.pdf"
+              },
+              {
+                "end_index": 4459,
+                "start_index": 4267,
+                "title": "Reproductions supplied by EDRS are the best that can be made from the original document.",
+                "type": "url_citation",
+                "url": "https://files.eric.ed.gov/fulltext/ED482533.pdf"
+              },
+              {
+                "end_index": 5415,
+                "start_index": 5209,
+                "title": "Reproductions supplied by EDRS are the best that can be made from the original document.",
+                "type": "url_citation",
+                "url": "https://files.eric.ed.gov/fulltext/ED482533.pdf"
+              },
+              {
+                "end_index": 6767,
+                "start_index": 6510,
+                "title": "Reproductions supplied by EDRS are the best that can be made from the original document.",
+                "type": "url_citation",
+                "url": "https://files.eric.ed.gov/fulltext/ED482533.pdf"
+              },
+              {
+                "end_index": 7289,
+                "start_index": 7236,
+                "title": "Reproductions supplied by EDRS are the best that can be made from the original document.",
+                "type": "url_citation",
+                "url": "https://files.eric.ed.gov/fulltext/ED482533.pdf"
+              },
+              {
+                "end_index": 7669,
+                "start_index": 7562,
+                "title": "Reproductions supplied by EDRS are the best that can be made from the original document.",
+                "type": "url_citation",
+                "url": "https://files.eric.ed.gov/fulltext/ED482533.pdf"
+              },
+              {
+                "end_index": 2170,
+                "start_index": 2068,
+                "title": "Eyewitness Evidence: A Guide for Law Enforcement",
+                "type": "url_citation",
+                "url": "https://www.ojp.gov/nij/eyewitness/eyewitness_evidence_slides.pdf"
+              },
+              {
+                "end_index": 2715,
+                "start_index": 2646,
+                "title": "Eyewitness Evidence: A Guide for Law Enforcement",
+                "type": "url_citation",
+                "url": "https://www.ojp.gov/nij/eyewitness/eyewitness_evidence_slides.pdf"
+              },
+              {
+                "end_index": 2945,
+                "start_index": 2837,
+                "title": "Eyewitness Evidence: A Guide for Law Enforcement",
+                "type": "url_citation",
+                "url": "https://www.ojp.gov/nij/eyewitness/eyewitness_evidence_slides.pdf"
+              },
+              {
+                "end_index": 3844,
+                "start_index": 3694,
+                "title": "Eyewitness Evidence: A Guide for Law Enforcement",
+                "type": "url_citation",
+                "url": "https://www.ojp.gov/nij/eyewitness/eyewitness_evidence_slides.pdf"
+              },
+              {
+                "end_index": 4105,
+                "start_index": 3848,
+                "title": "Eyewitness Evidence: A Guide for Law Enforcement",
+                "type": "url_citation",
+                "url": "https://www.ojp.gov/nij/eyewitness/eyewitness_evidence_slides.pdf"
+              },
+              {
+                "end_index": 4263,
+                "start_index": 4109,
+                "title": "Eyewitness Evidence: A Guide for Law Enforcement",
+                "type": "url_citation",
+                "url": "https://www.ojp.gov/nij/eyewitness/eyewitness_evidence_slides.pdf"
+              },
+              {
+                "end_index": 5044,
+                "start_index": 4744,
+                "title": "Eyewitness Evidence: A Guide for Law Enforcement",
+                "type": "url_citation",
+                "url": "https://www.ojp.gov/nij/eyewitness/eyewitness_evidence_slides.pdf"
+              },
+              {
+                "end_index": 5415,
+                "start_index": 5209,
+                "title": "Eyewitness Evidence: A Guide for Law Enforcement",
+                "type": "url_citation",
+                "url": "https://www.ojp.gov/nij/eyewitness/eyewitness_evidence_slides.pdf"
+              },
+              {
+                "end_index": 7289,
+                "start_index": 7236,
+                "title": "Eyewitness Evidence: A Guide for Law Enforcement",
+                "type": "url_citation",
+                "url": "https://www.ojp.gov/nij/eyewitness/eyewitness_evidence_slides.pdf"
+              },
+              {
+                "end_index": 3844,
+                "start_index": 3694,
+                "title": "Witnesses’ own words and open questioning | College of Policing",
+                "type": "url_citation",
+                "url": "https://www.college.police.uk/guidance/obtaining-initial-accounts/witnesses-own-words-and-open-questioning"
+              },
+              {
+                "end_index": 4105,
+                "start_index": 3848,
+                "title": "Witnesses’ own words and open questioning | College of Policing",
+                "type": "url_citation",
+                "url": "https://www.college.police.uk/guidance/obtaining-initial-accounts/witnesses-own-words-and-open-questioning"
+              },
+              {
+                "end_index": 4263,
+                "start_index": 4109,
+                "title": "Witnesses’ own words and open questioning | College of Policing",
+                "type": "url_citation",
+                "url": "https://www.college.police.uk/guidance/obtaining-initial-accounts/witnesses-own-words-and-open-questioning"
+              },
+              {
+                "end_index": 5044,
+                "start_index": 4744,
+                "title": "Witnesses’ own words and open questioning | College of Policing",
+                "type": "url_citation",
+                "url": "https://www.college.police.uk/guidance/obtaining-initial-accounts/witnesses-own-words-and-open-questioning"
+              },
+              {
+                "end_index": 4459,
+                "start_index": 4267,
+                "title": "Non-leading approach to questioning | College of Policing",
+                "type": "url_citation",
+                "url": "https://www.college.police.uk/guidance/obtaining-initial-accounts/non-leading-approach-questioning"
+              },
+              {
+                "end_index": 6767,
+                "start_index": 6510,
+                "title": "Non-leading approach to questioning | College of Policing",
+                "type": "url_citation",
+                "url": "https://www.college.police.uk/guidance/obtaining-initial-accounts/non-leading-approach-questioning"
+              }
+            ],
+            "text": "**HUM-01 — Neutral cue log and evidential value**\n1. **Conclusion:** Log the statements and behavior separately, without labeling either as truthful or deceptive. The fixture records that at audio 02:10 W1 said “near the east gate just after four” and “white van, something like GX7”; at 03:05 W1 revised the location to “maybe west gate; cannot be sure”; at 04:40 W1 said there was no photo. At 02:18, after a plate question, W1 looked down for about two seconds; the fixture also records two similar gaze shifts in the neutral baseline. These are fixture observations, not independently verified findings.\n2. **Evidence IDs and what they prove:** W1 and W1-CUE are fixture identifiers, not public-source IDs. The gaze observation supports only that a brief downward gaze shift was recorded at that point; the baseline supplies context, not a diagnosis. Research summarized by the National Academies says avoidance of eye contact has not shown a reliable association with deception.\n3. **Cutoff/time and provenance:** The stated interview times and cue are attributed to the synthetic W1 fixture; the supplied case cutoff is 2026-10-17 18:00 UTC. The public research source supplies general guidance about demeanor cues, not verification of this interview.\n4. **Uncertainty and boundaries:** The gaze shift does not establish deception, stress, or the reason for looking down. Preserve W1’s original location and plate wording as well as the correction; do not silently replace the first version with the later one.\n5. **Specific falsifier or next independent verification check:** Check the original audio and contemporaneous interview record to verify the wording, timestamps, question sequence, and coding of the gaze and baseline observations. The fixture itself says there was no photo; do not imply photographic corroboration.\n\n**HUM-02 — Independent corroboration**\n1. **Conclusion:** W2 and W3 are separate records that may provide limited, independently originated corroboration; neither establishes that W1 saw the same vehicle or that W1 was at the scene. W4 is not independent corroboration because the fixture says that witness learned the account from W1.\n2. **Evidence IDs and what they prove:** W2 records badge T-17 at the west gate at 16:03; on the fixture’s stated limitations, it proves a badge scan, not who carried the badge or whether the clock was accurate. W3 is a camera record labeled 16:06 showing a white vehicle near the west gate; the plate is not legible and its clock is unverified. Thus W3 may corroborate a white vehicle near that gate, but not its plate, actual time, or connection to W1’s reported sighting. W4 repeats an account learned from W1 and adds no independent origin.\n3. **Cutoff/time and provenance:** This assessment is limited to the fixture material available by 2026-10-17 18:00 UTC. W2 and W3 are separate record types in the case description; their accuracy and linkage are not established.\n4. **Uncertainty and boundaries:** The records do not establish that W1, T-17, and the vehicle were together, or that W1’s “just after four” and W3’s displayed 16:06 refer to the same clock or event. Independent witness accounts are valuable only when their information sources are independent; W4’s reported dependence on W1 defeats that independence.\n5. **Specific falsifier or next independent verification check:** Obtain the original badge-system audit trail and camera file, identify each system’s clock source and calibration, and verify whether W4 had any prior exposure to W1’s account. NIJ guidance emphasizes separating witnesses and checking whether they have heard other accounts.\n\n**HUM-03 — Four non-leading follow-up questions**\n1. **Conclusion:** Ask open questions first, allow W1 to give an account in their own words, and avoid suggesting a gate, time, vehicle, or plate answer.\n2. **Evidence IDs and what they prove:** The College of Policing recommends open-ended questions to elicit an unrestricted account and warns that leading questions can distort an account; NIJ guidance likewise recommends open-ended, non-suggestive questioning.\n3. **Cutoff/time and provenance:** These are proposed follow-up questions, not fixture facts; the procedural basis is the cited public interviewing guidance.\n4. **Uncertainty and boundaries:** Ask each question neutrally and one point at a time; do not disclose what W2, W3, or another witness reportedly said before obtaining W1’s unaided recollection.\n5. **Specific falsifier or next independent verification check:** Ask: (a) “Please describe everything you remember about where you were and what you saw.” (b) “What, if anything, helps you place the time, and how did you arrive at it?” (c) “Please describe the vehicle and anything you remember about its registration.” (d) “What were you doing immediately before and after, and what independent records or people, if any, could help verify the timing or location?” The last question identifies possible source-verifiable controls without presuming that any particular record exists.\n\n**HUM-04 — Competing hypotheses and discriminators**\n1. **Conclusion:** Keep multiple explanations open; the fixture alone does not establish which is correct.\n2. **Evidence IDs and what they prove:** W1’s corrected gate uncertainty, W2’s badge scan, and W3’s image label are the relevant fixture items; they do not by themselves connect W1, the badge, and the vehicle.\n3. **Cutoff/time and provenance:** These are hypotheses for testing against the fixture evidence available by 18:00 UTC, not findings or claims made by the public sources.\n4. **Uncertainty and boundaries:** (a) W1 saw a white van near the east gate shortly after four but is unsure of the plate; **discriminator:** independently sourced, time-validated east-gate records or another witness with no exposure to W1. (b) W1 saw a white vehicle near the west gate but misremembered the gate or time; **discriminator:** verified camera timing and independent evidence placing W1 at the west gate. (c) W1’s recollection and W3’s west-gate vehicle concern separate events; **discriminator:** independent vehicle details, reliable timing, or records linking a specific vehicle across locations. (d) W1’s account is materially mistaken or inaccurate rather than a reliable identification; **discriminator:** a demonstrable contradiction with independently verified evidence, while accounting for the stated uncertainty and clock limitations. None of these hypotheses is established by gaze aversion.\n5. **Specific falsifier or next independent verification check:** Seek original, independently maintained location or vehicle records, validate their clocks and provenance, and obtain any further witness account before sharing other accounts with that witness.\n\n**HUM-05 — Cutoff-accurate finding and W5**\n1. **Conclusion:** At the 2026-10-17 18:00 UTC cutoff, the narrow finding is that the fixture contains a W1 account with uncertain gate and approximate plate, a W2 west-gate badge scan, and a W3 camera-labeled image of a white vehicle near the west gate. W2 and W3 offer limited potential corroboration, but the available fixture does not establish a common event, W1’s presence, a legible plate, or a reliable time match. W4 is derivative, and the gaze cue is not diagnostic.\n2. **Evidence IDs and what they prove:** W1, W2, W3, and W4 are fixture claims with the stated limitations; W4 is not independent. W5 is described in the fixture as a technical audit first available at 18:30, after cutoff, and therefore cannot support the cutoff finding. Public guidance supports neutral, source-aware evaluation, not the truth of the synthetic incident details.\n3. **Cutoff/time and provenance:** Freeze the assessment at 18:00 UTC. Treat W5 as later-acquired material and record its actual availability time and provenance separately; do not use it to justify what was knowable at cutoff.\n4. **Uncertainty and boundaries:** W5 says the camera clock “may run seven minutes fast”; that is a possibility, not a verified correction. Do not simply subtract seven minutes from W3’s 16:06 label or overwrite the original timestamp. If subsequently verified, it could change the timing assessment, but would not by itself show W1 was present or that the vehicle was the one W1 described.\n5. **Specific falsifier or next independent verification check:** For a later, separately dated update, independently validate the camera clock against a traceable time reference and the system’s audit/configuration records, then preserve both the original label and any supported correction. Until that check is complete, W5 does not establish an actual seven-minute offset.",
+            "type": "output_text",
+            "logprobs": null
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": null
+      }
+    ],
+    "parallel_tool_calls": false,
+    "temperature": null,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": null,
+    "background": null,
+    "completed_at": 1794201377,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": null,
+    "reasoning": null,
+    "safety_identifier": null,
+    "service_tier": null,
+    "status": "completed",
+    "text": null,
+    "top_logprobs": null,
+    "truncation": null,
+    "usage": null,
+    "user": null,
+    "effort_used": "medium"
+  }
+}

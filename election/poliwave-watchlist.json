@@ -1,0 +1,4254 @@
+{
+  "schema": "KAHRELUM_POLIWAVE_FIRST_LOOK_WATCHLIST_V1",
+  "electionDate": "2026-11-03",
+  "status": "LINK_REFERENCE_ONLY_NO_IMPORTED_POLIWAVE_DATA",
+  "primaryMonitoringReference": "Poliwave",
+  "primaryReferenceUrl": "https://www.poliwave.com/us/live/midterms-2026",
+  "licenseUrl": "https://www.poliwave.com/about/licensing",
+  "referenceScope": "All 470 KAHRELUM tracked US House and Senate contests, not a claim that Poliwave is certified or complete.",
+  "coverage": {
+    "house": 435,
+    "senate": 35
+  },
+  "policy": {
+    "copiedVotes": false,
+    "automatedBulkExtraction": false,
+    "officialStateCertificationRequired": true,
+    "independentCallVerification": true,
+    "lockedForecastsImmutable": true,
+    "publicResultsUse": "External link only; numbers and calls are not imported or rehosted.",
+    "unavailableSourceHandling": "Record unavailable or delayed. Do not infer zero votes, an outcome, or a winner."
+  },
+  "records": [
+    {
+      "contestId": "AK-AL",
+      "office": "US_HOUSE",
+      "state": "AK",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/alaska/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "AL-1",
+      "office": "US_HOUSE",
+      "state": "AL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/alabama/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "AL-2",
+      "office": "US_HOUSE",
+      "state": "AL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/alabama/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "AL-3",
+      "office": "US_HOUSE",
+      "state": "AL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/alabama/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "AL-4",
+      "office": "US_HOUSE",
+      "state": "AL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/alabama/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "AL-5",
+      "office": "US_HOUSE",
+      "state": "AL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/alabama/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "AL-6",
+      "office": "US_HOUSE",
+      "state": "AL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/alabama/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "AL-7",
+      "office": "US_HOUSE",
+      "state": "AL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/alabama/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "AR-1",
+      "office": "US_HOUSE",
+      "state": "AR",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/arkansas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "AR-2",
+      "office": "US_HOUSE",
+      "state": "AR",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/arkansas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "AR-3",
+      "office": "US_HOUSE",
+      "state": "AR",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/arkansas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "AR-4",
+      "office": "US_HOUSE",
+      "state": "AR",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/arkansas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "AZ-1",
+      "office": "US_HOUSE",
+      "state": "AZ",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/arizona/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "AZ-2",
+      "office": "US_HOUSE",
+      "state": "AZ",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/arizona/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "AZ-3",
+      "office": "US_HOUSE",
+      "state": "AZ",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/arizona/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "AZ-4",
+      "office": "US_HOUSE",
+      "state": "AZ",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/arizona/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "AZ-5",
+      "office": "US_HOUSE",
+      "state": "AZ",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/arizona/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "AZ-6",
+      "office": "US_HOUSE",
+      "state": "AZ",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/arizona/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "AZ-7",
+      "office": "US_HOUSE",
+      "state": "AZ",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/arizona/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "AZ-8",
+      "office": "US_HOUSE",
+      "state": "AZ",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/arizona/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "AZ-9",
+      "office": "US_HOUSE",
+      "state": "AZ",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/arizona/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-1",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-10",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-11",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-12",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-13",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-14",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-15",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-16",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-17",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-18",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-19",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-2",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-20",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-21",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-22",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-23",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-24",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-25",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-26",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-27",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-28",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-29",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-3",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-30",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-31",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-32",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-33",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-34",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-35",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-36",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-37",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-38",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-39",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-4",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-40",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-41",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-42",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-43",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-44",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-45",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-46",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-47",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-48",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-49",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-5",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-50",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-51",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-52",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-6",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-7",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-8",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CA-9",
+      "office": "US_HOUSE",
+      "state": "CA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/california/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CO-1",
+      "office": "US_HOUSE",
+      "state": "CO",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/colorado/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CO-2",
+      "office": "US_HOUSE",
+      "state": "CO",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/colorado/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CO-3",
+      "office": "US_HOUSE",
+      "state": "CO",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/colorado/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CO-4",
+      "office": "US_HOUSE",
+      "state": "CO",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/colorado/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CO-5",
+      "office": "US_HOUSE",
+      "state": "CO",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/colorado/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CO-6",
+      "office": "US_HOUSE",
+      "state": "CO",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/colorado/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CO-7",
+      "office": "US_HOUSE",
+      "state": "CO",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/colorado/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CO-8",
+      "office": "US_HOUSE",
+      "state": "CO",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/colorado/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CT-1",
+      "office": "US_HOUSE",
+      "state": "CT",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/connecticut/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CT-2",
+      "office": "US_HOUSE",
+      "state": "CT",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/connecticut/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CT-3",
+      "office": "US_HOUSE",
+      "state": "CT",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/connecticut/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CT-4",
+      "office": "US_HOUSE",
+      "state": "CT",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/connecticut/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CT-5",
+      "office": "US_HOUSE",
+      "state": "CT",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/connecticut/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "DE-AL",
+      "office": "US_HOUSE",
+      "state": "DE",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/delaware/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-1",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-10",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-11",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-12",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-13",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-14",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-15",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-16",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-17",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-18",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-19",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-2",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-20",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-21",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-22",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-23",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-24",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-25",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-26",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-27",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-28",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-3",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-4",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-5",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-6",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-7",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-8",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-9",
+      "office": "US_HOUSE",
+      "state": "FL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "GA-1",
+      "office": "US_HOUSE",
+      "state": "GA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/georgia/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "GA-10",
+      "office": "US_HOUSE",
+      "state": "GA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/georgia/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "GA-11",
+      "office": "US_HOUSE",
+      "state": "GA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/georgia/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "GA-12",
+      "office": "US_HOUSE",
+      "state": "GA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/georgia/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "GA-13",
+      "office": "US_HOUSE",
+      "state": "GA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/georgia/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "GA-14",
+      "office": "US_HOUSE",
+      "state": "GA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/georgia/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "GA-2",
+      "office": "US_HOUSE",
+      "state": "GA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/georgia/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "GA-3",
+      "office": "US_HOUSE",
+      "state": "GA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/georgia/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "GA-4",
+      "office": "US_HOUSE",
+      "state": "GA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/georgia/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "GA-5",
+      "office": "US_HOUSE",
+      "state": "GA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/georgia/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "GA-6",
+      "office": "US_HOUSE",
+      "state": "GA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/georgia/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "GA-7",
+      "office": "US_HOUSE",
+      "state": "GA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/georgia/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "GA-8",
+      "office": "US_HOUSE",
+      "state": "GA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/georgia/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "GA-9",
+      "office": "US_HOUSE",
+      "state": "GA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/georgia/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "HI-1",
+      "office": "US_HOUSE",
+      "state": "HI",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/hawaii/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "HI-2",
+      "office": "US_HOUSE",
+      "state": "HI",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/hawaii/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IA-1",
+      "office": "US_HOUSE",
+      "state": "IA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/iowa/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IA-2",
+      "office": "US_HOUSE",
+      "state": "IA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/iowa/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IA-3",
+      "office": "US_HOUSE",
+      "state": "IA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/iowa/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IA-4",
+      "office": "US_HOUSE",
+      "state": "IA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/iowa/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "ID-1",
+      "office": "US_HOUSE",
+      "state": "ID",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/idaho/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "ID-2",
+      "office": "US_HOUSE",
+      "state": "ID",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/idaho/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IL-1",
+      "office": "US_HOUSE",
+      "state": "IL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/illinois/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IL-10",
+      "office": "US_HOUSE",
+      "state": "IL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/illinois/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IL-11",
+      "office": "US_HOUSE",
+      "state": "IL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/illinois/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IL-12",
+      "office": "US_HOUSE",
+      "state": "IL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/illinois/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IL-13",
+      "office": "US_HOUSE",
+      "state": "IL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/illinois/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IL-14",
+      "office": "US_HOUSE",
+      "state": "IL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/illinois/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IL-15",
+      "office": "US_HOUSE",
+      "state": "IL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/illinois/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IL-16",
+      "office": "US_HOUSE",
+      "state": "IL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/illinois/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IL-17",
+      "office": "US_HOUSE",
+      "state": "IL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/illinois/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IL-2",
+      "office": "US_HOUSE",
+      "state": "IL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/illinois/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IL-3",
+      "office": "US_HOUSE",
+      "state": "IL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/illinois/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IL-4",
+      "office": "US_HOUSE",
+      "state": "IL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/illinois/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IL-5",
+      "office": "US_HOUSE",
+      "state": "IL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/illinois/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IL-6",
+      "office": "US_HOUSE",
+      "state": "IL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/illinois/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IL-7",
+      "office": "US_HOUSE",
+      "state": "IL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/illinois/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IL-8",
+      "office": "US_HOUSE",
+      "state": "IL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/illinois/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IL-9",
+      "office": "US_HOUSE",
+      "state": "IL",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/illinois/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IN-1",
+      "office": "US_HOUSE",
+      "state": "IN",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/indiana/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IN-2",
+      "office": "US_HOUSE",
+      "state": "IN",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/indiana/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IN-3",
+      "office": "US_HOUSE",
+      "state": "IN",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/indiana/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IN-4",
+      "office": "US_HOUSE",
+      "state": "IN",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/indiana/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IN-5",
+      "office": "US_HOUSE",
+      "state": "IN",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/indiana/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IN-6",
+      "office": "US_HOUSE",
+      "state": "IN",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/indiana/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IN-7",
+      "office": "US_HOUSE",
+      "state": "IN",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/indiana/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IN-8",
+      "office": "US_HOUSE",
+      "state": "IN",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/indiana/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IN-9",
+      "office": "US_HOUSE",
+      "state": "IN",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/indiana/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "KS-1",
+      "office": "US_HOUSE",
+      "state": "KS",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/kansas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "KS-2",
+      "office": "US_HOUSE",
+      "state": "KS",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/kansas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "KS-3",
+      "office": "US_HOUSE",
+      "state": "KS",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/kansas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "KS-4",
+      "office": "US_HOUSE",
+      "state": "KS",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/kansas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "KY-1",
+      "office": "US_HOUSE",
+      "state": "KY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/kentucky/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "KY-2",
+      "office": "US_HOUSE",
+      "state": "KY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/kentucky/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "KY-3",
+      "office": "US_HOUSE",
+      "state": "KY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/kentucky/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "KY-4",
+      "office": "US_HOUSE",
+      "state": "KY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/kentucky/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "KY-5",
+      "office": "US_HOUSE",
+      "state": "KY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/kentucky/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "KY-6",
+      "office": "US_HOUSE",
+      "state": "KY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/kentucky/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "LA-1",
+      "office": "US_HOUSE",
+      "state": "LA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/louisiana/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "LA-2",
+      "office": "US_HOUSE",
+      "state": "LA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/louisiana/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "LA-3",
+      "office": "US_HOUSE",
+      "state": "LA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/louisiana/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "LA-4",
+      "office": "US_HOUSE",
+      "state": "LA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/louisiana/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "LA-5",
+      "office": "US_HOUSE",
+      "state": "LA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/louisiana/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "LA-6",
+      "office": "US_HOUSE",
+      "state": "LA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/louisiana/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MA-1",
+      "office": "US_HOUSE",
+      "state": "MA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/massachusetts/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MA-2",
+      "office": "US_HOUSE",
+      "state": "MA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/massachusetts/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MA-3",
+      "office": "US_HOUSE",
+      "state": "MA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/massachusetts/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MA-4",
+      "office": "US_HOUSE",
+      "state": "MA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/massachusetts/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MA-5",
+      "office": "US_HOUSE",
+      "state": "MA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/massachusetts/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MA-6",
+      "office": "US_HOUSE",
+      "state": "MA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/massachusetts/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MA-7",
+      "office": "US_HOUSE",
+      "state": "MA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/massachusetts/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MA-8",
+      "office": "US_HOUSE",
+      "state": "MA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/massachusetts/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MA-9",
+      "office": "US_HOUSE",
+      "state": "MA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/massachusetts/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MD-1",
+      "office": "US_HOUSE",
+      "state": "MD",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/maryland/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MD-2",
+      "office": "US_HOUSE",
+      "state": "MD",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/maryland/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MD-3",
+      "office": "US_HOUSE",
+      "state": "MD",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/maryland/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MD-4",
+      "office": "US_HOUSE",
+      "state": "MD",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/maryland/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MD-5",
+      "office": "US_HOUSE",
+      "state": "MD",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/maryland/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MD-6",
+      "office": "US_HOUSE",
+      "state": "MD",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/maryland/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MD-7",
+      "office": "US_HOUSE",
+      "state": "MD",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/maryland/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MD-8",
+      "office": "US_HOUSE",
+      "state": "MD",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/maryland/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "ME-1",
+      "office": "US_HOUSE",
+      "state": "ME",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/maine/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "ME-2",
+      "office": "US_HOUSE",
+      "state": "ME",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/maine/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MI-1",
+      "office": "US_HOUSE",
+      "state": "MI",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/michigan/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MI-10",
+      "office": "US_HOUSE",
+      "state": "MI",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/michigan/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MI-11",
+      "office": "US_HOUSE",
+      "state": "MI",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/michigan/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MI-12",
+      "office": "US_HOUSE",
+      "state": "MI",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/michigan/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MI-13",
+      "office": "US_HOUSE",
+      "state": "MI",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/michigan/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MI-2",
+      "office": "US_HOUSE",
+      "state": "MI",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/michigan/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MI-3",
+      "office": "US_HOUSE",
+      "state": "MI",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/michigan/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MI-4",
+      "office": "US_HOUSE",
+      "state": "MI",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/michigan/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MI-5",
+      "office": "US_HOUSE",
+      "state": "MI",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/michigan/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MI-6",
+      "office": "US_HOUSE",
+      "state": "MI",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/michigan/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MI-7",
+      "office": "US_HOUSE",
+      "state": "MI",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/michigan/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MI-8",
+      "office": "US_HOUSE",
+      "state": "MI",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/michigan/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MI-9",
+      "office": "US_HOUSE",
+      "state": "MI",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/michigan/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MN-1",
+      "office": "US_HOUSE",
+      "state": "MN",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/minnesota/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MN-2",
+      "office": "US_HOUSE",
+      "state": "MN",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/minnesota/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MN-3",
+      "office": "US_HOUSE",
+      "state": "MN",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/minnesota/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MN-4",
+      "office": "US_HOUSE",
+      "state": "MN",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/minnesota/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MN-5",
+      "office": "US_HOUSE",
+      "state": "MN",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/minnesota/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MN-6",
+      "office": "US_HOUSE",
+      "state": "MN",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/minnesota/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MN-7",
+      "office": "US_HOUSE",
+      "state": "MN",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/minnesota/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MN-8",
+      "office": "US_HOUSE",
+      "state": "MN",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/minnesota/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MO-1",
+      "office": "US_HOUSE",
+      "state": "MO",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/missouri/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MO-2",
+      "office": "US_HOUSE",
+      "state": "MO",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/missouri/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MO-3",
+      "office": "US_HOUSE",
+      "state": "MO",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/missouri/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MO-4",
+      "office": "US_HOUSE",
+      "state": "MO",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/missouri/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MO-5",
+      "office": "US_HOUSE",
+      "state": "MO",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/missouri/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MO-6",
+      "office": "US_HOUSE",
+      "state": "MO",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/missouri/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MO-7",
+      "office": "US_HOUSE",
+      "state": "MO",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/missouri/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MO-8",
+      "office": "US_HOUSE",
+      "state": "MO",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/missouri/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MS-1",
+      "office": "US_HOUSE",
+      "state": "MS",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/mississippi/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MS-2",
+      "office": "US_HOUSE",
+      "state": "MS",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/mississippi/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MS-3",
+      "office": "US_HOUSE",
+      "state": "MS",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/mississippi/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MS-4",
+      "office": "US_HOUSE",
+      "state": "MS",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/mississippi/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MT-1",
+      "office": "US_HOUSE",
+      "state": "MT",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/montana/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MT-2",
+      "office": "US_HOUSE",
+      "state": "MT",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/montana/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NC-1",
+      "office": "US_HOUSE",
+      "state": "NC",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/north-carolina/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NC-10",
+      "office": "US_HOUSE",
+      "state": "NC",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/north-carolina/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NC-11",
+      "office": "US_HOUSE",
+      "state": "NC",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/north-carolina/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NC-12",
+      "office": "US_HOUSE",
+      "state": "NC",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/north-carolina/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NC-13",
+      "office": "US_HOUSE",
+      "state": "NC",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/north-carolina/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NC-14",
+      "office": "US_HOUSE",
+      "state": "NC",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/north-carolina/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NC-2",
+      "office": "US_HOUSE",
+      "state": "NC",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/north-carolina/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NC-3",
+      "office": "US_HOUSE",
+      "state": "NC",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/north-carolina/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NC-4",
+      "office": "US_HOUSE",
+      "state": "NC",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/north-carolina/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NC-5",
+      "office": "US_HOUSE",
+      "state": "NC",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/north-carolina/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NC-6",
+      "office": "US_HOUSE",
+      "state": "NC",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/north-carolina/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NC-7",
+      "office": "US_HOUSE",
+      "state": "NC",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/north-carolina/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NC-8",
+      "office": "US_HOUSE",
+      "state": "NC",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/north-carolina/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NC-9",
+      "office": "US_HOUSE",
+      "state": "NC",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/north-carolina/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "ND-AL",
+      "office": "US_HOUSE",
+      "state": "ND",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/north-dakota/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NE-1",
+      "office": "US_HOUSE",
+      "state": "NE",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/nebraska/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NE-2",
+      "office": "US_HOUSE",
+      "state": "NE",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/nebraska/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NE-3",
+      "office": "US_HOUSE",
+      "state": "NE",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/nebraska/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NH-1",
+      "office": "US_HOUSE",
+      "state": "NH",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-hampshire/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NH-2",
+      "office": "US_HOUSE",
+      "state": "NH",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-hampshire/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NJ-1",
+      "office": "US_HOUSE",
+      "state": "NJ",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-jersey/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NJ-10",
+      "office": "US_HOUSE",
+      "state": "NJ",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-jersey/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NJ-11",
+      "office": "US_HOUSE",
+      "state": "NJ",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-jersey/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NJ-12",
+      "office": "US_HOUSE",
+      "state": "NJ",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-jersey/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NJ-2",
+      "office": "US_HOUSE",
+      "state": "NJ",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-jersey/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NJ-3",
+      "office": "US_HOUSE",
+      "state": "NJ",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-jersey/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NJ-4",
+      "office": "US_HOUSE",
+      "state": "NJ",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-jersey/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NJ-5",
+      "office": "US_HOUSE",
+      "state": "NJ",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-jersey/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NJ-6",
+      "office": "US_HOUSE",
+      "state": "NJ",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-jersey/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NJ-7",
+      "office": "US_HOUSE",
+      "state": "NJ",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-jersey/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NJ-8",
+      "office": "US_HOUSE",
+      "state": "NJ",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-jersey/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NJ-9",
+      "office": "US_HOUSE",
+      "state": "NJ",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-jersey/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NM-1",
+      "office": "US_HOUSE",
+      "state": "NM",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-mexico/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NM-2",
+      "office": "US_HOUSE",
+      "state": "NM",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-mexico/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NM-3",
+      "office": "US_HOUSE",
+      "state": "NM",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-mexico/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NV-1",
+      "office": "US_HOUSE",
+      "state": "NV",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/nevada/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NV-2",
+      "office": "US_HOUSE",
+      "state": "NV",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/nevada/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NV-3",
+      "office": "US_HOUSE",
+      "state": "NV",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/nevada/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NV-4",
+      "office": "US_HOUSE",
+      "state": "NV",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/nevada/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NY-1",
+      "office": "US_HOUSE",
+      "state": "NY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-york/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NY-10",
+      "office": "US_HOUSE",
+      "state": "NY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-york/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NY-11",
+      "office": "US_HOUSE",
+      "state": "NY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-york/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NY-12",
+      "office": "US_HOUSE",
+      "state": "NY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-york/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NY-13",
+      "office": "US_HOUSE",
+      "state": "NY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-york/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NY-14",
+      "office": "US_HOUSE",
+      "state": "NY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-york/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NY-15",
+      "office": "US_HOUSE",
+      "state": "NY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-york/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NY-16",
+      "office": "US_HOUSE",
+      "state": "NY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-york/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NY-17",
+      "office": "US_HOUSE",
+      "state": "NY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-york/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NY-18",
+      "office": "US_HOUSE",
+      "state": "NY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-york/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NY-19",
+      "office": "US_HOUSE",
+      "state": "NY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-york/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NY-2",
+      "office": "US_HOUSE",
+      "state": "NY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-york/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NY-20",
+      "office": "US_HOUSE",
+      "state": "NY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-york/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NY-21",
+      "office": "US_HOUSE",
+      "state": "NY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-york/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NY-22",
+      "office": "US_HOUSE",
+      "state": "NY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-york/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NY-23",
+      "office": "US_HOUSE",
+      "state": "NY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-york/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NY-24",
+      "office": "US_HOUSE",
+      "state": "NY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-york/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NY-25",
+      "office": "US_HOUSE",
+      "state": "NY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-york/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NY-26",
+      "office": "US_HOUSE",
+      "state": "NY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-york/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NY-3",
+      "office": "US_HOUSE",
+      "state": "NY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-york/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NY-4",
+      "office": "US_HOUSE",
+      "state": "NY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-york/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NY-5",
+      "office": "US_HOUSE",
+      "state": "NY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-york/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NY-6",
+      "office": "US_HOUSE",
+      "state": "NY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-york/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NY-7",
+      "office": "US_HOUSE",
+      "state": "NY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-york/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NY-8",
+      "office": "US_HOUSE",
+      "state": "NY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-york/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NY-9",
+      "office": "US_HOUSE",
+      "state": "NY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-york/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OH-1",
+      "office": "US_HOUSE",
+      "state": "OH",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/ohio/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OH-10",
+      "office": "US_HOUSE",
+      "state": "OH",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/ohio/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OH-11",
+      "office": "US_HOUSE",
+      "state": "OH",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/ohio/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OH-12",
+      "office": "US_HOUSE",
+      "state": "OH",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/ohio/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OH-13",
+      "office": "US_HOUSE",
+      "state": "OH",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/ohio/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OH-14",
+      "office": "US_HOUSE",
+      "state": "OH",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/ohio/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OH-15",
+      "office": "US_HOUSE",
+      "state": "OH",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/ohio/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OH-2",
+      "office": "US_HOUSE",
+      "state": "OH",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/ohio/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OH-3",
+      "office": "US_HOUSE",
+      "state": "OH",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/ohio/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OH-4",
+      "office": "US_HOUSE",
+      "state": "OH",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/ohio/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OH-5",
+      "office": "US_HOUSE",
+      "state": "OH",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/ohio/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OH-6",
+      "office": "US_HOUSE",
+      "state": "OH",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/ohio/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OH-7",
+      "office": "US_HOUSE",
+      "state": "OH",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/ohio/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OH-8",
+      "office": "US_HOUSE",
+      "state": "OH",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/ohio/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OH-9",
+      "office": "US_HOUSE",
+      "state": "OH",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/ohio/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OK-1",
+      "office": "US_HOUSE",
+      "state": "OK",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/oklahoma/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OK-2",
+      "office": "US_HOUSE",
+      "state": "OK",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/oklahoma/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OK-3",
+      "office": "US_HOUSE",
+      "state": "OK",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/oklahoma/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OK-4",
+      "office": "US_HOUSE",
+      "state": "OK",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/oklahoma/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OK-5",
+      "office": "US_HOUSE",
+      "state": "OK",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/oklahoma/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OR-1",
+      "office": "US_HOUSE",
+      "state": "OR",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/oregon/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OR-2",
+      "office": "US_HOUSE",
+      "state": "OR",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/oregon/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OR-3",
+      "office": "US_HOUSE",
+      "state": "OR",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/oregon/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OR-4",
+      "office": "US_HOUSE",
+      "state": "OR",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/oregon/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OR-5",
+      "office": "US_HOUSE",
+      "state": "OR",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/oregon/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OR-6",
+      "office": "US_HOUSE",
+      "state": "OR",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/oregon/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "PA-1",
+      "office": "US_HOUSE",
+      "state": "PA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/pennsylvania/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "PA-10",
+      "office": "US_HOUSE",
+      "state": "PA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/pennsylvania/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "PA-11",
+      "office": "US_HOUSE",
+      "state": "PA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/pennsylvania/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "PA-12",
+      "office": "US_HOUSE",
+      "state": "PA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/pennsylvania/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "PA-13",
+      "office": "US_HOUSE",
+      "state": "PA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/pennsylvania/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "PA-14",
+      "office": "US_HOUSE",
+      "state": "PA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/pennsylvania/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "PA-15",
+      "office": "US_HOUSE",
+      "state": "PA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/pennsylvania/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "PA-16",
+      "office": "US_HOUSE",
+      "state": "PA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/pennsylvania/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "PA-17",
+      "office": "US_HOUSE",
+      "state": "PA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/pennsylvania/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "PA-2",
+      "office": "US_HOUSE",
+      "state": "PA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/pennsylvania/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "PA-3",
+      "office": "US_HOUSE",
+      "state": "PA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/pennsylvania/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "PA-4",
+      "office": "US_HOUSE",
+      "state": "PA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/pennsylvania/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "PA-5",
+      "office": "US_HOUSE",
+      "state": "PA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/pennsylvania/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "PA-6",
+      "office": "US_HOUSE",
+      "state": "PA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/pennsylvania/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "PA-7",
+      "office": "US_HOUSE",
+      "state": "PA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/pennsylvania/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "PA-8",
+      "office": "US_HOUSE",
+      "state": "PA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/pennsylvania/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "PA-9",
+      "office": "US_HOUSE",
+      "state": "PA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/pennsylvania/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "RI-1",
+      "office": "US_HOUSE",
+      "state": "RI",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/rhode-island/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "RI-2",
+      "office": "US_HOUSE",
+      "state": "RI",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/rhode-island/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "SC-1",
+      "office": "US_HOUSE",
+      "state": "SC",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/south-carolina/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "SC-2",
+      "office": "US_HOUSE",
+      "state": "SC",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/south-carolina/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "SC-3",
+      "office": "US_HOUSE",
+      "state": "SC",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/south-carolina/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "SC-4",
+      "office": "US_HOUSE",
+      "state": "SC",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/south-carolina/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "SC-5",
+      "office": "US_HOUSE",
+      "state": "SC",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/south-carolina/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "SC-6",
+      "office": "US_HOUSE",
+      "state": "SC",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/south-carolina/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "SC-7",
+      "office": "US_HOUSE",
+      "state": "SC",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/south-carolina/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "SD-AL",
+      "office": "US_HOUSE",
+      "state": "SD",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/south-dakota/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TN-1",
+      "office": "US_HOUSE",
+      "state": "TN",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/tennessee/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TN-2",
+      "office": "US_HOUSE",
+      "state": "TN",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/tennessee/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TN-3",
+      "office": "US_HOUSE",
+      "state": "TN",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/tennessee/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TN-4",
+      "office": "US_HOUSE",
+      "state": "TN",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/tennessee/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TN-5",
+      "office": "US_HOUSE",
+      "state": "TN",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/tennessee/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TN-6",
+      "office": "US_HOUSE",
+      "state": "TN",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/tennessee/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TN-7",
+      "office": "US_HOUSE",
+      "state": "TN",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/tennessee/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TN-8",
+      "office": "US_HOUSE",
+      "state": "TN",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/tennessee/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TN-9",
+      "office": "US_HOUSE",
+      "state": "TN",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/tennessee/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-1",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-10",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-11",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-12",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-13",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-14",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-15",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-16",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-17",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-18",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-19",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-2",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-20",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-21",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-22",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-23",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-24",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-25",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-26",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-27",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-28",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-29",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-3",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-30",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-31",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-32",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-33",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-34",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-35",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-36",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-37",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-38",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-4",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-5",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-6",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-7",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-8",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX-9",
+      "office": "US_HOUSE",
+      "state": "TX",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "UT-1",
+      "office": "US_HOUSE",
+      "state": "UT",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/utah/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "UT-2",
+      "office": "US_HOUSE",
+      "state": "UT",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/utah/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "UT-3",
+      "office": "US_HOUSE",
+      "state": "UT",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/utah/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "UT-4",
+      "office": "US_HOUSE",
+      "state": "UT",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/utah/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "VA-1",
+      "office": "US_HOUSE",
+      "state": "VA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/virginia/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "VA-10",
+      "office": "US_HOUSE",
+      "state": "VA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/virginia/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "VA-11",
+      "office": "US_HOUSE",
+      "state": "VA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/virginia/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "VA-2",
+      "office": "US_HOUSE",
+      "state": "VA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/virginia/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "VA-3",
+      "office": "US_HOUSE",
+      "state": "VA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/virginia/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "VA-4",
+      "office": "US_HOUSE",
+      "state": "VA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/virginia/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "VA-5",
+      "office": "US_HOUSE",
+      "state": "VA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/virginia/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "VA-6",
+      "office": "US_HOUSE",
+      "state": "VA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/virginia/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "VA-7",
+      "office": "US_HOUSE",
+      "state": "VA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/virginia/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "VA-8",
+      "office": "US_HOUSE",
+      "state": "VA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/virginia/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "VA-9",
+      "office": "US_HOUSE",
+      "state": "VA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/virginia/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "VT-AL",
+      "office": "US_HOUSE",
+      "state": "VT",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/vermont/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "WA-1",
+      "office": "US_HOUSE",
+      "state": "WA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/washington/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "WA-10",
+      "office": "US_HOUSE",
+      "state": "WA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/washington/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "WA-2",
+      "office": "US_HOUSE",
+      "state": "WA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/washington/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "WA-3",
+      "office": "US_HOUSE",
+      "state": "WA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/washington/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "WA-4",
+      "office": "US_HOUSE",
+      "state": "WA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/washington/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "WA-5",
+      "office": "US_HOUSE",
+      "state": "WA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/washington/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "WA-6",
+      "office": "US_HOUSE",
+      "state": "WA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/washington/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "WA-7",
+      "office": "US_HOUSE",
+      "state": "WA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/washington/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "WA-8",
+      "office": "US_HOUSE",
+      "state": "WA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/washington/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "WA-9",
+      "office": "US_HOUSE",
+      "state": "WA",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/washington/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "WI-1",
+      "office": "US_HOUSE",
+      "state": "WI",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/wisconsin/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "WI-2",
+      "office": "US_HOUSE",
+      "state": "WI",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/wisconsin/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "WI-3",
+      "office": "US_HOUSE",
+      "state": "WI",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/wisconsin/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "WI-4",
+      "office": "US_HOUSE",
+      "state": "WI",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/wisconsin/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "WI-5",
+      "office": "US_HOUSE",
+      "state": "WI",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/wisconsin/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "WI-6",
+      "office": "US_HOUSE",
+      "state": "WI",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/wisconsin/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "WI-7",
+      "office": "US_HOUSE",
+      "state": "WI",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/wisconsin/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "WI-8",
+      "office": "US_HOUSE",
+      "state": "WI",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/wisconsin/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "WV-1",
+      "office": "US_HOUSE",
+      "state": "WV",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/west-virginia/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "WV-2",
+      "office": "US_HOUSE",
+      "state": "WV",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/west-virginia/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "WY-AL",
+      "office": "US_HOUSE",
+      "state": "WY",
+      "chamber": "House",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/wyoming/house",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "AK",
+      "office": "US_SENATE",
+      "state": "AK",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/alaska",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "AL",
+      "office": "US_SENATE",
+      "state": "AL",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/alabama",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "AR",
+      "office": "US_SENATE",
+      "state": "AR",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/arkansas",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "CO",
+      "office": "US_SENATE",
+      "state": "CO",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/colorado",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "DE",
+      "office": "US_SENATE",
+      "state": "DE",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/delaware",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "FL-special",
+      "office": "US_SENATE",
+      "state": "FL",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/florida",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "GA",
+      "office": "US_SENATE",
+      "state": "GA",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/georgia",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IA",
+      "office": "US_SENATE",
+      "state": "IA",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/iowa",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "ID",
+      "office": "US_SENATE",
+      "state": "ID",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/idaho",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "IL",
+      "office": "US_SENATE",
+      "state": "IL",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/illinois",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "KS",
+      "office": "US_SENATE",
+      "state": "KS",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/kansas",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "KY",
+      "office": "US_SENATE",
+      "state": "KY",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/kentucky",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "LA",
+      "office": "US_SENATE",
+      "state": "LA",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/louisiana",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MA",
+      "office": "US_SENATE",
+      "state": "MA",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/massachusetts",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "ME",
+      "office": "US_SENATE",
+      "state": "ME",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/maine",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MI",
+      "office": "US_SENATE",
+      "state": "MI",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/michigan",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MN",
+      "office": "US_SENATE",
+      "state": "MN",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/minnesota",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MS",
+      "office": "US_SENATE",
+      "state": "MS",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/mississippi",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "MT",
+      "office": "US_SENATE",
+      "state": "MT",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/montana",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NC",
+      "office": "US_SENATE",
+      "state": "NC",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/north-carolina",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NE",
+      "office": "US_SENATE",
+      "state": "NE",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/nebraska",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NH",
+      "office": "US_SENATE",
+      "state": "NH",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-hampshire",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NJ",
+      "office": "US_SENATE",
+      "state": "NJ",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-jersey",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "NM",
+      "office": "US_SENATE",
+      "state": "NM",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/new-mexico",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OH-special",
+      "office": "US_SENATE",
+      "state": "OH",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/ohio",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OK",
+      "office": "US_SENATE",
+      "state": "OK",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/oklahoma",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "OR",
+      "office": "US_SENATE",
+      "state": "OR",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/oregon",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "RI",
+      "office": "US_SENATE",
+      "state": "RI",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/rhode-island",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "SC",
+      "office": "US_SENATE",
+      "state": "SC",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/south-carolina",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "SD",
+      "office": "US_SENATE",
+      "state": "SD",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/south-dakota",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TN",
+      "office": "US_SENATE",
+      "state": "TN",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/tennessee",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "TX",
+      "office": "US_SENATE",
+      "state": "TX",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/texas",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "VA",
+      "office": "US_SENATE",
+      "state": "VA",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/virginia",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "WV",
+      "office": "US_SENATE",
+      "state": "WV",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/west-virginia",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    },
+    {
+      "contestId": "WY",
+      "office": "US_SENATE",
+      "state": "WY",
+      "chamber": "Senate",
+      "poliwaveUrl": "https://www.poliwave.com/us/live/midterms-2026/wyoming",
+      "resultStatus": "NOT_IMPORTED",
+      "officialCertification": "NOT_VERIFIED"
+    }
+  ]
+}

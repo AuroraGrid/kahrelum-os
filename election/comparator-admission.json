@@ -1,0 +1,1711 @@
+{
+  "schemaVersion": "1.0.0",
+  "cohortId": "KAH-ELECTION-PUBLIC-CAPTURE-20261031T0412Z",
+  "label": "October 31 prospective public-observation cohort",
+  "generatedAtUtc": "2026-10-31T04:41:16Z",
+  "status": "PROSPECTIVE_COHORT_LOCKED",
+  "comparisonBasis": "PUBLIC_INFORMATION_AVAILABLE_IN_ONE_CAPTURE_WINDOW",
+  "captureWindow": {
+    "startAtUtc": "2026-10-31T04:12:00Z",
+    "endAtUtc": "2026-10-31T05:12:00Z",
+    "maximumDurationSeconds": 3600
+  },
+  "electionCutoffUtc": "2026-11-03T05:00:00Z",
+  "commonUnderlyingInputCutoff": false,
+  "historicalStrictCohort": {
+    "status": "UNCHANGED",
+    "admittedChamberRecords": 0,
+    "originalHouseControlProbability": 0.91,
+    "originalSenateControlProbability": 0.46090647437793264,
+    "note": "This new observation cohort neither backdates the original locks nor retroactively admits old unmatched snapshots."
+  },
+  "kahrelumReference": {
+    "sourceId": "kahrelum",
+    "editionId": "KAH-US-2026-20261031T030533Z",
+    "houseControlProbability": 0.9057450487619074,
+    "senateControlProbability": 0.46090647437793264,
+    "historicalLock": false,
+    "senateComparisonStatus": "HOLD_INDEPENDENT_CAUCUS_MAPPING",
+    "senateIndependentRiskContestIds": [
+      "ID",
+      "MT",
+      "NE",
+      "SD"
+    ],
+    "note": "Fresh public observation of an existing computed edition; it does not replace the original 91 percent House lock. Source editions and subjective model assumptions remain unchanged."
+  },
+  "eventTargets": {
+    "house": {
+      "id": "US_HOUSE_2026_DEMOCRATIC_CONTROL_218",
+      "question": "Will Democrats win at least 218 of the 435 House seats in the 2026 election?",
+      "threshold": 218,
+      "chamberSeats": 435,
+      "resolution": "Certified seat outcomes under the existing challenge rules. Do not substitute popular-vote share, a seat mean, or a median for the probability."
+    },
+    "senate": {
+      "id": "US_SENATE_2026_DEMOCRATIC_CAUCUS_CONTROL_51",
+      "question": "Will the Democratic caucus reach at least 51 of 100 Senate seats?",
+      "threshold": 51,
+      "chamberSeats": 100,
+      "fiftySeatsResolves": false,
+      "resolution": "Certified caucus-aligned seat outcomes under the original challenge rules. Candidate-level independent alignment must match before admission."
+    }
+  },
+  "counts": {
+    "providers": 14,
+    "sourceCaptures": 34,
+    "chamberSlots": 28,
+    "numericalObservations": 26,
+    "admissionReady": 13,
+    "admitted": 13,
+    "excluded": 15,
+    "pendingPublicLock": 0,
+    "byChamber": {
+      "house": {
+        "providerSlots": 14,
+        "numericalObservations": 14,
+        "admissionReady": 13,
+        "admitted": 13,
+        "excluded": 1,
+        "pendingPublicLock": 0
+      },
+      "senate": {
+        "providerSlots": 14,
+        "numericalObservations": 12,
+        "admissionReady": 0,
+        "admitted": 0,
+        "excluded": 14,
+        "pendingPublicLock": 0
+      }
+    }
+  },
+  "publicLock": {
+    "status": "VERIFIED_PUBLIC_COMMIT",
+    "commit": "edc2de9a575172d7b8dd0c75c35dcea10f88d71c",
+    "committedAtUtc": "2026-10-31T04:40:59Z",
+    "verifiedAtUtc": "2026-10-31T04:41:16Z",
+    "url": "https://github.com/AuroraGrid/kahrelum-os/commit/edc2de9a575172d7b8dd0c75c35dcea10f88d71c",
+    "immutableManifestUrl": "https://github.com/AuroraGrid/kahrelum-os/blob/edc2de9a575172d7b8dd0c75c35dcea10f88d71c/research/election-challenge-2026/cohort-manifest.json",
+    "verificationMethod": "GITHUB_COMMIT_AND_IMMUTABLE_FILES",
+    "manifestSha256": "e35981897b017c0ef87b456426dbd3b6b5e340b014e44eab220ea7344235f82c",
+    "custodySetSha256": "573257bc0d37e8900a29d1d785d5712c9692b2ff0cffeda52d26f820bcb9003d",
+    "verifiedFileCount": 35,
+    "verificationDetails": "Fetched public GitHub commit metadata and immutable manifest text; all 35 committed Git blob object hashes match hashes computed over the exact local UTF-8 file bytes. Manifest text matched byte-for-byte. No Bitcoin/OpenTimestamps anchoring is claimed."
+  },
+  "custody": {
+    "manifestPath": "research/election-challenge-2026/cohort-manifest.json",
+    "manifestSha256": "e35981897b017c0ef87b456426dbd3b6b5e340b014e44eab220ea7344235f82c",
+    "custodySetSha256": "573257bc0d37e8900a29d1d785d5712c9692b2ff0cffeda52d26f820bcb9003d",
+    "files": [
+      {
+        "path": "research/election-challenge-2026/cohort-manifest.json",
+        "sha256": "e35981897b017c0ef87b456426dbd3b6b5e340b014e44eab220ea7344235f82c"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/99chambers.json",
+        "sha256": "7c19a9e08ae6970fc92e1f4cdb38baff0330f38b2960d23676bf02b254e9fe44"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/99chambers_house.json",
+        "sha256": "6dfb8520b7aa66b14e8d1c70acd20e025e0a27127a84d4e7c68c25ee87f4b475"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/99chambers_methods.json",
+        "sha256": "a4f3ee6adcb0ce8a472f5253f90c7f04f5abcdd86ef8e010cd8c421b76017265"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/99chambers_senate.json",
+        "sha256": "868bb1eef06b90b6e5906fb6606c3a576002cf96ec07bf35824a76f84d3dd63a"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/callthemap.json",
+        "sha256": "bf4d6cc29c985f1d97867c9915193c3c9bf1b80bca7015d9cdedb6a1714c513a"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/callthemap_senate.json",
+        "sha256": "1bb8f30cfca635f63bc9dd64e4e980741f23321334f9a6734e825f45cbf26769"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/coyntoss.json",
+        "sha256": "17bcdfeb667f801ffc9bf01733979370efc384ba6b2a92fda23434ef911ed31f"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/coyntoss_methods.json",
+        "sha256": "e515b6d389e1a0aa63320779cbb58598d9e599a9e711529d5bb2fc071aab166e"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/coyntoss_senate.json",
+        "sha256": "0fd2df1db5ad70df9b281716dc0cc3947a9cf63197ae090fc7356a3633790bcf"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/datum.json",
+        "sha256": "afd7eea7b84b64237c269c2b940dfeff6833ea5f4076959ff2a2ad3ee3c08ede"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/datum_methods.json",
+        "sha256": "db17790a78724fea9a2dbee9212501ec5d34ef7cf1ecc19af5a82125487a44c4"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/dave.json",
+        "sha256": "a4c8d510945fc19244d11b1a4b3d24aea29bd06fe230626399745411c23a71f5"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/ddhq.json",
+        "sha256": "2e1ff9e6ffdf8e8c6d701b87629794cf38f6be23a4090c8c033489f716353363"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/ddhq_congress_methods.json",
+        "sha256": "032ca34da131c67e67701e15d6cd669a9fb2060c62aeb86efa94e2b20fa92b73"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/ddhq_house.json",
+        "sha256": "867db6f3738428c4006e492839e12cf9dc56d3d85ee73c7acfa3fb99ecbf59e5"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/ddhq_methods.json",
+        "sha256": "f40c88878cd92a1efd77ed7aa42e96b9145a639d4b64b5fefdd5caf80bf4c100"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/electindex.json",
+        "sha256": "f5698e0a0995c80767134b1e4f458982cd520f71f24115e912c4b087817cbf00"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/electindex_core.json",
+        "sha256": "e56d4323806e1a1763fee4cbed1275836daa8f75b90c8b5d62cbfdb52eb10b81"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/electindex_csv.json",
+        "sha256": "024f9b4e4fb677037050868fad3740efd5f59c840f84f1853da1cb734cfb90cb"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/electindex_info.json",
+        "sha256": "6456b10f0576c62945e3e0d2d17a551015aa65b489a317eca31e31030ed5e422"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/fred.json",
+        "sha256": "9bf354eb7e79ec25f8f354e3db3ac2608477efc17d79be8b28f64289a620602e"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/fred_methods.json",
+        "sha256": "f6d272d99bf1020d5f22d2824b1ecfb7916469004b14ff8a25b2148b1ecd7745"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/fred_senate.json",
+        "sha256": "e0d7c0bd0df10b30b718257b754ba0ab23b30733ef173c02b1fa7cf257782200"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/kahrelum.json",
+        "sha256": "ef14d885152de7f2872e01aa407e02fd923a9975383a3e263f41f9319ee48217"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/midterm.json",
+        "sha256": "25b3dcae56dd986ff9e70b41501f5e78a3d134062ec2fadd07606fe2134821c1"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/midterm_methods.json",
+        "sha256": "1a7446b5e77a0d69f207001be009fa31f76459a24d5a40f2d401d45cfa115e0a"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/onpoint.json",
+        "sha256": "02ea79c5e33f706ed8aa1440abf6cbde757b4492f5597ecf1f4ef1b27203381d"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/onpoint_methods.json",
+        "sha256": "5807858ba439ef6c9b1658d5b145e157d31a0a9fe3f091ab10da623562a9d581"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/scrutinel.json",
+        "sha256": "a98baf3de7c25f0501f46a7724cb8738a7f437d51d5881f75f7d4f1b6d556cb9"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/votepredictor.json",
+        "sha256": "9953636a954b9c04303a187e4e5382f1bcd44bbb889d7208078673fb130f03f9"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/votescope.json",
+        "sha256": "ec14b936421d9e7a8b91f06c13d3746adf51048cddf7a22fae48caeb9d94b63c"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/yale.json",
+        "sha256": "3bb725f2666057335d83076072a2b8ab2df63ecc60cf242857a66d1c948a44a1"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/yale_class.json",
+        "sha256": "ccd5831eb10ba701be35eaf82b56c7ec320cf6ffc33361ac580fd8988b499253"
+      },
+      {
+        "path": "research/election-challenge-2026/sources/yale_methods.json",
+        "sha256": "566ba580988a56cc465e1abdaa504acfbdd41fb5c9797a1f861d6984eafb3e59"
+      }
+    ],
+    "grade": "IMMUTABLE_FACTUAL_RECEIPTS_WITH_TOOL_REPRESENTATION_DIGESTS",
+    "exactHttpWireArchive": false
+  },
+  "admissionRules": [
+    "The public source must provide a numerical chamber-control probability, not a vote share or a seat summary.",
+    "Capture must occur within this declared window and before the election cutoff. Preserve the source edition and all known input ages.",
+    "The binary event must match the chamber threshold and caucus treatment. Unknown or different independent policies remain excluded.",
+    "Conflicting current marginal probabilities fail closed. Rounded categories are not summed or renormalized into a replacement marginal.",
+    "The factual source receipts and manifest must be anchored in a verified public commit before records become prospectively admitted.",
+    "A common retrieval window is not a common underlying information cutoff. This cohort supports qualified prospective scoring, not a matched-input superiority claim.",
+    "Mean, median, favored-seat count and other seat statistics remain distinct; no seat-error comparison is admitted by this probability-only process.",
+    "Outcomes remain unresolved until the documented certification rules are satisfied; admission alone produces no Brier score or winner."
+  ],
+  "limitations": [
+    "The public receipts preserve facts, short exact evidence, capture intervals and hashes of tool-returned representations. They do not claim exact HTTP-wire custody or independent source-time attestation.",
+    "Capture times are bounded by the session clock tool. Publisher timestamps can have lower precision and are not replaced by retrieval times.",
+    "The current roster contains 14 numerical external providers. Historical qualitative or unresolved names are not silently reintroduced into the scoring denominator."
+  ],
+  "providers": [
+    {
+      "id": "ddhq",
+      "provider": "Decision Desk HQ",
+      "edition": "October 30, 2026",
+      "primarySourceUrl": "https://votes.decisiondeskhq.com/forecast/2026",
+      "notes": [
+        "The explicit marginal is used. Whole-percent joint-category figures need not reproduce the rounded marginal when added. No joint-category-derived marginal is substituted."
+      ],
+      "house": {
+        "probabilityPercent": 82,
+        "quantityType": "chamber_control_probability",
+        "reportedTarget": "The House page explicitly gives 218 seats for control. The main forecast states an 82 percent Democratic House probability.",
+        "comparisonTargetId": "US_HOUSE_2026_DEMOCRATIC_CONTROL_218",
+        "eventMatch": "MATCH",
+        "threshold": 218,
+        "reviewDecision": "READY",
+        "reasonCode": "MATCHED_PRIMARY_CONTROL_PROBABILITY",
+        "reason": "The House page explicitly gives 218 seats for control. The main forecast states an 82 percent Democratic House probability.",
+        "sourceIds": [
+          "ddhq",
+          "ddhq_house",
+          "ddhq_congress_methods"
+        ],
+        "sourcePublicationLabel": "JSON-LD dateModified October 30, 2026, 14:39:52.343 UTC; displayed 10:39 AM",
+        "sourcePublishedAtUtc": "2026-10-30T14:39:52.343Z",
+        "sourceInputDate": null,
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [
+          {
+            "value": 239,
+            "statistic": "publisher_projected_unspecified",
+            "constituency": "Democratic",
+            "note": null
+          }
+        ],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [],
+        "probability": 0.82,
+        "admissionReady": true,
+        "admitted": true,
+        "status": "ADMITTED_PROSPECTIVE",
+        "sourceUrls": [
+          "https://votes.decisiondeskhq.com/forecast/2026",
+          "https://votes.decisiondeskhq.com/forecast/2026/house",
+          "https://votes-docs.decisiondeskhq.com/forecast-methodology/2026-congressional-forecast-methodology"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/ddhq.json",
+          "research/election-challenge-2026/sources/ddhq_house.json",
+          "research/election-challenge-2026/sources/ddhq_congress_methods.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:12:28Z",
+        "observedNotAfterUtc": "2026-10-31T04:19:11Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      },
+      "senate": {
+        "probabilityPercent": 62,
+        "quantityType": "chamber_control_probability",
+        "reportedTarget": "A 62 percent Democratic Senate probability is public, but the captured methods do not resolve every independent candidate into the same caucus event as KAHRELUM.",
+        "comparisonTargetId": "US_SENATE_2026_DEMOCRATIC_CAUCUS_CONTROL_51",
+        "eventMatch": "UNRESOLVED",
+        "threshold": 51,
+        "reviewDecision": "EXCLUDE",
+        "reasonCode": "CAUCUS_POLICY_UNVERIFIED",
+        "reason": "A 62 percent Democratic Senate probability is public, but the captured methods do not resolve every independent candidate into the same caucus event as KAHRELUM.",
+        "sourceIds": [
+          "ddhq",
+          "ddhq_house",
+          "ddhq_congress_methods"
+        ],
+        "sourcePublicationLabel": "JSON-LD dateModified October 30, 2026, 14:39:52.343 UTC; displayed 10:39 AM",
+        "sourcePublishedAtUtc": "2026-10-30T14:39:52.343Z",
+        "sourceInputDate": null,
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [
+          {
+            "value": 52,
+            "statistic": "publisher_projected_unspecified",
+            "constituency": "Democratic",
+            "note": null
+          }
+        ],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [],
+        "probability": 0.62,
+        "admissionReady": false,
+        "admitted": false,
+        "status": "EXCLUDED",
+        "sourceUrls": [
+          "https://votes.decisiondeskhq.com/forecast/2026",
+          "https://votes.decisiondeskhq.com/forecast/2026/house",
+          "https://votes-docs.decisiondeskhq.com/forecast-methodology/2026-congressional-forecast-methodology"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/ddhq.json",
+          "research/election-challenge-2026/sources/ddhq_house.json",
+          "research/election-challenge-2026/sources/ddhq_congress_methods.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:12:28Z",
+        "observedNotAfterUtc": "2026-10-31T04:19:11Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      }
+    },
+    {
+      "id": "99chambers",
+      "provider": "99chambers",
+      "edition": "Horizon, October 30, 2026",
+      "primarySourceUrl": "https://99chambers.app/updates/2026-10-30",
+      "notes": [
+        "Horizon is the selected version. Pulse is a different model and is not substituted or counted as another provider."
+      ],
+      "house": {
+        "probabilityPercent": 98,
+        "quantityType": "chamber_control_probability",
+        "reportedTarget": "The Horizon edition gives a 98 percent House majority probability, and the House page defines the majority as 218 of 435.",
+        "comparisonTargetId": "US_HOUSE_2026_DEMOCRATIC_CONTROL_218",
+        "eventMatch": "MATCH",
+        "threshold": 218,
+        "reviewDecision": "READY",
+        "reasonCode": "MATCHED_PRIMARY_CONTROL_PROBABILITY",
+        "reason": "The Horizon edition gives a 98 percent House majority probability, and the House page defines the majority as 218 of 435.",
+        "sourceIds": [
+          "99chambers",
+          "99chambers_house",
+          "99chambers_senate",
+          "99chambers_methods"
+        ],
+        "sourcePublicationLabel": "October 30, 2026, 11:27 PM ET",
+        "sourcePublishedAtUtc": "2026-10-31T03:27:00Z",
+        "sourceInputDate": null,
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [
+          {
+            "value": 241.3,
+            "statistic": "mean",
+            "constituency": "Democratic",
+            "note": null
+          }
+        ],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [],
+        "probability": 0.98,
+        "admissionReady": true,
+        "admitted": true,
+        "status": "ADMITTED_PROSPECTIVE",
+        "sourceUrls": [
+          "https://99chambers.app/updates/2026-10-30",
+          "https://99chambers.app/house",
+          "https://99chambers.app/senate",
+          "https://99chambers.app/methodology"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/99chambers.json",
+          "research/election-challenge-2026/sources/99chambers_house.json",
+          "research/election-challenge-2026/sources/99chambers_senate.json",
+          "research/election-challenge-2026/sources/99chambers_methods.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:12:28Z",
+        "observedNotAfterUtc": "2026-10-31T04:16:25Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      },
+      "senate": {
+        "probabilityPercent": 80,
+        "quantityType": "chamber_control_probability",
+        "reportedTarget": "The Senate page establishes 51 and a Republican 50-seat tiebreak. Its treatment of de facto party nominees does not establish a complete, identical independent-caucus mapping.",
+        "comparisonTargetId": "US_SENATE_2026_DEMOCRATIC_CAUCUS_CONTROL_51",
+        "eventMatch": "UNRESOLVED",
+        "threshold": 51,
+        "reviewDecision": "EXCLUDE",
+        "reasonCode": "INDEPENDENT_ALIGNMENT_UNVERIFIED",
+        "reason": "The Senate page establishes 51 and a Republican 50-seat tiebreak. Its treatment of de facto party nominees does not establish a complete, identical independent-caucus mapping.",
+        "sourceIds": [
+          "99chambers",
+          "99chambers_house",
+          "99chambers_senate",
+          "99chambers_methods"
+        ],
+        "sourcePublicationLabel": "October 30, 2026, 11:27 PM ET",
+        "sourcePublishedAtUtc": "2026-10-31T03:27:00Z",
+        "sourceInputDate": null,
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [
+          {
+            "value": 52.5,
+            "statistic": "mean",
+            "constituency": "publisher_D_side",
+            "note": null
+          }
+        ],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [],
+        "probability": 0.8,
+        "admissionReady": false,
+        "admitted": false,
+        "status": "EXCLUDED",
+        "sourceUrls": [
+          "https://99chambers.app/updates/2026-10-30",
+          "https://99chambers.app/house",
+          "https://99chambers.app/senate",
+          "https://99chambers.app/methodology"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/99chambers.json",
+          "research/election-challenge-2026/sources/99chambers_house.json",
+          "research/election-challenge-2026/sources/99chambers_senate.json",
+          "research/election-challenge-2026/sources/99chambers_methods.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:12:28Z",
+        "observedNotAfterUtc": "2026-10-31T04:16:25Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      }
+    },
+    {
+      "id": "callthemap",
+      "provider": "CalltheMap",
+      "edition": "October 30, 2026",
+      "primarySourceUrl": "https://www.callthemap.com/house",
+      "notes": [],
+      "house": {
+        "probabilityPercent": 85,
+        "quantityType": "chamber_control_probability",
+        "reportedTarget": "The House distribution identifies 218 as the control threshold and reports Democrats winning 85 of 100 simulations.",
+        "comparisonTargetId": "US_HOUSE_2026_DEMOCRATIC_CONTROL_218",
+        "eventMatch": "MATCH",
+        "threshold": 218,
+        "reviewDecision": "READY",
+        "reasonCode": "MATCHED_PRIMARY_CONTROL_PROBABILITY",
+        "reason": "The House distribution identifies 218 as the control threshold and reports Democrats winning 85 of 100 simulations.",
+        "sourceIds": [
+          "callthemap",
+          "callthemap_senate"
+        ],
+        "sourcePublicationLabel": "October 30, 2026 (date only)",
+        "sourcePublishedAtUtc": null,
+        "sourceInputDate": null,
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [
+          {
+            "value": 235.8,
+            "statistic": "mean",
+            "constituency": "Democratic",
+            "note": null
+          },
+          {
+            "value": 235,
+            "statistic": "median",
+            "constituency": "Democratic",
+            "note": null
+          }
+        ],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [],
+        "probability": 0.85,
+        "admissionReady": true,
+        "admitted": true,
+        "status": "ADMITTED_PROSPECTIVE",
+        "sourceUrls": [
+          "https://www.callthemap.com/house",
+          "https://www.callthemap.com/senate"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/callthemap.json",
+          "research/election-challenge-2026/sources/callthemap_senate.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:15:25Z",
+        "observedNotAfterUtc": "2026-10-31T04:16:25Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      },
+      "senate": {
+        "probabilityPercent": 60,
+        "quantityType": "chamber_control_probability",
+        "reportedTarget": "The source includes 2.5 expected independent seats in its Democratic-aligned total, including 0.5 from current races. Future caucus alignment remains an assumption and is not matched to KAHRELUM candidate by candidate.",
+        "comparisonTargetId": "US_SENATE_2026_DEMOCRATIC_CAUCUS_CONTROL_51",
+        "eventMatch": "UNRESOLVED",
+        "threshold": 51,
+        "reviewDecision": "EXCLUDE",
+        "reasonCode": "PRESUMED_NEW_INDEPENDENT_ALIGNMENT",
+        "reason": "The source includes 2.5 expected independent seats in its Democratic-aligned total, including 0.5 from current races. Future caucus alignment remains an assumption and is not matched to KAHRELUM candidate by candidate.",
+        "sourceIds": [
+          "callthemap",
+          "callthemap_senate"
+        ],
+        "sourcePublicationLabel": "October 30, 2026 (date only)",
+        "sourcePublishedAtUtc": null,
+        "sourceInputDate": null,
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [
+          {
+            "value": 51.4,
+            "statistic": "mean",
+            "constituency": "Democratic_aligned",
+            "note": null
+          },
+          {
+            "value": 51,
+            "statistic": "median",
+            "constituency": "Democratic_aligned",
+            "note": null
+          }
+        ],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [],
+        "probability": 0.6,
+        "admissionReady": false,
+        "admitted": false,
+        "status": "EXCLUDED",
+        "sourceUrls": [
+          "https://www.callthemap.com/house",
+          "https://www.callthemap.com/senate"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/callthemap.json",
+          "research/election-challenge-2026/sources/callthemap_senate.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:15:25Z",
+        "observedNotAfterUtc": "2026-10-31T04:16:25Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      }
+    },
+    {
+      "id": "coyntoss",
+      "provider": "COYNTOSS",
+      "edition": "House v0.25; Senate v0.53.1, October 30 release 3",
+      "primarySourceUrl": "https://chasecoyne.com/house",
+      "notes": [
+        "The House edition is older than the capture date: model inputs through October 18 and polling through October 14. Its age is retained rather than relabeled as new information.",
+        "The Senate top line rounds the current exact 70.85 percent to 70.9 percent. Older releases 70.56 and 70.61 remain separate."
+      ],
+      "house": {
+        "probabilityPercent": 80.5,
+        "quantityType": "chamber_control_probability",
+        "reportedTarget": "The House headline is 80.5 percent with 218 seats for a majority. It is explicitly an experimental forecast.",
+        "comparisonTargetId": "US_HOUSE_2026_DEMOCRATIC_CONTROL_218",
+        "eventMatch": "MATCH",
+        "threshold": 218,
+        "reviewDecision": "READY",
+        "reasonCode": "MATCHED_PRIMARY_CONTROL_PROBABILITY",
+        "reason": "The House headline is 80.5 percent with 218 seats for a majority. It is explicitly an experimental forecast.",
+        "sourceIds": [
+          "coyntoss",
+          "coyntoss_senate",
+          "coyntoss_methods"
+        ],
+        "sourcePublicationLabel": "House inputs October 18; Senate October 30, release 3",
+        "sourcePublishedAtUtc": null,
+        "sourceInputDate": "2026-10-18",
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [
+          {
+            "value": 236.2,
+            "statistic": "mean",
+            "constituency": "Democratic",
+            "note": null
+          },
+          {
+            "value": 235,
+            "statistic": "median",
+            "constituency": "Democratic",
+            "note": null
+          }
+        ],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [],
+        "probability": 0.805,
+        "admissionReady": true,
+        "admitted": true,
+        "status": "ADMITTED_PROSPECTIVE",
+        "sourceUrls": [
+          "https://chasecoyne.com/house",
+          "https://chasecoyne.com/senate.html",
+          "https://chasecoyne.com/methodology.html"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/coyntoss.json",
+          "research/election-challenge-2026/sources/coyntoss_senate.json",
+          "research/election-challenge-2026/sources/coyntoss_methods.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:15:25Z",
+        "observedNotAfterUtc": "2026-10-31T04:17:46Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      },
+      "senate": {
+        "probabilityPercent": 70.85,
+        "quantityType": "chamber_control_probability",
+        "reportedTarget": "The Senate event includes Democrats and allied independents. The current release reports 70.85 percent; complete candidate-level alignment equivalence is unproven.",
+        "comparisonTargetId": "US_SENATE_2026_DEMOCRATIC_CAUCUS_CONTROL_51",
+        "eventMatch": "UNRESOLVED",
+        "threshold": 51,
+        "reviewDecision": "EXCLUDE",
+        "reasonCode": "PRESUMED_NEW_INDEPENDENT_ALIGNMENT",
+        "reason": "The Senate event includes Democrats and allied independents. The current release reports 70.85 percent; complete candidate-level alignment equivalence is unproven.",
+        "sourceIds": [
+          "coyntoss",
+          "coyntoss_senate",
+          "coyntoss_methods"
+        ],
+        "sourcePublicationLabel": "House inputs October 18; Senate October 30, release 3",
+        "sourcePublishedAtUtc": null,
+        "sourceInputDate": "2026-10-30",
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [
+          {
+            "value": 51.664,
+            "statistic": "mean",
+            "constituency": "Democratic_caucus_assumed",
+            "note": null
+          },
+          {
+            "value": 52,
+            "statistic": "median",
+            "constituency": "Democratic_caucus_assumed",
+            "note": null
+          }
+        ],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [],
+        "probability": 0.7084999999999999,
+        "admissionReady": false,
+        "admitted": false,
+        "status": "EXCLUDED",
+        "sourceUrls": [
+          "https://chasecoyne.com/house",
+          "https://chasecoyne.com/senate.html",
+          "https://chasecoyne.com/methodology.html"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/coyntoss.json",
+          "research/election-challenge-2026/sources/coyntoss_senate.json",
+          "research/election-challenge-2026/sources/coyntoss_methods.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:15:25Z",
+        "observedNotAfterUtc": "2026-10-31T04:17:46Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      }
+    },
+    {
+      "id": "scrutinel",
+      "provider": "Scrutinel",
+      "edition": "October 30, 2026, 11:24 PM EDT",
+      "primarySourceUrl": "https://scrutinel.com/",
+      "notes": [
+        "The two House probabilities are retained as a conflict; the source is not dropped from the denominator or silently repaired."
+      ],
+      "house": {
+        "probabilityPercent": 93,
+        "quantityType": "chamber_control_probability",
+        "reportedTarget": "The source says 218 for House control, but two widgets in the same captured page disagree on the probability.",
+        "comparisonTargetId": "US_HOUSE_2026_DEMOCRATIC_CONTROL_218",
+        "eventMatch": "UNRESOLVED",
+        "threshold": 218,
+        "reviewDecision": "EXCLUDE",
+        "reasonCode": "CONFLICTING_PRIMARY_PROBABILITIES",
+        "reason": "The headline and narrative show 93 percent; the House distribution shows 92 percent. Neither is selected for scoring until a consistent source edition is captured.",
+        "sourceIds": [
+          "scrutinel"
+        ],
+        "sourcePublicationLabel": "October 30, 2026, 11:24 PM EDT",
+        "sourcePublishedAtUtc": "2026-10-31T03:24:00Z",
+        "sourceInputDate": null,
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [
+          {
+            "value": 238,
+            "statistic": "median",
+            "constituency": "Democratic",
+            "note": null
+          },
+          {
+            "value": 239,
+            "statistic": "publisher_central_estimate_unspecified",
+            "constituency": "Democratic",
+            "note": "Conflicts with the headline expected-seat figure of 238."
+          }
+        ],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [
+          93,
+          92
+        ],
+        "probability": 0.93,
+        "admissionReady": false,
+        "admitted": false,
+        "status": "EXCLUDED",
+        "sourceUrls": [
+          "https://scrutinel.com/"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/scrutinel.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:15:25Z",
+        "observedNotAfterUtc": "2026-10-31T04:15:32Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      },
+      "senate": {
+        "probabilityPercent": 70,
+        "quantityType": "chamber_control_probability",
+        "reportedTarget": "The methods count an Osborn win toward Democrats while leaving other new independents separate. KAHRELUM has independent risks in ID, MT, NE and SD; the mappings are not proven identical.",
+        "comparisonTargetId": "US_SENATE_2026_DEMOCRATIC_CAUCUS_CONTROL_51",
+        "eventMatch": "UNRESOLVED",
+        "threshold": 51,
+        "reviewDecision": "EXCLUDE",
+        "reasonCode": "DE_FACTO_PARTY_RECLASSIFICATION",
+        "reason": "The methods count an Osborn win toward Democrats while leaving other new independents separate. KAHRELUM has independent risks in ID, MT, NE and SD; the mappings are not proven identical.",
+        "sourceIds": [
+          "scrutinel"
+        ],
+        "sourcePublicationLabel": "October 30, 2026, 11:24 PM EDT",
+        "sourcePublishedAtUtc": "2026-10-31T03:24:00Z",
+        "sourceInputDate": null,
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [
+          {
+            "value": 52,
+            "statistic": "median",
+            "constituency": "publisher_D_side",
+            "note": null
+          }
+        ],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [],
+        "probability": 0.7,
+        "admissionReady": false,
+        "admitted": false,
+        "status": "EXCLUDED",
+        "sourceUrls": [
+          "https://scrutinel.com/"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/scrutinel.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:15:25Z",
+        "observedNotAfterUtc": "2026-10-31T04:15:32Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      }
+    },
+    {
+      "id": "votescope",
+      "provider": "Vote-Scope",
+      "edition": "October 30, 2026",
+      "primarySourceUrl": "https://vote-scope.com/en/us/house/",
+      "notes": [
+        "The source distinguishes 241 favored districts from a 246-seat median. Neither is labeled a mean."
+      ],
+      "house": {
+        "probabilityPercent": 97,
+        "quantityType": "chamber_control_probability",
+        "reportedTarget": "The House table gives 97 percent for a Democratic majority and explicitly defines 218 of 435.",
+        "comparisonTargetId": "US_HOUSE_2026_DEMOCRATIC_CONTROL_218",
+        "eventMatch": "MATCH",
+        "threshold": 218,
+        "reviewDecision": "READY",
+        "reasonCode": "MATCHED_PRIMARY_CONTROL_PROBABILITY",
+        "reason": "The House table gives 97 percent for a Democratic majority and explicitly defines 218 of 435.",
+        "sourceIds": [
+          "votescope"
+        ],
+        "sourcePublicationLabel": "October 30, 2026 (date only)",
+        "sourcePublishedAtUtc": null,
+        "sourceInputDate": null,
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [
+          {
+            "value": 241,
+            "statistic": "count_of_favored_districts",
+            "constituency": "Democratic",
+            "note": null
+          },
+          {
+            "value": 246,
+            "statistic": "median",
+            "constituency": "Democratic",
+            "note": null
+          }
+        ],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [],
+        "probability": 0.97,
+        "admissionReady": true,
+        "admitted": true,
+        "status": "ADMITTED_PROSPECTIVE",
+        "sourceUrls": [
+          "https://vote-scope.com/en/us/house/"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/votescope.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:15:25Z",
+        "observedNotAfterUtc": "2026-10-31T04:15:32Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      },
+      "senate": {
+        "probabilityPercent": null,
+        "quantityType": "missing",
+        "reportedTarget": "This capture verifies a House forecast only. A link to a Senate page is not a verified numerical Senate record.",
+        "comparisonTargetId": "US_SENATE_2026_DEMOCRATIC_CAUCUS_CONTROL_51",
+        "eventMatch": "UNRESOLVED",
+        "threshold": 51,
+        "reviewDecision": "EXCLUDE",
+        "reasonCode": "NO_CAPTURED_SENATE_PROBABILITY",
+        "reason": "This capture verifies a House forecast only. A link to a Senate page is not a verified numerical Senate record.",
+        "sourceIds": [
+          "votescope"
+        ],
+        "sourcePublicationLabel": "October 30, 2026 (date only)",
+        "sourcePublishedAtUtc": null,
+        "sourceInputDate": null,
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [],
+        "probability": null,
+        "admissionReady": false,
+        "admitted": false,
+        "status": "EXCLUDED",
+        "sourceUrls": [
+          "https://vote-scope.com/en/us/house/"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/votescope.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:15:25Z",
+        "observedNotAfterUtc": "2026-10-31T04:15:32Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      }
+    },
+    {
+      "id": "electindex",
+      "provider": "ElectIndex",
+      "edition": "Public chambers.csv modified October 31, 04:07:33 UTC",
+      "primarySourceUrl": "https://electindex.com/forecasts/",
+      "notes": [
+        "The exact fresh CSV is used instead of rounded page figures (92 House, 73 Senate) or the older 73.8 Senate observation.",
+        "The public data URL was discovered in the publisher page scripts, not inferred from an unrelated repository."
+      ],
+      "house": {
+        "probabilityPercent": 91.8,
+        "quantityType": "chamber_control_probability",
+        "reportedTarget": "The publisher-linked public CSV gives House dem_control_pct 91.8 and needed 218. Its methodology defines chamber probabilities from simulated majority counts.",
+        "comparisonTargetId": "US_HOUSE_2026_DEMOCRATIC_CONTROL_218",
+        "eventMatch": "MATCH",
+        "threshold": 218,
+        "reviewDecision": "READY",
+        "reasonCode": "MATCHED_PRIMARY_CONTROL_PROBABILITY",
+        "reason": "The publisher-linked public CSV gives House dem_control_pct 91.8 and needed 218. Its methodology defines chamber probabilities from simulated majority counts.",
+        "sourceIds": [
+          "electindex",
+          "electindex_csv",
+          "electindex_core",
+          "electindex_info"
+        ],
+        "sourcePublicationLabel": "GitHub data modified October 31, 2026, 04:07:33 UTC",
+        "sourcePublishedAtUtc": "2026-10-31T04:07:33Z",
+        "sourceInputDate": null,
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [
+          {
+            "value": 247.5,
+            "statistic": "mean",
+            "constituency": "Democratic",
+            "note": null
+          },
+          {
+            "value": 244,
+            "statistic": "publisher_projected_unspecified",
+            "constituency": "Democratic",
+            "note": null
+          }
+        ],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [],
+        "probability": 0.9179999999999999,
+        "admissionReady": true,
+        "admitted": true,
+        "status": "ADMITTED_PROSPECTIVE",
+        "sourceUrls": [
+          "https://electindex.com/forecasts/",
+          "https://github.com/ElectIndex/26_us_forecast_data/blob/main/output/chambers.csv",
+          "https://electindex.com/wp-content/themes/electindex/assets/forecasts/eifc-core.js?ver=1.9.1129",
+          "https://electindex.com/wp-content/themes/electindex/assets/forecasts/eifc-info.js?ver=1.9.1129"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/electindex.json",
+          "research/election-challenge-2026/sources/electindex_csv.json",
+          "research/election-challenge-2026/sources/electindex_core.json",
+          "research/election-challenge-2026/sources/electindex_info.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:12:28Z",
+        "observedNotAfterUtc": "2026-10-31T04:17:09Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      },
+      "senate": {
+        "probabilityPercent": 72.5,
+        "quantityType": "chamber_control_probability",
+        "reportedTarget": "The CSV establishes a 51-seat threshold, but the methods refer to an independent in the Democratic challenger slot. Complete matching of the Senate caucus classification is not established.",
+        "comparisonTargetId": "US_SENATE_2026_DEMOCRATIC_CAUCUS_CONTROL_51",
+        "eventMatch": "UNRESOLVED",
+        "threshold": 51,
+        "reviewDecision": "EXCLUDE",
+        "reasonCode": "PRESUMED_NEW_INDEPENDENT_ALIGNMENT",
+        "reason": "The CSV establishes a 51-seat threshold, but the methods refer to an independent in the Democratic challenger slot. Complete matching of the Senate caucus classification is not established.",
+        "sourceIds": [
+          "electindex",
+          "electindex_csv",
+          "electindex_core",
+          "electindex_info"
+        ],
+        "sourcePublicationLabel": "GitHub data modified October 31, 2026, 04:07:33 UTC",
+        "sourcePublishedAtUtc": "2026-10-31T04:07:33Z",
+        "sourceInputDate": null,
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [
+          {
+            "value": 52.9,
+            "statistic": "mean",
+            "constituency": "publisher_D_side",
+            "note": null
+          },
+          {
+            "value": 53,
+            "statistic": "publisher_projected_unspecified",
+            "constituency": "publisher_D_side",
+            "note": null
+          }
+        ],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [],
+        "probability": 0.725,
+        "admissionReady": false,
+        "admitted": false,
+        "status": "EXCLUDED",
+        "sourceUrls": [
+          "https://electindex.com/forecasts/",
+          "https://github.com/ElectIndex/26_us_forecast_data/blob/main/output/chambers.csv",
+          "https://electindex.com/wp-content/themes/electindex/assets/forecasts/eifc-core.js?ver=1.9.1129",
+          "https://electindex.com/wp-content/themes/electindex/assets/forecasts/eifc-info.js?ver=1.9.1129"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/electindex.json",
+          "research/election-challenge-2026/sources/electindex_csv.json",
+          "research/election-challenge-2026/sources/electindex_core.json",
+          "research/election-challenge-2026/sources/electindex_info.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:12:28Z",
+        "observedNotAfterUtc": "2026-10-31T04:17:09Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      }
+    },
+    {
+      "id": "datum",
+      "provider": "Datum Signals",
+      "edition": "October 30, 2026, 16:01 UTC",
+      "primarySourceUrl": "https://datumsignals.com/",
+      "notes": [
+        "Probability extraction uses the HTML counter target, not the pre-animation visible zero. The old 70 percent House observation is not silently retained."
+      ],
+      "house": {
+        "probabilityPercent": 72,
+        "quantityType": "chamber_control_probability",
+        "reportedTarget": "The House control counter has data-target 72 and its adjacent label defines 218 needed. The HTML animation placeholder zero is not a forecast.",
+        "comparisonTargetId": "US_HOUSE_2026_DEMOCRATIC_CONTROL_218",
+        "eventMatch": "MATCH",
+        "threshold": 218,
+        "reviewDecision": "READY",
+        "reasonCode": "MATCHED_PRIMARY_CONTROL_PROBABILITY",
+        "reason": "The House control counter has data-target 72 and its adjacent label defines 218 needed. The HTML animation placeholder zero is not a forecast.",
+        "sourceIds": [
+          "datum",
+          "datum_methods"
+        ],
+        "sourcePublicationLabel": "October 30, 2026, 4:01 PM UTC",
+        "sourcePublishedAtUtc": "2026-10-30T16:01:00Z",
+        "sourceInputDate": null,
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [],
+        "probability": 0.72,
+        "admissionReady": true,
+        "admitted": true,
+        "status": "ADMITTED_PROSPECTIVE",
+        "sourceUrls": [
+          "https://datumsignals.com/",
+          "https://datumsignals.com/methodology"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/datum.json",
+          "research/election-challenge-2026/sources/datum_methods.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:15:38Z",
+        "observedNotAfterUtc": "2026-10-31T04:16:25Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      },
+      "senate": {
+        "probabilityPercent": 63,
+        "quantityType": "chamber_control_probability",
+        "reportedTarget": "The captured page describes only 33 Senate seats up, whereas the comparison includes 35 including specials. Independent handling is also unresolved; the public 63 percent is retained as an excluded observation.",
+        "comparisonTargetId": "US_SENATE_2026_DEMOCRATIC_CAUCUS_CONTROL_51",
+        "eventMatch": "UNRESOLVED",
+        "threshold": 51,
+        "reviewDecision": "EXCLUDE",
+        "reasonCode": "INCOMPLETE_SENATE_RACE_UNIVERSE",
+        "reason": "The captured page describes only 33 Senate seats up, whereas the comparison includes 35 including specials. Independent handling is also unresolved; the public 63 percent is retained as an excluded observation.",
+        "sourceIds": [
+          "datum",
+          "datum_methods"
+        ],
+        "sourcePublicationLabel": "October 30, 2026, 4:01 PM UTC",
+        "sourcePublishedAtUtc": "2026-10-30T16:01:00Z",
+        "sourceInputDate": null,
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [],
+        "probability": 0.63,
+        "admissionReady": false,
+        "admitted": false,
+        "status": "EXCLUDED",
+        "sourceUrls": [
+          "https://datumsignals.com/",
+          "https://datumsignals.com/methodology"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/datum.json",
+          "research/election-challenge-2026/sources/datum_methods.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:15:38Z",
+        "observedNotAfterUtc": "2026-10-31T04:16:25Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      }
+    },
+    {
+      "id": "fred",
+      "provider": "Fred Cornell independent",
+      "edition": "October 30, 2026",
+      "primarySourceUrl": "https://fredcornell.com/us",
+      "notes": [
+        "The Senate detail publishes 68.7 percent, rounded to 69 percent in the main summary. The precise detail is retained."
+      ],
+      "house": {
+        "probabilityPercent": 99,
+        "quantityType": "chamber_control_probability",
+        "reportedTarget": "The House summary specifies a 99 percent chance of winning at least 218 seats.",
+        "comparisonTargetId": "US_HOUSE_2026_DEMOCRATIC_CONTROL_218",
+        "eventMatch": "MATCH",
+        "threshold": 218,
+        "reviewDecision": "READY",
+        "reasonCode": "MATCHED_PRIMARY_CONTROL_PROBABILITY",
+        "reason": "The House summary specifies a 99 percent chance of winning at least 218 seats.",
+        "sourceIds": [
+          "fred",
+          "fred_senate",
+          "fred_methods"
+        ],
+        "sourcePublicationLabel": "October 30, 2026 (date only)",
+        "sourcePublishedAtUtc": null,
+        "sourceInputDate": null,
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [
+          {
+            "value": 251,
+            "statistic": "publisher_projected_unspecified",
+            "constituency": "Democratic",
+            "note": null
+          }
+        ],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [],
+        "probability": 0.99,
+        "admissionReady": true,
+        "admitted": true,
+        "status": "ADMITTED_PROSPECTIVE",
+        "sourceUrls": [
+          "https://fredcornell.com/us",
+          "https://fredcornell.com/us/senate",
+          "https://fredcornell.com/methodology/us"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/fred.json",
+          "research/election-challenge-2026/sources/fred_senate.json",
+          "research/election-challenge-2026/sources/fred_methods.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:15:38Z",
+        "observedNotAfterUtc": "2026-10-31T04:17:03Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      },
+      "senate": {
+        "probabilityPercent": 68.7,
+        "quantityType": "chamber_control_probability",
+        "reportedTarget": "The source separately reports a Democratic 51-plus event, Republican control including 50, and independents holding the balance. Its separate-independent treatment is not established as equivalent to KAHRELUM conditional caucus assumptions.",
+        "comparisonTargetId": "US_SENATE_2026_DEMOCRATIC_CAUCUS_CONTROL_51",
+        "eventMatch": "UNRESOLVED",
+        "threshold": 51,
+        "reviewDecision": "EXCLUDE",
+        "reasonCode": "DIFFERENT_INDEPENDENT_CONTROL_EVENT",
+        "reason": "The source separately reports a Democratic 51-plus event, Republican control including 50, and independents holding the balance. Its separate-independent treatment is not established as equivalent to KAHRELUM conditional caucus assumptions.",
+        "sourceIds": [
+          "fred",
+          "fred_senate",
+          "fred_methods"
+        ],
+        "sourcePublicationLabel": "October 30, 2026 (date only)",
+        "sourcePublishedAtUtc": null,
+        "sourceInputDate": null,
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [
+          {
+            "value": 52,
+            "statistic": "mean",
+            "constituency": "publisher_D_side",
+            "note": null
+          },
+          {
+            "value": 1,
+            "statistic": "mean",
+            "constituency": "independent",
+            "note": null
+          }
+        ],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [],
+        "probability": 0.687,
+        "admissionReady": false,
+        "admitted": false,
+        "status": "EXCLUDED",
+        "sourceUrls": [
+          "https://fredcornell.com/us",
+          "https://fredcornell.com/us/senate",
+          "https://fredcornell.com/methodology/us"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/fred.json",
+          "research/election-challenge-2026/sources/fred_senate.json",
+          "research/election-challenge-2026/sources/fred_methods.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:15:38Z",
+        "observedNotAfterUtc": "2026-10-31T04:17:03Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      }
+    },
+    {
+      "id": "yale",
+      "provider": "Yale PLSC 2219 class model",
+      "edition": "Class model snapshot October 30, built 21:22:14 UTC",
+      "primarySourceUrl": "https://kevinmdeluca.com/forecast/",
+      "notes": [
+        "Only the PLSC 2219 class model is selected, not the polling, markets, academic or cross-source average lines.",
+        "The source discloses retrospective historical recomputation and a November 1 model stop. This fresh capture is prospective; earlier chart dates are not used as earlier locks."
+      ],
+      "house": {
+        "probabilityPercent": 95,
+        "quantityType": "chamber_control_probability",
+        "reportedTarget": "The class model page explicitly reports a 95 percent Democratic House majority probability and a 218-seat threshold.",
+        "comparisonTargetId": "US_HOUSE_2026_DEMOCRATIC_CONTROL_218",
+        "eventMatch": "MATCH",
+        "threshold": 218,
+        "reviewDecision": "READY",
+        "reasonCode": "MATCHED_PRIMARY_CONTROL_PROBABILITY",
+        "reason": "The class model page explicitly reports a 95 percent Democratic House majority probability and a 218-seat threshold.",
+        "sourceIds": [
+          "yale",
+          "yale_methods",
+          "yale_class"
+        ],
+        "sourcePublicationLabel": "Built October 30, 2026, 21:22:14.013751 UTC",
+        "sourcePublishedAtUtc": "2026-10-30T21:22:14.013751Z",
+        "sourceInputDate": null,
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [
+          {
+            "value": 237,
+            "statistic": "publisher_simulation_summary_unspecified",
+            "constituency": "Democratic",
+            "note": null
+          }
+        ],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [],
+        "probability": 0.95,
+        "admissionReady": true,
+        "admitted": true,
+        "status": "ADMITTED_PROSPECTIVE",
+        "sourceUrls": [
+          "https://kevinmdeluca.com/forecast/",
+          "https://kevinmdeluca.com/forecast/methods/",
+          "https://kevinmdeluca.com/forecast/class/"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/yale.json",
+          "research/election-challenge-2026/sources/yale_methods.json",
+          "research/election-challenge-2026/sources/yale_class.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:12:28Z",
+        "observedNotAfterUtc": "2026-10-31T04:19:11Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      },
+      "senate": {
+        "probabilityPercent": 43,
+        "quantityType": "chamber_control_probability",
+        "reportedTarget": "General methods include existing Democratic-caucusing independents and require 51. The class page also substitutes independent nominees into party sides, including Osborn; that is not proof of final caucus membership or complete equivalence to KAHRELUM.",
+        "comparisonTargetId": "US_SENATE_2026_DEMOCRATIC_CAUCUS_CONTROL_51",
+        "eventMatch": "UNRESOLVED",
+        "threshold": 51,
+        "reviewDecision": "EXCLUDE",
+        "reasonCode": "SIDE_SUBSTITUTION_NOT_CAUCUSED_SEATS",
+        "reason": "General methods include existing Democratic-caucusing independents and require 51. The class page also substitutes independent nominees into party sides, including Osborn; that is not proof of final caucus membership or complete equivalence to KAHRELUM.",
+        "sourceIds": [
+          "yale",
+          "yale_methods",
+          "yale_class"
+        ],
+        "sourcePublicationLabel": "Built October 30, 2026, 21:22:14.013751 UTC",
+        "sourcePublishedAtUtc": "2026-10-30T21:22:14.013751Z",
+        "sourceInputDate": null,
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [
+          {
+            "value": 50,
+            "statistic": "publisher_simulation_summary_unspecified",
+            "constituency": "publisher_D_side",
+            "note": null
+          }
+        ],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [],
+        "probability": 0.43,
+        "admissionReady": false,
+        "admitted": false,
+        "status": "EXCLUDED",
+        "sourceUrls": [
+          "https://kevinmdeluca.com/forecast/",
+          "https://kevinmdeluca.com/forecast/methods/",
+          "https://kevinmdeluca.com/forecast/class/"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/yale.json",
+          "research/election-challenge-2026/sources/yale_methods.json",
+          "research/election-challenge-2026/sources/yale_class.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:12:28Z",
+        "observedNotAfterUtc": "2026-10-31T04:19:11Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      }
+    },
+    {
+      "id": "dave",
+      "provider": "Dave Manuel",
+      "edition": "October 30, 2026, 11:45 PM ET",
+      "primarySourceUrl": "https://www.davemanuel.com/2026-midterm-forecast.php",
+      "notes": [
+        "Separate medians need not add to 100; the published independent outcome is not renormalized away."
+      ],
+      "house": {
+        "probabilityPercent": 94,
+        "quantityType": "chamber_control_probability",
+        "reportedTarget": "The forecast table reports 94 percent Democratic House control and explicitly states 218 of 435.",
+        "comparisonTargetId": "US_HOUSE_2026_DEMOCRATIC_CONTROL_218",
+        "eventMatch": "MATCH",
+        "threshold": 218,
+        "reviewDecision": "READY",
+        "reasonCode": "MATCHED_PRIMARY_CONTROL_PROBABILITY",
+        "reason": "The forecast table reports 94 percent Democratic House control and explicitly states 218 of 435.",
+        "sourceIds": [
+          "dave"
+        ],
+        "sourcePublicationLabel": "October 30, 2026, 11:45 PM ET",
+        "sourcePublishedAtUtc": "2026-10-31T03:45:00Z",
+        "sourceInputDate": null,
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [
+          {
+            "value": 234,
+            "statistic": "median",
+            "constituency": "Democratic",
+            "note": null
+          }
+        ],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [],
+        "probability": 0.94,
+        "admissionReady": true,
+        "admitted": true,
+        "status": "ADMITTED_PROSPECTIVE",
+        "sourceUrls": [
+          "https://www.davemanuel.com/2026-midterm-forecast.php"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/dave.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:15:38Z",
+        "observedNotAfterUtc": "2026-10-31T04:15:49Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      },
+      "senate": {
+        "probabilityPercent": 70,
+        "quantityType": "chamber_control_probability",
+        "reportedTarget": "King and Sanders are included in the Democratic count; new uncommitted independent winners are counted separately. A distinct 3 percent neither-side-control outcome remains. This is not automatically equivalent to KAHRELUM conditional independent caucus assumptions.",
+        "comparisonTargetId": "US_SENATE_2026_DEMOCRATIC_CAUCUS_CONTROL_51",
+        "eventMatch": "UNRESOLVED",
+        "threshold": 51,
+        "reviewDecision": "EXCLUDE",
+        "reasonCode": "DIFFERENT_INDEPENDENT_CONTROL_EVENT",
+        "reason": "King and Sanders are included in the Democratic count; new uncommitted independent winners are counted separately. A distinct 3 percent neither-side-control outcome remains. This is not automatically equivalent to KAHRELUM conditional independent caucus assumptions.",
+        "sourceIds": [
+          "dave"
+        ],
+        "sourcePublicationLabel": "October 30, 2026, 11:45 PM ET",
+        "sourcePublishedAtUtc": "2026-10-31T03:45:00Z",
+        "sourceInputDate": null,
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [
+          {
+            "value": 52,
+            "statistic": "median",
+            "constituency": "Democratic_plus_existing_caucusing_independents",
+            "note": null
+          }
+        ],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [],
+        "probability": 0.7,
+        "admissionReady": false,
+        "admitted": false,
+        "status": "EXCLUDED",
+        "sourceUrls": [
+          "https://www.davemanuel.com/2026-midterm-forecast.php"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/dave.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:15:38Z",
+        "observedNotAfterUtc": "2026-10-31T04:15:49Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      }
+    },
+    {
+      "id": "onpoint",
+      "provider": "On Point Politics",
+      "edition": "October 30, 2026",
+      "primarySourceUrl": "https://www.tpsielections.com/forecast",
+      "notes": [
+        "Only the consistent chamber probability is proposed for House admission. Conflicting or ambiguous seat summaries are descriptive and excluded from seat-error comparisons."
+      ],
+      "house": {
+        "probabilityPercent": 97,
+        "quantityType": "chamber_control_probability",
+        "reportedTarget": "The primary forecast consistently gives 97 percent Democratic House control; the methods define 218 of 435.",
+        "comparisonTargetId": "US_HOUSE_2026_DEMOCRATIC_CONTROL_218",
+        "eventMatch": "MATCH",
+        "threshold": 218,
+        "reviewDecision": "READY",
+        "reasonCode": "MATCHED_PRIMARY_CONTROL_PROBABILITY",
+        "reason": "The primary forecast consistently gives 97 percent Democratic House control; the methods define 218 of 435.",
+        "sourceIds": [
+          "onpoint",
+          "onpoint_methods"
+        ],
+        "sourcePublicationLabel": "October 30, 2026 (date only)",
+        "sourcePublishedAtUtc": null,
+        "sourceInputDate": null,
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [
+          {
+            "value": 247,
+            "statistic": "count_of_favored_districts",
+            "constituency": "Democratic",
+            "note": null
+          },
+          {
+            "value": 249,
+            "statistic": "publisher_summary_unspecified",
+            "constituency": "Democratic",
+            "note": "A different narrative on the same page says 252 average seats; no seat statistic is admitted for scoring."
+          }
+        ],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [],
+        "probability": 0.97,
+        "admissionReady": true,
+        "admitted": true,
+        "status": "ADMITTED_PROSPECTIVE",
+        "sourceUrls": [
+          "https://www.tpsielections.com/forecast",
+          "https://www.tpsielections.com/forecast/methodology"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/onpoint.json",
+          "research/election-challenge-2026/sources/onpoint_methods.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:15:38Z",
+        "observedNotAfterUtc": "2026-10-31T04:16:25Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      },
+      "senate": {
+        "probabilityPercent": 90,
+        "quantityType": "chamber_control_probability",
+        "reportedTarget": "The methods explicitly count Dan Osborn in the Democratic column. The full independent-caucus mapping has not been matched to KAHRELUM. The newly captured Senate probability is 90 percent, not the earlier 86.",
+        "comparisonTargetId": "US_SENATE_2026_DEMOCRATIC_CAUCUS_CONTROL_51",
+        "eventMatch": "UNRESOLVED",
+        "threshold": 51,
+        "reviewDecision": "EXCLUDE",
+        "reasonCode": "DE_FACTO_PARTY_RECLASSIFICATION",
+        "reason": "The methods explicitly count Dan Osborn in the Democratic column. The full independent-caucus mapping has not been matched to KAHRELUM. The newly captured Senate probability is 90 percent, not the earlier 86.",
+        "sourceIds": [
+          "onpoint",
+          "onpoint_methods"
+        ],
+        "sourcePublicationLabel": "October 30, 2026 (date only)",
+        "sourcePublishedAtUtc": null,
+        "sourceInputDate": null,
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [
+          {
+            "value": 55,
+            "statistic": "publisher_simulation_summary_unspecified",
+            "constituency": "publisher_D_side",
+            "note": null
+          }
+        ],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [],
+        "probability": 0.9,
+        "admissionReady": false,
+        "admitted": false,
+        "status": "EXCLUDED",
+        "sourceUrls": [
+          "https://www.tpsielections.com/forecast",
+          "https://www.tpsielections.com/forecast/methodology"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/onpoint.json",
+          "research/election-challenge-2026/sources/onpoint_methods.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:15:38Z",
+        "observedNotAfterUtc": "2026-10-31T04:16:25Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      }
+    },
+    {
+      "id": "votepredictor",
+      "provider": "VotePredictor",
+      "edition": "October 30, 2026",
+      "primarySourceUrl": "https://votepredictor.com/house",
+      "notes": [],
+      "house": {
+        "probabilityPercent": 76,
+        "quantityType": "chamber_control_probability",
+        "reportedTarget": "The House page gives a 76 percent chance of Democratic control and explicitly requires 218 seats.",
+        "comparisonTargetId": "US_HOUSE_2026_DEMOCRATIC_CONTROL_218",
+        "eventMatch": "MATCH",
+        "threshold": 218,
+        "reviewDecision": "READY",
+        "reasonCode": "MATCHED_PRIMARY_CONTROL_PROBABILITY",
+        "reason": "The House page gives a 76 percent chance of Democratic control and explicitly requires 218 seats.",
+        "sourceIds": [
+          "votepredictor"
+        ],
+        "sourcePublicationLabel": "Forecast updated October 30, 2026 (date only)",
+        "sourcePublishedAtUtc": null,
+        "sourceInputDate": null,
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [
+          {
+            "value": 229.6,
+            "statistic": "mean",
+            "constituency": "Democratic",
+            "note": null
+          }
+        ],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [],
+        "probability": 0.76,
+        "admissionReady": true,
+        "admitted": true,
+        "status": "ADMITTED_PROSPECTIVE",
+        "sourceUrls": [
+          "https://votepredictor.com/house"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/votepredictor.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:15:38Z",
+        "observedNotAfterUtc": "2026-10-31T04:15:49Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      },
+      "senate": {
+        "probabilityPercent": null,
+        "quantityType": "missing",
+        "reportedTarget": "A numerical Senate control probability was not captured in this cohort; no value is imputed from race probabilities or links.",
+        "comparisonTargetId": "US_SENATE_2026_DEMOCRATIC_CAUCUS_CONTROL_51",
+        "eventMatch": "UNRESOLVED",
+        "threshold": 51,
+        "reviewDecision": "EXCLUDE",
+        "reasonCode": "NO_CAPTURED_SENATE_PROBABILITY",
+        "reason": "A numerical Senate control probability was not captured in this cohort; no value is imputed from race probabilities or links.",
+        "sourceIds": [
+          "votepredictor"
+        ],
+        "sourcePublicationLabel": "Forecast updated October 30, 2026 (date only)",
+        "sourcePublishedAtUtc": null,
+        "sourceInputDate": null,
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [],
+        "probability": null,
+        "admissionReady": false,
+        "admitted": false,
+        "status": "EXCLUDED",
+        "sourceUrls": [
+          "https://votepredictor.com/house"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/votepredictor.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:15:38Z",
+        "observedNotAfterUtc": "2026-10-31T04:15:49Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      }
+    },
+    {
+      "id": "midterm",
+      "provider": "Midterm Forecast",
+      "edition": "October 30, 2026, 10:40 PM ET",
+      "primarySourceUrl": "https://midtermforecast.com/",
+      "notes": [
+        "The separate 2 percent independent-balance category is preserved. Rounded categories may not add to 100 and are not renormalized."
+      ],
+      "house": {
+        "probabilityPercent": 91,
+        "quantityType": "chamber_control_probability",
+        "reportedTarget": "The current model reports 91 percent Democratic House control; the methods explicitly define a 218-seat majority.",
+        "comparisonTargetId": "US_HOUSE_2026_DEMOCRATIC_CONTROL_218",
+        "eventMatch": "MATCH",
+        "threshold": 218,
+        "reviewDecision": "READY",
+        "reasonCode": "MATCHED_PRIMARY_CONTROL_PROBABILITY",
+        "reason": "The current model reports 91 percent Democratic House control; the methods explicitly define a 218-seat majority.",
+        "sourceIds": [
+          "midterm",
+          "midterm_methods"
+        ],
+        "sourcePublicationLabel": "Model run October 30, 2026, 10:40 PM ET",
+        "sourcePublishedAtUtc": "2026-10-31T02:40:00Z",
+        "sourceInputDate": "2026-10-30",
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [
+          {
+            "value": 236,
+            "statistic": "median",
+            "constituency": "Democratic",
+            "note": null
+          }
+        ],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [],
+        "probability": 0.91,
+        "admissionReady": true,
+        "admitted": true,
+        "status": "ADMITTED_PROSPECTIVE",
+        "sourceUrls": [
+          "https://midtermforecast.com/",
+          "https://midtermforecast.com/methodology/"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/midterm.json",
+          "research/election-challenge-2026/sources/midterm_methods.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:15:38Z",
+        "observedNotAfterUtc": "2026-10-31T04:16:25Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      },
+      "senate": {
+        "probabilityPercent": 71,
+        "quantityType": "chamber_control_probability",
+        "reportedTarget": "The methods use 51 seats and a Republican tiebreak at 50, but count uncommitted independents separately in an independents-decide outcome. Equivalence to KAHRELUM conditional caucus assumptions is unproved.",
+        "comparisonTargetId": "US_SENATE_2026_DEMOCRATIC_CAUCUS_CONTROL_51",
+        "eventMatch": "UNRESOLVED",
+        "threshold": 51,
+        "reviewDecision": "EXCLUDE",
+        "reasonCode": "DIFFERENT_INDEPENDENT_CONTROL_EVENT",
+        "reason": "The methods use 51 seats and a Republican tiebreak at 50, but count uncommitted independents separately in an independents-decide outcome. Equivalence to KAHRELUM conditional caucus assumptions is unproved.",
+        "sourceIds": [
+          "midterm",
+          "midterm_methods"
+        ],
+        "sourcePublicationLabel": "Model run October 30, 2026, 10:40 PM ET",
+        "sourcePublishedAtUtc": "2026-10-31T02:40:00Z",
+        "sourceInputDate": "2026-10-30",
+        "inputCutoffMatchedToKahrelum": false,
+        "seatStatistics": [
+          {
+            "value": 53,
+            "statistic": "median",
+            "constituency": "Democratic_plus_declared_allies",
+            "note": null
+          }
+        ],
+        "seatErrorScoringEligible": false,
+        "conflictingProbabilitiesPercent": [],
+        "probability": 0.71,
+        "admissionReady": false,
+        "admitted": false,
+        "status": "EXCLUDED",
+        "sourceUrls": [
+          "https://midtermforecast.com/",
+          "https://midtermforecast.com/methodology/"
+        ],
+        "receiptPaths": [
+          "research/election-challenge-2026/sources/midterm.json",
+          "research/election-challenge-2026/sources/midterm_methods.json"
+        ],
+        "observedNotBeforeUtc": "2026-10-31T04:15:38Z",
+        "observedNotAfterUtc": "2026-10-31T04:16:25Z",
+        "outcomeStatus": "UNRESOLVED",
+        "brierScore": null
+      }
+    }
+  ],
+  "outcomes": {
+    "status": "UNRESOLVED",
+    "resolvedCount": 0,
+    "brierScore": null,
+    "winner": null
+  }
+}

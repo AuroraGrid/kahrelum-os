@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Fred Cornell independent",
+  "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
+  "publisherEdition": "Run November 1, 2026; polls retrieved November 1",
+  "sources": [
+    {
+      "chamber": "house",
+      "sourceUrl": "https://fredcornell.com/us/house",
+      "retrievedAtUtc": "2026-11-01T13:35:35.580Z",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "custody": {
+        "representation": "FETCH_RETURNED_HTML_UTF8",
+        "sha256": "387e4afadc90f5cda8896f7c6d7563101c9fd284cbcd0db23e52f4473b1f4ea8",
+        "utf8Bytes": 168633,
+        "exactHttpWireBytes": false,
+        "fullSourcePublishedInRepository": false
+      }
+    },
+    {
+      "chamber": "senate",
+      "sourceUrl": "https://fredcornell.com/us/senate",
+      "retrievedAtUtc": "2026-11-01T13:35:35.720Z",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "custody": {
+        "representation": "FETCH_RETURNED_HTML_UTF8",
+        "sha256": "d0ce33cd12fc3e63be9b3930c01c36956ed628646b15e8d8e02919d452a989e6",
+        "utf8Bytes": 181686,
+        "exactHttpWireBytes": false,
+        "fullSourcePublishedInRepository": false
+      }
+    }
+  ],
+  "observations": {
+    "houseDemocraticControlPct": 99.0,
+    "houseDemocraticSeats": 251.0,
+    "houseSeatType": "median",
+    "senateDemocratic51PlusPct": 70.5,
+    "senateRepublican51PlusPct": 16.2,
+    "senateRepublicanExactly50Pct": 8.0,
+    "senateRepublicanControlPct": 24.2,
+    "senateIndependentBalancePct": 5.3,
+    "senateDemocraticSeats": 52.0,
+    "senateRepublicanSeats": 47.0,
+    "senateIndependentSeats": 1.0,
+    "senateSeatType": "expected party seats"
+  },
+  "changeFromPriorAdmittedEdition": {
+    "houseDemocraticSeats": {"prior": 250.0, "current": 251.0},
+    "senateDemocratic51PlusPct": {"prior": 70.1, "current": 70.5},
+    "unchanged": ["houseDemocraticControlPct", "senateDemocraticSeats", "senateHeadlineRoundedPct"]
+  },
+  "admissionNote": "The 51-seat Democratic cutoff, the separate 50-seat Republican vice-presidential-control outcome and the independent-balance outcome remain distinct. The rounded 70% headline is not substituted for the exact 70.5% simulation outcome."
+}

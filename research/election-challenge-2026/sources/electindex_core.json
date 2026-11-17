@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "electindex_core",
+  "sourceUrl": "https://electindex.com/wp-content/themes/electindex/assets/forecasts/eifc-core.js?ver=1.9.1129",
+  "primarySource": true,
+  "capture": {
+    "startedAtUtc": "2026-10-31T04:16:58Z",
+    "completedAtUtc": "2026-10-31T04:17:03Z",
+    "method": "Firecrawl fresh scrape maxAge=0",
+    "cachePolicy": "maxAge=0"
+  },
+  "custody": {
+    "representation": "TOOL_RETURNED_RAW_HTML_UTF8",
+    "sha256": "3d4089548b31ba8b72d6db6f7c9b54ecbf7bd6e3770cd66ebd98906743fad2c5",
+    "utf8Bytes": 113330,
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false,
+    "rawCaptureRetention": "Working capture; not part of the public commit. The public immutable receipt preserves factual observations and digests, not a replayable HTTP archive.",
+    "toolMarkdownSha256": "586c79249d9412f5ef8f993ab89f248297bfb2c857592d32d2f71098e470f135"
+  },
+  "publisherMetadata": {
+    "scrapeId": "01a1902c-d6c6-710a-92dd-d91ae18e2385",
+    "sourceURL": "https://electindex.com/wp-content/themes/electindex/assets/forecasts/eifc-core.js?ver=1.9.1129",
+    "url": "https://electindex.com/wp-content/themes/electindex/assets/forecasts/eifc-core.js?ver=1.9.1129",
+    "statusCode": 200,
+    "contentType": "text/javascript",
+    "indexId": "e5b2887b-bfa7-403d-9825-3c61f51298b2"
+  },
+  "evidenceExcerpts": [],
+  "crossSourceReview": {
+    "scope": "Related provider review synthesized across the manifest sourceIds; a method page need not itself contain the numerical forecast.",
+    "facts": [
+      {
+        "providerId": "electindex",
+        "houseControlPercent": 91.8,
+        "senateControlPercent": 72.5,
+        "publicationLabel": "GitHub data modified October 31, 2026, 04:07:33 UTC",
+        "publishedAtUtc": "2026-10-31T04:07:33Z",
+        "houseEventReview": "The publisher-linked public CSV gives House dem_control_pct 91.8 and needed 218. Its methodology defines chamber probabilities from simulated majority counts.",
+        "senateEventReview": "The CSV establishes a 51-seat threshold, but the methods refer to an independent in the Democratic challenger slot. Complete matching of the Senate caucus classification is not established."
+      }
+    ]
+  }
+}

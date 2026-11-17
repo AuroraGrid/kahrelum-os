@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "99chambers_methods",
+  "sourceUrl": "https://99chambers.app/methodology",
+  "primarySource": true,
+  "capture": {
+    "startedAtUtc": "2026-10-31T04:15:25Z",
+    "completedAtUtc": "2026-10-31T04:15:32Z",
+    "method": "Firecrawl fresh scrape maxAge=0",
+    "cachePolicy": "maxAge=0"
+  },
+  "custody": {
+    "representation": "TOOL_RETURNED_RAW_HTML_UTF8",
+    "sha256": "5715e11b9d687e89a9e520154a5afb80c66f62b5e78bccd54603188c184a1f03",
+    "utf8Bytes": 104928,
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false,
+    "rawCaptureRetention": "Working capture; not part of the public commit. The public immutable receipt preserves factual observations and digests, not a replayable HTTP archive.",
+    "toolMarkdownSha256": "d11202830fe711240dbef2d0a8e0450c45e601d0d0c66be9c9135bc6ee503a44"
+  },
+  "publisherMetadata": {
+    "title": "How the forecast works · 99chambers",
+    "scrapeId": "01a1902b-6e6b-70cc-9076-9e1b5b4e32b2",
+    "sourceURL": "https://99chambers.app/methodology",
+    "url": "https://99chambers.app/methodology",
+    "statusCode": 200,
+    "contentType": "text/html",
+    "indexId": "c10204f5-fe01-4213-9ba7-a29c80f7e0da"
+  },
+  "evidenceExcerpts": [],
+  "crossSourceReview": {
+    "scope": "Related provider review synthesized across the manifest sourceIds; a method page need not itself contain the numerical forecast.",
+    "facts": [
+      {
+        "providerId": "99chambers",
+        "houseControlPercent": 98,
+        "senateControlPercent": 80,
+        "publicationLabel": "October 30, 2026, 11:27 PM ET",
+        "publishedAtUtc": "2026-10-31T03:27:00Z",
+        "houseEventReview": "The Horizon edition gives a 98 percent House majority probability, and the House page defines the majority as 218 of 435.",
+        "senateEventReview": "The Senate page establishes 51 and a Republican 50-seat tiebreak. Its treatment of de facto party nominees does not establish a complete, identical independent-caucus mapping."
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "VotePredictor",
+  "sourceUrl": "https://votepredictor.com/senate",
+  "observedNoLaterThanUtc": "2026-11-06T18:22:22Z",
+  "custodyRepresentation": "SELECTED_FIRST_PARTY_RENDERED_FIELDS_NOT_RAW_HTML",
+  "directUnattendedHttpStatus": 429,
+  "sourceEdition": "Forecast page labeled updated Nov. 6, 2026; precise issue time not exposed",
+  "observations": {
+    "senateDemocraticControlPct": 67.0,
+    "senateExpectedDemocraticSeats": 51.7,
+    "separatelyRoundedSummarySeats": 52,
+    "interval80DemocraticSeats": [47, 55],
+    "democraticControlThreshold": 51
+  },
+  "verification": {
+    "twoFirstPartyRenderingsAgree": true,
+    "topLineAndSummaryAgree": true,
+    "houseRemainsAt79PctAnd231Point7ExpectedSeats": true,
+    "rawResponsePreserved": false,
+    "reasonRawUnavailable": "Direct unattended request returned HTTP 429."
+  },
+  "comparisonToPriorLedger": {
+    "senateDemocraticControlPct": {"from": 66.0, "to": 67.0},
+    "senateExpectedDemocraticSeats": {"from": 51.6, "to": 51.7}
+  },
+  "eventCaveat": "Independent candidates in Nebraska and South Dakota count for the defending party in this source's control figure; not asserted equivalent to KAHRELUM caucus control.",
+  "kahrelumInputReview": {
+    "isRefreshElectionProjectionsInput": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  }
+}

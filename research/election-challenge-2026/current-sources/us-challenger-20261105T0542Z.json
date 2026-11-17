@@ -1,0 +1,51 @@
+{
+  "reviewScope": "Prospective first-party U.S. congressional forecast observations on November 5, 2026",
+  "status": "SELECTED_FIELDS_VERIFIED; SOURCE_ISSUE_TIMES_PRESERVED_SEPARATELY",
+  "observations": [
+    {
+      "provider": "Decision Desk HQ",
+      "urls": ["https://votes.decisiondeskhq.com/forecast/2026/house", "https://votes.decisiondeskhq.com/forecast/2026/senate"],
+      "observedBetweenUtc": ["2026-11-05T05:42:12Z", "2026-11-05T05:42:56Z"],
+      "custodyRepresentation": "FIRST_PARTY_RENDERED_SELECTED_FIELDS; NO_RAW_HTML_HASH",
+      "directHttpStatus": 429,
+      "sourceTimes": "House last updated Nov. 3, 4:45 PM ET; Senate last updated Nov. 3, 4:46 PM ET",
+      "selectedFields": "House Democratic control 84%, projected Democratic seats 241, 218 cutoff. Senate Democratic control 64%, projected Democratic seats 52, 50 plus vice president for control. House and Senate source times and cutoffs remain distinct."
+    },
+    {
+      "provider": "Fred Cornell independent",
+      "url": "https://fredcornell.com/us/senate",
+      "retrievalStartedAtUtc": "2026-11-05T05:41:03.019690Z",
+      "savedAtUtc": "2026-11-05T05:41:04.0842801Z",
+      "custodyRepresentation": "HTTP_RESPONSE_BODY_BYTES_SAVED_PRIVATELY",
+      "privatePath": "work/us-challenger-private-captures/20261105/fred-senate.html",
+      "httpStatus": 200,
+      "bytes": 182641,
+      "sha256": "78f37927480308c16f81f5f651650f0f103611a3d950abfbcd4dc9df8c8f08ba",
+      "sourceTime": "Final pre-election Senate run Nov. 3; exact issue hour not exposed",
+      "selectedFields": "Democrats 51 or more seats 70.6%; Republicans 51 or more 16.1%; Republicans exactly 50 with Republican vice president 8.0%; independent balance 5.3%. Four outcomes sum to 100.0%. Expected seats: 52 Democrats, 47 Republicans, 1 independent. The separately published House median remains 252 with 99% Democratic control."
+    },
+    {
+      "provider": "On Point Politics",
+      "url": "https://onpointpolitics.us/forecast",
+      "retrievalStartedAtUtc": "2026-11-05T05:41:04.098585Z",
+      "savedAtUtc": "2026-11-05T05:41:09.2563800Z",
+      "custodyRepresentation": "HTTP_RESPONSE_BODY_BYTES_SAVED_PRIVATELY",
+      "privatePath": "work/us-challenger-private-captures/20261105/onpoint.html",
+      "httpStatus": 200,
+      "bytes": 950944,
+      "sha256": "35335638b374936548d10ade0b86aa73b38fd205a15298da60201c4bfd159d2a",
+      "sourceTime": "Page labels forecast updated Nov. 3; precise issue hour not exposed",
+      "selectedFields": "House Democratic control 91.0%; Senate Democratic control 80.9%; Senate average Democratic seats 54.7, rounded prose 55; House prose average 255, distinct seat badge 254 and map 247. Current exact control probabilities and exact averages not exposed in selected rendered text; previous exact values must not be carried forward as current. House seat displays conflict and are retained as separate statistic types pending reconciliation."
+    },
+    {
+      "provider": "VotePredictor",
+      "url": "https://votepredictor.com/house",
+      "observedBetweenUtc": ["2026-11-05T05:42:12Z", "2026-11-05T05:42:56Z"],
+      "custodyRepresentation": "FIRST_PARTY_RENDERED_SELECTED_FIELDS; NO_RAW_HTML_HASH",
+      "directHttpStatus": 429,
+      "sourceTime": "Precise forecast issue time not exposed",
+      "selectedFields": "House Democratic control remains 77%; expected Democratic seats 230.4, distinct rounded summary 230; 80% interval 209-252; 218 majority cutoff. No Senate top line admitted."
+    }
+  ],
+  "admissionDecision": "Admit only verified numerical chamber fields with source time and retrieval time kept distinct. Descriptive challenger rows do not change KAHRELUM model inputs or original forecast locks. On Point House seat displays remain unresolved and must not be collapsed to one current seat statistic."
+}

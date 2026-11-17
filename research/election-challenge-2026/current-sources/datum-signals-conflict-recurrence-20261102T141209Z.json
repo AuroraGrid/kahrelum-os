@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Datum Signals",
+  "sourceUrl": "https://datumsignals.com/",
+  "verificationWindow": {
+    "startedAtUtc": "2026-11-02T14:12:09.8227349Z",
+    "endedAtUtc": "2026-11-02T14:12:27.7729076Z",
+    "requestCount": 8,
+    "cacheControl": "no-cache",
+    "resolvedRemoteIps": [
+      "104.21.51.52",
+      "172.67.178.17"
+    ]
+  },
+  "publisherEdition": {
+    "displayedUpdate": "November 1, 2026, 5:00 PM UTC"
+  },
+  "observations": {
+    "houseDemocraticControlPct": null,
+    "houseStatus": "UNVERIFIED_CONFLICT",
+    "observedHouseVariants": [70.0, 71.0],
+    "senateDemocraticControlPct": 64.0,
+    "senateStatus": "VERIFIED_STABLE_ACROSS_ALL_ATTEMPTS",
+    "houseDemocraticSeats": null,
+    "senateDemocraticSeats": null
+  },
+  "responses": [
+    {"attempt": 1, "resolvedRemoteIp": "104.21.51.52", "observedAtUtc": "2026-11-02T14:12:11.4974553Z", "houseDemocraticControlPct": 70.0, "senateDemocraticControlPct": 64.0, "etag": "W/\"bd70-hTcTWSkr2OZQrOUeOmKJfcRy800\"", "rawSha256": "f3b7c17e09138fbe7450bdb593ef6d83fcad44c1c8cdc910e5b6be206c46fa0e"},
+    {"attempt": 2, "resolvedRemoteIp": "172.67.178.17", "observedAtUtc": "2026-11-02T14:12:14.4419495Z", "houseDemocraticControlPct": 71.0, "senateDemocraticControlPct": 64.0, "etag": "W/\"bd70-7fWUfI5CXSPyDRGFL0hMYtssblA\"", "rawSha256": "dfaf7da422e0932801f9766377e1eb58f7a48138889fd7acbddfab9bdbe3754e"},
+    {"attempt": 3, "resolvedRemoteIp": "104.21.51.52", "observedAtUtc": "2026-11-02T14:12:16.5333775Z", "houseDemocraticControlPct": 71.0, "senateDemocraticControlPct": 64.0, "etag": "W/\"bd70-7fWUfI5CXSPyDRGFL0hMYtssblA\"", "rawSha256": "dfaf7da422e0932801f9766377e1eb58f7a48138889fd7acbddfab9bdbe3754e"},
+    {"attempt": 4, "resolvedRemoteIp": "172.67.178.17", "observedAtUtc": "2026-11-02T14:12:18.5805644Z", "houseDemocraticControlPct": 70.0, "senateDemocraticControlPct": 64.0, "etag": "W/\"bd70-hTcTWSkr2OZQrOUeOmKJfcRy800\"", "rawSha256": "f3b7c17e09138fbe7450bdb593ef6d83fcad44c1c8cdc910e5b6be206c46fa0e"},
+    {"attempt": 5, "resolvedRemoteIp": "104.21.51.52", "observedAtUtc": "2026-11-02T14:12:20.6843999Z", "houseDemocraticControlPct": 71.0, "senateDemocraticControlPct": 64.0, "etag": "W/\"bd70-7fWUfI5CXSPyDRGFL0hMYtssblA\"", "rawSha256": "dfaf7da422e0932801f9766377e1eb58f7a48138889fd7acbddfab9bdbe3754e"},
+    {"attempt": 6, "resolvedRemoteIp": "172.67.178.17", "observedAtUtc": "2026-11-02T14:12:22.9833611Z", "houseDemocraticControlPct": 70.0, "senateDemocraticControlPct": 64.0, "etag": "W/\"bd70-hTcTWSkr2OZQrOUeOmKJfcRy800\"", "rawSha256": "f3b7c17e09138fbe7450bdb593ef6d83fcad44c1c8cdc910e5b6be206c46fa0e"},
+    {"attempt": 7, "resolvedRemoteIp": "104.21.51.52", "observedAtUtc": "2026-11-02T14:12:25.1918018Z", "houseDemocraticControlPct": 71.0, "senateDemocraticControlPct": 64.0, "etag": "W/\"bd70-7fWUfI5CXSPyDRGFL0hMYtssblA\"", "rawSha256": "dfaf7da422e0932801f9766377e1eb58f7a48138889fd7acbddfab9bdbe3754e"},
+    {"attempt": 8, "resolvedRemoteIp": "172.67.178.17", "observedAtUtc": "2026-11-02T14:12:27.2653006Z", "houseDemocraticControlPct": 70.0, "senateDemocraticControlPct": 64.0, "etag": "W/\"bd70-hTcTWSkr2OZQrOUeOmKJfcRy800\"", "rawSha256": "f3b7c17e09138fbe7450bdb593ef6d83fcad44c1c8cdc910e5b6be206c46fa0e"}
+  ],
+  "conflictReceipt": {
+    "utf8Bytes": 583,
+    "sha256": "102854bba0ff46efd101d369d1a9cb5171f7993b2bc831b2a5b2d19a89fbf43e",
+    "hashConstruction": "selectedRecurrenceText joined with LF and no trailing LF"
+  },
+  "priorEvidence": {
+    "initialConflict": "research/election-challenge-2026/current-sources/datum-signals-conflict-20261102T132353Z.json",
+    "prospectiveResolution": "research/election-challenge-2026/current-sources/datum-signals-resolution-20261102T133416Z.json",
+    "preserved": true
+  },
+  "admissionDecision": {
+    "houseDemocraticControlPct": "EXCLUDED_CURRENT_VALUE_CONFLICT",
+    "senateDemocraticControlPct": "ADMITTED_64_PERCENT",
+    "reason": "The first-party endpoint again interleaved stable 70% and 71% House representations across both observed endpoints under one unchanged publisher timestamp. Neither House value can be designated uniquely current."
+  },
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "datumSignalsUsedByScript": false,
+    "parsedHouseDistrictRatingInputsChanged": false,
+    "parsedSenateRaceRatingInputsChanged": false,
+    "expectedSeatAndControlOutputsChanged": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  }
+}

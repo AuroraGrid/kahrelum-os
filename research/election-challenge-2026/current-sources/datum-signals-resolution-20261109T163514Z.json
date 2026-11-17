@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Datum Signals",
+  "sourceUrl": "https://datumsignals.com/",
+  "verificationWindow": {
+    "startedAtUtc": "2026-11-09T16:35:01.9150527Z",
+    "endedAtUtc": "2026-11-09T16:35:14.8395714Z",
+    "requestCount": 6,
+    "cacheControl": "no-cache",
+    "resolvedRemoteIps": ["104.21.51.52", "172.67.178.17"]
+  },
+  "publisherEdition": {
+    "displayedUpdate": "November 9, 2026, 4:02 PM UTC"
+  },
+  "observations": {
+    "houseDemocraticControlPct": 70.0,
+    "senateDemocraticControlPct": 64.0,
+    "houseDemocraticSeats": null,
+    "senateDemocraticSeats": null,
+    "seatCountCaveat": "The page's D 209, Toss-up 3, R 188 House line is a categorized race tally, not an expected or projected full-chamber Democratic seat total."
+  },
+  "responses": [
+    {"attempt": 1, "resolvedRemoteIp": "104.21.51.52", "observedAtUtc": "2026-11-09T16:35:01.9150527Z", "httpStatus": 200, "houseDemocraticControlPct": 70.0, "senateDemocraticControlPct": 64.0, "rawUtf8Bytes": 48380, "rawSha256": "b11d4812fa12e160db6ba6d909f69c4aae02f012c9e236cbb6ad808f685b768e"},
+    {"attempt": 2, "resolvedRemoteIp": "104.21.51.52", "observedAtUtc": "2026-11-09T16:35:04.0870651Z", "httpStatus": 200, "houseDemocraticControlPct": 70.0, "senateDemocraticControlPct": 64.0, "rawUtf8Bytes": 48380, "rawSha256": "b11d4812fa12e160db6ba6d909f69c4aae02f012c9e236cbb6ad808f685b768e"},
+    {"attempt": 3, "resolvedRemoteIp": "104.21.51.52", "observedAtUtc": "2026-11-09T16:35:06.6101264Z", "httpStatus": 200, "houseDemocraticControlPct": 70.0, "senateDemocraticControlPct": 64.0, "rawUtf8Bytes": 48380, "rawSha256": "b11d4812fa12e160db6ba6d909f69c4aae02f012c9e236cbb6ad808f685b768e"},
+    {"attempt": 4, "resolvedRemoteIp": "172.67.178.17", "observedAtUtc": "2026-11-09T16:35:09.3714068Z", "httpStatus": 200, "houseDemocraticControlPct": 70.0, "senateDemocraticControlPct": 64.0, "rawUtf8Bytes": 48380, "rawSha256": "b11d4812fa12e160db6ba6d909f69c4aae02f012c9e236cbb6ad808f685b768e"},
+    {"attempt": 5, "resolvedRemoteIp": "172.67.178.17", "observedAtUtc": "2026-11-09T16:35:11.5938843Z", "httpStatus": 200, "houseDemocraticControlPct": 70.0, "senateDemocraticControlPct": 64.0, "rawUtf8Bytes": 48380, "rawSha256": "b11d4812fa12e160db6ba6d909f69c4aae02f012c9e236cbb6ad808f685b768e"},
+    {"attempt": 6, "resolvedRemoteIp": "172.67.178.17", "observedAtUtc": "2026-11-09T16:35:14.8395714Z", "httpStatus": 200, "houseDemocraticControlPct": 70.0, "senateDemocraticControlPct": 64.0, "rawUtf8Bytes": 48380, "rawSha256": "b11d4812fa12e160db6ba6d909f69c4aae02f012c9e236cbb6ad808f685b768e"}
+  ],
+  "custodyRepresentation": "SELECTED_FIRST_PARTY_FIELDS_WITH_DIRECT_RAW_RESPONSE_HASHES_NOT_RAW_HTML_ARCHIVE",
+  "priorEvidence": {
+    "unresolvedObservation": "research/election-challenge-2026/current-sources/datum-signals-unresolved-20261102T230512Z.json",
+    "priorFullyVerifiedResolution": "research/election-challenge-2026/current-sources/datum-signals-resolution-20261102T191417Z.json",
+    "preserved": true
+  },
+  "admissionDecision": {
+    "houseDemocraticControlPct": "ADMITTED_70_PERCENT_PROSPECTIVELY_FOR_NEW_EDITION",
+    "senateDemocraticControlPct": "RETAINS_VERIFIED_64_PERCENT",
+    "reason": "The publisher advanced its displayed edition label and six direct no-cache requests across both previously conflicting endpoints returned byte-identical first-party responses."
+  },
+  "kahrelumInputReview": {
+    "isRefreshElectionProjectionsInput": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  }
+}

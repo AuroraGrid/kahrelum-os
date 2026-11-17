@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "datum_methods",
+  "sourceUrl": "https://datumsignals.com/methodology",
+  "primarySource": true,
+  "capture": {
+    "startedAtUtc": "2026-10-31T04:16:13Z",
+    "completedAtUtc": "2026-10-31T04:16:25Z",
+    "method": "Firecrawl fresh scrape maxAge=0",
+    "cachePolicy": "maxAge=0"
+  },
+  "custody": {
+    "representation": "TOOL_RETURNED_RAW_HTML_UTF8",
+    "sha256": "ca6bbf843fc18b4823706b25c70aaa4baf43688b73381860af3fae4f21918c6d",
+    "utf8Bytes": 45338,
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false,
+    "rawCaptureRetention": "Working capture; not part of the public commit. The public immutable receipt preserves factual observations and digests, not a replayable HTTP archive.",
+    "toolMarkdownSha256": "8c56117b59441a54f7ddb62ff332bd8fe206e9d34289e0be79e8dc029bbf83ab"
+  },
+  "publisherMetadata": {
+    "title": "Methodology - Datum Signals",
+    "scrapeId": "01a1902c-287b-768b-b591-a29d14e3cf62",
+    "sourceURL": "https://datumsignals.com/methodology",
+    "url": "https://datumsignals.com/methodology",
+    "statusCode": 200,
+    "contentType": "text/html; charset=utf-8",
+    "indexId": "8f25d10a-c8d3-4c01-b5d3-b4c529f37957"
+  },
+  "evidenceExcerpts": [],
+  "crossSourceReview": {
+    "scope": "Related provider review synthesized across the manifest sourceIds; a method page need not itself contain the numerical forecast.",
+    "facts": [
+      {
+        "providerId": "datum",
+        "houseControlPercent": 72,
+        "senateControlPercent": 63,
+        "publicationLabel": "October 30, 2026, 4:01 PM UTC",
+        "publishedAtUtc": "2026-10-30T16:01:00Z",
+        "houseEventReview": "The House control counter has data-target 72 and its adjacent label defines 218 needed. The HTML animation placeholder zero is not a forecast.",
+        "senateEventReview": "The captured page describes only 33 Senate seats up, whereas the comparison includes 35 including specials. Independent handling is also unresolved; the public 63 percent is retained as an excluded observation."
+      }
+    ]
+  }
+}

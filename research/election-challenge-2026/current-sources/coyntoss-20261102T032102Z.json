@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "COYNTOSS",
+  "sourceUrls": {"house": "https://chasecoyne.com/house", "senate": "https://chasecoyne.com/senate"},
+  "retrieval": {"houseRetrievedAtUtc": "2026-11-02T03:21:01.8341016Z", "senateRetrievedAtUtc": "2026-11-02T03:21:02.6370802Z", "representation": "FIRST_PARTY_HTTP_RESPONSE_UTF8_NOT_EXACT_WIRE_BYTES"},
+  "publisherEdition": {"houseReleaseId": "2026-11-01-02", "houseModelAsOf": "November 1, 2026", "housePollsThrough": "October 28, 2026", "senateUpdated": "November 1, 2026", "senateModelInputsThrough": "November 1, 2026"},
+  "observations": {
+    "houseDemocraticControlPct": 83.96,
+    "houseExpectedDemocraticSeats": 238.99,
+    "houseDisplayedExpectedDemocraticSeats": 239.0,
+    "houseMedianDemocraticSeats": 237,
+    "houseInterval80DemocraticSeats": [212, 268],
+    "senateDemocraticControlPct": 71.94,
+    "senateExpectedDemocraticSeats": 51.706,
+    "senateMedianDemocraticSeats": 52,
+    "senateInterval80DemocraticSeats": [49, 54]
+  },
+  "custody": {"houseHttpStatus": 200, "houseUtf8Bytes": 78695, "houseSha256": "12ad2c7a2c0bcd98c105045c649f2adb665f90396a80b378c12fda47e2d5e87f", "senateHttpStatus": 200, "senateUtf8Bytes": 60614, "senateSha256": "fe04807c561a454a214d059b009ba01e3d2e746769a0407fa619c3a4ad303f90", "httpDateStatus": "FUTURE_DATED_RELATIVE_TO_PROSPECTIVE_RETRIEVAL_NOT_USED_AS_PUBLICATION_TIME"},
+  "changeFromPriorAdmittedEdition": {"houseDemocraticControlPct": {"from": 83.85, "to": 83.96}, "houseExpectedDemocraticSeats": {"from": 238.8, "to": 238.99}, "senateDemocraticControlPct": {"from": 70.11, "to": 71.94}, "senateExpectedDemocraticSeats": {"from": 51.603, "to": 51.706}},
+  "kahrelumInputReview": {"script": "scripts/refresh-election-projections.py", "providerUsedByScript": false, "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"}
+}

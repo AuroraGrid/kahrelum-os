@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "99chambers",
+  "sourceUrl": "https://99chambers.app/updates/2026-10-30",
+  "primarySource": true,
+  "capture": {
+    "startedAtUtc": "2026-10-31T04:12:28Z",
+    "completedAtUtc": "2026-10-31T04:14:24Z",
+    "method": "Firecrawl fresh scrape maxAge=0",
+    "cachePolicy": "maxAge=0"
+  },
+  "custody": {
+    "representation": "TOOL_RETURNED_RAW_HTML_UTF8",
+    "sha256": "be65eaa4f8df2887aac103e42e77ac1501aa0d3d515ca7a8702b06d939a5b292",
+    "utf8Bytes": 349882,
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false,
+    "rawCaptureRetention": "Working capture; not part of the public commit. The public immutable receipt preserves factual observations and digests, not a replayable HTTP archive.",
+    "toolMarkdownSha256": "447721451d580c905bbaddb72f58ebf965ba09b38f72a1bcfe41e9b5efae0a86"
+  },
+  "publisherMetadata": {
+    "title": "Forecast update, Oct 30, 2026 · 99chambers",
+    "scrapeId": "01a19029-7b6c-74df-8927-95a34b44bb51",
+    "sourceURL": "https://99chambers.app/updates/2026-10-30",
+    "url": "https://99chambers.app/updates/2026-10-30",
+    "statusCode": 200,
+    "contentType": "text/html",
+    "indexId": "e3595687-6f7a-4dda-b260-90a1d897cf85"
+  },
+  "evidenceExcerpts": [
+    {
+      "exactText": "**D 98%**",
+      "representation": "markdown",
+      "characterOffset": 7802
+    },
+    {
+      "exactText": "**D 80%**",
+      "representation": "markdown",
+      "characterOffset": 7503
+    }
+  ],
+  "crossSourceReview": {
+    "scope": "Related provider review synthesized across the manifest sourceIds; a method page need not itself contain the numerical forecast.",
+    "facts": [
+      {
+        "providerId": "99chambers",
+        "houseControlPercent": 98,
+        "senateControlPercent": 80,
+        "publicationLabel": "October 30, 2026, 11:27 PM ET",
+        "publishedAtUtc": "2026-10-31T03:27:00Z",
+        "houseEventReview": "The Horizon edition gives a 98 percent House majority probability, and the House page defines the majority as 218 of 435.",
+        "senateEventReview": "The Senate page establishes 51 and a Republican 50-seat tiebreak. Its treatment of de facto party nominees does not establish a complete, identical independent-caucus mapping."
+      }
+    ]
+  }
+}

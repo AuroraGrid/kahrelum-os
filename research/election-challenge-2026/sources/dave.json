@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "dave",
+  "sourceUrl": "https://www.davemanuel.com/2026-midterm-forecast.php",
+  "primarySource": true,
+  "capture": {
+    "startedAtUtc": "2026-10-31T04:15:38Z",
+    "completedAtUtc": "2026-10-31T04:15:49Z",
+    "method": "Firecrawl fresh scrape maxAge=0",
+    "cachePolicy": "maxAge=0"
+  },
+  "custody": {
+    "representation": "TOOL_RETURNED_RAW_HTML_UTF8",
+    "sha256": "6502ebc480ec4de825bd76054d976f5a54a4497d2226ec89a79a1f1b1017d815",
+    "utf8Bytes": 260184,
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false,
+    "rawCaptureRetention": "Working capture; not part of the public commit. The public immutable receipt preserves factual observations and digests, not a replayable HTTP archive.",
+    "toolMarkdownSha256": "35df68fa6dc4039c7760569cf9995af3f7510b59e1361041c699398a8e910e7f"
+  },
+  "publisherMetadata": {
+    "title": "2026 Midterm Election Forecast: Senate, House and Governor Odds",
+    "scrapeId": "01a1902b-9ed2-774a-b274-90b4b6ceaeee",
+    "sourceURL": "https://www.davemanuel.com/2026-midterm-forecast.php",
+    "url": "https://www.davemanuel.com/2026-midterm-forecast.php",
+    "statusCode": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "indexId": "c3454ef6-71f0-4f75-bdc8-e69a5a35bfe2"
+  },
+  "evidenceExcerpts": [
+    {
+      "exactText": "House (435 seats, 218 for a majority)",
+      "representation": "markdown",
+      "characterOffset": 2284
+    },
+    {
+      "exactText": "94%",
+      "representation": "markdown",
+      "characterOffset": 1671
+    }
+  ],
+  "crossSourceReview": {
+    "scope": "Related provider review synthesized across the manifest sourceIds; a method page need not itself contain the numerical forecast.",
+    "facts": [
+      {
+        "providerId": "dave",
+        "houseControlPercent": 94,
+        "senateControlPercent": 70,
+        "publicationLabel": "October 30, 2026, 11:45 PM ET",
+        "publishedAtUtc": "2026-10-31T03:45:00Z",
+        "houseEventReview": "The forecast table reports 94 percent Democratic House control and explicitly states 218 of 435.",
+        "senateEventReview": "King and Sanders are included in the Democratic count; new uncommitted independent winners are counted separately. A distinct 3 percent neither-side-control outcome remains. This is not automatically equivalent to KAHRELUM conditional independent caucus assumptions."
+      }
+    ]
+  }
+}

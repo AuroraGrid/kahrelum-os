@@ -3,9 +3,15 @@
 **New technical research:** [K-PREDICT v0.6: probabilistic election modeling and honest historical evaluation](./research/israel-2026-election/K_PREDICT_V06_2026-10-27.md). Retrospective evidence; overall PARTIAL; no established model superiority or KAHRELUM live 2026 election-outcome forecast.
 
 
+**NFL Sports Intelligence Desk v1.1:** [Public trade board source](./nfl/trades.html) · [Historical research snapshot](./nfl/trade-board.json) · [Operational SourceGrid](./nfl/sourcegrid.json) · [Per-source health](./nfl/source-health.json) · [Append-only forecast ledger](./nfl/forecast-ledger.json) · [Operations and publication boundary](./research/nfl-2026-trade-deadline/SPORTS_INTELLIGENCE_V1_OPERATIONS.md). The scheduled workflow records discovery and freshness in GitHub; the `/nfl/trades` Firebase route changes only after a verified guarded deployment and explicit promotion approval.
+
+**US election results watch:** [Poliwave-first monitoring protocol](./research/election-challenge-2026/POLIWAVE_SOURCE_WATCH.md) · [470 link-only race references](./election/poliwave-watchlist.json) · [KAHRELUM election race browser](./election-challenge.html). Poliwave is an unofficial first-look link, not a certified result source or a licensed dataset feed. Original KAHRELUM forecast locks and publication approvals remain unchanged.
+
 **Evidence-to-decision control plane**
 
 Founder: [Hasan Raza Kazmi](https://github.com/AuroraGrid)
+
+**Recruiter portfolio:** [Selected research, methods, results, contributions, and limitations](./PROFESSIONAL_PORTFOLIO.md) — OSINT/public-source research, AI evaluation, threat and source monitoring, and evidence verification.
 
 **Canonical public site: https://kahrelum.com**
 
@@ -22,6 +28,34 @@ KAHRELUM OS is an application-layer system for research, forecasting, AI evaluat
 This repository is KAHRELUM's canonical **public architecture, evidence, and release-record surface**. It is not the frozen runtime archive. Runtime releases are identified by exact SHA-256 and their public release records; the HTML/Markdown tree should not be treated as a substitute for those frozen bytes.
 
 Current release record: [KAHRELUM OS v2.3.4 FINAL](./RELEASE_v2.3.4_FINAL.md).
+
+## Firebase Hosting releases
+
+`kahrelum.com` is served by the existing Firebase Hosting site `kahrelum-public-hosting`. The repository is an overlay source: the live Firebase version also contains election snapshots, API payloads and public assets that are not reconstructed from this GitHub root.
+
+Use the guarded release wrapper from an authenticated deployment workstation:
+
+```powershell
+.\scripts\deploy-unified-firebase.ps1 -Plan
+.\scripts\deploy-unified-firebase.ps1 -Preview
+.\scripts\deploy-unified-firebase.ps1 -Promote
+```
+
+`-Plan` is read-only. `-Preview` starts from Firebase's current finalized live version, preserves every existing file hash and Hosting rule, applies only the governed repository overlay, and verifies the preview. `-Promote` releases that exact preview version only when production still matches the version used to build it. A concurrent production change invalidates the receipt and requires a new preview.
+
+The former `-FirebaseRoot ... -Deploy` directory workflow is intentionally blocked because a stale local directory can delete production-only files. Preview receipts are local, ignored files under `.firebase-deploy/`; they contain file hashes and release metadata, not credentials.
+
+### Scoped Investigations update (without stale Firebase overlays)
+
+For an Investigations-only publication, **do not use** the broad `full` or `publishing` release profiles. Those include unrelated content that may be older than the deployed Firebase state. Use the dedicated `investigations` profile:
+
+```powershell
+.\scripts\deploy-unified-firebase.ps1 -Plan -Profile investigations
+.\scripts\deploy-unified-firebase.ps1 -Preview -Profile investigations
+.\scripts\deploy-unified-firebase.ps1 -Promote -Profile investigations
+```
+
+This profile overlays only `/investigations.html` (and its existing sitemap entry if necessary), keeps live assets/API files and Hosting configuration, verifies all routes and API hashes, and refuses promotion if the live Firebase version changed after preview. The case desk is based on the recovered Oct 30 historical register (56 families plus four leads) and bounded Oct 31/Nov 1 evidence logs; it does **not** claim 60 completed investigations or ten forecast wins.
 
 ## Research & investigations
 
@@ -141,7 +175,7 @@ The point is not to design a test KAHRELUM is supposed to win. The point is to c
 ## Links
 
 - Canonical public site: https://kahrelum.com
-- LinkedIn: https://www.linkedin.com/in/hasan-raza-kazmi-a756b4407/
+- LinkedIn: https://www.linkedin.com/in/hasan-raza-kazmi
 - Evidence: [BENCHMARKS.md](./BENCHMARKS.md)
 - Architecture: [ARCHITECTURE.md](./ARCHITECTURE.md)
 - Research & Investigations: [research/README.md](./research/README.md)

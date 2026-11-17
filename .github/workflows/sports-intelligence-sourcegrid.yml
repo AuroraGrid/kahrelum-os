@@ -1,0 +1,144 @@
+name: Sports Intelligence SourceGrid
+
+on:
+  workflow_dispatch:
+    inputs:
+      publish_snapshot:
+        description: 'Publish the validated repository snapshot even without a new SourceGrid commit'
+        type: boolean
+        default: false
+  schedule:
+    # Five-minute requests, offset from the top of the hour. GitHub is best-effort.
+    # Limit monitoring to the remaining 2026 deadline dates; the year gate is below.
+    - cron: "3-58/5 * 31 10 *"
+    - cron: "3-58/5 * 1-10 11 *"
+    # The script gates this annual cron to the 2026 audit lifecycle and remains fail-closed thereafter.
+    - cron: "37 14 12 11 *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sports-intelligence-sourcegrid
+  cancel-in-progress: false
+
+jobs:
+  source-check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      SOURCEGRID_REF: ${{ github.ref_name }}
+      KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON }}
+    steps:
+      - name: Gate the 2026 monitoring and audit lifecycle
+        id: lifecycle
+        shell: bash
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import datetime as dt
+          now = dt.datetime.now(dt.timezone.utc)
+          deadline = dt.datetime(2026, 11, 10, 21, tzinfo=dt.timezone.utc)
+          audit_start = dt.datetime(2026, 11, 12, 14, tzinfo=dt.timezone.utc)
+          audit_end = dt.datetime(2026, 11, 13, tzinfo=dt.timezone.utc)
+          enabled = now.year == 2026 and (now < deadline or audit_start <= now < audit_end)
+          print(f"enabled={str(enabled).lower()}")
+          PY
+
+      - name: Check out triggering branch
+        if: steps.lifecycle.outputs.enabled == 'true'
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.0
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Run fail-closed tests before network activity
+        id: tests
+        if: steps.lifecycle.outputs.enabled == 'true'
+        run: |
+          python3 tests/test_sports_intelligence.py -v
+          python3 tests/test_sports_forecasts.py -v
+
+      - name: Check credential-free SourceGrid endpoints
+        id: sourcegrid
+        if: steps.lifecycle.outputs.enabled == 'true'
+        continue-on-error: true
+        run: python3 scripts/sports_intelligence.py ingest
+
+      - name: Validate custody and generated state
+        id: validation
+        if: always() && steps.lifecycle.outputs.enabled == 'true'
+        run: python3 scripts/sports_intelligence.py validate
+
+      - name: Record truthful source health in the run summary
+        if: always() && steps.lifecycle.outputs.enabled == 'true'
+        shell: bash
+        run: |
+          python3 - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          status = json.load(open("nfl/refresh-status.json", encoding="utf-8"))
+          print("# SourceGrid refresh")
+          for key in ("feedFreshness", "lastCompletedCheckAt", "lastFullySuccessfulSourceCheckAt", "sourcesAttempted", "sourcesSucceeded", "sourcesFailed", "observationsNew", "duplicatesSuppressed", "reviewQueueCount"):
+              print(f"- **{key}:** {status.get(key)}")
+          if status.get("errors"):
+              print("\n## Source failures")
+              for error in status["errors"]:
+                  print(f"- `{error['sourceIntegrationId']}`: {error['error']}")
+          PY
+
+      - name: Record source-check state on main
+        id: source_commit
+        if: always() && steps.lifecycle.outputs.enabled == 'true' && steps.tests.outcome == 'success' && steps.validation.outcome == 'success'
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add nfl/sourcegrid.json nfl/source-observations.json nfl/review-queue.json nfl/refresh-status.json nfl/source-health.json nfl/public-feed.json nfl/publishing.json nfl/deadline-audit.json nfl/forecast-ledger.json nfl/desk-live.json
+          if ! git diff --cached --quiet; then
+            git commit -m "sourcegrid: record scheduled NFL source check"
+            git push origin "HEAD:${SOURCEGRID_REF}"
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # SourceGrid commits are pushed by GITHUB_TOKEN; GitHub intentionally
+      # suppresses new push-triggered workflows from those commits. Publish
+      # in this same validated workflow, not an independent on:push workflow.
+      - name: Explain missing Firebase publisher credentials
+        if: ${{ github.ref == 'refs/heads/main' && (steps.source_commit.outputs.changed == 'true' || inputs.publish_snapshot == true) && env.KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON == '' }}
+        shell: bash
+        run: |
+          echo "::warning::Automatic Firebase publish SKIPPED: required Hosting service-account secret is not configured."
+          echo "Automatic Firebase publish SKIPPED: configure the repository secret KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON for scoped Hosting publication." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Publish public status on approval only
+        id: firebase_publish
+        # This profile publishes validated status/source ledgers only; it cannot
+        # publish unapproved stories, mutate historical probabilities, or erase
+        # unrelated Firebase files. Preview, promote and readback fail closed.
+        if: ${{ github.ref == 'refs/heads/main' && steps.tests.outcome == 'success' && steps.validation.outcome == 'success' && steps.source_commit.outcome == 'success' && (steps.source_commit.outputs.changed == 'true' || inputs.publish_snapshot == true) && env.KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON != '' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          secret_path="$RUNNER_TEMP/kahrelum-firebase-service-account.json"
+          printf '%s' "$KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON" > "$secret_path"
+          chmod 600 "$secret_path"
+          trap 'rm -f "$secret_path"' EXIT
+          export GOOGLE_APPLICATION_CREDENTIALS="$secret_path"
+          export XDG_CONFIG_HOME="$RUNNER_TEMP/kahrelum-isolated-firebase"
+          mkdir -p "$XDG_CONFIG_HOME"
+          npm install --global firebase-tools@15.34.2
+          export FIREBASE_TOOLS_ROOT="$(npm root -g)/firebase-tools"
+          node --check scripts/firebase-overlay-release.cjs
+          node scripts/firebase-overlay-release.cjs --plan --profile nfl-sourcegrid-data
+          node scripts/firebase-overlay-release.cjs --preview --profile nfl-sourcegrid-data
+          node scripts/firebase-overlay-release.cjs --promote --profile nfl-sourcegrid-data
+          echo "Authenticated Firebase preview, live promotion and exact production readback completed." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Fail workflow if every integration failed
+        if: steps.lifecycle.outputs.enabled == 'true' && steps.sourcegrid.outcome != 'success'
+        run: |
+          echo "SourceGrid recorded a failed/stale refresh; see nfl/refresh-status.json"
+          exit 1
+

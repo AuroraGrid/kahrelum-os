@@ -1,0 +1,56 @@
+{
+  "case_id": "CHIP-01",
+  "issued_date": "2026-11-10",
+  "status": "new_public_forecast",
+  "custody_note": "New forecast made after the November 8 board announcement and November 9 lawsuit/market reaction. First GitHub commit introducing this file is the timestamp. This is not a backdated prediction, a previously locked November 8 forecast or evidence of an established accuracy score.",
+  "subject": "Nvidia CEO Jensen Huang status at February 10, 2027 deadline",
+  "source_cutoff_date": "2026-11-10",
+  "author": "KAHRELUM | analyst working estimate, AI-assisted; human editorial sign-off not independently established",
+  "probability_type": "subjective scenario probabilities, not measured frequencies or bookmaker odds",
+  "outcomes": [
+    {
+      "id": "still_ceo",
+      "label": "Remains Nvidia CEO",
+      "probability": 0.85,
+      "criterion": "Official Nvidia disclosures identify Jensen Huang as chief executive at 23:59 ET on February 10, 2027."
+    },
+    {
+      "id": "voluntary_exit",
+      "label": "No longer CEO via voluntary resignation or agreed succession",
+      "probability": 0.1,
+      "criterion": "He is no longer CEO at deadline and Nvidia's official stated primary departure mechanism is voluntary resignation, retirement or mutually agreed succession."
+    },
+    {
+      "id": "board_removal",
+      "label": "No longer CEO through involuntary board removal",
+      "probability": 0.05,
+      "criterion": "He is no longer CEO at deadline and Nvidia explicitly attributes departure to involuntary termination or board removal."
+    }
+  ],
+  "resolution": {
+    "deadline": "2027-02-10T23:59:00-05:00",
+    "rules": [
+      "Resolve the company's officially identified CEO at 23:59 US Eastern on February 10, 2027.",
+      "Classify a non-CEO outcome by the best-supported disclosed reason; require written Nvidia board or SEC evidence for involuntary board removal.",
+      "February 10, 2027 is the settlement date. Acting or interim leadership alone does not establish permanent replacement when official filings continue to designate Huang CEO.",
+      "If a departure occurs for death, incapacity, hostile takeover or an otherwise uncategorizable mechanism, mark EXCEPTION/UNSCORED, not a retrospective reinterpretation of the three bins.",
+      "Any future revisions require a new dated file; never edit the original probability vector to fit evidence."
+    ],
+    "primary_source": "https://investor.nvidia.com/",
+    "fallback_source": "Nvidia SEC Form 8-K/10-Q and contemporaneous board press statements, checked against leadership page; preserve conflicts."
+  },
+  "falsifiers": [
+    "Official Nvidia announcement of successor appointment and Huang leaving CEO role before the deadline.",
+    "Independent board review announces material compromised information or governance noncompliance.",
+    "Official resolution finds no compromise and confirms continued leadership.",
+    "Verified subpoena, testimony, or law-enforcement announcement changes the oversight/operational trajectory."
+  ],
+  "sources": [
+    "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors",
+    "https://nvidianews.nvidia.com/news/a-message-to-our-company",
+    "https://foreignaffairs.house.gov/news/press-releases/chairmen-mast-moolenaar-and-crawford-request-jensen-huang-brief-congress-on-link-to-chinese-intelligence-asset",
+    "https://www.reuters.com/world/nvidia-ceo-huang-sued-over-disclosures-related-suspected-chinese-spy-2026-11-09/"
+  ],
+  "scored": false,
+  "score": null
+}

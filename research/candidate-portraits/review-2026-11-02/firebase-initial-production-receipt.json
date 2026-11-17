@@ -1,0 +1,30 @@
+{
+  "promotedAt": "2026-11-02T20:49:34.331Z",
+  "release": "projects/806087933597/sites/kahrelum-public-hosting/channels/live/releases/1793652555419000",
+  "version": "projects/806087933597/sites/kahrelum-public-hosting/versions/05a93f2a275fa68c",
+  "fileCount": 3248,
+  "desiredMapHash": "162780b8856c5b06c04bae4ce6efcd7f33a1898ac88f2eb878aac0ba92c8a83f",
+  "sourceCommit": "71f9ca87c28a2db36c245adf52fba9aab13ecdc9",
+  "configUnchanged": true,
+  "verification": {
+    "origin": "https://kahrelum.com",
+    "routes": [
+      {
+        "route": "/election-challenge",
+        "status": 200,
+        "sha256": "a36bba5d8686352d6ba5051c4f15cb86556b80b9df3099ea965161a7ccc48f4e"
+      }
+    ],
+    "coverage": {
+      "matchedCards": 429,
+      "uniquePeople": 429,
+      "available": true
+    },
+    "localImages": 21,
+    "apiHashes": {
+      "/api/v1": "b23654d1b5989f1b48823f72574bf6f69ff9f19c2b78fc1fea743d41fc1cb6c0",
+      "/api/v1/release": "cf8f22118f5b2d366ec984a2d882e4f522182462edff8d87abba91824b3502da",
+      "/api/v1/example": "c08436e548be07e62bd304b779034d12fe81d90ec7e3a57179547e079aa36c8a"
+    }
+  }
+}

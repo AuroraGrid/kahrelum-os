@@ -1,0 +1,654 @@
+{
+  "synthetic": true,
+  "externalModelRun": false,
+  "results": [
+    {
+      "id": "complete",
+      "input": {
+        "id": "synthetic-complete",
+        "decisionAt": "2026-11-17T12:00:00Z",
+        "maxAgeHours": 24,
+        "intent": "sell",
+        "coin": {
+          "series": "Morgan",
+          "year": 1921,
+          "mintmark": "Philadelphia",
+          "condition": "AU",
+          "authenticated": true,
+          "identityVerified": true
+        },
+        "quote": {
+          "kind": "bid",
+          "amount": 42,
+          "currency": "USD",
+          "unit": "per_coin",
+          "quantity": 1,
+          "fees": 2,
+          "shipping": 1,
+          "executable": true,
+          "counterparty": "Synthetic Dealer",
+          "terms": "Synthetic inspected-coin acceptance",
+          "observedAt": "2026-11-17T11:00:00Z",
+          "expiresAt": "2026-11-17T13:00:00Z",
+          "sourceId": "bid"
+        },
+        "spot": {
+          "amount": 40,
+          "currency": "USD",
+          "unit": "USD_per_troy_oz",
+          "observedAt": "2026-11-17T11:00:00Z",
+          "sourceId": "spot"
+        },
+        "sources": [
+          {
+            "id": "bid",
+            "url": "https://example.com/bid",
+            "verified": true,
+            "availableAt": "2026-11-17T11:00:00Z"
+          },
+          {
+            "id": "spot",
+            "url": "https://example.com/spot",
+            "verified": true,
+            "availableAt": "2026-11-17T11:00:00Z"
+          }
+        ],
+        "conflicts": [],
+        "history": []
+      },
+      "actual": {
+        "status": "READY_FOR_COMPARISON",
+        "reasons": [],
+        "melt": 30.936,
+        "premium": 11.064,
+        "netProceeds": 39,
+        "totalCost": null,
+        "clarification": null,
+        "audit": {
+          "version": "MQA-001-reconstructed-v1",
+          "inputHash": "9910cfababa5e7952b2cad4bebe50a3397eccbbd583df4acb54447a60aed2a62",
+          "silverOzt": 0.7734,
+          "history": [
+            {
+              "id": "synthetic-complete",
+              "decisionAt": "2026-11-17T12:00:00Z",
+              "status": "READY_FOR_COMPARISON",
+              "reasons": []
+            }
+          ]
+        },
+        "limitation": "Caller-supplied evidence flags require human verification. Comparison only; no investment recommendation, coin authentication, or external model evaluation."
+      }
+    },
+    {
+      "id": "anonymous",
+      "input": {
+        "id": "synthetic-anonymous",
+        "decisionAt": "2026-11-17T12:00:00Z",
+        "maxAgeHours": 24,
+        "intent": "sell",
+        "coin": {
+          "series": "Morgan",
+          "year": 1921,
+          "mintmark": "Philadelphia",
+          "condition": "AU",
+          "authenticated": true,
+          "identityVerified": true
+        },
+        "quote": {
+          "kind": "bid",
+          "amount": 42,
+          "currency": "USD",
+          "unit": "per_coin",
+          "quantity": 1,
+          "fees": 2,
+          "shipping": 1,
+          "executable": false,
+          "counterparty": "Synthetic Dealer",
+          "terms": "Synthetic inspected-coin acceptance",
+          "observedAt": "2026-11-17T11:00:00Z",
+          "expiresAt": "2026-11-17T13:00:00Z",
+          "sourceId": "bid"
+        },
+        "spot": {
+          "amount": 40,
+          "currency": "USD",
+          "unit": "USD_per_troy_oz",
+          "observedAt": "2026-11-17T11:00:00Z",
+          "sourceId": "spot"
+        },
+        "sources": [],
+        "conflicts": [],
+        "history": []
+      },
+      "actual": {
+        "status": "HOLD",
+        "reasons": [
+          "SOURCE_IDS",
+          "NON_EXECUTABLE",
+          "QUOTE_SOURCE",
+          "SPOT_SOURCE"
+        ],
+        "melt": null,
+        "premium": null,
+        "netProceeds": null,
+        "totalCost": null,
+        "clarification": "Supply timestamped, attributable evidence for: SOURCE_IDS, NON_EXECUTABLE, QUOTE_SOURCE, SPOT_SOURCE",
+        "audit": {
+          "version": "MQA-001-reconstructed-v1",
+          "inputHash": "195a663ffc1850d9cfff84254624ed5fa688d0f6018a14ca855bc6e141b545f2",
+          "silverOzt": 0.7734,
+          "history": [
+            {
+              "id": "synthetic-anonymous",
+              "decisionAt": "2026-11-17T12:00:00Z",
+              "status": "HOLD",
+              "reasons": [
+                "SOURCE_IDS",
+                "NON_EXECUTABLE",
+                "QUOTE_SOURCE",
+                "SPOT_SOURCE"
+              ]
+            }
+          ]
+        },
+        "limitation": "Caller-supplied evidence flags require human verification. Comparison only; no investment recommendation, coin authentication, or external model evaluation."
+      }
+    },
+    {
+      "id": "guide",
+      "input": {
+        "id": "synthetic-guide",
+        "decisionAt": "2026-11-17T12:00:00Z",
+        "maxAgeHours": 24,
+        "intent": "sell",
+        "coin": {
+          "series": "Morgan",
+          "year": 1921,
+          "mintmark": "Philadelphia",
+          "condition": "AU",
+          "authenticated": true,
+          "identityVerified": true
+        },
+        "quote": {
+          "kind": "guide",
+          "amount": 42,
+          "currency": "USD",
+          "unit": "per_coin",
+          "quantity": 1,
+          "fees": 2,
+          "shipping": 1,
+          "executable": true,
+          "counterparty": "Synthetic Dealer",
+          "terms": "Synthetic inspected-coin acceptance",
+          "observedAt": "2026-11-17T11:00:00Z",
+          "expiresAt": "2026-11-17T13:00:00Z",
+          "sourceId": "bid"
+        },
+        "spot": {
+          "amount": 40,
+          "currency": "USD",
+          "unit": "USD_per_troy_oz",
+          "observedAt": "2026-11-17T11:00:00Z",
+          "sourceId": "spot"
+        },
+        "sources": [
+          {
+            "id": "bid",
+            "url": "https://example.com/bid",
+            "verified": true,
+            "availableAt": "2026-11-17T11:00:00Z"
+          },
+          {
+            "id": "spot",
+            "url": "https://example.com/spot",
+            "verified": true,
+            "availableAt": "2026-11-17T11:00:00Z"
+          }
+        ],
+        "conflicts": [],
+        "history": []
+      },
+      "actual": {
+        "status": "HOLD",
+        "reasons": [
+          "QUOTE_DIRECTION"
+        ],
+        "melt": null,
+        "premium": null,
+        "netProceeds": null,
+        "totalCost": null,
+        "clarification": "Supply timestamped, attributable evidence for: QUOTE_DIRECTION",
+        "audit": {
+          "version": "MQA-001-reconstructed-v1",
+          "inputHash": "0f58e174b40b15d09514d380e7872042744577f960b0142dbaa57aec72386eb9",
+          "silverOzt": 0.7734,
+          "history": [
+            {
+              "id": "synthetic-guide",
+              "decisionAt": "2026-11-17T12:00:00Z",
+              "status": "HOLD",
+              "reasons": [
+                "QUOTE_DIRECTION"
+              ]
+            }
+          ]
+        },
+        "limitation": "Caller-supplied evidence flags require human verification. Comparison only; no investment recommendation, coin authentication, or external model evaluation."
+      }
+    },
+    {
+      "id": "stale",
+      "input": {
+        "id": "synthetic-stale",
+        "decisionAt": "2026-11-17T12:00:00Z",
+        "maxAgeHours": 24,
+        "intent": "sell",
+        "coin": {
+          "series": "Morgan",
+          "year": 1921,
+          "mintmark": "Philadelphia",
+          "condition": "AU",
+          "authenticated": true,
+          "identityVerified": true
+        },
+        "quote": {
+          "kind": "bid",
+          "amount": 42,
+          "currency": "USD",
+          "unit": "per_coin",
+          "quantity": 1,
+          "fees": 2,
+          "shipping": 1,
+          "executable": true,
+          "counterparty": "Synthetic Dealer",
+          "terms": "Synthetic inspected-coin acceptance",
+          "observedAt": "2026-11-14T11:00:00Z",
+          "expiresAt": "2026-11-17T13:00:00Z",
+          "sourceId": "bid"
+        },
+        "spot": {
+          "amount": 40,
+          "currency": "USD",
+          "unit": "USD_per_troy_oz",
+          "observedAt": "2026-11-17T11:00:00Z",
+          "sourceId": "spot"
+        },
+        "sources": [
+          {
+            "id": "bid",
+            "url": "https://example.com/bid",
+            "verified": true,
+            "availableAt": "2026-11-17T11:00:00Z"
+          },
+          {
+            "id": "spot",
+            "url": "https://example.com/spot",
+            "verified": true,
+            "availableAt": "2026-11-17T11:00:00Z"
+          }
+        ],
+        "conflicts": [],
+        "history": []
+      },
+      "actual": {
+        "status": "HOLD",
+        "reasons": [
+          "QUOTE_TIME"
+        ],
+        "melt": null,
+        "premium": null,
+        "netProceeds": null,
+        "totalCost": null,
+        "clarification": "Supply timestamped, attributable evidence for: QUOTE_TIME",
+        "audit": {
+          "version": "MQA-001-reconstructed-v1",
+          "inputHash": "530bc744c684fcc4301b002eca7a31b80b187ea2b5dc4ee7c1a37cf11e98bf9f",
+          "silverOzt": 0.7734,
+          "history": [
+            {
+              "id": "synthetic-stale",
+              "decisionAt": "2026-11-17T12:00:00Z",
+              "status": "HOLD",
+              "reasons": [
+                "QUOTE_TIME"
+              ]
+            }
+          ]
+        },
+        "limitation": "Caller-supplied evidence flags require human verification. Comparison only; no investment recommendation, coin authentication, or external model evaluation."
+      }
+    },
+    {
+      "id": "unknown-coin",
+      "input": {
+        "id": "synthetic-unknown-coin",
+        "decisionAt": "2026-11-17T12:00:00Z",
+        "maxAgeHours": 24,
+        "intent": "sell",
+        "coin": {
+          "series": "Morgan",
+          "year": 1921,
+          "mintmark": "Philadelphia",
+          "condition": "AU",
+          "authenticated": false,
+          "identityVerified": true
+        },
+        "quote": {
+          "kind": "bid",
+          "amount": 42,
+          "currency": "USD",
+          "unit": "per_coin",
+          "quantity": 1,
+          "fees": 2,
+          "shipping": 1,
+          "executable": true,
+          "counterparty": "Synthetic Dealer",
+          "terms": "Synthetic inspected-coin acceptance",
+          "observedAt": "2026-11-17T11:00:00Z",
+          "expiresAt": "2026-11-17T13:00:00Z",
+          "sourceId": "bid"
+        },
+        "spot": {
+          "amount": 40,
+          "currency": "USD",
+          "unit": "USD_per_troy_oz",
+          "observedAt": "2026-11-17T11:00:00Z",
+          "sourceId": "spot"
+        },
+        "sources": [
+          {
+            "id": "bid",
+            "url": "https://example.com/bid",
+            "verified": true,
+            "availableAt": "2026-11-17T11:00:00Z"
+          },
+          {
+            "id": "spot",
+            "url": "https://example.com/spot",
+            "verified": true,
+            "availableAt": "2026-11-17T11:00:00Z"
+          }
+        ],
+        "conflicts": [],
+        "history": []
+      },
+      "actual": {
+        "status": "HOLD",
+        "reasons": [
+          "COIN_IDENTITY"
+        ],
+        "melt": null,
+        "premium": null,
+        "netProceeds": null,
+        "totalCost": null,
+        "clarification": "Supply timestamped, attributable evidence for: COIN_IDENTITY",
+        "audit": {
+          "version": "MQA-001-reconstructed-v1",
+          "inputHash": "9011180b0938f7760a11af072d7b073929b2d2a62e764359190b71636dcd5ef7",
+          "silverOzt": 0.7734,
+          "history": [
+            {
+              "id": "synthetic-unknown-coin",
+              "decisionAt": "2026-11-17T12:00:00Z",
+              "status": "HOLD",
+              "reasons": [
+                "COIN_IDENTITY"
+              ]
+            }
+          ]
+        },
+        "limitation": "Caller-supplied evidence flags require human verification. Comparison only; no investment recommendation, coin authentication, or external model evaluation."
+      }
+    },
+    {
+      "id": "conflict",
+      "input": {
+        "id": "synthetic-conflict",
+        "decisionAt": "2026-11-17T12:00:00Z",
+        "maxAgeHours": 24,
+        "intent": "sell",
+        "coin": {
+          "series": "Morgan",
+          "year": 1921,
+          "mintmark": "Philadelphia",
+          "condition": "AU",
+          "authenticated": true,
+          "identityVerified": true
+        },
+        "quote": {
+          "kind": "bid",
+          "amount": 42,
+          "currency": "USD",
+          "unit": "per_coin",
+          "quantity": 1,
+          "fees": 2,
+          "shipping": 1,
+          "executable": true,
+          "counterparty": "Synthetic Dealer",
+          "terms": "Synthetic inspected-coin acceptance",
+          "observedAt": "2026-11-17T11:00:00Z",
+          "expiresAt": "2026-11-17T13:00:00Z",
+          "sourceId": "bid"
+        },
+        "spot": {
+          "amount": 40,
+          "currency": "USD",
+          "unit": "USD_per_troy_oz",
+          "observedAt": "2026-11-17T11:00:00Z",
+          "sourceId": "spot"
+        },
+        "sources": [
+          {
+            "id": "bid",
+            "url": "https://example.com/bid",
+            "verified": true,
+            "availableAt": "2026-11-17T11:00:00Z"
+          },
+          {
+            "id": "spot",
+            "url": "https://example.com/spot",
+            "verified": true,
+            "availableAt": "2026-11-17T11:00:00Z"
+          }
+        ],
+        "conflicts": [
+          "identity differs"
+        ],
+        "history": []
+      },
+      "actual": {
+        "status": "HOLD",
+        "reasons": [
+          "SOURCE_CONFLICT"
+        ],
+        "melt": null,
+        "premium": null,
+        "netProceeds": null,
+        "totalCost": null,
+        "clarification": "Supply timestamped, attributable evidence for: SOURCE_CONFLICT",
+        "audit": {
+          "version": "MQA-001-reconstructed-v1",
+          "inputHash": "75b451f71e179b8a38aa63604627f34a8e1147d0a7d1fdfdb768dca633988a10",
+          "silverOzt": 0.7734,
+          "history": [
+            {
+              "id": "synthetic-conflict",
+              "decisionAt": "2026-11-17T12:00:00Z",
+              "status": "HOLD",
+              "reasons": [
+                "SOURCE_CONFLICT"
+              ]
+            }
+          ]
+        },
+        "limitation": "Caller-supplied evidence flags require human verification. Comparison only; no investment recommendation, coin authentication, or external model evaluation."
+      }
+    },
+    {
+      "id": "double-count",
+      "input": {
+        "id": "synthetic-double-count",
+        "decisionAt": "2026-11-17T12:00:00Z",
+        "maxAgeHours": 24,
+        "intent": "sell",
+        "coin": {
+          "series": "Morgan",
+          "year": 1921,
+          "mintmark": "Philadelphia",
+          "condition": "AU",
+          "authenticated": true,
+          "identityVerified": true
+        },
+        "quote": {
+          "kind": "bid",
+          "amount": 42,
+          "currency": "USD",
+          "unit": "per_coin",
+          "quantity": 1,
+          "fees": 2,
+          "shipping": 1,
+          "executable": true,
+          "counterparty": "Synthetic Dealer",
+          "terms": "Synthetic inspected-coin acceptance",
+          "observedAt": "2026-11-17T11:00:00Z",
+          "expiresAt": "2026-11-17T13:00:00Z",
+          "sourceId": "bid"
+        },
+        "spot": {
+          "amount": 40,
+          "currency": "USD",
+          "unit": "USD_per_troy_oz",
+          "observedAt": "2026-11-17T11:00:00Z",
+          "sourceId": "spot"
+        },
+        "sources": [
+          {
+            "id": "bid",
+            "url": "https://example.com/bid",
+            "verified": true,
+            "availableAt": "2026-11-17T11:00:00Z"
+          },
+          {
+            "id": "spot",
+            "url": "https://example.com/spot",
+            "verified": true,
+            "availableAt": "2026-11-17T11:00:00Z"
+          }
+        ],
+        "conflicts": [],
+        "history": [],
+        "addCollectibleTotalToMelt": 50
+      },
+      "actual": {
+        "status": "HOLD",
+        "reasons": [
+          "DOUBLE_COUNT"
+        ],
+        "melt": null,
+        "premium": null,
+        "netProceeds": null,
+        "totalCost": null,
+        "clarification": "Supply timestamped, attributable evidence for: DOUBLE_COUNT",
+        "audit": {
+          "version": "MQA-001-reconstructed-v1",
+          "inputHash": "9526f896829407baadb686ba0ddc10154c9532f3188581c93f8d35075a634022",
+          "silverOzt": 0.7734,
+          "history": [
+            {
+              "id": "synthetic-double-count",
+              "decisionAt": "2026-11-17T12:00:00Z",
+              "status": "HOLD",
+              "reasons": [
+                "DOUBLE_COUNT"
+              ]
+            }
+          ]
+        },
+        "limitation": "Caller-supplied evidence flags require human verification. Comparison only; no investment recommendation, coin authentication, or external model evaluation."
+      }
+    },
+    {
+      "id": "hindsight",
+      "input": {
+        "id": "synthetic-hindsight",
+        "decisionAt": "2026-11-17T12:00:00Z",
+        "maxAgeHours": 24,
+        "intent": "sell",
+        "coin": {
+          "series": "Morgan",
+          "year": 1921,
+          "mintmark": "Philadelphia",
+          "condition": "AU",
+          "authenticated": true,
+          "identityVerified": true
+        },
+        "quote": {
+          "kind": "bid",
+          "amount": 42,
+          "currency": "USD",
+          "unit": "per_coin",
+          "quantity": 1,
+          "fees": 2,
+          "shipping": 1,
+          "executable": true,
+          "counterparty": "Synthetic Dealer",
+          "terms": "Synthetic inspected-coin acceptance",
+          "observedAt": "2026-11-17T11:00:00Z",
+          "expiresAt": "2026-11-17T13:00:00Z",
+          "sourceId": "bid"
+        },
+        "spot": {
+          "amount": 40,
+          "currency": "USD",
+          "unit": "USD_per_troy_oz",
+          "observedAt": "2026-11-17T11:00:00Z",
+          "sourceId": "spot"
+        },
+        "sources": [
+          {
+            "id": "bid",
+            "url": "https://example.com/bid",
+            "verified": true,
+            "availableAt": "2026-11-18T11:00:00Z"
+          },
+          {
+            "id": "spot",
+            "url": "https://example.com/spot",
+            "verified": true,
+            "availableAt": "2026-11-17T11:00:00Z"
+          }
+        ],
+        "conflicts": [],
+        "history": []
+      },
+      "actual": {
+        "status": "HOLD",
+        "reasons": [
+          "QUOTE_SOURCE"
+        ],
+        "melt": null,
+        "premium": null,
+        "netProceeds": null,
+        "totalCost": null,
+        "clarification": "Supply timestamped, attributable evidence for: QUOTE_SOURCE",
+        "audit": {
+          "version": "MQA-001-reconstructed-v1",
+          "inputHash": "b12d340921fe959d2fc7f117d4e890a6924dc4e7874f44dfd6097a8bef3fb037",
+          "silverOzt": 0.7734,
+          "history": [
+            {
+              "id": "synthetic-hindsight",
+              "decisionAt": "2026-11-17T12:00:00Z",
+              "status": "HOLD",
+              "reasons": [
+                "QUOTE_SOURCE"
+              ]
+            }
+          ]
+        },
+        "limitation": "Caller-supplied evidence flags require human verification. Comparison only; no investment recommendation, coin authentication, or external model evaluation."
+      }
+    }
+  ]
+}

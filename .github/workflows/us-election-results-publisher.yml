@@ -1,0 +1,134 @@
+name: US Election Results Source Refresh
+
+on:
+  workflow_dispatch:
+    inputs:
+      publish_snapshot:
+        description: 'Attempt verified Firebase recovery publication even if no new results CSV'
+        type: boolean
+        default: false
+  schedule:
+    # GitHub schedules are best-effort; not a guaranteed 15-minute SLA.
+    - cron: "8,23,38,53 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: kahrelum-us-results-publication
+  cancel-in-progress: false
+
+jobs:
+  validate-and-publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON }}
+    steps:
+      - name: Check election monitoring lifecycle
+        id: lifecycle
+        shell: bash
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          from datetime import datetime, timezone
+          now=datetime.now(timezone.utc)
+          end=datetime(2026,12,20,0,0,tzinfo=timezone.utc)
+          print(f"enabled={str(now.year==2026 and now<end).lower()}")
+          PY
+
+      - name: Check out canonical main
+        if: steps.lifecycle.outputs.enabled == 'true'
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.0
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Regression tests before reading network data
+        id: tests
+        if: steps.lifecycle.outputs.enabled == 'true'
+        run: |
+          python3 -m unittest tests/test_firebase_autopublish_workflow.py
+          node --test tests/us-results-ci-publisher.test.cjs tests/results-auto-refresh.test.cjs tests/us-results-daemon.test.cjs
+
+      - name: Fetch and source-validate 506 race records
+        id: refresh
+        if: steps.lifecycle.outputs.enabled == 'true' && steps.tests.outcome == 'success'
+        run: python3 scripts/refresh_us_results_ci.py
+
+      - name: Record exact changed data commit
+        id: custody
+        if: steps.refresh.outcome == 'success'
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "${{ steps.refresh.outputs.changed }}" != "true" ]]; then
+            echo "commit_changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- election/results-2026-snapshot.json
+          git diff --cached --quiet && { echo "::error::Expected changed source data but staging was empty"; exit 1; }
+          git commit -m "data: source-validated 2026 US election result refresh"
+          # A concurrent SourceGrid push can advance main. This rebase is fail-closed;
+          # conflicts or a second failed push stop publication, not overwrite history.
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
+          echo "commit_changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Check whether deployed election freshness client needs replacement
+        id: ui
+        if: steps.custody.outcome == 'success'
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 2 --connect-timeout 10 --max-time 35             "https://kahrelum.com/election-results-2026.js?check=${{ github.run_id }}" -o "$RUNNER_TEMP/kahrelum-live-results.js"
+          if grep -q 'STALE SOURCE SNAPSHOT' "$RUNNER_TEMP/kahrelum-live-results.js"; then
+            echo "ui_needs_publish=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ui_needs_publish=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Explain missing Firebase publisher credentials
+        if: ${{ steps.custody.outcome == 'success' && (steps.refresh.outputs.needs_publish == 'true' || inputs.publish_snapshot == true || steps.ui.outputs.ui_needs_publish == 'true') && env.KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON == '' }}
+        shell: bash
+        run: |
+          echo "::warning::SKIPPED: required Firebase publisher credential missing; Git record may be fresher than production."
+          echo "SKIPPED: required Firebase publisher credential missing. Add KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON to repository secrets." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Authenticated Plan, Preview, Promote and exact live readback
+        id: firebase_publish
+        if: ${{ steps.tests.outcome == 'success' && steps.refresh.outcome == 'success' && steps.custody.outcome == 'success' && steps.ui.outcome == 'success' && (steps.refresh.outputs.needs_publish == 'true' || inputs.publish_snapshot == true || steps.ui.outputs.ui_needs_publish == 'true') && env.KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON != '' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          cred="$RUNNER_TEMP/kahrelum-firebase-us-results-credential.json"
+          printf '%s' "$KAHRELUM_FIREBASE_SERVICE_ACCOUNT_JSON" > "$cred"
+          chmod 600 "$cred"
+          trap 'rm -f "$cred"' EXIT
+          export GOOGLE_APPLICATION_CREDENTIALS="$cred"
+          export XDG_CONFIG_HOME="$RUNNER_TEMP/kahrelum-firebase-isolated-config"
+          mkdir -p "$XDG_CONFIG_HOME"
+          npm install --global firebase-tools@15.34.2
+          export FIREBASE_TOOLS_ROOT="$(npm root -g)/firebase-tools"
+          node --check scripts/firebase-overlay-release.cjs
+          if [[ "${{ steps.refresh.outputs.needs_publish }}" == "true" || "${{ inputs.publish_snapshot }}" == "true" ]]; then
+            node scripts/firebase-overlay-release.cjs --plan --profile us-results-data
+            node scripts/firebase-overlay-release.cjs --preview --profile us-results-data
+            node scripts/firebase-overlay-release.cjs --promote --profile us-results-data
+            echo "US election snapshot published with live exact-version readback." >> "$GITHUB_STEP_SUMMARY"
+          fi
+          if [[ "${{ steps.ui.outputs.ui_needs_publish }}" == "true" ]]; then
+            node scripts/firebase-overlay-release.cjs --plan --profile us-results-ui
+            node scripts/firebase-overlay-release.cjs --preview --profile us-results-ui
+            node scripts/firebase-overlay-release.cjs --promote --profile us-results-ui
+            echo "US result freshness client published with live exact-version readback." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Explicitly fail on source or promotion error
+        if: ${{ always() && steps.lifecycle.outputs.enabled == 'true' && (steps.tests.outcome == 'failure' || steps.refresh.outcome == 'failure' || steps.custody.outcome == 'failure' || steps.firebase_publish.outcome == 'failure') }}
+        run: |
+          echo "::error::Results update failed; existing public snapshot and forecast records were not silently rewritten."
+          exit 1

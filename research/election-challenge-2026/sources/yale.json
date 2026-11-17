@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "yale",
+  "sourceUrl": "https://kevinmdeluca.com/forecast/",
+  "primarySource": true,
+  "capture": {
+    "startedAtUtc": "2026-10-31T04:12:28Z",
+    "completedAtUtc": "2026-10-31T04:14:24Z",
+    "method": "Firecrawl fresh scrape maxAge=0",
+    "cachePolicy": "maxAge=0"
+  },
+  "custody": {
+    "representation": "TOOL_RETURNED_RAW_HTML_UTF8",
+    "sha256": "247f014b019ab8a248d884e5fd25141709e36e0c8630ca03a2b0a20118937ef3",
+    "utf8Bytes": 698583,
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false,
+    "rawCaptureRetention": "Working capture; not part of the public commit. The public immutable receipt preserves factual observations and digests, not a replayable HTTP archive.",
+    "toolMarkdownSha256": "78cf8e2ad26d1ddb683cab513436336cba9736eff8c2490ad70d3157d38708ea"
+  },
+  "publisherMetadata": {
+    "title": "Election Forecast Tracker · Election Forecast Tracker",
+    "scrapeId": "01a19029-7b01-765c-993d-5be10b84e25e",
+    "sourceURL": "https://kevinmdeluca.com/forecast/",
+    "url": "https://kevinmdeluca.com/forecast/",
+    "statusCode": 200,
+    "contentType": "text/html; charset=utf-8",
+    "indexId": "1304a7e0-8ab3-4bf3-8778-b3da45bc62ba"
+  },
+  "evidenceExcerpts": [],
+  "crossSourceReview": {
+    "scope": "Related provider review synthesized across the manifest sourceIds; a method page need not itself contain the numerical forecast.",
+    "facts": [
+      {
+        "providerId": "yale",
+        "houseControlPercent": 95,
+        "senateControlPercent": 43,
+        "publicationLabel": "Built October 30, 2026, 21:22:14.013751 UTC",
+        "publishedAtUtc": "2026-10-30T21:22:14.013751Z",
+        "houseEventReview": "The class model page explicitly reports a 95 percent Democratic House majority probability and a 218-seat threshold.",
+        "senateEventReview": "General methods include existing Democratic-caucusing independents and require 51. The class page also substitutes independent nominees into party sides, including Osborn; that is not proof of final caucus membership or complete equivalence to KAHRELUM."
+      }
+    ]
+  }
+}

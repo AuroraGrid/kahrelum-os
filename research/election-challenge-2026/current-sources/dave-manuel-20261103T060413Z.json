@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Dave Manuel",
+  "sourceUrl": "https://www.davemanuel.com/2026-midterm-forecast.php",
+  "retrievedAtUtc": "2026-11-03T06:04:13.5875749Z",
+  "requestStartedAtUtc": "2026-11-03T06:04:10.8058590Z",
+  "sourceUpdateText": "last updated November 3, 2026, 12:45 a.m. ET",
+  "directHttpStatus": 200,
+  "custodyRepresentation": "FIRST_PARTY_HTTP_RESPONSE_UTF8_NOT_EXACT_WIRE_BYTES",
+  "directResponseUtf8Bytes": 273484,
+  "rawSha256": "f6b7185cf9bea381a6d3d85e8145b69101c9a4e707c04e43e53e37ffef3c09bf",
+  "observations": {
+    "houseDemocraticControlPct": 93.0,
+    "senateDemocraticControlPct": 74.0,
+    "houseDemocraticSeatsProjectedMedian": 234,
+    "senateRepublicanSeatsProjectedMedian": 47,
+    "senateDemocraticSeatsProjectedMedianIncludingAlignedIndependents": 53,
+    "publisherDisplayedSenateDemocraticMedian": 52,
+    "houseDemocraticSeats90PctInterval": [216, 257],
+    "senateRepublicanSeats90PctInterval": [43, 52],
+    "houseControlThreshold": 218,
+    "senateControlThreshold": 51,
+    "publisherGenericBallotDemocraticPct": 51.7,
+    "publisherGenericBallotRepublicanPct": 43.6,
+    "publisherGenericBallotMarginDemocratic": 8.2
+  },
+  "seatSemanticsNote": "The publisher states that the projected medians are taken separately for each side, so its displayed 47 Republican and 52 Democratic Senate medians need not sum to 100. The descriptive comparison retains the previously used 100-minus-Republican median transformation as 53 Democratic-aligned seats and records the publisher's displayed 52 separately.",
+  "changeFromPriorAdmittedEdition": {
+    "priorReceiptPath": "research/election-challenge-2026/current-sources/dave-manuel-20261103T044855Z.json",
+    "edition": {
+      "from": "November 2, 2026, 11:45 p.m. ET",
+      "to": "November 3, 2026, 12:45 a.m. ET"
+    },
+    "trackedChamberProjections": "UNCHANGED",
+    "genericBallotDisplay": "UNCHANGED"
+  },
+  "interpretation": "NEW_PUBLISHER_EDITION_WITH_UNCHANGED_TRACKED_CHAMBER_PROJECTIONS",
+  "kahrelumInputReview": {
+    "script": "scripts/refresh-election-projections.py",
+    "providerUsedByScript": false,
+    "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"
+  }
+}

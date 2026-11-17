@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "Scrutinel",
+  "sourceUrl": "https://scrutinel.com/",
+  "retrievedAtUtc": "2026-11-02T03:21:02.8523108Z",
+  "retrievalStatus": "FIRST_PARTY_PUBLIC_VERIFIED",
+  "publisherEdition": "November 1, 2026, 10:24 PM EST",
+  "observations": {
+    "houseDemocraticControlPctDisplayed": 95.0,
+    "houseDemocraticControlPctSerialized": 95.43,
+    "houseRepublicanControlPctSerialized": 4.56,
+    "houseNoMajorityPctSerialized": 0.01,
+    "houseMeanDemocraticSeats": 242.18,
+    "houseMedianDemocraticSeats": 241,
+    "houseInterval80DemocraticSeats": [223, 262],
+    "senateDemocraticControlPctDisplayed": 78.0,
+    "senateDemocraticControlPctSerialized": 77.61,
+    "senateRepublicanControlPctSerialized": 22.05,
+    "senateNoMajorityPctSerialized": 0.34,
+    "senateMeanDemocraticSeats": 52.57,
+    "senateMedianDemocraticSeats": 53,
+    "senateInterval80DemocraticSeats": [49, 56]
+  },
+  "jointOutcomePctSerialized": {"democraticHouseAndSenate": 77.11, "democraticHouseRepublicanSenate": 18.31, "republicanHouseDemocraticSenate": 0.49, "republicanHouseAndSenate": 4.08},
+  "custody": {"httpStatus": 200, "representation": "FETCH_RETURNED_HTML_UTF8", "sha256": "dcdfaf2989a0c3eda290a332640da3ce8418b4a8a9c18e27e3e942ee8f9e7be7", "utf8Bytes": 1776127, "lastModified": "Mon, 02 Nov 2026 03:41:21 GMT", "dateHeader": "Mon, 02 Nov 2026 03:55:20 GMT", "headerStatus": "FUTURE_DATED_RELATIVE_TO_PROSPECTIVE_RETRIEVAL_NOT_USED_AS_PUBLICATION_TIME"},
+  "changeFromPriorAdmittedEdition": {"houseDemocraticControlPctDisplayed": {"from": 92.0, "to": 95.0}, "senateDemocraticControlPctDisplayed": {"from": 68.0, "to": 78.0}, "houseMeanDemocraticSeats": {"from": 237.0, "to": 242.18}, "senateMeanDemocraticSeats": {"from": 52.0, "to": 52.57}},
+  "kahrelumInputReview": {"script": "scripts/refresh-election-projections.py", "providerUsedByScript": false, "action": "NO_NEW_KAHRELUM_PROBABILITY_EDITION"}
+}

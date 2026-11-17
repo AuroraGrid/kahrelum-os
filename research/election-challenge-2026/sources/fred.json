@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "fred",
+  "sourceUrl": "https://fredcornell.com/us",
+  "primarySource": true,
+  "capture": {
+    "startedAtUtc": "2026-10-31T04:15:38Z",
+    "completedAtUtc": "2026-10-31T04:15:49Z",
+    "method": "Firecrawl fresh scrape maxAge=0",
+    "cachePolicy": "maxAge=0"
+  },
+  "custody": {
+    "representation": "TOOL_RETURNED_RAW_HTML_UTF8",
+    "sha256": "539dd6510094827657438cf0ce1d183ec15309b1c672837b72b6f6722f7af2e0",
+    "utf8Bytes": 198198,
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false,
+    "rawCaptureRetention": "Working capture; not part of the public commit. The public immutable receipt preserves factual observations and digests, not a replayable HTTP archive.",
+    "toolMarkdownSha256": "e4d464d7cab6ee2802a262cf4eba3d37d4e16ec7ddb9a259bff8fb204c154389"
+  },
+  "publisherMetadata": {
+    "title": "2026 midterm chances: Democrats 99% House, 69% Senate 51+ seats",
+    "scrapeId": "01a1902b-9efd-74dd-92bf-ff95a9923a6b",
+    "sourceURL": "https://fredcornell.com/us",
+    "url": "https://fredcornell.com/us",
+    "statusCode": 200,
+    "contentType": "text/html; charset=utf-8",
+    "indexId": "f419391f-fe99-439b-aa65-09284a6f57ba"
+  },
+  "evidenceExcerpts": [
+    {
+      "exactText": "Chance of winning 218 seats or more.",
+      "representation": "markdown",
+      "characterOffset": 1965
+    }
+  ],
+  "crossSourceReview": {
+    "scope": "Related provider review synthesized across the manifest sourceIds; a method page need not itself contain the numerical forecast.",
+    "facts": [
+      {
+        "providerId": "fred",
+        "houseControlPercent": 99,
+        "senateControlPercent": 68.7,
+        "publicationLabel": "October 30, 2026 (date only)",
+        "publishedAtUtc": null,
+        "houseEventReview": "The House summary specifies a 99 percent chance of winning at least 218 seats.",
+        "senateEventReview": "The source separately reports a Democratic 51-plus event, Republican control including 50, and independents holding the balance. Its separate-independent treatment is not established as equivalent to KAHRELUM conditional caucus assumptions."
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "status": "VERIFIED_PUBLIC_COMMIT",
+  "commit": "edc2de9a575172d7b8dd0c75c35dcea10f88d71c",
+  "committedAtUtc": "2026-10-31T04:40:59Z",
+  "verifiedAtUtc": "2026-10-31T04:41:16Z",
+  "url": "https://github.com/AuroraGrid/kahrelum-os/commit/edc2de9a575172d7b8dd0c75c35dcea10f88d71c",
+  "immutableManifestUrl": "https://github.com/AuroraGrid/kahrelum-os/blob/edc2de9a575172d7b8dd0c75c35dcea10f88d71c/research/election-challenge-2026/cohort-manifest.json",
+  "verificationMethod": "GITHUB_COMMIT_AND_IMMUTABLE_FILES",
+  "manifestSha256": "e35981897b017c0ef87b456426dbd3b6b5e340b014e44eab220ea7344235f82c",
+  "custodySetSha256": "573257bc0d37e8900a29d1d785d5712c9692b2ff0cffeda52d26f820bcb9003d",
+  "verifiedFileCount": 35,
+  "verificationDetails": "Fetched public GitHub commit metadata and immutable manifest text; all 35 committed Git blob object hashes match hashes computed over the exact local UTF-8 file bytes. Manifest text matched byte-for-byte. No Bitcoin/OpenTimestamps anchoring is claimed."
+}

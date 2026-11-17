@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "votepredictor",
+  "sourceUrl": "https://votepredictor.com/house",
+  "primarySource": true,
+  "capture": {
+    "startedAtUtc": "2026-10-31T04:15:38Z",
+    "completedAtUtc": "2026-10-31T04:15:49Z",
+    "method": "Firecrawl fresh scrape maxAge=0",
+    "cachePolicy": "maxAge=0"
+  },
+  "custody": {
+    "representation": "TOOL_RETURNED_RAW_HTML_UTF8",
+    "sha256": "ad3c6324589d1949cd48b84a07b3b7dbef1ba974f632cf9345a5d41f1e7e76e3",
+    "utf8Bytes": 1737171,
+    "exactHttpWireBytes": false,
+    "fullSourcePublishedInRepository": false,
+    "rawCaptureRetention": "Working capture; not part of the public commit. The public immutable receipt preserves factual observations and digests, not a replayable HTTP archive.",
+    "toolMarkdownSha256": "c824c1921c762fd56897db88812674447c1b7c9af595f1065b44b5835a08af2f"
+  },
+  "publisherMetadata": {
+    "title": "2026 House Forecast — VotePredictor",
+    "scrapeId": "01a1902b-9efc-76df-99ab-8e48f10e0ff9",
+    "sourceURL": "https://votepredictor.com/house",
+    "url": "https://votepredictor.com/house",
+    "statusCode": 200,
+    "contentType": "text/html; charset=utf-8",
+    "indexId": "55ed3479-4d52-4021-bda8-7f23469d14f9"
+  },
+  "evidenceExcerpts": [
+    {
+      "exactText": "76%chance of Democratic control today",
+      "representation": "markdown",
+      "characterOffset": 675
+    },
+    {
+      "exactText": "218 needed for control.",
+      "representation": "markdown",
+      "characterOffset": 795
+    }
+  ],
+  "crossSourceReview": {
+    "scope": "Related provider review synthesized across the manifest sourceIds; a method page need not itself contain the numerical forecast.",
+    "facts": [
+      {
+        "providerId": "votepredictor",
+        "houseControlPercent": 76,
+        "senateControlPercent": null,
+        "publicationLabel": "Forecast updated October 30, 2026 (date only)",
+        "publishedAtUtc": null,
+        "houseEventReview": "The House page gives a 76 percent chance of Democratic control and explicitly requires 218 seats.",
+        "senateEventReview": "A numerical Senate control probability was not captured in this cohort; no value is imputed from race probabilities or links."
+      }
+    ]
+  }
+}
