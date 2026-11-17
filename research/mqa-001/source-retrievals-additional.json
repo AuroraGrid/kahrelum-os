@@ -1,0 +1,44 @@
+[
+  {
+    "id": "zoovu",
+    "url": "https://zoovu.com/",
+    "retrievedAt": "2026-11-17T12:14:08.377696+00:00",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "id": "fiscal",
+    "url": "https://fiscal.ai/",
+    "retrievedAt": "2026-11-17T12:14:08.378368+00:00",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "id": "alhena",
+    "url": "https://alhena.ai/",
+    "finalUrl": "https://alhena.ai/",
+    "retrievedAt": "2026-11-17T12:14:08.378861+00:00",
+    "status": 200,
+    "sha256": "47a5130cd1fcd9af6e2f7cd7adf79f74040572bc659392237e4ff2f524a4980a"
+  },
+  {
+    "id": "manifest",
+    "url": "https://getmanifest.ai/",
+    "finalUrl": "https://getmanifest.ai/",
+    "retrievedAt": "2026-11-17T12:14:08.379346+00:00",
+    "status": 200,
+    "sha256": "d0cb7699447e57405522e6aeed0f8e46913df7ca3a304cfc3ebe9acec85ffe4f"
+  },
+  {
+    "id": "luigi-about",
+    "url": "https://www.luigisbox.com/about-us/",
+    "finalUrl": "https://www.luigisbox.com/about-us/",
+    "retrievedAt": "2026-11-17T12:14:08.379844+00:00",
+    "status": 200,
+    "sha256": "ee593cc0173de3ddb66eaf2863a182f768481b2de34b5e9aa0b3d3ce0a2d6912"
+  },
+  {
+    "id": "quartr-about",
+    "url": "https://quartr.com/about-us",
+    "retrievedAt": "2026-11-17T12:14:08.381612+00:00",
+    "error": "HTTP Error 404: Not Found"
+  }
+]

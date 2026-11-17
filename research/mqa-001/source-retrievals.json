@@ -1,0 +1,152 @@
+[
+  {
+    "id": "mint",
+    "url": "https://www.usmint.gov/news/inside-the-mint/one-hundred-years-of-silver-dollar-coinage-1878-1978",
+    "retrievedAt": "2026-11-17T12:02:42.835202+00:00",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "id": "pcgs",
+    "url": "https://www.pcgs.com/prices",
+    "retrievedAt": "2026-11-17T12:02:42.836696+00:00",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "id": "ngc",
+    "url": "https://www.ngccoin.com/price-guide/coin-melt-values.aspx",
+    "finalUrl": "https://www.ngccoin.com/price-guide/coin-melt-values.aspx",
+    "retrievedAt": "2026-11-17T12:02:42.837235+00:00",
+    "status": 200,
+    "sha256": "ab06bc41e57d2ad84ec79437b72474ec13ceceaee4f150d1ebf7fdf3307f14cf",
+    "bytes": 110911
+  },
+  {
+    "id": "nist",
+    "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b8",
+    "retrievedAt": "2026-11-17T12:02:42.837696+00:00",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "id": "rep",
+    "url": "https://www.hellorep.ai/about",
+    "finalUrl": "https://www.hellorep.ai/about",
+    "retrievedAt": "2026-11-17T12:02:42.838082+00:00",
+    "status": 200,
+    "sha256": "9884c9e027cc6ddd4a84e2ee2eed94bccadbf3d12121376d51594a219d5f406b",
+    "bytes": 103189
+  },
+  {
+    "id": "manifest",
+    "url": "https://getmanifest.ai/",
+    "finalUrl": "https://getmanifest.ai/",
+    "retrievedAt": "2026-11-17T12:02:42.838482+00:00",
+    "status": 200,
+    "sha256": "d0cb7699447e57405522e6aeed0f8e46913df7ca3a304cfc3ebe9acec85ffe4f",
+    "bytes": 85889
+  },
+  {
+    "id": "octane",
+    "url": "https://www.octaneai.com/team",
+    "finalUrl": "https://www.octaneai.com/team",
+    "retrievedAt": "2026-11-17T12:02:43.434335+00:00",
+    "status": 200,
+    "sha256": "53ba6265976c5094617ce2336cbc35b93a943694d42caea2d273086acb1f36f7",
+    "bytes": 113761
+  },
+  {
+    "id": "zoovu",
+    "url": "https://zoovu.com/",
+    "retrievedAt": "2026-11-17T12:02:43.559653+00:00",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "id": "luigi",
+    "url": "https://www.luigisbox.com/",
+    "finalUrl": "https://www.luigisbox.com/",
+    "retrievedAt": "2026-11-17T12:02:43.992219+00:00",
+    "status": 200,
+    "sha256": "21644687c1ce8ea2b441c5b56fdb99c839b1f290da50dc361c7ab8e2d7aec16d",
+    "bytes": 714084
+  },
+  {
+    "id": "clerk",
+    "url": "https://www.clerk.io/",
+    "finalUrl": "https://www.clerk.io/",
+    "retrievedAt": "2026-11-17T12:02:43.996772+00:00",
+    "status": 200,
+    "sha256": "e27ba8d539302598136787264b421a897091ff9e240a35b46f6f46cadd6d8c09",
+    "bytes": 209857
+  },
+  {
+    "id": "searchanise",
+    "url": "https://searchanise.io/",
+    "finalUrl": "https://searchanise.io/",
+    "retrievedAt": "2026-11-17T12:02:44.067715+00:00",
+    "status": 200,
+    "sha256": "5daa67f6c8c2d0bd510074d34303dbb7d552f05772b2bf40566c7bb40c227c63",
+    "bytes": 1489430
+  },
+  {
+    "id": "fiscal",
+    "url": "https://fiscal.ai/",
+    "retrievedAt": "2026-11-17T12:02:44.265272+00:00",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "id": "fintool",
+    "url": "https://fintool.com/",
+    "retrievedAt": "2026-11-17T12:02:44.436316+00:00",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "id": "quartr",
+    "url": "https://quartr.com/",
+    "finalUrl": "https://quartr.com/",
+    "retrievedAt": "2026-11-17T12:02:44.710994+00:00",
+    "status": 200,
+    "sha256": "5a7dcc2fc371341e9904ad5420909e4098d90d3f60d5f9e8eaa7dfe6049086aa",
+    "bytes": 201072
+  },
+  {
+    "id": "nosto",
+    "url": "https://www.nosto.com/commerce-search/",
+    "retrievedAt": "2026-11-17T12:02:44.914546+00:00",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "id": "constructor",
+    "url": "https://docs.constructor.com/docs/products-ai-shopping-agents-learn-about-ai-shopping-agent",
+    "finalUrl": "https://docs.constructor.com/docs/products-ai-shopping-agents-learn-about-ai-shopping-agent",
+    "retrievedAt": "2026-11-17T12:02:44.969959+00:00",
+    "status": 200,
+    "sha256": "0ba642cf33b13e4a185ffc853b34db933300016e4853234b99ac884b24d70d92",
+    "bytes": 527140
+  },
+  {
+    "id": "bloomreach",
+    "url": "https://documentation.bloomreach.com/clarity/docs/get-started-with-conversational-agent",
+    "finalUrl": "https://documentation.bloomreach.com/clarity/docs/get-started-with-conversational-agent",
+    "retrievedAt": "2026-11-17T12:02:45.352627+00:00",
+    "status": 200,
+    "sha256": "b0a20b052800ce5c972f59f913256d66fb359d285696ba141101ca6877067b4b",
+    "bytes": 1116179
+  },
+  {
+    "id": "coveo",
+    "url": "https://ir.coveo.com/en/news-events/press-releases/detail/479/coveo-redefines-ecommerce-discovery-with-search-native",
+    "finalUrl": "https://ir.coveo.com/en/news-events/press-releases/detail/479/coveo-redefines-ecommerce-discovery-with-search-native",
+    "retrievedAt": "2026-11-17T12:02:45.391161+00:00",
+    "status": 200,
+    "sha256": "1a764b60d4212a7699817d739d3b0eaa0553c5b13973de768ccfe2c5ccc0ac67",
+    "bytes": 32060
+  },
+  {
+    "id": "algolia",
+    "url": "https://www.algolia.com/use-cases/shopping-assistant",
+    "finalUrl": "https://www.algolia.com/use-cases/shopping-assistant",
+    "retrievedAt": "2026-11-17T12:02:45.511401+00:00",
+    "status": 200,
+    "sha256": "df46347f12ff039d4c79ce1168290ae9010ecdd92f84078aa298a08d35b52566",
+    "bytes": 292109
+  }
+]

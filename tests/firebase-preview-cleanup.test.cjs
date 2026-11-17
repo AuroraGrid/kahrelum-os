@@ -43,3 +43,26 @@ test('production lifecycle triggers preview cleanup only after the release file 
  assert.match(src,/previewCleanupWarning/);
  assert.match(src,/writeJson\(PRODUCTION_RECEIPT, productionReceipt\)/);
 });
+
+test('keep-preview mode retains channel without weakening exact-version checks',async()=>{
+ const good=makeHosting();
+ assert.deepEqual(await cleanupPromotedPreview(good.api,site,channel,version,{keepPreview:true}),{status:'RETAINED',channel,liveVersion:version});
+ assert.equal(good.calls.filter(x=>x[0]==='delete').length,0);
+ for(const args of [{liveVersion:'other'},{previewVersion:'other'}]){
+  const bad=makeHosting(args);
+  await assert.rejects(cleanupPromotedPreview(bad.api,site,channel,version,{keepPreview:true}),/version/i);
+  assert.equal(bad.calls.filter(x=>x[0]==='delete').length,0);
+ }
+});
+test('process-only keep-preview environment flag is honored',async()=>{
+ const previous=process.env.KAHRELUM_KEEP_PREVIEW;
+ try {
+  process.env.KAHRELUM_KEEP_PREVIEW='1';
+  const {api,calls}=makeHosting();
+  assert.equal((await cleanupPromotedPreview(api,site,channel,version)).status,'RETAINED');
+  assert.equal(calls.filter(x=>x[0]==='delete').length,0);
+ } finally {
+  if(previous===undefined) delete process.env.KAHRELUM_KEEP_PREVIEW;
+  else process.env.KAHRELUM_KEEP_PREVIEW=previous;
+ }
+});

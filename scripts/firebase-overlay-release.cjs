@@ -12,6 +12,12 @@ const { cleanupPromotedPreview } = require(path.join(__dirname, 'firebase-previe
 const { buildCaseShareArtifacts, extractCases } = require(path.join(__dirname, 'case-social-pages.cjs'));
 const { buildChip01SocialArtifacts } = require(path.join(__dirname, 'chip01-social.cjs'));
 const { patchBuyerPage } = require(path.join(__dirname, 'buyer-discovery.cjs'));
+const { patchBuyerConversion } = require(path.join(__dirname, 'buyer-conversion-20261112.cjs'));
+const { enhanceDiscoveryPage } = require(path.join(__dirname, 'ai-seo-discovery.cjs'));
+const { enhanceAgentVisibility } = require(path.join(__dirname, 'agent-visibility-hardening.cjs'));
+const { siteCompletionAllowedPaths, configsSemanticallyEqual, prepareMarkdownHostingConfig, patchCompletionPage, verifyMarkdownResponseHeaders } = require(path.join(__dirname, 'site-completion.cjs'));
+const { patchPilot, patchArticleMetadata, patchHomepageC7 } = require(path.join(__dirname, 'release3-live-patches.cjs'));
+const { patchInvestigationOverview, patchInsightsIndex, patchNvidiaDetailPage } = require(path.join(__dirname, 'investigations-text-refresh.cjs'));
 
 const SITE = 'kahrelum-public-hosting';
 const INDEXNOW_KEY_FILE = 'dedc67db0c224b1c9a4be1379f7937f5.txt';
@@ -169,10 +175,45 @@ const REQUIRED_REWRITES = {
 };
 const DIVISION_ROUTES = ['/assurance', '/investigations', '/forecasting', '/digital-id', '/one', '/os'];
 const RELEASE_PROFILES = {
+  'intelligence-share': {
+    overlayFiles: ['intelligence.html', 'assets/social/og-kahrelum-intelligence-20261114.png'],
+    sitemapRoutes: ['/intelligence'],
+    includeHomepage: false,
+  },
   'hegseth-law-audit': {
     // Only the article, Insights discovery and source directory; no forecast mutation.
     overlayFiles: ['insights/hegseth-war-powers-fact-check.html', 'insights.html', 'sitemap.md'],
     sitemapRoutes: ['/insights/hegseth-war-powers-fact-check'],
+    includeHomepage: false,
+  },
+  'forecast-100-publication': {
+    // Dedicated public research release. No prediction source ledgers, past probabilities,
+    // production homepage, or unrelated research pages may be modified by this profile.
+    overlayFiles: [
+      'forecasting/100-forecast-challenge.html',
+      'forecasting/100-forecast-v1.4.json',
+      'assets/social/og-100-forecast-challenge-v2.png',
+      'forecasting.html', 'sitemap.md', 'llms.txt',
+      'ai-discovery/forecasting.md', 'ai-discovery/100-forecast-challenge.md'
+    ],
+    sitemapRoutes: ['/forecasting/100-forecast-challenge'],
+    includeHomepage: false,
+  },
+  'calibration-nfl-2026': {
+    // Publish only the sourced cross-domain calibration report and its share card,
+    // plus the discovery crosslinks. No source ledgers, player forecasts, or homepage.
+    overlayFiles: ['insights/calibration-oct-nov-2026.html',
+      'assets/social/og-calibration-oct-nov-2026.png',
+      'forecasting.html', 'insights.html', 'nfl/trade-volume-challenge-2026.html',
+      'sitemap.md', 'llms.txt', 'ai-discovery/forecasting.md'],
+    sitemapRoutes: ['/insights/calibration-oct-nov-2026'],
+    includeHomepage: false,
+  },
+  'mqa001-review': {
+    // Explicit manual publication only; preserve current live discovery bytes.
+    overlayFiles: ['insights/morgan-dollar-quote.html', 'insights.html', 'sitemap.md',
+      'assets/social/og-mqa001.png'],
+    sitemapRoutes: ['/insights/morgan-dollar-quote'],
     includeHomepage: false,
   },
   'osint-illusion': {
@@ -180,6 +221,27 @@ const RELEASE_PROFILES = {
     overlayFiles: ['insights/osint-illusion.html', 'insights.html', 'sitemap.md',
       'assets/social/og-insights-osint-illusion.png'],
     sitemapRoutes: ['/insights/osint-illusion'],
+    includeHomepage: false,
+  },
+  'nfc-east-title-2026': {
+    // One dated sports forecasting snapshot, no historical mutation.
+    overlayFiles: ['forecasting/nfc-east-2026.html',
+      'assets/social/og-nfc-east-title-2026.svg',
+      'assets/social/og-nfc-east-title-2026-11-15.svg',
+      'forecasting.html', 'sitemap.md', 'llms.txt', 'ai-discovery/forecasting.md'],
+    sitemapRoutes: ['/forecasting/nfc-east-2026'],
+    includeHomepage: false,
+  },
+  'malik-beasley-forecast': {
+    // Dedicated prospective sentencing article and discovery. Preserve immutable
+    // original judgment, unrelated live pages and production Hosting config.
+    overlayFiles: [
+      'insights/malik-beasley-sentencing-2026.html',
+      'assets/social/og-malik-beasley-sentencing-2026.png',
+      'insights.html', 'forecasting.html', 'sitemap.md', 'llms.txt',
+      'ai-discovery/forecasting.md',
+    ],
+    sitemapRoutes: ['/insights/malik-beasley-sentencing-2026'],
     includeHomepage: false,
   },
   'hegseth-forecast': {
@@ -197,10 +259,25 @@ const RELEASE_PROFILES = {
     sitemapRoutes: ['/election-data/'],
     includeHomepage: false,
   },
+  'mobile-nav-layout': {
+    // Serve one responsive stylesheet from a verified live baseline; never deploy
+    // stale HTML, unpublished evidence, photographs or archived forecast locks.
+    overlayFiles: ['site-shell.css'],
+    sitemapRoutes: [],
+    includeHomepage: false,
+  },
   'buyer-discovery': {
     // Read-patch current live homepage and pilot without replacing archived sections or live social assets.
     overlayFiles: ['AGENTS.md', 'sitemap.md', 'llms-full.txt', 'index.md', 'pilot-page.md'],
     sitemapRoutes: [],
+    includeHomepage: false,
+  },
+  'buyer-conversion': {
+    // Source-pinned surgical update of ONLY current live assurance and pilot.
+    // Preserve the live source map, original research, social artwork and Hosting config.
+    overlayFiles: [],
+    sitemapRoutes: [],
+    sitemapLastmod: {'/assurance':'2026-11-13','/pilot':'2026-11-13'},
     includeHomepage: false,
   },
   'opticodds-market-integrity': {
@@ -283,6 +360,107 @@ const RELEASE_PROFILES = {
     sitemapRoutes: [],
     includeHomepage: false,
   },
+  'investigations-text-only': {
+    // Keep live Firebase metadata, referenced assets and unrelated files untouched.
+    // Fetch and hash-check the currently deployed HTML, then patch bounded editorial text only.
+    overlayFiles: [],
+    sitemapRoutes: [],
+    includeHomepage: false,
+  },
+  'release3-verified': {
+    // Only corrected post-deadline facts, user-reviewed buyer enquiry, dated article metadata
+    // and mobile CSS. Original source snapshots are separately archived in research.
+    overlayFiles: [
+      'nfl/deadline-reconciled-2026.json',
+      'nfl/official-trade-snapshot-2026.json', 'nfl/deadline-audit.json', 'nfl/refresh-status.json',
+      'nfl/deadline-watch-2026.html', 'nfl/deadline-watch-2026.js', 'nfl/weekly-brief.html',
+      'site-shell.css',
+    ],
+    sitemapRoutes: [],
+    sitemapLastmod: {
+      '/pilot': '2026-11-12',
+      '/nfl/deadline-watch-2026': '2026-11-12',
+      '/nfl/weekly-brief': '2026-11-12',
+      '/insights/hegseth-war-powers-fact-check': '2026-11-12',
+      '/insights/nvidia-megaspeed-chip-custody': '2026-11-12',
+      '/investigations/chip-01': '2026-11-12',
+      '/election-data/': '2026-11-12',
+      '/israel-certified-2026': '2026-11-05',
+      '/nfl/trades': '2026-11-12',
+      '/nfl/trade-volume-challenge-2026': '2026-11-12',
+      '/election-results-2026': '2026-11-12',
+      '/insights': '2026-11-12',
+      '/investigations': '2026-11-12',
+    },
+    includeHomepage: false,
+  },
+  'site-completion': {
+    // One integrated improvement pass with exact live-source patches.
+    // Only fresh page editorial copy, SEO title metadata and source-truthful sitemap dates.
+    // Markdown response headers are the ONLY deliberate Hosting config delta.
+    overlayFiles: ['site-shell.css',
+      'index.md',
+      'pilot-page.md',
+      'ai-discovery/assurance.md',
+      'ai-discovery/digital-id.md',
+      'ai-discovery/evidence-scorecard.md',
+      'ai-discovery/forecasting.md',
+      'ai-discovery/glossary.md',
+      'ai-discovery/insights.md',
+      'ai-discovery/investigations.md',
+      'ai-discovery/nfl-deadline-2026.md',
+      'ai-discovery/nvidia-chip-custody.md',
+      'ai-discovery/os.md',
+      'ai-discovery/sports.md'],
+    sitemapRoutes: [],
+    sitemapLastmod: {
+      '/': '2026-11-12',
+      '/insights': '2026-11-12',
+      '/nfl/deadline-watch-2026': '2026-11-12',
+      '/election-data/': '2026-11-12',
+    },
+    includeHomepage: false,
+  },
+  'ai-visibility-hardening': {
+    // Targeted source-bound agent discoverability; preserve live page content, OG previews,
+    // historical records, forecast locks, CSS/JS, API responses and Hosting configuration.
+    overlayFiles: [
+      'index.md', 'pilot-page.md', 'AGENTS.md', 'llms.txt', 'sitemap.md',
+      'ai-discovery/insights.md', 'ai-discovery/digital-id.md',
+      'ai-discovery/os.md', 'ai-discovery/sports.md',
+      'ai-discovery/nfl-deadline-2026.md',
+      'ai-discovery/nvidia-chip-custody.md', 'ai-discovery/glossary.md',
+    ],
+    sitemapRoutes: [],
+    sitemapLastmod: {
+      '/': '2026-11-12',
+      '/insights': '2026-11-12',
+      '/digital-id': '2026-11-12',
+      '/os': '2026-11-12',
+      '/sports': '2026-11-12',
+      '/nfl/deadline-watch-2026': '2026-11-12',
+      '/insights/nvidia-megaspeed-chip-custody': '2026-11-12',
+    },
+    includeHomepage: false,
+  },
+  'ai-discovery-seo': {
+    // Read-patch only verified current live HTML, keep source bodies and all OG imagery.
+    // Publish four new source-bounded Markdown mirrors plus public agent discovery docs.
+    overlayFiles: [
+      'AGENTS.md','llms.txt','sitemap.md',
+      'ai-discovery/assurance.md','ai-discovery/investigations.md',
+      'ai-discovery/forecasting.md','ai-discovery/evidence-scorecard.md',
+    ],
+    sitemapRoutes: [],
+    sitemapLastmod: {
+      '/assurance': '2026-11-12',
+      '/investigations': '2026-11-12',
+      '/forecasting': '2026-11-12',
+      '/evidence-scorecard': '2026-11-12',
+      '/pilot': '2026-11-12',
+    },
+    includeHomepage: false,
+  },
   'chip01-publication': {
     // New, source-bound CHIP-01 feature and companion Insight, no unrelated site changes.
     overlayFiles: ['investigations.html', 'investigations/chip-01.html', 'insights.html',
@@ -311,6 +489,18 @@ const RELEASE_PROFILES = {
     overlayFiles: ['investigations.html', 'assets/social/og-air01-v1.png'],
     // The existing live sitemap already lists this route. Preserve its exact hash.
     sitemapRoutes: [],
+    includeHomepage: false,
+  },
+  'fortune-ca001': {
+    overlayFiles: ['investigations/ca-001.html', 'assets/social/og-ca001-v1.png'],
+    sitemapRoutes: [],
+    includeHomepage: false,
+  },
+  'air02-publication': {
+    // New AIR-02 article and original case art; patch only the live index feature slot.
+    overlayFiles: ['investigations/air-02.html', 'assets/social/og-air02-v1.png'],
+    liveTransformRoutes: [['/investigations.html', '/investigations']],
+    sitemapRoutes: ['/investigations/air-02'],
     includeHomepage: false,
   },
   portraits: {
@@ -853,6 +1043,31 @@ function updateSitemap(xml, routes) {
   return Buffer.from(output, 'utf8');
 }
 
+function verifyAir02IndexPatch(html) {
+  if (!html.includes('data-investigations-release="2026-11-02.1"') ||
+      !html.includes('<strong>12</strong><span>Public case records') ||
+      !html.includes('56 historical case families and four extension leads')) {
+    fail('AIR-02 index historical snapshot markers changed; refusing publication.');
+  }
+  const ids = Array.from(html.matchAll(/data-case-id="([A-Z]+-[0-9]+)"/g), m => m[1]);
+  if (ids.length !== 12 || new Set(ids).size !== 12) fail('AIR-02 index must retain exactly twelve original case records.');
+  const records = JSON.parse(fs.readFileSync(path.join(ROOT, 'tests/investigations-preserved-cards.json'), 'utf8'));
+  for (const [id, expected] of Object.entries(records)) {
+    const match = html.match(new RegExp('<article class="case-record"[^>]*data-case-id="' + id + '"[\\s\\S]*?<\\/article>'));
+    if (!match || sha256(Buffer.from(match[0].replace(/\r\n/g, '\n'), 'utf8')) !== expected) {
+      fail('AIR-02 index changed preserved historical card bytes: ' + id);
+    }
+  }
+  const feature = '<section class="case-record case-featured" aria-labelledby="air02-feature"><div class="case-top"><span class="case-id">NEW INVESTIGATION · AIR-02</span><span class="case-status open">OPEN · CAUSE UNKNOWN</span></div><h2 id="air02-feature">FAA nationwide ground stop: communications disruption</h2><p>November 13, 2026 · The ground stop is confirmed. The initiating technical failure and any cybersecurity involvement remain unverified. This new case is outside the twelve-record historical snapshot above.</p><a href="/investigations/air-02">Read the AIR-02 investigation →</a></section>';
+  const marker = '<div class="case-records">';
+  if (html.includes('href="/investigations/air-02"')) {
+    if (!html.includes(feature)) fail('Existing AIR-02 feature differs from the approved insertion.');
+    return html;
+  }
+  if ((html.match(/<div class="case-records">/g) || []).length !== 1) fail('AIR-02 index insertion marker is missing or ambiguous.');
+  return html.replace(marker, feature + marker);
+}
+
 function addBlob(desired, blobs, hostingPath, bytes) {
   const compressed = gzip(bytes);
   const hash = sha256(compressed);
@@ -890,7 +1105,7 @@ async function buildOverlay(live, profileName) {
       fail('SourceGrid source check is older than the live Firebase checkpoint.');
     }
     if (sourceStatus.sourcesAttempted !== 37 || sourceStatus.sourcesSucceeded + sourceStatus.sourcesFailed !== 37 ||
-        !['FRESH','DEGRADED','STALE_FAILED'].includes(sourceStatus.feedFreshness)) {
+        !['FRESH','DEGRADED','STALE_FAILED','HISTORICAL_ARCHIVE'].includes(sourceStatus.feedFreshness)) {
       fail('SourceGrid check is incomplete or not an executed 37-source report.');
     }
     const ledger = JSON.parse(fs.readFileSync(path.join(ROOT, 'nfl/forecast-ledger.json'), 'utf8'));
@@ -915,10 +1130,135 @@ async function buildOverlay(live, profileName) {
     const source = path.join(ROOT, name);
     if (!fs.existsSync(source)) fail(`Repository overlay source is missing: ${name}`);
     let sourceBytes = readRepositoryBytes(name);
+    if (profileName === 'mqa001-review' && ['insights.html', 'sitemap.md'].includes(name)) {
+      const publicPath = name === 'insights.html' ? '/insights' : '/sitemap.md';
+      const current = (await verifiedLiveFile(live, '/' + name, publicPath)).toString('utf8');
+      sourceBytes = Buffer.from(require('./mqa001-discovery.cjs').patchDiscovery(current, sourceBytes.toString('utf8'), name), 'utf8');
+    }
     if (profileName === 'site-makeover' && name.toLowerCase().endsWith('.html')) {
       sourceBytes = Buffer.from(normalizeSharedFooter(groupMobileDrawer(sourceBytes.toString('utf8'))), 'utf8');
     }
     addBlob(desired, blobs, '/' + name, sourceBytes);
+  }
+
+  if (profileName === 'nfc-east-title-2026') {
+    const recordBytes = readRepositoryBytes('research/nfc-east-2026/nfc-east-title-2026-11-12.json');
+    const record = JSON.parse(recordBytes.toString('utf8'));
+    if (record.main?.sample_counts?.draws !== 1000000 ||
+        record.main.sample_counts.champions.NYG !== 663737 ||
+        record.main.sample_counts.champions.DAL !== 233978 ||
+        Math.abs(record.main.division_odds.NYG - 0.663737) > 1e-9) {
+      fail('NFC East original record has changed; refusing source mutation.');
+    }
+    addBlob(desired, blobs, '/forecasting/nfc-east-title-2026-11-12.json', recordBytes);
+    const image = childProcess.execFileSync('python3',
+      [path.join(ROOT, 'scripts/render-nfc-social.py')], {maxBuffer: 6*1024*1024});
+    if (image.subarray(0,8).toString('hex') !== '89504e470d0a1a0a' ||
+        image.readUInt32BE(16) !== 1200 || image.readUInt32BE(20) !== 630) {
+      fail('NFC East social image render invalid.');
+    }
+    addBlob(desired, blobs, '/assets/social/og-nfc-east-title-2026.png', image);
+    // Immutable post-49ers November 15 snapshot. Original inputs and image remain.
+    const newerBytes = readRepositoryBytes('research/nfc-east-2026/nfc-east-title-2026-11-15-post-sf.json');
+    const newer = JSON.parse(newerBytes.toString('utf8'));
+    const expectedChampions = {NYG:708953, DAL:175437, WAS:109501, PHI:6109};
+    if (newer.main?.sample_counts?.draws !== 1000000 ||
+        newer.main?.schedule?.length !== 27 ||
+        newer.base_records_after_final?.DAL?.l !== 6 ||
+        newer.base_records_after_final?.DAL?.conf_l !== 5 ||
+        newer.trigger?.away_score !== 46 || newer.trigger?.home_score !== 40 ||
+        Object.entries(expectedChampions).some(([team,count]) => newer.main?.sample_counts?.champions?.[team] !== count)) {
+      fail('NFC East Nov 15 source custody mismatch; declining publication.');
+    }
+    addBlob(desired, blobs, '/forecasting/nfc-east-title-2026-11-15-post-sf.json', newerBytes);
+    const imageNov15 = childProcess.execFileSync('python3',
+      [path.join(ROOT, 'scripts/render-nfc-social.py'), 'assets/social/og-nfc-east-title-2026-11-15.svg'], {maxBuffer: 6*1024*1024});
+    if (imageNov15.subarray(0,8).toString('hex') !== '89504e470d0a1a0a' ||
+        imageNov15.readUInt32BE(16) !== 1200 || imageNov15.readUInt32BE(20) !== 630) {
+      fail('NFC East Nov 15 PNG rendering invalid.');
+    }
+    addBlob(desired, blobs, '/assets/social/og-nfc-east-title-2026-11-15.png', imageNov15);
+  }
+
+  if (profileName === 'investigations-text-only') {
+    for (const [hostingPath, publicPath, patch] of [
+      ['/investigations.html', '/investigations', patchInvestigationOverview],
+      ['/insights.html', '/insights', patchInsightsIndex],
+      ['/investigations/chip-01.html', '/investigations/chip-01',
+        (live, source) => patchNvidiaDetailPage(live, source, 'investigations/chip-01.html')],
+      ['/insights/nvidia-megaspeed-chip-custody.html', '/insights/nvidia-megaspeed-chip-custody',
+        (live, source) => patchNvidiaDetailPage(live, source, 'insights/nvidia-megaspeed-chip-custody.html')],
+    ]) {
+      const publicHtml = (await verifiedLiveFile(live, hostingPath, publicPath)).toString('utf8');
+      const canonical = fs.readFileSync(path.join(ROOT, hostingPath.slice(1)), 'utf8');
+      const revised = patch(publicHtml, canonical);
+      addBlob(desired, blobs, hostingPath, Buffer.from(revised, 'utf8'));
+    }
+  }
+
+  if (profileName === 'release3-verified') {
+    for (const [hostingPath, publicPath, transform] of [
+      ['/pilot.html', '/pilot', (live, source) => patchPilot(live, source)],
+      ['/insights/hegseth-war-powers-fact-check.html', '/insights/hegseth-war-powers-fact-check', (live, source) => patchArticleMetadata(live, source, 'article')],
+      ['/insights/nvidia-megaspeed-chip-custody.html', '/insights/nvidia-megaspeed-chip-custody', (live, source) => patchArticleMetadata(live, source, 'article')],
+      ['/investigations/chip-01.html', '/investigations/chip-01', (live, source) => patchArticleMetadata(live, source, 'article')],
+      ['/election-data/index.html', '/election-data/', (live, source) => patchArticleMetadata(live, source, 'catalog')],
+    ]) {
+      const liveHtml = (await verifiedLiveFile(live, hostingPath, publicPath)).toString('utf8');
+      const canonical = fs.readFileSync(path.join(ROOT, hostingPath.slice(1)), 'utf8');
+      const revised = transform(liveHtml, canonical);
+      if (revised !== liveHtml) addBlob(desired, blobs, hostingPath, Buffer.from(revised, 'utf8'));
+    }
+    const liveHome = (await verifiedLiveFile(live, '/index.html', '/')).toString('utf8');
+    const canonicalHome = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+    const correctedHome = patchHomepageC7(liveHome, canonicalHome);
+    if (correctedHome !== liveHome) addBlob(desired, blobs, '/index.html', Buffer.from(correctedHome, 'utf8'));
+  }
+
+  if (profileName === 'site-completion') {
+    for (const [hostingPath, route] of [
+      ['/index.html', '/'],
+      ['/insights.html', '/insights'],
+      ['/nfl/deadline-watch-2026.html', '/nfl/deadline-watch-2026'],
+      ['/election-data/index.html', '/election-data/'],
+    ]) {
+      const liveHtml = (await verifiedLiveFile(live, hostingPath, route)).toString('utf8');
+      const canonical = fs.readFileSync(path.join(ROOT, hostingPath.slice(1)), 'utf8');
+      const revised = patchCompletionPage(liveHtml, canonical, route);
+      if (revised !== liveHtml) addBlob(desired, blobs, hostingPath, Buffer.from(revised, 'utf8'));
+    }
+  }
+
+  if (profileName === 'ai-visibility-hardening') {
+    for (const [hostingPath, route] of [
+      ['/index.html', '/'],
+      ['/insights.html', '/insights'],
+      ['/digital-id.html', '/digital-id'],
+      ['/os.html', '/os'],
+      ['/sports.html', '/sports'],
+      ['/nfl/deadline-watch-2026.html', '/nfl/deadline-watch-2026'],
+      ['/insights/nvidia-megaspeed-chip-custody.html', '/insights/nvidia-megaspeed-chip-custody'],
+    ]) {
+      const liveHtml = (await verifiedLiveFile(live, hostingPath, route)).toString('utf8');
+      const sourceHtml = fs.readFileSync(path.join(ROOT, hostingPath.slice(1)), 'utf8');
+      const revised = enhanceAgentVisibility(liveHtml, sourceHtml, route);
+      if (revised !== liveHtml) addBlob(desired, blobs, hostingPath, Buffer.from(revised, 'utf8'));
+    }
+  }
+
+  if (profileName === 'ai-discovery-seo') {
+    for (const [hostingPath, route] of [
+      ['/assurance.html', '/assurance'],
+      ['/investigations.html', '/investigations'],
+      ['/forecasting.html', '/forecasting'],
+      ['/evidence-scorecard.html', '/evidence-scorecard'],
+      ['/pilot.html', '/pilot'],
+    ]) {
+      const liveHtml = (await verifiedLiveFile(live, hostingPath, route)).toString('utf8');
+      const sourceHtml = fs.readFileSync(path.join(ROOT, hostingPath.slice(1)), 'utf8');
+      const revised = enhanceDiscoveryPage(liveHtml, sourceHtml, route);
+      if (revised !== liveHtml) addBlob(desired, blobs, hostingPath, Buffer.from(revised, 'utf8'));
+    }
   }
 
   if (profileName === 'buyer-discovery') {
@@ -926,6 +1266,15 @@ async function buildOverlay(live, profileName) {
       const liveHtml = (await verifiedLiveFile(live, hostingPath, route)).toString('utf8');
       const patched = patchBuyerPage(route, liveHtml);
       addBlob(desired, blobs, hostingPath, Buffer.from(patched, 'utf8'));
+    }
+  }
+
+  if (profileName === 'buyer-conversion') {
+    for (const [hostingPath, route] of [['/assurance.html', '/assurance'], ['/pilot.html', '/pilot']]) {
+      const liveHtml = (await verifiedLiveFile(live, hostingPath, route)).toString('utf8');
+      const sourceHtml = fs.readFileSync(path.join(ROOT, hostingPath.slice(1)), 'utf8');
+      const revised = patchBuyerConversion(liveHtml, sourceHtml, route);
+      if (revised !== liveHtml) addBlob(desired, blobs, hostingPath, Buffer.from(revised, 'utf8'));
     }
   }
 
@@ -950,6 +1299,10 @@ async function buildOverlay(live, profileName) {
 
   for (const [hostingPath, route] of profile.liveTransformRoutes || []) {
     const liveHtml = (await verifiedLiveFile(live, hostingPath, route)).toString('utf8');
+    if (profileName === 'air02-publication') {
+      addBlob(desired, blobs, hostingPath, Buffer.from(verifyAir02IndexPatch(liveHtml), 'utf8'));
+      continue;
+    }
     const shelled = injectSharedShell(liveHtml, route).toString('utf8');
     addBlob(desired, blobs, hostingPath, Buffer.from(normalizeSharedFooter(groupMobileDrawer(shelled)), 'utf8'));
   }
@@ -1012,17 +1365,62 @@ async function buildOverlay(live, profileName) {
   }
 
   const changedPaths = Object.keys(desired).filter((item) => live.fileMap[item] !== desired[item]).sort();
+  if (profileName === 'intelligence-share' && changedPaths.some(item =>
+      !['/intelligence.html', '/assets/social/og-kahrelum-intelligence-20261114.png', '/sitemap.xml'].includes(item))) {
+    fail('Intelligence sharing release attempted to replace an unrelated live Firebase path.');
+  }
   if (profileName === 'election-data-index' &&
       changedPaths.some((item) => ![
         '/election-data/index.html', '/assets/social/og-election-data-guide.png', '/sitemap.xml', '/sitemap.md',
       ].includes(item))) {
     fail('Election data index attempted to change unrelated live Firebase files.');
   }
+  if (profileName === 'release3-verified') {
+    const allowed = new Set([
+      ...RELEASE_PROFILES['release3-verified'].overlayFiles.map(name => '/' + name),
+      '/pilot.html', '/insights/hegseth-war-powers-fact-check.html',
+      '/insights/nvidia-megaspeed-chip-custody.html', '/investigations/chip-01.html',
+      '/election-data/index.html', '/index.html', '/sitemap.xml',
+    ]);
+    if (changedPaths.some(path => !allowed.has(path))) fail('Release 3 attempted to change unrelated live Firebase files.');
+  }
+  if (profileName === 'site-completion') {
+    const allowed = siteCompletionAllowedPaths();
+    const unexpected = changedPaths.filter(x => !allowed.has(x));
+    if (unexpected.length) fail('Site completion attempted to replace an unrelated Firebase file. Unexpected site completion changed paths: '+unexpected.join(', '));
+  }
+  if (profileName === 'ai-visibility-hardening') {
+    const allowed = new Set([
+      ...RELEASE_PROFILES['ai-visibility-hardening'].overlayFiles.map(x => '/' + x),
+      '/index.html', '/insights.html', '/digital-id.html', '/os.html',
+      '/sports.html', '/nfl/deadline-watch-2026.html',
+      '/insights/nvidia-megaspeed-chip-custody.html', '/sitemap.xml',
+    ]);
+    if (changedPaths.some(x => !allowed.has(x))) {
+      fail('AI visibility release attempted to change unrelated live Firebase files.');
+    }
+  }
+  if (profileName === 'ai-discovery-seo') {
+    const allowed = new Set([
+      ...RELEASE_PROFILES['ai-discovery-seo'].overlayFiles.map(x => '/' + x),
+      '/assurance.html','/investigations.html','/forecasting.html',
+      '/evidence-scorecard.html','/pilot.html','/sitemap.xml',
+    ]);
+    if (changedPaths.some(x => !allowed.has(x))) fail('AI discovery SEO release attempted to change unrelated live Firebase files.');
+  }
   if (profileName === 'buyer-discovery' &&
       changedPaths.some((item) => ![
         '/index.html', '/pilot.html', '/AGENTS.md', '/sitemap.md', '/llms-full.txt', '/index.md', '/pilot-page.md',
       ].includes(item))) {
     fail('Buyer discovery release attempted to change an unrelated live Firebase path.');
+  }
+  if (profileName === 'buyer-conversion' &&
+      changedPaths.some((item) => !['/assurance.html','/pilot.html','/sitemap.xml'].includes(item))) {
+    fail('Buyer conversion attempted to change unrelated live Firebase files.');
+  }
+  if (profileName === 'mobile-nav-layout' &&
+      changedPaths.some((item) => item !== '/site-shell.css')) {
+    fail('Mobile navigation release attempted to change unrelated live Firebase files.');
   }
   if (profileName === 'opticodds-market-integrity' &&
       changedPaths.some((item) => ![
@@ -1070,9 +1468,43 @@ async function buildOverlay(live, profileName) {
       fail('Hegseth legal audit attempted to change an unrelated Firebase route.');
     }
   }
+  if (profileName === 'mqa001-review') {
+    const allowed = new Set(['/sitemap.xml', ...RELEASE_PROFILES['mqa001-review'].overlayFiles.map(name => '/' + name)]);
+    if (changedPaths.some(item => !allowed.has(item))) fail('MQA release changed an unrelated path');
+    const route = '/insights/morgan-dollar-quote';
+    const article = (await fetchBytes(origin + route)).toString('utf8');
+    for (const phrase of ['Current case decision: HOLD', 'not establish that a commercial AI product failed', 'READY_FOR_COMPARISON']) {
+      if (!article.includes(phrase)) fail('MQA-001 evidence boundary missing: ' + phrase);
+    }
+    for (const [target, needle] of [['/insights', 'href="' + route + '"'], ['/sitemap.md', DOMAIN + route], ['/sitemap.xml', '<loc>' + DOMAIN + route + '</loc>']]) {
+      if (!(await fetchBytes(origin + target)).toString('utf8').includes(needle)) fail('MQA-001 discovery missing: ' + target);
+    }
+    const imagePath = '/assets/social/og-mqa001.png';
+    const bytes = await fetchBytes(origin + imagePath);
+    if (bytes.toString('ascii',1,4) !== 'PNG' || bytes.readUInt32BE(16) !== 1200 || bytes.readUInt32BE(20) !== 630 || sha256(bytes) !== sha256(readRepositoryBytes(imagePath.slice(1)))) fail('MQA-001 social image readback failed');
+    checks.push({route:imagePath,status:200,sha256:sha256(bytes)});
+  }
   if (profileName === 'osint-illusion') {
     const allowed = new Set(['/sitemap.xml', ...RELEASE_PROFILES['osint-illusion'].overlayFiles.map(name => '/' + name)]);
     if (changedPaths.some(item => !allowed.has(item))) fail('OSINT Insight attempted to alter unrelated Firebase routes.');
+  }
+  if (profileName === 'nfc-east-title-2026') {
+    const allowed = new Set(['/sitemap.xml',
+      '/forecasting/nfc-east-title-2026-11-12.json',
+      '/forecasting/nfc-east-title-2026-11-15-post-sf.json',
+      '/assets/social/og-nfc-east-title-2026.png',
+      '/assets/social/og-nfc-east-title-2026-11-15.png',
+      ...RELEASE_PROFILES['nfc-east-title-2026'].overlayFiles.map(name => '/' + name)]);
+    if (changedPaths.some(item => !allowed.has(item))) {
+      fail('NFC East release attempted to change unrelated Firebase paths.');
+    }
+  }
+  if (profileName === 'malik-beasley-forecast') {
+    const allowed = new Set(['/sitemap.xml',
+      ...RELEASE_PROFILES['malik-beasley-forecast'].overlayFiles.map(name => '/' + name)]);
+    if (changedPaths.some(item => !allowed.has(item))) {
+      fail('Malik Beasley forecast attempted to change an unrelated live Firebase path.');
+    }
   }
   if (profileName === 'hegseth-forecast') {
     const allowed = new Set(['/sitemap.xml',
@@ -1106,6 +1538,33 @@ async function buildOverlay(live, profileName) {
       changedPaths.some((item) => !['/investigations.html', '/assets/social/og-air01-v1.png'].includes(item))) {
     fail('Investigations release attempted to replace an unrelated live Firebase path.');
   }
+  if (profileName === 'fortune-ca001') {
+    const allowed = new Set(['/investigations/ca-001.html', '/assets/social/og-ca001-v1.png']);
+    if (changedPaths.some(item => !allowed.has(item))) fail('CA-001 release attempted an unrelated path.');
+    const article = fs.readFileSync(path.join(ROOT, 'investigations/ca-001.html'), 'utf8');
+    const cover = fs.readFileSync(path.join(ROOT, 'assets/social/og-ca001-v1.png'));
+    if (sha256(cover) !== '09c178721154b937061df51e09a5b0bb2342d7c7122a2af95f48daef2d0ae03d' ||
+        cover.readUInt32BE(16) !== 1200 || cover.readUInt32BE(20) !== 630 ||
+        !article.includes('summary_large_image') || !article.includes('og-ca001-v1.png')) {
+      fail('CA-001 supplied cover or social metadata integrity failure.');
+    }
+    for (const required of ['CA-001', '19.1%', 'MISLEADING', 'Joshua Hong', 'employed adults', 'counterevidence', 'NOT YET VERIFIABLE']) {
+      if (!article.includes(required)) fail('CA-001 required evidence boundary missing: ' + required);
+    }
+  }
+  if (profileName === 'air02-publication') {
+    const article = fs.readFileSync(path.join(ROOT, 'investigations/air-02.html'));
+    const image = fs.readFileSync(path.join(ROOT, 'assets/social/og-air02-v1.png'));
+    if (!article.toString('utf8').includes('AIR-02') || !desired['/investigations/air-02.html'] ||
+        !desired['/assets/social/og-air02-v1.png'] ||
+        image.subarray(0, 8).toString('hex') !== '89504e470d0a1a0a' ||
+        image.readUInt32BE(16) !== 1200 || image.readUInt32BE(20) !== 630) {
+      fail('AIR-02 article or original 1200x630 social image failed its source integrity check.');
+    }
+    const allowed = new Set(['/investigations.html', '/investigations/air-02.html',
+      '/assets/social/og-air02-v1.png', '/sitemap.xml']);
+    if (changedPaths.some(item => !allowed.has(item))) fail('AIR-02 publication attempted to change an unrelated live Firebase path.');
+  }
   if (profileName === 'site-makeover') {
     const allowed = new Set([
       ...profile.overlayFiles.map((name) => '/' + name),
@@ -1130,7 +1589,8 @@ async function buildOverlay(live, profileName) {
   const removedPaths = Object.keys(live.fileMap).filter((item) => !(item in desired));
   if (removedPaths.length) fail(`Overlay attempted to remove live paths: ${removedPaths.join(', ')}`);
 
-  return { desired, blobs, changedPaths };
+  const expectedConfig = profileName === 'site-completion' ? prepareMarkdownHostingConfig(live.config) : live.config;
+  return { desired, blobs, changedPaths, expectedConfig };
 }
 
 async function captureApiHashes(origin) {
@@ -1159,6 +1619,26 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     ? ['/election-data/']
     : profileName === 'buyer-discovery'
     ? ['/', '/pilot']
+    : profileName === 'buyer-conversion'
+    ? ['/assurance','/pilot']
+    : profileName === 'mobile-nav-layout'
+    ? ['/', '/assurance', '/pilot']
+    : profileName === 'forecast-100-publication'
+    ? ['/forecasting', '/forecasting/100-forecast-challenge']
+    : profileName === 'nfc-east-title-2026'
+    ? ['/forecasting', '/forecasting/nfc-east-2026']
+    : profileName === 'malik-beasley-forecast'
+    ? ['/insights', '/forecasting', '/insights/malik-beasley-sentencing-2026']
+    : profileName === 'calibration-nfl-2026'
+    ? ['/forecasting','/insights','/insights/calibration-oct-nov-2026','/nfl/trade-volume-challenge-2026']
+    : profileName === 'ai-discovery-seo'
+    ? ['/assurance','/investigations','/forecasting','/evidence-scorecard','/pilot']
+    : profileName === 'ai-visibility-hardening'
+    ? ['/', '/insights', '/digital-id', '/os', '/sports', '/nfl/deadline-watch-2026', '/insights/nvidia-megaspeed-chip-custody']
+    : profileName === 'site-completion'
+    ? ['/', '/insights', '/nfl/deadline-watch-2026', '/election-data/']
+    : profileName === 'release3-verified'
+    ? ['/', '/pilot', '/nfl/deadline-watch-2026', '/nfl/weekly-brief', '/insights/hegseth-war-powers-fact-check', '/insights/nvidia-megaspeed-chip-custody', '/investigations/chip-01', '/election-data/']
     : profileName === 'opticodds-market-integrity'
     ? ['/opticodds-market-integrity']
     : profileName === 'ai-evaluation'
@@ -1177,6 +1657,12 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     ? ['/']
     : profileName === 'chip01-publication'
     ? ['/investigations', '/investigations/chip-01', '/insights', '/insights/nvidia-megaspeed-chip-custody']
+    : profileName === 'intelligence-share'
+    ? ['/intelligence']
+    : profileName === 'fortune-ca001'
+    ? ['/investigations/ca-001']
+    : profileName === 'air02-publication'
+    ? ['/investigations', '/investigations/air-02']
     : profileName === 'hegseth-forecast'
     ? ['/forecasting', '/insights', '/insights/hegseth-impeachment-forecast-2026']
     : profileName === 'legacy-social-metadata'
@@ -1211,6 +1697,106 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     checks.push({ route, status: 200, sha256: sha256(bytes) });
   }
 
+  if (profileName === 'malik-beasley-forecast') {
+    // Fail closed unless BOTH the image and social tags are published exactly
+    // as committed, in the preview as well as the final production release.
+    const articleRoute = '/insights/malik-beasley-sentencing-2026';
+    const imageRoute = '/assets/social/og-malik-beasley-sentencing-2026.png';
+    const imageUrl = DOMAIN + imageRoute;
+    const articleHtml = (await fetchBytes(origin + articleRoute)).toString('utf8');
+    for (const marker of [
+      '<meta property="og:image" content="' + imageUrl + '">',
+      '<meta property="og:image:secure_url" content="' + imageUrl + '">',
+      '<meta name="twitter:image" content="' + imageUrl + '">',
+      '<meta property="og:image:width" content="1200">',
+      '<meta property="og:image:height" content="630">',
+    ]) {
+      if (!articleHtml.includes(marker)) fail('Beasley forecast social metadata mismatch: ' + marker);
+    }
+    const servedPng = await fetchBytes(origin + imageRoute);
+    const expectedPng = readRepositoryBytes('assets/social/og-malik-beasley-sentencing-2026.png');
+    if (servedPng.length !== expectedPng.length || sha256(servedPng) !== sha256(expectedPng)) {
+      fail('Beasley dedicated social image bytes differ from custodied source.');
+    }
+    if (servedPng.length < 1000 || servedPng.subarray(0,8).toString('hex') !== '89504e470d0a1a0a' ||
+        servedPng.readUInt32BE(16) !== 1200 || servedPng.readUInt32BE(20) !== 630) {
+      fail('Beasley social image is not a valid 1200x630 PNG.');
+    }
+    checks.push({route:imageRoute,status:200,sha256:sha256(servedPng),dimensions:'1200x630'});
+  }
+
+  if (profileName === 'nfc-east-title-2026') {
+    const route = '/forecasting/nfc-east-2026';
+    const page = (await fetchBytes(origin + route)).toString('utf8');
+    const index = (await fetchBytes(origin + '/forecasting')).toString('utf8');
+    for (const fragment of ['Giants 70.9%', 'Cowboys 17.5%', 'Commanders 11.0%', 'Eagles 0.6%',
+                            'Giants 66.4%', 'Cowboys 23.4%', 'OPEN · UNSCORED', 'EXPERIMENTAL MODEL']) {
+      if (!page.includes(fragment)) fail('NFC East current/archived article missing: '+fragment);
+    }
+    if (!index.includes('href="' + route + '"')) fail('NFC East forecasting index link missing.');
+    for (const [publicPath, sourcePath] of [
+      ['/forecasting/nfc-east-title-2026-11-12.json', 'research/nfc-east-2026/nfc-east-title-2026-11-12.json'],
+      ['/forecasting/nfc-east-title-2026-11-15-post-sf.json', 'research/nfc-east-2026/nfc-east-title-2026-11-15-post-sf.json'],
+    ]) {
+      const actual = await fetchBytes(origin + publicPath);
+      if (sha256(actual) !== sha256(readRepositoryBytes(sourcePath))) {
+        fail('NFC East source JSON mismatch: '+publicPath);
+      }
+      checks.push({route:publicPath,status:200,sha256:sha256(actual)});
+    }
+    for (const [publicPath, sourceSvg, current] of [
+      ['/assets/social/og-nfc-east-title-2026.png', null, false],
+      ['/assets/social/og-nfc-east-title-2026-11-15.png', 'assets/social/og-nfc-east-title-2026-11-15.svg', true],
+    ]) {
+      const actual = await fetchBytes(origin + publicPath);
+      const args = [path.join(ROOT,'scripts/render-nfc-social.py')];
+      if (sourceSvg) args.push(sourceSvg);
+      const expected = childProcess.execFileSync('python3',args,{maxBuffer:6*1024*1024});
+      if (actual.subarray(0,8).toString('hex')!=='89504e470d0a1a0a' ||
+          actual.readUInt32BE(16)!==1200 || actual.readUInt32BE(20)!==630 ||
+          sha256(actual)!==sha256(expected)) {
+        fail('NFC East PNG source byte readback failed: '+publicPath);
+      }
+      if (current && (!page.includes('property="og:image" content="'+DOMAIN+publicPath+'"') ||
+                      !page.includes('name="twitter:image" content="'+DOMAIN+publicPath+'"'))) {
+        fail('NFC East OG/Twitter versioned metadata failed byte readback.');
+      }
+      checks.push({route:publicPath,status:200,sha256:sha256(actual),dimensions:'1200x630'});
+    }
+    const sitemap=(await fetchBytes(origin+'/sitemap.xml')).toString('utf8');
+    if (!sitemap.includes('<loc>'+DOMAIN+route+'</loc>')) fail('NFC East XML sitemap missing.');
+  }
+
+  if (profileName === 'ai-visibility-hardening') {
+    // Production/preview readback must contain the source-checked homepage fields;
+    // a successful Firebase release alone is not a successful SEO release.
+    const home=(await fetchBytes(origin+'/')).toString('utf8');
+    const tag=home.match(/<script type="application\/ld\+json" id="kahrelum-homepage-schema">([^<]+)<\/script>/);
+    if(!tag)fail('Homepage structured data not published.');
+    const graph=JSON.parse(tag[1]);
+    if(graph['@context']!=='https://schema.org'||graph['@type']!=='WebPage'||
+       graph.url!==DOMAIN+'/'||graph.dateModified!=='2026-11-12')fail('Homepage source-bounded structured data failed readback.');
+    for(const snippet of [
+      '<link rel="alternate" type="text/markdown" href="/index.md">',
+      '<link rel="describedby" href="/llms.txt">',
+      '<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">',
+    ])if(!home.includes(snippet))fail('Homepage crawler discovery not published: '+snippet);
+    checks.push({route:'/',status:200,structuredData:'WebPage',alternate:'/index.md',robots:'index, follow'});
+  }
+
+  if (profileName === 'mobile-nav-layout') {
+    const served=await fetchBytes(origin+'/site-shell.css?v=20261105-1');
+    const expected=readRepositoryBytes('site-shell.css');
+    if (sha256(served)!==sha256(expected) ||
+        !served.toString('utf8').includes('Mobile navigation viewport fix')) {
+      fail('Mobile navigation CSS production readback failed.');
+    }
+    checks.push({route:'/site-shell.css',status:200,sha256:sha256(served)});
+  }
+  if (profileName === 'site-completion') {
+    const headers=await verifyMarkdownResponseHeaders(origin);
+    checks.push(...headers.map(h=>({route:h.route,status:h.status,contentType:h.type,canonical:h.canonical})));
+  }
   if (profileName === 'election-data-index') {
     const page = (await fetchBytes(origin + '/election-data/')).toString('utf8');
     const pageLink = '<link rel="canonical" href="' + DOMAIN + '/election-data/">';
@@ -1263,6 +1849,30 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
       fail('AI evaluation social metadata readback failed.');
     }
     checks.push({route:imagePath,status:200,sha256:sha256(actual)});
+  }
+
+  if (profileName === 'buyer-conversion') {
+    for (const [route,sectionId,asset] of [
+      ['/assurance','example-decision-audits','og-assurance.png'],
+      ['/pilot','fit-check-process','og-pilot.png'],
+    ]) {
+      const html = (await fetchBytes(origin + route)).toString('utf8');
+      const expectedTitle = route === '/assurance'
+        ? 'AI Agent Decision Audits &amp; Assurance | KAHRELUM'
+        : 'AI Decision Audit: $750 Fit Check | KAHRELUM';
+      if (!html.includes('<title>' + expectedTitle + '</title>') ||
+          !html.includes('id="' + sectionId + '"') ||
+          !html.includes('/assets/social/' + asset) ||
+          !html.includes('property="og:image"') ||
+          !html.includes('$750') || !html.includes('$2,500')) {
+        fail('Buyer conversion SEO and asset readback failed: ' + route);
+      }
+      if (route === '/pilot' && (!html.includes('id="pilotInquiry"') ||
+          !/does not automatically transmit|not automatically sent/i.test(html) ||
+          !html.includes('Prepare a $750 Fit Check inquiry (you send)'))) {
+        fail('Buyer conversion published a non-reviewable inquiry: ' + route);
+      }
+    }
   }
 
   if (profileName === 'buyer-discovery') {
@@ -1656,7 +2266,7 @@ async function createPreview(hosting, client, live, overlay, profileName, source
   if (!overlay.changedPaths.length) fail('The overlay is already identical to production; no preview release is needed.');
   const channelId = `${CHANNEL_PREFIX}-${stableMapHash(overlay.desired).slice(0, 12)}`;
   const versionName = canonicalVersionName(await createHostingVersion(hosting, {
-    config: live.config,
+    config: overlay.expectedConfig || live.config,
     labels: { 'deployment-tool': 'kahrelum-safe-overlay' },
   }), live.version.name);
   const populated = (await client.post(`/${versionName}:populateFiles`, { files: overlay.desired })).body;
@@ -1676,7 +2286,7 @@ async function createPreview(hosting, client, live, overlay, profileName, source
   const finalizedFiles = await listVersionFiles(client, versionName);
   const finalizedMap = Object.fromEntries(finalizedFiles.map((item) => [item.path, item.hash]));
   if (!util.isDeepStrictEqual(finalizedMap, overlay.desired)) fail('Finalized preview file map differs from the live-derived desired map.');
-  if (!util.isDeepStrictEqual(normalizeConfig(finalized.config), live.config)) fail('Finalized preview Hosting configuration differs from production.');
+  if (!util.isDeepStrictEqual(normalizeConfig(finalized.config), overlay.expectedConfig || live.config)) fail('Finalized preview Hosting configuration differs from the approved config delta.');
 
   let channel = await hosting.getChannel('-', SITE, channelId);
   if (!channel) {
@@ -1696,6 +2306,8 @@ async function createPreview(hosting, client, live, overlay, profileName, source
     baseVersion: live.version.name,
     baseConfig: live.config,
     baseConfigHash: sha256(Buffer.from(JSON.stringify(live.config))),
+    expectedConfig: overlay.expectedConfig || live.config,
+    expectedConfigHash: sha256(Buffer.from(JSON.stringify(overlay.expectedConfig || live.config))),
     previewChannel: channelId,
     previewUrl: channel.url,
     previewVersion: versionName,
@@ -1715,8 +2327,9 @@ async function promotePreview(hosting, client, live) {
   if (live.version.name !== receipt.baseVersion) {
     fail(`Production changed after preview (${receipt.baseVersion} -> ${live.version.name}). Prepare a new preview.`);
   }
-  if (sha256(Buffer.from(JSON.stringify(live.config))) !== receipt.baseConfigHash) fail('Production Hosting configuration changed after preview.');
+  if (!configsSemanticallyEqual(live.config, receipt.baseConfig)) fail('Production Hosting configuration changed after preview.');
   if (stableMapHash(receipt.desiredFiles) !== receipt.desiredMapHash) fail('Preview receipt file map is not internally consistent.');
+  if (sha256(Buffer.from(JSON.stringify(receipt.expectedConfig))) !== receipt.expectedConfigHash) fail('Approved Hosting configuration hash changed after preview.');
 
   const preview = await hosting.getChannel('-', SITE, receipt.previewChannel);
   if (preview?.release?.version?.name !== receipt.previewVersion) fail('Preview channel no longer points to the verified version.');
@@ -1733,7 +2346,7 @@ async function promotePreview(hosting, client, live) {
   const releasedMap = Object.fromEntries(releasedFiles.map((item) => [item.path, item.hash]));
   if (released.release.version.name !== receipt.previewVersion) fail('Live channel did not adopt the verified preview version.');
   if (!util.isDeepStrictEqual(releasedMap, receipt.desiredFiles)) fail('Production file-map readback differs from the verified preview.');
-  if (!util.isDeepStrictEqual(normalizeConfig(released.release.version.config), receipt.baseConfig)) fail('Production Hosting configuration changed during promotion.');
+  if (!util.isDeepStrictEqual(normalizeConfig(released.release.version.config), receipt.expectedConfig)) fail('Production Hosting configuration differs from the verified approved delta.');
   const verification = await verifySurface(DOMAIN, receipt.expectedApiHashes, receipt.releaseProfile || 'full');
   const productionReceipt = {
     promotedAt: new Date().toISOString(),
@@ -1742,7 +2355,8 @@ async function promotePreview(hosting, client, live) {
     fileCount: releasedFiles.length,
     desiredMapHash: receipt.desiredMapHash,
     sourceCommit: receipt.sourceCommit,
-    configUnchanged: true,
+    configUnchanged: util.isDeepStrictEqual(receipt.baseConfig, receipt.expectedConfig),
+    approvedMarkdownHeaders: receipt.releaseProfile === 'site-completion' ? 13 : 0,
     verification,
   };
   // Only after production has passed exact-version file-map, config, and public
@@ -1787,7 +2401,8 @@ async function main() {
     desiredFileCount: Object.keys(overlay.desired).length,
     changedPaths: overlay.changedPaths,
     removedPaths: [],
-    configPreserved: true,
+    configPreserved: util.isDeepStrictEqual(overlay.expectedConfig, live.config),
+    approvedMarkdownHeaders: profileName === 'site-completion' ? 13 : 0,
   };
   if (mode === '--plan') {
     console.log(JSON.stringify(summary, null, 2));

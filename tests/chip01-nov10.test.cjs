@@ -46,7 +46,7 @@ test('CHIP-01 outcome forecasts are timestamp-custodied as new November 10 predi
  }
 });
 test('CHIP-01 discovery pages announce an updated date without replacing original cases',()=>{
- assert.match(read('investigations.html'),/New open investigation · Updated November 10, 2026/);
- assert.match(read('insights.html'),/Counterintelligence · AI infrastructure · Updated Nov 10/);
+ assert.match(read('investigations.html'),/Open investigation · Updated November 12, 2026/);
+ assert.match(read('insights.html'),/Counterintelligence · AI infrastructure · Updated Nov 12/);
  assert.equal([...read('investigations.html').matchAll(/data-case-id="([A-Z]+-[0-9]+)"/g)].length,12);
 });

@@ -1,0 +1,730 @@
+✖ complete synthetic bid supports comparison, never a trade recommendation (2.1249ms)
+✖ retail ask cannot satisfy sale bid (0.8203ms)
+✖ guide is never executable bid (0.6446ms)
+✖ unknown intent (0.516ms)
+✖ anonymous conversation (1.3302ms)
+✖ missing quote source (0.6461ms)
+✖ unsupported source (0.4657ms)
+✖ conflicting sources (0.4448ms)
+✖ stale quote (0.4961ms)
+✖ future quote (0.5939ms)
+✖ future evidence cannot repair history (0.6219ms)
+✖ expired quote (0.3673ms)
+✖ invalid decision timestamp (0.339ms)
+✖ missing timestamp zone (0.3203ms)
+✖ unknown authenticity (0.3284ms)
+✖ unknown condition (0.3131ms)
+✖ unknown mintmark (0.3136ms)
+✖ unverified identity (0.3516ms)
+✖ modern issue excluded (0.3126ms)
+✖ nonissue year excluded (0.3222ms)
+✖ wrong series excluded (0.3768ms)
+✖ wrong currency (0.3708ms)
+✖ lot quote cannot be per coin (0.3419ms)
+✖ unknown fees (0.3211ms)
+✖ negative fees (0.3754ms)
+✖ string price (0.4503ms)
+✖ nonfinite price (0.5111ms)
+✖ missing dealer (0.4408ms)
+✖ missing terms (0.3612ms)
+✖ missing spot evidence (0.3638ms)
+✖ stale spot (0.3738ms)
+✖ wrong spot units (0.3744ms)
+✖ collectible total plus metal double counts (0.3722ms)
+✖ duplicate source ids (0.4231ms)
+✖ missing freshness policy (0.3513ms)
+✖ invalid quantity (0.4014ms)
+✖ buy direction supports ask comparison (0.3502ms)
+✖ preserves prior failure and correction without mutating input (0.3772ms)
+✖ empty and malformed inputs fail closed (0.3355ms)
+✖ arithmetic uses declared conventional silver content (0.3289ms)
+ℹ tests 40
+ℹ suites 0
+ℹ pass 0
+ℹ fail 40
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 143.7498
+
+✖ failing tests:
+
+test at tests\mqa001.test.cjs:9:1
+✖ complete synthetic bid supports comparison, never a trade recommendation (2.1249ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ retail ask cannot satisfy sale bid (0.8203ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ guide is never executable bid (0.6446ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ unknown intent (0.516ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ anonymous conversation (1.3302ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ missing quote source (0.6461ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ unsupported source (0.4657ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ conflicting sources (0.4448ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ stale quote (0.4961ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ future quote (0.5939ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ future evidence cannot repair history (0.6219ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ expired quote (0.3673ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ invalid decision timestamp (0.339ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ missing timestamp zone (0.3203ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ unknown authenticity (0.3284ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ unknown condition (0.3131ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ unknown mintmark (0.3136ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ unverified identity (0.3516ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ modern issue excluded (0.3126ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ nonissue year excluded (0.3222ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ wrong series excluded (0.3768ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ wrong currency (0.3708ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ lot quote cannot be per coin (0.3419ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ unknown fees (0.3211ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ negative fees (0.3754ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ string price (0.4503ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ nonfinite price (0.5111ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ missing dealer (0.4408ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ missing terms (0.3612ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ missing spot evidence (0.3638ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ stale spot (0.3738ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ wrong spot units (0.3744ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ collectible total plus metal double counts (0.3722ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ duplicate source ids (0.4231ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ missing freshness policy (0.3513ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:47:41
+✖ invalid quantity (0.4014ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:48:1
+✖ buy direction supports ask comparison (0.3502ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:49:1
+✖ preserves prior failure and correction without mutating input (0.3772ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:50:1
+✖ empty and malformed inputs fail closed (0.3355ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }
+
+test at tests\mqa001.test.cjs:51:1
+✖ arithmetic uses declared conventional silver content (0.3289ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\research\mqa-001\quote_gate.mjs' imported from C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\mqa001\tests\mqa001.test.cjs
+      at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+      at moduleResolve (node:internal/modules/esm/resolve:846:10)
+      at defaultResolve (node:internal/modules/esm/resolve:973:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+      at #resolve (node:internal/modules/esm/loader:690:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+      at node:internal/modules/esm/loader:639:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:582:22) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/Asif%20Computer/Documents/Codex/2026-11-17/publish-the-pending-ca-001-punctuation/mqa001/research/mqa-001/quote_gate.mjs'
+  }

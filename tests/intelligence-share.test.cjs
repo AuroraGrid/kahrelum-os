@@ -1,0 +1,51 @@
+'use strict';
+const {test}=require('node:test');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const root=path.resolve(__dirname,'..');
+const read=x=>fs.readFileSync(path.join(root,x),'utf8');
+test('newsletter landing has crawler-readable matching wide metadata and subscription route',()=>{
+ const html=read('intelligence.html');
+ const image='https://kahrelum.com/assets/social/og-kahrelum-intelligence-20261114.png';
+ for(const attr of ['og:image','twitter:image']) assert.ok(html.includes(`${attr}" content="${image}"`));
+ assert.match(html,/rel="canonical" href="https:\/\/kahrelum.com\/intelligence"/);
+ assert.match(html,/name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/);
+ assert.match(html,/name="twitter:card" content="summary_large_image"/);
+ assert.match(html,/href="https:\/\/kahrelum.substack.com\/subscribe"/);
+ assert.match(html,/og:image:width" content="1200"/);
+ assert.match(html,/og:image:height" content="630"/);
+ const png=fs.readFileSync(path.join(root,'assets/social/og-kahrelum-intelligence-20261114.png'));
+ assert.equal(png.subarray(0,8).toString('hex'),'89504e470d0a1a0a');
+ assert.deepEqual([png.readUInt32BE(16),png.readUInt32BE(20)],[1200,630]);
+ for(const link of ['https://x.com/Nospinzone','https://www.linkedin.com/in/hasan-raza-kazmi/','/investigations/air-02','/investigations']) assert.ok(html.includes(`href="${link}"`));
+});
+test('release scope excludes existing articles, homepage, configuration and unrelated paths',()=>{
+ const src=read('scripts/firebase-overlay-release.cjs');
+ const scope=src.match(/'intelligence-share': \{([\s\S]*?)\n  \},/)[1];
+ assert.match(scope,/includeHomepage: false/);
+ assert.match(scope,/sitemapRoutes: \['\/intelligence'\]/);
+ assert.doesNotMatch(scope,/air-02|index\.html|firebase\.json/);
+ const guard=src.match(/if \(profileName === 'intelligence-share' && changedPaths.some[\s\S]*?\n  \}/)[0];
+ const allowed=Function('return '+guard.match(/!\[(.*?)\]\.includes/s)[0].slice(1).replace(/\.includes$/,''))();
+ assert.deepEqual(allowed,['/intelligence.html','/assets/social/og-kahrelum-intelligence-20261114.png','/sitemap.xml']);
+ assert.ok(src.indexOf(guard)>src.indexOf('const changedPaths ='));
+ const workflow=read('.github/workflows/firebase-scoped-release.yml');
+ assert.match(workflow,/profiles="intelligence-share"/);
+ assert.match(workflow,/Intelligence share release includes unrelated path/);
+});
+
+test('Intelligence landing has JSON-LD, llms discovery, complete snippet policy and a readable topical heading',()=>{
+ const html=read('intelligence.html'),head=html.split('</head>')[0];
+ assert.ok(head.includes('<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">'));
+ assert.ok(head.includes('<link rel="describedby" href="/llms.txt">'));
+ const json=head.split('<script type="application/ld+json">')[1]?.split('</script>')[0];
+ assert.ok(json,'JSON-LD schema must be in HTML head');
+ const schema=JSON.parse(json);
+ assert.equal(schema['@type'],'WebPage');
+ assert.equal(schema.url,'https://kahrelum.com/intelligence');
+ assert.equal(schema.dateModified,'2026-11-17');
+ assert.ok(schema.description.includes('Independent investigations'));
+ assert.ok(html.includes('<h2 id="topics-title" class="topic-title">Coverage areas</h2>'));
+ assert.ok(html.includes('<a href="/ai-discovery/glossary.md">Evidence glossary</a>'));
+});

@@ -1,18 +1,18 @@
 {
   "schema": "KAHRELUM_NFL_DESK_LIVE_v1.0",
-  "generatedAtUtc": "2026-11-10T15:48:22Z",
+  "generatedAtUtc": "2026-11-12T21:35:02Z",
   "sourceStatus": {
     "schema": "KAHRELUM_REFRESH_STATUS_v1.1",
-    "lastAttemptAt": "2026-11-10T15:48:22Z",
+    "lastAttemptAt": "2026-11-12T21:35:02Z",
     "lastSuccessfulSourceCheckAt": "2026-11-10T15:48:22Z",
     "lastPublishedUpdateAt": "2026-10-31T13:13:05Z",
-    "feedFreshness": "FRESH",
-    "monitoringState": "DEADLINE_WINDOW_OPEN",
+    "feedFreshness": "ARCHIVED_NO_DEADLINE_FETCH",
+    "monitoringState": "DEADLINE_WINDOW_CLOSED",
     "deadlineUtc": "2026-11-10T21:00:00Z",
-    "sourcesAttempted": 37,
-    "sourcesSucceeded": 37,
+    "sourcesAttempted": 0,
+    "sourcesSucceeded": 0,
     "sourcesFailed": 0,
-    "observationsNew": 58,
+    "observationsNew": 0,
     "reviewQueueCount": 1690,
     "materialAlerts": [
       {
@@ -33,13 +33,16 @@
     ],
     "errors": [],
     "truthBoundary": "Source checks and publication are separate. lastSuccessfulSourceCheckAt means at least one source succeeded; lastFullySuccessfulSourceCheckAt requires every registered operational source to succeed.",
-    "lastCompletedCheckAt": "2026-11-10T15:48:22Z",
+    "lastCompletedCheckAt": "2026-11-12T21:35:02Z",
     "lastFullySuccessfulSourceCheckAt": "2026-11-10T15:48:22Z",
-    "duplicatesSuppressed": 11,
+    "duplicatesSuppressed": 0,
     "sourceFailureAlerts": [],
     "reviewProposalCount": 29,
     "lastManuallyVerifiedOriginalReportAtUtc": "2026-10-31T13:13:05Z",
-    "originalReportManualVerificationNotice": "Manual original-report verification only; not a 37-feed SourceGrid run. lastSuccessfulSourceCheckAt/lastFullySuccessfulSourceCheckAt unchanged."
+    "originalReportManualVerificationNotice": "Manual original-report verification only; not a 37-feed SourceGrid run. lastSuccessfulSourceCheckAt/lastFullySuccessfulSourceCheckAt unchanged.",
+    "archivedAtDate": "2026-11-12",
+    "archiveNote": "The last 37-source check is dated November 10 at 15:48 UTC, before the deadline; these timestamps are original. The current monitoring state is closed/archived, not a claimed new check. For outcomes see /nfl/deadline-reconciled-2026.json.",
+    "originalSourceArchive": "https://github.com/AuroraGrid/kahrelum-os/blob/main/research/nfl-2026-trade-deadline/archive-public-2026-11-12/2026-11-10-operational-status-original.json"
   },
   "board": {
     "schema": "KAHRELUM_NFL_TRADE_BOARD_PUBLIC_v0.2",
@@ -7958,7 +7961,7 @@
   "audit": {
     "schema": "KAHRELUM_NFL_DEADLINE_AUDIT_v1.0",
     "scheduledForUtc": "2026-11-12T14:00:00Z",
-    "status": "PENDING_SCHEDULED_AUDIT",
+    "status": "PENDING_COMPLETE_COHORT",
     "officialOutcomeCutoffUtc": "2026-11-10T21:00:00Z",
     "confirmedTransactions": [],
     "eligibleForecasts": 123,
@@ -7969,9 +7972,136 @@
     "allNoBaselineBrier": null,
     "excludedHistoricalForecasts": 23,
     "limitations": [
-      "Outcomes are not scored before the documented official audit time."
+      "Every admitted forecast, including non-trades and uncertain event ordering, must be resolved before a cohort mean is reported."
     ],
-    "generatedAt": "2026-10-31T04:47:11Z"
+    "generatedAt": "2026-11-12T21:35:02Z",
+    "resolvedForecasts": 117,
+    "unresolvedEventIds": [
+      "NFL-2026-TRADE-K26-003-FC1",
+      "NFL-2026-TRADE-K26-023-FC1",
+      "NFL-2026-TRADE-K26-045-FC1",
+      "NFL-2026-TRADE-K26-074-FC1",
+      "NFL-2026-TRADE-K26-081-FC1",
+      "NFL-2026-TRADE-K26-088-FC1"
+    ],
+    "unresolvedEvents": [
+      {
+        "eventId": "NFL-2026-TRADE-K26-003-FC1",
+        "player": "Josh Downs",
+        "reason": "DATE_ONLY_RECORD_OVERLAPS_LOCK_OR_DEADLINE",
+        "officialRecords": [
+          {
+            "fromTeam": "Colts",
+            "toTeam": "Chiefs",
+            "player": "Josh Downs",
+            "position": "",
+            "transactionDate": "11/10",
+            "transactionTimestampUtc": "2026-11-10T00:00:00Z",
+            "timestampPrecision": "DATE_ONLY_TIMEZONE_UNSTATED",
+            "action": "Traded"
+          }
+        ]
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-023-FC1",
+        "player": "Amani Hooker",
+        "reason": "DATE_ONLY_RECORD_OVERLAPS_LOCK_OR_DEADLINE",
+        "officialRecords": [
+          {
+            "fromTeam": "Titans",
+            "toTeam": "Bills",
+            "player": "Amani Hooker",
+            "position": "",
+            "transactionDate": "11/10",
+            "transactionTimestampUtc": "2026-11-10T00:00:00Z",
+            "timestampPrecision": "DATE_ONLY_TIMEZONE_UNSTATED",
+            "action": "Traded"
+          }
+        ]
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-045-FC1",
+        "player": "Daiyan Henley",
+        "reason": "DATE_ONLY_RECORD_OVERLAPS_LOCK_OR_DEADLINE",
+        "officialRecords": [
+          {
+            "fromTeam": "Chargers",
+            "toTeam": "Broncos",
+            "player": "Daiyan Henley",
+            "position": "",
+            "transactionDate": "11/10",
+            "transactionTimestampUtc": "2026-11-10T00:00:00Z",
+            "timestampPrecision": "DATE_ONLY_TIMEZONE_UNSTATED",
+            "action": "Traded"
+          }
+        ]
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-074-FC1",
+        "player": "Jessie Bates III",
+        "reason": "DATE_ONLY_RECORD_OVERLAPS_LOCK_OR_DEADLINE",
+        "officialRecords": [
+          {
+            "fromTeam": "Falcons",
+            "toTeam": "Jaguars",
+            "player": "Jessie Bates",
+            "position": "",
+            "transactionDate": "11/10",
+            "transactionTimestampUtc": "2026-11-10T00:00:00Z",
+            "timestampPrecision": "DATE_ONLY_TIMEZONE_UNSTATED",
+            "action": "Traded"
+          }
+        ]
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-081-FC1",
+        "player": "Keenan Allen",
+        "reason": "DATE_ONLY_RECORD_OVERLAPS_LOCK_OR_DEADLINE",
+        "officialRecords": [
+          {
+            "fromTeam": "Colts",
+            "toTeam": "49ers",
+            "player": "Keenan Allen",
+            "position": "",
+            "transactionDate": "11/10",
+            "transactionTimestampUtc": "2026-11-10T00:00:00Z",
+            "timestampPrecision": "DATE_ONLY_TIMEZONE_UNSTATED",
+            "action": "Traded"
+          }
+        ]
+      },
+      {
+        "eventId": "NFL-2026-TRADE-K26-088-FC1",
+        "player": "Kirk Cousins",
+        "reason": "DATE_ONLY_RECORD_OVERLAPS_LOCK_OR_DEADLINE",
+        "officialRecords": [
+          {
+            "fromTeam": "Raiders",
+            "toTeam": "Vikings",
+            "player": "Kirk Cousins",
+            "position": "",
+            "transactionDate": "11/10",
+            "transactionTimestampUtc": "2026-11-10T00:00:00Z",
+            "timestampPrecision": "DATE_ONLY_TIMEZONE_UNSTATED",
+            "action": "Traded"
+          }
+        ]
+      }
+    ],
+    "officialSources": [
+      {
+        "url": "https://www.nfl.com/transactions/league/trades/2026/10",
+        "httpStatus": 200,
+        "retrievedAtUtc": "2026-11-12T21:35:02Z",
+        "records": 6
+      },
+      {
+        "url": "https://www.nfl.com/transactions/league/trades/2026/11",
+        "httpStatus": 200,
+        "retrievedAtUtc": "2026-11-12T21:35:02Z",
+        "records": 12
+      }
+    ]
   },
   "refreshPolicy": {
     "browserPollSeconds": 60,

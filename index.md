@@ -1,3 +1,12 @@
+---
+title: "KAHRELUM AI Assurance Investigations and Forecasting"
+canonical: "https://kahrelum.com/"
+updated: "2026-11-12"
+content_type: "agent-readable public summary"
+description: "KAHRELUM public overview of retrospective AI decision assurance, dated investigations, forecasting methods, commercial scope and evidence limitations."
+last_updated: "2026-11-12"
+---
+
 # KAHRELUM | AI Assurance, Investigations & Forecasting
 
 Canonical page: https://kahrelum.com/
@@ -28,3 +37,11 @@ No production access, certification, guaranteed performance lift, customer outco
 KAHRELUM ONE is in development, not a production application. Historical research scores and process tests do not establish universal model superiority. Original forecasts, unknowns and corrections remain preserved.
 
 Public source: https://github.com/AuroraGrid/kahrelum-os
+
+## Sitemap
+
+- [Public home](https://kahrelum.com/)
+- [AI Assurance](https://kahrelum.com/assurance)
+- [Published source directory](https://kahrelum.com/sitemap.md)
+- [Evidence glossary](https://kahrelum.com/ai-discovery/glossary.md)
+- [AI agent instructions](https://kahrelum.com/AGENTS.md)

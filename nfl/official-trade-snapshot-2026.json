@@ -1,6 +1,6 @@
 {
   "schema": "KAHRELUM_NFL_OFFICIAL_DEADLINE_SOURCE_SNAPSHOT_V1",
-  "status": "DEADLINE_STILL_OPEN",
+  "status": "HISTORICAL_PRE_DEADLINE_SNAPSHOT",
   "deadlineUtc": "2026-11-10T21:00:00Z",
   "sourceCheckedDate": "2026-11-05",
   "sourceName": "NFL.com official trade tracker",
@@ -100,5 +100,9 @@
       "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/2026-nfl-trade-deadline-live-updates-tracker-deals-news-rumors-analysis"
     }
   ],
-  "publicationBoundary": "KAHRELUM operational source checks may discover reports but do not promote forecasts, deals, or draft articles without source-grade confirmation and documented publication permission. Older KAHRELUM forecasts are immutable."
+  "publicationBoundary": "KAHRELUM operational source checks may discover reports but do not promote forecasts, deals, or draft articles without source-grade confirmation and documented publication permission. Older KAHRELUM forecasts are immutable.",
+  "archivedAtDate": "2026-11-12",
+  "historicalDataNotice": "The seven entries below were observed on November 5, while the November 10 deadline was in the future. This historical snapshot is NOT the final transaction count.",
+  "currentReconciledOutcomeUrl": "/nfl/deadline-reconciled-2026.json",
+  "originalSourceArchive": "https://github.com/AuroraGrid/kahrelum-os/blob/main/research/nfl-2026-trade-deadline/archive-public-2026-11-12/2026-11-05-official-tracker-original.json"
 }
