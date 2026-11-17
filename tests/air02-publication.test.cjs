@@ -52,7 +52,8 @@ test('AIR-02 Firebase profile admits exactly its page, art, live index and sitem
 
 test('AIR-02 addendum preserves the entire original cutoff record',()=>{
  const html=read('investigations/air-02.html').replace(/\r\n/g,'\n');
- const historic=html.replace(/\n<section id="faa-clarification-20261117"[\s\S]*?<\/section>/,'').replace('<meta property="article:modified_time" content="2026-11-17">','<meta property="article:modified_time" content="2026-11-13">');
+ const noSenate=html.replace(/\n<section id="senate-oversight-20261117"[\s\S]*?<\/section>/,'');
+ const historic=noSenate.replace(/\n<section id="faa-clarification-20261117"[\s\S]*?<\/section>/,'').replace('<meta property="article:modified_time" content="2026-11-17">','<meta property="article:modified_time" content="2026-11-13">');
  const withoutV12=historic.replace(/<section id="reconciliation-20261114"[\s\S]*?<\/section>\n(?=<\/main>)/,'');
  const baseline=withoutV12.replace(/<section id="update-20261114"[\s\S]*?<\/section>\s*(?=<\/main>)/,'');
  assert.equal(crypto.createHash('sha256').update(baseline).digest('hex'),'a56c6dcd137f9d734f4e736af666c14d57e6d593131f7deebacc99a98f19dda9');
@@ -84,4 +85,15 @@ test('AIR-02 November 17 addendum cites the new FAA primary Q&A without rewritin
  assert.ok(section.includes('https://www.faa.gov/newsroom/nationwide-ground-stop-questions-and-answers'));
  assert.ok(section.includes('https://www.transportation.gov/briefing-room/icymi-us-transportation-secretary-sean-p-duffy-provides-update-restoration-airspace'));
  assert.ok(html.includes('id="reconciliation-20261114"'),'original November 14 analysis retained');
+});
+
+test('AIR-02 Nov17 Senate oversight request is source-bound and not misreported as an FAA pause',()=>{
+ const html=read('investigations/air-02.html');
+ const section=html.match(/<section id="senate-oversight-20261117"[\s\S]*?<\/section>/)?.[0];
+ assert.ok(section,'dated oversight section absent');
+ for(const phrase of ['November 17, 2026','Senate Commerce','Cantwell','3,648','400','69','requested a pause','not an imposed suspension','independent testing','root cause remains open']){
+  assert.ok(section.includes(phrase),'missing bounded oversight detail: '+phrase);
+ }
+ assert.ok(section.includes('https://www.commerce.senate.gov/press/dem/release/commerce-committee-democrats-demand-clear-fact-based-answers-from-dot-faa-on-root-cause-of-nov-13th-nationwide-ground-stop/'));
+ assert.ok(html.includes('id="faa-clarification-20261117"'),'FAA preliminary technical report preserved');
 });
