@@ -55,6 +55,12 @@ function patchHomepageC7(live,canonical){
  if(!canonical.includes('Israel 2026 election: C7 completed'))throw Error('Verified C7 source unavailable');
  const old='Official results and final accuracy remain pending';
  const count=live.split(old).length-1;if(count>1)throw Error('Duplicate outdated election claim');
- return count===1?live.replace(old,'The November 4 Israeli CEC result and November 5 KAHRELUM C7 audit are complete; see the dated certified-result comparison and limitations.'):live;
+ const corrected='The November 4 Israeli CEC result and November 5 KAHRELUM C7 audit are complete; see the dated certified-result comparison and limitations.';
+ // Repair the full historical sentence and the exact previously deployed suffix.
+ // Do not remove generic 'until verified' text from unrelated evidence records.
+ const malformed=corrected+' until verified.';
+ if(live.split(malformed).length>2)throw Error('Duplicate malformed election claim');
+ if(live.includes(malformed))return live.replace(malformed,corrected);
+ return count===1?live.replace(live.includes(old+' until verified.')?old+' until verified.':old,corrected):live;
 }
 module.exports={patchPilot,patchArticleMetadata,patchHomepageC7};
