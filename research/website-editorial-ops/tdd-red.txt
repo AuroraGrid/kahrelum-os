@@ -1,0 +1,96 @@
+TAP version 13
+# Subtest: C7 patch consumes the complete pending sentence without an orphaned suffix
+not ok 1 - C7 patch consumes the complete pending sentence without an orphaned suffix
+  ---
+  duration_ms: 1.2873
+  type: 'test'
+  location: 'C:\\Users\\Asif Computer\\Documents\\Codex\\2026-11-17\\publish-the-pending-ca-001-punctuation\\website-ops\\tests\\editorial-maintenance.test.cjs:5:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + '<p>Experimental, post-close forecasts. The November 4 Israeli CEC result and November 5 KAHRELUM C7 audit are complete; see the dated certified-result comparison and limitations. until verified.</p>'
+    - '<p>Experimental, post-close forecasts. The November 4 Israeli CEC result and November 5 KAHRELUM C7 audit are complete; see the dated certified-result comparison and limitations.</p>'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: '<p>Experimental, post-close forecasts. The November 4 Israeli CEC result and November 5 KAHRELUM C7 audit are complete; see the dated certified-result comparison and limitations.</p>'
+  actual: '<p>Experimental, post-close forecasts. The November 4 Israeli CEC result and November 5 KAHRELUM C7 audit are complete; see the dated certified-result comparison and limitations. until verified.</p>'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\website-ops\tests\editorial-maintenance.test.cjs:8:9)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.start (node:internal/test_runner/test:1262:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+  ...
+# Subtest: C7 patch repairs the exact observed production orphan without touching surrounding evidence
+not ok 2 - C7 patch repairs the exact observed production orphan without touching surrounding evidence
+  ---
+  duration_ms: 0.1941
+  type: 'test'
+  location: 'C:\\Users\\Asif Computer\\Documents\\Codex\\2026-11-17\\publish-the-pending-ca-001-punctuation\\website-ops\\tests\\editorial-maintenance.test.cjs:11:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + '<p>The November 4 Israeli CEC result and November 5 KAHRELUM C7 audit are complete; see the dated certified-result comparison and limitations. until verified.</p><p>Original forecast lock</p>'
+    - '<p>The November 4 Israeli CEC result and November 5 KAHRELUM C7 audit are complete; see the dated certified-result comparison and limitations.</p><p>Original forecast lock</p>'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: '<p>The November 4 Israeli CEC result and November 5 KAHRELUM C7 audit are complete; see the dated certified-result comparison and limitations.</p><p>Original forecast lock</p>'
+  actual: '<p>The November 4 Israeli CEC result and November 5 KAHRELUM C7 audit are complete; see the dated certified-result comparison and limitations. until verified.</p><p>Original forecast lock</p>'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\website-ops\tests\editorial-maintenance.test.cjs:13:9)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+# Subtest: completion patch also repairs observed live suffix idempotently
+not ok 3 - completion patch also repairs observed live suffix idempotently
+  ---
+  duration_ms: 3.8023
+  type: 'test'
+  location: 'C:\\Users\\Asif Computer\\Documents\\Codex\\2026-11-17\\publish-the-pending-ca-001-punctuation\\website-ops\\tests\\editorial-maintenance.test.cjs:15:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The expression evaluated to a falsy value:
+    
+      assert.ok(!after.includes('until verified.'))
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (C:\Users\Asif Computer\Documents\Codex\2026-11-17\publish-the-pending-ca-001-punctuation\website-ops\tests\editorial-maintenance.test.cjs:20:9)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: unexpected duplicate C7 claim blocks rather than making a partial correction
+ok 4 - unexpected duplicate C7 claim blocks rather than making a partial correction
+  ---
+  duration_ms: 0.2561
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 1
+# fail 3
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 111.0355

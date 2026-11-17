@@ -66,7 +66,7 @@ test('four new/share-updated pages have absolute OG images with matching local 1
  const entries=[
   ['election-results-2026.html','assets/social/og-us-results-2026.png','https://kahrelum.com/election-results-2026'],
   ['israel-certified-2026.html','assets/social/og-israel-certified-2026.png','https://kahrelum.com/israel-certified-2026'],
-  ['nfl/deadline-watch-2026.html','assets/social/og-nfl-deadline-watch-2026.png','https://kahrelum.com/nfl/deadline-watch-2026'],
+  ['nfl/deadline-watch-2026.html','assets/social/og-nfl-deadline-watch-2026-v2.png','https://kahrelum.com/nfl/deadline-watch-2026'],
   ['evidence-scorecard.html','assets/social/og-evidence-scorecard.png','https://kahrelum.com/evidence-scorecard']
  ];
  for(const [htmlFile,pngFile,url] of entries){

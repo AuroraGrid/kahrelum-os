@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img">
+<title>KAHRELUM WHEN SCORES DO NOT COUNT</title>
+<defs>
+ <pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M0 10 L10 0" stroke="#fff6df" stroke-width=".35" opacity=".3"/></pattern>
+ <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#181514"/><stop offset="100%" stop-color="#1d2120"/></linearGradient>
+</defs>
+<rect x="0" y="0" width="1200" height="630" fill="url(#bg)" />
+<rect x="0" y="0" width="1200" height="8" fill="#b76e47" />
+<rect x="0" y="8" width="558" height="622" fill="#151312" />
+
+<rect x="558" y="8" width="642" height="622" fill="#252521" />
+<rect x="558" y="8" width="642" height="622" fill="url(#hatch)" opacity=".17"/>
+<line x1="560" y1="8" x2="560" y2="630" stroke="#b88c49" stroke-width="2" />
+
+<rect x="625" y="62" width="529" height="490" fill="#e9ddc8" />
+<text x="648" y="111" fill="#2c2f2b" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="850" letter-spacing="1" >CALIBRATION CONTROL SHEET</text>
+<line x1="646" y1="130" x2="1125" y2="130" stroke="#8f8270" stroke-width="2" />
+<text x="647" y="170" fill="#63594f" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="800" letter-spacing="2" >CLAIM</text><text x="949" y="170" fill="#63594f" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="800" letter-spacing="2" >STATUS</text>
+<rect x="645" y="193" width="481" height="68" fill="#f1e9db" /><text x="662" y="235" fill="#313d35" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="800" letter-spacing="0" >SAMPLE A</text><rect x="913" y="206" width="192" height="38" fill="#a45545" /><text x="926" y="230" fill="#fff1e4" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="850" letter-spacing="0" >NOT CERTIFIED</text><rect x="645" y="273" width="481" height="68" fill="#f7f3e9" /><text x="662" y="315" fill="#313d35" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="800" letter-spacing="0" >SAMPLE B</text><rect x="913" y="286" width="192" height="38" fill="#a45545" /><text x="926" y="310" fill="#fff1e4" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="850" letter-spacing="0" >NOT CERTIFIED</text><rect x="645" y="353" width="481" height="68" fill="#f1e9db" /><text x="662" y="395" fill="#313d35" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="800" letter-spacing="0" >SAMPLE C</text><rect x="913" y="366" width="192" height="38" fill="#a45545" /><text x="926" y="390" fill="#fff1e4" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="850" letter-spacing="0" >NOT CERTIFIED</text>
+<text x="656" y="493" fill="#293d37" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="850" letter-spacing="1" >NO VERIFIED MODEL COMPARISON</text>
+
+<text x="58" y="77" fill="#f7f5ed" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="850" letter-spacing="2" >K A H R E L U M</text>
+<text x="58" y="124" fill="#e0a76b" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="800" letter-spacing="1.2" >INSIGHT  /  FORECAST ACCOUNTABILITY</text>
+<line x1="58" y1="153" x2="531" y2="153" stroke="#b76e47" stroke-width="2" />
+<text x="58" y="213" fill="#f8f4ec" font-family="Arial,Helvetica,sans-serif" font-size="58" font-weight="850" letter-spacing="0" >WHEN SCORES</text><text x="58" y="283" fill="#f8f4ec" font-family="Arial,Helvetica,sans-serif" font-size="58" font-weight="850" letter-spacing="0" >DO NOT</text><text x="58" y="353" fill="#f8f4ec" font-family="Arial,Helvetica,sans-serif" font-size="58" font-weight="850" letter-spacing="0" >COUNT</text>
+<text x="58" y="418" fill="#c9c7c2" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="500" letter-spacing="0" >Three Brier calculations.</text><text x="58" y="455" fill="#c9c7c2" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="500" letter-spacing="0" >Zero certified comparison claims.</text>
+<line x1="58" y1="540" x2="530" y2="540" stroke="#877866" stroke-width="1" />
+<text x="58" y="584" fill="#d0c8b9" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="750" letter-spacing="1" >METHOD REVIEW  /  CUSTODY FIRST</text>
+<rect x="0" y="8" width="8" height="622" fill="#b76e47" />
+</svg>

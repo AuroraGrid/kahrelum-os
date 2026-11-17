@@ -19,6 +19,15 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.0
         with:
           persist-credentials: false
+      - name: Build and verify NFL editorial v2 social artwork
+        shell: bash
+        run: |
+          python3 -m pip install --disable-pip-version-check --quiet cairosvg==2.8.2
+          python3 scripts/build-kahrelum-editorial-social.py
+          python3 scripts/build-kahrelum-editorial-social.py --check
+          node --test tests/nfl-editorial-v2.test.cjs
+      - name: Run full Node regression sweep before Firebase promotion
+        run: node --test tests/*.test.cjs
       - name: Validate canonical public surface
         shell: bash
         run: |
@@ -144,6 +153,8 @@ jobs:
         run: |
           node scripts/build-poliwave-watchlist.cjs --check
           node --test tests/poliwave-race-watch.test.cjs
+      - name: Test NFL challenger publication custody and social image bytes
+        run: node --test tests/nfl-volume-challenge-publication.test.cjs
       - name: Parse safe Firebase release script
         run: node --check scripts/firebase-overlay-release.cjs
 

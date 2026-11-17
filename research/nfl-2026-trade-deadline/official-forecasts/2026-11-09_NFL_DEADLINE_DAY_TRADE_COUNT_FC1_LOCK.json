@@ -1,0 +1,236 @@
+{
+  "schema": "KAHRELUM_NFL_OFFICIAL_TRADE_VOLUME_FORECAST_LOCK_v1",
+  "forecastId": "KAHRELUM-NFL-2026-TRADE-VOLUME-DEADLINE-DAY-FC1",
+  "status": "ISSUED_PRE_EVENT",
+  "forecastClass": "PROSPECTIVE_PRE_DEADLINE",
+  "sourceResearchCutoffUtc": "2026-11-10T03:57:07Z",
+  "publicLockTimestampPolicy": "Earliest independently inspectable GitHub commit timestamp for this file; never backdate to source research cutoff or file's displayed date.",
+  "target": {
+    "title": "2026 NFL Deadline Day Trade Count",
+    "outcome": "Number of distinct player-involving transactions entered in the official NFL November trade register with an effective transaction date of November 10, 2026, executed by 4 PM America/New_York. Count a two-team exchange exactly once even if it involves multiple players and picks.",
+    "startsUtc": "2026-11-10T05:00:00Z",
+    "endsUtc": "2026-11-10T21:00:00Z",
+    "deadlineSource": "https://www.nfl.com/news/nfl-important-dates",
+    "adjudicationSource": "https://www.nfl.com/transactions/league/trades/2026/11",
+    "missingSourceTreatment": "Do not score a missing/stale official register as zero. Reconcile official team confirmations and backfilled effective dates first."
+  },
+  "model": {
+    "selectedModel": "NAIVE_HISTORICAL_POISSON_CHAMPION_v0.5",
+    "lambda": 6.5,
+    "pointForecast": 6,
+    "median": 6,
+    "mean": 6.5,
+    "central80PercentInterval": [
+      3,
+      10
+    ],
+    "central90PercentInterval": [
+      3,
+      11
+    ],
+    "probabilityFormula": "P(K=k)=exp(-6.5)*6.5^k/k! for every integer k>=0",
+    "probabilitiesForCounts0Through60": [
+      0.0015034391929775724,
+      0.00977235475435422,
+      0.031760152951651216,
+      0.06881366472857764,
+      0.11182220518393866,
+      0.14536886673912025,
+      0.15748293896738028,
+      0.1462341576125674,
+      0.118815253060211,
+      0.08581101609904128,
+      0.05577716046437683,
+      0.0329592311834954,
+      0.017852916891060007,
+      0.008926458445530003,
+      0.004144427135424645,
+      0.0017959184253506792,
+      0.0007295918602987135,
+      0.0002789615936436257,
+      0.00010073613103797595,
+      0.00003446236061825493,
+      0.000011200267200932852,
+      0.000003466749371717312,
+      0.0000010242668598255694,
+      2.894667212550522e-7,
+      7.839723700657664e-8,
+      2.0383281621709926e-8,
+      5.0958204054274815e-9,
+      1.2267715790843939e-9,
+      2.8478625943030576e-10,
+      6.383140297575818e-11,
+      1.3830137311414274e-11,
+      2.8998675007804122e-12,
+      5.890355860960212e-13,
+      1.1602216089770115e-13,
+      2.218070723044287e-14,
+      4.119274199939391e-15,
+      7.437578416557233e-16,
+      1.306601613719514e-16,
+      2.2349764445202212e-17,
+      3.7249607408670354e-18,
+      6.053061203908932e-19,
+      9.596316542782454e-20,
+      1.485144226859189e-20,
+      2.244985459205751e-21,
+      3.3164557920084963e-22,
+      4.790436144012272e-23,
+      6.769094551321688e-24,
+      9.361513741189569e-25,
+      1.2677049857860873e-25,
+      1.681649470940728e-26,
+      2.1861443122229468e-27,
+      2.7862623587155204e-28,
+      3.4828279483944005e-29,
+      4.2713927668987935e-30,
+      5.141491293489289e-31,
+      6.076307892305524e-32,
+      7.052857374997483e-33,
+      8.042732094295377e-34,
+      9.013406657399992e-35,
+      9.930024283576261e-36,
+      1.0757526307207616e-36
+    ],
+    "tailMassAbove60UpperBound": 1.2805444105168126e-37,
+    "training": {
+      "historicalMeasure": "NFL monthly transaction register, unique player-involving trades dated on deadline day",
+      "years": {
+        "2018": 5,
+        "2019": 2,
+        "2020": 3,
+        "2021": 5,
+        "2022": 11,
+        "2023": 8,
+        "2024": 8,
+        "2025": 10
+      },
+      "total": 52,
+      "yearsCount": 8,
+      "historicalValidationHoldouts": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "pastOnlyModelRPS": 2.6684,
+      "pastOnlyGammaPoissonRPS": 2.9458,
+      "modelSelectionRule": "Lower historical walk-forward RPS",
+      "researchBaseline": "https://github.com/AuroraGrid/kahrelum-os/blob/main/research/nfl-2026-trade-deadline/champion-v05/README.md"
+    }
+  },
+  "scoring": {
+    "officialScoreboardEligible": true,
+    "singleCohortEvent": true,
+    "internalTestsDoNotCount": true,
+    "firstScoringAuditNotBeforeUtc": "2026-11-12T14:00:00Z",
+    "firstScore": "RANKED_PROBABILITY_SCORE_ON_INTEGER_TRADE_COUNT",
+    "secondScore": "NEGATIVE_LOG_LIKELIHOOD",
+    "noEditsToOriginalForecast": true,
+    "revisions": "Append-only, separately timestamped and not a substitute for original",
+    "outcomeStatus": "UNRESOLVED_PENDING_DEADLINE",
+    "outcome": null,
+    "scoredNow": false
+  },
+  "preCutoffTransactionContext": {
+    "purpose": "Source custody and conditional season outlook; does not change primary date-specific prediction.",
+    "nflEditorialTrackerListed": 9,
+    "extraOnNFLNovemberTransactionsPage": [
+      "Davon Godchaux",
+      "Andre Cisco"
+    ],
+    "extraClubAnnouncedPendingPhysical": [
+      "Jordan Davis"
+    ],
+    "uniqueKnownAnnouncedOrRegistered": 12,
+    "dealObservations": [
+      {
+        "date": "2026-09-28",
+        "name": "J.J. McCarthy",
+        "status": "NFL_EDITORIAL_TRACKER_LISTED"
+      },
+      {
+        "date": "2026-10-01",
+        "name": "Joey Porter Jr.",
+        "status": "NFL_EDITORIAL_TRACKER_LISTED"
+      },
+      {
+        "date": "2026-10-07",
+        "name": "Cam Jurgens",
+        "status": "NFL_EDITORIAL_TRACKER_LISTED"
+      },
+      {
+        "date": "2026-10-12",
+        "name": "Marvin Harrison Jr.",
+        "status": "NFL_EDITORIAL_TRACKER_LISTED"
+      },
+      {
+        "date": "2026-10-27",
+        "name": "Quenton Nelson",
+        "status": "NFL_EDITORIAL_TRACKER_LISTED"
+      },
+      {
+        "date": "2026-10-27",
+        "name": "DeForest Buckner",
+        "status": "NFL_EDITORIAL_TRACKER_LISTED"
+      },
+      {
+        "date": "2026-10-29",
+        "name": "Jeffery Simmons",
+        "status": "NFL_EDITORIAL_TRACKER_LISTED"
+      },
+      {
+        "date": "2026-11-06",
+        "name": "Jacoby Brissett",
+        "status": "NFL_EDITORIAL_TRACKER_LISTED"
+      },
+      {
+        "date": "2026-11-09",
+        "name": "Jessie Bates III",
+        "status": "NFL_EDITORIAL_TRACKER_LISTED"
+      },
+      {
+        "date": "2026-11-09",
+        "name": "Davon Godchaux",
+        "status": "NFL_MONTHLY_REGISTER_LISTED"
+      },
+      {
+        "date": "2026-11-09",
+        "name": "Andre Cisco",
+        "status": "NFL_MONTHLY_REGISTER_LISTED"
+      },
+      {
+        "date": "2026-11-09",
+        "name": "Jordan Davis",
+        "status": "CLUB_ANNOUNCED_PENDING_PHYSICAL"
+      }
+    ],
+    "conditionalSeasonOutlook": {
+      "classification": "NOT_SEPARATELY_SCORED",
+      "condition": "If all twelve already announced trades ultimately stand and no more Monday trade occurs, add the Tuesday count to 12.",
+      "meanTotal": 18.5,
+      "pointTotal": 18,
+      "central80PercentTotal": [
+        15,
+        22
+      ]
+    },
+    "sources": [
+      "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season",
+      "https://www.nfl.com/transactions/league/trades/2026/11",
+      "https://www.jaguars.com/news/roster-moves-jaguars-acquire-dt-jordan-davis",
+      "https://www.jaguars.com/news/roster-moves-jaguars-trade-for-dt-davon-godchaux",
+      "https://www.newyorkjets.com/news/jets-acquire-2028-6th-round-draft-pick-trade-andre-cisco-lions-11-09-2026",
+      "https://www.philadelphiaeagles.com/news/eagles-trade-jordan-davis-to-the-jaguars-for-multiple-high-draft-picks"
+    ]
+  },
+  "limitations": [
+    "Prediction is for Nov 10 deadline-day trades only, not a forecast of the complete Sept 9–Nov 10 season's total or last 36 hours.",
+    "Eight historical season clusters and five backtest holdouts do not demonstrate reliable outperformance versus professional NFL insiders.",
+    "Historical transaction register dates may differ from first report/announcement dates. No retrospective date switching is permitted.",
+    "No last-hour Monday trading hazard was invented. Any transaction on Nov 9, even if announced after the source cutoff, does not count in the Nov 10 event.",
+    "Club-announced pending-physical deals are source observations, not automatically certified completed transactions; none is added as a separate Bernoulli to a generic trade-count distribution.",
+    "Entire forecast distribution fixed now. Later source discoveries and outcomes must not alter this file."
+  ]
+}

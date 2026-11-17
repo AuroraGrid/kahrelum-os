@@ -1,0 +1,52 @@
+{
+  "schema": "KAHRELUM_NFL_LATE_DEADLINE_SOURCE_SNAPSHOT_v1",
+  "classification": "RESEARCH_ONLY_NON_SCORING",
+  "sourceCheckedByUtc": "2026-11-09T21:08:04Z",
+  "edition": "2026-11-09 late Monday independent source reconciliation",
+  "officialTradeDeadlineUtc": "2026-11-10T21:00:00Z",
+  "canonicalHistoricalModelCountUnit": "UNIQUE_PLAYER_INVOLVING_TRADE_BY_NFL_MONTHLY_TRANSACTION_REGISTER_DATE",
+  "originalFrozenSnapshot": {
+    "asOfET": "2026-11-09T12:16:16-05:00",
+    "nflEditorialTrackerCount": 8,
+    "immutable": true
+  },
+  "newNFLTrackerObservation": {
+    "count": 9,
+    "sourceType": "NFL_EDITORIAL_TRACKER",
+    "url": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season",
+    "latest": "Jessie Bates III",
+    "date": "2026-11-09",
+    "note": "Do not treat this editorial tracker count as a reconciled NFL monthly register count."
+  },
+  "reportedAdditionalDeals": [
+    {
+      "player": "Davon Godchaux",
+      "from": "New Orleans Saints",
+      "to": "Jacksonville Jaguars",
+      "reportDate": "2026-11-09",
+      "status": "REPORTED_AGREEMENT_NOT_IN_EDITORIAL_TRACKER_AT_CHECK",
+      "sourceUrl": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-saints-agree-to-trade-dt-davon-godchaux-to-jaguars",
+      "originalAttribution": "Tom Pelissero"
+    },
+    {
+      "player": "Andre Cisco",
+      "from": "New York Jets",
+      "to": "Detroit Lions",
+      "reportDate": "2026-11-09",
+      "status": "REPORTED_TRADE_NOT_IN_EDITORIAL_TRACKER_AT_CHECK",
+      "sourceUrl": "https://www.reuters.com/sports/report-jets-trading-veteran-s-andre-cisco-lions--flm-2026-11-09/",
+      "originalAttribution": "ESPN/Adam Schefter"
+    }
+  ],
+  "batesCaveat": {
+    "clubAnnouncedDate": "2026-11-09",
+    "initialCondition": "Pending physical",
+    "clubUrl": "https://www.jaguars.com/news/roster-moves-jaguars-trade-for-s-jessie-bates-iii",
+    "subsequentlyNFLTrackerListed": true
+  },
+  "forecast": null,
+  "forecastLock": null,
+  "countsInPerformanceScoreboard": false,
+  "automaticallyScored": false,
+  "nextVerification": "Official NFL monthly November 2026 trades registry; team announcements; independent dated cutoff. Do not infer missing clearances or count unverified reports as completed transactions."
+}
