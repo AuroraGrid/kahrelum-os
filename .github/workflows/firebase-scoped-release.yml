@@ -40,6 +40,12 @@ on:
       - 'investigations/air-02.html'
       - 'assets/social/og-air02-v1.png'
       - 'tests/air02-publication.test.cjs'
+      - 'enterprise-ai-evaluation.html'
+      - 'decision-assurance-samples.html'
+      - 'data/assurance/synthetic-reviews-v0.1.json'
+      - 'scripts/enterprise-assurance-release.cjs'
+      - 'tests/enterprise-assurance-positioning.test.cjs'
+      - 'tests/enterprise-assurance-release.test.cjs'
       - 'insights.html'
       - 'insights/nvidia-megaspeed-chip-custody.html'
       - 'insights/malik-beasley-sentencing-2026.html'
@@ -122,6 +128,7 @@ on:
           - buyer-discovery
           - buyer-conversion
           - pricing-retirement
+          - enterprise-assurance
           - election-data-index
           - us-results-ui
           - forecast-100-publication
@@ -275,6 +282,15 @@ jobs:
                 esac
               done <<< "$changed"
               profiles="ai-discovery-seo"
+            elif grep -Fqx 'scripts/enterprise-assurance-release.cjs' <<< "$changed"; then
+              # One verified product gallery/profile; reject unrelated source edits.
+              while IFS= read -r file; do
+                case "$file" in
+                  index.html|assurance.html|pilot.html|llms.txt|enterprise-ai-evaluation.html|decision-assurance-samples.html|data/assurance/synthetic-reviews-v0.1.json|commercial/enterprise-product-path-20261118.md|scripts/enterprise-assurance-release.cjs|scripts/firebase-overlay-release.cjs|scripts/deploy-unified-firebase.ps1|tests/enterprise-assurance-positioning.test.cjs|tests/enterprise-assurance-release.test.cjs|.github/workflows/firebase-scoped-release.yml) ;;
+                  *) echo "::error::Enterprise assurance includes unrelated path: $file"; exit 1 ;;
+                esac
+              done <<< "$changed"
+              profiles="enterprise-assurance"
             elif grep -Fqx 'scripts/retire-legacy-pricing.cjs' <<< "$changed"; then
               # Explicit one-time removal of obsolete public price references.
               # The publisher reads verified live HTML, alters only two exact snippets,
@@ -347,7 +363,7 @@ jobs:
           set -euo pipefail
           for profile in $RELEASE_PROFILES; do
             case "$profile" in
-              mqa001-review|intelligence-share|nfc-east-title-2026|malik-beasley-forecast|forecast-100-publication|calibration-nfl-2026|chip01-publication|air02-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|ai-discovery-seo|ai-visibility-hardening|site-completion|mobile-nav-layout|commercial-readiness|buyer-discovery|buyer-conversion|pricing-retirement|election-data-index) ;;
+              mqa001-review|intelligence-share|nfc-east-title-2026|malik-beasley-forecast|forecast-100-publication|calibration-nfl-2026|chip01-publication|air02-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|ai-discovery-seo|ai-visibility-hardening|site-completion|mobile-nav-layout|commercial-readiness|buyer-discovery|buyer-conversion|pricing-retirement|enterprise-assurance|election-data-index) ;;
               *) echo "::error::Unapproved release profile: $profile"; exit 1;;
             esac
           done
