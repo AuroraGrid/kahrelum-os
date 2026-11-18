@@ -5,7 +5,7 @@ param(
     [switch]$Promote,
     [switch]$Deploy,
     [string]$FirebaseRoot,
-    [ValidateSet("ga4-consent", "anthropic-lobbying", "mqa001-review", "intelligence-share", "full", "election-challenge", "election-challenge-data", "sports-intelligence", "publishing", "social-previews", "desk-upgrade", "portraits", "candidate-portraits", "investigations", "investigations-text-only", "air02-publication", "fortune-ca001", "release3-verified", "ai-discovery-seo", "ai-visibility-hardening", "site-completion", "mobile-nav-layout", "lead-magnet", "poliwave-watch", "results-verified", "us-results-data", "us-results-ui", "nfl-challenge", "nfl-sourcegrid-data", "case-share-cards", "site-makeover", "commercial-readiness", "israel-c7", "ai-evaluation", "opticodds-market-integrity", "buyer-discovery", "buyer-conversion", "pricing-retirement", "election-data-index")]
+    [ValidateSet("ga4-consent", "anthropic-lobbying", "mqa001-review", "intelligence-share", "full", "election-challenge", "election-challenge-data", "sports-intelligence", "publishing", "social-previews", "desk-upgrade", "portraits", "candidate-portraits", "investigations", "investigations-text-only", "air02-publication", "fortune-ca001", "release3-verified", "ai-discovery-seo", "ai-visibility-hardening", "site-completion", "mobile-nav-layout", "lead-magnet", "poliwave-watch", "results-verified", "us-results-data", "us-results-ui", "nfl-challenge", "nfl-sourcegrid-data", "case-share-cards", "site-makeover", "commercial-readiness", "israel-c7", "ai-evaluation", "opticodds-market-integrity", "buyer-discovery", "buyer-conversion", "pricing-retirement", "enterprise-assurance", "election-data-index")]
     [string]$Profile = "full"
 )
 
