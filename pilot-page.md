@@ -20,7 +20,7 @@ One agreed workflow and exactly three authorized, appropriately de-identified, c
 ## $2,500 Founding Pilot
 One agreed workflow, up to ten authorized, appropriately de-identified historical decisions, per-case records, consolidated findings and a readout call. Payment: $2,500 upfront. Delivery target: five business days after scope/protocol freeze, usable inputs and cleared payment.
 
-The $750 Fit Check fee is fully credited toward a $2,500 Founding Pilot begun within 14 days. Prior recipient-specific quotes retain their original terms.
+The $750 Fit Check fee is fully credited toward a $2,500 Founding Pilot begun within 14 days.
 
 ## Inquiries and permitted inputs
 The public form prepares an email for the visitor to review and send. It does not automatically transmit or store the inquiry or provide direct payment checkout. Contact: mailto:hasan@kahrelum.com. Confirm supplier eligibility, processing location, permission and data handling before providing any case material. Do not send protected personal information, passwords, private customer records, credentials or confidential prompts in a public inquiry.

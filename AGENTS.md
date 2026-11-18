@@ -9,7 +9,7 @@ KAHRELUM offers operator-assisted retrospective AI decision assurance and publis
 ## Buying KAHRELUM services
 - $750 upfront Fit Check: one workflow, exactly three authorized, de-identified closed historical decisions, one-page support-gap record and FIT/NO FIT outcome. Target two business days after written scope, permitted inputs and cleared payment.
 - $2,500 upfront Founding Pilot: one workflow, up to ten authorized, de-identified historical decisions, per-case record, consolidated report and one readout. Target five business days after scope/protocol freeze, permitted inputs and payment.
-- The $750 credit applies to a $2,500 Founding Pilot started within 14 days. Preexisting recipient-specific quotes retain their original terms.
+- The $750 credit applies to a $2,500 Founding Pilot started within 14 days.
 - Contact: https://kahrelum.com/pilot or mailto:hasan@kahrelum.com. The public form prepares an email; it does not itself submit data.
 
 ## Source interpretation
