@@ -27,11 +27,13 @@ test('surgical source-to-live patch preserves unrelated HTML and is repeatable',
  assert.ok(patchedAssurance.includes('href="/decision-assurance-samples"'));
  assert.equal(patchAssuranceBuyerPage('/assurance',patchedAssurance,sourceAssurance),patchedAssurance);
 
- const sourcePilot=read('pilot.html'),newPilot=sourcePilot.match(/<div class="pilot-actions">[\s\S]*?<\/div>/)?.[0];
+ const sourcePilot=read('pilot.html'),newPilot=sourcePilot.match(/<p class="pilot-sector-samples">[\s\S]*?<\/p>/)?.[0];
  assert.ok(newPilot);
- const oldPilot=sourcePilot.replace(newPilot,OLD_PILOT_ACTIONS);
+ const oldPilot=sourcePilot.replace('\n'+newPilot,'');
+ assert.ok(oldPilot.includes(OLD_PILOT_ACTIONS));
  const patchedPilot=patchAssuranceBuyerPage('/pilot',oldPilot,sourcePilot);
  assert.ok(patchedPilot.includes('href="/decision-assurance-samples"'));
+ assert.ok(patchedPilot.includes(OLD_PILOT_ACTIONS));
  assert.ok(patchedPilot.includes('id="pilotInquiry"'));
  assert.equal(patchAssuranceBuyerPage('/pilot',patchedPilot,sourcePilot),patchedPilot);
 
