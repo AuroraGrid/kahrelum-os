@@ -13,6 +13,7 @@ const { buildCaseShareArtifacts, extractCases } = require(path.join(__dirname, '
 const { buildChip01SocialArtifacts } = require(path.join(__dirname, 'chip01-social.cjs'));
 const { patchBuyerPage } = require(path.join(__dirname, 'buyer-discovery.cjs'));
 const { patchBuyerConversion } = require(path.join(__dirname, 'buyer-conversion-20261112.cjs'));
+const { patchEnterpriseAssurance } = require(path.join(__dirname, 'enterprise-assurance-release.cjs'));
 const { retireLegacyPricing } = require(path.join(__dirname, 'retire-legacy-pricing.cjs'));
 const { enhanceDiscoveryPage } = require(path.join(__dirname, 'ai-seo-discovery.cjs'));
 const { enhanceAgentVisibility } = require(path.join(__dirname, 'agent-visibility-hardening.cjs'));
@@ -283,6 +284,13 @@ const RELEASE_PROFILES = {
     // Only remove obsolete public price copy from the verified live homepage and pilot HTML.
     overlayFiles: [],
     sitemapRoutes: [],
+    includeHomepage: false,
+  },
+  'enterprise-assurance': {
+    // Independent product/sample publication. Existing pages patched against verified live bytes.
+    overlayFiles: ['enterprise-ai-evaluation.html', 'decision-assurance-samples.html',
+      'data/assurance/synthetic-reviews-v0.1.json', 'llms.txt'],
+    sitemapRoutes: ['/enterprise-ai-evaluation', '/decision-assurance-samples'],
     includeHomepage: false,
   },
   'buyer-conversion': {
@@ -1304,6 +1312,17 @@ async function buildOverlay(live, profileName) {
     }
   }
 
+  if (profileName === 'enterprise-assurance') {
+    for (const [hostingPath, route] of [
+      ['/index.html', '/'], ['/assurance.html', '/assurance'], ['/pilot.html', '/pilot'],
+    ]) {
+      const liveHtml = (await verifiedLiveFile(live, hostingPath, route)).toString('utf8');
+      const sourceHtml = fs.readFileSync(path.join(ROOT, hostingPath.slice(1)), 'utf8');
+      const revised = patchEnterpriseAssurance(liveHtml, sourceHtml, route);
+      if (revised !== liveHtml) addBlob(desired, blobs, hostingPath, Buffer.from(revised, 'utf8'));
+    }
+  }
+
   if (profileName === 'buyer-conversion') {
     for (const [hostingPath, route] of [['/assurance.html', '/assurance'], ['/pilot.html', '/pilot']]) {
       const liveHtml = (await verifiedLiveFile(live, hostingPath, route)).toString('utf8');
@@ -1460,6 +1479,11 @@ async function buildOverlay(live, profileName) {
   if (profileName === 'pricing-retirement' &&
       changedPaths.some((item) => !['/index.html','/pilot.html'].includes(item))) {
     fail('Pricing retirement attempted to change unrelated live Firebase files.');
+  }
+  if (profileName === 'enterprise-assurance') {
+    const allowed = new Set([...RELEASE_PROFILES['enterprise-assurance'].overlayFiles.map(x => '/' + x),
+      '/index.html', '/assurance.html', '/pilot.html', '/sitemap.xml']);
+    if (changedPaths.some(x => !allowed.has(x))) fail('Enterprise assurance attempted to change unrelated live Firebase files.');
   }
   if (profileName === 'mobile-nav-layout' &&
       changedPaths.some((item) => item !== '/site-shell.css')) {
