@@ -6,12 +6,14 @@ const path=require('node:path');
 const read=n=>fs.readFileSync(path.join(__dirname,'..',n),'utf8');
 
 test('surgical source-to-live patch preserves unrelated HTML and is repeatable',()=>{
- const {patchAssuranceBuyerPage,OLD_HOME_HERO,OLD_ASSURANCE_ACTIONS,OLD_PILOT_ACTIONS}=require('../scripts/assurance-samples-publication.cjs');
+ const {patchAssuranceBuyerPage,OLD_HOME_HERO,OLD_HOME_ACTIONS,OLD_ASSURANCE_ACTIONS,OLD_PILOT_ACTIONS}=require('../scripts/assurance-samples-publication.cjs');
  const sourceHome=read('index.html');
  const newHomeHero=sourceHome.match(/<p class="eyebrow">Independent AI decision assurance[\s\S]*?(?=<span class="release">)/)?.[0];
  const newSection=sourceHome.match(/<section id="commercial-assurance-first">[\s\S]*?<\/section>/)?.[0];
  assert.ok(newHomeHero&&newSection);
- const oldHome=sourceHome.replace(newHomeHero,OLD_HOME_HERO).replace(newSection,'');
+ const newHomeActions=sourceHome.match(/<p><a class="cta primary" href="https:\/\/kahrelum\.com\/pilot#request">[\s\S]*?<\/p>/)?.[0];
+ assert.ok(newHomeActions);
+ const oldHome=sourceHome.replace(newHomeHero,OLD_HOME_HERO).replace(newSection,'').replace(newHomeActions,OLD_HOME_ACTIONS);
  const patched=patchAssuranceBuyerPage('/',oldHome,sourceHome);
  assert.ok(patched.includes('Your AI made a decision. Can the evidence defend it?'));
  assert.ok(patched.includes('id="commercial-assurance-first"'));
