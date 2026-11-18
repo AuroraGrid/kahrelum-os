@@ -50,7 +50,7 @@ function patchAssuranceBuyerPage(route, liveHtml, sourceHtml) {
     next=swapExact(next,OLD_ASSURANCE_ACTIONS,desired,'assurance CTA');
   } else if(route === '/pilot') {
     const desired=extractOne(sourceHtml,
-      /<div class="pilot-actions">[\s\S]*?<\/div>/,
+      /<div class="pilot-actions"><a href="#request">Prepare a \$750 Fit Check inquiry \(you send\)<\/a>[\s\S]*?<\/div>/,
       'pilot actions');
     next=swapExact(next,OLD_PILOT_ACTIONS,desired,'pilot CTA');
     if (!next.includes('id="pilotInquiry"')) throw new Error('Refusing to alter pilot without manual inquiry');
