@@ -454,5 +454,256 @@
     "Full fresh stale-case source audit is incomplete.",
     "Cloudflare Pages build failures persist on baseline and branches; Firebase release tests and guards passed independently.",
     "Original MQA ZIP/transcript remain unrecovered; no customer or external-model outcome verified."
+  ],
+  "closeouts": [
+    {
+      "checkedAt": "2026-11-18T05:03:07.628637+00:00",
+      "status": "VERIFIED PARTIAL CLOSEOUT; specific holds and limitations below",
+      "preservation": "Earlier receipt fields remain the original run record. This additive closeout supersedes its distribution blockers for the verified posts listed here; no historical evidence or forecast changed.",
+      "newSocialPublications": 0,
+      "subscriberEmailsSentThisPass": 0,
+      "github": {
+        "ga4PR": 131,
+        "ga4Merge": "74a28bd6b7f61e5edb044885709484be59f95e54",
+        "releaseSource": "d74243fdddfac2c56001c95cbadaa57099a033bc",
+        "intelligenceMainCommit": "e832ba0a3fc322d3644b43e46e66a4e181fda281",
+        "anthropicMainCommit": "c4d4db8dd71af4d64fa679285a5644ad9ed5a374"
+      },
+      "websiteChanges": [
+        "Intelligence landing now loads existing consent-gated site-shell.js and links directly to $750 Fit Check inquiry.",
+        "Anthropic dossier reuses existing validated KAHRELUM Intelligence 1200x630 artwork for Open Graph and Twitter large-image cards.",
+        "Live site-shell.js, intelligence.html and Anthropic HTML content match main after line-ending normalization."
+      ],
+      "firebase": [
+        {
+          "promotedAt": "2026-11-18T04:56:26.599Z",
+          "release": "projects/806087933597/sites/kahrelum-public-hosting/channels/live/releases/1794977773963000",
+          "version": "projects/806087933597/sites/kahrelum-public-hosting/versions/decea10137353fca",
+          "fileCount": 9293,
+          "desiredMapHash": "e7444190eefbedbddd5af62c2cb9eed620997d64212f17afe765f3236c1247fd",
+          "sourceCommit": "d74243fdddfac2c56001c95cbadaa57099a033bc",
+          "configUnchanged": true,
+          "approvedMarkdownHeaders": 0,
+          "verification": {
+            "origin": "https://kahrelum.com",
+            "routes": [
+              {
+                "route": "/intelligence",
+                "status": 200,
+                "sha256": "1cca4c7845de544dc269609a81c64953aa496e6135f69ee8a6056d39810e2b18"
+              }
+            ],
+            "internalTargets": 8,
+            "apiHashes": {
+              "/api/v1": "b23654d1b5989f1b48823f72574bf6f69ff9f19c2b78fc1fea743d41fc1cb6c0",
+              "/api/v1/release": "cf8f22118f5b2d366ec984a2d882e4f522182462edff8d87abba91824b3502da",
+              "/api/v1/example": "c08436e548be07e62bd304b779034d12fe81d90ec7e3a57179547e079aa36c8a"
+            }
+          },
+          "previewCleanup": {
+            "status": "DELETED",
+            "channel": "safe-overlay-e7444190eefb",
+            "liveVersion": "projects/806087933597/sites/kahrelum-public-hosting/versions/decea10137353fca"
+          }
+        },
+        {
+          "promotedAt": "2026-11-18T05:00:11.174Z",
+          "release": "projects/806087933597/sites/kahrelum-public-hosting/channels/live/releases/1794977991625000",
+          "version": "projects/806087933597/sites/kahrelum-public-hosting/versions/0859a8d516c5d77c",
+          "fileCount": 9293,
+          "desiredMapHash": "9ad9bbacba3a4a5a8e35ac98ab79228bc325a624c154eff0e47cbf3faa2f3cc6",
+          "sourceCommit": "d74243fdddfac2c56001c95cbadaa57099a033bc",
+          "configUnchanged": true,
+          "approvedMarkdownHeaders": 0,
+          "verification": {
+            "origin": "https://kahrelum.com",
+            "routes": [
+              {
+                "route": "/investigations/anthropic-lobbying-chip-policy",
+                "status": 200,
+                "sha256": "1cee32c4e1a3b3e49a8ae71e3c9f6109cf25914c9e5a6e8d52ed5dd0dc904235"
+              },
+              {
+                "route": "/investigations",
+                "status": 200,
+                "sha256": "3ee265f8396284e53ef9a88f6222ba5b5c2628bce781adf74cf80bf263c7160c"
+              }
+            ],
+            "internalTargets": 34,
+            "apiHashes": {
+              "/api/v1": "b23654d1b5989f1b48823f72574bf6f69ff9f19c2b78fc1fea743d41fc1cb6c0",
+              "/api/v1/release": "cf8f22118f5b2d366ec984a2d882e4f522182462edff8d87abba91824b3502da",
+              "/api/v1/example": "c08436e548be07e62bd304b779034d12fe81d90ec7e3a57179547e079aa36c8a"
+            }
+          },
+          "previewCleanup": {
+            "status": "DELETED",
+            "channel": "safe-overlay-9ad9bbacba3a",
+            "liveVersion": "projects/806087933597/sites/kahrelum-public-hosting/versions/0859a8d516c5d77c"
+          }
+        }
+      ],
+      "existingPublicationsVerified": [
+        {
+          "channel": "Substack",
+          "item": "AIR-02",
+          "url": "https://kahrelum.substack.com/p/faa-nationwide-ground-stop-what-failed",
+          "originalPublishedAt": "2026-11-14T01:49:29Z",
+          "readback": "Authenticated published inventory, rendered public page and/or public RSS. Existing, not newly published in this pass."
+        },
+        {
+          "channel": "Substack",
+          "item": "CHIP-01",
+          "url": "https://kahrelum.substack.com/p/megaspeed-what-the-new-commerce-and",
+          "originalPublishedAt": "2026-11-17T17:17:47Z",
+          "readback": "Authenticated published inventory, rendered public page and/or public RSS. Existing, not newly published in this pass."
+        },
+        {
+          "channel": "Substack",
+          "item": "MQA-001",
+          "url": "https://kahrelum.substack.com/p/the-42-morgan-dollar-quote-first",
+          "originalPublishedAt": "2026-11-17T17:19:20Z",
+          "readback": "Authenticated published inventory, rendered public page and/or public RSS. Existing, not newly published in this pass."
+        },
+        {
+          "channel": "Substack",
+          "item": "Anthropic",
+          "url": "https://kahrelum.substack.com/p/anthropics-163-million-lobbying-trail",
+          "originalPublishedAt": "2026-11-17T22:28:29Z",
+          "readback": "Authenticated published inventory, rendered public page and/or public RSS. Existing, not newly published in this pass."
+        },
+        {
+          "channel": "Substack",
+          "item": "Political payments",
+          "url": "https://kahrelum.substack.com/p/political-payments-disclosure-and",
+          "originalPublishedAt": "2026-11-17T20:29:09Z",
+          "readback": "Authenticated published inventory, rendered public page and/or public RSS. Existing, not newly published in this pass."
+        },
+        {
+          "channel": "X",
+          "item": "AIR-02",
+          "url": "https://x.com/Nospinzone/status/2122740117379154027",
+          "originalPublishedAt": "2026-11-17T17:14:17Z",
+          "readback": "Authenticated @Nospinzone timeline/search or post; DOM time datetime. Existing, not reposted."
+        },
+        {
+          "channel": "X",
+          "item": "CHIP-01",
+          "url": "https://x.com/Nospinzone/status/2122740510834237661",
+          "originalPublishedAt": "2026-11-17T17:15:51Z",
+          "readback": "Authenticated @Nospinzone timeline/search or post; DOM time datetime. Existing, not reposted."
+        },
+        {
+          "channel": "X",
+          "item": "MQA-001",
+          "url": "https://x.com/Nospinzone/status/2122739789778850083",
+          "originalPublishedAt": "2026-11-17T17:12:59Z",
+          "readback": "Authenticated @Nospinzone timeline/search or post; DOM time datetime. Existing, not reposted."
+        },
+        {
+          "channel": "X",
+          "item": "Anthropic",
+          "url": "https://x.com/Nospinzone/status/2122819455109734870",
+          "originalPublishedAt": "2026-11-17T22:29:32Z",
+          "readback": "Authenticated @Nospinzone timeline/search or post; DOM time datetime. Existing, not reposted."
+        },
+        {
+          "channel": "X",
+          "item": "Political payments",
+          "url": "https://x.com/Nospinzone/status/2122807909373612294",
+          "originalPublishedAt": "2026-11-17T21:43:40Z",
+          "readback": "Authenticated @Nospinzone timeline/search or post; DOM time datetime. Existing, not reposted."
+        }
+      ],
+      "distributionChecks": {
+        "air02": "Both dated November 17 FAA and Senate oversight addenda already present. Original November 13 date preserved; exact addendum save times not exposed.",
+        "mqa001": "Prominent reconstructed-method caveat; original ZIP/transcript unrecovered; no verified customer or external-model failure. Canonical evidence link present.",
+        "chip01": "Government chronology, contrary evidence and no-guilt limitation present; canonical and official DOJ links present.",
+        "delivery": "No subscriber email or app blast initiated. Existing AIR-02 and MQA dashboards show recipients/open or delivery rate as dash, not a recipient count. Historical per-post delivery toggles were not independently recovered; web publication is verified.",
+        "identity": "KAHRELUM Intelligence / Hasan Raza Kazmi / @Nospinzone and kahrelum.com links agree."
+      },
+      "analytics": {
+        "property": "564952301",
+        "measurementId": "G-73RQ7RNKG4",
+        "liveScriptMatchesMergedPR": true,
+        "browser": "Affirmative consent loaded gtag with HTTP 200 and page_view collection HTTP 204. After decline/reload no gtag script or _ga cookies remained. Original affirmative preference restored after tests.",
+        "realtimeReadback": {
+          "page_view": 4,
+          "fit_check_cta_click": 2,
+          "pilot_cta_click": 1,
+          "contact_click": 1,
+          "session_start": 3,
+          "first_visit": 2,
+          "activeUsers": 2,
+          "keyEvents": "No data available"
+        },
+        "interpretation": "Session includes deliberate test traffic and consent resets. Counts are not verified independent visitors, inquiries, customers or conversions; no inquiry conversion was emitted.",
+        "dntGpc": "Exact production script passed local simulated DNT=1 and globalPrivacyControl=true checks, even with stored consent yes. Browser emulation was unavailable (CDP method unsupported), so browser-level signal emulation is not claimed.",
+        "otherBehaviorTests": "Default/decline prevent tag insertion; affirmative consent starts once; sanitized page configuration; Fit Check/Pilot/contact events; withdrawal disable/reload/cookie deletion passed local behavioral harness."
+      },
+      "discovery": {
+        "mobile": "All seven requested pages read back at 390x844 with document scroll width 390 and zero observed broken images; matching canonicals. Temporary viewport override cleared.",
+        "socialImages": "Six referenced image assets including reused Intelligence art returned HTTP 200.",
+        "substack": "Homepage/archive canonical URLs correct and no robots noindex meta observed. robots.txt permits public pages/feed while excluding private feeds, subscribe and editor paths. RSS loaded in Chrome; generic HTTP client was denied 403.",
+        "welcome": "Existing welcome email inspected without editing/sending; includes AIR-02, research archive, standards, corrections and unsubscribe guidance. Author-session subscribe route displayed optional future pledges and No pledge; new-reader signup and email delivery were not tested.",
+        "searchConsole": {
+          "sitemap": "https://kahrelum.com/sitemap.xml",
+          "status": "Success",
+          "discoveredPages": 61,
+          "lastRead": "2026-11-14",
+          "indexReportUpdated": "2026-11-12",
+          "indexed": 49,
+          "notIndexed": 12,
+          "reasons": {
+            "redirect": 3,
+            "crawledNotIndexed": 7,
+            "discoveredNotIndexed": 2
+          },
+          "note": "Delayed Google reporting; no claim new November 17 pages are indexed."
+        },
+        "vercel": "https://hasan-research-systems.vercel.app/ already redirects to https://kahrelum.com/; no Vercel configuration change.",
+        "buyerJourney": "Research/Intelligence to /pilot#request and mailto:hasan@kahrelum.com works. $750 Fit Check and $2,500 Founding Pilot retained; preexisting recipient-specific $500 quotes explicitly preserved; no automatic submission or checkout."
+      },
+      "holds": [
+        {
+          "pr": 68,
+          "status": "HOLD",
+          "evidence": "Read current November 17 evidence-closure record: $40,000 primary FEC-filed research-consulting entries are distinct from independent bank settlement and the WaPo >$60,000 account; do not aggregate without overlap evidence.",
+          "missing": "Signed scope/agreement and authenticated deliverable-to-post linkage; original disputed exhibits; human factual/legal review. Fresh FEC PDF retrieval unavailable in this pass; existing custody record preserved."
+        },
+        {
+          "pr": 114,
+          "status": "HOLD",
+          "evidence": "Fresh Reuters syndication distinguishes November 17 Bahrain interception report, IRGC targeting claim, Oman/Qatar diplomacy and unverified tanker claims. Does not establish independently verified radar destruction or a fresh CENTCOM no-damage statement.",
+          "source": "https://za.investing.com/news/commodities-news/iran-attacks-us-military-radar-system-in-bahrain-despite-talks-with-mediators-4580662",
+          "missing": "Complete independently checked November 14-17 source chronology and human editorial/legal review. Provisional 30/55/15 scenarios remain unscored; no release."
+        },
+        {
+          "pr": 129,
+          "status": "HOLD",
+          "missing": "Signed FY2026 AFR financial section, component opinions and weakness reconciliation remain unretrieved; official release returned 403 and PDF access failed. Cannot reconcile 12/14 components or 86%/>90% coverage as signed present opinions. Allocation is not expenditure; public demonstration is not a government contract."
+        }
+      ],
+      "validation": {
+        "initialFocused": "18 passed",
+        "finalFocused": "14 passed after website edits",
+        "consolidatedNodeRegression": {
+          "passed": 332,
+          "failed": 10,
+          "total": 342,
+          "limitations": "Two failures require missing local cairosvg; three reference absent generated NFL artwork/manifest; five assert discovery/frontmatter or an Insights patch fixture. These files were not changed by this pass. No claim of full-suite green."
+        },
+        "githubGa4PublicSurface": "https://github.com/AuroraGrid/kahrelum-os/actions/runs/44240153918",
+        "githubIntelligencePublicSurface": "https://github.com/AuroraGrid/kahrelum-os/actions/runs/44241201589",
+        "githubIntelligenceScopedRelease": "https://github.com/AuroraGrid/kahrelum-os/actions/runs/44241201422",
+        "githubAnthropicPublicSurface": "https://github.com/AuroraGrid/kahrelum-os/actions/runs/44241278606"
+      },
+      "unresolved": [
+        "Cloudflare Pages lineupsandlives check still reports Build failed; detailed dashboard requires sign-in. No unrelated configuration changed.",
+        "Full local regression is not clean (10 failures described above).",
+        "Google indexing of newly published pages remains unconfirmed in delayed Search Console report.",
+        "No real client inquiry, payment, conversion or new-reader email delivery was tested or claimed."
+      ]
+    }
   ]
 }
