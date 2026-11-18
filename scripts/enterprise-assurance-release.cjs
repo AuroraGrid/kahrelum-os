@@ -4,9 +4,11 @@
 // Requires the verified currently-deployed source, not a stale snapshot. Preserves other pages.
 function replaceOnceOrExisting(html, original, replacement, description) {
   if (!replacement || replacement === original) throw new Error('Missing canonical '+description);
+  const already = html.split(replacement).length - 1;
+  if (already === 1) return html;
+  if (already > 1) throw new Error('Unexpected duplicate applied patch for '+description+'; HOLD');
   const count = html.split(original).length - 1;
-  if (count === 0 && html.includes(replacement)) return html;
-  if (count !== 1 || html.includes(replacement)) throw new Error('Unexpected live source for '+description+'; HOLD');
+  if (count !== 1) throw new Error('Unexpected live source for '+description+'; HOLD');
   return html.replace(original,replacement);
 }
 function sectionFromSource(source,id) {
