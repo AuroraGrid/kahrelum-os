@@ -10,6 +10,9 @@ on:
       - 'tests/intelligence-share.test.cjs'
       - 'pilot.html'
       - 'scripts/retire-legacy-pricing.cjs'
+      - 'decision-assurance-samples.html'
+      - 'data/assurance/synthetic-reviews-v0.1.json'
+      - 'scripts/assurance-samples-publication.cjs'
       - 'assurance.html'
       - 'scripts/buyer-conversion-20261112.cjs'
       - 'tests/ai-mode-buyer-discovery-20261113.test.cjs'
@@ -122,6 +125,7 @@ on:
           - buyer-discovery
           - buyer-conversion
           - pricing-retirement
+          - enterprise-assurance-gallery
           - election-data-index
           - us-results-ui
           - forecast-100-publication
@@ -275,6 +279,15 @@ jobs:
                 esac
               done <<< "$changed"
               profiles="ai-discovery-seo"
+            elif grep -Fqx 'decision-assurance-samples.html' <<< "$changed"; then
+              # Dedicated review-only new buyer sample gallery, with narrow current-live changes.
+              while IFS= read -r file; do
+                case "$file" in
+                  index.html|pilot.html|assurance.html|llms.txt|decision-assurance-samples.html|data/assurance/synthetic-reviews-v0.1.json|commercial/enterprise-product-path-20261118.md|scripts/assurance-samples-publication.cjs|scripts/firebase-overlay-release.cjs|scripts/deploy-unified-firebase.ps1|tests/enterprise-assurance-positioning.test.cjs|tests/enterprise-assurance-publisher.test.cjs|.github/workflows/firebase-scoped-release.yml) ;;
+                  *) echo "::error::Enterprise assurance gallery includes unrelated path: $file"; exit 1 ;;
+                esac
+              done <<< "$changed"
+              profiles="enterprise-assurance-gallery"
             elif grep -Fqx 'scripts/retire-legacy-pricing.cjs' <<< "$changed"; then
               # Explicit one-time removal of obsolete public price references.
               # The publisher reads verified live HTML, alters only two exact snippets,
@@ -347,7 +360,7 @@ jobs:
           set -euo pipefail
           for profile in $RELEASE_PROFILES; do
             case "$profile" in
-              mqa001-review|intelligence-share|nfc-east-title-2026|malik-beasley-forecast|forecast-100-publication|calibration-nfl-2026|chip01-publication|air02-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|ai-discovery-seo|ai-visibility-hardening|site-completion|mobile-nav-layout|commercial-readiness|buyer-discovery|buyer-conversion|pricing-retirement|election-data-index) ;;
+              mqa001-review|intelligence-share|nfc-east-title-2026|malik-beasley-forecast|forecast-100-publication|calibration-nfl-2026|chip01-publication|air02-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|ai-discovery-seo|ai-visibility-hardening|site-completion|mobile-nav-layout|commercial-readiness|buyer-discovery|buyer-conversion|pricing-retirement|enterprise-assurance-gallery|election-data-index) ;;
               *) echo "::error::Unapproved release profile: $profile"; exit 1;;
             esac
           done

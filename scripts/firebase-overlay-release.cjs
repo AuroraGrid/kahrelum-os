@@ -14,6 +14,7 @@ const { buildChip01SocialArtifacts } = require(path.join(__dirname, 'chip01-soci
 const { patchBuyerPage } = require(path.join(__dirname, 'buyer-discovery.cjs'));
 const { patchBuyerConversion } = require(path.join(__dirname, 'buyer-conversion-20261112.cjs'));
 const { retireLegacyPricing } = require(path.join(__dirname, 'retire-legacy-pricing.cjs'));
+const { patchAssuranceBuyerPage } = require(path.join(__dirname, 'assurance-samples-publication.cjs'));
 const { enhanceDiscoveryPage } = require(path.join(__dirname, 'ai-seo-discovery.cjs'));
 const { enhanceAgentVisibility } = require(path.join(__dirname, 'agent-visibility-hardening.cjs'));
 const { siteCompletionAllowedPaths, configsSemanticallyEqual, prepareMarkdownHostingConfig, patchCompletionPage, verifyMarkdownResponseHeaders } = require(path.join(__dirname, 'site-completion.cjs'));
@@ -277,6 +278,13 @@ const RELEASE_PROFILES = {
     // Read-patch current live homepage and pilot without replacing archived sections or live social assets.
     overlayFiles: ['AGENTS.md', 'sitemap.md', 'llms-full.txt', 'index.md', 'pilot-page.md'],
     sitemapRoutes: [],
+    includeHomepage: false,
+  },
+  'enterprise-assurance-gallery': {
+    // Static fictional review examples plus verified-live, surgical homepage/offer crosslinks.
+    // No historical source changes, live client data, or model API is involved.
+    overlayFiles: ['decision-assurance-samples.html','data/assurance/synthetic-reviews-v0.1.json','llms.txt'],
+    sitemapRoutes: ['/decision-assurance-samples'],
     includeHomepage: false,
   },
   'pricing-retirement': {
@@ -1296,6 +1304,23 @@ async function buildOverlay(live, profileName) {
     }
   }
 
+  if (profileName === 'enterprise-assurance-gallery') {
+    const examples = JSON.parse(readRepositoryBytes('data/assurance/synthetic-reviews-v0.1.json').toString('utf8'));
+    if (examples.schema_version !== 'kahrelum.synthetic-review.v0.1' ||
+        examples.synthetic !== true || examples.live_execution !== false ||
+        examples.cases.length !== 5 || examples.cases.some(item => item.synthetic !== true)) {
+      fail('Enterprise assurance gallery source is not an approved five-case synthetic dataset.');
+    }
+    for (const [hostingPath, route] of [
+      ['/index.html','/'], ['/assurance.html','/assurance'], ['/pilot.html','/pilot'],
+    ]) {
+      const liveHtml = (await verifiedLiveFile(live, hostingPath, route)).toString('utf8');
+      const sourceHtml = readRepositoryBytes(hostingPath.slice(1)).toString('utf8');
+      const revised = patchAssuranceBuyerPage(route, liveHtml, sourceHtml);
+      if (revised !== liveHtml) addBlob(desired, blobs, hostingPath, Buffer.from(revised, 'utf8'));
+    }
+  }
+
   if (profileName === 'pricing-retirement') {
     for (const [hostingPath, route] of [['/index.html', '/'], ['/pilot.html', '/pilot']]) {
       const liveHtml = (await verifiedLiveFile(live, hostingPath, route)).toString('utf8');
@@ -1456,6 +1481,15 @@ async function buildOverlay(live, profileName) {
   if (profileName === 'buyer-conversion' &&
       changedPaths.some((item) => !['/assurance.html','/pilot.html','/sitemap.xml'].includes(item))) {
     fail('Buyer conversion attempted to change unrelated live Firebase files.');
+  }
+  if (profileName === 'enterprise-assurance-gallery') {
+    const allowed = new Set([
+      '/decision-assurance-samples.html','/data/assurance/synthetic-reviews-v0.1.json','/llms.txt',
+      '/index.html','/assurance.html','/pilot.html','/sitemap.xml',
+    ]);
+    if (changedPaths.some(item => !allowed.has(item))) {
+      fail('Enterprise assurance gallery attempted to change unrelated live Firebase files.');
+    }
   }
   if (profileName === 'pricing-retirement' &&
       changedPaths.some((item) => !['/index.html','/pilot.html'].includes(item))) {
@@ -1923,6 +1957,36 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
         fail('Buyer conversion published a non-reviewable inquiry: ' + route);
       }
     }
+  }
+
+  if (profileName === 'enterprise-assurance-gallery') {
+    const gallery = (await fetchBytes(origin + '/decision-assurance-samples')).toString('utf8');
+    const jsonBytes = await fetchBytes(origin + '/data/assurance/synthetic-reviews-v0.1.json');
+    const expectedBytes = readRepositoryBytes('data/assurance/synthetic-reviews-v0.1.json');
+    if (sha256(jsonBytes) !== sha256(expectedBytes)) {
+      fail('Enterprise assurance gallery JSON production readback failed.');
+    }
+    const records = JSON.parse(jsonBytes.toString('utf8'));
+    if (records.synthetic !== true || records.live_execution !== false || records.cases.length !== 5 ||
+        !gallery.includes('SYNTHETIC EXAMPLES') ||
+        !records.cases.every(entry => gallery.includes(entry.case_id)) ||
+        !gallery.includes('href="/pilot#request"')) {
+      fail('Enterprise assurance gallery production readback failed: sample cases or safety boundary.');
+    }
+    for (const route of ['/', '/assurance', '/pilot']) {
+      const livePage = (await fetchBytes(origin + route)).toString('utf8');
+      if (!livePage.includes('href="/decision-assurance-samples"') ||
+          !livePage.includes('$750') || !livePage.includes('$2,500') ||
+          /\$500|five-case (?:diagnostics|historical reviews)/i.test(livePage)) {
+        fail('Enterprise assurance gallery production readback failed: ' + route);
+      }
+    }
+    const sitemap = (await fetchBytes(origin + '/sitemap.xml')).toString('utf8');
+    if (!sitemap.includes('<loc>' + DOMAIN + '/decision-assurance-samples</loc>')) {
+      fail('Enterprise assurance gallery production readback failed: sitemap.');
+    }
+    checks.push({route:'/decision-assurance-samples',status:200,synthetic:true});
+    checks.push({route:'/data/assurance/synthetic-reviews-v0.1.json',status:200,sha256:sha256(jsonBytes)});
   }
 
   if (profileName === 'pricing-retirement') {

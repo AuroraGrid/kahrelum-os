@@ -1,0 +1,102 @@
+{
+  "schema_version": "kahrelum.synthetic-review.v0.1",
+  "title": "Five synthetic AI decision assurance record examples",
+  "synthetic": true,
+  "live_execution": false,
+  "customer_data": false,
+  "generated_at": "2026-11-18",
+  "notice": "Fictional illustrative records prepared to demonstrate report structure. Not live KAHRELUM execution, production SaaS monitoring, client case studies, clinical recommendations or third-party performance measurements.",
+  "method": "For each frozen decision cutoff, compare the permissible evidence and explicit policy to the proposed AI-assisted action; preserve counterarguments, missing evidence and review gate. No outcome safety rate can be inferred.",
+  "cases": [
+    {
+      "case_id": "SYN-NOTE-001",
+      "sector_id": "clinical-documentation",
+      "sector": "Clinical documentation",
+      "workflow": "Review an AI-drafted visit summary against an authorized transcript",
+      "decision_at_cutoff": "Release the automatically drafted visit summary as supported.",
+      "source_snapshot": [
+        "Invented transcript contains a follow-up scheduling discussion.",
+        "Draft note states that an additional action was agreed, without a matching passage in the provided transcript."
+      ],
+      "policy_at_cutoff": "A consequential factual claim must be traced to a permitted source in the cutoff snapshot or explicitly marked unverified.",
+      "gap_found": "A claim in the drafted summary is not grounded in the provided contemporaneous source.",
+      "counterargument": "Another authorized note could support the claim, but it is absent from the supplied synthetic review set.",
+      "review_disposition": "HOLD",
+      "required_next_evidence": "Authorized contemporaneous source for the additional claim or a corrected draft acknowledging uncertainty.",
+      "limitations": "Illustrative source-grounding review only; not clinical validation, medical advice or evidence of a real vendor defect.",
+      "synthetic": true
+    },
+    {
+      "case_id": "SYN-INBOX-002",
+      "sector_id": "clinical-inbox",
+      "sector": "Clinician inbox routing",
+      "workflow": "Check AI-assisted inbox routing against a frozen escalation rule",
+      "decision_at_cutoff": "Close a message automatically as routine without assigned reviewer approval.",
+      "source_snapshot": [
+        "The invented inbound message has an administrative request and a separate review-required flag.",
+        "The hypothetical routing trace classifies the whole message as routine."
+      ],
+      "policy_at_cutoff": "Any item carrying the review-required flag must be sent to a designated human reviewer before closure.",
+      "gap_found": "The proposed closure conflicts with the stipulated escalation gate, regardless of correct administrative classification.",
+      "counterargument": "The message might otherwise be routine. That does not supersede the explicit rule in the scenario.",
+      "review_disposition": "HOLD",
+      "required_next_evidence": "Reviewer disposition and the applicable policy version approving or rejecting automated closure.",
+      "limitations": "Fabricated workflow and invented flag, not medical triage guidance, an outcome estimate or a test of a real clinical product.",
+      "synthetic": true
+    },
+    {
+      "case_id": "SYN-CHART-003",
+      "sector_id": "patient-context",
+      "sector": "Patient-context evidence linking",
+      "workflow": "Check chart-grounded AI statements against authorized patient-context snapshots",
+      "decision_at_cutoff": "Present the generated answer as fully verified against the available chart.",
+      "source_snapshot": [
+        "A fictional chart extract contains two dated observations.",
+        "A generated statement cites a third observation that is missing from the supplied snapshot."
+      ],
+      "policy_at_cutoff": "Each patient-specific factual statement must identify a permitted chart entry available before the response cutoff or be marked unverified.",
+      "gap_found": "The sample cannot verify the third observation from its provided evidence set.",
+      "counterargument": "A later update or another repository could contain the third observation; absence from this sample is not proof it never existed.",
+      "review_disposition": "REVIEW",
+      "required_next_evidence": "An authorized source extract with timestamp and version provenance for the claimed observation.",
+      "limitations": "No real patient record, clinical recommendation, treatment advice or deployed-system evaluation is included.",
+      "synthetic": true
+    },
+    {
+      "case_id": "SYN-EDITORIAL-004",
+      "sector_id": "editorial-attribution",
+      "sector": "Editorial AI summarization",
+      "workflow": "Check an AI summary against attributed article passages and uncertainty labels",
+      "decision_at_cutoff": "Publish a summary that reports a proposal as an approved policy.",
+      "source_snapshot": [
+        "An invented article passage says that a policy proposal is under discussion.",
+        "The drafted summary describes the proposal as formally approved, without the approval in its cited excerpt."
+      ],
+      "policy_at_cutoff": "Do not promote a proposal into an established action; every summary claim must preserve the source's factual status and attribution.",
+      "gap_found": "The summary upgrades an unresolved proposal to a verified approval.",
+      "counterargument": "A separate source might establish approval, but no such source is available in the frozen synthetic set.",
+      "review_disposition": "CORRECT",
+      "required_next_evidence": "A source demonstrating approval at the relevant cutoff, or corrected qualified wording with accurate passage attribution.",
+      "limitations": "A fabricated publishing exercise, not an allegation about any media company, AI model or partnership.",
+      "synthetic": true
+    },
+    {
+      "case_id": "SYN-LAB-005",
+      "sector_id": "automated-experimentation",
+      "sector": "Automated experimentation",
+      "workflow": "Inspect a model-to-experiment recommendation against experiment provenance and validation gates",
+      "decision_at_cutoff": "Advance an AI-suggested experiment to the next automated stage.",
+      "source_snapshot": [
+        "The invented recommendation cites two simulated experiment runs.",
+        "One run lacks a recorded parameter version and the preregistered repeatability check remains incomplete."
+      ],
+      "policy_at_cutoff": "A candidate must have complete input versions and pass the frozen repeatability criterion before automatic advancement.",
+      "gap_found": "The recommendation lacks provenance for one run and a completed acceptance gate.",
+      "counterargument": "The approach may perform well in a repeat, but the available record does not establish it met the prerequisite.",
+      "review_disposition": "HOLD",
+      "required_next_evidence": "Versioned run inputs plus the completed repeatability check signed under the agreed protocol.",
+      "limitations": "Synthetic R&D example only, not wet-lab advice, a validated model benchmark or evidence about an incubated venture.",
+      "synthetic": true
+    }
+  ]
+}
