@@ -11,6 +11,7 @@
   "notes": "Downloadable public sample JSON only. No hosted evaluation endpoint, production monitor, regulatory opinion or customer results.",
   "cases": [
     {
+      "synthetic": true,
       "case_id": "SYN-CLIN-DOC-001",
       "sector_id": "clinical-documentation",
       "audience": "Clinical AI engineering",
@@ -26,6 +27,7 @@
       "limitations": "Illustrative documentation test only; no diagnosis, real patient, EHR connection or verified customer defect."
     },
     {
+      "synthetic": true,
       "case_id": "SYN-INBOX-002",
       "sector_id": "clinical-inbox",
       "audience": "Clinical operations / automation",
@@ -41,6 +43,7 @@
       "limitations": "Synthetic workflow-control illustration. No real patient, organization, clinical outcome or production integration."
     },
     {
+      "synthetic": true,
       "case_id": "SYN-CONTEXT-003",
       "sector_id": "patient-context",
       "audience": "Clinical informatics / AI governance",
@@ -56,6 +59,7 @@
       "limitations": "No medical advice, real patients, treatment claim, regulated audit opinion or independently measured safety rate."
     },
     {
+      "synthetic": true,
       "case_id": "SYN-EDITOR-004",
       "sector_id": "editorial-attribution",
       "audience": "Editorial AI / digital product",
@@ -71,6 +75,7 @@
       "limitations": "All article details are synthetic. No assertion about any real publisher, partnership or model defect."
     },
     {
+      "synthetic": true,
       "case_id": "SYN-LAB-005",
       "sector_id": "automated-experimentation",
       "audience": "AI-biology / R&D quality",
