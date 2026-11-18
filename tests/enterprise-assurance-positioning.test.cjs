@@ -38,7 +38,8 @@ test('five distinct synthetic sectors have inspectable uniform decision records'
   assert.match(page, /SYNTHETIC.*NOT A LIVE RUN/is);
   assert.match(page, /href="\/data\/assurance\/synthetic-reviews-v0\.1\.json"/);
   assert.match(page, /href="\/pilot#request"/);
-  assert.doesNotMatch(read('index.html'), /\\$500|five.case diagnostic/i);\n  const sectors = ['clinical-documentation','clinical-inbox','patient-context','editorial-attribution','automated-experimentation'];
+  assert.doesNotMatch(read('index.html'), /\$500|five.case diagnostic/i);
+  const sectors = ['clinical-documentation','clinical-inbox','patient-context','editorial-attribution','automated-experimentation'];
   assert.deepEqual(manifest.cases.map(record => record.sector_id), sectors);
   for (const record of manifest.cases) {
     assert.equal(record.synthetic, true);
