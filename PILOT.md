@@ -16,7 +16,7 @@ The specific deliverable is a diagnostic record, not a guaranteed cost saving, p
 
 **$2,500 upfront — founding pilot.** One workflow and up to ten approved, appropriately de-identified historical decisions. Individual case records and a consolidated report with one readout call. Target: five business days after scope/protocol freeze, approved usable inputs and cleared payment.
 
-All work is operator-assisted; no production or live third-party testing. Pre-existing recipient-specific offers (including previously quoted $500 five-case diagnostics) retain their original terms and are not an additional public tier.
+All work is operator-assisted; no production or live third-party testing.
 
 ## Buying and data-handling path
 
