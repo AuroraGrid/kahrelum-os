@@ -1977,7 +1977,7 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
       const livePage = (await fetchBytes(origin + route)).toString('utf8');
       if (!livePage.includes('href="/decision-assurance-samples"') ||
           !livePage.includes('$750') || !livePage.includes('$2,500') ||
-          /\\$500|five-case (?:diagnostics|historical reviews)/i.test(livePage)) {
+          /\$500|five-case (?:diagnostics|historical reviews)/i.test(livePage)) {
         fail('Enterprise assurance gallery production readback failed: ' + route);
       }
     }
