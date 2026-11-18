@@ -17,18 +17,18 @@ function sectionFromSource(source,id) {
 }
 function patchEnterpriseAssurance(live, canonical, route) {
   if (!['/','/assurance','/pilot'].includes(route) || typeof live!=='string' || typeof canonical!=='string') throw new Error('Unsupported route or input');
-  if (/\\$500|five.case diagnostics|five.case historical reviews/i.test(live)) throw new Error('Legacy public pricing reappeared; HOLD');
+  if (/\$500|five.case diagnostics|five.case historical reviews/i.test(live)) throw new Error('Legacy public pricing reappeared; HOLD');
   if (!canonical.includes('href="/decision-assurance-samples"')) throw new Error('Canonical buyer link missing; HOLD');
   let out=live;
   if(route==='/'){
     out=replaceOnceOrExisting(out,'<h1>Decision intelligence that has to earn its answer.</h1>','<h1>Your AI made a decision. Can the evidence defend it?</h1>','homepage headline');
     const oldLede='<p class="lede">KAHRELUM OS is an evidence-to-decision system for forecasting, research and high-stakes analysis. It separates fact from inference, attacks its own conclusions, and is designed to block rather than manufacture certainty when the evidence does not support an answer.</p>';
-    const nextLede=canonical.match(/<p class="lede">[^<]*<\\/p>/)?.[0];
+    const nextLede=canonical.match(/<p class="lede">[^<]*<\/p>/)?.[0];
     out=replaceOnceOrExisting(out,oldLede,nextLede,'homepage explanation');
     out=replaceOnceOrExisting(out,'h1{font-size:clamp(2.4rem,7vw,4.8rem);line-height:.98;margin:0 0 1rem;max-width:12ch}',
       'h1{font-size:clamp(2.4rem,7vw,4.8rem);line-height:1.02;margin:0 0 1rem;max-width:19ch}','homepage hero width');
     const oldCTA='<p><a class="cta primary" href="https://kahrelum.com/pilot#request">Review packages & start an inquiry</a><a class="cta" href="https://github.com/AuroraGrid/kahrelum-os/blob/main/evidence/EXTERNAL_AUDIT_SUMMARY.md">Review the Evidence</a></p>';
-    const newCTA=canonical.match(/<p><a class="cta primary" href="\\/enterprise-ai-evaluation">[\\s\\S]*?<\\/p>/)?.[0];
+    const newCTA=canonical.match(/<p><a class="cta primary" href="\/enterprise-ai-evaluation">[\s\S]*?<\/p>/)?.[0];
     out=replaceOnceOrExisting(out,oldCTA,newCTA,'homepage call to action');
     const section=sectionFromSource(canonical,'commercial-workflows');
     out=replaceOnceOrExisting(out,'<section id="divisions">',section+'\n<section id="divisions">','homepage commercial workflows');
