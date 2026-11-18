@@ -1928,7 +1928,7 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
   if (profileName === 'pricing-retirement') {
     for (const route of ['/', '/pilot']) {
       const page = (await fetchBytes(origin + route)).toString('utf8');
-      if (/\\$500|US\\$500|five-case (?:diagnostics|historical reviews)/i.test(page) ||
+      if (/\$500|US\$500|five-case (?:diagnostics|historical reviews)/i.test(page) ||
           !page.includes('$750') || !page.includes('$2,500') ||
           (route === '/pilot' && !page.includes('id="pilotInquiry"'))) {
         fail('Pricing retirement production readback failed: ' + route);
