@@ -13,6 +13,7 @@ const { buildCaseShareArtifacts, extractCases } = require(path.join(__dirname, '
 const { buildChip01SocialArtifacts } = require(path.join(__dirname, 'chip01-social.cjs'));
 const { patchBuyerPage } = require(path.join(__dirname, 'buyer-discovery.cjs'));
 const { patchBuyerConversion } = require(path.join(__dirname, 'buyer-conversion-20261112.cjs'));
+const { retireLegacyPricing } = require(path.join(__dirname, 'retire-legacy-pricing.cjs'));
 const { enhanceDiscoveryPage } = require(path.join(__dirname, 'ai-seo-discovery.cjs'));
 const { enhanceAgentVisibility } = require(path.join(__dirname, 'agent-visibility-hardening.cjs'));
 const { siteCompletionAllowedPaths, configsSemanticallyEqual, prepareMarkdownHostingConfig, patchCompletionPage, verifyMarkdownResponseHeaders } = require(path.join(__dirname, 'site-completion.cjs'));
@@ -275,6 +276,12 @@ const RELEASE_PROFILES = {
   'buyer-discovery': {
     // Read-patch current live homepage and pilot without replacing archived sections or live social assets.
     overlayFiles: ['AGENTS.md', 'sitemap.md', 'llms-full.txt', 'index.md', 'pilot-page.md'],
+    sitemapRoutes: [],
+    includeHomepage: false,
+  },
+  'pricing-retirement': {
+    // Only remove obsolete public price copy from the verified live homepage and pilot HTML.
+    overlayFiles: [],
     sitemapRoutes: [],
     includeHomepage: false,
   },
@@ -1289,6 +1296,14 @@ async function buildOverlay(live, profileName) {
     }
   }
 
+  if (profileName === 'pricing-retirement') {
+    for (const [hostingPath, route] of [['/index.html', '/'], ['/pilot.html', '/pilot']]) {
+      const liveHtml = (await verifiedLiveFile(live, hostingPath, route)).toString('utf8');
+      const revised = retireLegacyPricing(liveHtml, route);
+      if (revised !== liveHtml) addBlob(desired, blobs, hostingPath, Buffer.from(revised, 'utf8'));
+    }
+  }
+
   if (profileName === 'buyer-conversion') {
     for (const [hostingPath, route] of [['/assurance.html', '/assurance'], ['/pilot.html', '/pilot']]) {
       const liveHtml = (await verifiedLiveFile(live, hostingPath, route)).toString('utf8');
@@ -1441,6 +1456,10 @@ async function buildOverlay(live, profileName) {
   if (profileName === 'buyer-conversion' &&
       changedPaths.some((item) => !['/assurance.html','/pilot.html','/sitemap.xml'].includes(item))) {
     fail('Buyer conversion attempted to change unrelated live Firebase files.');
+  }
+  if (profileName === 'pricing-retirement' &&
+      changedPaths.some((item) => !['/index.html','/pilot.html'].includes(item))) {
+    fail('Pricing retirement attempted to change unrelated live Firebase files.');
   }
   if (profileName === 'mobile-nav-layout' &&
       changedPaths.some((item) => item !== '/site-shell.css')) {
@@ -1903,6 +1922,18 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
           !html.includes('Prepare a $750 Fit Check inquiry (you send)'))) {
         fail('Buyer conversion published a non-reviewable inquiry: ' + route);
       }
+    }
+  }
+
+  if (profileName === 'pricing-retirement') {
+    for (const route of ['/', '/pilot']) {
+      const page = (await fetchBytes(origin + route)).toString('utf8');
+      if (/\\$500|US\\$500|five-case (?:diagnostics|historical reviews)/i.test(page) ||
+          !page.includes('$750') || !page.includes('$2,500') ||
+          (route === '/pilot' && !page.includes('id="pilotInquiry"'))) {
+        fail('Pricing retirement production readback failed: ' + route);
+      }
+      checks.push({route,status:200,legacyPriceAbsent:true});
     }
   }
 
