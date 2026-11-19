@@ -13,5 +13,10 @@
       "source": "/api/v1/example",
       "destination": "/data/api/v1/example.json"
     }
-  ]
+  ],
+  "git": {
+    "deploymentEnabled": {
+      "codex/six-bot-engineering-20261102": false
+    }
+  }
 }
