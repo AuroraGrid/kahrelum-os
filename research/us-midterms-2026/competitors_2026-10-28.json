@@ -1,0 +1,140 @@
+{
+  "challenge_id": "KAH-US-MIDTERMS-2026-HEAD2HEAD-001",
+  "created_date": "2026-10-28",
+  "election_date": "2026-11-03",
+  "final_lock_at_utc": "2026-11-03T17:00:00Z",
+  "final_lock_at_us_eastern": "2026-11-03T12:00:00-05:00",
+  "final_lock_at_pakistan": "2026-11-03T22:00:00+05:00",
+  "scoring_status": "NO_SCORES_YET",
+  "scope": {
+    "house": 435,
+    "senate": 35,
+    "governors": 36,
+    "total": 506,
+    "identity_audit": "PENDING"
+  },
+  "forecasters": [
+    {
+      "id": "KAHRELUM",
+      "name": "KAHRELUM",
+      "type": "independent-model-to-be-locked",
+      "status": "NOT_YET_LOCKED",
+      "numerical_probability_scope": "unknown",
+      "sources": [
+        "https://github.com/AuroraGrid/kahrelum-os/blob/main/evidence/PROSPECTIVE_VALIDATION_PROTOCOL.md"
+      ],
+      "claims_of_outperformance": false
+    },
+    {
+      "id": "SAM",
+      "name": "Sam Brown",
+      "handle": "@sb4liberty",
+      "type": "categorical-maps-seat-counts",
+      "status": "USER_SCREENSHOTS_RECEIVED_PARTIAL",
+      "original_publication_display": "2026-10-27 22:09, screenshot time zone not independently authenticated",
+      "screenshots": "Uploaded by user in ChatGPT conversation; no redistributable archive URL recorded here",
+      "original_headline_totals_user_evidence": {
+        "house": {
+          "D": 227,
+          "R": 208
+        },
+        "senate": {
+          "D": 49,
+          "R": 51
+        },
+        "governors": {
+          "D": 26,
+          "R": 24
+        }
+      },
+      "amendments": [
+        {
+          "published_display": "approx 2026-10-28, exact timestamp unconfirmed",
+          "content": "Georgia governor category changed from Lean D to Likely D, user screenshot",
+          "affects_original": false
+        }
+      ],
+      "full_race_coverage": "UNVERIFIED",
+      "source": "https://x.com/sb4liberty"
+    },
+    {
+      "id": "DDHQ",
+      "name": "Decision Desk HQ",
+      "type": "probabilistic-races-and-seats",
+      "status": "SOURCE_PAGES_CHECKED_NOT_FINAL_LOCKED",
+      "source_pages": {
+        "house": "https://votes.decisiondeskhq.com/forecast/2026/house",
+        "senate": "https://votes.decisiondeskhq.com/forecast/2026/senate",
+        "governors": "https://votes.decisiondeskhq.com/forecast/2026/governor"
+      },
+      "observed_publication_display": {
+        "house": "Oct 28 10:19 AM",
+        "senate": "Oct 28 10:20 AM",
+        "governors": "Oct 28 10:13 AM"
+      },
+      "observed_timezone": "America/New_York per page metadata",
+      "observed_page_universe": {
+        "house": 435,
+        "senate": 35,
+        "governors": 36
+      },
+      "prob_precision": "rounded; >99% top-coded",
+      "raw_table_tossup_orientation": "REQUIRES_VERIFICATION",
+      "republishing": "Source links/derived benchmark metadata only; permission for bulk redistribution not established"
+    },
+    {
+      "id": "COOK",
+      "name": "The Cook Political Report",
+      "type": "categorical-ratings",
+      "status": "SOURCE_PAGES_CHECKED_NOT_FINAL_LOCKED",
+      "source": "https://www.cookpolitical.com/ratings",
+      "latest_displayed_section_updates": {
+        "house": "2026-10-16",
+        "senate": "2026-10-22",
+        "governors": "2026-10-22"
+      },
+      "published_numerical_probabilities": false,
+      "source_access": "Individual race detail may require subscription",
+      "tossup_policy": "NO_CALL"
+    },
+    {
+      "id": "SABATO",
+      "name": "Sabato's Crystal Ball",
+      "type": "categorical-ratings",
+      "status": "SOURCE_PAGES_CHECKED_NOT_FINAL_LOCKED",
+      "source": "https://sabatoscrystalball.substack.com/p/democrats-appear-to-hold-narrow-senate",
+      "source_date": "2026-10-27",
+      "source_publisher": "University of Virginia Center for Politics",
+      "published_numerical_probabilities": false,
+      "tossup_policy": "NO_CALL"
+    },
+    {
+      "id": "POLLINGFORECAST",
+      "name": "Polling Forecast",
+      "type": "probabilistic-races-and-seats",
+      "status": "SOURCE_PAGES_CHECKED_NOT_FINAL_LOCKED",
+      "source": "https://www.pollingforecast.com/us/data",
+      "exports": {
+        "house": "https://www.pollingforecast.com/us/data/house.json",
+        "senate": "https://www.pollingforecast.com/us/data/senate.json",
+        "governors": "https://www.pollingforecast.com/us/data/governors.json"
+      },
+      "exported_dataset_asof": "2026-10-27",
+      "live_summary_date": "2026-10-28",
+      "export_row_counts": {
+        "house": 435,
+        "senate": 35,
+        "governors": 36
+      },
+      "license": "Forecast output CC BY 4.0; credit Polling Forecast; observe per-row license"
+    }
+  ],
+  "rules": {
+    "source_time_required": true,
+    "no_after_the_fact_rewrites": true,
+    "no_fake_probabilities_from_ratings": true,
+    "common_race_scoring": true,
+    "partisan_electoral_advice": false,
+    "uncertainty_disclosed": true
+  }
+}
