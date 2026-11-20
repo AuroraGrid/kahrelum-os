@@ -8,6 +8,8 @@ on:
       - 'intelligence.html'
       - 'assets/social/og-kahrelum-intelligence-20261114.png'
       - 'tests/intelligence-share.test.cjs'
+      - 'scripts/editorial-discovery.cjs'
+      - 'tests/editorial-discovery.test.cjs'
       - 'pilot.html'
       - 'scripts/retire-legacy-pricing.cjs'
       - 'assurance.html'
@@ -104,6 +106,7 @@ on:
         options:
           - mqa001-review
           - intelligence-share
+          - editorial-discovery
           - chip01-publication
           - nfc-east-title-2026
           - malik-beasley-forecast
@@ -187,6 +190,15 @@ jobs:
                 esac
               done <<< "$changed"
               profiles="intelligence-share"
+            elif grep -Fqx 'scripts/editorial-discovery.cjs' <<< "$changed"; then
+              # The dated editorial index is a verified live-only HTML patch; no source history overwritten.
+              while IFS= read -r file; do
+                case "$file" in
+                  insights.html|investigations.html|scripts/editorial-discovery.cjs|tests/editorial-discovery.test.cjs|scripts/firebase-overlay-release.cjs|.github/workflows/firebase-scoped-release.yml) ;;
+                  *) echo "::error::Editorial discovery release includes unrelated path: $file"; exit 1 ;;
+                esac
+              done <<< "$changed"
+              profiles="editorial-discovery"
             elif grep -Fqx 'scripts/mobile-nav-browser-qa.cjs'  <<< "$changed"; then
               while IFS= read -r file; do
                 case "$file" in
@@ -363,7 +375,7 @@ jobs:
           set -euo pipefail
           for profile in $RELEASE_PROFILES; do
             case "$profile" in
-              mqa001-review|intelligence-share|nfc-east-title-2026|malik-beasley-forecast|forecast-100-publication|calibration-nfl-2026|chip01-publication|air02-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|ai-discovery-seo|ai-visibility-hardening|site-completion|mobile-nav-layout|commercial-readiness|buyer-discovery|buyer-conversion|pricing-retirement|enterprise-assurance|election-data-index) ;;
+              mqa001-review|intelligence-share|editorial-discovery|nfc-east-title-2026|malik-beasley-forecast|forecast-100-publication|calibration-nfl-2026|chip01-publication|air02-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|ai-discovery-seo|ai-visibility-hardening|site-completion|mobile-nav-layout|commercial-readiness|buyer-discovery|buyer-conversion|pricing-retirement|enterprise-assurance|election-data-index) ;;
               *) echo "::error::Unapproved release profile: $profile"; exit 1;;
             esac
           done
