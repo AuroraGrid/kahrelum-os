@@ -1,6 +1,10 @@
 'use strict';
 
 // Narrow live-page transformation, applied to current verified Firebase bytes.
+// Publication reconciliation (2026-11-20): the repository's public source already
+// retired the $500 mention, but a verified live /pilot copy still contained it.
+// Re-run the existing idempotent, hash-checked pricing-retirement release; do not
+// change private pre-existing quotes or add any new public package.
 // Historical private quotes are a separate contractual matter; public pricing has two tiers.
 const LEGACY = {
   '/': [
