@@ -3,3 +3,7 @@
 .election-refresh/
 __pycache__/
 
+# Local OpticOdds trial receipts and private environment files.
+.opticodds-trial/
+.env
+.env.local
