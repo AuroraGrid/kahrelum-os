@@ -20,6 +20,7 @@ const { enhanceAgentVisibility } = require(path.join(__dirname, 'agent-visibilit
 const { siteCompletionAllowedPaths, configsSemanticallyEqual, prepareMarkdownHostingConfig, patchCompletionPage, verifyMarkdownResponseHeaders } = require(path.join(__dirname, 'site-completion.cjs'));
 const { patchPilot, patchArticleMetadata, patchHomepageC7 } = require(path.join(__dirname, 'release3-live-patches.cjs'));
 const { patchInvestigationOverview, patchInsightsIndex, patchNvidiaDetailPage } = require(path.join(__dirname, 'investigations-text-refresh.cjs'));
+const { syncEditorialSection } = require(path.join(__dirname, 'editorial-discovery.cjs'));
 
 const SITE = 'kahrelum-public-hosting';
 const INDEXNOW_KEY_FILE = 'dedc67db0c224b1c9a4be1379f7937f5.txt';
@@ -186,6 +187,12 @@ const RELEASE_PROFILES = {
   'intelligence-share': {
     overlayFiles: ['intelligence.html', 'assets/social/og-kahrelum-intelligence-20261114.png'],
     sitemapRoutes: ['/intelligence'],
+    includeHomepage: false,
+  },
+  'editorial-discovery': {
+    // Only add a dated research index section to live hash-verified HTML; never replace full old pages.
+    overlayFiles: [], sitemapRoutes: [],
+    sitemapLastmod: {'/insights':'2026-11-20','/investigations':'2026-11-20'},
     includeHomepage: false,
   },
   'hegseth-law-audit': {
@@ -1215,6 +1222,17 @@ async function buildOverlay(live, profileName) {
     addBlob(desired, blobs, '/assets/social/og-nfc-east-title-2026-11-15.png', imageNov15);
   }
 
+  if (profileName === 'editorial-discovery') {
+    // Reconcile source additions against separately hash-verified currently live Firebase pages.
+    // Live Investigations has standalone features not present in repository source; preserve them.
+    for (const [hostingPath,route] of [['/insights.html','/insights'],['/investigations.html','/investigations']]) {
+      const liveHtml = (await verifiedLiveFile(live, hostingPath, route)).toString('utf8');
+      const canonical = fs.readFileSync(path.join(ROOT, hostingPath.slice(1)), 'utf8');
+      const revised = syncEditorialSection(liveHtml, canonical, route);
+      if (revised !== liveHtml) addBlob(desired, blobs, hostingPath, Buffer.from(revised, 'utf8'));
+    }
+  }
+
   if (profileName === 'investigations-text-only') {
     for (const [hostingPath, publicPath, patch] of [
       ['/investigations.html', '/investigations', patchInvestigationOverview],
@@ -1422,6 +1440,10 @@ async function buildOverlay(live, profileName) {
   if (profileName === 'anthropic-lobbying' && changedPaths.some(item =>
       !['/investigations/anthropic-lobbying-chip-policy.html', '/investigations.html', '/sitemap.xml'].includes(item))) {
     fail('Anthropic release attempted to change an unrelated path.');
+  }
+  if (profileName === 'editorial-discovery' && changedPaths.some(item =>
+      !['/insights.html','/investigations.html','/sitemap.xml'].includes(item))) {
+    fail('Editorial discovery attempted to change unrelated live Firebase files.');
   }
   if (profileName === 'intelligence-share' && changedPaths.some(item =>
       !['/intelligence.html', '/assets/social/og-kahrelum-intelligence-20261114.png', '/sitemap.xml'].includes(item))) {
@@ -1681,7 +1703,9 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
   }
 
   const internal = new Set();
-  const verifiedRoutes = profileName === 'anthropic-lobbying'
+  const verifiedRoutes = profileName === 'editorial-discovery'
+    ? ['/insights','/investigations']
+    : profileName === 'anthropic-lobbying'
     ? ['/investigations/anthropic-lobbying-chip-policy', '/investigations']
     : profileName === 'mqa001-review'
     ? ['/insights/morgan-dollar-quote', '/insights']
@@ -1754,6 +1778,11 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     const expectedCanonical = DOMAIN + (route === '/' ? '/' : route);
     if (extractCanonical(html) !== expectedCanonical) fail(`Canonical check failed for ${route}.`);
     if (!html.includes('name="viewport"')) fail(`Viewport metadata is missing on ${route}.`);
+    if (profileName === 'editorial-discovery' &&
+        (!html.includes('id="editorial-discovery-20261120"') ||
+         !html.includes('href="/investigations/anthropic-lobbying-chip-policy"'))) {
+      fail(`Editorial discovery failed live/preview readback for ${route}.`);
+    }
     if (profileName === 'site-makeover') {
       if (!html.includes('site-header')) fail(`Shared header is missing on ${route}.`);
       if (!html.includes('skip-link') || !/Skip to main content/i.test(html)) fail(`Skip link is missing on ${route}.`);
