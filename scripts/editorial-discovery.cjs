@@ -20,7 +20,7 @@ function sectionOf(html,label) {
   const start=html.indexOf(SECTION_OPEN),end=html.indexOf('</section>',start);
   if(end<0)throw Error(label+' section is unclosed');
   const section=html.slice(start,end+'</section>'.length);
-  if(section.includes('<section'))throw Error(label+' nested section is not allowed');
+  if(section.slice(SECTION_OPEN.length).includes('<section'))throw Error(label+' nested section is not allowed');
   return section;
 }
 function normalized(s){return s.replace(/\r\n/g,'\n');}
