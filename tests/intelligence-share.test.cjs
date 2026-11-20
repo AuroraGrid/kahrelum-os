@@ -44,8 +44,25 @@ test('Intelligence landing has JSON-LD, llms discovery, complete snippet policy 
  const schema=JSON.parse(json);
  assert.equal(schema['@type'],'WebPage');
  assert.equal(schema.url,'https://kahrelum.com/intelligence');
- assert.equal(schema.dateModified,'2026-11-17');
+ assert.equal(schema.dateModified,'2026-11-20');
  assert.ok(schema.description.includes('Independent investigations'));
  assert.ok(html.includes('<h2 id="topics-title" class="topic-title">Coverage areas</h2>'));
  assert.ok(html.includes('<a href="/ai-discovery/glossary.md">Evidence glossary</a>'));
+});
+
+test('intelligence landing lists recent source-linked research without scoring unresolved forecasts',()=>{
+ const html=read('intelligence.html');
+ assert.match(html,/id="recent-reporting-title"/);
+ for(const route of ['/investigations/anthropic-lobbying-chip-policy','/forecasting/nfc-east-2026',
+ '/investigations/tsds-watchlist-97-claim','/investigations/ca-001','/insights/morgan-dollar-quote']){
+   assert.ok(html.includes('href="'+route+'"'),'Missing verified canonical record: '+route);
+ }
+ for(const slug of ['anthropics-163-million-lobbying-trail','nfc-east-after-dallass-loss-a-dated',
+ 'the-fbi-watchlists-viral-97-claim','the-ai-rehiring-statistic-that-changes','the-42-morgan-dollar-quote-first']){
+   assert.ok(html.includes('/p/'+slug),'Missing published Substack article: '+slug);
+ }
+ assert.match(html,/open and unscored/);
+ assert.match(html,/original November 12 forecast is preserved/);
+ assert.match(html,/These are dated publication records, not live feeds/);
+ assert.ok(!html.includes('$500'));
 });
