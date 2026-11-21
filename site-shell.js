@@ -161,6 +161,11 @@
     document.head.appendChild(script);
     document.addEventListener("click", function (event) {
       if (!enabled) return;
+      // These describe interest only. Copying text is not sending a lead.
+      var button = event.target.closest && event.target.closest("button");
+      if (button && button.id === "copyInquiry") {
+        tag("event", "pilot_inquiry_copy_attempt", {page_location:location.origin + location.pathname});
+      }
       var a = event.target.closest && event.target.closest("a[href]");
       if (!a) return;
       var href = a.getAttribute("href"), name;
@@ -173,6 +178,11 @@
         if (/fit check/i.test(a.textContent) && name) name = "fit_check_cta_click";
       }
       if (name) tag("event", name, {page_location:location.origin + location.pathname});
+    });
+    document.addEventListener("submit", function (event) {
+      if (!enabled || !event.target || event.target.id !== "pilotInquiry") return;
+      // The form only prepares an email-app draft. Do not emit a lead or sale conversion.
+      tag("event", "pilot_inquiry_email_draft_request", {page_location:location.origin + location.pathname});
     });
   }
   var box = document.createElement("aside");

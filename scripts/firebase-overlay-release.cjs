@@ -1445,6 +1445,10 @@ async function buildOverlay(live, profileName) {
       !['/insights.html','/investigations.html','/sitemap.xml'].includes(item))) {
     fail('Editorial discovery attempted to change unrelated live Firebase files.');
   }
+  if (profileName === 'ga4-consent' && changedPaths.some(item =>
+      item !== '/site-shell.js')) {
+    fail('GA4 consent release attempted to change unrelated live Firebase files.');
+  }
   if (profileName === 'intelligence-share' && changedPaths.some(item =>
       !['/intelligence.html', '/assets/social/og-kahrelum-intelligence-20261114.png', '/sitemap.xml'].includes(item))) {
     fail('Intelligence sharing release attempted to replace an unrelated live Firebase path.');
@@ -1703,7 +1707,9 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
   }
 
   const internal = new Set();
-  const verifiedRoutes = profileName === 'editorial-discovery'
+  const verifiedRoutes = profileName === 'ga4-consent'
+    ? ['/pilot','/intelligence']
+    : profileName === 'editorial-discovery'
     ? ['/insights','/investigations']
     : profileName === 'anthropic-lobbying'
     ? ['/investigations/anthropic-lobbying-chip-policy', '/investigations']
