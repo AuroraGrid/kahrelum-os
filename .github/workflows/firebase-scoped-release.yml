@@ -256,7 +256,7 @@ jobs:
               # and an additive link patched against independently verified live homepage bytes.
               while IFS= read -r file; do
                 case "$file" in
-                  forecasting/selected-forecast-performance-2026.html|forecasting/selected-30-results-2026.json|forecasting/100-forecast-challenge.html|forecasting.html|insights.html|sitemap.md|llms.txt|ai-discovery/forecasting.md|scripts/firebase-overlay-release.cjs|.github/workflows/firebase-scoped-release.yml|tests/selected-forecast-performance-2026.test.cjs) ;;
+                  forecasting/selected-forecast-performance-2026.html|forecasting/selected-30-results-2026.json|forecasting/100-forecast-challenge.html|forecasting.html|insights.html|sitemap.md|llms.txt|ai-discovery/forecasting.md|scripts/firebase-overlay-release.cjs|.github/workflows/firebase-scoped-release.yml|tests/selected-forecast-performance-2026.test.cjs|tests/selected-forecast-publisher-content-type.test.cjs) ;;
                   *) echo "::error::Selected-performance release includes unrelated path: $file"; exit 1 ;;
                 esac
               done <<< "$changed"
