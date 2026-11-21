@@ -1,0 +1,346 @@
+{
+  "title": "KAHRELUM Selected 30-Forecast Performance",
+  "datePrepared": "2026-11-21",
+  "status": "SELECTED_PERFORMANCE_SHOWCASE_NOT_FULL_RECORD",
+  "count": 30,
+  "reportedBrierSum": 4.496,
+  "pooledDescriptiveMean": 0.1499,
+  "sourceCounts": {
+    "GJO": 21,
+    "ARGON": 7,
+    "CAL_DRILL_005": 2
+  },
+  "methodology": [
+    "This manually selected showcase combines scores from different, heterogeneous scoring conventions.",
+    "Good Judgment Open's categorical and daily-averaged scores are not directly comparable to KAHRELUM's one-shot binary Brier scores.",
+    "The 0.1499 figure is a descriptive arithmetic average of rounded score observations, not a standardized skill score or forecast-calibration test.",
+    "This selected subset must not be represented as KAHRELUM's full historical record or an unbiased sample."
+  ],
+  "selectionDisclosure": "Selected, curated favorable records and the seven-case calibration with two misses. New Zealand and NVIDIA records, and other unfavorable older cases, are excluded from this showcase but preserved in their original archives. Excluding them changes the displayed mean.",
+  "gjoScreenshotEvidence": "Seven original screenshots of authenticated GJO scores supplied by the owner; public screenshots or independently downloadable account export are not available in this repository.",
+  "prospectiveCohort": {
+    "protocol": "CAL-DRILL-005",
+    "immutableCommit": "1c0124e4431e941dfaf2cd57dac339f9b7488891",
+    "immutableSha256": "952eb38e27ddb65cf46fcf6217c9dccc4e006e568f616ae418af85f449781481",
+    "ledger": "https://docs.google.com/spreadsheets/d/1ObDloHz7geMDhJ5Hbx4keRTQR_4NLQvzJlA3OkX4b9U/edit",
+    "asOf": "2026-11-21T00:25:44Z",
+    "verified": 2,
+    "pending": 98,
+    "fullCohortBrier": null
+  },
+  "records": [
+    {
+      "id": "gjo-cma-vocal-group",
+      "label": "2026 CMA Vocal Group of the Year",
+      "reportedBrier": 0.277,
+      "resolutionDate": "2026-11-18",
+      "scoringSource": "GJO",
+      "scoreConvention": "GJO account displayed question score, rounded to 3 decimals; platform categorical/daily-averaged conventions",
+      "evidenceBasis": "User-supplied November 2026 screenshots of Good Judgment Open account Hasan-Raza results; original submission timestamps not uniformly reproduced in public view",
+      "sourceUrl": null
+    },
+    {
+      "id": "gjo-cma-song",
+      "label": "2026 CMA Song of the Year",
+      "reportedBrier": 0.003,
+      "resolutionDate": "2026-11-18",
+      "scoringSource": "GJO",
+      "scoreConvention": "GJO account displayed question score, rounded to 3 decimals; platform categorical/daily-averaged conventions",
+      "evidenceBasis": "User-supplied November 2026 screenshots of Good Judgment Open account Hasan-Raza results; original submission timestamps not uniformly reproduced in public view",
+      "sourceUrl": null
+    },
+    {
+      "id": "gjo-cma-male",
+      "label": "2026 CMA Male Vocalist of the Year",
+      "reportedBrier": 1.001,
+      "resolutionDate": "2026-11-18",
+      "scoringSource": "GJO",
+      "scoreConvention": "GJO account displayed question score, rounded to 3 decimals; platform categorical/daily-averaged conventions",
+      "evidenceBasis": "User-supplied November 2026 screenshots of Good Judgment Open account Hasan-Raza results; original submission timestamps not uniformly reproduced in public view",
+      "sourceUrl": null
+    },
+    {
+      "id": "gjo-cma-entertainer",
+      "label": "2026 CMA Entertainer of the Year",
+      "reportedBrier": 0.13,
+      "resolutionDate": "2026-11-18",
+      "scoringSource": "GJO",
+      "scoreConvention": "GJO account displayed question score, rounded to 3 decimals; platform categorical/daily-averaged conventions",
+      "evidenceBasis": "User-supplied November 2026 screenshots of Good Judgment Open account Hasan-Raza results; original submission timestamps not uniformly reproduced in public view",
+      "sourceUrl": null
+    },
+    {
+      "id": "gjo-cma-female",
+      "label": "2026 CMA Female Vocalist of the Year",
+      "reportedBrier": 0.105,
+      "resolutionDate": "2026-11-18",
+      "scoringSource": "GJO",
+      "scoreConvention": "GJO account displayed question score, rounded to 3 decimals; platform categorical/daily-averaged conventions",
+      "evidenceBasis": "User-supplied November 2026 screenshots of Good Judgment Open account Hasan-Raza results; original submission timestamps not uniformly reproduced in public view",
+      "sourceUrl": null
+    },
+    {
+      "id": "gjo-cma-new-artist",
+      "label": "2026 CMA New Artist of the Year",
+      "reportedBrier": 0.112,
+      "resolutionDate": "2026-11-18",
+      "scoringSource": "GJO",
+      "scoreConvention": "GJO account displayed question score, rounded to 3 decimals; platform categorical/daily-averaged conventions",
+      "evidenceBasis": "User-supplied November 2026 screenshots of Good Judgment Open account Hasan-Raza results; original submission timestamps not uniformly reproduced in public view",
+      "sourceUrl": null
+    },
+    {
+      "id": "gjo-cma-album",
+      "label": "2026 CMA Album of the Year",
+      "reportedBrier": 0.016,
+      "resolutionDate": "2026-11-18",
+      "scoringSource": "GJO",
+      "scoreConvention": "GJO account displayed question score, rounded to 3 decimals; platform categorical/daily-averaged conventions",
+      "evidenceBasis": "User-supplied November 2026 screenshots of Good Judgment Open account Hasan-Raza results; original submission timestamps not uniformly reproduced in public view",
+      "sourceUrl": null
+    },
+    {
+      "id": "gjo-ebenezer",
+      "label": "Ebenezer opening-weekend domestic box-office bracket",
+      "reportedBrier": 0.049,
+      "resolutionDate": "2026-11-16",
+      "scoringSource": "GJO",
+      "scoreConvention": "GJO account displayed question score, rounded to 3 decimals; platform categorical/daily-averaged conventions",
+      "evidenceBasis": "User-supplied November 2026 screenshots of Good Judgment Open account Hasan-Raza results; original submission timestamps not uniformly reproduced in public view",
+      "sourceUrl": "https://www.gjopen.com/questions/5828"
+    },
+    {
+      "id": "gjo-pope-visit",
+      "label": "Pope Leo XIV U.S. visit before November 16",
+      "reportedBrier": 0,
+      "resolutionDate": "2026-11-16",
+      "scoringSource": "GJO",
+      "scoreConvention": "GJO account displayed question score, rounded to 3 decimals; platform categorical/daily-averaged conventions",
+      "evidenceBasis": "User-supplied November 2026 screenshots of Good Judgment Open account Hasan-Raza results; original submission timestamps not uniformly reproduced in public view",
+      "sourceUrl": "https://www.gjopen.com/questions/4300"
+    },
+    {
+      "id": "gjo-lmarena-text",
+      "label": "LMArena Text Arena top organization on November 13",
+      "reportedBrier": 0.034,
+      "resolutionDate": "2026-11-13",
+      "scoringSource": "GJO",
+      "scoreConvention": "GJO account displayed question score, rounded to 3 decimals; platform categorical/daily-averaged conventions",
+      "evidenceBasis": "User-supplied November 2026 screenshots of Good Judgment Open account Hasan-Raza results; original submission timestamps not uniformly reproduced in public view",
+      "sourceUrl": "https://www.gjopen.com/questions/4792"
+    },
+    {
+      "id": "gjo-midterm-house",
+      "label": "2026 U.S. House control",
+      "reportedBrier": 0.016,
+      "resolutionDate": "2026-11-03",
+      "scoringSource": "GJO",
+      "scoreConvention": "GJO account displayed question score, rounded to 3 decimals; platform categorical/daily-averaged conventions",
+      "evidenceBasis": "User-supplied November 2026 screenshots of Good Judgment Open account Hasan-Raza results; original submission timestamps not uniformly reproduced in public view",
+      "sourceUrl": null
+    },
+    {
+      "id": "gjo-midterm-nc-sen",
+      "label": "2026 North Carolina U.S. Senate election",
+      "reportedBrier": 0.031,
+      "resolutionDate": "2026-11-03",
+      "scoringSource": "GJO",
+      "scoreConvention": "GJO account displayed question score, rounded to 3 decimals; platform categorical/daily-averaged conventions",
+      "evidenceBasis": "User-supplied November 2026 screenshots of Good Judgment Open account Hasan-Raza results; original submission timestamps not uniformly reproduced in public view",
+      "sourceUrl": null
+    },
+    {
+      "id": "gjo-midterm-ga-sen",
+      "label": "2026 Georgia U.S. Senate election",
+      "reportedBrier": 0.031,
+      "resolutionDate": "2026-11-03",
+      "scoringSource": "GJO",
+      "scoreConvention": "GJO account displayed question score, rounded to 3 decimals; platform categorical/daily-averaged conventions",
+      "evidenceBasis": "User-supplied November 2026 screenshots of Good Judgment Open account Hasan-Raza results; original submission timestamps not uniformly reproduced in public view",
+      "sourceUrl": null
+    },
+    {
+      "id": "gjo-midterm-az01",
+      "label": "2026 Arizona 1st Congressional District",
+      "reportedBrier": 0.186,
+      "resolutionDate": "2026-11-03",
+      "scoringSource": "GJO",
+      "scoreConvention": "GJO account displayed question score, rounded to 3 decimals; platform categorical/daily-averaged conventions",
+      "evidenceBasis": "User-supplied November 2026 screenshots of Good Judgment Open account Hasan-Raza results; original submission timestamps not uniformly reproduced in public view",
+      "sourceUrl": null
+    },
+    {
+      "id": "gjo-midterm-az06",
+      "label": "2026 Arizona 6th Congressional District",
+      "reportedBrier": 0.186,
+      "resolutionDate": "2026-11-03",
+      "scoringSource": "GJO",
+      "scoreConvention": "GJO account displayed question score, rounded to 3 decimals; platform categorical/daily-averaged conventions",
+      "evidenceBasis": "User-supplied November 2026 screenshots of Good Judgment Open account Hasan-Raza results; original submission timestamps not uniformly reproduced in public view",
+      "sourceUrl": null
+    },
+    {
+      "id": "gjo-midterm-co08",
+      "label": "2026 Colorado 8th Congressional District",
+      "reportedBrier": 0.186,
+      "resolutionDate": "2026-11-03",
+      "scoringSource": "GJO",
+      "scoreConvention": "GJO account displayed question score, rounded to 3 decimals; platform categorical/daily-averaged conventions",
+      "evidenceBasis": "User-supplied November 2026 screenshots of Good Judgment Open account Hasan-Raza results; original submission timestamps not uniformly reproduced in public view",
+      "sourceUrl": null
+    },
+    {
+      "id": "gjo-midterm-ia01",
+      "label": "2026 Iowa 1st Congressional District",
+      "reportedBrier": 0.186,
+      "resolutionDate": "2026-11-03",
+      "scoringSource": "GJO",
+      "scoreConvention": "GJO account displayed question score, rounded to 3 decimals; platform categorical/daily-averaged conventions",
+      "evidenceBasis": "User-supplied November 2026 screenshots of Good Judgment Open account Hasan-Raza results; original submission timestamps not uniformly reproduced in public view",
+      "sourceUrl": null
+    },
+    {
+      "id": "gjo-midterm-ia03",
+      "label": "2026 Iowa 3rd Congressional District",
+      "reportedBrier": 0.186,
+      "resolutionDate": "2026-11-03",
+      "scoringSource": "GJO",
+      "scoreConvention": "GJO account displayed question score, rounded to 3 decimals; platform categorical/daily-averaged conventions",
+      "evidenceBasis": "User-supplied November 2026 screenshots of Good Judgment Open account Hasan-Raza results; original submission timestamps not uniformly reproduced in public view",
+      "sourceUrl": null
+    },
+    {
+      "id": "gjo-midterm-fl25",
+      "label": "2026 Florida 25th Congressional District",
+      "reportedBrier": 0.186,
+      "resolutionDate": "2026-11-03",
+      "scoringSource": "GJO",
+      "scoreConvention": "GJO account displayed question score, rounded to 3 decimals; platform categorical/daily-averaged conventions",
+      "evidenceBasis": "User-supplied November 2026 screenshots of Good Judgment Open account Hasan-Raza results; original submission timestamps not uniformly reproduced in public view",
+      "sourceUrl": null
+    },
+    {
+      "id": "gjo-midterm-nh-sen",
+      "label": "2026 New Hampshire U.S. Senate election",
+      "reportedBrier": 0.186,
+      "resolutionDate": "2026-11-03",
+      "scoringSource": "GJO",
+      "scoreConvention": "GJO account displayed question score, rounded to 3 decimals; platform categorical/daily-averaged conventions",
+      "evidenceBasis": "User-supplied November 2026 screenshots of Good Judgment Open account Hasan-Raza results; original submission timestamps not uniformly reproduced in public view",
+      "sourceUrl": null
+    },
+    {
+      "id": "gjo-midterm-mn-sen",
+      "label": "2026 Minnesota U.S. Senate election",
+      "reportedBrier": 0.186,
+      "resolutionDate": "2026-11-03",
+      "scoringSource": "GJO",
+      "scoreConvention": "GJO account displayed question score, rounded to 3 decimals; platform categorical/daily-averaged conventions",
+      "evidenceBasis": "User-supplied November 2026 screenshots of Good Judgment Open account Hasan-Raza results; original submission timestamps not uniformly reproduced in public view",
+      "sourceUrl": null
+    },
+    {
+      "id": "argon-cal2-1",
+      "label": "Chiefs win at Seahawks, NFL Week 7",
+      "reportedBrier": 0.2916,
+      "resolutionDate": "2026-10-13/2026-11-12",
+      "scoringSource": "ARGON",
+      "scoreConvention": "one-shot binary Brier (p−outcome)^2",
+      "evidenceBasis": "KAHRELUM Oct/Nov 2026 seven-case calibration report with preserved misses, model-limits disclosures and original evidence links",
+      "sourceUrl": "https://kahrelum.com/insights/calibration-oct-nov-2026",
+      "sourceRecord": "CAL-DRILL-002-CASE-1"
+    },
+    {
+      "id": "argon-cal2-2",
+      "label": "Saudi–Houthi seven-day escalation",
+      "reportedBrier": 0.2704,
+      "resolutionDate": "2026-10-13/2026-11-12",
+      "scoringSource": "ARGON",
+      "scoreConvention": "one-shot binary Brier (p−outcome)^2",
+      "evidenceBasis": "KAHRELUM Oct/Nov 2026 seven-case calibration report with preserved misses, model-limits disclosures and original evidence links",
+      "sourceUrl": "https://kahrelum.com/insights/calibration-oct-nov-2026",
+      "sourceRecord": "CAL-DRILL-002-CASE-2"
+    },
+    {
+      "id": "argon-cal2-3",
+      "label": "Gemini Argon adoption signal",
+      "reportedBrier": 0.0576,
+      "resolutionDate": "2026-10-13/2026-11-12",
+      "scoringSource": "ARGON",
+      "scoreConvention": "one-shot binary Brier (p−outcome)^2",
+      "evidenceBasis": "KAHRELUM Oct/Nov 2026 seven-case calibration report with preserved misses, model-limits disclosures and original evidence links",
+      "sourceUrl": "https://kahrelum.com/insights/calibration-oct-nov-2026",
+      "sourceRecord": "CAL-DRILL-002-CASE-3"
+    },
+    {
+      "id": "argon-cal3",
+      "label": "October 28 Federal Reserve rate hold",
+      "reportedBrier": 0.0529,
+      "resolutionDate": "2026-10-13/2026-11-12",
+      "scoringSource": "ARGON",
+      "scoreConvention": "one-shot binary Brier (p−outcome)^2",
+      "evidenceBasis": "KAHRELUM Oct/Nov 2026 seven-case calibration report with preserved misses, model-limits disclosures and original evidence links",
+      "sourceUrl": "https://kahrelum.com/insights/calibration-oct-nov-2026",
+      "sourceRecord": "CAL-DRILL-003"
+    },
+    {
+      "id": "argon-prod1",
+      "label": "Alphabet Q3 revenue growth at least 20%",
+      "reportedBrier": 0.0784,
+      "resolutionDate": "2026-10-13/2026-11-12",
+      "scoringSource": "ARGON",
+      "scoreConvention": "one-shot binary Brier (p−outcome)^2",
+      "evidenceBasis": "KAHRELUM Oct/Nov 2026 seven-case calibration report with preserved misses, model-limits disclosures and original evidence links",
+      "sourceUrl": "https://kahrelum.com/insights/calibration-oct-nov-2026",
+      "sourceRecord": "PROD-MISSION-001"
+    },
+    {
+      "id": "argon-prod2",
+      "label": "Ten or more distinct commercial vessel strikes",
+      "reportedBrier": 0.1156,
+      "resolutionDate": "2026-10-13/2026-11-12",
+      "scoringSource": "ARGON",
+      "scoreConvention": "one-shot binary Brier (p−outcome)^2",
+      "evidenceBasis": "KAHRELUM Oct/Nov 2026 seven-case calibration report with preserved misses, model-limits disclosures and original evidence links",
+      "sourceUrl": "https://kahrelum.com/insights/calibration-oct-nov-2026",
+      "sourceRecord": "PROD-MISSION-002"
+    },
+    {
+      "id": "argon-prod3",
+      "label": "Calvin Ridley not traded by November 10",
+      "reportedBrier": 0.1444,
+      "resolutionDate": "2026-10-13/2026-11-12",
+      "scoringSource": "ARGON",
+      "scoreConvention": "one-shot binary Brier (p−outcome)^2",
+      "evidenceBasis": "KAHRELUM Oct/Nov 2026 seven-case calibration report with preserved misses, model-limits disclosures and original evidence links",
+      "sourceUrl": "https://kahrelum.com/insights/calibration-oct-nov-2026",
+      "sourceRecord": "PROD-MISSION-003"
+    },
+    {
+      "id": "cal-drill-005-oracle",
+      "label": "Oracle annual-meeting Proposal 4 receives majority FOR",
+      "reportedBrier": 0.04,
+      "resolutionDate": "2026-11-20",
+      "scoringSource": "CAL_DRILL_005",
+      "scoreConvention": "one-shot binary Brier (p−outcome)^2",
+      "evidenceBasis": "Original v1.4 prospective 20% YES; Oracle SEC 8-K official FOR/AGAINST vote totals; ledger independently verified NO",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526470351/orcl-20261118.htm",
+      "sourceRecord": "KAH-100-BIZ-007-V14",
+      "outcome": "NO",
+      "pYes": 0.2
+    },
+    {
+      "id": "cal-drill-005-gemini",
+      "label": "Google Gemini 4 Neon model announcement",
+      "reportedBrier": 0.1521,
+      "resolutionDate": "2026-11-18",
+      "scoringSource": "CAL_DRILL_005",
+      "scoreConvention": "one-shot binary Brier (p−outcome)^2",
+      "evidenceBasis": "Original v1.4 prospective 61% YES; Google official announcement dated November 18; ledger independently verified YES",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+      "sourceRecord": "KAH-100-AIT-002-V14",
+      "outcome": "YES",
+      "pYes": 0.61
+    }
+  ]
+}
