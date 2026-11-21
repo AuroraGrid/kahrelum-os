@@ -11,6 +11,8 @@ last_updated: "2026-11-12"
 
 Canonical page: https://kahrelum.com/forecasting
 
+Additional selected-performance page: https://kahrelum.com/forecasting/selected-forecast-performance-2026. Thirty user-curated scored observations average 0.1499 arithmetically across GJO and one-shot binary methods. This mixed-score description is not standardized calibration or full historical performance. The immutable 100-event slate stays separate; only two outcomes verified on its November 21 checkpoint.
+
 KAHRELUM uses dated source cutoffs, probability records and explicit settlement definitions. Retrospective audit, independently attributed comparator forecasts, post-close projections and prospective KAHRELUM predictions must not be conflated.
 
 ## What is publicly offered or reported
