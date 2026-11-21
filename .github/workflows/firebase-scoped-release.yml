@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/firebase-scoped-release.yml'
+      - 'forecasting/selected-forecast-performance-2026.html'
+      - 'forecasting/selected-30-results-2026.json'
+      - 'tests/selected-forecast-performance-2026.test.cjs'
       - 'intelligence.html'
       - 'assets/social/og-kahrelum-intelligence-20261114.png'
       - 'tests/intelligence-share.test.cjs'
@@ -137,6 +140,7 @@ on:
           - enterprise-assurance
           - election-data-index
           - us-results-ui
+          - selected-forecast-performance-2026
           - forecast-100-publication
           - calibration-nfl-2026
           - nfl-editorial-v2
@@ -247,6 +251,16 @@ jobs:
                 esac
               done <<< "$changed"
               profiles="malik-beasley-forecast"
+            elif grep -Fqx 'forecasting/selected-forecast-performance-2026.html' <<< "$changed"; then
+              # Single bounded release for a curated selection, two official resolutions
+              # and an additive link patched against independently verified live homepage bytes.
+              while IFS= read -r file; do
+                case "$file" in
+                  forecasting/selected-forecast-performance-2026.html|forecasting/selected-30-results-2026.json|forecasting/100-forecast-challenge.html|forecasting.html|insights.html|sitemap.md|llms.txt|ai-discovery/forecasting.md|scripts/firebase-overlay-release.cjs|.github/workflows/firebase-scoped-release.yml|tests/selected-forecast-performance-2026.test.cjs) ;;
+                  *) echo "::error::Selected-performance release includes unrelated path: $file"; exit 1 ;;
+                esac
+              done <<< "$changed"
+              profiles="selected-forecast-performance-2026"
             elif grep -Fqx 'forecasting/100-forecast-challenge.html' <<< "$changed"; then
               while IFS= read -r file; do
                 case "$file" in
@@ -387,7 +401,7 @@ jobs:
           set -euo pipefail
           for profile in $RELEASE_PROFILES; do
             case "$profile" in
-              mqa001-review|intelligence-share|ga4-consent|editorial-discovery|nfc-east-title-2026|malik-beasley-forecast|forecast-100-publication|calibration-nfl-2026|chip01-publication|air02-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|ai-discovery-seo|ai-visibility-hardening|site-completion|mobile-nav-layout|commercial-readiness|buyer-discovery|buyer-conversion|pricing-retirement|enterprise-assurance|election-data-index) ;;
+              mqa001-review|intelligence-share|ga4-consent|editorial-discovery|nfc-east-title-2026|malik-beasley-forecast|forecast-100-publication|selected-forecast-performance-2026|calibration-nfl-2026|chip01-publication|air02-publication|hegseth-forecast|hegseth-law-audit|osint-illusion|case-share-cards|legacy-social-metadata|indexnow-key|us-results-ui|nfl-sourcegrid-data|nfl-challenge|nfl-editorial-v2|us-results-data|ai-evaluation|opticodds-market-integrity|lead-magnet|investigations|investigations-text-only|release3-verified|ai-discovery-seo|ai-visibility-hardening|site-completion|mobile-nav-layout|commercial-readiness|buyer-discovery|buyer-conversion|pricing-retirement|enterprise-assurance|election-data-index) ;;
               *) echo "::error::Unapproved release profile: $profile"; exit 1;;
             esac
           done

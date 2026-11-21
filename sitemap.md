@@ -31,6 +31,9 @@ This public directory groups existing website pages. Research status and timesta
 
 ## Forecasting
 
+- [30 Selected Forecast Scores · KAHRELUM Performance Showcase (descriptive Brier 0.1499)](https://kahrelum.com/forecasting/selected-forecast-performance-2026)
+- [30 selected result records · machine-readable source](https://kahrelum.com/forecasting/selected-30-results-2026.json)
+
 - [NFC East title odds and dated updates](https://kahrelum.com/forecasting/nfc-east-2026)
 - [NFC East original simulation JSON](https://kahrelum.com/forecasting/nfc-east-title-2026-11-12.json)
 - [NFC East November 15 updated simulation JSON](https://kahrelum.com/forecasting/nfc-east-title-2026-11-15-post-sf.json)

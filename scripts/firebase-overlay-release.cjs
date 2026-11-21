@@ -201,6 +201,19 @@ const RELEASE_PROFILES = {
     sitemapRoutes: ['/insights/hegseth-war-powers-fact-check'],
     includeHomepage: false,
   },
+  'selected-forecast-performance-2026': {
+    // Bounded curated-score publication. Original locks and other live paths preserved.
+    // Homepage link is patched into verified live bytes, never copied from a stale tree.
+    overlayFiles: [
+      'forecasting/selected-forecast-performance-2026.html',
+      'forecasting/selected-30-results-2026.json',
+      'forecasting/100-forecast-challenge.html',
+      'forecasting.html', 'insights.html', 'sitemap.md', 'llms.txt',
+      'ai-discovery/forecasting.md'
+    ],
+    sitemapRoutes: ['/forecasting/selected-forecast-performance-2026'],
+    includeHomepage: false,
+  },
   'forecast-100-publication': {
     // Dedicated public research release. No prediction source ledgers, past probabilities,
     // production homepage, or unrelated research pages may be modified by this profile.
@@ -1183,6 +1196,18 @@ async function buildOverlay(live, profileName) {
     }
   }
 
+  if (profileName === 'selected-forecast-performance-2026') {
+    const home = (await verifiedLiveFile(live, '/index.html', '/')).toString('utf8');
+    const marker = 'id="forecast-performance-2026-homepage"';
+    if (!home.includes(marker)) {
+      if (home.split('</main>').length !== 2) fail('Selected-performance homepage insertion boundary ambiguous.');
+      const panel = '<section id="forecast-performance-2026-homepage" aria-labelledby="selected-performance-home-title"><p class="eyebrow">Forecasting research · selected results · November 21, 2026</p><h2 id="selected-performance-home-title">30 selected scored forecasts. Descriptive Brier 0.1499.</h2><p>A curated, mixed-method score summary rather than our full historical record or a standardized calibration result. The 100-forecast prospective challenge remains separately scored.</p><p><a class="cta" href="/forecasting/selected-forecast-performance-2026">Review all 30 scores and evidence boundaries →</a> <a class="cta" href="/forecasting/100-forecast-challenge">Read the 100-forecast verification scoreboard →</a></p></section>';
+      addBlob(desired, blobs, '/index.html', Buffer.from(home.replace('</main>', panel + '</main>'), 'utf8'));
+    } else if (!home.includes('href="/forecasting/selected-forecast-performance-2026"')) {
+      fail('Selected-performance homepage marker inconsistent with link.');
+    }
+  }
+
   if (profileName === 'nfc-east-title-2026') {
     const recordBytes = readRepositoryBytes('research/nfc-east-2026/nfc-east-title-2026-11-12.json');
     const record = JSON.parse(recordBytes.toString('utf8'));
@@ -1437,6 +1462,15 @@ async function buildOverlay(live, profileName) {
   }
 
   const changedPaths = Object.keys(desired).filter((item) => live.fileMap[item] !== desired[item]).sort();
+  if (profileName === 'selected-forecast-performance-2026') {
+    const allowed = new Set([
+      ...RELEASE_PROFILES['selected-forecast-performance-2026'].overlayFiles.map(x => '/' + x),
+      '/index.html', '/sitemap.xml',
+    ]);
+    if (changedPaths.some(x => !allowed.has(x))) {
+      fail('Selected-performance release tried to modify unrelated Firebase paths.');
+    }
+  }
   if (profileName === 'anthropic-lobbying' && changedPaths.some(item =>
       !['/investigations/anthropic-lobbying-chip-policy.html', '/investigations.html', '/sitemap.xml'].includes(item))) {
     fail('Anthropic release attempted to change an unrelated path.');
@@ -1706,6 +1740,22 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     checks.push({route:imagePath,status:200,sha256:sha256(bytes)});
   }
 
+  if (profileName === 'selected-forecast-performance-2026') {
+    for (const [route, needle] of [
+      ['/', 'id="forecast-performance-2026-homepage"'],
+      ['/forecasting', '30 selected scored forecasts'],
+      ['/insights', '30 selected scored forecasts'],
+      ['/forecasting/selected-forecast-performance-2026', 'not the overall'],
+      ['/forecasting/100-forecast-challenge', '2 verified'],
+    ]) {
+      const html = (await fetchBytes(origin + route)).toString('utf8');
+      if (!html.toLowerCase().includes(needle.toLowerCase())) fail('Selected-performance readback failed: ' + route);
+    }
+    const snapshot = JSON.parse((await fetchBytes(origin + '/forecasting/selected-30-results-2026.json')).toString('utf8'));
+    if (snapshot.records.length !== 30 || Math.abs(snapshot.reportedBrierSum - 4.4960)>0.00001 ||
+        snapshot.status !== 'SELECTED_PERFORMANCE_SHOWCASE_NOT_FULL_RECORD') fail('Selected-performance JSON mismatch.');
+  }
+
   const internal = new Set();
   const verifiedRoutes = profileName === 'ga4-consent'
     ? ['/pilot','/intelligence']
@@ -1727,6 +1777,9 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     ? ['/assurance','/pilot']
     : profileName === 'mobile-nav-layout'
     ? ['/', '/assurance', '/pilot']
+    : profileName === 'selected-forecast-performance-2026'
+    ? ['/', '/forecasting', '/insights', '/forecasting/selected-forecast-performance-2026',
+       '/forecasting/selected-30-results-2026.json', '/forecasting/100-forecast-challenge']
     : profileName === 'forecast-100-publication'
     ? ['/forecasting', '/forecasting/100-forecast-challenge']
     : profileName === 'nfc-east-title-2026'
