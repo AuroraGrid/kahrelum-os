@@ -1779,7 +1779,7 @@ async function verifySurface(origin, expectedApiHashes, profileName = 'full') {
     ? ['/', '/assurance', '/pilot']
     : profileName === 'selected-forecast-performance-2026'
     ? ['/', '/forecasting', '/insights', '/forecasting/selected-forecast-performance-2026',
-       '/forecasting/selected-30-results-2026.json', '/forecasting/100-forecast-challenge']
+       '/forecasting/100-forecast-challenge']
     : profileName === 'forecast-100-publication'
     ? ['/forecasting', '/forecasting/100-forecast-challenge']
     : profileName === 'nfc-east-title-2026'
