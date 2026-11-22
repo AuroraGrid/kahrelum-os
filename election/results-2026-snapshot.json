@@ -8,11 +8,11 @@
     "results": "https://polling-desk.com/results.csv"
   },
   "sourceSha256": {
-    "houseCsv": "4275c993780eed588613cbf6eb03b3aef0267543970c1942b85318d370472d2c",
-    "resultsCsv": "bbe21020377ffbd911248d7c47560496ed14b9f48d63259064543ae6a1b530a8"
+    "houseCsv": "5e3dfee499422e4b06bfc1177caf8e00c3cb92343fa203796e555577708ae93a",
+    "resultsCsv": "84834085399b57494d3df559213520bfb87eb6677d9c02ae64821dc0605440fc"
   },
-  "sourceLatestResultUpdatedUtc": "2026-11-21T21:55:39Z",
-  "retrievalUtc": "2026-11-22T01:26:19.823150Z",
+  "sourceLatestResultUpdatedUtc": "2026-11-22T09:55:39Z",
+  "retrievalUtc": "2026-11-22T16:43:26.723277Z",
   "publishedAsOf": "Snapshot captured on 2026-11-22 (UTC). Each non-House race includes its per-race source timestamp. Earlier race calls are not official state certifications.",
   "resultStatus": "UNOFFICIAL_CALLS_AND_COUNTS_NOT_CERTIFIED",
   "verificationPolicy": {
@@ -787,11 +787,11 @@
       "winnerOrLeader": "Jay Obernolte",
       "party": "REP",
       "votes": {
-        "DEM": 107135,
-        "REP": 110121,
+        "DEM": 107137,
+        "REP": 110124,
         "OTHER": 0
       },
-      "totalVotes": 217256,
+      "totalVotes": 217261,
       "democraticMarginPoints": -1.37,
       "percentReporting": 99,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ca-23"
@@ -821,13 +821,13 @@
       "winnerOrLeader": "Raul Ruiz",
       "party": "DEM",
       "votes": {
-        "DEM": 145614,
-        "REP": 74936,
+        "DEM": 145941,
+        "REP": 75067,
         "OTHER": 0
       },
-      "totalVotes": 220550,
-      "democraticMarginPoints": 32.05,
-      "percentReporting": 96,
+      "totalVotes": 221008,
+      "democraticMarginPoints": 32.07,
+      "percentReporting": 97,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ca-25"
     },
     {
@@ -957,11 +957,11 @@
       "winnerOrLeader": "Pete Aguilar",
       "party": "DEM",
       "votes": {
-        "DEM": 141476,
-        "REP": 63416,
+        "DEM": 141480,
+        "REP": 63418,
         "OTHER": 0
       },
-      "totalVotes": 204892,
+      "totalVotes": 204898,
       "democraticMarginPoints": 38.1,
       "percentReporting": 99,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ca-33"
@@ -991,12 +991,12 @@
       "winnerOrLeader": "Norma Torres",
       "party": "DEM",
       "votes": {
-        "DEM": 141581,
-        "REP": 70037,
+        "DEM": 141720,
+        "REP": 70129,
         "OTHER": 0
       },
-      "totalVotes": 211618,
-      "democraticMarginPoints": 33.81,
+      "totalVotes": 211849,
+      "democraticMarginPoints": 33.79,
       "percentReporting": 98,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ca-35"
     },
@@ -1059,12 +1059,12 @@
       "winnerOrLeader": "Mark Takano",
       "party": "DEM",
       "votes": {
-        "DEM": 135694,
-        "REP": 60164,
+        "DEM": 135939,
+        "REP": 60232,
         "OTHER": 0
       },
-      "totalVotes": 195858,
-      "democraticMarginPoints": 38.56,
+      "totalVotes": 196171,
+      "democraticMarginPoints": 38.59,
       "percentReporting": 96,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ca-39"
     },
@@ -1077,10 +1077,10 @@
       "party": "REP",
       "votes": {
         "DEM": 0,
-        "REP": 250708,
+        "REP": 251095,
         "OTHER": 0
       },
-      "totalVotes": 250708,
+      "totalVotes": 251095,
       "democraticMarginPoints": -100.0,
       "percentReporting": 95,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ca-40"
@@ -1212,12 +1212,12 @@
       "winnerOrLeader": "Marni von Wilpert",
       "party": "DEM",
       "votes": {
-        "DEM": 167506,
-        "REP": 112495,
+        "DEM": 167591,
+        "REP": 112560,
         "OTHER": 0
       },
-      "totalVotes": 280001,
-      "democraticMarginPoints": 19.65,
+      "totalVotes": 280151,
+      "democraticMarginPoints": 19.64,
       "percentReporting": 97,
       "sourceUrl": "https://polling-desk.com/races/2026/house/ca-48"
     },
@@ -9003,20 +9003,20 @@
       "winnerOrLeader": "Xavier Becerra",
       "party": "DEM",
       "percentReporting": 98,
-      "sourceUpdatedUtc": "2026-11-21T09:55:38Z",
+      "sourceUpdatedUtc": "2026-11-22T09:55:39Z",
       "candidates": [
         {
           "name": "Xavier Becerra",
           "party": "DEM",
-          "votes": 8714981,
-          "percent": 65.65,
+          "votes": 8715994,
+          "percent": 65.64,
           "calledWinner": true
         },
         {
           "name": "Steve Hilton",
           "party": "REP",
-          "votes": 4560914,
-          "percent": 34.35,
+          "votes": 4561547,
+          "percent": 34.36,
           "calledWinner": false
         }
       ],
